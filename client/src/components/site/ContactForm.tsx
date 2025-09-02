@@ -90,8 +90,8 @@ export default function ContactSection() {
 
         <div className="grid max-w-4xl mx-auto lg:grid-cols-2 gap-8">
           {/* Contact Information */}
-          <div className="bg-card p-8 border border-border backdrop-blur-sm rounded-xl shadow-lg">
-            <h3 className="text-2xl font-semibold mb-6 border-b border-border pb-3">
+          <div className="bg-card p-8 border rounded-xl shadow-lg">
+            <h3 className="text-2xl font-semibold mb-6 border-b pb-3">
               {siteConfig.contact.sectionTitle}
             </h3>
             <p className="text-muted-foreground mb-8">
@@ -134,8 +134,8 @@ export default function ContactSection() {
           </div>
           
           {/* Contact Form */}
-          <div className="bg-card p-8 border border-border backdrop-blur-sm rounded-xl shadow-lg">
-            <h3 className="text-2xl font-semibold mb-6 border-b border-border pb-3">
+          <div className="bg-card p-8 border rounded-xl shadow-lg">
+            <h3 className="text-2xl font-semibold mb-6 border-b pb-3">
               Send us a message
             </h3>
             
@@ -172,7 +172,6 @@ export default function ContactSection() {
                         <Input
                           {...field}
                           placeholder="Your name"
-                          className="bg-background/70 border-border focus:border-primary"
                           data-testid="input-name"
                         />
                       </FormControl>
@@ -194,7 +193,6 @@ export default function ContactSection() {
                           {...field}
                           type="email"
                           placeholder="your.email@example.com"
-                          className="bg-background/70 border-border focus:border-primary"
                           data-testid="input-email"
                         />
                       </FormControl>
@@ -216,7 +214,7 @@ export default function ContactSection() {
                           {...field}
                           rows={5}
                           placeholder="Tell us about your project or question..."
-                          className="bg-background/70 border-border focus:border-primary resize-none"
+                          className="resize-none"
                           data-testid="textarea-message"
                         />
                       </FormControl>
