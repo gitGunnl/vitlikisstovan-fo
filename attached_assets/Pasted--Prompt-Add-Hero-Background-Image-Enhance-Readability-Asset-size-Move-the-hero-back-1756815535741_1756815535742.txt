@@ -1,0 +1,55 @@
+### Prompt — Add Hero Background Image & Enhance Readability
+
+**Asset & size**
+
+* Move the hero-background.webp to the right folder and then use it
+* Use the background image file (current size **1589 × 802**).
+
+**Where**
+
+* Apply as the **background of `section#hero`** on the landing page.
+
+**Background behavior**
+
+* Cover the viewport: background should **fill** (`cover`) without distortion, **centered**, and responsive on all breakpoints.
+* Section height: **min-height 70–80vh** desktop, **60–70vh** mobile.
+* No parallax or heavy effects—keep it light and fast.
+
+**Readability & aesthetics**
+
+* Add a **subtle readability overlay** on top of the image:
+
+  * Primary: a **dark gradient** (e.g., left-to-right or top-to-bottom) with \~**40–55%** opacity so white text meets **WCAG 4.5:1** contrast.
+  * Optional radial vignette to soften edges.
+* Ensure hero **text remains white** (or very light) with a **subtle text-shadow** for extra legibility.
+* Add a tasteful **“watercolor-style frame”** around the hero content block:
+
+  * Implement as a lightweight **CSS mask / SVG filter / border-image**—no heavy libraries.
+  * Soft, organic edge that echoes watercolor paper; keep it **very subtle**.
+  * **Graceful fallback**: simple rounded border with semi-transparent white if masks/filters aren’t supported.
+* Provide an optional **glass panel** style (low-alpha dark or light background with small backdrop-blur) behind the text group; enable it only if needed to pass contrast on very bright screens.
+
+**Layout**
+
+* Keep hero content in a **max-width container** (e.g., \~640–720px) with comfortable padding and spacing for headline, subtitle, and the two CTAs already defined in config.
+* Preserve anchor links to `#contact` (primary) and `#program` (secondary).
+
+**Performance**
+
+* Compress `hero-background.webp` to keep it **well under 500 KB**.
+* Implement **responsive loading** if your image component supports it (e.g., sizes attribute / srcSet). No extra upscales needed—use the provided source as-is.
+* Do not block rendering; background loads progressively.
+
+**Accessibility & SEO**
+
+* Verify **color contrast** for the hero headline and body copy against the overlaid background.
+* Since it’s a CSS background, **no alt text** is needed; if you expose the image elsewhere, provide a short descriptive alt.
+* Keep LCP reasonable; avoid heavy filters or large JS.
+
+**Acceptance criteria**
+
+* `section#hero` renders with `/public/images/hero-background.webp` as the background, **cover + center**, responsive.
+* Text and buttons in the hero are **clearly legible** on both light and dark parts of the image.
+* Watercolor-style border is present (or the graceful fallback) and does **not** impact layout performance.
+* No layout shift; CTAs still link to `#contact` and `#program`.
+* Lighthouse a11y passes for hero text contrast.
