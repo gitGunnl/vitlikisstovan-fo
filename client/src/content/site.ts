@@ -20,7 +20,7 @@ export const siteConfig = {
   hero: {
     title: "Vitlíki, sum riggar á tínari skrivstovu – longu í hesum ársfjórðingi",
     subtitle:
-      "Ein 12-vika langur skeiðpakki, sum ger starvsfólk til tryggar og effektivar brúkarar av vitlíki. Færri keðiligar uppgávur. Betri tekstir. Skarpari avgerðir í øllum toyminum.",
+      "Ein 12-vika langur skeiðpakki, sum gevur starvsfólki sjálvsálit at brúka vitlíki trygt og effektivt. Úrslitini eru færri keðiligar uppgávur, betri tekstir og styrktar avgerðir í øllum toyminum.",
     primaryCTA: {
       text: "Byrja nú",
       href: "#contact"
@@ -34,13 +34,13 @@ export const siteConfig = {
   program: {
     title: "Gerst serfrøðingur í vitlíki – 12-vikuskeið til skrivstovur",
     subtitle:
-      "Ein praktisk gongd frá tryggum grundarlagi til endurnýtiligar arbeiðsgongdir, klárar til títt toymi. Skapt til veruligt skrivstovuarbeiði – ikki bara teori.",
+      "Ein praktisk ferð frá tryggum grundarlagi til nýggjar arbeiðshættir. Vit fara frá amboði til arbeiðslag – bygt uppá veruligar uppgávur, ikki bara teori.",
     phases: [
       {
         period: "Vika 1–4",
         title: "Grundarlag & trygg nýtsla",
         description:
-          "Øll læra grundleggjandi vitan: hvat vitlíki kann í dag, hvar tað hjálpir mest, og hvussu tað verður brúkt ábyrgdarfult.",
+          "Øll læra grundleggjandi vitan: hvat vitlíki kann í dag, hvar tað hjálpir mest, og hvussu tað verður brúkt trygt og ábyrgdarfult.",
         highlights: [
           "Byrtskabelónir, sum veruliga rigga",
           "Skriving og umorðing fyri greidleika og tóna",
@@ -73,17 +73,17 @@ export const siteConfig = {
     ],
     outcomes: [
       "Tímar spardir hvørja viku upp á vanliga skriving og umsiting",
-      "Greitt og støðugt mál í skjølum og teldupostum – frá fyrsta uppkasti til lidna útgávu skjótari",
+      "Greitt og støðugt mál í skjølum og teldupostum – frá uppkasti til úrslit skjótari",
       "Kekklisti og leiðreglur fyri trygga nýtslu, sum starvsfólk veruliga fylgja",
       "Endurnýtiligar arbeiðsgongdir, sum toymið hevur álit á",
-      "Álit á at brúka leiðandi vitlíkisamboð í arbeiðinum"
+      "Sjálvsálit at brúka leiðandi vitlíkisamboð í arbeiðinum"
     ]
   },
 
   consulting: {
     title: "Ráðgeving & verkætlanir",
     subtitle:
-      "Frá tjóðarstrategium til smáar sjálvvirkandi loysnir og kreativar royndir – okkara uppgáva er at gera vitlíki nýtiligt.",
+      "Frá tjóðarstrategium til smáar sjálvvirkandi loysnir – okkara uppgáva er at skapa veruligt virði við vitlíki.",
     services: [
       {
         title: "Tað almenna & stórar fyritøkur",
@@ -106,7 +106,7 @@ export const siteConfig = {
   why: {
     title: "Hví Vitlíkisstovan?",
     subtitle:
-      "Føroyskt mál og mentan, parað við praktiskari vitlíkisfrøði og greiðari samskifting.",
+      "Vit sameina djúpa tøkniliga fatan við føroyskum máli og mentan – og tryggja greiða samskifting alla leiðina.",
 
     features: [
       {
@@ -136,15 +136,15 @@ export const siteConfig = {
       name: "Gunnleygur Clementsen",
       role: "Stovnari & høvuðsráðgevi",
       summary:
-        "El-verkfrøðingur, sum gjørdist vitlíkisráðgevi. Síðan 2022 havi eg brúkt ChatGPT dagliga – fyrst innan danska infrastrukturverkfrøði, og nú fulla tíð við at hjálpa føroyskum stovnum og fyritøkum at taka vitlíki til sín. Eg havi fylgt við menningini innan vitlíki í meira enn 10 ár og roynt fleiri hundrað amboð – eisini tá tey ikki vórðu búgvin – so tú fært tað, sum veruliga riggar.",
+        "El-verkfrøðingur, sum gjørdist vitlíkisráðgevi. Síðan gjøgnumbrotið hjá ChatGPT í 2022 havi eg miðvíst arbeitt við at hjálpa føroyskum stovnum og fyritøkum at skapa veruligt virði við vitlíki. Mínar royndir spenna frá stórum donskum verkætlanum til fulltíðar ráðgeving í Føroyum. Eg havi fylgt menningini í 10+ ár og roynt hundraðtals amboð, so tú fært tað, sum veruliga riggar.",
       bullets: [
-        "Stovnaði Tøkni Tænastuna (nú Vitlíkisstovan) fyri at hjálpa føroyskum toymum at fáa praktiskt gagn av vitlíki.",
+        "Stovnaði Vitlíkisstovuna fyri at hjálpa føroyskum toymum at broyta arbeiðshættir og skapa veruligt virði við vitlíki.",
         "Úrslit fram um yvirdrivið tos: arbeiðsgongdir, sum spara tíð, betra um skrivlig avrik og minka um endurtakandi uppgávur.",
         "Royndir við stórum stovnum og almennum áhugapørtum, umframt smærri fyritøkum og skúlum.",
         "Føroyskt í hásæti: vegleiðing, sum er lagað til okkara mál, mentan og almenna veruleika."
       ],
       quote:
-        "Vitlíki er ikki fjarløgd framtíð – tað er mátin, vit arbeiða uppá nú. Lat okkum fáa tað at rigga fyri títt toymi.",
+        "Vitlíki er ikki longur framtíðin – tað er nútíðin. Størsti kostnaðurin er at bíða. Lat okkum fáa vitlíki at skapa virði fyri títt toymi.",
       headshotUrl: "/images/founder.jpg",
       headshotAlt: "Mynd av Gunnleygi Clementsen",
       links: [
@@ -157,7 +157,7 @@ export const siteConfig = {
   cases: {
     title: "Úrvald dømi",
     subtitle:
-      "Smá brot um, hvussu vit gera hugskot til nýtilig úrslit – á skrivstovum, í tænastum og í mentanini.",
+      "Dømir um, hvussu vit broyta arbeiðshættir og gera vitlíki til ein virknan part av mentanini – tvørtur um deildir og tænastur.",
     highlights: [
       {
         title: "\"Vitlíki til arbeiðis\"-vegleiðingar",
@@ -237,20 +237,15 @@ export const siteConfig = {
   },
 
   contact: {
-    title: "Klárar at byrja?",
+    title: "Klárar at taka næsta stigið?",
     subtitle:
-      "Greitt okkum frá tínum toymi og málum. Vit koma við eini einfaldari ætlan – uttan snikk-snakk og uttan trýst.",
+      "Greitt okkum frá tínum tørvi. Vit lurta, áðrenn vit gera eitt uppskot til eina einfalda ætlan – uttan bindingar.",
     sectionTitle: "Lat okkum práta",
     description:
       "Antin tú hevur áhuga í 12-vikuskeiðnum, ráðgeving ella eini kreativari verkætlan, so svara vit innan ein arbeiðsdag.",
     email: "hello@vitlikisstovan.fo",
     phone: "+298 123 456",
     bookingUrl: ""
-  },
-
-  social: {
-    facebook: "https://facebook.com/vitlikisstovan",
-    linkedin: "https://linkedin.com/company/vitlikisstovan"
   },
 
   footer: {
