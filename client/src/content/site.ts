@@ -72,6 +72,40 @@ export const siteConfig = {
         ]
       }
     ],
+    delivery: {
+      title: "Meira enn bert verkstovur",
+      subtitle:
+        "Vit seta skeiðið saman av ymsum hættum – soleiðis at tað riggar tykkara veruleika og ger nýtsluna av vitlíki varandi.",
+      items: [
+        {
+          title: "Framløgur",
+          description:
+            "Stuttar, málrøtt framløgur til leiðslu og starvsfólk (20/45/60 min) – seta kósina og svara teimum stóru spurningunum."
+        },
+        {
+          title: "Verkstovur",
+          description:
+            "Handalig venjing við egnum tilfari – smáir bólkar, uppgávur og beinleiðis vegleiðing, so vitlíki verður nýtt beinanvegin."
+        },
+        {
+          title: "Netkursir",
+          description:
+            "Fleksiblar netkursir við upptøkum og mini-uppgávum – hóskar væl, tá fólk ikki kunnu møta á staðnum."
+        },
+        {
+          title: "Sergjørdar vegleiðingar",
+          description:
+            "Stuttar 1–3 síðna leiðreglur, fyrimyndir og málsnið til tykkara deildir – lætt at fylgja í gerandisarbeiði."
+        },
+        {
+          title: "Spurningar & svar (Q&A) um teldupost",
+          description:
+            "Tykkara toymi kann senda mær spurningar umvegis teldupost; eg svari stutt og neyvt við dømi ella fyrimyndum (vanliga innan ein arbeiðsdag)."
+        }
+      ],
+      note:
+        "Vit kunnu blanda hætturnar eftir tørvi gjøgnum 12 vikurnar, so úrslitini gerast varandi."
+    },
     outcomes: [
       "Gevur starvsfólki sjálvsálit í nýtsluni av vitlíki – við ábyrgd, trygd og dygd í hásæti.",
       "Styrkir førleikan at taka skjótari og betri avgerðir – tvørtur um allar deildir.",

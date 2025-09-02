@@ -107,6 +107,37 @@ export default function Home() {
             ))}
           </div>
 
+          {/* Delivery Section */}
+          <div className="mb-12">
+            <div className="mx-auto max-w-4xl text-center mb-8">
+              <h3 className="text-2xl font-bold tracking-tight mb-4">
+                {siteConfig.program.delivery.title}
+              </h3>
+              <p className="text-lg text-muted-foreground">
+                {siteConfig.program.delivery.subtitle}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+              {siteConfig.program.delivery.items.map((item, index) => (
+                <Card key={index} className="bg-background">
+                  <CardContent className="p-6">
+                    <h4 className="text-lg font-bold mb-3">{item.title}</h4>
+                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            <Card className="bg-muted">
+              <CardContent className="p-6">
+                <p className="text-sm text-center italic text-muted-foreground">
+                  {siteConfig.program.delivery.note}
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+
           <Card className="bg-background">
             <CardContent className="p-8">
               <h4 className="text-xl font-bold mb-4">Úrslit</h4>
