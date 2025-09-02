@@ -14,7 +14,7 @@ import {
 } from "@/components/ui/form";
 import { contactFormSchema, type ContactForm } from "@shared/schema";
 import { useToast } from "@/hooks/use-toast";
-import { MessageSquare, Mail, Phone } from "lucide-react";
+import { MessageSquare, Mail, Phone, Facebook, Linkedin } from "lucide-react";
 import { siteConfig } from "@/content/site";
 import { useState, useEffect } from "react";
 
@@ -127,6 +127,32 @@ export default function ContactSection() {
                     data-testid="link-phone"
                   >
                     {siteConfig.contact.phone}
+                  </a>
+                </div>
+              </div>
+              
+              <div className="pt-6 mt-6 border-t">
+                <p className="text-sm text-muted-foreground mb-4">Follow us</p>
+                <div className="flex items-center gap-4">
+                  <a 
+                    href={siteConfig.social.facebook} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                    data-testid="contact-facebook"
+                    aria-label="Visit our Facebook page"
+                  >
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                  <a 
+                    href={siteConfig.social.linkedin} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                    data-testid="contact-linkedin"
+                    aria-label="Visit our LinkedIn page"
+                  >
+                    <Linkedin className="w-5 h-5" />
                   </a>
                 </div>
               </div>
