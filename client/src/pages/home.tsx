@@ -196,8 +196,12 @@ export default function Home() {
               <CardContent className="p-8">
                 <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
                   <div className="lg:col-span-1 text-center lg:text-left">
-                    <div className="w-32 h-32 mx-auto lg:mx-0 mb-4 bg-muted rounded-full flex items-center justify-center">
-                      <Users className="w-16 h-16 text-muted-foreground" />
+                    <div className="w-32 h-32 mx-auto lg:mx-0 mb-4 overflow-hidden rounded-full">
+                      <img 
+                        src="/me.jpg" 
+                        alt="Portrait of Gunnleygur Clementsen"
+                        className="w-full h-full object-cover"
+                      />
                     </div>
                     <h4 className="text-xl font-bold mb-2">{siteConfig.why.founder.name}</h4>
                     <p className="text-sm text-primary font-medium mb-4">{siteConfig.why.founder.role}</p>
