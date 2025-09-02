@@ -54,26 +54,32 @@ export default function Home() {
       
       <main>
         {/* Hero Section */}
-        <Section id="hero" className="py-24 lg:py-32">
-          <div className="mx-auto max-w-4xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl mb-6">
-              {siteConfig.hero.title}
-            </h1>
-            <p className="mx-auto max-w-2xl text-xl text-muted-foreground mb-8">
-              {siteConfig.hero.subtitle}
-            </p>
-            <CTAButtons 
-              primary={{
-                text: siteConfig.hero.primaryCTA.text,
-                href: siteConfig.hero.primaryCTA.href,
-                testId: "cta-primary-hero"
-              }}
-              secondary={{
-                text: siteConfig.hero.secondaryCTA.text,
-                href: siteConfig.hero.secondaryCTA.href,
-                testId: "cta-secondary-hero"
-              }}
-            />
+        <Section id="hero" className="hero-section py-24 lg:py-32 relative overflow-hidden">
+          <div className="hero-overlay"></div>
+          <div className="hero-content mx-auto max-w-4xl text-center relative z-10">
+            <div className="hero-text-frame mx-auto max-w-2xl lg:max-w-3xl">
+              <h1 className="hero-title text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl mb-6">
+                {siteConfig.hero.title}
+              </h1>
+              <p className="hero-subtitle mx-auto max-w-2xl text-xl mb-8">
+                {siteConfig.hero.subtitle}
+              </p>
+              <div className="hero-buttons">
+                <CTAButtons 
+                  heroMode={true}
+                  primary={{
+                    text: siteConfig.hero.primaryCTA.text,
+                    href: siteConfig.hero.primaryCTA.href,
+                    testId: "cta-primary-hero"
+                  }}
+                  secondary={{
+                    text: siteConfig.hero.secondaryCTA.text,
+                    href: siteConfig.hero.secondaryCTA.href,
+                    testId: "cta-secondary-hero"
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </Section>
 
