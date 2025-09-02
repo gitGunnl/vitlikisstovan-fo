@@ -32,9 +32,9 @@ export const siteConfig = {
   },
 
   program: {
-    title: "Frá forvitin til framkomin – Eitt 12-vikuskeið til skrivstovur",
+    title: "Frá forvitin til framkomin: Eitt 12-viku skeið til skrivstovur",
     subtitle:
-      "Ein greið gongd frá tryggum grundarlagi til munagóðar arbeiðsgongdir, sum passa til tykkara toymi. Skapt til veruligt skrivstovuarbeiði - leða til júst tykkara.",
+      "Ein greið leið frá eingin ætlan til munagott arbeiði við vitlíki. Tillega tykkara toymi. Skapt til veruligt skrivstovuarbeiði - leða til júst tykkara.",
     phases: [
       {
         period: "Vika 1–4",
