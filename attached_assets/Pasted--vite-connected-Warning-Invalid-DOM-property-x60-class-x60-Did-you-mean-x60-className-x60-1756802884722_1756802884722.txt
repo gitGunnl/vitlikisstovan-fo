@@ -1,0 +1,34 @@
+[vite] connected.
+Warning: Invalid DOM property &#x60;class&#x60;. Did you mean &#x60;className&#x60;?
+    at div
+    at div
+    at section
+    at Section (https://a10686ff-dffb-4170-91b1-36fa14ebca95-00-sawgtyoe14co.worf.replit.dev/src/components/site/Section.tsx:18:35)
+    at main
+    at Home (https://a10686ff-dffb-4170-91b1-36fa14ebca95-00-sawgtyoe14co.worf.replit.dev/src/pages/home.tsx:44:37)
+    at Route (https://a10686ff-dffb-4170-91b1-36fa14ebca95-00-sawgtyoe14co.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=932ebb2d:323:16)
+    at Switch (https://a10686ff-dffb-4170-91b1-36fa14ebca95-00-sawgtyoe14co.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=932ebb2d:379:17)
+    at Router
+    at div
+    at Provider (https://a10686ff-dffb-4170-91b1-36fa14ebca95-00-sawgtyoe14co.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-YNVQRCZ5.js?v=754d81bf:39:15)
+    at TooltipProvider (https://a10686ff-dffb-4170-91b1-36fa14ebca95-00-sawgtyoe14co.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=50f8c4c4:2249:5)
+    at QueryClientProvider (https://a10686ff-dffb-4170-91b1-36fa14ebca95-00-sawgtyoe14co.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=772dd1bf:2805:3)
+    at App
+at div
+at div
+at section
+at Section (https://a10686ff-dffb-4170-91b1-36fa14ebca95-00-sawgtyoe14co.worf.replit.dev/src/components/site/Section.tsx:18:35)
+at main
+at Home (https://a10686ff-dffb-4170-91b1-36fa14ebca95-00-sawgtyoe14co.worf.replit.dev/src/pages/home.tsx:44:37)
+at Route (https://a10686ff-dffb-4170-91b1-36fa14ebca95-00-sawgtyoe14co.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=932ebb2d:323:16)
+at Switch (https://a10686ff-dffb-4170-91b1-36fa14ebca95-00-sawgtyoe14co.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/wouter.js?v=932ebb2d:379:17)
+at Router
+at div
+at Provider (https://a10686ff-dffb-4170-91b1-36fa14ebca95-00-sawgtyoe14co.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/chunk-YNVQRCZ5.js?v=754d81bf:39:15)
+at TooltipProvider (https://a10686ff-dffb-4170-91b1-36fa14ebca95-00-sawgtyoe14co.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@radix-ui_react-tooltip.js?v=50f8c4c4:2249:5)
+at QueryClientProvider (https://a10686ff-dffb-4170-91b1-36fa14ebca95-00-sawgtyoe14co.worf.replit.dev/@fs/home/runner/workspace/node_modules/.vite/deps/@tanstack_react-query.js?v=772dd1bf:2805:3)
+at App
+at t.value (https://a10686ff-dffb-4170-91b1-36fa14ebca95-00-sawgtyoe14co.worf.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:17465)
+at new t (https://a10686ff-dffb-4170-91b1-36fa14ebca95-00-sawgtyoe14co.worf.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:12630)
+at t.value (https://a10686ff-dffb-4170-91b1-36fa14ebca95-00-sawgtyoe14co.worf.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:32766)
+at https://a10686ff-dffb-4170-91b1-36fa14ebca95-00-sawgtyoe14co.worf.replit.dev/__replco/static/devtools/eruda/3.2.3/eruda.js:2:34400
