@@ -1,0 +1,130 @@
+# AI Coder Brief — Landing Template (Foundation Only, Replit Theme-Safe, **No Contact Form**)
+
+## Goal
+
+Deliver an **empty but production-ready landing template** we’ll fill later. Focus on clean structure, anchors, and easy configurability. **Do not** implement a contact form yet.
+
+## Theme compatibility
+
+* Do **not** override or redeclare Replit’s built-in theme CSS variables or selectors.
+* Namespace our own design tokens (e.g., `--vts-accent`, `--vts-bg`, `--vts-fg`) inside a wrapper element (not `:root`).
+* It’s fine to provide sensible fallbacks in our tokens; keep everything non-intrusive to Replit’s theme.
+
+## Preferred stack (keep it light)
+
+* Next.js (App Router) + TypeScript
+* Tailwind CSS
+* shadcn/ui minimal primitives (Button, Card, Input, Textarea — available but lightly used)
+* lucide-react icons
+* Framer Motion available (no animations yet)
+
+## Page structure (one page at `/`, placeholder text only)
+
+Add a sticky top nav with anchor links. Each section has a heading and 1–2 lines of placeholder copy.
+
+1. **Hero** `#hero`
+
+   * Headline, sub-headline, two CTAs: primary → `#contact`, secondary → `#program`.
+
+2. **The Flagship Program** `#program`
+
+   * Three columns (Weeks 1–4, Weeks 5–8, Weeks 9–12) with placeholder titles/lines.
+   * Bulleted placeholder list for outcomes.
+
+3. **Consulting & Projects** `#consulting`
+
+   * Three cards: **Public sector & enterprises**, **SMEs**, **Creative AI** (one-line placeholders each).
+
+4. **Why Vitlíkisstovan?** `#why`
+
+   * Four feature cards: **Faroese-first**, **Serious + practical**, **Clear communication**, **Lean & responsive**.
+
+5. **Case Highlights** `#cases`
+
+   * Three cards:
+
+     * “Vitlíki til arbeiðis” Guides (button “Free downloads”, link configurable).
+     * “Best path: Danish → English translation”.
+     * “Creative AI: films & posters”.
+
+6. **Resources** `#resources`
+
+   * Three cards with buttons: **3-Month Program One-Pager (PDF)**, **Intro video (1 min)**, **Contact deck (optional)**.
+   * Links configurable; `#` by default.
+
+7. **Contact / CTA** `#contact` (**no form**)
+
+   * Left column only: heading, one short paragraph, and **two simple contact chips**:
+
+     * A **mailto** chip using configured email.
+     * A **tel** chip using configured phone.
+   * Optional third CTA button to an external **booking URL** if provided (otherwise hide).
+
+8. **Footer**
+
+   * Current year, site name, minimal links (Privacy, Terms → `#`).
+
+## Navigation & layout
+
+* Sticky header with logo placeholder, anchor links (`#program`, `#consulting`, `#why`, `#cases`, `#contact`), and a **primary CTA** (“Book intro call” → `#contact`).
+* Responsive from mobile to desktop using straightforward grids/stacks.
+
+## Config & content (all placeholders, English for now)
+
+Create a single config file so content is easy to swap later:
+
+* `content/site.ts` (or `.json`) with:
+
+  * `siteName`, `tagline`, `navLinks` (label → `#id`)
+  * `ctaPrimaryText`, `ctaSecondaryText`
+  * `contactEmail`, `contactPhone`
+  * `bookingUrl` (optional; if empty, hide the booking button)
+  * `resourceLinks` (onePagerUrl, introVideoUrl, contactDeckUrl)
+  * `freeDownloads` (teachersPdfUrl, politiciansPdfUrl)
+  * `domain` (for metadata)
+
+* `content/seo.ts` with default metadata (title, description, og image placeholder path).
+
+## Components (lean)
+
+* `components/site/Header.tsx` (logo box + nav + CTA)
+* `components/site/Footer.tsx`
+* `components/site/Section.tsx` (id + max-width + spacing)
+* `components/site/CardFeature.tsx` (icon optional)
+* `components/site/CTAButtons.tsx` (primary/secondary group)
+* **No `ContactForm` component for now.**
+
+## Styles & tokens
+
+* Tailwind + a small token layer: define `--vts-*` variables inside a top-level wrapper (e.g., `<div data-theme="vts">`).
+* Provide accessible contrast defaults; avoid touching global `html, body` colors.
+
+## Files (illustrative)
+
+```
+/app
+  layout.tsx
+  page.tsx
+  globals.css
+  robots.txt
+  sitemap.xml
+  opengraph-image.png
+/components/site/*
+/content/site.ts
+/content/seo.ts
+/public/images/placeholders/ (empty)
+```
+
+## Acceptance criteria
+
+* Runs and builds in Replit.
+* Sticky nav anchors work for all sections.
+* **No contact form present** anywhere; Contact section uses only mailto/tel chips (and optional booking button).
+* All links default to `#` unless configured in `content/site.ts`.
+* No interference with Replit theme variables/selectors.
+* No TypeScript errors; basic lint passes.
+
+## Out of scope (for now)
+
+* Real copy/translation, brand assets, animations.
+* Any form handling, email service, backend, CMS, auth, or deployment.
