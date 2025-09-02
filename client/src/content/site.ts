@@ -248,6 +248,11 @@ export const siteConfig = {
     bookingUrl: ""
   },
 
+  social: {
+    facebook: "https://facebook.com/vitlikisstovan",
+    linkedin: "https://linkedin.com/company/vitlikisstovan"
+  },
+
   footer: {
     privacyUrl: "#",
     termsUrl: "#"
