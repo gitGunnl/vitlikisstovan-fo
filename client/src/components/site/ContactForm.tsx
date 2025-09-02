@@ -132,7 +132,7 @@ export default function ContactSection() {
               </div>
               
               <div className="pt-6 mt-6 border-t">
-                <p className="text-sm text-muted-foreground mb-4">Follow us</p>
+                <p className="text-sm text-muted-foreground mb-4">Follow us to learn more about AI</p>
                 <div className="flex items-center gap-4">
                   <a 
                     href={siteConfig.social.facebook} 
