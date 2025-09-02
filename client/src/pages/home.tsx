@@ -70,10 +70,8 @@ export default function Home() {
             {siteConfig.hero.subtitle}
           </p>
           <CTAButtons
-            primaryText={siteConfig.hero.primaryCTA.text}
-            primaryHref={siteConfig.hero.primaryCTA.href}
-            secondaryText={siteConfig.hero.secondaryCTA.text}
-            secondaryHref={siteConfig.hero.secondaryCTA.href}
+            primary={siteConfig.hero.primaryCTA}
+            secondary={siteConfig.hero.secondaryCTA}
           />
         </div>
       </section>
