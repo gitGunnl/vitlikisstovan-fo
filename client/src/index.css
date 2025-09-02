@@ -6,47 +6,24 @@
 
 /* Hero Section Styles */
 .hero-background {
-  background-image: url('/images/hero-background.webp');
+  background-image: 
+    linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.7) 100%),
+    url('/images/hero-background.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.hero-overlay {
-  backdrop-filter: brightness(0.8);
+  background-attachment: fixed;
 }
 
 .hero-text {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.hero-content-frame {
-  position: relative;
-  padding: 3rem 2rem;
-  max-width: 720px;
-  margin: 0 auto;
-}
-
-/* Subtle content highlighting without heavy effects */
-.hero-content-frame::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 0.75rem;
-  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: -1;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 /* Mobile adjustments */
 @media (max-width: 640px) {
   .hero-background {
     min-height: 60vh;
-  }
-  
-  .hero-content-frame {
-    padding: 2rem 1.5rem;
-    margin: 0 1rem;
+    background-attachment: scroll;
   }
 }
 

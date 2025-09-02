@@ -61,8 +61,8 @@ export default function Home() {
         {/* Background overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/40 to-black/50 hero-overlay"></div>
 
-        {/* Content container with watercolor frame */}
-        <div className="relative z-10 max-w-2xl mx-auto text-center hero-content-frame">
+        {/* Content container */}
+        <div className="relative z-10 max-w-4xl mx-auto text-center px-4"
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white hero-text">
             {siteConfig.hero.title}
           </h1>
