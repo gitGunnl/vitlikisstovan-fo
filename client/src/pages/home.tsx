@@ -164,7 +164,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <CardFeature
               icon={<Globe className="w-6 h-6" />}
               title={siteConfig.why.features[0].title}
@@ -185,6 +185,43 @@ export default function Home() {
               title={siteConfig.why.features[3].title}
               description={siteConfig.why.features[3].description}
             />
+          </div>
+
+          {/* Founder Section */}
+          <div className="mx-auto max-w-4xl">
+            <h3 className="text-2xl font-bold tracking-tight mb-8 text-center">
+              {siteConfig.why.founder.heading}
+            </h3>
+            <Card className="bg-background">
+              <CardContent className="p-8">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                  <div className="lg:col-span-1 text-center lg:text-left">
+                    <div className="w-32 h-32 mx-auto lg:mx-0 mb-4 bg-muted rounded-full flex items-center justify-center">
+                      <Users className="w-16 h-16 text-muted-foreground" />
+                    </div>
+                    <h4 className="text-xl font-bold mb-2">{siteConfig.why.founder.name}</h4>
+                    <p className="text-sm text-primary font-medium mb-4">{siteConfig.why.founder.role}</p>
+                  </div>
+                  
+                  <div className="lg:col-span-2">
+                    <p className="text-muted-foreground mb-6">{siteConfig.why.founder.summary}</p>
+                    
+                    <ul className="space-y-3 mb-6">
+                      {siteConfig.why.founder.bullets.map((bullet, index) => (
+                        <li key={index} className="flex items-start">
+                          <CheckCircle className="h-4 w-4 text-primary mt-0.5 mr-3 flex-shrink-0" />
+                          <span className="text-sm">{bullet}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    
+                    <blockquote className="border-l-4 border-primary pl-4 italic text-muted-foreground">
+                      "{siteConfig.why.founder.quote}"
+                    </blockquote>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </Section>
 
