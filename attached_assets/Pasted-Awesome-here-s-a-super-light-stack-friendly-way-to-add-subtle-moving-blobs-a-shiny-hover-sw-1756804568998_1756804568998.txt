@@ -1,0 +1,316 @@
+Awesome—here’s a super-light, stack-friendly way to add **subtle moving blobs** + a **shiny hover sweep** for buttons. No libs, no globals, Replit-theme safe.
+
+---
+
+# 1) Add tiny CSS (Tailwind-friendly)
+
+Paste this at the end of your `app/globals.css` (or any global stylesheet):
+
+```css
+/* --- Vitlikisstovan tokens (namespaced; theme-safe) --- */
+[data-theme="vts"] {
+  --vts-blob-1: #FF6B95; /* pink */
+  --vts-blob-2: #7B68EE; /* violet */
+  --vts-blob-3: #61DBFB; /* cyan */
+}
+
+/* --- Shiny button sweep (works on <a> or <button>) --- */
+.shiny-btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.shiny-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-120%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,.35) 50%,
+    transparent 100%
+  );
+  transition: transform 600ms ease;
+  pointer-events: none;
+}
+.shiny-btn:hover::before,
+.shiny-btn:focus-visible::before {
+  transform: translateX(120%);
+}
+
+/* --- Blobs --- */
+.vts-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(34px);
+  opacity: .75;
+  pointer-events: none;
+  will-change: transform, opacity;
+  /* translate offsets are applied via inline style (transform) */
+}
+```
+
+> Notes:
+> • We only define `--vts-*` variables under `[data-theme="vts"]`. No Replit theme tokens touched.
+> • The button style is class-only—just add `shiny-btn` next to your usual Tailwind/shadcn classes.
+
+---
+
+# 2) Add the Ambient Blobs component
+
+Create `components/site/AmbientBlobs.tsx`:
+
+```tsx
+"use client";
+import React, { useEffect, useRef } from "react";
+
+/**
+ * Lightweight ambient blobs with subtle idle motion + gentle mouse repulsion.
+ * No dependencies. Uses requestAnimationFrame, runs only on client.
+ */
+export default function AmbientBlobs({
+  className = "",
+  colors,
+  sizes = [360, 400, 240], // px
+  influence = 240,         // mouse influence radius (px)
+  maxRepel = 22,           // max pixels to push away from cursor
+}: {
+  className?: string;
+  colors?: [string, string, string]; // override CSS vars if desired
+  sizes?: [number, number, number];
+  influence?: number;
+  maxRepel?: number;
+}) {
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const b1 = useRef<HTMLDivElement | null>(null);
+  const b2 = useRef<HTMLDivElement | null>(null);
+  const b3 = useRef<HTMLDivElement | null>(null);
+
+  // per-blob animated offsets
+  const offsets = useRef([
+    { x: 0, y: 0 }, // b1
+    { x: 0, y: 0 }, // b2
+    { x: 0, y: 0 }, // b3
+  ]);
+  const mouse = useRef<{ x: number; y: number } | null>(null);
+  const raf = useRef<number>();
+
+  useEffect(() => {
+    const onMove = (e: MouseEvent) => {
+      mouse.current = { x: e.clientX, y: e.clientY };
+    };
+    window.addEventListener("mousemove", onMove);
+
+    const start = performance.now();
+    const loop = (t: number) => {
+      const time = (t - start) / 1000;
+
+      const blobs = [b1.current, b2.current, b3.current];
+      const phases = [0, 1.3, 2.2]; // unique idle phases
+      const idleAmp = [10, 12, 8];  // idle amplitude per blob
+
+      for (let i = 0; i < blobs.length; i++) {
+        const el = blobs[i];
+        if (!el) continue;
+
+        // Element center in viewport
+        const rect = el.getBoundingClientRect();
+        const cx = rect.left + rect.width / 2;
+        const cy = rect.top + rect.height / 2;
+
+        // Idle gentle drift (sin/cos)
+        const idleX = Math.sin(time * 0.35 + phases[i]) * idleAmp[i];
+        const idleY = Math.cos(time * 0.28 + phases[i]) * idleAmp[i];
+
+        // Mouse repulsion (small + clamped)
+        let rx = 0, ry = 0;
+        if (mouse.current) {
+          const dx = cx - mouse.current.x;
+          const dy = cy - mouse.current.y;
+          const dist = Math.hypot(dx, dy);
+          if (dist < influence && dist > 0.0001) {
+            const k = (1 - dist / influence) ** 2; // soft falloff
+            const ux = dx / dist;
+            const uy = dy / dist;
+            rx = ux * maxRepel * k;
+            ry = uy * maxRepel * k;
+          }
+        }
+
+        // Target offsets
+        const tx = idleX + rx;
+        const ty = idleY + ry;
+
+        // Lerp current offsets toward target
+        offsets.current[i].x += (tx - offsets.current[i].x) * 0.08;
+        offsets.current[i].y += (ty - offsets.current[i].y) * 0.08;
+
+        el.style.transform = `translate3d(${offsets.current[i].x}px, ${offsets.current[i].y}px, 0)`;
+      }
+
+      raf.current = requestAnimationFrame(loop);
+    };
+
+    raf.current = requestAnimationFrame(loop);
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      if (raf.current) cancelAnimationFrame(raf.current);
+    };
+  }, [influence, maxRepel]);
+
+  const styleVars: React.CSSProperties =
+    colors
+      ? {
+          // Override tokens per-instance if desired:
+          // @ts-expect-error custom props
+          "--vts-blob-1": colors[0],
+          "--vts-blob-2": colors[1],
+          "--vts-blob-3": colors[2],
+        }
+      : {};
+
+  return (
+    <div
+      ref={containerRef}
+      data-theme="vts"
+      className={`pointer-events-none absolute inset-0 -z-10 overflow-hidden ${className}`}
+      style={styleVars}
+      aria-hidden
+    >
+      {/* Blob 1 — top right */}
+      <div
+        ref={b1}
+        className="vts-blob"
+        style={{
+          width: sizes[0],
+          height: sizes[0],
+          background: "var(--vts-blob-1)",
+          top: "-12%",
+          right: "-6%",
+        }}
+      />
+      {/* Blob 2 — bottom left */}
+      <div
+        ref={b2}
+        className="vts-blob"
+        style={{
+          width: sizes[1],
+          height: sizes[1],
+          background: "var(--vts-blob-2)",
+          bottom: "-14%",
+          left: "-10%",
+        }}
+      />
+      {/* Blob 3 — center subtle */}
+      <div
+        ref={b3}
+        className="vts-blob"
+        style={{
+          width: sizes[2],
+          height: sizes[2],
+          background: "var(--vts-blob-3)",
+          top: "42%",
+          left: "50%",
+          transform: "translate3d(-50%, -50%, 0)", // base centering; JS applies extra translate
+          opacity: 0.6,
+          filter: "blur(28px)",
+        }}
+      />
+    </div>
+  );
+}
+```
+
+---
+
+# 3) (Optional) ShinyButton helper
+
+If you use shadcn’s `<Button>`, you can just add `className="shiny-btn"`.
+If you want a standalone button, create `components/ui/ShinyButton.tsx`:
+
+```tsx
+import React from "react";
+
+export function ShinyButton({
+  as = "button",
+  className = "",
+  children,
+  ...rest
+}: React.ComponentProps<"button"> & { as?: "a" | "button" }) {
+  const Comp: any = as;
+  return (
+    <Comp
+      className={
+        "shiny-btn inline-flex items-center justify-center rounded-full px-5 py-3 font-medium " +
+        "bg-rose-500 text-white shadow-md hover:shadow-lg transition " +
+        className
+      }
+      {...rest}
+    >
+      {children}
+    </Comp>
+  );
+}
+```
+
+> You can replace `bg-rose-500` with your Tailwind brand class or make it a prop.
+
+---
+
+# 4) Use it in your page
+
+In `app/page.tsx` (or your Hero section component):
+
+```tsx
+import AmbientBlobs from "@/components/site/AmbientBlobs";
+// import { ShinyButton } from "@/components/ui/ShinyButton"; // if using standalone
+
+export default function Home() {
+  return (
+    <main className="relative min-h-screen overflow-hidden bg-white">
+      {/* Ambient blobs behind content */}
+      <AmbientBlobs />
+
+      <section className="relative mx-auto max-w-6xl px-4 py-24">
+        <h1 className="text-4xl md:text-6xl font-semibold tracking-tight">
+          AI for every office in the Faroe Islands
+        </h1>
+        <p className="mt-4 max-w-2xl text-lg text-gray-600">
+          Our 3-month “Master AI” program upgrades your team’s daily work—
+          fewer tedious tasks, better documents, clearer ideas.
+        </p>
+
+        <div className="mt-6 flex flex-wrap gap-3">
+          {/* shadcn Button example: <Button className="shiny-btn">Get started</Button> */}
+          <a href="#program" className="shiny-btn rounded-full bg-rose-500 text-white px-5 py-3">
+            See how it works
+          </a>
+          <a href="#contact" className="shiny-btn rounded-full border border-rose-500 text-rose-600 px-5 py-3 bg-white">
+            Book intro call
+          </a>
+        </div>
+      </section>
+
+      {/* Other sections... */}
+    </main>
+  );
+}
+```
+
+---
+
+## Quick guide (what to do)
+
+1. **CSS:** paste the CSS block into `globals.css`.
+2. **Component:** add `AmbientBlobs.tsx` (and `ShinyButton.tsx` if you want).
+3. **Use it:** drop `<AmbientBlobs />` inside any section wrapper with `position: relative` (Tailwind `relative`) so the blobs sit behind (`-z-10`).
+4. **Tune feel (optional):** In `<AmbientBlobs />` props you can tweak:
+
+   * `sizes={[360, 400, 240]}` for blob sizes
+   * `influence={240}` for mouse radius
+   * `maxRepel={22}` for how far blobs move away
+   * `colors={["#FF6B95","#7B68EE","#61DBFB"]}` to override tokens per instance
+5. **Theme-safe:** We only use `--vts-*` custom properties under `[data-theme="vts"]`. Nothing conflicts with Replit themes.
+
+That’s it—drop it in and you’ve got the subtle motion and the shiny CTA sweep, with basically zero overhead.
