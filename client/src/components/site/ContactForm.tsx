@@ -88,7 +88,51 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="max-w-md mx-auto">
+        <div className="grid max-w-4xl mx-auto lg:grid-cols-2 gap-8">
+          {/* Contact Information */}
+          <div className="bg-card p-8 border border-border backdrop-blur-sm rounded-xl shadow-lg">
+            <h3 className="text-2xl font-semibold mb-6 border-b border-border pb-3">
+              {siteConfig.contact.sectionTitle}
+            </h3>
+            <p className="text-muted-foreground mb-8">
+              {siteConfig.contact.description}
+            </p>
+            
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10">
+                  <Mail className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Email</p>
+                  <a 
+                    href={`mailto:${siteConfig.contact.email}`}
+                    className="font-medium hover:text-primary transition-colors"
+                    data-testid="link-email"
+                  >
+                    {siteConfig.contact.email}
+                  </a>
+                </div>
+              </div>
+              
+              <div className="flex items-center gap-3">
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10">
+                  <Phone className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-sm text-muted-foreground">Phone</p>
+                  <a 
+                    href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
+                    className="font-medium hover:text-primary transition-colors"
+                    data-testid="link-phone"
+                  >
+                    {siteConfig.contact.phone}
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
           {/* Contact Form */}
           <div className="bg-card p-8 border border-border backdrop-blur-sm rounded-xl shadow-lg">
             <h3 className="text-2xl font-semibold mb-6 border-b border-border pb-3">

@@ -245,9 +245,14 @@ export const siteConfig = {
     sectionTitle: "Let’s Talk",
     description:
       "Whether you’re interested in the Master AI program, consulting, or a creative project, we’ll respond within one business day.",
-    email: "hello@vitlikisstovan.fo",
-    phone: "+298 123 456",
+    email: "info@ritvit.fo",
+    phone: "+298 919444",
     bookingUrl: "" // Optional - if empty, booking button won't show
+  },
+
+  social: {
+    facebook: "https://www.facebook.com/profile.php?id=61557593776267",
+    linkedin: "https://linkedin.com/company/tøkni-tænastan"
   },
 
   footer: {
