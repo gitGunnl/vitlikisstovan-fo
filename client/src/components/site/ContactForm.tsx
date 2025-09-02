@@ -134,26 +134,30 @@ export default function ContactSection() {
               <div className="pt-6 mt-6 border-t">
                 <p className="text-base font-medium text-foreground mb-6">Follow us to learn more about AI</p>
                 <div className="flex items-center gap-6">
-                  <a 
-                    href={siteConfig.social.facebook} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-14 h-14 rounded-xl bg-teal-500/10 text-teal-600 hover:bg-teal-500 hover:text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-teal-500/25"
-                    data-testid="contact-facebook"
-                    aria-label="Visit our Facebook page"
-                  >
-                    <Facebook className="w-7 h-7" />
-                  </a>
-                  <a 
-                    href={siteConfig.social.linkedin} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center w-14 h-14 rounded-xl bg-teal-600/10 text-teal-700 hover:bg-teal-600 hover:text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-teal-600/25"
-                    data-testid="contact-linkedin"
-                    aria-label="Visit our LinkedIn page"
-                  >
-                    <Linkedin className="w-7 h-7" />
-                  </a>
+                  {siteConfig.social?.facebook && (
+                    <a 
+                      href={siteConfig.social.facebook} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-14 h-14 rounded-xl bg-teal-500/10 text-teal-600 hover:bg-teal-500 hover:text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-teal-500/25"
+                      data-testid="contact-facebook"
+                      aria-label="Visit our Facebook page"
+                    >
+                      <Facebook className="w-7 h-7" />
+                    </a>
+                  )}
+                  {siteConfig.social?.linkedin && (
+                    <a 
+                      href={siteConfig.social.linkedin} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center w-14 h-14 rounded-xl bg-teal-600/10 text-teal-700 hover:bg-teal-600 hover:text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-teal-600/25"
+                      data-testid="contact-linkedin"
+                      aria-label="Visit our LinkedIn page"
+                    >
+                      <Linkedin className="w-7 h-7" />
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
