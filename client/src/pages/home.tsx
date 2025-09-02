@@ -107,6 +107,96 @@ export default function Home() {
             ))}
           </div>
 
+          {/* New section before outcomes */}
+          <div className="mx-auto max-w-4xl mb-12">
+            <Card className="bg-background">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold mb-6 text-center">
+                  Frá forvitin til framkomin – Eitt 12-vikuskeið til skrivstovur
+                </h3>
+                <p className="text-muted-foreground mb-8 text-center">
+                  Ein greið gongd frá tryggum grundarlagi til munagóðar arbeiðsgongdir, sum passa til tykkara toymi. Skapt til veruligt skrivstovuarbeiði - leða til júst tykkara.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  <div className="space-y-4">
+                    <div className="text-sm font-medium text-primary">Vika 1–4</div>
+                    <h4 className="text-lg font-bold">Grundarlag & trygg nýtsla</h4>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Øll læra grundleggjandi vitan: hvat sleppa tit í tykkara fyritøku? hvørji amboð hava tit atgongd til? hvat er vitlíki? hvussu brúkar man vitlíki?
+                    </p>
+                    <ul className="space-y-2 text-xs">
+                      <li className="flex items-start">
+                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                        Tit fáa leiðreglur sum eru til at fylgja
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                        Tit læra júst hvørji amboð passa júst til tykkum
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                        Tit læra hvat vitlíki er og hvat tað ikki er
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                        Tit læra hvussu man nýtur vitlíki trykt til arbeiðis
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="text-sm font-medium text-primary">Vika 5–8</div>
+                    <h4 className="text-lg font-bold">Finna tær røttu uppgávurnar</h4>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Vit greina tykkara arbeiðis gongdir og tørv.
+                    </p>
+                    <ul className="space-y-2 text-xs">
+                      <li className="flex items-start">
+                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                        Tit fáa sniðgivnar leiðbeningar júst til tykkara arbeiðis uppgávur.
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                        Tit læra akkruát hvørjar uppgávur tit skula nýta vitlíki til.
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                        Tit læra akkruát hvørjar uppgávur tit ikki skula nýta vitlíki til.
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                        Tit kunna nú nýta vitlíki munagott í øllum arbeiðinum.
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="space-y-4">
+                    <div className="text-sm font-medium text-primary">Vika 9–12</div>
+                    <h4 className="text-lg font-bold">Víðkað nýtsla av vitlíki</h4>
+                    <p className="text-sm text-muted-foreground mb-4">
+                      Vit læra tykkum hvussu man fær meira burturúr vitlíki
+                    </p>
+                    <ul className="space-y-2 text-xs">
+                      <li className="flex items-start">
+                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                        Tit læra serligir nýtsluhættir og snildir
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                        Tit læra viðkaðar funkur av tykkara vitlíki amboðum
+                      </li>
+                      <li className="flex items-start">
+                        <CheckCircle className="h-3 w-3 text-primary mt-0.5 mr-2 flex-shrink-0" />
+                        Tit læra hvussu man fær mest burturúr vitlíki
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
           <Card className="bg-background">
             <CardContent className="p-8">
               <h4 className="text-xl font-bold mb-4">Úrslit</h4>
