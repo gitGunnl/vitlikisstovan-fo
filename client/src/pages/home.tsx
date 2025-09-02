@@ -62,7 +62,7 @@ export default function Home() {
         <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/40 to-black/50 hero-overlay"></div>
 
         {/* Content container */}
-        <div className="relative z-10 max-w-4xl mx-auto text-center px-4"
+        <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white hero-text">
             {siteConfig.hero.title}
           </h1>
