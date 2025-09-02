@@ -18,87 +18,86 @@ export const siteConfig = {
   },
 
   hero: {
-    title: "Vitlíki, sum riggar á tínari skrivstovu – longu í hesum ársfjórðingi",
+    title: "Vitlíki, sum riggar fyri teg.",
     subtitle:
-      "Ein 12-vika langur skeiðpakki, sum ger starvsfólk til tryggar og effektivar brúkarar av vitlíki. Færri keðiligar uppgávur. Betri tekstir. Skarpari avgerðir í øllum toyminum.",
+      "Bílegg eitt 12-viku skeið, sum ger tykkara toymi til tryggir, skjótir og dugnaligir vitlíksbrúkarar. Færri keðiligar uppgávur. Betri tekstir. Skarpari avgerðir.",
     primaryCTA: {
       text: "Byrja nú",
       href: "#contact"
     },
     secondaryCTA: {
-      text: "Síggj 12-vikuskránna",
+      text: "Lær meira um skeiði",
       href: "#program"
     }
   },
 
   program: {
-    title: "Gerst serfrøðingur í vitlíki – 12-vikuskeið til skrivstovur",
+    title: "Frá forvitin til framkomin – Eitt 12-vikuskeið til skrivstovur",
     subtitle:
-      "Ein praktisk gongd frá tryggum grundarlagi til endurnýtiligar arbeiðsgongdir, klárar til títt toymi. Skapt til veruligt skrivstovuarbeiði – ikki bara teori.",
+      "Ein greið gongd frá tryggum grundarlagi til munagóðar arbeiðsgongdir, sum passa til tykkara toymi. Skapt til veruligt skrivstovuarbeiði - leða til júst tykkara.",
     phases: [
       {
         period: "Vika 1–4",
         title: "Grundarlag & trygg nýtsla",
         description:
-          "Øll læra grundleggjandi vitan: hvat vitlíki kann í dag, hvar tað hjálpir mest, og hvussu tað verður brúkt ábyrgdarfult.",
+          "Øll læra grundleggjandi vitan: hvat sleppa tit í tykkara fyritøku? hvørji amboð hava tit atgongd til? hvat er vitlíki? hvussu brúkar man vitlíki?",
         highlights: [
-          "Byrtskabelónir, sum veruliga rigga",
-          "Skriving og umorðing fyri greidleika og tóna",
-          "Politikkur, privatlív og dátutrygd (einfaldar leiðreglur)",
-          "Møguleiki: einføld 'no-code'/skripting, har tað er gagnligt"
+          "Tit fáa leiðreglur sum eru til at fylgja",
+          "Tit læra júst hvørji amboð passa júst til tykkum",
+          "Tit læra hvat vitlíki er og hvat tað ikki er",
+          "Tit læra hvussu man nýtur vitlíki trykt til arbeiðis"
         ]
       },
       {
         period: "Vika 5–8",
-        title: "Effektivar arbeiðsgongdir",
+        title: "Finna tær røttu uppgávurnar",
         description:
-          "Ger gerandisarbeiðið skjótari og betri við endurnýtiligum arbeiðsháttum, sum toymið kann halda áfram at brúka.",
+          "Vit greina tykkara arbeiðis gongdir og tørv.",
         highlights: [
-          "Skjøl, teldupostar, rokniørk og framløgur",
-          "Kundatænasta, fundarfrásagnir og samandráttir",
-          "Toymisskabelónir og innanhýsis mannagongdir"
+          "Tit fáa sniðgivnar leiðbeningar júst til tykkara arbeiðis uppgávur.",
+          "Tit læra akkruát hvørjar uppgávur tit skula nýta vitlíki til.",
+          "Tit læra akkruát hvørjar uppgávur tit ikki skula nýta vitlíki til.",
+          "Tit kunna nú nýta vitlíki munagott í øllum arbeiðinum."
         ]
       },
       {
         period: "Vika 9–12",
-        title: "Víðkað nýtsla & tillaging",
+        title: "Víðkað nýtsla av vitlíki",
         description:
-          "Tryggja, at broytingin festist við leiklutagrundaðum arbeiðsgongdum og einfaldari góðskukanning.",
+          "Vit læra tykkum hvussu man fær meira burturúr vitlíki",
         highlights: [
-          "Serligir nýtsluhættir og kekklistar til deildir",
-          "Eftirmetingar- og góðkenningargongdir, sum hóska til toymið",
-          "Handanarpakki og ætlan fyri næstu stigini"
+          "Tit læra serligir nýtsluhættir og snildir",
+          "Tit læra viðkaðar funkur av tykkara vitlíki amboðum",
+          "Tit læra hvussu man fær mest burturúr vitlíki"
         ]
       }
     ],
     outcomes: [
-      "Tímar spardir hvørja viku upp á vanliga skriving og umsiting",
-      "Greitt og støðugt mál í skjølum og teldupostum – frá fyrsta uppkasti til lidna útgávu skjótari",
-      "Kekklisti og leiðreglur fyri trygga nýtslu, sum starvsfólk veruliga fylgja",
-      "Endurnýtiligar arbeiðsgongdir, sum toymið hevur álit á",
-      "Álit á at brúka leiðandi vitlíkisamboð í arbeiðinum"
+      "Gevur starvsfólki sjálvsálit í nýtsluni av vitlíki – við ábyrgd, trygd og dygd í hásæti.",
+      "Styrkir førleikan at taka skjótari og betri avgerðir – tvørtur um allar deildir.",
+      "Fremur eina felags vitlíki-mentan, har amboð gerast partur av arbeiðsvanunum."
     ]
   },
 
   consulting: {
     title: "Ráðgeving & verkætlanir",
     subtitle:
-      "Frá tjóðarstrategium til smáar sjálvvirkandi loysnir og kreativar royndir – okkara uppgáva er at gera vitlíki nýtiligt.",
+      "Frá vitlíki strategi til smáar sjálvvirkandi loysnir og kreativar verkætlanir – okkara uppgáva er at gera vitlíki nýtiligt fyri teg.",
     services: [
       {
-        title: "Tað almenna & stórar fyritøkur",
+        title: "Tað almenna",
         description:
-          "Visjón & heildarætlanir fyri vitlíki, stýring & etikkur, innleiðingarætlanir og málrættaðar verkstovur."
+          "Visjón & heildarætlanir fyri vitlíki, stýring & etikkur, framløgur um vitlíki og málrætta vitlíki skeið."
       },
       {
-        title: "Smáar og miðalstórar fyritøkur",
+        title: "Fyritøkur",
         description:
-          "Praktisk sjálvvirkni, betri tekstir, kundatænastuhjálparar og innanhýsis mannagongdir."
+          "Vitlíki skeið, menning av vitlíki loysnum, menning av heimasíðu, ráðgeving og innanhýsis mannagongdir."
       },
       {
         title: "Kreativt vitlíki",
         description:
-          "Stuttfilmar, plakatir og listarlig amboð – sum vísa menniskjansligu síðuna av tøkni í Føroyum."
+          "Myndir, heimasíður, filmar, tónleikur – alt ting vit gera við vitlíki fyri teg."
       }
     ]
   },
@@ -106,7 +105,7 @@ export const siteConfig = {
   why: {
     title: "Hví Vitlíkisstovan?",
     subtitle:
-      "Føroyskt mál og mentan, parað við praktiskari vitlíkisfrøði og greiðari samskifting.",
+      "Vitlíkistovan er fyrsta av sínum slag í Føroyum. Vitlíkisstovan sameinar tøkniliga fatan og lokalan kunnleika – og hevur frá byrjan hugsað langskygt um, hvussu vitlíki best kemur føroyskum fyritøkum til gagns. Máli er ikki bara at læra nýggj amboð, men at broyta arbeiðshættir, styrkja avgerðartilgongdir og gera vitlíki til ein part av tykkara arbeiðismentan.",
 
     features: [
       {
@@ -115,19 +114,19 @@ export const siteConfig = {
           "Vegleiðing, sum virðir okkara mál og mentan, samstundis sum hon lýkur altjóða tøknilig krøv."
       },
       {
-        title: "Professionelt og praktiskt",
+        title: "Professionelt og handaligt",
         description:
-          "100% fokus á vitlíki. Vant við stórar stovnar og almennar áhugapartar – uttan at missa ferðina."
+          "Vitlíki er eitt eymt evni og tað eru líka nógvir meiningar sum tað eru fólk. Tað havi eg fulla viring fyri og arbeiðis á ein praktiskan hátt uttan at trakkað ov nógv fólk yvur tædnar."
       },
       {
-        title: "Greið samskifting",
+        title: "Greitt samskifti",
         description:
-          "Fløkt mál greidd frá á einfaldan hátt. Skabelónir og tilfar, sum toymið veruliga fer at brúka dagin eftir."
+          "Eg miðli fløkt hugtøk á einfaldan hátt. Um tað er verkstovur, framløgur, skabelónir ella annað tilfar, so vera tingið fortald so tey eru til at skilja."
       },
       {
         title: "Effektivt & smidligt",
         description:
-          "Einstaklingafyritøka – ongar óneyðugar útreiðslur. Skjótari avgerðir, enn skjótari veiting."
+          "Einstaklinga fyritøka – ongar óneyðugar útreiðslur. Skjótari avgerðir, enn skjótari veiting."
       }
     ],
 
@@ -136,9 +135,9 @@ export const siteConfig = {
       name: "Gunnleygur Clementsen",
       role: "Stovnari & høvuðsráðgevi",
       summary:
-        "El-verkfrøðingur, sum gjørdist vitlíkisráðgevi. Síðan 2022 havi eg brúkt ChatGPT dagliga – fyrst innan danska infrastrukturverkfrøði, og nú fulla tíð við at hjálpa føroyskum stovnum og fyritøkum at taka vitlíki til sín. Eg havi fylgt við menningini innan vitlíki í meira enn 10 ár og roynt fleiri hundrað amboð – eisini tá tey ikki vórðu búgvin – so tú fært tað, sum veruliga riggar.",
+        "El-verkfrøðingur, sum gjørdist vitlíkisráðgevi. Síðan 2022 havi eg brúkt ChatGPT dagliga – fyrst sum verkfrøðingur nirrið, og nú fulla tíð við at hjálpa føroyskum stovnum og fyritøkum at taka vitlíki til sín. Eg havi fylgt við menningini innan vitlíki í meira enn 10 ár og roynt fleiri hundrað amboð – eisini tey sum ikki vórðu búgvin – so tú fært tað, sum veruliga riggar.",
       bullets: [
-        "Stovnaði Tøkni Tænastuna (nú Vitlíkisstovan) fyri at hjálpa føroyskum toymum at fáa praktiskt gagn av vitlíki.",
+        "Stovnaði Vitlíkisstovuna fyri at hjálpa føroyskum toymum at fáa gagn av vitlíki.",
         "Úrslit fram um yvirdrivið tos: arbeiðsgongdir, sum spara tíð, betra um skrivlig avrik og minka um endurtakandi uppgávur.",
         "Royndir við stórum stovnum og almennum áhugapørtum, umframt smærri fyritøkum og skúlum.",
         "Føroyskt í hásæti: vegleiðing, sum er lagað til okkara mál, mentan og almenna veruleika."
@@ -157,12 +156,12 @@ export const siteConfig = {
   cases: {
     title: "Úrvald dømi",
     subtitle:
-      "Smá brot um, hvussu vit gera hugskot til nýtilig úrslit – á skrivstovum, í tænastum og í mentanini.",
+      "Síggj her dømir uppá hvussu eg geri hugskot til nýtilig úrslit – á skrivstovum, í tænastum og í mentanini.",
     highlights: [
       {
-        title: "\"Vitlíki til arbeiðis\"-vegleiðingar",
+        title: "Vegleiðingar",
         description:
-          "Praktiskar vitlíkisvegleiðingar til starvsbólkar (t.d. lærarar, eldrarøkt). Umfatar tvey ókeypis skjøl: “Vitlíki til lærarar” og “Vitlíki til politikarar.”",
+          "Eg havi gjørt nógvar vegleðingar til ymiskir bólkar, tildømis lærarar, námsfrøðingar og rithøvundar. Tú kann síggja tvey ókeypis dømir her:",
         image:
           "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
         imageAlt: "Samstarv á eini skrivstovu",
@@ -171,9 +170,9 @@ export const siteConfig = {
         buttonHref: "#"
       },
       {
-        title: "DA → EN: ein endurnýtilig týðingargongd",
+        title: "Vitlíki til týðing úr Donskum til Føroyskt",
         description:
-          "Vit mettu um amboð og sniðgóvu eina støðuga mannagongd til at týða almenn skjøl úr donskum til enskt – trúgv, natúrlig og endurnýtilig.",
+          "Eg hjálpti við at skriva birt og finna tað rætta modelli, úrsliti var eitt vitlíki amboð sum skrivaði betri Føroyskt enn nakað vit hava sæð áður. Um tú hevur eina uppgávu tú vil loysa við vitlíki, so kan eg ráðgeva um hvussu tú ger tað best. ",
         image:
           "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
         imageAlt: "Bøkur og tilfar um málslæru",
@@ -182,9 +181,9 @@ export const siteConfig = {
         buttonHref: "#"
       },
       {
-        title: "Kreativt vitlíki: filmar & plakatir",
+        title: "Kreativt vitlíki: myndir, filmar og annað",
         description:
-          "Stuttir vitlíkisgjørdur filmar og plakatir, sum geva føroyskum søgum lív – og vísa menniskjansligu síðuna av tøknini.",
+          "Vitlíki kann skapa alt millum himmal og jørð: myndir, filmar, tónleik og nógv annað. Hygg her fyri at síggja nakað av tí eg havi skapa við vitlíki",
         image:
           "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
         imageAlt: "Filmframleiðsla og kreativt studio",
@@ -237,14 +236,14 @@ export const siteConfig = {
   },
 
   contact: {
-    title: "Klárar at byrja?",
+    title: "Klár at byrja?",
     subtitle:
-      "Greitt okkum frá tínum toymi og málum. Vit koma við eini einfaldari ætlan – uttan snikk-snakk og uttan trýst.",
-    sectionTitle: "Lat okkum práta",
+      "Sig mær hvat tú hugsar, so sigi eg tær hvussu vitlíki kann hjálpa við hesum.",
+    sectionTitle: "Allir spurningar eru vælkomnir",
     description:
       "Antin tú hevur áhuga í 12-vikuskeiðnum, ráðgeving ella eini kreativari verkætlan, so svara vit innan ein arbeiðsdag.",
-    email: "hello@vitlikisstovan.fo",
-    phone: "+298 123 456",
+    email: "infor@ritvit.fo",
+    phone: "+298 919444",
     bookingUrl: ""
   },
 

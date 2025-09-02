@@ -109,7 +109,7 @@ export default function Home() {
 
           <Card className="bg-background">
             <CardContent className="p-8">
-              <h4 className="text-xl font-bold mb-4">Program Outcomes</h4>
+              <h4 className="text-xl font-bold mb-4">Úrslit</h4>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
                 {siteConfig.program.outcomes.map((outcome, index) => (
                   <li key={index} className="flex items-start">
