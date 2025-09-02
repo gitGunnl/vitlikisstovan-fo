@@ -170,8 +170,8 @@
 .vts-blob {
   position: absolute;
   border-radius: 9999px;
-  filter: blur(34px);
-  opacity: .75;
+  filter: blur(60px);
+  opacity: .25;
   pointer-events: none;
   will-change: transform, opacity;
   /* translate offsets are applied via inline style (transform) */

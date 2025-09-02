@@ -43,24 +43,24 @@ export default function AmbientBlobs({
 
       const blobs = [b1.current, b2.current, b3.current];
       const phases = [0, 1.3, 2.2]; // unique idle phases
-      const idleAmp = [10, 12, 8];  // idle amplitude per blob
+      const idleAmp = [15, 18, 12];  // idle amplitude per blob
 
       for (let i = 0; i < blobs.length; i++) {
         const el = blobs[i];
         if (!el) continue;
 
-        // Element center in viewport
-        const rect = el.getBoundingClientRect();
-        const cx = rect.left + rect.width / 2;
-        const cy = rect.top + rect.height / 2;
-
-        // Idle gentle drift (sin/cos)
-        const idleX = Math.sin(time * 0.35 + phases[i]) * idleAmp[i];
-        const idleY = Math.cos(time * 0.28 + phases[i]) * idleAmp[i];
+        // Idle gentle drift (sin/cos) - slower and more visible
+        const idleX = Math.sin(time * 0.5 + phases[i]) * idleAmp[i];
+        const idleY = Math.cos(time * 0.4 + phases[i]) * idleAmp[i];
 
         // Mouse repulsion (small + clamped)
         let rx = 0, ry = 0;
-        if (mouse.current) {
+        if (mouse.current && containerRef.current) {
+          const containerRect = containerRef.current.getBoundingClientRect();
+          const rect = el.getBoundingClientRect();
+          const cx = rect.left + rect.width / 2;
+          const cy = rect.top + rect.height / 2;
+          
           const dx = cx - mouse.current.x;
           const dy = cy - mouse.current.y;
           const dist = Math.hypot(dx, dy);
@@ -78,10 +78,16 @@ export default function AmbientBlobs({
         const ty = idleY + ry;
 
         // Lerp current offsets toward target
-        offsets.current[i].x += (tx - offsets.current[i].x) * 0.08;
-        offsets.current[i].y += (ty - offsets.current[i].y) * 0.08;
+        offsets.current[i].x += (tx - offsets.current[i].x) * 0.12;
+        offsets.current[i].y += (ty - offsets.current[i].y) * 0.12;
 
-        el.style.transform = `translate3d(${offsets.current[i].x}px, ${offsets.current[i].y}px, 0)`;
+        // Apply transform including any base transform
+        const baseTransform = el.dataset.baseTransform || '';
+        if (baseTransform) {
+          el.style.transform = `${baseTransform} translate3d(${offsets.current[i].x}px, ${offsets.current[i].y}px, 0)`;
+        } else {
+          el.style.transform = `translate3d(${offsets.current[i].x}px, ${offsets.current[i].y}px, 0)`;
+        }
       }
 
       raf.current = requestAnimationFrame(loop);
@@ -141,6 +147,7 @@ export default function AmbientBlobs({
       <div
         ref={b3}
         className="vts-blob"
+        data-base-transform="translate3d(-50%, -50%, 0)"
         style={{
           width: sizes[2],
           height: sizes[2],
@@ -148,8 +155,8 @@ export default function AmbientBlobs({
           top: "42%",
           left: "50%",
           transform: "translate3d(-50%, -50%, 0)", // base centering; JS applies extra translate
-          opacity: 0.6,
-          filter: "blur(28px)",
+          opacity: 0.4,
+          filter: "blur(50px)",
         }}
       />
     </div>

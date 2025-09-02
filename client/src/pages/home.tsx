@@ -53,10 +53,10 @@ export default function Home() {
     <>
       <Header />
       
-      <main>
+      <main className="relative">
+        <AmbientBlobs />
         {/* Hero Section */}
-        <Section id="hero" className="relative py-24 lg:py-32">
-          <AmbientBlobs />
+        <Section id="hero" className="py-24 lg:py-32">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl mb-6">
               {siteConfig.hero.title}
