@@ -15,7 +15,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-white shadow-sm">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <div className="flex items-center space-x-2">
@@ -24,7 +24,7 @@ export default function Header() {
             alt={siteConfig.siteName} 
             className="h-8 w-8 object-contain"
           />
-          <span className="font-semibold text-lg">{siteConfig.siteName}</span>
+          <span className="font-bold text-lg text-gray-900">{siteConfig.siteName}</span>
         </div>
 
         {/* Desktop Navigation */}
@@ -33,7 +33,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
               data-testid={`nav-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
             >
               {link.label}
@@ -68,14 +68,14 @@ export default function Header() {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <nav className="md:hidden border-t border-border bg-background px-4 py-4">
+        <nav className="md:hidden border-t border-gray-200 bg-white px-4 py-4 shadow-sm">
           <div className="space-y-2">
             {siteConfig.nav.links.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={closeMobileMenu}
-                className="block px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
+                className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900"
                 data-testid={`nav-mobile-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 {link.label}
