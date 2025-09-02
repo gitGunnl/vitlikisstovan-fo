@@ -107,6 +107,7 @@ export const siteConfig = {
     title: "Why Vitlíkisstovan?",
     subtitle:
       "Local language and culture, paired with hands-on AI expertise and clear communication.",
+
     features: [
       {
         title: "Faroese-first",
@@ -116,7 +117,7 @@ export const siteConfig = {
       {
         title: "Serious + practical",
         description:
-          "Two years focused 100% on AI. Experience working with large organisations (e.g., via Banedanmark)."
+          "Two years focused 100% on AI. Comfortable in large organisations (experience via Banedanmark) and small teams alike."
       },
       {
         title: "Clear communication",
@@ -128,8 +129,32 @@ export const siteConfig = {
         description:
           "Single-person company—no overhead. Fast decisions, faster delivery."
       }
-    ]
+    ],
+
+    founder: {
+      heading: "Who’s behind this?",
+      name: "Gunnleygur Clementsen",
+      role: "Founder & Lead Consultant",
+      summary:
+        "Electrical-engineer-turned AI consultant. Since 2022 I’ve used ChatGPT almost daily—first inside Danish infrastructure engineering, now full-time helping Faroese organisations adopt AI. I’ve followed AI for 10+ years and tested hundreds of tools—even when they weren’t ready—so you get what actually works.",
+      bullets: [
+        "Founded Tøkni Tænastan (now Vitlíkisstovan) to help Faroese teams get practical value from AI.",
+        "Outcome over hype: workflows that save time, improve writing quality, and reduce repetitive tasks.",
+        "Experience working with big organisations and public stakeholders, as well as SMEs and schools.",
+        "Faroese-first: guidance that fits our language, culture, and public-sector realities."
+      ],
+      quote:
+        "AI isn’t a distant future—it’s how we work now. Let’s put it to work for your team.",
+      headshotUrl: "/images/founder.jpg",      // replace when ready
+      headshotAlt: "Portrait of Gunnleygur Clementsen",
+      links: [
+        // optional: show as small icons or text links under the bio
+        // { label: "LinkedIn", href: "https://www.linkedin.com/in/..." },
+        // { label: "Email", href: "mailto:hello@vitlikisstovan.fo" }
+      ]
+    }
   },
+
 
   cases: {
     title: "Case Highlights",
