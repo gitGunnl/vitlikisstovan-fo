@@ -5,6 +5,7 @@ import Section from "@/components/site/Section";
 import CardFeature from "@/components/site/CardFeature";
 import CTAButtons from "@/components/site/CTAButtons";
 import ContactSection from "@/components/site/ContactForm";
+import AmbientBlobs from "@/components/site/AmbientBlobs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/content/site";
@@ -54,7 +55,8 @@ export default function Home() {
       
       <main>
         {/* Hero Section */}
-        <Section id="hero" className="py-24 lg:py-32">
+        <Section id="hero" className="relative py-24 lg:py-32">
+          <AmbientBlobs />
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl mb-6">
               {siteConfig.hero.title}

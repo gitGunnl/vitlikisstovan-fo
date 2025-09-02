@@ -134,6 +134,49 @@
   }
 }
 
+/* --- Vitlikisstovan ambient blobs tokens (namespaced; theme-safe) --- */
+[data-theme="vts"] {
+  --vts-blob-1: #FF6B95; /* pink */
+  --vts-blob-2: #7B68EE; /* violet */
+  --vts-blob-3: #61DBFB; /* cyan */
+}
+
+/* --- Shiny button sweep (works on <a> or <button>) --- */
+.shiny-btn {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.shiny-btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-120%);
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,.35) 50%,
+    transparent 100%
+  );
+  transition: transform 600ms ease;
+  pointer-events: none;
+}
+.shiny-btn:hover::before,
+.shiny-btn:focus-visible::before {
+  transform: translateX(120%);
+}
+
+/* --- Blobs --- */
+.vts-blob {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(34px);
+  opacity: .75;
+  pointer-events: none;
+  will-change: transform, opacity;
+  /* translate offsets are applied via inline style (transform) */
+}
+
 @layer utilities {
   .mobile-menu-hidden {
     display: none;
