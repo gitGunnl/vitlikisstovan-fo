@@ -162,7 +162,7 @@ export default function ContactSection() {
           {/* Contact Form */}
           <div className="bg-card p-8 border rounded-xl shadow-lg">
             <h3 className="text-2xl font-semibold mb-6 border-b pb-3">
-              Skriva til okkum
+              Send us a message
             </h3>
             
             <Form {...form}>
@@ -197,7 +197,7 @@ export default function ContactSection() {
                       <FormControl>
                         <Input
                           {...field}
-                          placeholder="Títt navn"
+                          placeholder="Your name"
                           data-testid="input-name"
                         />
                       </FormControl>
