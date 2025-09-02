@@ -32,7 +32,7 @@ export default function Home() {
     setIsMounted(true);
     // Set page metadata
     document.title = seoConfig.title;
-    
+
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', seoConfig.description);
@@ -51,31 +51,32 @@ export default function Home() {
   return (
     <>
       <Header />
-      
+
       <main>
         {/* Hero Section */}
-        <Section id="hero" className="py-24 lg:py-32">
-          <div className="mx-auto max-w-4xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl mb-6">
-              {siteConfig.hero.title}
-            </h1>
-            <p className="mx-auto max-w-2xl text-xl text-muted-foreground mb-8">
-              {siteConfig.hero.subtitle}
-            </p>
-            <CTAButtons 
-              primary={{
-                text: siteConfig.hero.primaryCTA.text,
-                href: siteConfig.hero.primaryCTA.href,
-                testId: "cta-primary-hero"
-              }}
-              secondary={{
-                text: siteConfig.hero.secondaryCTA.text,
-                href: siteConfig.hero.secondaryCTA.href,
-                testId: "cta-secondary-hero"
-              }}
-            />
-          </div>
-        </Section>
+      <section 
+        id="hero" 
+        className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 hero-background"
+      >
+        {/* Background overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/40 to-black/50 hero-overlay"></div>
+
+        {/* Content container with watercolor frame */}
+        <div className="relative z-10 max-w-2xl mx-auto text-center hero-content-frame">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white hero-text">
+            {siteConfig.hero.title}
+          </h1>
+          <p className="text-xl sm:text-2xl mb-8 text-white/90 max-w-xl mx-auto hero-text">
+            {siteConfig.hero.subtitle}
+          </p>
+          <CTAButtons
+            primaryText={siteConfig.hero.primaryCTA.text}
+            primaryHref={siteConfig.hero.primaryCTA.href}
+            secondaryText={siteConfig.hero.secondaryCTA.text}
+            secondaryHref={siteConfig.hero.secondaryCTA.href}
+          />
+        </div>
+      </section>
 
         {/* The Flagship Program */}
         <Section id="program" className="py-24 bg-muted">
@@ -206,10 +207,10 @@ export default function Home() {
                     <h4 className="text-xl font-bold mb-2">{siteConfig.why.founder.name}</h4>
                     <p className="text-sm text-primary font-medium mb-4">{siteConfig.why.founder.role}</p>
                   </div>
-                  
+
                   <div className="lg:col-span-2">
                     <p className="text-muted-foreground mb-6">{siteConfig.why.founder.summary}</p>
-                    
+
                     <ul className="space-y-3 mb-6">
                       {siteConfig.why.founder.bullets.map((bullet, index) => (
                         <li key={index} className="flex items-start">
@@ -218,7 +219,7 @@ export default function Home() {
                         </li>
                       ))}
                     </ul>
-                    
+
                     <blockquote className="border-l-4 border-primary pl-4 italic text-muted-foreground">
                       "{siteConfig.why.founder.quote}"
                     </blockquote>
