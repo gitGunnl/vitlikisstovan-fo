@@ -19,9 +19,11 @@ export default function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <div className="flex items-center space-x-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-semibold">
-            V
-          </div>
+          <img 
+            src="/logo-header.png" 
+            alt={siteConfig.siteName} 
+            className="h-8 w-8 object-contain"
+          />
           <span className="font-semibold text-lg">{siteConfig.siteName}</span>
         </div>
 
