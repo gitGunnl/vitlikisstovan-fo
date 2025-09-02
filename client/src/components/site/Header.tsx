@@ -15,7 +15,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-white shadow-sm">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-white/95 backdrop-blur-header shadow-sm transition-all duration-300">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
         <div className="flex items-center space-x-2">
@@ -33,7 +33,7 @@ export default function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-gray-700 hover:text-gray-900 transition-colors"
+              className="text-sm font-medium text-gray-700 hover:text-primary transition-all duration-200 hover:scale-105 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
               data-testid={`nav-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
             >
               {link.label}
@@ -67,7 +67,7 @@ export default function Header() {
       </div>
 
       {/* Mobile Navigation */}
-      {isMobileMenuOpen && (
+      <div className={`overflow-hidden transition-all duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-96' : 'max-h-0'}`}>
         <nav className="md:hidden border-t border-gray-200 bg-white px-4 py-4 shadow-sm">
           <div className="space-y-2">
             {siteConfig.nav.links.map((link) => (
@@ -75,7 +75,7 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 onClick={closeMobileMenu}
-                className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-900"
+                className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary hover:bg-accent/50 rounded-md transition-all duration-200"
                 data-testid={`nav-mobile-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
               >
                 {link.label}
@@ -90,7 +90,7 @@ export default function Header() {
             </div>
           </div>
         </nav>
-      )}
+      </div>
     </header>
   );
 }

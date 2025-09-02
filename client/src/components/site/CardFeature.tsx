@@ -10,15 +10,15 @@ interface CardFeatureProps {
 
 export default function CardFeature({ icon, title, description, className }: CardFeatureProps) {
   return (
-    <Card className={className}>
+    <Card className={`group hover:bg-accent/5 ${className || ''}`}>
       <CardContent className="p-8">
         {icon && (
-          <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mb-6 text-primary">
+          <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform duration-300 shadow-sm">
             {icon}
           </div>
         )}
-        <h3 className="text-xl font-bold mb-4">{title}</h3>
-        <p className="text-muted-foreground">{description}</p>
+        <h3 className="text-xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">{title}</h3>
+        <p className="text-muted-foreground leading-relaxed">{description}</p>
       </CardContent>
     </Card>
   );

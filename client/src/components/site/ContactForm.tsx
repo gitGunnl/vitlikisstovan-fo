@@ -79,18 +79,18 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-background/80">
+    <section className="py-24 sm:py-32 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background via-muted/20 to-background">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">{siteConfig.contact.title}</h2>
-          <p className="text-muted-foreground max-w-xl mx-auto">
+        <div className="text-center mb-16 animate-slide-up">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">{siteConfig.contact.title}</h2>
+          <p className="text-muted-foreground text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
             {siteConfig.contact.subtitle}
           </p>
         </div>
 
         <div className="grid max-w-4xl mx-auto lg:grid-cols-2 gap-8">
           {/* Contact Information */}
-          <div className="bg-card p-8 border rounded-xl shadow-lg">
+          <div className="bg-card p-8 border rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
             <h3 className="text-2xl font-semibold mb-6 border-b pb-3">
               {siteConfig.contact.sectionTitle}
             </h3>
@@ -100,7 +100,7 @@ export default function ContactSection() {
             
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10">
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-primary/10 shadow-sm">
                   <Mail className="w-5 h-5 text-primary" />
                 </div>
                 <div>
@@ -116,7 +116,7 @@ export default function ContactSection() {
               </div>
               
               <div className="flex items-center gap-3">
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-primary/10">
+                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-gradient-to-br from-primary/20 to-primary/10 shadow-sm">
                   <Phone className="w-5 h-5 text-primary" />
                 </div>
                 <div>

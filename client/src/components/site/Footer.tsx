@@ -5,14 +5,14 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-border bg-muted">
-      <div className="container mx-auto px-4 py-8">
-        <div className="flex flex-col md:flex-row justify-between items-center">
-          <div className="flex items-center space-x-2 mb-4 md:mb-0">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground font-semibold">
+    <footer className="border-t border-border bg-gradient-to-b from-muted to-muted/50">
+      <div className="container mx-auto px-4 py-12">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+          <div className="flex items-center space-x-3 mb-4 md:mb-0 group cursor-pointer">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary/80 text-primary-foreground font-bold text-lg shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105">
               V
             </div>
-            <span className="font-semibold">{siteConfig.siteName}</span>
+            <span className="font-bold text-lg">{siteConfig.siteName}</span>
           </div>
           
           <div className="flex flex-col md:flex-row items-center gap-4 md:gap-6">
@@ -22,7 +22,7 @@ export default function Footer() {
                 href={siteConfig.social.facebook} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground hover:text-primary transition-all duration-200 hover:scale-110"
                 data-testid="link-facebook"
                 aria-label="Visit our Facebook page"
               >
@@ -32,7 +32,7 @@ export default function Footer() {
                 href={siteConfig.social.linkedin} 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-muted-foreground hover:text-foreground transition-colors"
+                className="text-muted-foreground hover:text-primary transition-all duration-200 hover:scale-110"
                 data-testid="link-linkedin"
                 aria-label="Visit our LinkedIn page"
               >
@@ -45,14 +45,14 @@ export default function Footer() {
               <span>© {currentYear} {siteConfig.siteName}</span>
               <a 
                 href={siteConfig.footer.privacyUrl} 
-                className="hover:text-foreground transition-colors"
+                className="hover:text-primary transition-colors duration-200 hover:underline underline-offset-4"
                 data-testid="link-privacy"
               >
                 Privacy
               </a>
               <a 
                 href={siteConfig.footer.termsUrl} 
-                className="hover:text-foreground transition-colors"
+                className="hover:text-primary transition-colors duration-200 hover:underline underline-offset-4"
                 data-testid="link-terms"
               >
                 Terms

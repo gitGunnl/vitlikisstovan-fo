@@ -56,49 +56,53 @@ export default function Home() {
         {/* Hero Section */}
       <section 
         id="hero" 
-        className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 hero-background"
+        className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 hero-background overflow-hidden"
       >
         {/* Background overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/40 to-black/50 hero-overlay"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60 hero-overlay"></div>
+        
+        {/* Animated gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10 animate-pulse"></div>
 
         {/* Content container */}
-        <div className="relative z-10 max-w-4xl mx-auto text-center px-4">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white hero-text">
+        <div className="relative z-10 max-w-4xl mx-auto text-center px-4 animate-fade-in">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 text-white hero-text leading-tight">
             {siteConfig.hero.title}
           </h1>
-          <p className="text-xl sm:text-2xl mb-8 text-white/90 max-w-xl mx-auto hero-text">
+          <p className="text-xl sm:text-2xl mb-10 text-white/95 max-w-2xl mx-auto hero-text leading-relaxed">
             {siteConfig.hero.subtitle}
           </p>
           <CTAButtons
             primary={siteConfig.hero.primaryCTA}
             secondary={siteConfig.hero.secondaryCTA}
+            className="mt-2"
           />
         </div>
       </section>
 
         {/* The Flagship Program */}
-        <Section id="program" className="py-24 bg-muted">
-          <div className="mx-auto max-w-4xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+        <Section id="program" className="py-24 sm:py-32 bg-gradient-to-b from-muted to-background">
+          <div className="mx-auto max-w-4xl text-center mb-16 animate-slide-up">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">
               {siteConfig.program.title}
             </h2>
-            <p className="text-xl text-muted-foreground">
+            <p className="text-xl sm:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
               {siteConfig.program.subtitle}
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {siteConfig.program.phases.map((phase, index) => (
-              <Card key={index} className="bg-background">
+              <Card key={index} className="bg-background hover:bg-accent/5 group">
                 <CardContent className="p-8">
-                  <div className="text-sm font-medium text-primary mb-2">{phase.period}</div>
-                  <h3 className="text-2xl font-bold mb-4">{phase.title}</h3>
-                  <p className="text-muted-foreground mb-6">{phase.description}</p>
+                  <div className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">{phase.period}</div>
+                  <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">{phase.title}</h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">{phase.description}</p>
                   <ul className="space-y-2 text-sm">
                     {phase.highlights.map((highlight, idx) => (
-                      <li key={idx} className="flex items-start">
-                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 mr-2 flex-shrink-0" />
-                        {highlight}
+                      <li key={idx} className="flex items-start group/item">
+                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 mr-3 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200" />
+                        <span className="group-hover/item:text-foreground transition-colors duration-200">{highlight}</span>
                       </li>
                     ))}
                   </ul>
