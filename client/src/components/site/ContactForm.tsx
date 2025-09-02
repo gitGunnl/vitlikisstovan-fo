@@ -138,7 +138,7 @@ export default function ContactSection() {
                     href={siteConfig.social.facebook} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-14 h-14 rounded-xl bg-blue-500/10 text-blue-600 hover:bg-blue-500 hover:text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-blue-500/25"
+                    className="flex items-center justify-center w-14 h-14 rounded-xl bg-teal-500/10 text-teal-600 hover:bg-teal-500 hover:text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-teal-500/25"
                     data-testid="contact-facebook"
                     aria-label="Visit our Facebook page"
                   >
@@ -148,7 +148,7 @@ export default function ContactSection() {
                     href={siteConfig.social.linkedin} 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center w-14 h-14 rounded-xl bg-blue-700/10 text-blue-700 hover:bg-blue-700 hover:text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-blue-700/25"
+                    className="flex items-center justify-center w-14 h-14 rounded-xl bg-teal-600/10 text-teal-700 hover:bg-teal-600 hover:text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-teal-600/25"
                     data-testid="contact-linkedin"
                     aria-label="Visit our LinkedIn page"
                   >
