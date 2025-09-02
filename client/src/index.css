@@ -23,43 +23,19 @@
 .hero-content-frame {
   position: relative;
   padding: 3rem 2rem;
-  border-radius: 1rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 720px;
+  margin: 0 auto;
 }
 
-/* Watercolor frame effect */
-.hero-content-frame::before {
+/* Subtle content highlighting without heavy effects */
+.hero-content-frame::after {
   content: '';
   position: absolute;
-  inset: -8px;
-  border-radius: 1.5rem;
-  padding: 8px;
-  background: linear-gradient(45deg, 
-    rgba(255, 255, 255, 0.2) 0%,
-    rgba(255, 255, 255, 0.1) 25%,
-    rgba(255, 255, 255, 0.15) 50%,
-    rgba(255, 255, 255, 0.1) 75%,
-    rgba(255, 255, 255, 0.2) 100%
-  );
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: xor;
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
+  inset: 0;
+  border-radius: 0.75rem;
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
   pointer-events: none;
-}
-
-/* Fallback for browsers that don't support mask */
-@supports not (mask: linear-gradient(#fff 0 0)) {
-  .hero-content-frame::before {
-    display: none;
-  }
-  
-  .hero-content-frame {
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  }
+  z-index: -1;
 }
 
 /* Mobile adjustments */
