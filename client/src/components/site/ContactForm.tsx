@@ -88,64 +88,7 @@ export default function ContactSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {/* Contact Details */}
-          <div className="bg-card p-8 border border-border backdrop-blur-sm rounded-xl shadow-lg hover:shadow-primary/5 transition-all duration-300">
-            <h3 className="text-2xl font-semibold mb-6 border-b border-border pb-3">
-              {siteConfig.contact.sectionTitle}
-            </h3>
-            <p className="text-muted-foreground mb-8">
-              {siteConfig.contact.description}
-            </p>
-            
-            <div className="space-y-4">
-              {/* Email Contact */}
-              <a
-                href={`mailto:${siteConfig.contact.email}`}
-                className="flex items-center gap-4 p-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors group"
-                data-testid="contact-email"
-              >
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                  <Mail className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <div className="font-medium">Email Us</div>
-                  <div className="text-sm text-muted-foreground group-hover:text-foreground">
-                    {siteConfig.contact.email}
-                  </div>
-                </div>
-              </a>
-
-              {/* Phone Contact */}
-              <a
-                href={`tel:${siteConfig.contact.phone}`}
-                className="flex items-center gap-4 p-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors group"
-                data-testid="contact-phone"
-              >
-                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                  <Phone className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <div className="font-medium">Call Us</div>
-                  <div className="text-sm text-muted-foreground group-hover:text-foreground">
-                    {siteConfig.contact.phone}
-                  </div>
-                </div>
-              </a>
-
-              {/* Optional Booking Button */}
-              {siteConfig.contact.bookingUrl && (
-                <div className="pt-4">
-                  <Button asChild className="text-base" data-testid="button-booking">
-                    <a href={siteConfig.contact.bookingUrl}>
-                      Book Consultation Call
-                    </a>
-                  </Button>
-                </div>
-              )}
-            </div>
-          </div>
-
+        <div className="max-w-md mx-auto">
           {/* Contact Form */}
           <div className="bg-card p-8 border border-border backdrop-blur-sm rounded-xl shadow-lg">
             <h3 className="text-2xl font-semibold mb-6 border-b border-border pb-3">
