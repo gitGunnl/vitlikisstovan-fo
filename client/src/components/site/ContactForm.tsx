@@ -1,0 +1,259 @@
+import { useForm } from "react-hook-form";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { useMutation } from "@tanstack/react-query";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import {
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
+} from "@/components/ui/form";
+import { contactFormSchema, type ContactForm } from "@shared/schema";
+import { useToast } from "@/hooks/use-toast";
+import { MessageSquare, Mail, Phone } from "lucide-react";
+import { siteConfig } from "@/content/site";
+import { useState, useEffect } from "react";
+
+export default function ContactSection() {
+  const { toast } = useToast();
+  const [formStartTime, setFormStartTime] = useState<number>(0);
+
+  useEffect(() => {
+    setFormStartTime(Date.now());
+  }, []);
+
+  const form = useForm<ContactForm>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+      honeypot: "",
+    },
+  });
+
+  const contactMutation = useMutation({
+    mutationFn: async (data: ContactForm) => {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          ...data,
+          formStartTime,
+          submissionTime: Date.now(),
+        }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || "Failed to send message");
+      }
+
+      return response.json();
+    },
+    onSuccess: () => {
+      toast({
+        title: "Message sent!",
+        description: "Thank you for your message. We'll get back to you soon.",
+      });
+      form.reset();
+      setFormStartTime(Date.now());
+    },
+    onError: (error: Error) => {
+      toast({
+        title: "Error",
+        description: error.message || "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    },
+  });
+
+  const onSubmit = (data: ContactForm) => {
+    contactMutation.mutate(data);
+  };
+
+  return (
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-background/80">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">{siteConfig.contact.title}</h2>
+          <p className="text-muted-foreground max-w-xl mx-auto">
+            {siteConfig.contact.subtitle}
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {/* Contact Details */}
+          <div className="bg-card p-8 border border-border backdrop-blur-sm rounded-xl shadow-lg hover:shadow-primary/5 transition-all duration-300">
+            <h3 className="text-2xl font-semibold mb-6 border-b border-border pb-3">
+              {siteConfig.contact.sectionTitle}
+            </h3>
+            <p className="text-muted-foreground mb-8">
+              {siteConfig.contact.description}
+            </p>
+            
+            <div className="space-y-4">
+              {/* Email Contact */}
+              <a
+                href={`mailto:${siteConfig.contact.email}`}
+                className="flex items-center gap-4 p-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors group"
+                data-testid="contact-email"
+              >
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                  <Mail className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <div className="font-medium">Email Us</div>
+                  <div className="text-sm text-muted-foreground group-hover:text-foreground">
+                    {siteConfig.contact.email}
+                  </div>
+                </div>
+              </a>
+
+              {/* Phone Contact */}
+              <a
+                href={`tel:${siteConfig.contact.phone}`}
+                className="flex items-center gap-4 p-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors group"
+                data-testid="contact-phone"
+              >
+                <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
+                  <Phone className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <div className="font-medium">Call Us</div>
+                  <div className="text-sm text-muted-foreground group-hover:text-foreground">
+                    {siteConfig.contact.phone}
+                  </div>
+                </div>
+              </a>
+
+              {/* Optional Booking Button */}
+              {siteConfig.contact.bookingUrl && (
+                <div className="pt-4">
+                  <Button asChild className="text-base" data-testid="button-booking">
+                    <a href={siteConfig.contact.bookingUrl}>
+                      Book Consultation Call
+                    </a>
+                  </Button>
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className="bg-card p-8 border border-border backdrop-blur-sm rounded-xl shadow-lg">
+            <h3 className="text-2xl font-semibold mb-6 border-b border-border pb-3">
+              Send us a message
+            </h3>
+            
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+                {/* Honeypot field - hidden from users */}
+                <FormField
+                  control={form.control}
+                  name="honeypot"
+                  render={({ field }) => (
+                    <FormItem className="absolute left-[-9999px] opacity-0 pointer-events-none">
+                      <FormLabel>Leave this field empty</FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          type="text"
+                          autoComplete="off"
+                          tabIndex={-1}
+                        />
+                      </FormControl>
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="name"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-foreground/90 font-medium">
+                        Name
+                      </FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          placeholder="Your name"
+                          className="bg-background/70 border-border focus:border-primary"
+                          data-testid="input-name"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="email"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-foreground/90 font-medium">
+                        Email
+                      </FormLabel>
+                      <FormControl>
+                        <Input
+                          {...field}
+                          type="email"
+                          placeholder="your.email@example.com"
+                          className="bg-background/70 border-border focus:border-primary"
+                          data-testid="input-email"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <FormField
+                  control={form.control}
+                  name="message"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-foreground/90 font-medium">
+                        Message
+                      </FormLabel>
+                      <FormControl>
+                        <Textarea
+                          {...field}
+                          rows={5}
+                          placeholder="Tell us about your project or question..."
+                          className="bg-background/70 border-border focus:border-primary resize-none"
+                          data-testid="textarea-message"
+                        />
+                      </FormControl>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <Button
+                  type="submit"
+                  disabled={contactMutation.isPending}
+                  className="w-full py-6 font-semibold shadow-lg transition-all hover:translate-y-[-2px]"
+                  data-testid="button-submit"
+                >
+                  <span className="flex items-center justify-center gap-2">
+                    <MessageSquare className="w-5 h-5" />
+                    {contactMutation.isPending ? "Sending..." : "Send Message"}
+                  </span>
+                </Button>
+              </form>
+            </Form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

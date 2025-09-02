@@ -4,6 +4,7 @@ import Footer from "@/components/site/Footer";
 import Section from "@/components/site/Section";
 import CardFeature from "@/components/site/CardFeature";
 import CTAButtons from "@/components/site/CTAButtons";
+import ContactSection from "@/components/site/ContactForm";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/content/site";
@@ -262,76 +263,9 @@ export default function Home() {
         </Section>
 
         {/* Contact */}
-        <Section id="contact" className="py-24">
-          <div className="mx-auto max-w-4xl">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-                {siteConfig.contact.title}
-              </h2>
-              <p className="text-xl text-muted-foreground">
-                {siteConfig.contact.subtitle}
-              </p>
-            </div>
-
-            <Card className="bg-card border">
-              <CardContent className="p-8">
-                <div className="max-w-xl">
-                  <h3 className="text-2xl font-bold mb-4">{siteConfig.contact.sectionTitle}</h3>
-                  <p className="text-muted-foreground mb-8">
-                    {siteConfig.contact.description}
-                  </p>
-                  
-                  <div className="space-y-4">
-                    {/* Email Contact Chip */}
-                    <a 
-                      href={`mailto:${siteConfig.contact.email}`}
-                      className="flex items-center p-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors group"
-                      data-testid="contact-email"
-                    >
-                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                        <Mail className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <div className="font-medium">Email Us</div>
-                        <div className="text-sm text-muted-foreground group-hover:text-foreground">
-                          {siteConfig.contact.email}
-                        </div>
-                      </div>
-                    </a>
-
-                    {/* Phone Contact Chip */}
-                    <a 
-                      href={`tel:${siteConfig.contact.phone}`}
-                      className="flex items-center p-4 bg-muted rounded-lg hover:bg-muted/80 transition-colors group"
-                      data-testid="contact-phone"
-                    >
-                      <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mr-4">
-                        <Phone className="w-5 h-5 text-primary" />
-                      </div>
-                      <div>
-                        <div className="font-medium">Call Us</div>
-                        <div className="text-sm text-muted-foreground group-hover:text-foreground">
-                          {siteConfig.contact.phone}
-                        </div>
-                      </div>
-                    </a>
-
-                    {/* Optional Booking Button */}
-                    {siteConfig.contact.bookingUrl && (
-                      <div className="pt-4">
-                        <Button asChild className="text-base" data-testid="button-booking">
-                          <a href={siteConfig.contact.bookingUrl}>
-                            Book Consultation Call
-                          </a>
-                        </Button>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </Section>
+        <div id="contact">
+          <ContactSection />
+        </div>
       </main>
 
       <Footer />
