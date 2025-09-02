@@ -1,8 +1,8 @@
 export const siteConfig = {
   siteName: "Vitlíkisstovan",
-  tagline: "AI & Coding Education",
+  tagline: "AI training & consulting for Faroese offices",
   domain: "vitlikisstovan.fo",
-  
+
   nav: {
     links: [
       { label: "Program", href: "#program" },
@@ -18,8 +18,9 @@ export const siteConfig = {
   },
 
   hero: {
-    title: "Transform Your Career with AI & Coding",
-    subtitle: "Professional education and consulting with a Faroese-first approach. Learn practical skills that matter in today's digital landscape.",
+    title: "AI for every office in the Faroe Islands",
+    subtitle:
+      "Master AI—our 12-week, turnkey program that turns everyday staff into confident AI users. Fewer boring tasks, better writing, and sharper decisions across your team.",
     primaryCTA: {
       text: "Get Started Today",
       href: "#contact"
@@ -31,98 +32,116 @@ export const siteConfig = {
   },
 
   program: {
-    title: "The Flagship Program",
-    subtitle: "A comprehensive 12-week journey to master AI and coding fundamentals with practical applications.",
+    title: "Master AI — 12-Week Office Program",
+    subtitle:
+      "A practical, team-ready journey from safe foundations to repeatable workflows. Built for real office work—not theory.",
     phases: [
       {
-        period: "Weeks 1-4",
-        title: "Foundation Building",
-        description: "Master the core concepts and establish a solid understanding of programming fundamentals and AI principles.",
+        period: "Weeks 1–4",
+        title: "Foundations & Safe Use",
+        description:
+          "Give everyone the essentials: what AI can do today, where it helps most, and how to use it safely and well.",
         highlights: [
-          "Programming basics and syntax",
-          "Introduction to AI concepts",
-          "Development environment setup"
+          "Prompt patterns for everyday tasks",
+          "Writing & rewriting for clarity and tone",
+          "Policy, privacy, and data posture",
+          "Optional: light no-code/scripting where helpful"
         ]
       },
       {
-        period: "Weeks 5-8",
-        title: "Practical Application",
-        description: "Apply your knowledge through hands-on projects and real-world scenarios with guided mentorship.",
+        period: "Weeks 5–8",
+        title: "Productivity Systems",
+        description:
+          "Turn daily work into faster, higher-quality output with simple, reusable patterns.",
         highlights: [
-          "Project-based learning",
-          "AI tool integration",
-          "Code review and optimization"
+          "Documents, email, spreadsheets, and slides",
+          "Customer service, meeting notes, and summaries",
+          "Team templates and internal playbooks"
         ]
       },
       {
-        period: "Weeks 9-12",
-        title: "Professional Mastery",
-        description: "Build portfolio projects and develop professional skills ready for the modern workplace.",
+        period: "Weeks 9–12",
+        title: "Advanced & Customization",
+        description:
+          "Make the change stick with department-specific workflows and quality gates.",
         highlights: [
-          "Portfolio development",
-          "Advanced AI applications",
-          "Career preparation"
+          "Role-based workflows & review checklists",
+          "Use-cases tailored to your teams",
+          "Handover pack and next-steps plan"
         ]
       }
     ],
     outcomes: [
-      "Build production-ready applications",
-      "Master modern AI tools and workflows",
-      "Develop problem-solving mindset",
-      "Gain industry-relevant experience"
+      "Hours saved every week on routine writing and admin",
+      "Clearer, more consistent documents and emails",
+      "Safe-use checklist and simple guardrails for staff",
+      "Repeatable workflows your team can trust",
+      "Confidence using leading AI tools at work"
     ]
   },
 
   consulting: {
     title: "Consulting & Projects",
-    subtitle: "Specialized services tailored to your organization's needs and digital transformation goals.",
+    subtitle:
+      "From national-level strategies to small automations and creative experiments—we make vitlíki useful.",
     services: [
       {
-        title: "Public Sector & Enterprises",
-        description: "Strategic AI implementation and digital transformation initiatives for large organizations and government entities."
+        title: "Public sector & enterprises",
+        description:
+          "AI vision/master plans, governance & ethics, adoption programs, and targeted workshops."
       },
       {
         title: "SMEs",
-        description: "Practical automation solutions and AI integration for small and medium enterprises looking to optimize operations."
+        description:
+          "Practical automation, writing quality, customer-service assistants, and internal playbooks."
       },
       {
         title: "Creative AI",
-        description: "Innovative applications of AI for creative projects, content generation, and multimedia production."
+        description:
+          "Short films, posters, and art tools—showing the human side of technology in the Faroes."
       }
     ]
   },
 
   why: {
     title: "Why Vitlíkisstovan?",
-    subtitle: "Our unique approach combines cultural understanding with cutting-edge technology education.",
+    subtitle:
+      "Local language and culture, paired with hands-on AI expertise and clear communication.",
     features: [
       {
         title: "Faroese-first",
-        description: "Education that respects and integrates local culture while embracing global technology standards."
+        description:
+          "Guidance that respects language and culture while matching global technology standards."
       },
       {
-        title: "Serious + Practical",
-        description: "Rigorous curriculum focused on real-world applications and immediate practical value."
+        title: "Serious + practical",
+        description:
+          "Two years focused 100% on AI. Experience working with large organisations (e.g., via Banedanmark)."
       },
       {
-        title: "Clear Communication",
-        description: "Complex concepts explained simply, with transparent progress tracking and regular feedback."
+        title: "Clear communication",
+        description:
+          "Complex things explained simply. Templates and materials your team will actually use."
       },
       {
-        title: "Lean & Responsive",
-        description: "Agile methodology with quick adaptation to student needs and industry changes."
+        title: "Lean & responsive",
+        description:
+          "Single-person company—no overhead. Fast decisions, faster delivery."
       }
     ]
   },
 
   cases: {
     title: "Case Highlights",
-    subtitle: "Real projects and outcomes that demonstrate our impact across different sectors.",
+    subtitle:
+      "Snapshots that show how we turn ideas into useful results—across offices, services, and culture.",
     highlights: [
       {
         title: "\"Vitlíki til arbeiðis\" Guides",
-        description: "Comprehensive workplace readiness materials helping individuals transition into tech careers effectively.",
-        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+        description:
+          "Practical AI guides for worker groups (e.g., teachers, elder-care). Includes two free documents: “AI for Teachers” and “AI for Politicians.”",
+        image:
+          "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
         imageAlt: "Collaborative office workspace",
         buttonText: "Free Downloads",
         buttonVariant: "default",
@@ -130,8 +149,10 @@ export const siteConfig = {
       },
       {
         title: "Best path: Danish → English translation",
-        description: "AI-powered translation workflow optimization for Nordic language pairs with cultural context preservation.",
-        image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+        description:
+          "We evaluated tools and designed a consistent DA→EN translation workflow for public documents—faithful, natural, and repeatable.",
+        image:
+          "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
         imageAlt: "Language learning books and materials",
         buttonText: "View Case Study",
         buttonVariant: "outline",
@@ -139,8 +160,10 @@ export const siteConfig = {
       },
       {
         title: "Creative AI: films & posters",
-        description: "Innovative multimedia projects combining traditional creativity with AI-assisted production workflows.",
-        image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=400",
+        description:
+          "Short AI-generated films and posters that bring Faroese stories to life—showing the human side of technology.",
+        image:
+          "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
         imageAlt: "Film production and creative studio setup",
         buttonText: "Explore Projects",
         buttonVariant: "outline",
@@ -151,11 +174,13 @@ export const siteConfig = {
 
   resources: {
     title: "Resources",
-    subtitle: "Essential materials to help you understand our approach and get started on your journey.",
+    subtitle:
+      "Simple materials leaders can share internally—no jargon, just what matters.",
     items: [
       {
         title: "3-Month Program One-Pager",
-        description: "Complete overview of curriculum, outcomes, and enrollment details in a concise format.",
+        description:
+          "A crisp overview for decision-makers: scope, outcomes, timeline, and next steps.",
         icon: "FileText",
         iconBg: "bg-destructive/10",
         iconColor: "text-destructive",
@@ -164,8 +189,9 @@ export const siteConfig = {
         href: "#"
       },
       {
-        title: "Intro Video (1 min)",
-        description: "Quick introduction to our philosophy, methodology, and what makes our approach unique.",
+        title: "Intro video (1 min)",
+        description:
+          "A quick hello and what to expect from Master AI and our consulting approach.",
         icon: "Video",
         iconBg: "bg-chart-1/10",
         iconColor: "text-chart-1",
@@ -174,8 +200,9 @@ export const siteConfig = {
         href: "#"
       },
       {
-        title: "Contact Deck",
-        description: "Detailed presentation for organizations considering partnership or consulting services.",
+        title: "Contact deck",
+        description:
+          "2–3 slides you can circulate after a call—perfect for internal briefings.",
         icon: "MessageCircle",
         iconBg: "bg-chart-2/10",
         iconColor: "text-chart-2",
@@ -187,13 +214,15 @@ export const siteConfig = {
   },
 
   contact: {
-    title: "Ready to Get Started?",
-    subtitle: "Connect with us to discuss your learning goals or project requirements.",
-    sectionTitle: "Let's Talk",
-    description: "Whether you're interested in our flagship program, consulting services, or just want to learn more about our approach, we're here to help.",
+    title: "Ready to get started?",
+    subtitle:
+      "Tell us about your team and goals. We’ll suggest a simple plan—no jargon, no pressure.",
+    sectionTitle: "Let’s Talk",
+    description:
+      "Whether you’re interested in the Master AI program, consulting, or a creative project, we’ll respond within one business day.",
     email: "hello@vitlikisstovan.fo",
     phone: "+298 123 456",
-    bookingUrl: ""  // Optional - if empty, booking button won't show
+    bookingUrl: "" // Optional - if empty, booking button won't show
   },
 
   footer: {
@@ -207,7 +236,7 @@ export const siteConfig = {
     introVideoUrl: "#",
     contactDeckUrl: "#"
   },
-  
+
   freeDownloads: {
     teachersPdfUrl: "#",
     politiciansPdfUrl: "#"
