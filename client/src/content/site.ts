@@ -1,196 +1,194 @@
 export const siteConfig = {
   siteName: "Vitlíkisstovan",
-  tagline: "AI training & consulting for Faroese offices",
+  tagline: "Praktisk vitlíkisvenjing & ráðgeving til føroyskar skrivstovur",
   domain: "vitlikisstovan.fo",
 
   nav: {
     links: [
-      { label: "Program", href: "#program" },
-      { label: "Consulting", href: "#consulting" },
-      { label: "Why Us", href: "#why" },
-      { label: "Cases", href: "#cases" },
-      { label: "Contact", href: "#contact" }
+      { label: "Skrá", href: "#program" },
+      { label: "Ráðgeving", href: "#consulting" },
+      { label: "Hví vit", href: "#why" },
+      { label: "Dømir", href: "#cases" },
+      { label: "Samband", href: "#contact" }
     ],
     cta: {
-      text: "Book Intro Call",
+      text: "Bílegg eitt prát",
       href: "#contact"
     }
   },
 
   hero: {
-    title: "AI for every office in the Faroe Islands",
+    title: "Vitlíki, sum riggar á tínari skrivstovu – longu í hesum ársfjórðingi",
     subtitle:
-      "Master AI—our 12-week, turnkey program that turns everyday staff into confident AI users. Fewer boring tasks, better writing, and sharper decisions across your team.",
+      "Ein 12-vika langur skeiðpakki, sum ger starvsfólk til tryggar og effektivar brúkarar av vitlíki. Færri keðiligar uppgávur. Betri tekstir. Skarpari avgerðir í øllum toyminum.",
     primaryCTA: {
-      text: "Get Started Today",
+      text: "Byrja nú",
       href: "#contact"
     },
     secondaryCTA: {
-      text: "View Program",
+      text: "Síggj 12-vikuskránna",
       href: "#program"
     }
   },
 
   program: {
-    title: "Master AI — 12-Week Office Program",
+    title: "Gerst serfrøðingur í vitlíki – 12-vikuskeið til skrivstovur",
     subtitle:
-      "A practical, team-ready journey from safe foundations to repeatable workflows. Built for real office work—not theory.",
+      "Ein praktisk gongd frá tryggum grundarlagi til endurnýtiligar arbeiðsgongdir, klárar til títt toymi. Skapt til veruligt skrivstovuarbeiði – ikki bara teori.",
     phases: [
       {
-        period: "Weeks 1–4",
-        title: "Foundations & Safe Use",
+        period: "Vika 1–4",
+        title: "Grundarlag & trygg nýtsla",
         description:
-          "Give everyone the essentials: what AI can do today, where it helps most, and how to use it safely and well.",
+          "Øll læra grundleggjandi vitan: hvat vitlíki kann í dag, hvar tað hjálpir mest, og hvussu tað verður brúkt ábyrgdarfult.",
         highlights: [
-          "Prompt patterns for everyday tasks",
-          "Writing & rewriting for clarity and tone",
-          "Policy, privacy, and data posture",
-          "Optional: light no-code/scripting where helpful"
+          "Byrtskabelónir, sum veruliga rigga",
+          "Skriving og umorðing fyri greidleika og tóna",
+          "Politikkur, privatlív og dátutrygd (einfaldar leiðreglur)",
+          "Møguleiki: einføld 'no-code'/skripting, har tað er gagnligt"
         ]
       },
       {
-        period: "Weeks 5–8",
-        title: "Productivity Systems",
+        period: "Vika 5–8",
+        title: "Effektivar arbeiðsgongdir",
         description:
-          "Turn daily work into faster, higher-quality output with simple, reusable patterns.",
+          "Ger gerandisarbeiðið skjótari og betri við endurnýtiligum arbeiðsháttum, sum toymið kann halda áfram at brúka.",
         highlights: [
-          "Documents, email, spreadsheets, and slides",
-          "Customer service, meeting notes, and summaries",
-          "Team templates and internal playbooks"
+          "Skjøl, teldupostar, rokniørk og framløgur",
+          "Kundatænasta, fundarfrásagnir og samandráttir",
+          "Toymisskabelónir og innanhýsis mannagongdir"
         ]
       },
       {
-        period: "Weeks 9–12",
-        title: "Advanced & Customization",
+        period: "Vika 9–12",
+        title: "Víðkað nýtsla & tillaging",
         description:
-          "Make the change stick with department-specific workflows and quality gates.",
+          "Tryggja, at broytingin festist við leiklutagrundaðum arbeiðsgongdum og einfaldari góðskukanning.",
         highlights: [
-          "Role-based workflows & review checklists",
-          "Use-cases tailored to your teams",
-          "Handover pack and next-steps plan"
+          "Serligir nýtsluhættir og kekklistar til deildir",
+          "Eftirmetingar- og góðkenningargongdir, sum hóska til toymið",
+          "Handanarpakki og ætlan fyri næstu stigini"
         ]
       }
     ],
     outcomes: [
-      "Hours saved every week on routine writing and admin",
-      "Clearer, more consistent documents and emails",
-      "Safe-use checklist and simple guardrails for staff",
-      "Repeatable workflows your team can trust",
-      "Confidence using leading AI tools at work"
+      "Tímar spardir hvørja viku upp á vanliga skriving og umsiting",
+      "Greitt og støðugt mál í skjølum og teldupostum – frá fyrsta uppkasti til lidna útgávu skjótari",
+      "Kekklisti og leiðreglur fyri trygga nýtslu, sum starvsfólk veruliga fylgja",
+      "Endurnýtiligar arbeiðsgongdir, sum toymið hevur álit á",
+      "Álit á at brúka leiðandi vitlíkisamboð í arbeiðinum"
     ]
   },
 
   consulting: {
-    title: "Consulting & Projects",
+    title: "Ráðgeving & verkætlanir",
     subtitle:
-      "From national-level strategies to small automations and creative experiments—we make vitlíki useful.",
+      "Frá tjóðarstrategium til smáar sjálvvirkandi loysnir og kreativar royndir – okkara uppgáva er at gera vitlíki nýtiligt.",
     services: [
       {
-        title: "Public sector & enterprises",
+        title: "Tað almenna & stórar fyritøkur",
         description:
-          "AI vision/master plans, governance & ethics, adoption programs, and targeted workshops."
+          "Visjón & heildarætlanir fyri vitlíki, stýring & etikkur, innleiðingarætlanir og málrættaðar verkstovur."
       },
       {
-        title: "SMEs",
+        title: "Smáar og miðalstórar fyritøkur",
         description:
-          "Practical automation, writing quality, customer-service assistants, and internal playbooks."
+          "Praktisk sjálvvirkni, betri tekstir, kundatænastuhjálparar og innanhýsis mannagongdir."
       },
       {
-        title: "Creative AI",
+        title: "Kreativt vitlíki",
         description:
-          "Short films, posters, and art tools—showing the human side of technology in the Faroes."
+          "Stuttfilmar, plakatir og listarlig amboð – sum vísa menniskjansligu síðuna av tøkni í Føroyum."
       }
     ]
   },
 
   why: {
-    title: "Why Vitlíkisstovan?",
+    title: "Hví Vitlíkisstovan?",
     subtitle:
-      "Local language and culture, paired with hands-on AI expertise and clear communication.",
+      "Føroyskt mál og mentan, parað við praktiskari vitlíkisfrøði og greiðari samskifting.",
 
     features: [
       {
-        title: "Faroese-first",
+        title: "Føroyskt í hásæti",
         description:
-          "Guidance that respects language and culture while matching global technology standards."
+          "Vegleiðing, sum virðir okkara mál og mentan, samstundis sum hon lýkur altjóða tøknilig krøv."
       },
       {
-        title: "Serious + practical",
+        title: "Professionelt og praktiskt",
         description:
-          "Two years focused 100% on AI. Comfortable in large organisations (experience via Banedanmark) and small teams alike."
+          "100% fokus á vitlíki. Vant við stórar stovnar og almennar áhugapartar – uttan at missa ferðina."
       },
       {
-        title: "Clear communication",
+        title: "Greið samskifting",
         description:
-          "Complex things explained simply. Templates and materials your team will actually use."
+          "Fløkt mál greidd frá á einfaldan hátt. Skabelónir og tilfar, sum toymið veruliga fer at brúka dagin eftir."
       },
       {
-        title: "Lean & responsive",
+        title: "Effektivt & smidligt",
         description:
-          "Single-person company—no overhead. Fast decisions, faster delivery."
+          "Einstaklingafyritøka – ongar óneyðugar útreiðslur. Skjótari avgerðir, enn skjótari veiting."
       }
     ],
 
     founder: {
-      heading: "Who’s behind this?",
+      heading: "Hvør stendur aftanfyri?",
       name: "Gunnleygur Clementsen",
-      role: "Founder & Lead Consultant",
+      role: "Stovnari & høvuðsráðgevi",
       summary:
-        "Electrical-engineer-turned AI consultant. Since 2022 I’ve used ChatGPT almost daily—first inside Danish infrastructure engineering, now full-time helping Faroese organisations adopt AI. I’ve followed AI for 10+ years and tested hundreds of tools—even when they weren’t ready—so you get what actually works.",
+        "El-verkfrøðingur, sum gjørdist vitlíkisráðgevi. Síðan 2022 havi eg brúkt ChatGPT dagliga – fyrst innan danska infrastrukturverkfrøði, og nú fulla tíð við at hjálpa føroyskum stovnum og fyritøkum at taka vitlíki til sín. Eg havi fylgt við menningini innan vitlíki í meira enn 10 ár og roynt fleiri hundrað amboð – eisini tá tey ikki vórðu búgvin – so tú fært tað, sum veruliga riggar.",
       bullets: [
-        "Founded Tøkni Tænastan (now Vitlíkisstovan) to help Faroese teams get practical value from AI.",
-        "Outcome over hype: workflows that save time, improve writing quality, and reduce repetitive tasks.",
-        "Experience working with big organisations and public stakeholders, as well as SMEs and schools.",
-        "Faroese-first: guidance that fits our language, culture, and public-sector realities."
+        "Stovnaði Tøkni Tænastuna (nú Vitlíkisstovan) fyri at hjálpa føroyskum toymum at fáa praktiskt gagn av vitlíki.",
+        "Úrslit fram um yvirdrivið tos: arbeiðsgongdir, sum spara tíð, betra um skrivlig avrik og minka um endurtakandi uppgávur.",
+        "Royndir við stórum stovnum og almennum áhugapørtum, umframt smærri fyritøkum og skúlum.",
+        "Føroyskt í hásæti: vegleiðing, sum er lagað til okkara mál, mentan og almenna veruleika."
       ],
       quote:
-        "AI isn’t a distant future—it’s how we work now. Let’s put it to work for your team.",
-      headshotUrl: "/images/founder.jpg",      // replace when ready
-      headshotAlt: "Portrait of Gunnleygur Clementsen",
+        "Vitlíki er ikki fjarløgd framtíð – tað er mátin, vit arbeiða uppá nú. Lat okkum fáa tað at rigga fyri títt toymi.",
+      headshotUrl: "/images/founder.jpg",
+      headshotAlt: "Mynd av Gunnleygi Clementsen",
       links: [
-        // optional: show as small icons or text links under the bio
         // { label: "LinkedIn", href: "https://www.linkedin.com/in/..." },
         // { label: "Email", href: "mailto:hello@vitlikisstovan.fo" }
       ]
     }
   },
 
-
   cases: {
-    title: "Case Highlights",
+    title: "Úrvald dømi",
     subtitle:
-      "Snapshots that show how we turn ideas into useful results—across offices, services, and culture.",
+      "Smá brot um, hvussu vit gera hugskot til nýtilig úrslit – á skrivstovum, í tænastum og í mentanini.",
     highlights: [
       {
-        title: "\"Vitlíki til arbeiðis\" Guides",
+        title: "\"Vitlíki til arbeiðis\"-vegleiðingar",
         description:
-          "Practical AI guides for worker groups (e.g., teachers, elder-care). Includes two free documents: “AI for Teachers” and “AI for Politicians.”",
+          "Praktiskar vitlíkisvegleiðingar til starvsbólkar (t.d. lærarar, eldrarøkt). Umfatar tvey ókeypis skjøl: “Vitlíki til lærarar” og “Vitlíki til politikarar.”",
         image:
           "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-        imageAlt: "Collaborative office workspace",
-        buttonText: "Free Downloads",
+        imageAlt: "Samstarv á eini skrivstovu",
+        buttonText: "Tak niður ókeypis",
         buttonVariant: "default",
         buttonHref: "#"
       },
       {
-        title: "Best path: Danish → English translation",
+        title: "DA → EN: ein endurnýtilig týðingargongd",
         description:
-          "We evaluated tools and designed a consistent DA→EN translation workflow for public documents—faithful, natural, and repeatable.",
+          "Vit mettu um amboð og sniðgóvu eina støðuga mannagongd til at týða almenn skjøl úr donskum til enskt – trúgv, natúrlig og endurnýtilig.",
         image:
           "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-        imageAlt: "Language learning books and materials",
-        buttonText: "View Case Study",
+        imageAlt: "Bøkur og tilfar um málslæru",
+        buttonText: "Síggj dømið",
         buttonVariant: "outline",
         buttonHref: "#"
       },
       {
-        title: "Creative AI: films & posters",
+        title: "Kreativt vitlíki: filmar & plakatir",
         description:
-          "Short AI-generated films and posters that bring Faroese stories to life—showing the human side of technology.",
+          "Stuttir vitlíkisgjørdur filmar og plakatir, sum geva føroyskum søgum lív – og vísa menniskjansligu síðuna av tøknini.",
         image:
           "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
-        imageAlt: "Film production and creative studio setup",
-        buttonText: "Explore Projects",
+        imageAlt: "Filmframleiðsla og kreativt studio",
+        buttonText: "Kanna verkætlanirnar",
         buttonVariant: "outline",
         buttonHref: "#"
       }
@@ -198,40 +196,40 @@ export const siteConfig = {
   },
 
   resources: {
-    title: "Resources",
+    title: "Tilfar",
     subtitle:
-      "Simple materials leaders can share internally—no jargon, just what matters.",
+      "Einfalt tilfar, sum leiðarar kunnu deila innanhýsis – einki snikk-snakk, bara tað, sum hevur týdning.",
     items: [
       {
-        title: "3-Month Program One-Pager",
+        title: "1-síðu lýsing av 3-mánaðarskeiðnum",
         description:
-          "A crisp overview for decision-makers: scope, outcomes, timeline, and next steps.",
+          "Eitt stutt og greitt yvirlit til avgerðartakarar: vavi, úrslit, tíðarætlan og næstu stig.",
         icon: "FileText",
         iconBg: "bg-destructive/10",
         iconColor: "text-destructive",
-        buttonText: "Download PDF",
+        buttonText: "Tak niður PDF",
         buttonStyle: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         href: "#"
       },
       {
-        title: "Intro video (1 min)",
+        title: "Innleiðandi video (1 min)",
         description:
-          "A quick hello and what to expect from Master AI and our consulting approach.",
+          "Ein stutt heilsan og hvat tú kanst vænta av okkara vitlíkisskeiði og ráðgeving.",
         icon: "Video",
         iconBg: "bg-chart-1/10",
         iconColor: "text-chart-1",
-        buttonText: "Watch Now",
+        buttonText: "Síggj nú",
         buttonStyle: "bg-chart-1 text-white hover:bg-chart-1/90",
         href: "#"
       },
       {
-        title: "Contact deck",
+        title: "Stutt framløga at deila",
         description:
-          "2–3 slides you can circulate after a call—perfect for internal briefings.",
+          "2–3 síður, sum tú kanst senda runt eftir ein fund – perfekt til innanhýsis kunning.",
         icon: "MessageCircle",
         iconBg: "bg-chart-2/10",
         iconColor: "text-chart-2",
-        buttonText: "Request Access",
+        buttonText: "Bið um atgongd",
         buttonStyle: "bg-chart-2 text-white hover:bg-chart-2/90",
         href: "#"
       }
@@ -239,20 +237,15 @@ export const siteConfig = {
   },
 
   contact: {
-    title: "Ready to get started?",
+    title: "Klárar at byrja?",
     subtitle:
-      "Tell us about your team and goals. We’ll suggest a simple plan—no jargon, no pressure.",
-    sectionTitle: "Let’s Talk",
+      "Greitt okkum frá tínum toymi og málum. Vit koma við eini einfaldari ætlan – uttan snikk-snakk og uttan trýst.",
+    sectionTitle: "Lat okkum práta",
     description:
-      "Whether you’re interested in the Master AI program, consulting, or a creative project, we’ll respond within one business day.",
-    email: "info@ritvit.fo",
-    phone: "+298 919444",
-    bookingUrl: "" // Optional - if empty, booking button won't show
-  },
-
-  social: {
-    facebook: "https://www.facebook.com/profile.php?id=61557593776267",
-    linkedin: "https://linkedin.com/company/tøkni-tænastan"
+      "Antin tú hevur áhuga í 12-vikuskeiðnum, ráðgeving ella eini kreativari verkætlan, so svara vit innan ein arbeiðsdag.",
+    email: "hello@vitlikisstovan.fo",
+    phone: "+298 123 456",
+    bookingUrl: ""
   },
 
   footer: {
@@ -260,7 +253,6 @@ export const siteConfig = {
     termsUrl: "#"
   },
 
-  // Additional config for future use
   resourceLinks: {
     onePagerUrl: "#",
     introVideoUrl: "#",
