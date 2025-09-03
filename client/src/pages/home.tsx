@@ -129,21 +129,45 @@ export default function Home() {
 
           {/* How It Works Section */}
           <div className="mb-12">
-            <div className="mx-auto max-w-4xl text-center mb-8">
+            <div className="mx-auto max-w-4xl text-center mb-12">
               <h3 className="text-2xl font-bold tracking-tight mb-4">
-                {siteConfig.program.howItWorks.title}
+                {siteConfig.program.howItWorks?.title || "Soleiðis byrja vit"}
               </h3>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-              {siteConfig.program.howItWorks.steps.map((step, index) => (
-                <Card key={index} className="bg-background hover:bg-accent/5 group">
-                  <CardContent className="p-6">
-                    <h4 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors duration-300">{step.title}</h4>
-                    <p className="text-muted-foreground leading-relaxed">{step.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
+            <div className="max-w-5xl mx-auto">
+              <div className="relative">
+                {/* Progress line */}
+                <div className="hidden md:block absolute top-16 left-0 right-0 h-0.5 bg-gradient-to-r from-primary/20 via-primary to-primary/20"></div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                  {siteConfig.program.howItWorks?.steps?.map((step, index) => (
+                    <div key={index} className="relative">
+                      {/* Step number circle */}
+                      <div className="flex justify-center mb-6">
+                        <div className="relative z-10 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg">
+                          <span className="text-white font-bold text-lg">{index + 1}</span>
+                        </div>
+                      </div>
+                      
+                      {/* Step content */}
+                      <Card className="bg-background border-2 hover:border-primary/20 transition-all duration-300 h-full">
+                        <CardContent className="p-6 text-center">
+                          <h4 className="text-xl font-bold mb-4 text-primary">{step.title}</h4>
+                          <p className="text-muted-foreground leading-relaxed">{step.description}</p>
+                        </CardContent>
+                      </Card>
+                      
+                      {/* Arrow for desktop */}
+                      {index < 2 && (
+                        <div className="hidden md:block absolute top-16 -right-4 z-20 w-8 h-8 bg-background rounded-full flex items-center justify-center shadow-sm">
+                          <div className="w-0 h-0 border-l-4 border-r-0 border-t-4 border-b-4 border-l-primary border-t-transparent border-b-transparent"></div>
+                        </div>
+                      )}
+                    </div>
+                  )) || []}
+                </div>
+              </div>
             </div>
           </div>
 
