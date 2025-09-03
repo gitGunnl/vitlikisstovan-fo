@@ -99,16 +99,32 @@ export default function Home() {
               </h3>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-              {siteConfig.program.whatWeDeliver.items.map((item, index) => (
-                <Card key={index} className="bg-background hover:bg-accent/5 group">
-                  <CardContent className="p-6">
-                    <h4 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors duration-300">{item.title}</h4>
-                    <p className="text-muted-foreground leading-relaxed">{item.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <Card className="bg-background max-w-4xl mx-auto">
+              <CardContent className="p-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {siteConfig.program.whatWeDeliver.items.map((item, index) => {
+                    const icons = [
+                      <FileText className="w-5 h-5 text-primary" />,
+                      <Building2 className="w-5 h-5 text-primary" />,
+                      <GraduationCap className="w-5 h-5 text-primary" />,
+                      <CheckCircle className="w-5 h-5 text-primary" />
+                    ];
+                    
+                    return (
+                      <div key={index} className="flex items-start space-x-4">
+                        <div className="flex-shrink-0 mt-1">
+                          {icons[index]}
+                        </div>
+                        <div>
+                          <h4 className="text-lg font-bold mb-2">{item.title}</h4>
+                          <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </CardContent>
+            </Card>
           </div>
 
           {/* How It Works Section */}
