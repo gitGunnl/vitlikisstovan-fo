@@ -180,38 +180,178 @@ export default function Home() {
             </Card>
           </div>
 
-          {/* Delivery Section */}
+          {/* Delivery Section - OPTION 1: Grid Layout with Icons */}
           {siteConfig.program.delivery && (
             <div className="mb-16">
               <div className="mx-auto max-w-4xl text-center mb-8">
                 <h3 className="text-2xl font-bold tracking-tight mb-4">
-                  {siteConfig.program.delivery.title}
+                  {siteConfig.program.delivery.title} - Option 1 (Grid)
                 </h3>
                 <p className="text-lg text-muted-foreground">
                   {siteConfig.program.delivery.subtitle}
                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-                {siteConfig.program.delivery.items?.map((item, index) => (
-                  <Card key={index} className="bg-background hover:shadow-md transition-shadow duration-300">
-                    <CardContent className="p-6">
-                      <h4 className="text-lg font-bold mb-3">{item.title}</h4>
-                      <p className="text-sm text-muted-foreground">{item.description}</p>
-                    </CardContent>
-                  </Card>
-                )) || []}
+              <Card className="bg-background max-w-5xl mx-auto border shadow-sm">
+                <CardContent className="p-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {siteConfig.program.delivery.items?.map((item, index) => {
+                      const icons = [
+                        <FileText className="w-5 h-5 text-primary" />,
+                        <Building2 className="w-5 h-5 text-primary" />,
+                        <GraduationCap className="w-5 h-5 text-primary" />,
+                        <Users className="w-5 h-5 text-primary" />,
+                        <CheckCircle className="w-5 h-5 text-primary" />,
+                        <Lightbulb className="w-5 h-5 text-primary" />,
+                        <MessageCircle className="w-5 h-5 text-primary" />
+                      ];
+                      
+                      return (
+                        <div key={index} className="text-center p-4">
+                          <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-3">
+                            {icons[index] || <CheckCircle className="w-5 h-5 text-primary" />}
+                          </div>
+                          <h4 className="font-semibold mb-2">{item.title}</h4>
+                          <p className="text-sm text-muted-foreground">{item.description}</p>
+                        </div>
+                      );
+                    }) || []}
+                  </div>
+                  
+                  {siteConfig.program.delivery.note && (
+                    <div className="mt-8 pt-6 border-t">
+                      <p className="text-sm text-center italic text-muted-foreground">
+                        {siteConfig.program.delivery.note}
+                      </p>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            </div>
+          )}
+
+          {/* Delivery Section - OPTION 2: Two Column Layout */}
+          {siteConfig.program.delivery && (
+            <div className="mb-16">
+              <div className="mx-auto max-w-4xl text-center mb-8">
+                <h3 className="text-2xl font-bold tracking-tight mb-4">
+                  {siteConfig.program.delivery.title} - Option 2 (Two Columns)
+                </h3>
+                <p className="text-lg text-muted-foreground">
+                  {siteConfig.program.delivery.subtitle}
+                </p>
               </div>
 
-              {siteConfig.program.delivery.note && (
-                <Card className="bg-muted/50 border">
-                  <CardContent className="p-6">
-                    <p className="text-sm text-center italic text-muted-foreground">
-                      {siteConfig.program.delivery.note}
-                    </p>
-                  </CardContent>
-                </Card>
-              )}
+              <Card className="bg-background max-w-5xl mx-auto border shadow-sm">
+                <CardContent className="p-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div className="space-y-4">
+                      {siteConfig.program.delivery.items?.slice(0, Math.ceil(siteConfig.program.delivery.items.length / 2)).map((item, index) => {
+                        const icons = [
+                          <FileText className="w-5 h-5 text-primary" />,
+                          <Building2 className="w-5 h-5 text-primary" />,
+                          <GraduationCap className="w-5 h-5 text-primary" />,
+                          <Users className="w-5 h-5 text-primary" />
+                        ];
+                        
+                        return (
+                          <div key={index} className="flex items-start space-x-4">
+                            <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                              {icons[index] || <CheckCircle className="w-5 h-5 text-primary" />}
+                            </div>
+                            <div>
+                              <h4 className="font-semibold mb-2">{item.title}</h4>
+                              <p className="text-sm text-muted-foreground">{item.description}</p>
+                            </div>
+                          </div>
+                        );
+                      }) || []}
+                    </div>
+                    
+                    <div className="space-y-4">
+                      {siteConfig.program.delivery.items?.slice(Math.ceil(siteConfig.program.delivery.items.length / 2)).map((item, index) => {
+                        const icons = [
+                          <CheckCircle className="w-5 h-5 text-primary" />,
+                          <Lightbulb className="w-5 h-5 text-primary" />,
+                          <MessageCircle className="w-5 h-5 text-primary" />
+                        ];
+                        
+                        return (
+                          <div key={index} className="flex items-start space-x-4">
+                            <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                              {icons[index] || <CheckCircle className="w-5 h-5 text-primary" />}
+                            </div>
+                            <div>
+                              <h4 className="font-semibold mb-2">{item.title}</h4>
+                              <p className="text-sm text-muted-foreground">{item.description}</p>
+                            </div>
+                          </div>
+                        );
+                      }) || []}
+                    </div>
+                  </div>
+                  
+                  {siteConfig.program.delivery.note && (
+                    <div className="mt-8 pt-6 border-t">
+                      <p className="text-sm text-center italic text-muted-foreground">
+                        {siteConfig.program.delivery.note}
+                      </p>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
+            </div>
+          )}
+
+          {/* Delivery Section - OPTION 3: Compact List */}
+          {siteConfig.program.delivery && (
+            <div className="mb-16">
+              <div className="mx-auto max-w-4xl text-center mb-8">
+                <h3 className="text-2xl font-bold tracking-tight mb-4">
+                  {siteConfig.program.delivery.title} - Option 3 (Compact)
+                </h3>
+                <p className="text-lg text-muted-foreground">
+                  {siteConfig.program.delivery.subtitle}
+                </p>
+              </div>
+
+              <Card className="bg-background max-w-4xl mx-auto border shadow-sm">
+                <CardContent className="p-8">
+                  <div className="space-y-3">
+                    {siteConfig.program.delivery.items?.map((item, index) => {
+                      const icons = [
+                        <FileText className="w-4 h-4 text-primary" />,
+                        <Building2 className="w-4 h-4 text-primary" />,
+                        <GraduationCap className="w-4 h-4 text-primary" />,
+                        <Users className="w-4 h-4 text-primary" />,
+                        <CheckCircle className="w-4 h-4 text-primary" />,
+                        <Lightbulb className="w-4 h-4 text-primary" />,
+                        <MessageCircle className="w-4 h-4 text-primary" />
+                      ];
+                      
+                      return (
+                        <div key={index} className="flex items-center space-x-3 p-3 hover:bg-muted/30 rounded-lg transition-colors">
+                          <div className="w-8 h-8 bg-primary/10 rounded-md flex items-center justify-center flex-shrink-0">
+                            {icons[index] || <CheckCircle className="w-4 h-4 text-primary" />}
+                          </div>
+                          <div className="flex-1">
+                            <span className="font-medium mr-2">{item.title}:</span>
+                            <span className="text-muted-foreground text-sm">{item.description}</span>
+                          </div>
+                        </div>
+                      );
+                    }) || []}
+                  </div>
+                  
+                  {siteConfig.program.delivery.note && (
+                    <div className="mt-6 pt-6 border-t">
+                      <p className="text-sm text-center italic text-muted-foreground">
+                        {siteConfig.program.delivery.note}
+                      </p>
+                    </div>
+                  )}
+                </CardContent>
+              </Card>
             </div>
           )}
 
