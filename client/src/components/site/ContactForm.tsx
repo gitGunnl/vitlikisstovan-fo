@@ -38,24 +38,52 @@ export default function ContactSection() {
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactForm) => {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...data,
-          formStartTime,
-          submissionTime: Date.now(),
-        }),
-      });
+      const submissionTime = Date.now();
+      
+      try {
+        // Try API endpoint first (more reliable)
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            ...data,
+            formStartTime,
+            submissionTime,
+          }),
+        });
 
-      if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || "Failed to send message");
+        if (response.ok) {
+          return response.json();
+        }
+      } catch (apiError) {
+        console.warn('API submission failed, falling back to Google Forms');
       }
-
-      return response.json();
+      
+      // Fallback to Google Forms with better error handling
+      try {
+        const formData = new FormData();
+        formData.append('entry.1179687836', data.name);
+        formData.append('entry.263197538', data.email);
+        formData.append('entry.240567695', data.message);
+        formData.append('honeypot', data.honeypot || '');
+        formData.append('submissionTime', submissionTime.toString());
+        formData.append('formStartTime', formStartTime.toString());
+        
+        await fetch('https://docs.google.com/forms/d/e/1FAIpQLSf8FFci-J91suIjxY2xh4GD-DQ-UfZftUNxq3dUdXkgJAjB1Q/formResponse', {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors',
+          signal: AbortSignal.timeout(10000) // 10 second timeout
+        });
+        
+        // Since no-cors mode doesn't give us response status, we assume success if no error thrown
+        return { success: true, fallback: true };
+      } catch (error) {
+        console.error('Form submission failed:', error);
+        throw new Error("Failed to send message. Please try again or email us directly at info@ritvit.fo");
+      }
     },
     onSuccess: () => {
       toast({
@@ -74,7 +102,24 @@ export default function ContactSection() {
     },
   });
 
-  const onSubmit = (data: ContactForm) => {
+  const onSubmit = async (data: ContactForm) => {
+    // Honeypot check
+    if (data.honeypot && data.honeypot.trim() !== "") {
+      return; // Silently reject
+    }
+    
+    // Timestamp check - minimum 3 seconds
+    const submissionTime = Date.now();
+    const timeTaken = (submissionTime - formStartTime) / 1000;
+    if (timeTaken < 3) {
+      toast({
+        title: "Too fast",
+        description: "Please wait a moment before sending the form again.",
+        variant: "destructive",
+      });
+      return;
+    }
+    
     contactMutation.mutate(data);
   };
 
