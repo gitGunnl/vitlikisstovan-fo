@@ -18,9 +18,9 @@ export const siteConfig = {
   },
 
   hero: {
-    title: "Vitlíki, sum riggar fyri teg.",
+    title: "Eisini tú kann mmeistra Vitlíki!",
     subtitle:
-      "Bílegg eitt 12-viku skeið, sum ger tykkara toymi til tryggir, skjótir og dugnaligir vitlíksbrúkarar. Færri keðiligar uppgávur. Betri tekstir. Skarpari avgerðir.",
+      "Vit bjóða eina 12-viku útbúgving, sum fær tykkum frá nýbyrjandi til dugnaligir vitlíkis brúkarir. Í pakkanum fáa tit: Leiðreglur sniðgivnar til tykkum, vegleiðing til røttu tólini fyri tykkum, útbúgving í vitlíki og rågeving til hvussu júst tit skula nýta vitlíki. So eru til fult brýnjaði til vitlíki.",
     primaryCTA: {
       text: "Byrja nú",
       href: "#contact"
@@ -32,9 +32,9 @@ export const siteConfig = {
   },
 
   program: {
-    title: "Frá forvitin til framkomin: Eitt 12-viku skeið til skrivstovur",
+    title: "Frá forvitin til framkomin: Ein 12-viku útbúgving til skrivstovur",
     subtitle:
-      "Ein greið leið frá eingin ætlan til munagott arbeiði við vitlíki. Tillega tykkara toymi. Skapt til veruligt skrivstovuarbeiði - leða til júst tykkara.",
+      "Hendan útbúgving er ein greið leið frá eingin ætlan til munagott arbeiði við vitlíki.",
     phases: [
       {
         period: "Vika 1–4",
