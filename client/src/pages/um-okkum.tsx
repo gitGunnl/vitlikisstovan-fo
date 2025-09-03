@@ -80,58 +80,68 @@ export default function UmOkkum() {
               <h2 className="text-3xl font-bold mb-4">Okkara søga: Nýskapan</h2>
             </div>
             
-            <div className="grid gap-8 md:grid-cols-2">
-              {/* Personal Journey Card */}
-              <Card>
-                <CardContent className="p-8">
-                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-blue-500/10 rounded-lg flex items-center justify-center mb-6">
-                    <span className="text-2xl">🚀</span>
+            {/* Combined Story Card */}
+            <Card className="bg-gradient-to-br from-background via-muted/10 to-background border-primary/20">
+              <CardContent className="p-8 md:p-12">
+                {/* Personal Journey */}
+                <div className="mb-10">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-br from-blue-500/20 to-blue-500/10 rounded-lg flex items-center justify-center">
+                      <span className="text-2xl">🚀</span>
+                    </div>
+                    <h3 className="text-xl font-bold">Persónlig ferð</h3>
                   </div>
-                  <h3 className="text-xl font-bold mb-4">Persónlig ferð</h3>
                   <p className="text-muted-foreground mb-4">
                     Eg havi altíð verið bergtikin av <strong>nýggjari tøkni</strong> – øllum tí, sum broytir, hvussu vit arbeiða og liva.
                   </p>
                   <p className="text-muted-foreground">
                     Sum verkfrøðingur arbeiddi eg við framkomnum skipanum, men einki fangaði meg sum vitlíki.
                   </p>
-                </CardContent>
-              </Card>
-
-              {/* Realization Card */}
-              <Card>
-                <CardContent className="p-8">
-                  <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-yellow-500/10 rounded-lg flex items-center justify-center mb-6">
-                    <span className="text-2xl">💡</span>
-                  </div>
-                  <h3 className="text-xl font-bold mb-4">Eyðnarviðurkanning</h3>
-                  <p className="text-muted-foreground mb-4">So ein dag gekk tað upp fyri mær:</p>
-                  <div className="space-y-2 text-sm">
-                    <p>💡 <strong>vitlíki er ikki bara fyri stórar tøkni-risar.</strong></p>
-                    <p>💡 <strong>vitlíki er ikki bara framtíð – tað er nú.</strong></p>
-                    <p>💡 <strong>vitlíki kann nýtast í øllum fyritøkum – eisini í Føroyum.</strong></p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Solution Card */}
-            <Card className="mt-8 bg-gradient-to-r from-green-50 to-emerald-50 border-green-200">
-              <CardContent className="p-8">
-                <div className="text-center mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-green-500/20 to-green-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">🌉</span>
-                  </div>
-                  <h3 className="text-2xl font-bold mb-4">Loysnin</h3>
                 </div>
-                <p className="text-center text-muted-foreground mb-4">
-                  Trupulleikin? <strong>Flestu hava ikki tíð at seta seg inn í tað.</strong>
-                </p>
-                <p className="text-center mb-6">
-                  Tí stovnaði eg <strong>Vitlíkisstovuna</strong> – fyri at byggja brúnna millum <strong>møguleikarnar hjá vitlíkii</strong> og <strong>veruligu tørvin hjá føroyskum fyritøkum</strong>.
-                </p>
-                <p className="text-center font-semibold text-green-700">
-                  Nú hjálpa vit fyritøkum at sjálvvirka uppgávur, effektivisera arbeiðið og brúka vitlíki fult út – so tær kunnu fokusera uppá tað, sum veruliga hevur týdning.
-                </p>
+
+                {/* Realization */}
+                <div className="mb-10 p-6 bg-gradient-to-r from-yellow-50 to-amber-50 rounded-lg border border-yellow-200">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-br from-yellow-500/20 to-yellow-500/10 rounded-lg flex items-center justify-center">
+                      <span className="text-2xl">💡</span>
+                    </div>
+                    <h3 className="text-xl font-bold">Eyðnarviðurkanning</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4">So ein dag gekk tað upp fyri mær:</p>
+                  <div className="space-y-2">
+                    <p className="flex items-start gap-2">
+                      <span>💡</span>
+                      <strong>vitlíki er ikki bara fyri stórar tøkni-risar.</strong>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <span>💡</span>
+                      <strong>vitlíki er ikki bara framtíð – tað er nú.</strong>
+                    </p>
+                    <p className="flex items-start gap-2">
+                      <span>💡</span>
+                      <strong>vitlíki kann nýtast í øllum fyritøkum – eisini í Føroyum.</strong>
+                    </p>
+                  </div>
+                </div>
+
+                {/* Solution */}
+                <div className="p-6 bg-gradient-to-r from-green-50 to-emerald-50 rounded-lg border border-green-200">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-gradient-to-br from-green-500/20 to-green-500/10 rounded-lg flex items-center justify-center">
+                      <span className="text-2xl">🌉</span>
+                    </div>
+                    <h3 className="text-xl font-bold">Loysnin</h3>
+                  </div>
+                  <p className="text-muted-foreground mb-4">
+                    Trupulleikin? <strong>Flestu hava ikki tíð at seta seg inn í tað.</strong>
+                  </p>
+                  <p className="mb-6">
+                    Tí stovnaði eg <strong>Vitlíkisstovuna</strong> – fyri at byggja brúnna millum <strong>møguleikarnar hjá vitlíkii</strong> og <strong>veruligu tørvin hjá føroyskum fyritøkum</strong>.
+                  </p>
+                  <p className="font-semibold text-green-700">
+                    Nú hjálpa vit fyritøkum at sjálvvirka uppgávur, effektivisera arbeiðið og brúka vitlíki fult út – so tær kunnu fokusera uppá tað, sum veruliga hevur týdning.
+                  </p>
+                </div>
               </CardContent>
             </Card>
           </div>
