@@ -129,51 +129,198 @@ export default function Home() {
             </div>
           )}
 
-          {/* How It Works Section */}
-          <div className="mb-16">
+          {/* OPTION 1: Clean Timeline with Progress Bar */}
+          <div className="mb-24">
             <div className="mx-auto max-w-4xl text-center mb-12">
               <h3 className="text-2xl font-bold tracking-tight mb-4">
-                {siteConfig.program.howItWorks?.title || "Soleiðis byrja vit"}
+                Soleiðis byrja vit - Option 1 (Timeline)
               </h3>
             </div>
 
             <div className="max-w-6xl mx-auto">
               <div className="relative">
-                {/* Progress line - simplified */}
+                {/* Progress line */}
                 <div className="hidden md:block absolute top-14 left-1/6 right-1/6 h-0.5 bg-border"></div>
                 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                  {siteConfig.program.howItWorks?.steps?.map((step, index) => (
-                    <div key={index} className="relative flex flex-col items-center">
-                      {/* Step number circle - simplified */}
-                      <div className="flex justify-center mb-6">
-                        <div className="relative z-10 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-sm border-2 border-background">
-                          <span className="text-primary-foreground font-semibold text-lg">{index + 1}</span>
-                        </div>
+                  <div className="relative flex flex-col items-center">
+                    <div className="flex justify-center mb-6">
+                      <div className="relative z-10 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-sm border-2 border-background">
+                        <span className="text-primary-foreground font-semibold text-lg">1</span>
                       </div>
-                      
-                      {/* Step content */}
-                      <Card className="bg-card border hover:shadow-lg transition-shadow duration-300 w-full max-w-sm mx-auto">
-                        <CardContent className="p-6 text-center">
-                          <h4 className="text-lg font-semibold mb-4">{step.title}</h4>
-                          <p className="text-muted-foreground leading-relaxed text-sm">{step.description}</p>
-                        </CardContent>
-                      </Card>
-                      
-                      {/* Arrow for desktop - simplified */}
-                      {index < 2 && (
-                        <div className="hidden md:block absolute top-14 -right-6 z-20">
-                          <div className="w-4 h-4 text-muted-foreground">
-                            <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
-                              <path d="M13 7l5 5-5 5M6 12h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
-                          </div>
-                        </div>
-                      )}
                     </div>
-                  )) || []}
+                    <Card className="bg-card border hover:shadow-lg transition-shadow duration-300 w-full max-w-sm mx-auto">
+                      <CardContent className="p-6 text-center">
+                        <h4 className="text-lg font-semibold mb-4">1) Samrøða (1 tími)</h4>
+                        <p className="text-muted-foreground leading-relaxed text-sm">Vit tosa um tykkara veruleika og seta rammuna fyri skeiðið.</p>
+                      </CardContent>
+                    </Card>
+                    <div className="hidden md:block absolute top-14 -right-6 z-20">
+                      <div className="w-4 h-4 text-muted-foreground">
+                        <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                          <path d="M13 7l5 5-5 5M6 12h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="relative flex flex-col items-center">
+                    <div className="flex justify-center mb-6">
+                      <div className="relative z-10 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-sm border-2 border-background">
+                        <span className="text-primary-foreground font-semibold text-lg">2</span>
+                      </div>
+                    </div>
+                    <Card className="bg-card border hover:shadow-lg transition-shadow duration-300 w-full max-w-sm mx-auto">
+                      <CardContent className="p-6 text-center">
+                        <h4 className="text-lg font-semibold mb-4">2) Uppseting</h4>
+                        <p className="text-muted-foreground leading-relaxed text-sm">Vit seta leiðreglur, amboð og fyrimyndir upp – klárt at brúka.</p>
+                      </CardContent>
+                    </Card>
+                    <div className="hidden md:block absolute top-14 -right-6 z-20">
+                      <div className="w-4 h-4 text-muted-foreground">
+                        <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                          <path d="M13 7l5 5-5 5M6 12h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="relative flex flex-col items-center">
+                    <div className="flex justify-center mb-6">
+                      <div className="relative z-10 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-sm border-2 border-background">
+                        <span className="text-primary-foreground font-semibold text-lg">3</span>
+                      </div>
+                    </div>
+                    <Card className="bg-card border hover:shadow-lg transition-shadow duration-300 w-full max-w-sm mx-auto">
+                      <CardContent className="p-6 text-center">
+                        <h4 className="text-lg font-semibold mb-4">3) Læra og brúka</h4>
+                        <p className="text-muted-foreground leading-relaxed text-sm">Verkstovur og stuðul á staðnum – og eftirfylging eftir 2–3 vikur.</p>
+                      </CardContent>
+                    </Card>
+                  </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* OPTION 2: Compact Horizontal Flow */}
+          <div className="mb-24">
+            <div className="mx-auto max-w-4xl text-center mb-12">
+              <h3 className="text-2xl font-bold tracking-tight mb-4">
+                Soleiðis byrja vit - Option 2 (Horizontal)
+              </h3>
+            </div>
+
+            <Card className="bg-background max-w-5xl mx-auto border shadow-sm">
+              <CardContent className="p-8">
+                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                  <div className="flex-1 text-center">
+                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-primary-foreground font-bold text-xl">1</span>
+                    </div>
+                    <h4 className="font-semibold mb-2">Samrøða (1 tími)</h4>
+                    <p className="text-sm text-muted-foreground">Vit tosa um tykkara veruleika og seta rammuna fyri skeiðið.</p>
+                  </div>
+
+                  <div className="hidden md:block text-muted-foreground">
+                    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                      <path d="M13 7l5 5-5 5M6 12h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+
+                  <div className="flex-1 text-center">
+                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-primary-foreground font-bold text-xl">2</span>
+                    </div>
+                    <h4 className="font-semibold mb-2">Uppseting</h4>
+                    <p className="text-sm text-muted-foreground">Vit seta leiðreglur, amboð og fyrimyndir upp – klárt at brúka.</p>
+                  </div>
+
+                  <div className="hidden md:block text-muted-foreground">
+                    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                      <path d="M13 7l5 5-5 5M6 12h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </div>
+
+                  <div className="flex-1 text-center">
+                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                      <span className="text-primary-foreground font-bold text-xl">3</span>
+                    </div>
+                    <h4 className="font-semibold mb-2">Læra og brúka</h4>
+                    <p className="text-sm text-muted-foreground">Verkstovur og stuðul á staðnum – og eftirfylging eftir 2–3 vikur.</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* OPTION 3: Vertical Stack with Icons */}
+          <div className="mb-24">
+            <div className="mx-auto max-w-4xl text-center mb-12">
+              <h3 className="text-2xl font-bold tracking-tight mb-4">
+                Soleiðis byrja vit - Option 3 (Vertical Stack)
+              </h3>
+            </div>
+
+            <div className="max-w-2xl mx-auto space-y-6">
+              <Card className="bg-card border">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                      <MessageCircle className="w-6 h-6 text-primary-foreground" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="inline-flex items-center justify-center w-6 h-6 bg-primary/10 text-primary text-xs font-bold rounded-full">1</span>
+                        <h4 className="text-lg font-semibold">Samrøða (1 tími)</h4>
+                      </div>
+                      <p className="text-muted-foreground text-sm leading-relaxed">Vit tosa um tykkara veruleika og seta rammuna fyri skeiðið.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <div className="flex justify-center">
+                <div className="w-px h-6 bg-border"></div>
+              </div>
+
+              <Card className="bg-card border">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                      <Building2 className="w-6 h-6 text-primary-foreground" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="inline-flex items-center justify-center w-6 h-6 bg-primary/10 text-primary text-xs font-bold rounded-full">2</span>
+                        <h4 className="text-lg font-semibold">Uppseting</h4>
+                      </div>
+                      <p className="text-muted-foreground text-sm leading-relaxed">Vit seta leiðreglur, amboð og fyrimyndir upp – klárt at brúka.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <div className="flex justify-center">
+                <div className="w-px h-6 bg-border"></div>
+              </div>
+
+              <Card className="bg-card border">
+                <CardContent className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary rounded-lg flex items-center justify-center flex-shrink-0">
+                      <GraduationCap className="w-6 h-6 text-primary-foreground" />
+                    </div>
+                    <div className="flex-1">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="inline-flex items-center justify-center w-6 h-6 bg-primary/10 text-primary text-xs font-bold rounded-full">3</span>
+                        <h4 className="text-lg font-semibold">Læra og brúka</h4>
+                      </div>
+                      <p className="text-muted-foreground text-sm leading-relaxed">Verkstovur og stuðul á staðnum – og eftirfylging eftir 2–3 vikur.</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
 
