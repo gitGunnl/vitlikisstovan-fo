@@ -137,17 +137,17 @@ export const siteConfig = {
   consulting: {
     title: "Ráðgeving & verkætlanir",
     subtitle:
-      "Frá vitlíki strategi til smáar sjálvvirkandi loysnir og kreativar verkætlanir – okkara uppgáva er at gera vitlíki nýtiligt fyri teg.",
+      "Frá vitlíki strategi til vitlíki menning. Umframt kreativar vitlíki verkætlanir – okkara uppgáva er at gera vitlíki nýttiligt fyri teg.",
     services: [
       {
         title: "Tað almenna",
         description:
-          "Visjón & heildarætlanir fyri vitlíki, stýring & etikkur, framløgur um vitlíki og málrætta vitlíki skeið."
+          "Visjón & heildarætlanir fyri vitlíki, stýring & etikkur, framløgur um vitlíki og málrættaðar vitlíki verkstovur."
       },
       {
         title: "Fyritøkur",
         description:
-          "Vitlíki skeið, menning av vitlíki loysnum, menning av heimasíðu, ráðgeving og innanhýsis mannagongdir."
+          "Vitlíki útbúgving, menning av vitlíki loysnum og ráðgeving."
       },
       {
         title: "Kreativt vitlíki",
