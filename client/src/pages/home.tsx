@@ -92,236 +92,260 @@ export default function Home() {
           </div>
 
           {/* What We Deliver Section */}
-          <div className="mb-12">
-            <div className="mx-auto max-w-4xl text-center mb-8">
-              <h3 className="text-2xl font-bold tracking-tight mb-4">
-                {siteConfig.program.whatWeDeliver.title}
-              </h3>
-            </div>
+          {siteConfig.program.whatWeDeliver && (
+            <div className="mb-16">
+              <div className="mx-auto max-w-4xl text-center mb-8">
+                <h3 className="text-2xl font-bold tracking-tight mb-4">
+                  {siteConfig.program.whatWeDeliver.title}
+                </h3>
+              </div>
 
-            <Card className="bg-background max-w-4xl mx-auto">
-              <CardContent className="p-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  {siteConfig.program.whatWeDeliver.items.map((item, index) => {
-                    const icons = [
-                      <FileText className="w-5 h-5 text-primary" />,
-                      <Building2 className="w-5 h-5 text-primary" />,
-                      <GraduationCap className="w-5 h-5 text-primary" />,
-                      <CheckCircle className="w-5 h-5 text-primary" />
-                    ];
-                    
-                    return (
-                      <div key={index} className="flex items-start space-x-4">
-                        <div className="flex-shrink-0 mt-1">
-                          {icons[index]}
+              <Card className="bg-background max-w-4xl mx-auto border shadow-lg">
+                <CardContent className="p-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    {siteConfig.program.whatWeDeliver.items?.map((item, index) => {
+                      const icons = [
+                        <FileText key={index} className="w-6 h-6 text-primary" />,
+                        <Building2 key={index} className="w-6 h-6 text-primary" />,
+                        <GraduationCap key={index} className="w-6 h-6 text-primary" />,
+                        <CheckCircle key={index} className="w-6 h-6 text-primary" />
+                      ];
+                      
+                      return (
+                        <div key={index} className="flex items-start space-x-4 p-2">
+                          <div className="flex-shrink-0 mt-1">
+                            {icons[index]}
+                          </div>
+                          <div>
+                            <h4 className="text-lg font-semibold mb-3 text-foreground">{item.title}</h4>
+                            <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                          </div>
                         </div>
-                        <div>
-                          <h4 className="text-lg font-bold mb-2">{item.title}</h4>
-                          <p className="text-muted-foreground text-sm leading-relaxed">{item.description}</p>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+                      );
+                    }) || []}
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          )}
 
           {/* How It Works Section */}
-          <div className="mb-12">
-            <div className="mx-auto max-w-4xl text-center mb-12">
-              <h3 className="text-2xl font-bold tracking-tight mb-4">
-                {siteConfig.program.howItWorks?.title || "Soleiðis byrja vit"}
-              </h3>
-            </div>
+          {siteConfig.program.howItWorks && (
+            <div className="mb-16">
+              <div className="mx-auto max-w-4xl text-center mb-12">
+                <h3 className="text-2xl font-bold tracking-tight mb-4">
+                  {siteConfig.program.howItWorks.title || "Soleiðis byrja vit"}
+                </h3>
+              </div>
 
-            <div className="max-w-5xl mx-auto">
-              <div className="relative">
-                {/* Progress line */}
-                <div className="hidden md:block absolute top-16 left-0 right-0 h-0.5 bg-gradient-to-r from-primary/20 via-primary to-primary/20"></div>
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {siteConfig.program.howItWorks?.steps?.map((step, index) => (
-                    <div key={index} className="relative">
-                      {/* Step number circle */}
-                      <div className="flex justify-center mb-6">
-                        <div className="relative z-10 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-lg">
-                          <span className="text-white font-bold text-lg">{index + 1}</span>
+              <div className="max-w-6xl mx-auto">
+                <div className="relative">
+                  {/* Progress line - positioned correctly */}
+                  <div className="hidden md:block absolute top-14 left-1/6 right-1/6 h-1 bg-gradient-to-r from-primary/30 via-primary/60 to-primary/30 rounded-full"></div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                    {siteConfig.program.howItWorks.steps?.map((step, index) => (
+                      <div key={index} className="relative flex flex-col items-center">
+                        {/* Step number circle */}
+                        <div className="flex justify-center mb-6">
+                          <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center shadow-xl border-4 border-background">
+                            <span className="text-white font-bold text-xl">{index + 1}</span>
+                          </div>
                         </div>
+                        
+                        {/* Step content */}
+                        <Card className="bg-card border hover:border-primary/30 hover:shadow-lg transition-all duration-300 w-full max-w-sm mx-auto">
+                          <CardContent className="p-6 text-center">
+                            <h4 className="text-xl font-semibold mb-4 text-foreground">{step.title}</h4>
+                            <p className="text-muted-foreground leading-relaxed text-sm">{step.description}</p>
+                          </CardContent>
+                        </Card>
+                        
+                        {/* Arrow for desktop - improved positioning */}
+                        {index < 2 && (
+                          <div className="hidden md:block absolute top-14 -right-6 z-20">
+                            <div className="w-6 h-6 text-primary/60">
+                              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                                <path d="M13 7l5 5-5 5M6 12h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                              </svg>
+                            </div>
+                          </div>
+                        )}
                       </div>
-                      
-                      {/* Step content */}
-                      <Card className="bg-background border-2 hover:border-primary/20 transition-all duration-300 h-full">
-                        <CardContent className="p-6 text-center">
-                          <h4 className="text-xl font-bold mb-4 text-primary">{step.title}</h4>
-                          <p className="text-muted-foreground leading-relaxed">{step.description}</p>
-                        </CardContent>
-                      </Card>
-                      
-                      {/* Arrow for desktop */}
-                      {index < 2 && (
-                        <div className="hidden md:block absolute top-16 -right-4 z-20 w-8 h-8 bg-background rounded-full flex items-center justify-center shadow-sm">
-                          <div className="w-0 h-0 border-l-4 border-r-0 border-t-4 border-b-4 border-l-primary border-t-transparent border-b-transparent"></div>
-                        </div>
-                      )}
-                    </div>
-                  )) || []}
+                    )) || []}
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
+          )}
 
           {/* Delivery Section */}
-          <div className="mb-12">
-            <div className="mx-auto max-w-4xl text-center mb-8">
-              <h3 className="text-2xl font-bold tracking-tight mb-4">
-                {siteConfig.program.delivery.title}
-              </h3>
-              <p className="text-lg text-muted-foreground">
-                {siteConfig.program.delivery.subtitle}
-              </p>
-            </div>
+          {siteConfig.program.delivery && (
+            <div className="mb-16">
+              <div className="mx-auto max-w-4xl text-center mb-8">
+                <h3 className="text-2xl font-bold tracking-tight mb-4">
+                  {siteConfig.program.delivery.title}
+                </h3>
+                <p className="text-lg text-muted-foreground">
+                  {siteConfig.program.delivery.subtitle}
+                </p>
+              </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
-              {siteConfig.program.delivery.items.map((item, index) => (
-                <Card key={index} className="bg-background">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+                {siteConfig.program.delivery.items?.map((item, index) => (
+                  <Card key={index} className="bg-background hover:shadow-md transition-shadow duration-300">
+                    <CardContent className="p-6">
+                      <h4 className="text-lg font-bold mb-3">{item.title}</h4>
+                      <p className="text-sm text-muted-foreground">{item.description}</p>
+                    </CardContent>
+                  </Card>
+                )) || []}
+              </div>
+
+              {siteConfig.program.delivery.note && (
+                <Card className="bg-muted/50 border">
                   <CardContent className="p-6">
-                    <h4 className="text-lg font-bold mb-3">{item.title}</h4>
-                    <p className="text-sm text-muted-foreground">{item.description}</p>
+                    <p className="text-sm text-center italic text-muted-foreground">
+                      {siteConfig.program.delivery.note}
+                    </p>
                   </CardContent>
                 </Card>
-              ))}
+              )}
             </div>
+          )}
 
-            <Card className="bg-muted">
-              <CardContent className="p-6">
-                <p className="text-sm text-center italic text-muted-foreground">
-                  {siteConfig.program.delivery.note}
-                </p>
+          {siteConfig.program.outcomes && (
+            <Card className="bg-background border shadow-lg">
+              <CardContent className="p-8">
+                <h4 className="text-xl font-bold mb-6 text-center">Úrslit</h4>
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {siteConfig.program.outcomes.map((outcome, index) => (
+                    <li key={index} className="flex items-start space-x-3 p-2">
+                      <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                      <span className="text-sm leading-relaxed">{outcome}</span>
+                    </li>
+                  ))}
+                </ul>
               </CardContent>
             </Card>
-          </div>
-
-          <Card className="bg-background">
-            <CardContent className="p-8">
-              <h4 className="text-xl font-bold mb-4">Úrslit</h4>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
-                {siteConfig.program.outcomes.map((outcome, index) => (
-                  <li key={index} className="flex items-start">
-                    <CheckCircle className="h-4 w-4 text-primary mt-0.5 mr-2 flex-shrink-0" />
-                    {outcome}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+          )}
         </Section>
 
         {/* Consulting & Projects */}
-        <Section id="consulting" className="py-24">
-          <div className="mx-auto max-w-4xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-              {siteConfig.consulting.title}
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              {siteConfig.consulting.subtitle}
-            </p>
-          </div>
+        {siteConfig.consulting && (
+          <Section id="consulting" className="py-24">
+            <div className="mx-auto max-w-4xl text-center mb-16">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+                {siteConfig.consulting.title}
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                {siteConfig.consulting.subtitle}
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <CardFeature
-              icon={<Building2 className="w-6 h-6" />}
-              title={siteConfig.consulting.services[0].title}
-              description={siteConfig.consulting.services[0].description}
-            />
-            <CardFeature
-              icon={<Users className="w-6 h-6" />}
-              title={siteConfig.consulting.services[1].title}
-              description={siteConfig.consulting.services[1].description}
-            />
-            <CardFeature
-              icon={<Palette className="w-6 h-6" />}
-              title={siteConfig.consulting.services[2].title}
-              description={siteConfig.consulting.services[2].description}
-            />
-          </div>
-        </Section>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {siteConfig.consulting.services?.map((service, index) => {
+                const icons = [
+                  <Building2 key={index} className="w-6 h-6" />,
+                  <Users key={index} className="w-6 h-6" />,
+                  <Palette key={index} className="w-6 h-6" />
+                ];
+                
+                return (
+                  <CardFeature
+                    key={index}
+                    icon={icons[index] || <Building2 className="w-6 h-6" />}
+                    title={service.title}
+                    description={service.description}
+                  />
+                );
+              }) || []}
+            </div>
+          </Section>
+        )}
 
         {/* Why Vitlíkisstovan */}
-        <Section id="why" className="py-24 bg-muted">
-          <div className="mx-auto max-w-4xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-              {siteConfig.why.title}
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              {siteConfig.why.subtitle}
-            </p>
-          </div>
+        {siteConfig.why && (
+          <Section id="why" className="py-24 bg-muted/30">
+            <div className="mx-auto max-w-4xl text-center mb-16">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+                {siteConfig.why.title}
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                {siteConfig.why.subtitle}
+              </p>
+            </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <CardFeature
-              icon={<Globe className="w-6 h-6" />}
-              title={siteConfig.why.features[0].title}
-              description={siteConfig.why.features[0].description}
-            />
-            <CardFeature
-              icon={<Lightbulb className="w-6 h-6" />}
-              title={siteConfig.why.features[1].title}
-              description={siteConfig.why.features[1].description}
-            />
-            <CardFeature
-              icon={<MessageCircle className="w-6 h-6" />}
-              title={siteConfig.why.features[2].title}
-              description={siteConfig.why.features[2].description}
-            />
-            <CardFeature
-              icon={<Zap className="w-6 h-6" />}
-              title={siteConfig.why.features[3].title}
-              description={siteConfig.why.features[3].description}
-            />
-          </div>
+            {siteConfig.why.features && (
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                {siteConfig.why.features.map((feature, index) => {
+                  const icons = [
+                    <Globe key={index} className="w-6 h-6" />,
+                    <Lightbulb key={index} className="w-6 h-6" />,
+                    <MessageCircle key={index} className="w-6 h-6" />,
+                    <Zap key={index} className="w-6 h-6" />
+                  ];
+                  
+                  return (
+                    <CardFeature
+                      key={index}
+                      icon={icons[index] || <Globe className="w-6 h-6" />}
+                      title={feature.title}
+                      description={feature.description}
+                    />
+                  );
+                })}
+              </div>
+            )}
 
-          {/* Founder Section */}
-          <div className="mx-auto max-w-4xl">
-            <h3 className="text-2xl font-bold tracking-tight mb-8 text-center">
-              {siteConfig.why.founder.heading}
-            </h3>
-            <Card className="bg-background">
-              <CardContent className="p-8">
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-                  <div className="lg:col-span-1 text-center lg:text-left">
-                    <div className="w-32 h-32 mx-auto lg:mx-0 mb-4 overflow-hidden rounded-full">
-                      <img 
-                        src="/me.jpg" 
-                        alt="Portrait of Gunnleygur Clementsen"
-                        className="w-full h-full object-cover"
-                      />
+            {/* Founder Section */}
+            {siteConfig.why.founder && (
+              <div className="mx-auto max-w-4xl">
+                <h3 className="text-2xl font-bold tracking-tight mb-8 text-center">
+                  {siteConfig.why.founder.heading}
+                </h3>
+                <Card className="bg-background border shadow-lg">
+                  <CardContent className="p-8">
+                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                      <div className="lg:col-span-1 text-center lg:text-left">
+                        <div className="w-32 h-32 mx-auto lg:mx-0 mb-4 overflow-hidden rounded-full border-4 border-primary/20">
+                          <img 
+                            src="/me.jpg" 
+                            alt="Portrait of Gunnleygur Clementsen"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <h4 className="text-xl font-bold mb-2">{siteConfig.why.founder.name}</h4>
+                        <p className="text-sm text-primary font-medium mb-4">{siteConfig.why.founder.role}</p>
+                      </div>
+
+                      <div className="lg:col-span-2">
+                        <p className="text-muted-foreground mb-6 leading-relaxed">{siteConfig.why.founder.summary}</p>
+
+                        {siteConfig.why.founder.bullets && (
+                          <ul className="space-y-3 mb-6">
+                            {siteConfig.why.founder.bullets.map((bullet, index) => (
+                              <li key={index} className="flex items-start">
+                                <CheckCircle className="h-5 w-5 text-primary mt-0.5 mr-3 flex-shrink-0" />
+                                <span className="text-sm leading-relaxed">{bullet}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+
+                        {siteConfig.why.founder.quote && (
+                          <blockquote className="border-l-4 border-primary pl-6 py-4 italic text-muted-foreground bg-muted/30 rounded-r-lg">
+                            "{siteConfig.why.founder.quote}"
+                          </blockquote>
+                        )}
+                      </div>
                     </div>
-                    <h4 className="text-xl font-bold mb-2">{siteConfig.why.founder.name}</h4>
-                    <p className="text-sm text-primary font-medium mb-4">{siteConfig.why.founder.role}</p>
-                  </div>
-
-                  <div className="lg:col-span-2">
-                    <p className="text-muted-foreground mb-6">{siteConfig.why.founder.summary}</p>
-
-                    <ul className="space-y-3 mb-6">
-                      {siteConfig.why.founder.bullets.map((bullet, index) => (
-                        <li key={index} className="flex items-start">
-                          <CheckCircle className="h-4 w-4 text-primary mt-0.5 mr-3 flex-shrink-0" />
-                          <span className="text-sm">{bullet}</span>
-                        </li>
-                      ))}
-                    </ul>
-
-                    <blockquote className="border-l-4 border-primary pl-4 italic text-muted-foreground">
-                      "{siteConfig.why.founder.quote}"
-                    </blockquote>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </Section>
+                  </CardContent>
+                </Card>
+              </div>
+            )}
+          </Section>
+        )}
 
         {/* Case Highlights */}
         <Section id="cases" className="py-24">
