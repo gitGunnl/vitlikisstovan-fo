@@ -82,34 +82,38 @@ export const siteConfig = {
 
     delivery: {
       title: "Hvat tú fært",
-      subtitle: "Alt, sum tú hevur tørvur til at byrja og halda fram",
+      subtitle: "Vit bjóðar alt sum skal til fyri at tit kunna læra vitlíki.",
       items: [
         {
           title: "Leiðreglur",
-          description: "Greið leiðreglur fyri vitlíkisbrúk á tykkara skrivstovu"
+          description: "Saman við tykkum skriva vit greiðar leiðreglur fyri vitlíkisbrúk á tykkara skrivstovu. So vita tit akkurát hvat tit sleppa at gera hjá tykkum."
         },
         {
-          title: "Amboð uppseting",
-          description: "Væl uppsett amboð, klárt at brúka"
+          title: "Amboð og uppseting",
+          description: "Vit hjálpa tykkum at avgera hvørji amboð til vilja brúka og kunna seta alt upp fyri tykkum. So eru tit røtt íklødd til at býrja."
         },
         {
-          title: "Verkstovur",
-          description: "Praktisk læra í tykkara egnu umhvørvi"
+          title: "Verkstovur og netskeið",
+          description: "Vit nýta bæði verkstovur og sergjørd netskeið, so tit kunna læra skjótt og smidligani."
         },
         {
-          title: "Stuðul",
-          description: "Eftirfylging og hjálp fyrstu vikurnar"
+          title: "Stuðul og spurningar",
+          description: "Eg eri tøkur til at svara spurningum um alt sum hevur við vitlíki at gera."
         },
         {
           title: "Tilfar",
-          description: "Skabelónir og leiðbeiningur tit kunnu brúka"
+          description: "Skabelónir og leiðbeiningur sniðgivnar til júst tykkara tørv. So noyast tit ikki at minnast alt frá degi 1."
         },
         {
-          title: "Uppfylging",
-          description: "Vit fylgja upp eftir 2-3 vikur"
+          title: "Greining",
+          description: "Eg hjálpi tykkum at finna akkurát hvørjar uppgávur tit skula loysa við við vitlíki og hvar vitlíki ikki skal brúkast."
+        },
+        {
+          title: "Framløgur",
+          description: "Eftir tørvi haldi eg framløgur fyri toymum um vitlíki. So tit læra at skilja tøknina ikki bara at brúka hana."
         }
       ],
-      note: "Alt er lagað til tykkara serliga tørv og arbeiðshátt"
+      note: "Alt verur lagað til tykkara serliga tørv og arbeiðshátt."
     },
 
     outcomes: [
