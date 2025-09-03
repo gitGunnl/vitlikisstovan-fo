@@ -18,16 +18,16 @@ export const siteConfig = {
   },
 
   hero: {
-    title: "Eisini tú kann mmeistra Vitlíki!",
+    title: "Eisini tú kann meistra Vitlíki!",
     subtitle:
-      "Vit bjóða eina 12-viku útbúgving, sum fær tykkum frá nýbyrjandi til dugnaligir vitlíkis brúkarir. Vit taka okkum av øllum, tit skula bara lurta og læra.",
+      "Vit vitabjóða eina 12-viku útbúgving, sum fær tykkum frá nýbyrjandi til dugnaligir vitlíkis brúkarir. Vit taka okkum av øllum, tit skula bara lurta og læra.",
     primaryCTA: {
       text: "Byrja nú",
       href: "#contact"
     },
     secondaryCTA: {
       text: "Lær meira um skeiði",
-      href: "#program"
+      href: "/course-details"
     }
   },
 
@@ -90,7 +90,7 @@ export const siteConfig = {
         },
         {
           title: "Amboð og uppseting",
-          description: "Vit hjálpa tykkum at avgera hvørji amboð til vilja brúka og kunna seta alt upp fyri tykkum. So eru tit røtt íklødd til at býrja."
+          description: "Vit hjálpa tykkum at avgera hvørji amboð til vilja brúka og kunna seta alt upp fyri tykkum. So eru tit røtt íklødd til at byrja."
         },
         {
           title: "Verkstovur og netskeið",
@@ -102,7 +102,7 @@ export const siteConfig = {
         },
         {
           title: "Tilfar",
-          description: "Skabelónir og leiðbeiningur sniðgivnar til júst tykkara tørv. So noyast tit ikki at minnast alt frá degi 1."
+          description: "Skabelónir og leiðbeiningur sniðgíddar til júst tykkara tørv. So noyast tit ikki at minnast alt frá degi 1."
         },
         {
           title: "Greining",
@@ -113,7 +113,7 @@ export const siteConfig = {
           description: "Eftir tørvi haldi eg framløgur fyri toymum um vitlíki. So tit læra at skilja tøknina ikki bara at brúka hana."
         }
       ],
-      note: "Alt verur lagað til tykkara serliga tørv og arbeiðshátt."
+      note: "Alt verður lagað til tykkara serliga tørv og arbeiðshátt."
     },
 
     outcomes: [
@@ -141,7 +141,7 @@ export const siteConfig = {
   consulting: {
     title: "Ráðgeving & verkætlanir",
     subtitle:
-      "Frá vitlíki strategi til vitlíki menning. Umframt kreativar vitlíki verkætlanir – okkara uppgáva er at gera vitlíki nýttiligt fyri teg.",
+      "Frá vitlíki strategi til vitlíki menning. Umframt kreativar vitlíki verkætlanir – okkara uppgáva er at gera vitlíki nýtiligt fyri teg.",
     services: [
       {
         title: "Tað almenna",
