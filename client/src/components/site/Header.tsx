@@ -18,14 +18,14 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border bg-white/95 backdrop-blur-header shadow-sm transition-all duration-300">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        <a href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-200">
           <img 
             src="/logo-header.png" 
             alt={siteConfig.siteName} 
             className="h-8 w-8 object-contain"
           />
           <span className="font-bold text-lg text-gray-900">{siteConfig.siteName}</span>
-        </div>
+        </a>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
