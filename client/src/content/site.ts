@@ -20,21 +20,21 @@ export const siteConfig = {
   hero: {
     title: "Eisini tú kann meistra Vitlíki!",
     subtitle:
-      "Vit vitabjóða eina 12-viku útbúgving, sum fær tykkum frá nýbyrjandi til dugnaligir vitlíkis brúkarir. Vit taka okkum av øllum, tit skula bara lurta og læra.",
+      "Vit vita akkurát hvussu tit kunna koma frá nýbyrjandi innan vitlíki til dugnaligir vitlíkis brúkarir. Vit taka okkum av øllum, tit skula bara lurta og læra.",
     primaryCTA: {
-      text: "Byrja nú",
+      text: "Bílegg vitlíkis útbúgving til tykkara skrivstovu.",
       href: "#contact"
     },
     secondaryCTA: {
-      text: "Lær meira um skeiði",
+      text: "Lær meira um útbúgvingina",
       href: "/course-details"
     }
   },
 
   program: {
-    title: "Vit syrgja fyri øllum – tit fáa úrslit",
+    title: "Frá forvitin til framkomin: Ein 12-viku útbúgving til skrivstovur",
     subtitle:
-      "Einfalt skeið til tykkara skrivstovu. Vit koma út til tykkum, læra toymið og seta alt upp. Tit møta nakrar fáar ferðir – og síðani arbeiða tit væl og trygt við vitlíki.",
+      "Einfalt skeið til tykkara skrivstovu. Vit koma út til tykkum, læra toymið og seta alt upp. Tit møta nakrar ferðirog læra at arbeiða trygt og munagott við vitlíki.",
 
     whatWeDeliver: {
       title: "Vit hjálpa við hesum",
