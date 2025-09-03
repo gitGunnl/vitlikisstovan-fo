@@ -1,0 +1,198 @@
+     {/* Contact Section - Enhanced */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-background to-background/80">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4">Skula vit taka eitt prát?</h2>
+            <p className="text-text/70 max-w-xl mx-auto">Fá skjóta vegleiðing um, hvussu vit kunnu hjálpa tær at loysa tínar avbjóðingar við vitlíki</p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            {/* Contact Details - Enhanced */}
+            <div className="bg-primary/10 p-8 border border-primary/30 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-primary/5 transition-all duration-300">
+              <h3 className="text-2xl font-semibold mb-6 border-b border-border pb-3">Fá samband her:</h3>
+              <div className="space-y-6 text-text/80">
+                <a href="mailto:info@ritvit.fo" className="flex items-center gap-4 p-3 hover:bg-primary/10 rounded-lg transition-colors group">
+                  <div className="p-3 bg-primary/20 rounded-full group-hover:bg-primary/30 transition-colors">
+                    <Mail className="w-5 h-5 text-primary" />
+                  </div>
+                  <span className="text-lg group-hover:text-primary transition-colors">info@ritvit.fo</span>
+                </a>
+
+                <a href="tel:+298919444" className="flex items-center gap-4 p-3 hover:bg-primary/10 rounded-lg transition-colors group">
+                  <div className="p-3 bg-primary/20 rounded-full group-hover:bg-primary/30 transition-colors">
+                    <Phone className="w-5 h-5 text-primary" />
+                  </div>
+                  <span className="text-lg group-hover:text-primary transition-colors">+298 919444</span>
+                </a>
+
+                <a
+                  href="https://www.facebook.com/profile.php?id=61557593776267"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-3 hover:bg-primary/10 rounded-lg transition-colors group"
+                >
+                  <div className="p-3 bg-primary/20 rounded-full group-hover:bg-primary/30 transition-colors">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-5 h-5 text-primary"
+                    >
+                      <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z" />
+                    </svg>
+                  </div>
+                  <span className="text-lg group-hover:text-primary transition-colors">Facebook</span>
+                </a>
+
+                <a
+                  href="https://linkedin.com/company/t%C3%B8kni-t%C3%A6nastan"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 p-3 hover:bg-primary/10 rounded-lg transition-colors group"
+                >
+                  <div className="p-3 bg-primary/20 rounded-full group-hover:bg-primary/30 transition-colors">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      className="w-5 h-5 text-primary"
+                    >
+                      <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm-2 16h-2v-6h2v6zm-1-6.891c-.607 0-1.1-.496-1.1-1.109 0-.612.492-1.109 1.1-1.109s1.1.497 1.1 1.109c0 .613-.493 1.109-1.1 1.109zm8 6.891h-1.998v-2.861c0-1.881-2.002-1.722-2.002 0v2.861h-2v-6h2v1.093c.872-1.616 4-1.736 4 1.548v3.359z" />
+                    </svg>
+                  </div>
+                  <span className="text-lg group-hover:text-primary transition-colors">LinkedIn</span>
+                </a>
+              </div>
+            </div>
+
+            {/* Contact Form - Enhanced */}
+            <div className="bg-primary/10 p-8 border border-primary/30 backdrop-blur-sm rounded-xl shadow-lg">
+              <h3 className="text-2xl font-semibold mb-6 border-b border-border pb-3">Send eini boð</h3>
+              <form className="space-y-5" onSubmit={async (e) => {
+                e.preventDefault();
+                const formElement = e.target as HTMLFormElement;
+                const formData = new FormData(formElement);
+                const formStartTime = parseInt(formData.get('formStartTime') as string);
+                const honeypot = formData.get('honeypot') as string;
+                
+                // Honeypot check
+                if (honeypot && honeypot.trim() !== "") {
+                  return; // Silently reject
+                }
+                
+                // Timestamp check
+                const submissionTime = Date.now();
+                const timeTaken = (submissionTime - formStartTime) / 1000;
+                if (timeTaken < 3) {
+                  alert("Vinarliga bíða eina løtu áðrenn tú sendur formið aftur.");
+                  return;
+                }
+                
+                try {
+                  // Try API endpoint first (more reliable)
+                  const response = await fetch('/api/contact', {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                      name: formData.get('entry.1179687836'),
+                      email: formData.get('entry.263197538'),
+                      message: formData.get('entry.240567695'),
+                      honeypot: honeypot,
+                      submissionTime: submissionTime,
+                      formStartTime: formStartTime
+                    })
+                  });
+
+                  if (response.ok) {
+                    alert("Boðini eru send!");
+                    formElement.reset();
+                    return;
+                  }
+                } catch (apiError) {
+                  console.warn('API submission failed, falling back to Google Forms');
+                }
+                
+                // Fallback to Google Forms with better error handling
+                try {
+                  await fetch('https://docs.google.com/forms/d/e/1FAIpQLSf8FFci-J91suIjxY2xh4GD-DQ-UfZftUNxq3dUdXkgJAjB1Q/formResponse', {
+                    method: 'POST',
+                    body: formData,
+                    mode: 'no-cors',
+                    signal: AbortSignal.timeout(10000) // 10 second timeout
+                  });
+                  alert("Boðini eru send!");
+                  formElement.reset();
+                } catch (error) {
+                  console.error('Form submission failed:', error);
+                  alert("Villa! Royn aftur ella send teldupost til info@ritvit.fo");
+                }
+              }}>
+                <input type="hidden" name="formStartTime" value={Date.now()} />
+                
+                {/* Honeypot field - hidden from users */}
+                <div className="absolute left-[-9999px] opacity-0 pointer-events-none">
+                  <label htmlFor="honeypot">Leave this field empty</label>
+                  <Input
+                    type="text"
+                    id="honeypot"
+                    name="honeypot"
+                    autoComplete="off"
+                    tabIndex={-1}
+                  />
+                </div>
+                
+                <div>
+                  <label htmlFor="name" className="block mb-2 font-medium text-text/90">
+                    Navn:
+                  </label>
+                  <Input
+                    type="text"
+                    id="name"
+                    name="entry.1179687836"
+                    className="w-full p-3 border border-primary/30 rounded-lg bg-background/70 text-text focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all"
+                    required
+                    autoComplete="name"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block mb-2 font-medium text-text/90">
+                    Teldupostur:
+                  </label>
+                  <Input
+                    type="email"
+                    id="email"
+                    name="entry.263197538"
+                    className="w-full p-3 border border-primary/30 rounded-lg bg-background/70 text-text focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all"
+                    required
+                    autoComplete="email"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="message" className="block mb-2 font-medium text-text/90">
+                    Boð:
+                  </label>
+                  <textarea
+                    id="message"
+                    name="entry.240567695"
+                    rows={5}
+                    className="w-full p-3 border border-primary/30 rounded-lg bg-background/70 text-text focus:border-primary focus:ring-1 focus:ring-primary/50 transition-all resize-none"
+                    required
+                    autoComplete="off"
+                  ></textarea>
+                </div>
+                <Button
+                  type="submit"
+                  className="w-full bg-primary hover:bg-primary/90 text-text py-6 font-semibold shadow-lg shadow-primary/20 transition-all hover:translate-y-[-2px]"
+                >
+                  <span className="flex items-center justify-center gap-2">
+                    <MessageSquare className="w-5 h-5" /> 
+                    Send boð
+                  </span>
+                </Button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
