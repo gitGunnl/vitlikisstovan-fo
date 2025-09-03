@@ -253,22 +253,7 @@ export default function Home() {
             </div>
           )}
 
-          {siteConfig.program.outcomes && (
-            <Card className="bg-background border shadow-lg">
-              <CardContent className="p-8">
-                <h4 className="text-xl font-bold mb-6 text-center">Úrslit</h4>
-                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  {siteConfig.program.outcomes.map((outcome, index) => (
-                    <li key={index} className="flex items-start space-x-3 p-2">
-                      <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                      <span className="text-sm leading-relaxed">{outcome}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          )}
-        </Section>
+          </Section>
 
         {/* Consulting & Projects */}
         {siteConfig.consulting && (
