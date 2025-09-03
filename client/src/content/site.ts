@@ -141,29 +141,6 @@ export const siteConfig = {
 
 
 
-  consulting: {
-    title: "Ráðgeving & verkætlanir",
-    subtitle:
-      "Frá vitlíki strategi til smáar sjálvvirkandi loysnir og kreativar verkætlanir – okkara uppgáva er at gera vitlíki nýtiligt fyri teg.",
-    services: [
-      {
-        title: "Tað almenna",
-        description:
-          "Visjón & heildarætlanir fyri vitlíki, stýring & etikkur, framløgur um vitlíki og málrætta vitlíki skeið."
-      },
-      {
-        title: "Fyritøkur",
-        description:
-          "Vitlíki skeið, menning av vitlíki loysnum, menning av heimasíðu, ráðgeving og innanhýsis mannagongdir."
-      },
-      {
-        title: "Kreativt vitlíki",
-        description:
-          "Myndir, heimasíður, filmar, tónleikur – alt ting vit gera við vitlíki fyri teg."
-      }
-    ]
-  },
-
   why: {
     title: "Hví Vitlíkisstovan?",
     subtitle:
