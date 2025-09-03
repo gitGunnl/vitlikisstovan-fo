@@ -130,54 +130,52 @@ export default function Home() {
           )}
 
           {/* How It Works Section */}
-          {siteConfig.program.howItWorks && (
-            <div className="mb-16">
-              <div className="mx-auto max-w-4xl text-center mb-12">
-                <h3 className="text-2xl font-bold tracking-tight mb-4">
-                  {siteConfig.program.howItWorks.title || "Soleiðis byrja vit"}
-                </h3>
-              </div>
+          <div className="mb-16">
+            <div className="mx-auto max-w-4xl text-center mb-12">
+              <h3 className="text-2xl font-bold tracking-tight mb-4">
+                {siteConfig.program.howItWorks?.title || "Soleiðis byrja vit"}
+              </h3>
+            </div>
 
-              <div className="max-w-6xl mx-auto">
-                <div className="relative">
-                  {/* Progress line - positioned correctly */}
-                  <div className="hidden md:block absolute top-14 left-1/6 right-1/6 h-1 bg-gradient-to-r from-primary/30 via-primary/60 to-primary/30 rounded-full"></div>
-                  
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                    {siteConfig.program.howItWorks.steps?.map((step, index) => (
-                      <div key={index} className="relative flex flex-col items-center">
-                        {/* Step number circle */}
-                        <div className="flex justify-center mb-6">
-                          <div className="relative z-10 w-16 h-16 bg-gradient-to-br from-primary to-primary/80 rounded-full flex items-center justify-center shadow-xl border-4 border-background">
-                            <span className="text-white font-bold text-xl">{index + 1}</span>
+            <div className="max-w-6xl mx-auto">
+              <div className="relative">
+                {/* Progress line - simplified */}
+                <div className="hidden md:block absolute top-14 left-1/6 right-1/6 h-0.5 bg-border"></div>
+                
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                  {siteConfig.program.howItWorks?.steps?.map((step, index) => (
+                    <div key={index} className="relative flex flex-col items-center">
+                      {/* Step number circle - simplified */}
+                      <div className="flex justify-center mb-6">
+                        <div className="relative z-10 w-12 h-12 bg-primary rounded-full flex items-center justify-center shadow-sm border-2 border-background">
+                          <span className="text-primary-foreground font-semibold text-lg">{index + 1}</span>
+                        </div>
+                      </div>
+                      
+                      {/* Step content */}
+                      <Card className="bg-card border hover:shadow-lg transition-shadow duration-300 w-full max-w-sm mx-auto">
+                        <CardContent className="p-6 text-center">
+                          <h4 className="text-lg font-semibold mb-4">{step.title}</h4>
+                          <p className="text-muted-foreground leading-relaxed text-sm">{step.description}</p>
+                        </CardContent>
+                      </Card>
+                      
+                      {/* Arrow for desktop - simplified */}
+                      {index < 2 && (
+                        <div className="hidden md:block absolute top-14 -right-6 z-20">
+                          <div className="w-4 h-4 text-muted-foreground">
+                            <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
+                              <path d="M13 7l5 5-5 5M6 12h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
                           </div>
                         </div>
-                        
-                        {/* Step content */}
-                        <Card className="bg-card border hover:border-primary/30 hover:shadow-lg transition-all duration-300 w-full max-w-sm mx-auto">
-                          <CardContent className="p-6 text-center">
-                            <h4 className="text-xl font-semibold mb-4 text-foreground">{step.title}</h4>
-                            <p className="text-muted-foreground leading-relaxed text-sm">{step.description}</p>
-                          </CardContent>
-                        </Card>
-                        
-                        {/* Arrow for desktop - improved positioning */}
-                        {index < 2 && (
-                          <div className="hidden md:block absolute top-14 -right-6 z-20">
-                            <div className="w-6 h-6 text-primary/60">
-                              <svg viewBox="0 0 24 24" fill="none" className="w-full h-full">
-                                <path d="M13 7l5 5-5 5M6 12h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                              </svg>
-                            </div>
-                          </div>
-                        )}
-                      </div>
-                    )) || []}
-                  </div>
+                      )}
+                    </div>
+                  )) || []}
                 </div>
               </div>
             </div>
-          )}
+          </div>
 
           {/* Delivery Section */}
           {siteConfig.program.delivery && (
