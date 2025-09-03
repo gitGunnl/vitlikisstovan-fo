@@ -31,115 +31,114 @@ export const siteConfig = {
     }
   },
 
+  // ——— REPLACE your existing `program` and `consulting` blocks with the code below ———
+
   program: {
-    title: "Vit taka okkum av tí – tú fært eitt toymi, ið dugir vitlíki",
+    title: "Vit taka okkum av øllum – tit fáa úrslit",
     subtitle:
-      "Eingin orsøk at byrja við tómum arki. Vit møta upp á tykkara arbeiðspláss og seta alt upp – so tit sleppa undan villum byrjanum og fáið verulig úrslit.",
+      "Einføld loysn til skrivstovur: Vit koma út til tykkara, seta kósina, læra toymið og gera tað trygt og lætt at brúka vitlíki hvønn dag. Tit skulu bara møta nakrar ferðir – vit taka okkum av restini.",
 
-    phases: [
-      {
-        period: "Vika 1-4",
-        title: "Grundleggjandi vitlíki",
-        description: "Fyrstu vikurnar leggja vit grundin. Tit læra tey grundleggjandi hugtak og fáa atgongd til rættu amboðini.",
-        highlights: [
-          "Innsetning og uppsetning av vitlíki amboðum",
-          "Grundleggjandi prompt-skriving",
-          "Tryggleiksleiðreglur og etiskir viðurskifti",
-          "Fyrstu praktiska uppgávur"
-        ]
-      },
-      {
-        period: "Vika 5-8",
-        title: "Miðvíkja fyribrigdi",
-        description: "Nú byrja vit at brúka vitlíki til verulig arbeiðsuppgávur og læra meira avansaðar teknikkir.",
-        highlights: [
-          "Avansað prompt-engineering",
-          "Automation og workflow integration",
-          "Týðing og málviðgerð",
-          "Datuskipan og analysis"
-        ]
-      },
-      {
-        period: "Vika 9-12",
-        title: "Meistarastig",
-        description: "Seinastu vikurnar fókusera vit á at byggja egnar loysnir og integrera vitlíki í dagliga arbeiðsgongd.",
-        highlights: [
-          "Egnar AI loysnir og verkamál",
-          "Team collaboration við AI",
-          "Performance optimization",
-          "Framtíðar planning og skalering"
-        ]
-      }
-    ],
-
-    helpsWith: {
-      title: "Vit hjálpa tykkum við at:",
+    // Vís hetta sum 4 greið kort (1 línja, 2×2 á smáum skermum)
+    whatWeDeliver: {
+      title: "Hvat vit gera fyri tykkum",
       items: [
         {
-          title: "Skriva greiðar leiðreglur",
+          title: "Leiðreglur & mannagongdir",
           description:
-            "Vit hjálpa tykkum at orða, hvat starvsfólk kunnu og ikki kunnu brúka vitlíki til – og hvussu tað verður brúkt trygt og skilagott."
+            "Vit finna og skriva tær rættar leiðreglurnar: hvat er loyvt – og hvat er ikki. Stutt, greitt og lætt at fylgja."
         },
         {
-          title: "Velja røttu amboðini",
+          title: "Rætt amboð",
           description:
-            "Vit kanna, hvat riggar til tykkara arbeiði – Copilot, ChatGPT, ella okkurt annað. Tit fáa amboð sum hóskar – hvørki ov lítið ella ov nógv."
+            "Vit velja amboð saman við tykkum (ofta Copilot – kanska okkurt annað). Vit seta upp, royna og gera klárt."
         },
         {
-          title: "Læra fólkið at brúka tað",
+          title: "Venjing & undirvísing",
           description:
-            "Vit vísa starvsfólkum, hvussu teirra amboð rigga, og hvussu teir fáa mest burturúr teimum. Við egnari uppgávu – ikki teoretiskari undirvísing."
+            "Vit læra starvsfólkini at brúka vitlíki og síni amboð – við dømi úr teirra egnu uppgávum."
         },
         {
-          title: "Finna tær røttu uppgávurnar",
+          title: "Uppgávuyvirlit",
           description:
-            "Vit hjálpa starvsfólki at síggja, júst hvat tey kunnu loysa við vitlíki – og hvat tey skulu lata vera við. Sostatt veit tey, nær tað veruliga loysir seg."
+            "Vit gera eitt greitt yvirlit yvir tær uppgávur, sum kunnu loysast við vitlíki hjá tykkum – og hvussu."
         }
       ]
     },
 
-    delivery: {
-      title: "Vit leggja tað til rættis eftir tykkara tørvi",
-      subtitle:
-        "Skeiðið verður sett saman av fleiri ymiskum pørtum – tit velja, hvat passar best til tykkara arbeiðsdag.",
-      items: [
+    // Vís hetta sum ein 3-stegs “flow” við pílum/ikonum
+    howItWorks: {
+      title: "Soleiðis koma vit í gongd",
+      steps: [
         {
-          title: "Framløgur",
-          description:
-            "Greiðar, stuttar framløgur til starvsfólk og leiðslu – seta kósina og svara teimum stóru spurningunum."
+          title: "1) Start-samrøða (60 min)",
+          description: "Mál, veruleiki og treytir. Vit avtala rammu og næstu stig."
         },
         {
-          title: "Verkstovur",
-          description:
-            "Smáir bólkar, egnar uppgávur og beinleiðis vegleiðing. Fólk læra at brúka vitlíki beinanvegin."
+          title: "2) Uppseting & tilpassing",
+          description: "Leiðreglur, amboð og fyrimyndir. Alt verður sett klárt at brúka."
         },
         {
-          title: "Netkursir",
-          description:
-            "Upptøkur og mini-uppgávur, sum kunnu takast, tá tíð er. Serliga gott til fólk, ið ikki altíð kunnu møta."
-        },
-        {
-          title: "Sergjørdar vegleiðingar",
-          description:
-            "1–3 síðna leiðreglur og dømi júst til tykkara arbeiði. Klárt at brúka – aftur og aftur."
-        },
-        {
-          title: "Spurningar & svar (Q&A) við teldupost",
-          description:
-            "Starvsfólk kunnu spyrja umvegis teldupost. Vit svara stutt og greiðliga – við dømi, um neyðugt."
+          title: "3) Læra & seta í verk",
+          description: "Stuttar verkstovur á staðnum og stuðul í gerandisdegi. Eftirfylging eftir 2–3 vikum."
         }
-      ],
-      note:
-        "Tit kunnu velja og blanda hesar hættir, so skeiðið riggar best til tykkum og gevur varandi úrslit."
+      ]
     },
 
+    // Vís sum “checklistu” við 3–5 punktum
     outcomes: [
-      "Starvsfólk duga at brúka vitlíki – við tryggleika og ábyrgd.",
-      "Vitlíki verður brúkt til tað, sum veruliga loysir seg.",
-      "Felags vitlíki-mentan, har amboðini gerast partur av arbeiðinum.",
-      "Einki tekniskt snikksnakk – bert verulig nytta í gerandisdegnum."
-    ]
+      "Starvsfólkini duga at brúka vitlíki trygt og rímiliga.",
+      "Greiðar leiðreglur, ið øll skilja og fylgja.",
+      "Rætt amboð sett upp og klár at brúka.",
+      "Eitt yvirlit yvir uppgávur, har vitlíki gevur meining.",
+      "Fyrimyndir og vanar, sum halda fram eftir vit fara."
+    ],
+
+    // Valfrítt: smáur teksti undir
+    note:
+      "Vit laga alt til tykkara veruleika. Minni prát, meira gerð – og úrslit, ið kunnu mátast.",
+
+    // Hentar til at vísa eina einfaldða tekning (trý stig)
+    illustration: {
+      hint:
+        "Einføld 3-stegs tekning: 1) Samrøða → 2) Uppseting → 3) Læra & seta í verk. Ikon: talu, amboð, fólk/undervísing."
+    },
+
+    cta: {
+      text: "Bílegg start-samrøðu",
+      href: "#contact"
+    }
   },
+
+  consulting: {
+    title: "Ráðgeving & verkætlanir",
+    subtitle:
+      "Vit hjálpa, tá tit hava tørv – stórt ella lítið. Almennt, privat og kreativt.",
+
+    // Vís sum 3 kort við stuttum teksti
+    services: [
+      {
+        title: "Almennar stovnar",
+        description:
+          "Visjónir og heildarætlanir, stýring og etikkur, verkætlanarstýring og málrættar verkstovur."
+      },
+      {
+        title: "Fyritøkur",
+        description:
+          "Smáar og skjótar loysnir: sjálvvirkni, betri skrivstovuarbeiði, kundatænastu-hjálpari og innanhýsis fyrimyndir."
+      },
+      {
+        title: "Kreativt vitlíki",
+        description:
+          "Stuttfilmar, plakatir og aðrar royndir – vit gera hugskot til veruleika."
+      }
+    ],
+
+    cta: {
+      text: "Skriva okkum",
+      href: "#contact"
+    }
+  },
+
 
 
   consulting: {
