@@ -20,7 +20,7 @@ export const siteConfig = {
   hero: {
     title: "Eisini tú kann mmeistra Vitlíki!",
     subtitle:
-      "Vit bjóða eina 12-viku útbúgving, sum fær tykkum frá nýbyrjandi til dugnaligir vitlíkis brúkarir. Í pakkanum fáa tit: Leiðreglur sniðgivnar til tykkum, vegleiðing til røttu tólini fyri tykkum, útbúgving í vitlíki og rågeving til hvussu júst tit skula nýta vitlíki. So eru til fult brýnjaði til vitlíki.",
+      "Vit bjóða eina 12-viku útbúgving, sum fær tykkum frá nýbyrjandi til dugnaligir vitlíkis brúkarir. Vit taka okkum av øllum, tit skula bara lurta og læra.",
     primaryCTA: {
       text: "Byrja nú",
       href: "#contact"
@@ -32,86 +32,79 @@ export const siteConfig = {
   },
 
   program: {
-    title: "Frá forvitin til framkomin: Ein 12-viku útbúgving til skrivstovur",
+    title: "Vit taka okkum av tí – tú fært eitt toymi, ið dugir vitlíki",
     subtitle:
-      "Hendan útbúgving er ein greið leið frá eingin ætlan til munagott arbeiði við vitlíki.",
-    phases: [
-      {
-        period: "Vika 1–4",
-        title: "Grundarlag & trygg nýtsla",
-        description:
-          "Øll læra grundleggjandi vitan: hvat sleppa tit í tykkara fyritøku? hvørji amboð hava tit atgongd til? hvat er vitlíki? hvussu brúkar man vitlíki?",
-        highlights: [
-          "Tit fáa leiðreglur sum eru til at fylgja",
-          "Tit læra júst hvørji amboð passa júst til tykkum",
-          "Tit læra hvat vitlíki er og hvat tað ikki er",
-          "Tit læra hvussu man nýtur vitlíki trykt til arbeiðis"
-        ]
-      },
-      {
-        period: "Vika 5–8",
-        title: "Finna tær røttu uppgávurnar",
-        description:
-          "Vit greina tykkara arbeiðis gongdir og tørv.",
-        highlights: [
-          "Tit fáa sniðgivnar leiðbeningar júst til tykkara arbeiðis uppgávur.",
-          "Tit læra akkruát hvørjar uppgávur tit skula nýta vitlíki til.",
-          "Tit læra akkruát hvørjar uppgávur tit ikki skula nýta vitlíki til.",
-          "Tit kunna nú nýta vitlíki munagott í øllum arbeiðinum."
-        ]
-      },
-      {
-        period: "Vika 9–12",
-        title: "Víðkað nýtsla av vitlíki",
-        description:
-          "Vit læra tykkum hvussu man fær meira burturúr vitlíki",
-        highlights: [
-          "Tit læra serligir nýtsluhættir og snildir",
-          "Tit læra viðkaðar funkur av tykkara vitlíki amboðum",
-          "Tit læra hvussu man fær mest burturúr vitlíki"
-        ]
-      }
-    ],
+      "Eingin orsøk at byrja við tómum arki. Vit møta upp á tykkara arbeiðspláss og seta alt upp – so tit sleppa undan villum byrjanum og fáið verulig úrslit.",
+
+    helpsWith: {
+      title: "Vit hjálpa tykkum við at:",
+      items: [
+        {
+          title: "Skriva greiðar leiðreglur",
+          description:
+            "Vit hjálpa tykkum at orða, hvat starvsfólk kunnu og ikki kunnu brúka vitlíki til – og hvussu tað verður brúkt trygt og skilagott."
+        },
+        {
+          title: "Velja røttu amboðini",
+          description:
+            "Vit kanna, hvat riggar til tykkara arbeiði – Copilot, ChatGPT, ella okkurt annað. Tit fáa amboð sum hóskar – hvørki ov lítið ella ov nógv."
+        },
+        {
+          title: "Læra fólkið at brúka tað",
+          description:
+            "Vit vísa starvsfólkum, hvussu teirra amboð rigga, og hvussu teir fáa mest burturúr teimum. Við egnari uppgávu – ikki teoretiskari undirvísing."
+        },
+        {
+          title: "Finna tær røttu uppgávurnar",
+          description:
+            "Vit hjálpa starvsfólki at síggja, júst hvat tey kunnu loysa við vitlíki – og hvat tey skulu lata vera við. Sostatt veit tey, nær tað veruliga loysir seg."
+        }
+      ]
+    },
+
     delivery: {
-      title: "Meira enn bert verkstovur",
+      title: "Vit leggja tað til rættis eftir tykkara tørvi",
       subtitle:
-        "Vit seta skeiðið saman av ymsum hættum – soleiðis at tað riggar tykkara veruleika og ger nýtsluna av vitlíki varandi.",
+        "Skeiðið verður sett saman av fleiri ymiskum pørtum – tit velja, hvat passar best til tykkara arbeiðsdag.",
       items: [
         {
           title: "Framløgur",
           description:
-            "Stuttar, málrøtt framløgur til leiðslu og starvsfólk (20/45/60 min) – seta kósina og svara teimum stóru spurningunum."
+            "Greiðar, stuttar framløgur til starvsfólk og leiðslu – seta kósina og svara teimum stóru spurningunum."
         },
         {
           title: "Verkstovur",
           description:
-            "Handalig venjing við egnum tilfari – smáir bólkar, uppgávur og beinleiðis vegleiðing, so vitlíki verður nýtt beinanvegin."
+            "Smáir bólkar, egnar uppgávur og beinleiðis vegleiðing. Fólk læra at brúka vitlíki beinanvegin."
         },
         {
           title: "Netkursir",
           description:
-            "Fleksiblar netkursir við upptøkum og mini-uppgávum – hóskar væl, tá fólk ikki kunnu møta á staðnum."
+            "Upptøkur og mini-uppgávur, sum kunnu takast, tá tíð er. Serliga gott til fólk, ið ikki altíð kunnu møta."
         },
         {
           title: "Sergjørdar vegleiðingar",
           description:
-            "Stuttar 1–3 síðna leiðreglur, fyrimyndir og málsnið til tykkara deildir – lætt at fylgja í gerandisarbeiði."
+            "1–3 síðna leiðreglur og dømi júst til tykkara arbeiði. Klárt at brúka – aftur og aftur."
         },
         {
-          title: "Spurningar & svar (Q&A) um teldupost",
+          title: "Spurningar & svar (Q&A) við teldupost",
           description:
-            "Tykkara toymi kann senda mær spurningar umvegis teldupost; eg svari stutt og neyvt við dømi ella fyrimyndum (vanliga innan ein arbeiðsdag)."
+            "Starvsfólk kunnu spyrja umvegis teldupost. Vit svara stutt og greiðliga – við dømi, um neyðugt."
         }
       ],
       note:
-        "Vit kunnu blanda hætturnar eftir tørvi gjøgnum 12 vikurnar, so úrslitini gerast varandi."
+        "Tit kunnu velja og blanda hesar hættir, so skeiðið riggar best til tykkum og gevur varandi úrslit."
     },
+
     outcomes: [
-      "Gevur starvsfólki sjálvsálit í nýtsluni av vitlíki – við ábyrgd, trygd og dygd í hásæti.",
-      "Styrkir førleikan at taka skjótari og betri avgerðir – tvørtur um allar deildir.",
-      "Fremur eina felags vitlíki-mentan, har amboð gerast partur av arbeiðsvanunum."
+      "Starvsfólk duga at brúka vitlíki – við tryggleika og ábyrgd.",
+      "Vitlíki verður brúkt til tað, sum veruliga loysir seg.",
+      "Felags vitlíki-mentan, har amboðini gerast partur av arbeiðinum.",
+      "Einki tekniskt snikksnakk – bert verulig nytta í gerandisdegnum."
     ]
   },
+
 
   consulting: {
     title: "Ráðgeving & verkætlanir",
