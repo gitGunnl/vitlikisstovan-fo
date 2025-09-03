@@ -91,24 +91,44 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {siteConfig.program.phases.map((phase, index) => (
-              <Card key={index} className="bg-background hover:bg-accent/5 group">
-                <CardContent className="p-8">
-                  <div className="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">{phase.period}</div>
-                  <h3 className="text-2xl font-bold mb-4 group-hover:text-primary transition-colors duration-300">{phase.title}</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">{phase.description}</p>
-                  <ul className="space-y-2 text-sm">
-                    {phase.highlights.map((highlight, idx) => (
-                      <li key={idx} className="flex items-start group/item">
-                        <CheckCircle className="h-4 w-4 text-primary mt-0.5 mr-3 flex-shrink-0 group-hover/item:scale-110 transition-transform duration-200" />
-                        <span className="group-hover/item:text-foreground transition-colors duration-200">{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
+          {/* What We Deliver Section */}
+          <div className="mb-12">
+            <div className="mx-auto max-w-4xl text-center mb-8">
+              <h3 className="text-2xl font-bold tracking-tight mb-4">
+                {siteConfig.program.whatWeDeliver.title}
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              {siteConfig.program.whatWeDeliver.items.map((item, index) => (
+                <Card key={index} className="bg-background hover:bg-accent/5 group">
+                  <CardContent className="p-6">
+                    <h4 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors duration-300">{item.title}</h4>
+                    <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </div>
+
+          {/* How It Works Section */}
+          <div className="mb-12">
+            <div className="mx-auto max-w-4xl text-center mb-8">
+              <h3 className="text-2xl font-bold tracking-tight mb-4">
+                {siteConfig.program.howItWorks.title}
+              </h3>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              {siteConfig.program.howItWorks.steps.map((step, index) => (
+                <Card key={index} className="bg-background hover:bg-accent/5 group">
+                  <CardContent className="p-6">
+                    <h4 className="text-lg font-bold mb-3 group-hover:text-primary transition-colors duration-300">{step.title}</h4>
+                    <p className="text-muted-foreground leading-relaxed">{step.description}</p>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
           </div>
 
           {/* Delivery Section */}
