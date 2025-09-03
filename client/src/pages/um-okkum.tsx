@@ -127,7 +127,7 @@ export default function UmOkkum() {
                   Trupulleikin? <strong>Flestu hava ikki tíð at seta seg inn í tað.</strong>
                 </p>
                 <p className="text-center mb-6">
-                  Tí stovnaði eg <strong>Tøkni Tænastuna</strong> – fyri at byggja brúnna millum <strong>møguleikarnar hjá vitlíkii</strong> og <strong>veruligu tørvin hjá føroyskum fyritøkum</strong>.
+                  Tí stovnaði eg <strong>Vitlíkisstovuna</strong> – fyri at byggja brúnna millum <strong>møguleikarnar hjá vitlíkii</strong> og <strong>veruligu tørvin hjá føroyskum fyritøkum</strong>.
                 </p>
                 <p className="text-center font-semibold text-green-700">
                   Nú hjálpa vit fyritøkum at sjálvvirka uppgávur, effektivisera arbeiðið og brúka vitlíki fult út – so tær kunnu fokusera uppá tað, sum veruliga hevur týdning.
@@ -153,7 +153,7 @@ export default function UmOkkum() {
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-500/20 to-purple-500/10 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-3xl">🎯</span>
                   </div>
-                  <h3 className="text-2xl font-bold mb-4">Mál okkara hjá Tøkni Tænastuni</h3>
+                  <h3 className="text-2xl font-bold mb-4">Endamål</h3>
                 </div>
                 
                 <div className="grid gap-6 md:grid-cols-3">
