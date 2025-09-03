@@ -5,10 +5,9 @@ export const siteConfig = {
 
   nav: {
     links: [
-      { label: "Skrá", href: "#program" },
-      { label: "Ráðgeving", href: "#consulting" },
-      { label: "Hví vit", href: "#why" },
-      { label: "Dømir", href: "#cases" },
+      { label: "Heim", href: "/" },
+      { label: "Um okkum", href: "/um-okkum" },
+      { label: "Okkara Tænastur", href: "/okkara-taenastur" },
       { label: "Samband", href: "#contact" }
     ],
     cta: {
