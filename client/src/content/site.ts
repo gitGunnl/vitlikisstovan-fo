@@ -36,6 +36,42 @@ export const siteConfig = {
     subtitle:
       "Eingin orsøk at byrja við tómum arki. Vit møta upp á tykkara arbeiðspláss og seta alt upp – so tit sleppa undan villum byrjanum og fáið verulig úrslit.",
 
+    phases: [
+      {
+        period: "Vika 1-4",
+        title: "Grundleggjandi vitlíki",
+        description: "Fyrstu vikurnar leggja vit grundin. Tit læra tey grundleggjandi hugtak og fáa atgongd til rættu amboðini.",
+        highlights: [
+          "Innsetning og uppsetning av vitlíki amboðum",
+          "Grundleggjandi prompt-skriving",
+          "Tryggleiksleiðreglur og etiskir viðurskifti",
+          "Fyrstu praktiska uppgávur"
+        ]
+      },
+      {
+        period: "Vika 5-8",
+        title: "Miðvíkja fyribrigdi",
+        description: "Nú byrja vit at brúka vitlíki til verulig arbeiðsuppgávur og læra meira avansaðar teknikkir.",
+        highlights: [
+          "Avansað prompt-engineering",
+          "Automation og workflow integration",
+          "Týðing og málviðgerð",
+          "Datuskipan og analysis"
+        ]
+      },
+      {
+        period: "Vika 9-12",
+        title: "Meistarastig",
+        description: "Seinastu vikurnar fókusera vit á at byggja egnar loysnir og integrera vitlíki í dagliga arbeiðsgongd.",
+        highlights: [
+          "Egnar AI loysnir og verkamál",
+          "Team collaboration við AI",
+          "Performance optimization",
+          "Framtíðar planning og skalering"
+        ]
+      }
+    ],
+
     helpsWith: {
       title: "Vit hjálpa tykkum við at:",
       items: [
