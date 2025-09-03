@@ -80,6 +80,38 @@ export const siteConfig = {
       ]
     },
 
+    delivery: {
+      title: "Hvat tú fært",
+      subtitle: "Alt, sum tú hevur tørvur til at byrja og halda fram",
+      items: [
+        {
+          title: "Leiðreglur",
+          description: "Greið leiðreglur fyri vitlíkisbrúk á tykkara skrivstovu"
+        },
+        {
+          title: "Amboð uppseting",
+          description: "Væl uppsett amboð, klárt at brúka"
+        },
+        {
+          title: "Verkstovur",
+          description: "Praktisk læra í tykkara egnu umhvørvi"
+        },
+        {
+          title: "Stuðul",
+          description: "Eftirfylging og hjálp fyrstu vikurnar"
+        },
+        {
+          title: "Tilfar",
+          description: "Skabelónir og leiðbeiningur tit kunnu brúka"
+        },
+        {
+          title: "Uppfylging",
+          description: "Vit fylgja upp eftir 2-3 vikur"
+        }
+      ],
+      note: "Alt er lagað til tykkara serliga tørv og arbeiðshátt"
+    },
+
     outcomes: [
       "Starvsfólk duga at brúka vitlíki tryggliga og við viti.",
       "Leiðreglur, sum øll skilja og halda seg til.",
