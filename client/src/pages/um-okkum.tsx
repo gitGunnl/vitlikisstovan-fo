@@ -230,7 +230,7 @@ export default function UmOkkum() {
 
                 {/* What Makes Us Different - Sidebar */}
                 <Card className="border-2 border-black">
-                  <CardHeader className="bg-black text-white">
+                  <CardHeader className="bg-black text-white rounded-t-lg">
                     <CardTitle className="text-sm uppercase tracking-widest">Hvat ger okkum øðrvísi?</CardTitle>
                   </CardHeader>
                   <CardContent className="pt-6">
