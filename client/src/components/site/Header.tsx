@@ -43,10 +43,19 @@ export default function Header() {
 
         {/* Desktop CTA Button */}
         <div className="hidden md:block">
-          <Button asChild data-testid="cta-header">
-            <a href={siteConfig.nav.cta.href}>
-              {siteConfig.nav.cta.text}
-            </a>
+          <Button 
+            onClick={() => {
+              if (window.location.pathname === '/') {
+                // Already on home page, just scroll to contact
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+              } else {
+                // Navigate to home page with contact anchor
+                window.location.href = '/#contact';
+              }
+            }}
+            data-testid="cta-header"
+          >
+            {siteConfig.nav.cta.text}
           </Button>
         </div>
 
@@ -82,10 +91,21 @@ export default function Header() {
               </a>
             ))}
             <div className="pt-2">
-              <Button asChild className="w-full" data-testid="cta-mobile">
-                <a href={siteConfig.nav.cta.href} onClick={closeMobileMenu}>
-                  {siteConfig.nav.cta.text}
-                </a>
+              <Button 
+                className="w-full" 
+                data-testid="cta-mobile"
+                onClick={() => {
+                  closeMobileMenu();
+                  if (window.location.pathname === '/') {
+                    // Already on home page, just scroll to contact
+                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+                  } else {
+                    // Navigate to home page with contact anchor
+                    window.location.href = '/#contact';
+                  }
+                }}
+              >
+                {siteConfig.nav.cta.text}
               </Button>
             </div>
           </div>
