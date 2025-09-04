@@ -420,42 +420,7 @@ export default function Home() {
           </div>
         </Section>
 
-        {/* Resources */}
-        <Section id="resources" className="py-24 bg-muted">
-          <div className="mx-auto max-w-4xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-              {siteConfig.resources.title}
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              {siteConfig.resources.subtitle}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {siteConfig.resources.items.map((resource, index) => (
-              <Card key={index} className="bg-background text-center">
-                <CardContent className="p-8">
-                  <div className={`w-16 h-16 ${resource.iconBg} rounded-lg flex items-center justify-center mx-auto mb-6`}>
-                    {resource.icon === 'FileText' && <FileText className={`w-8 h-8 ${resource.iconColor}`} />}
-                    {resource.icon === 'Video' && <Video className={`w-8 h-8 ${resource.iconColor}`} />}
-                    {resource.icon === 'MessageCircle' && <MessageCircle className={`w-8 h-8 ${resource.iconColor}`} />}
-                  </div>
-                  <h3 className="text-xl font-bold mb-4">{resource.title}</h3>
-                  <p className="text-muted-foreground mb-6">{resource.description}</p>
-                  <Button 
-                    className={resource.buttonStyle}
-                    asChild
-                    data-testid={`button-resource-${index}`}
-                  >
-                    <a href={resource.href}>
-                      {resource.buttonText}
-                    </a>
-                  </Button>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </Section>
+        
 
         {/* Contact */}
         <div id="contact">
