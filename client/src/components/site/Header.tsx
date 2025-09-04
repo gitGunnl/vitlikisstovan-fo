@@ -32,7 +32,7 @@ export default function Header() {
           {siteConfig.nav.links.map((link) => (
             <a
               key={link.href}
-              href={link.href}
+              href={link.href.startsWith('#') ? `/${link.href}` : link.href}
               className="text-sm font-medium text-gray-700 hover:text-primary transition-all duration-200 hover:scale-105 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-primary after:transition-all after:duration-300 hover:after:w-full"
               data-testid={`nav-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
             >
@@ -73,7 +73,7 @@ export default function Header() {
             {siteConfig.nav.links.map((link) => (
               <a
                 key={link.href}
-                href={link.href}
+                href={link.href.startsWith('#') ? `/${link.href}` : link.href}
                 onClick={closeMobileMenu}
                 className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary hover:bg-accent/50 rounded-md transition-all duration-200"
                 data-testid={`nav-mobile-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
