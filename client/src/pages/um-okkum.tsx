@@ -39,10 +39,6 @@ export default function UmOkkum() {
         <div className="bg-white border-b-4 border-black">
           <Section className="py-16">
             <div className="mx-auto max-w-7xl">
-              <div className="text-center mb-4">
-                <p className="text-sm uppercase tracking-widest text-gray-600 mb-2">KAPITTUL 1</p>
-                <div className="w-16 h-1 bg-black mx-auto mb-8"></div>
-              </div>
               <h1 className="text-5xl md:text-7xl font-serif text-center mb-8">
                 Um okkum
               </h1>
