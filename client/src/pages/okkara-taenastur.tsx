@@ -267,16 +267,15 @@ export default function Taenastur() {
         {/* AI CREATIVE SERVICES */}
         <Section id="ai-art" className="py-16 sm:py-20">
           <div className="mx-auto max-w-4xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 bg-clip-text text-transparent">
-                AI Creative Studio
-              </h2>
-              <p className="text-lg text-muted-foreground">
-                Professional AI-generated content and creative workshops
-              </p>
-            </div>
-
             <div className="rounded-3xl border bg-gradient-to-br from-purple-500/5 via-pink-500/5 to-orange-500/5 border-purple-200/30 shadow-sm p-8 sm:p-12">
+              <div className="text-center mb-12">
+                <h2 className="text-3xl sm:text-4xl font-bold mb-4 bg-gradient-to-r from-purple-600 via-pink-500 to-orange-400 bg-clip-text text-transparent">
+                  AI Creative Studio
+                </h2>
+                <p className="text-lg text-muted-foreground">
+                  Professional AI-generated content and creative workshops
+                </p>
+              </div>
               <div className="grid md:grid-cols-2 gap-12">
                 {/* We Create for You */}
                 <div className="space-y-6">
