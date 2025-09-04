@@ -42,6 +42,18 @@ export default function Home() {
       meta.content = seoConfig.description;
       document.head.appendChild(meta);
     }
+
+    // Handle hash navigation (e.g., #contact)
+    const hash = window.location.hash;
+    if (hash) {
+      // Wait a bit for the page to fully render
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
   }, []);
 
   if (!isMounted) {
