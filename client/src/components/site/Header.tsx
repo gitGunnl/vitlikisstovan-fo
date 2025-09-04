@@ -2,12 +2,11 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/content/site";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation, useRoute } from "wouter";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const navigate = useNavigate();
-  const location = useLocation();
+  const [location, navigate] = useLocation();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -18,7 +17,7 @@ export default function Header() {
   };
 
   const handleContactClick = () => {
-    if (location.pathname === '/') {
+    if (location === '/') {
       // Already on home page, scroll to contact
       const contactSection = document.getElementById('contact');
       if (contactSection) {
