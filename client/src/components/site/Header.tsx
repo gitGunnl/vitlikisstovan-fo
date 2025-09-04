@@ -41,14 +41,7 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Desktop CTA Button */}
-        <div className="hidden md:block">
-          <Button asChild data-testid="cta-header">
-            <a href={siteConfig.nav.cta.href}>
-              {siteConfig.nav.cta.text}
-            </a>
-          </Button>
-        </div>
+        
 
         {/* Mobile Menu Button */}
         <Button
@@ -81,13 +74,7 @@ export default function Header() {
                 {link.label}
               </a>
             ))}
-            <div className="pt-2">
-              <Button asChild className="w-full" data-testid="cta-mobile">
-                <a href={siteConfig.nav.cta.href} onClick={closeMobileMenu}>
-                  {siteConfig.nav.cta.text}
-                </a>
-              </Button>
-            </div>
+            
           </div>
         </nav>
       </div>
