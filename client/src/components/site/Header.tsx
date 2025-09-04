@@ -2,11 +2,9 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/content/site";
-import { useLocation, useRoute } from "wouter";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [location, navigate] = useLocation();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -14,25 +12,6 @@ export default function Header() {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
-  };
-
-  const handleContactClick = () => {
-    if (location === '/') {
-      // Already on home page, scroll to contact
-      const contactSection = document.getElementById('contact');
-      if (contactSection) {
-        contactSection.scrollIntoView({ behavior: 'smooth' });
-      }
-    } else {
-      // Navigate to home page, then scroll to contact
-      navigate('/');
-      setTimeout(() => {
-        const contactSection = document.getElementById('contact');
-        if (contactSection) {
-          contactSection.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    }
   };
 
   return (
@@ -64,11 +43,10 @@ export default function Header() {
 
         {/* Desktop CTA Button */}
         <div className="hidden md:block">
-          <Button 
-            onClick={handleContactClick}
-            data-testid="cta-header"
-          >
-            {siteConfig.nav.cta.text}
+          <Button asChild data-testid="cta-header">
+            <a href={siteConfig.nav.cta.href}>
+              {siteConfig.nav.cta.text}
+            </a>
           </Button>
         </div>
 
@@ -104,15 +82,10 @@ export default function Header() {
               </a>
             ))}
             <div className="pt-2">
-              <Button 
-                className="w-full" 
-                data-testid="cta-mobile"
-                onClick={() => {
-                  closeMobileMenu();
-                  handleContactClick();
-                }}
-              >
-                {siteConfig.nav.cta.text}
+              <Button asChild className="w-full" data-testid="cta-mobile">
+                <a href={siteConfig.nav.cta.href} onClick={closeMobileMenu}>
+                  {siteConfig.nav.cta.text}
+                </a>
               </Button>
             </div>
           </div>
