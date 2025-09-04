@@ -55,22 +55,7 @@ export default function Taenastur() {
               Við einari skipaðari tilgongd tryggja vit, at tykkara toymi kann
               nýta vitlíki á ein munagóðan hátt í gerandisdegnum.
             </p>
-            <div className="mt-8 flex items-center justify-center gap-3">
-              <a
-                href="#skeid"
-                className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 text-base font-medium bg-primary text-primary-foreground hover:opacity-90 transition"
-              >
-                <GraduationCap className="w-5 h-5" />
-                Skeið
-              </a>
-              <a
-                href="#taenastur"
-                className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 text-base font-medium bg-secondary text-secondary-foreground hover:opacity-90 transition"
-              >
-                <Settings className="w-5 h-5" />
-                Tænastur
-              </a>
-            </div>
+            
           </div>
         </Section>
 
@@ -106,16 +91,7 @@ export default function Taenastur() {
 
                   <p className="font-semibold mb-6">Prísur: 1.200 DKK</p>
 
-                  <div className="flex flex-wrap items-center gap-3">
-                    <a
-                      href="#contact"
-                      className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 font-medium bg-primary text-primary-foreground hover:opacity-90 transition"
-                      aria-label="Byrja í dag"
-                    >
-                      [Byrja í dag]
-                      <ArrowRight className="h-5 w-5" />
-                    </a>
-                  </div>
+                  
                 </div>
               </div>
             </div>
@@ -161,16 +137,7 @@ export default function Taenastur() {
 
                     <p className="font-semibold mb-4">Prísur: 1.200 DKK</p>
 
-                    <div className="flex flex-wrap items-center gap-3">
-                      <a
-                        href="#contact"
-                        className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 font-medium bg-chart-1 text-white hover:opacity-90 transition"
-                        aria-label="Les meira"
-                      >
-                        [Les meira]
-                        <ArrowRight className="h-5 w-5" />
-                      </a>
-                    </div>
+                    
 
                     <p className="italic text-muted-foreground mt-4">
                       Hendan tænastan hjálpir tær at finna beinraktar uppgá.
@@ -223,16 +190,7 @@ export default function Taenastur() {
 
                     <p className="font-semibold mb-4">Prísur: 18.000 DKK</p>
 
-                    <div className="flex flex-wrap items-center gap-3">
-                      <a
-                        href="#contact"
-                        className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 font-medium bg-chart-2 text-white hover:opacity-90 transition"
-                        aria-label="Bílegg ein fyrilestur nú"
-                      >
-                        [Bílegg ein fyrilestur nú]
-                        <ArrowRight className="h-5 w-5" />
-                      </a>
-                    </div>
+                    
 
                     <p className="italic text-muted-foreground mt-4">
                       Perfekt til fyritøkur, ið vilja vera á odda við vitlíkii –
@@ -261,16 +219,7 @@ export default function Taenastur() {
                       burturúr hesa nýggju tøkni.
                     </p>
 
-                    <div className="flex flex-wrap items-center gap-3">
-                      <a
-                        href="#contact"
-                        className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 font-medium bg-foreground text-background hover:opacity-90 transition"
-                        aria-label="Fá hjálp"
-                      >
-                        [Fá hjálp]
-                        <ArrowRight className="h-5 w-5" />
-                      </a>
-                    </div>
+                    
 
                     <p className="italic text-muted-foreground mt-4">
                       Okkara serfrøði ger tað nógv smidligari at fáa tykkara
@@ -300,16 +249,7 @@ export default function Taenastur() {
                       sniðgjørdar loysnir, ið hóska til tín tørv.
                     </p>
 
-                    <div className="flex flex-wrap items-center gap-3">
-                      <a
-                        href="#contact"
-                        className="inline-flex items-center gap-2 rounded-2xl px-5 py-3 font-medium bg-primary text-primary-foreground hover:opacity-90 transition"
-                        aria-label="Fortel okkum títt hugskot"
-                      >
-                        [Fortel okkum títt hugskot]
-                        <ArrowRight className="h-5 w-5" />
-                      </a>
-                    </div>
+                    
 
                     <p className="italic text-muted-foreground mt-4">
                       Hevur tú eina ítøkiliga mannagongd, tú vilt automatisera
