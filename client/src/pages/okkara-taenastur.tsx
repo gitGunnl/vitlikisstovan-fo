@@ -264,7 +264,7 @@ export default function Taenastur() {
           </div>
         </Section>
 
-        {/* AI ART SERVICES */}
+        {/* AI CREATIVE SERVICES */}
         <Section id="ai-art" className="py-16 sm:py-20">
           <div className="mx-auto max-w-4xl">
             <div className="text-center mb-12">
@@ -272,119 +272,74 @@ export default function Taenastur() {
                 AI Creative Studio
               </h2>
               <p className="text-lg text-muted-foreground">
-                Unleash your imagination with cutting-edge AI art generation
+                Professional AI-generated content and creative workshops
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {/* AI Video Generation */}
-              <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-purple-500/10 via-pink-500/10 to-orange-500/10 border border-purple-200/30 hover:border-purple-300/50 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/20">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-600/5 via-transparent to-pink-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative p-8">
+            <div className="rounded-3xl border bg-gradient-to-br from-purple-500/5 via-pink-500/5 to-orange-500/5 border-purple-200/30 shadow-sm p-8 sm:p-12">
+              <div className="grid md:grid-cols-2 gap-12">
+                {/* We Create for You */}
+                <div className="space-y-6">
                   <div className="flex items-center gap-4 mb-6">
-                    <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shadow-lg">
-                      <svg className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <h3 className="text-2xl font-bold text-foreground">
-                      AI Video Creation
-                    </h3>
-                  </div>
-                  
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    Transform your ideas into stunning videos with state-of-the-art AI. From promotional content to social media clips, we create eye-catching videos that captivate your audience and tell your story in ways never before possible.
-                  </p>
-                  
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    <span className="px-3 py-1 text-sm rounded-full bg-purple-100 text-purple-700 border border-purple-200">Promotional Videos</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-pink-100 text-pink-700 border border-pink-200">Social Content</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-orange-100 text-orange-700 border border-orange-200">Animations</span>
-                  </div>
-                  
-                  <p className="text-sm italic text-muted-foreground">
-                    Perfect for marketing campaigns, social media, and brand storytelling
-                  </p>
-                </div>
-              </div>
-
-              {/* AI Image Generation */}
-              <div className="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-500/10 via-cyan-500/10 to-teal-500/10 border border-blue-200/30 hover:border-blue-300/50 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/20">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/5 via-transparent to-cyan-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative p-8">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg">
+                    <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shadow-lg">
                       <svg className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                       </svg>
                     </div>
                     <h3 className="text-2xl font-bold text-foreground">
-                      AI Image Design
+                      We Create for You
                     </h3>
                   </div>
                   
-                  <p className="text-muted-foreground leading-relaxed mb-6">
-                    Generate breathtaking visuals that perfectly match your brand and vision. From product photography to artistic illustrations, our AI creates unique, high-quality images that make your content stand out from the crowd.
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    Need stunning visuals but don't have the time? We'll create professional AI-generated content tailored to your brand - from eye-catching videos and images to complete visual campaigns.
                   </p>
                   
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    <span className="px-3 py-1 text-sm rounded-full bg-blue-100 text-blue-700 border border-blue-200">Product Photos</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-cyan-100 text-cyan-700 border border-cyan-200">Illustrations</span>
-                    <span className="px-3 py-1 text-sm rounded-full bg-teal-100 text-teal-700 border border-teal-200">Brand Assets</span>
+                  <div className="flex flex-wrap gap-3">
+                    <span className="px-4 py-2 text-sm rounded-full bg-purple-100 text-purple-700 border border-purple-200 font-medium">AI Videos</span>
+                    <span className="px-4 py-2 text-sm rounded-full bg-pink-100 text-pink-700 border border-pink-200 font-medium">Images & Graphics</span>
+                    <span className="px-4 py-2 text-sm rounded-full bg-orange-100 text-orange-700 border border-orange-200 font-medium">Brand Assets</span>
+                  </div>
+                </div>
+
+                {/* We Teach You */}
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg">
+                      <GraduationCap className="h-8 w-8 text-white" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-foreground">
+                      We Teach You
+                    </h3>
                   </div>
                   
-                  <p className="text-sm italic text-muted-foreground">
-                    Ideal for websites, marketing materials, and creative projects
+                  <p className="text-muted-foreground leading-relaxed text-lg">
+                    Want to master AI creative tools yourself? Join our hands-on workshops where we teach you to use cutting-edge AI platforms for generating professional videos, images, and creative content.
                   </p>
+                  
+                  <div className="flex flex-wrap gap-3">
+                    <span className="px-4 py-2 text-sm rounded-full bg-blue-100 text-blue-700 border border-blue-200 font-medium">Workshops</span>
+                    <span className="px-4 py-2 text-sm rounded-full bg-cyan-100 text-cyan-700 border border-cyan-200 font-medium">Hands-on Training</span>
+                    <span className="px-4 py-2 text-sm rounded-full bg-teal-100 text-teal-700 border border-teal-200 font-medium">Tool Mastery</span>
+                  </div>
                 </div>
               </div>
 
-              {/* Creative Consultation */}
-              <div className="md:col-span-2 group relative overflow-hidden rounded-3xl bg-gradient-to-br from-amber-500/10 via-yellow-500/10 to-orange-500/10 border border-amber-200/30 hover:border-amber-300/50 transition-all duration-300 hover:shadow-lg hover:shadow-amber-500/20">
-                <div className="absolute inset-0 bg-gradient-to-br from-amber-600/5 via-transparent to-orange-600/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative p-8">
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center shadow-lg">
-                      <svg className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <div className="mt-12 pt-8 border-t border-purple-200/30">
+                <div className="bg-gradient-to-r from-purple-50 via-pink-50 to-orange-50 border border-purple-200/50 rounded-2xl p-8">
+                  <div className="flex items-start gap-4">
+                    <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-purple-500 to-orange-500 flex items-center justify-center flex-shrink-0">
+                      <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
                       </svg>
                     </div>
-                    <h3 className="text-2xl font-bold text-foreground">
-                      Creative AI Strategy
-                    </h3>
-                  </div>
-                  
-                  <div className="grid md:grid-cols-2 gap-8">
                     <div>
-                      <p className="text-muted-foreground leading-relaxed mb-4">
-                        Not sure how AI can enhance your creative process? We'll work with you to identify opportunities where AI-generated content can elevate your brand, streamline your workflow, and create visual impact that resonates with your audience.
+                      <p className="text-lg font-semibold text-purple-800 mb-2">
+                        ✨ Ready to unleash AI creativity?
                       </p>
-                      
-                      <ul className="space-y-2 text-sm text-muted-foreground">
-                        <li className="flex items-center gap-2">
-                          <div className="h-1.5 w-1.5 rounded-full bg-amber-400"></div>
-                          Brand visual identity development
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <div className="h-1.5 w-1.5 rounded-full bg-yellow-400"></div>
-                          Content creation workflow optimization
-                        </li>
-                        <li className="flex items-center gap-2">
-                          <div className="h-1.5 w-1.5 rounded-full bg-orange-400"></div>
-                          Custom AI art training for your brand
-                        </li>
-                      </ul>
-                    </div>
-                    
-                    <div className="flex flex-col justify-center">
-                      <div className="bg-gradient-to-r from-amber-50 to-orange-50 border border-amber-200 rounded-2xl p-6">
-                        <p className="text-lg font-semibold text-amber-800 mb-2">
-                          ✨ Ready to create something amazing?
-                        </p>
-                        <p className="text-amber-700 text-sm">
-                          Let's explore how AI can bring your creative vision to life with stunning visuals that capture attention and drive engagement.
-                        </p>
-                      </div>
+                      <p className="text-purple-700">
+                        Whether you need content created or want to learn the tools yourself, we'll help you harness the power of AI to create stunning visuals that captivate your audience.
+                      </p>
                     </div>
                   </div>
                 </div>
