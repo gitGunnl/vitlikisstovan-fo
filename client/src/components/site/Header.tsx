@@ -2,9 +2,12 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/content/site";
+import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -12,6 +15,25 @@ export default function Header() {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+  };
+
+  const handleContactClick = () => {
+    if (location.pathname === '/') {
+      // Already on home page, scroll to contact
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    } else {
+      // Navigate to home page, then scroll to contact
+      navigate('/');
+      setTimeout(() => {
+        const contactSection = document.getElementById('contact');
+        if (contactSection) {
+          contactSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    }
   };
 
   return (
@@ -44,15 +66,7 @@ export default function Header() {
         {/* Desktop CTA Button */}
         <div className="hidden md:block">
           <Button 
-            onClick={() => {
-              if (window.location.pathname === '/') {
-                // Already on home page, just scroll to contact
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              } else {
-                // Navigate to home page with contact anchor
-                window.location.href = '/#contact';
-              }
-            }}
+            onClick={handleContactClick}
             data-testid="cta-header"
           >
             {siteConfig.nav.cta.text}
@@ -96,13 +110,7 @@ export default function Header() {
                 data-testid="cta-mobile"
                 onClick={() => {
                   closeMobileMenu();
-                  if (window.location.pathname === '/') {
-                    // Already on home page, just scroll to contact
-                    document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-                  } else {
-                    // Navigate to home page with contact anchor
-                    window.location.href = '/#contact';
-                  }
+                  handleContactClick();
                 }}
               >
                 {siteConfig.nav.cta.text}
