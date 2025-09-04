@@ -24,15 +24,7 @@ export default function CTAButtons({ primary, secondary, className }: CTAButtons
           </span>
         </a>
       </Button>
-      {secondary && (
-        <Button variant="outline" asChild size="lg" className="group">
-          <a href={secondary.href} data-testid="button-secondary-cta">
-            <span className="relative">
-              {secondary.text}
-            </span>
-          </a>
-        </Button>
-      )}
+      
     </div>
   );
 }
