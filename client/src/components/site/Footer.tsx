@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="flex items-center space-x-3 mb-4 md:mb-0 group cursor-pointer">
             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-primary/80 shadow-md group-hover:shadow-lg transition-all duration-300 group-hover:scale-105 overflow-hidden">
               <img 
-                src="/logo.png" 
+                src="/logo-header.png" 
                 alt={`${siteConfig.siteName} logo`}
                 className="w-8 h-8 object-contain"
               />
