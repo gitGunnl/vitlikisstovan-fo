@@ -146,6 +146,7 @@
 @layer base {
   * {
     @apply border-border;
+    user-select: auto;
   }
 
   body {
