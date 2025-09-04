@@ -148,47 +148,49 @@ export default function UmOkkum() {
                     <div className="w-24 h-0.5 bg-gray-300"></div>
                   </header>
                   
-                  <div className="prose max-w-none">
-                    <p className="text-xl font-serif italic mb-8">
+                  <div className="space-y-8">
+                    <p className="text-xl font-serif italic text-gray-800 leading-relaxed">
                       vitlíki er ikki bara fyri <strong>Silicon Valley</strong>. Tað er fyri tína fyritøku. Títt toymi. Tína gerandisdag.
                     </p>
                     
-                    <h3 className="text-2xl font-serif mb-6">Endamál</h3>
-                    
-                    <div className="grid gap-6">
-                      <div className="flex gap-4">
-                        <div className="flex-shrink-0 w-12 h-12 bg-gray-100 rounded flex items-center justify-center">
-                          <span className="text-xl">✅</span>
-                        </div>
-                        <div>
-                          <h4 className="font-bold mb-1">Lætt og atkomuligt</h4>
-                          <p className="text-gray-700">Gera vitlíki lætt og atkomuligt fyri øll.</p>
-                        </div>
-                      </div>
+                    <div className="border-t pt-8">
+                      <h3 className="text-2xl font-serif mb-8 text-gray-900">Endamál</h3>
                       
-                      <div className="flex gap-4">
-                        <div className="flex-shrink-0 w-12 h-12 bg-gray-100 rounded flex items-center justify-center">
-                          <span className="text-xl">💰</span>
+                      <div className="space-y-8">
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center">
+                            <span className="text-2xl">✅</span>
+                          </div>
+                          <div className="flex-1">
+                            <h4 className="text-lg font-bold mb-2 text-gray-900">Lætt og atkomuligt</h4>
+                            <p className="text-gray-700 leading-relaxed">Gera vitlíki lætt og atkomuligt fyri øll.</p>
+                          </div>
                         </div>
-                        <div>
-                          <h4 className="font-bold mb-1">Spara tilfeingi</h4>
-                          <p className="text-gray-700">Hjálpa fyritøkum at spara tíð og tilfeingi – uttan at seta fleiri fólk í starv.</p>
+                        
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-14 h-14 bg-yellow-100 rounded-lg flex items-center justify-center">
+                            <span className="text-2xl">💰</span>
+                          </div>
+                          <div className="flex-1">
+                            <h4 className="text-lg font-bold mb-2 text-gray-900">Spara tilfeingi</h4>
+                            <p className="text-gray-700 leading-relaxed">Hjálpa fyritøkum at spara tíð og tilfeingi – uttan at seta fleiri fólk í starv.</p>
+                          </div>
                         </div>
-                      </div>
-                      
-                      <div className="flex gap-4">
-                        <div className="flex-shrink-0 w-12 h-12 bg-gray-100 rounded flex items-center justify-center">
-                          <span className="text-xl">⚡</span>
-                        </div>
-                        <div>
-                          <h4 className="font-bold mb-1">Verulig úrslit</h4>
-                          <p className="text-gray-700">Skapa vitlíki-loysnir, sum veruliga rigga.</p>
+                        
+                        <div className="flex items-start gap-4">
+                          <div className="flex-shrink-0 w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center">
+                            <span className="text-2xl">⚡</span>
+                          </div>
+                          <div className="flex-1">
+                            <h4 className="text-lg font-bold mb-2 text-gray-900">Verulig úrslit</h4>
+                            <p className="text-gray-700 leading-relaxed">Skapa vitlíki-loysnir, sum veruliga rigga.</p>
+                          </div>
                         </div>
                       </div>
                     </div>
                     
-                    <div className="bg-black text-white p-6 mt-8">
-                      <p className="text-lg font-serif text-center">
+                    <div className="bg-black text-white p-8 rounded-lg">
+                      <p className="text-lg font-serif text-center leading-relaxed">
                         "Vit selja ikki bara 'vitlíki-ráðgeving'. Vit læra, innføra og byggja loysnir, sum geva verulig úrslit."
                       </p>
                     </div>
