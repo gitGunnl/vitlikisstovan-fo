@@ -300,7 +300,7 @@ export const siteConfig = {
     sectionTitle: "Allir spurningar eru vælkomnir",
     description:
       "Antin tú hevur áhuga í 12-vikuskeiðnum, ráðgeving ella eini kreativari verkætlan, so svara vit innan ein arbeiðsdag.",
-    email: "infor@ritvit.fo",
+    email: "info@ritvit.fo",
     phone: "+298 919444",
     bookingUrl: ""
   },
