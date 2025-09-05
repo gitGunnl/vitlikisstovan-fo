@@ -394,26 +394,35 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="space-y-12">
             {siteConfig.cases.highlights.map((highlight, index) => (
-              <Card key={index} className="bg-card border">
-                <CardContent className="p-8">
-                  <img 
-                    src={highlight.image} 
-                    alt={highlight.imageAlt}
-                    className="w-full h-48 object-cover rounded-lg mb-6" 
-                  />
-                  <h3 className="text-xl font-bold mb-4">{highlight.title}</h3>
-                  <p className="text-muted-foreground mb-6">{highlight.description}</p>
-                  <Button 
-                    variant={highlight.buttonVariant as "default" | "outline"}
-                    asChild
-                    data-testid={`button-case-${index}`}
-                  >
-                    <a href={highlight.buttonHref}>
-                      {highlight.buttonText}
-                    </a>
-                  </Button>
+              <Card key={index} className="bg-card border overflow-hidden">
+                <CardContent className="p-0">
+                  <div className={`grid grid-cols-1 lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
+                    <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
+                      <img 
+                        src={highlight.image} 
+                        alt={highlight.imageAlt}
+                        className="w-full h-64 lg:h-full object-cover" 
+                      />
+                    </div>
+                    <div className={`p-8 lg:p-12 flex flex-col justify-center ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
+                      <h3 className="text-2xl lg:text-3xl font-bold mb-6">{highlight.title}</h3>
+                      <p className="text-muted-foreground mb-8 text-lg leading-relaxed">{highlight.description}</p>
+                      <div>
+                        <Button 
+                          variant={highlight.buttonVariant as "default" | "outline"}
+                          size="lg"
+                          asChild
+                          data-testid={`button-case-${index}`}
+                        >
+                          <a href={highlight.buttonHref}>
+                            {highlight.buttonText}
+                          </a>
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
                 </CardContent>
               </Card>
             ))}
