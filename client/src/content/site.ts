@@ -19,7 +19,7 @@ export const siteConfig = {
   hero: {
     title: "Eisini tú kann meistra Vitlíki!",
     subtitle:
-      "Vit vita akkurát hvussu tit kunna koma frá nýbyrjandi innan vitlíki til dugnaligir vitlíkis brúkarir. Vit taka okkum av øllum, tit skula bara lurta og læra.",
+      "Vit vita akkurát hvussu tit kunna koma frá nýbyrjandi innan vitlíki til dugnaligir vitlíkis brúkarir. Vit taka okkum av øllum, tú skul bara lurta og læra.",
     primaryCTA: {
       text: "Bílegg vitlíkis útbúgving til tykkara skrivstovu.",
       href: "#contact"
