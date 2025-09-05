@@ -7,8 +7,8 @@ export const siteConfig = {
     links: [
       { label: "Heim", href: "/" },
       { label: "Um okkum", href: "/um-okkum" },
-      { label: "Okkara Tænastur", href: "/okkara-taenastur" },
-      { label: "Samband", href: "#contact" }
+      { label: "Okkara tænastur", href: "/okkara-taenastur" },
+      { label: "Samband", href: "/contact" },
     ],
     cta: {
       text: "Bílegg eitt prát",
@@ -93,7 +93,7 @@ export const siteConfig = {
         },
         {
           title: "Verkstovur og netskeið",
-          description: "Vit nýta bæði verkstovur og sergjørd netskeið, so tit kunna læra skjótt og smidligani."
+          description: "Vit nýta bæði verkstovur og sergjørd netskeið, so tit kunna læra skjót og smidligani."
         },
         {
           title: "Stuðul og spurningar",

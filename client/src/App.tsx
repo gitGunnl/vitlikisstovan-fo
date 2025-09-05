@@ -8,6 +8,7 @@ import Home from "@/pages/home";
 import CourseDetails from "@/pages/course-details";
 import UmOkkum from "@/pages/um-okkum";
 import OkkaraTaenastur from "@/pages/okkara-taenastur";
+import Contact from "@/pages/contact";
 
 function Router() {
   return (
@@ -16,6 +17,7 @@ function Router() {
       <Route path="/course-details" component={CourseDetails} />
       <Route path="/um-okkum" component={UmOkkum} />
       <Route path="/okkara-taenastur" component={OkkaraTaenastur} />
+      <Route path="/contact" component={Contact} />
       <Route component={NotFound} />
     </Switch>
   );
