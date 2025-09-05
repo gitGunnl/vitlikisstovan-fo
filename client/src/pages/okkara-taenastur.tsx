@@ -213,7 +213,7 @@ export default function Taenastur() {
                     <p className="text-muted-foreground mb-4">(Handalig hjálp)</p>
                     <p className="leading-relaxed mb-4">
                       Tá ið títt toymi hevur fingið grundvitan, veita vit
-                      hándsama hjálp til at innarbeiða KjattGPT ella Copilot í
+                      hjálp til at innarbeiða KjattGPT ella Copilot í
                       tykkara arbeiðsgongd. Vit arbeiða beinleiðis saman við
                       tykkara starvsfólki fyri at tryggja at øll fáa sum mest
                       burturúr hesa nýggju tøkni.
