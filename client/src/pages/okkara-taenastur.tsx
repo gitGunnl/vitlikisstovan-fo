@@ -51,7 +51,7 @@ export default function Taenastur() {
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
               Vit hjálpa føroyskum fyritøkum og stovnum at taka
               vitlíki-tøkni til sín, við praktiskum amboðum sum ChatGPT og
-              CoPilot, mynda og video generering, menning av vitlíki amboðum.
+              CoPilot, mynda og video generering, meaning av vitlíki amboðum.
               Við einari skipaðari tilgongd tryggja vit, at tykkara toymi kann
               nýta vitlíki á ein munagóðan hátt í gerandisdegnum.
             </p>
