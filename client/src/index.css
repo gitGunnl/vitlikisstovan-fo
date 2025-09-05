@@ -188,7 +188,7 @@
   }
 
   .case-card-3 {
-    @apply border-2 border-dashed hover:border-primary/50 transition-all duration-300;
+    @apply border-2 border-dashed hover:border-primary hover:border-opacity-50 transition-all duration-300;
   }
 
   @keyframes fadeIn {
