@@ -169,6 +169,51 @@
   }
 }
 
+@layer components {
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  /* Independent card styling classes */
+  .case-card-1 {
+    @apply hover:shadow-lg transition-all duration-300;
+  }
+
+  .case-card-2 {
+    @apply hover:shadow-xl hover:scale-[1.02] transition-all duration-300;
+  }
+
+  .case-card-3 {
+    @apply border-2 border-dashed hover:border-primary/50 transition-all duration-300;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
 @layer utilities {
   .mobile-menu-hidden {
     display: none;

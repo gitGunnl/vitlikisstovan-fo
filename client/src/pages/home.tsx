@@ -7,6 +7,7 @@ import CTAButtons from "@/components/site/CTAButtons";
 import ContactSection from "@/components/site/ContactForm";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { siteConfig } from "@/content/site";
 import { seoConfig } from "@/content/seo";
 import { 
@@ -27,6 +28,7 @@ import {
 
 export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
+  const [openDialog, setOpenDialog] = useState<string | null>(null);
 
   useEffect(() => {
     setIsMounted(true);
@@ -395,38 +397,164 @@ export default function Home() {
           </div>
 
           <div className="space-y-12">
-            {siteConfig.cases.highlights.map((highlight, index) => (
-              <Card key={index} className="bg-card border overflow-hidden">
-                <CardContent className="p-0">
-                  <div className={`grid grid-cols-1 lg:grid-cols-2 gap-0 ${index % 2 === 1 ? 'lg:grid-flow-dense' : ''}`}>
-                    <div className={`${index % 2 === 1 ? 'lg:col-start-2' : ''}`}>
-                      <img 
-                        src={highlight.image} 
-                        alt={highlight.imageAlt}
-                        className="w-full h-64 lg:h-full object-cover" 
-                      />
+            {/* First Card - Vegleiðingar */}
+            <Card className="bg-card border overflow-hidden case-card-1">
+              <CardContent className="p-0">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                  <div>
+                    <img 
+                      src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
+                      alt="Samstarv á eini skrivstovu"
+                      className="w-full h-64 lg:h-full object-cover" 
+                    />
+                  </div>
+                  <div className="p-8 lg:p-12 flex flex-col justify-center">
+                    <h3 className="text-2xl lg:text-3xl font-bold mb-6">Vegleiðingar</h3>
+                    <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+                      Eg havi gjørt nógvar vegleðingar til ymiskir bólkar, tildømis lærarar, námsfrøðingar og rithøvundar. Tú kann síggja tvey ókeypis dømir her:
+                    </p>
+                    <div>
+                      <Button 
+                        variant="default"
+                        size="lg"
+                        onClick={() => setOpenDialog('vegleidingar')}
+                        data-testid="button-case-0"
+                      >
+                        Tak niður ókeypis
+                      </Button>
                     </div>
-                    <div className={`p-8 lg:p-12 flex flex-col justify-center ${index % 2 === 1 ? 'lg:col-start-1' : ''}`}>
-                      <h3 className="text-2xl lg:text-3xl font-bold mb-6">{highlight.title}</h3>
-                      <p className="text-muted-foreground mb-8 text-lg leading-relaxed">{highlight.description}</p>
-                      <div>
-                        <Button 
-                          variant={highlight.buttonVariant as "default" | "outline"}
-                          size="lg"
-                          asChild
-                          data-testid={`button-case-${index}`}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Second Card - Vitlíki til týðing */}
+            <Card className="bg-card border overflow-hidden case-card-2">
+              <CardContent className="p-0">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:grid-flow-dense">
+                  <div className="lg:col-start-2">
+                    <img 
+                      src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
+                      alt="Bøkur og tilfar um málslæru"
+                      className="w-full h-64 lg:h-full object-cover" 
+                    />
+                  </div>
+                  <div className="p-8 lg:p-12 flex flex-col justify-center lg:col-start-1">
+                    <h3 className="text-2xl lg:text-3xl font-bold mb-6">Vitlíki til týðing úr Donskum til Føroyskt</h3>
+                    <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+                      Eg hjálpti við at skriva birt og finna tað rætta modelli, úrsliti var eitt vitlíki amboð sum skrivaði betri Føroyskt enn nakað vit hava sæð áður. Um tú hevur eina uppgávu tú vil loysa við vitlíki, so kan eg ráðgeva um hvussu tú ger tað best.
+                    </p>
+                    <div>
+                      <Button 
+                        variant="outline"
+                        size="lg"
+                        onClick={() => setOpenDialog('tydingar')}
+                        data-testid="button-case-1"
+                      >
+                        Síggj dømið
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Third Card - Kreativt vitlíki */}
+            <Card className="bg-card border overflow-hidden case-card-3">
+              <CardContent className="p-0">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
+                  <div>
+                    <img 
+                      src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
+                      alt="Filmframleiðsla og kreativt studio"
+                      className="w-full h-64 lg:h-full object-cover" 
+                    />
+                  </div>
+                  <div className="p-8 lg:p-12 flex flex-col justify-center">
+                    <h3 className="text-2xl lg:text-3xl font-bold mb-6">Kreativt vitlíki: myndir, filmar og annað</h3>
+                    <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+                      Vitlíki kann skapa alt millum himmal og jørð: myndir, filmar, tónleik og nógv annað. Hygg her fyri at síggja nakað av tí eg havi skapa við vitlíki
+                    </p>
+                    <div className="space-y-4">
+                      <p className="text-sm text-muted-foreground italic">
+                        Fylg okkum á sosialu miðlunum fyri at síggja dømi um tað vit hava skapað og fáa reglubundnar innsiktir um hvat er møguligt við vitlíki:
+                      </p>
+                      <div className="flex items-center gap-4">
+                        <a 
+                          href="https://facebook.com/vitlikisstovan" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 hover:bg-blue-200 text-blue-700 font-medium transition-colors"
                         >
-                          <a href={highlight.buttonHref}>
-                            {highlight.buttonText}
-                          </a>
-                        </Button>
+                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                          </svg>
+                          Facebook
+                        </a>
+                        <a 
+                          href="https://linkedin.com/company/vitlikisstovan" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors"
+                        >
+                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                          </svg>
+                          LinkedIn
+                        </a>
                       </div>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
+                </div>
+              </CardContent>
+            </Card>
           </div>
+
+          {/* Dialog for Vegleiðingar */}
+          <Dialog open={openDialog === 'vegleidingar'} onOpenChange={() => setOpenDialog(null)}>
+            <DialogContent className="max-w-md">
+              <DialogHeader>
+                <DialogTitle>Vegleiðingar - Ókeypis Niðurtak</DialogTitle>
+                <DialogDescription>
+                  Her kanst tú taka niður ókeypis vegleiðingar til ChatGPT og vitlíki amboð.
+                </DialogDescription>
+              </DialogHeader>
+              <div className="space-y-4">
+                <p>Tøkar vegleiðingar fyri at byrja við vitlíki í tínum arbeiði.</p>
+                <div className="flex gap-2">
+                  <Button className="flex-1">
+                    Tak niður PDF
+                  </Button>
+                  <Button variant="outline" className="flex-1">
+                    Síggj Online
+                  </Button>
+                </div>
+              </div>
+            </DialogContent>
+          </Dialog>
+
+          {/* Dialog for Týðingar */}
+          <Dialog open={openDialog === 'tydingar'} onOpenChange={() => setOpenDialog(null)}>
+            <DialogContent className="max-w-md">
+              <DialogHeader>
+                <DialogTitle>Vitlíki Týðing - Danskt til Føroyskt</DialogTitle>
+                <DialogDescription>
+                  Síggj hvussu vit byggdu eitt vitlíki amboð til týðing millum mál.
+                </DialogDescription>
+              </DialogHeader>
+              <div className="space-y-4">
+                <p>Hetta verkætlan vísir hvussu vitlíki kann hjálpa við málslæru og týðingum.</p>
+                <div className="flex gap-2">
+                  <Button className="flex-1">
+                    Síggj Case Study
+                  </Button>
+                  <Button variant="outline" className="flex-1">
+                    Royn Amboðið
+                  </Button>
+                </div>
+              </div>
+            </DialogContent>
+          </Dialog>
         </Section>
 
         
