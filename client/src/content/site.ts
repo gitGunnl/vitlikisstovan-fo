@@ -19,7 +19,7 @@ export const siteConfig = {
   hero: {
     title: "Eisini tú kann meistra Vitlíki!",
     subtitle:
-      "Vit vita akkurát hvussu tit kunna koma frá nýbyrjandi innan vitlíki til dugnaligir vitlíkis brúkarir. Vit taka okkum av øllum, tú skul bara lurta og læra.",
+      "Eg veit akkurát hvussu tit kunna koma frá nýbyrjandi innan vitlíki til dugnaligir vitlíkis brúkarir. Eg taki mær av øllum, tit skulla bara lurta og læra.",
     primaryCTA: {
       text: "Bílegg vitlíkis útbúgving til tykkara skrivstovu.",
       href: "#contact"
@@ -33,30 +33,30 @@ export const siteConfig = {
   program: {
     title: "Frá forvitin til framkomin: Ein 12-viku útbúgving til skrivstovur",
     subtitle:
-      "Einfalt skeið til tykkara skrivstovu. Vit koma út til tykkum, læra toymið og seta alt upp. Tit møta nakrar ferðirog læra at arbeiða trygt og munagott við vitlíki.",
+      "Einfalt skeið til tykkara skrivstovu. Eg komi út til tykkum, læri toymið og seti alt upp. Tit samlast nakrar ferðir og læra at arbeiða trygt og munagott við vitlíki.",
 
     whatWeDeliver: {
-      title: "Vit hjálpa við hesum",
+      title: "Eg hjálpa við hesum",
       items: [
         {
           title: "Leiðreglur og mannagongdir",
           description:
-            "Vit orða, hvat starvsfólk kunnu og ikki kunnu gera við vitlíki – stutt og lætt at skilja."
+            "At orða, hvat starvsfólk kunnu og ikki kunnu gera við vitlíki – stutt og lætt at skilja."
         },
         {
-          title: "Rætt amboð",
+          title: "Røtt amboð",
           description:
-            "Vit hjálpa at velja og seta upp amboðini – ofta Copilot, men eisini onnur eftir tørvi."
+            "At velja og seta upp røttu amboðini – ofta Copilot, men eisini onnur eftir tørvi."
         },
         {
           title: "Venjing á tykkara máli",
           description:
-            "Vit vísa, hvussu starvsfólk brúka vitlíki í sínum egnu uppgávum – so tað verður brúkt beinanvegin."
+            "Eg lýsi hvat vitlíki er og hvussu man kann brúka tað til arbeiðis á einum løttum máli - so kunna tit enduliga skilja hvat hettar er."
         },
         {
           title: "Yvirlit yvir uppgávur",
           description:
-            "Vit gera eina greiða listu yvir, hvat kann loysast við vitlíki – og hvussu."
+            "Tit fáa ein greiðan listu yvir, hvat tit kunna loysa við vitlíki – og hvussu."
         }
       ]
     },
@@ -70,7 +70,7 @@ export const siteConfig = {
         },
         {
           title: "2) Uppseting",
-          description: "Vit seta leiðreglur, amboð og fyrimyndir upp – klárt at brúka."
+          description: "Vit seta leiðreglur, finna amboð og halda verkstovur."
         },
         {
           title: "3) Læra og brúka",
@@ -81,7 +81,7 @@ export const siteConfig = {
 
     delivery: {
       title: "Hvat tú fært",
-      subtitle: "Vit bjóðar alt sum skal til fyri at tit kunna læra vitlíki.",
+      subtitle: "Vit bjóðar alt sum skal til fyri at tit kunna nýta vitlíki til arbeiðis.",
       items: [
         {
           title: "Leiðreglur",
@@ -89,11 +89,11 @@ export const siteConfig = {
         },
         {
           title: "Amboð og uppseting",
-          description: "Vit hjálpa tykkum at avgera hvørji amboð til vilja brúka og kunna seta alt upp fyri tykkum. So eru tit røtt íklødd til at byrja."
+          description: "Vit hjálpa tykkum at avgera hvørji amboð tit vilja brúka og kunna seta alt upp fyri tykkum. So eru tit røtt íklødd til at byrja."
         },
         {
           title: "Verkstovur og netskeið",
-          description: "Vit nýta bæði verkstovur og sergjørd netskeið, so tit kunna læra skjót og smidligani."
+          description: "Vit nýta bæði verkstovur og sergjørd netskeið, so tit kunna læra skjótt og smidligani."
         },
         {
           title: "Stuðul og spurningar",
@@ -101,7 +101,7 @@ export const siteConfig = {
         },
         {
           title: "Tilfar",
-          description: "Skabelónir og leiðbeiningur sniðgíddar til júst tykkara tørv. So noyast tit ikki at minnast alt frá degi 1."
+          description: "Skabelónir og leiðbeiningar sniðgivnar til júst tykkara tørv. So noyast tit ikki at minnast alt frá degi 1."
         },
         {
           title: "Greining",
@@ -116,11 +116,11 @@ export const siteConfig = {
     },
 
     outcomes: [
-      "Starvsfólk duga at brúka vitlíki tryggliga og við viti.",
+      "Starvsfólk duga at brúka vitlíki tryggt og munagott.",
       "Leiðreglur, sum øll skilja og halda seg til.",
       "Amboðini eru væl sett upp og klár at brúka.",
       "Greið yvirlit yvir, hvar vitlíki ger mun.",
-      "Vanar og fyrimyndir, sum halda fram – eisini tá vit fara."
+      "Vanar og arbeiðisháttir, sum halda fram."
     ],
 
     note:
@@ -294,7 +294,7 @@ export const siteConfig = {
   },
 
   contact: {
-    title: "Klár at byrja?",
+    title: "Hug at byrja?",
     subtitle:
       "Sig mær hvat tú hugsar, so sigi eg tær hvussu vitlíki kann hjálpa við hesum.",
     sectionTitle: "Allir spurningar eru vælkomnir",
