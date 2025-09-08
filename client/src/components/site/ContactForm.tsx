@@ -78,25 +78,25 @@ export default function ContactSection() {
         }
         
         // If API fails, still return success since Google Forms was submitted
-        return { success: true, message: "Message sent via Google Forms" };
+        return { success: true, message: "Boðið er sent við Google Forms" };
       } catch (apiError) {
         console.warn('API submission failed, but Google Forms submission succeeded');
         // Still return success since we submitted to Google Forms
-        return { success: true, message: "Message sent via Google Forms" };
+        return { success: true, message: "Boðið er sent við Google Forms" };
       }
     },
     onSuccess: () => {
       toast({
-        title: "Message sent!",
-        description: "Thank you for your message. We'll get back to you soon.",
+        title: "Boðið er sent!",
+        description: "Takk fyri títt boð. Vit svara tær skjótt.",
       });
       form.reset();
       setFormStartTime(Date.now());
     },
     onError: (error: Error) => {
       toast({
-        title: "Error",
-        description: error.message || "Failed to send message. Please try again.",
+        title: "Villa",
+        description: error.message || "Miseydnaðist at senda boðið. Royn aftur.",
         variant: "destructive",
       });
     },
@@ -113,8 +113,8 @@ export default function ContactSection() {
     const timeTaken = (submissionTime - formStartTime) / 1000;
     if (timeTaken < 3) {
       toast({
-        title: "Too fast",
-        description: "Please wait a moment before sending the form again.",
+        title: "Ov skjótt",
+        description: "Bíða eitt løtu áðrenn tú sendur formið aftur.",
         variant: "destructive",
       });
       return;
@@ -149,7 +149,7 @@ export default function ContactSection() {
                   <Mail className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Email</p>
+                  <p className="text-sm text-muted-foreground">Teldupostur</p>
                   <a 
                     href={`mailto:${siteConfig.contact.email}`}
                     className="font-medium hover:text-primary transition-colors"
@@ -165,7 +165,7 @@ export default function ContactSection() {
                   <Phone className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-sm text-muted-foreground">Phone</p>
+                  <p className="text-sm text-muted-foreground">Telefon</p>
                   <a 
                     href={`tel:${siteConfig.contact.phone.replace(/\s+/g, '')}`}
                     className="font-medium hover:text-primary transition-colors"
@@ -177,7 +177,7 @@ export default function ContactSection() {
               </div>
               
               <div className="pt-6 mt-6 border-t">
-                <p className="text-base font-medium text-foreground mb-6">Follow us to learn more about AI</p>
+                <p className="text-base font-medium text-foreground mb-6">Fylg okkum fyri at læra meira um vitlíki</p>
                 <div className="flex items-center gap-6">
                   <a 
                     href={siteConfig.social.facebook} 
@@ -185,7 +185,7 @@ export default function ContactSection() {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center w-14 h-14 rounded-xl bg-teal-500/10 text-teal-600 hover:bg-teal-500 hover:text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-teal-500/25"
                     data-testid="contact-facebook"
-                    aria-label="Visit our Facebook page"
+                    aria-label="Far til okkara Facebook síðu"
                   >
                     <Facebook className="w-7 h-7" />
                   </a>
@@ -195,7 +195,7 @@ export default function ContactSection() {
                     rel="noopener noreferrer"
                     className="flex items-center justify-center w-14 h-14 rounded-xl bg-teal-600/10 text-teal-700 hover:bg-teal-600 hover:text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-teal-600/25"
                     data-testid="contact-linkedin"
-                    aria-label="Visit our LinkedIn page"
+                    aria-label="Far til okkara LinkedIn síðu"
                   >
                     <Linkedin className="w-7 h-7" />
                   </a>
@@ -218,7 +218,7 @@ export default function ContactSection() {
                   name="honeypot"
                   render={({ field }) => (
                     <FormItem className="absolute left-[-9999px] opacity-0 pointer-events-none">
-                      <FormLabel>Leave this field empty</FormLabel>
+                      <FormLabel>Lat hetta rútið vera tømt</FormLabel>
                       <FormControl>
                         <Input
                           {...field}
@@ -237,12 +237,12 @@ export default function ContactSection() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-foreground/90 font-medium">
-                        Name
+                        Navn
                       </FormLabel>
                       <FormControl>
                         <Input
                           {...field}
-                          placeholder="Your name"
+                          placeholder="Títt navn"
                           data-testid="input-name"
                         />
                       </FormControl>
@@ -257,13 +257,13 @@ export default function ContactSection() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-foreground/90 font-medium">
-                        Email
+                        Teldupostur
                       </FormLabel>
                       <FormControl>
                         <Input
                           {...field}
                           type="email"
-                          placeholder="your.email@example.com"
+                          placeholder="tín.teldupostur@dømi.fo"
                           data-testid="input-email"
                         />
                       </FormControl>
@@ -278,13 +278,13 @@ export default function ContactSection() {
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-foreground/90 font-medium">
-                        Message
+                        Boð
                       </FormLabel>
                       <FormControl>
                         <Textarea
                           {...field}
                           rows={5}
-                          placeholder="Tell us about your project or question..."
+                          placeholder="Seg okkum um títt verkætlan ella spurnin..."
                           className="resize-none"
                           data-testid="textarea-message"
                         />
@@ -302,7 +302,7 @@ export default function ContactSection() {
                 >
                   <span className="flex items-center justify-center gap-2">
                     <MessageSquare className="w-5 h-5" />
-                    {contactMutation.isPending ? "Sending..." : "Send Message"}
+                    {contactMutation.isPending ? "Sendir..." : "Send boð"}
                   </span>
                 </Button>
               </form>
