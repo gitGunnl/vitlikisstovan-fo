@@ -30,7 +30,7 @@ const post = {
 
   <figure class="not-prose my-6">
     <img
-      src="/images/blog/foroyskt-vitliki-2025"
+      src="/images/blog/foroyskt-vitliki-2025/main-image.png"
       alt="Analogy: models are tools like hammers and saws; people and workflows build the house"
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
@@ -124,7 +124,7 @@ const post = {
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
     />
-    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>[small image showing english taxt goes inand Faroese text goes out. gif]</em></figcaption>
+    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>[small image showing english text goes in and Faroese text goes out. gif]</em></figcaption>
   </figure>
 
   <p><strong>Hví hetta hevur týdning:</strong> Um enskt→føroysk týðing riggar væl, ber til at leggja hana oman á KjattGPT, Gemini ella onnur stór málmodell og fáa úrslit á <strong>føroyskum, ið kennast heilt natúrlig</strong>. Sí mynd niðanfyri.</p>
