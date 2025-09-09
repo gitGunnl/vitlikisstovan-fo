@@ -66,40 +66,32 @@ export default function Header() {
         <nav className="md:hidden border-t border-gray-200 bg-white px-4 py-4 shadow-sm">
           <div className="space-y-2">
             <a
-              key={link.href}
-              href={link.href.startsWith('#') ? `/${link.href}` : link.href}
+              href="/um-okkum"
               onClick={closeMobileMenu}
               className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary hover:bg-accent/50 rounded-md transition-all duration-200"
-              data-testid={`nav-mobile-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
             >
-              {link.label}
+              Um okkum
             </a>
             <a
-              key={link.href}
-              href={link.href.startsWith('#') ? `/${link.href}` : link.href}
+              href="/okkara-taenastur"
               onClick={closeMobileMenu}
               className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary hover:bg-accent/50 rounded-md transition-all duration-200"
-              data-testid={`nav-mobile-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
             >
-              {link.label}
+              Okkara tænastur
             </a>
             <a
-              key={link.href}
-              href={link.href.startsWith('#') ? `/${link.href}` : link.href}
+              href="/blog"
               onClick={closeMobileMenu}
               className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary hover:bg-accent/50 rounded-md transition-all duration-200"
-              data-testid={`nav-mobile-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
             >
               Blogg
             </a>
             <a
-              key={link.href}
-              href={link.href.startsWith('#') ? `/${link.href}` : link.href}
+              href="/contact"
               onClick={closeMobileMenu}
               className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary hover:bg-accent/50 rounded-md transition-all duration-200"
-              data-testid={`nav-mobile-${link.label.toLowerCase().replace(/\s+/g, '-')}`}
             >
-              {link.label}
+              Samband
             </a>
           </div>
         </nav>
