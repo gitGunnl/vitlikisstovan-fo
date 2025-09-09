@@ -173,7 +173,7 @@ export default function Home() {
                       <span className="text-primary-foreground font-bold text-xl">2</span>
                     </div>
                     <h4 className="font-semibold mb-2">Uppseting</h4>
-                    <p className="text-sm text-muted-foreground">Vit seta leiðreglur, amboð og fyrimyndir upp – klárt at brúka.</p>
+                    <p className="text-sm text-muted-foreground">Vit gera leiðreglur, velja amboð og fyrireika verkstovur - tit skula bara læra.</p>
                   </div>
 
                   <div className="hidden md:block text-muted-foreground">
