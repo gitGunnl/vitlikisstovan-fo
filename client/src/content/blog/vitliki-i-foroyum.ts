@@ -30,7 +30,7 @@ const post = {
 
   <figure class="not-prose my-6">
     <img
-      src="client/public/images/blog/foroyskt-vitliki-2025"
+      src="/images/blog/foroyskt-vitliki-2025"
       alt="Analogy: models are tools like hammers and saws; people and workflows build the house"
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
