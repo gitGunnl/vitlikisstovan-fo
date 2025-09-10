@@ -210,12 +210,12 @@ export default function UmOkkum() {
                   <CardContent className="pt-6 space-y-4">
                     <div>
                       <p className="text-xs uppercase text-gray-500 mb-1">Stovnað</p>
-                      <p className="font-bold">2024</p>
+                      <p className="font-bold">2023</p>
                     </div>
                     <Separator />
                     <div>
                       <p className="text-xs uppercase text-gray-500 mb-1">Fokus</p>
-                      <p className="font-bold">AI & Coding Education</p>
+                      <p className="font-bold">Vitlíki upplæring, ráðgeving og menning</p>
                     </div>
                     <Separator />
                     <div>
