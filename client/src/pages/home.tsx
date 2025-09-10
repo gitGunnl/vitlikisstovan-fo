@@ -89,8 +89,33 @@ export default function Home() {
           <CTAButtons
             primary={siteConfig.hero.primaryCTA}
             secondary={siteConfig.hero.secondaryCTA}
-            className="mt-2"
+            className="mt-2 mb-16"
           />
+          
+          {/* Bottom of Hero CTA */}
+          <div className="mt-16">
+            <button
+              onClick={() => {
+                const element = document.querySelector('#consulting');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="group flex items-center gap-3 mx-auto px-6 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 border border-white/20"
+            >
+              <span className="text-lg font-medium">
+                Um tú ert her fyri ráðgeving ella annað, les meira longur nirrið
+              </span>
+              <svg 
+                className="w-5 h-5 transition-transform group-hover:translate-y-1" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
 
@@ -558,33 +583,6 @@ export default function Home() {
         </Section>
 
         
-
-        {/* Bottom CTA */}
-        <Section className="py-16 bg-muted/30">
-          <div className="mx-auto max-w-2xl text-center">
-            <button
-              onClick={() => {
-                const element = document.querySelector('#consulting');
-                if (element) {
-                  element.scrollIntoView({ behavior: 'smooth' });
-                }
-              }}
-              className="group flex items-center gap-3 mx-auto px-6 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-            >
-              <span className="text-lg font-medium">
-                Um tú ert her fyri ráðgeving ella annað, les meira longur nirrið
-              </span>
-              <svg 
-                className="w-5 h-5 transition-transform group-hover:translate-x-1" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-              </svg>
-            </button>
-          </div>
-        </Section>
 
         {/* Contact */}
         <div id="contact">
