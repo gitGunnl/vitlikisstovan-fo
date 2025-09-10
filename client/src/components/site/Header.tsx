@@ -35,9 +35,9 @@ export default function Header() {
           <a href="/okkara-taenastur" className="text-foreground/80 hover:text-foreground transition-colors">
             Okkara tænastur
           </a>
-          <a href="/blog" className="text-foreground/80 hover:text-foreground transition-colors">
+          {/* <a href="/blog" className="text-foreground/80 hover:text-foreground transition-colors">
             Blogg
-          </a>
+          </a> */}
           <a href="/contact" className="text-foreground/80 hover:text-foreground transition-colors">
             Samband
           </a>
@@ -79,13 +79,13 @@ export default function Header() {
             >
               Okkara tænastur
             </a>
-            <a
+            {/* <a
               href="/blog"
               onClick={closeMobileMenu}
               className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary hover:bg-accent/50 rounded-md transition-all duration-200"
             >
               Blogg
-            </a>
+            </a> */}
             <a
               href="/contact"
               onClick={closeMobileMenu}
