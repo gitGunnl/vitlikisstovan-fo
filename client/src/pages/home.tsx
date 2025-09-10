@@ -409,9 +409,9 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-8 lg:p-12 flex flex-col justify-center">
-                    <h3 className="text-2xl lg:text-3xl font-bold mb-6">Vegleiðingar</h3>
+                    <h3 className="text-2xl lg:text-3xl font-bold mb-6">Vegleiðingar og verkstovur</h3>
                     <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-                      Eg havi gjørt nógvar vegleðingar til ymiskir bólkar, tildømis lærarar, námsfrøðingar og rithøvundar. Tú kann síggja tvey ókeypis dømir her:
+                      Eg havi gjørt nógvar vegleðingar og verkstovur til ymiskir bólkar, tildømis lærarar, námsfrøðingar, rithøvundar og eitt ótal av skrivstovufólki. Um tú vil læra meira um hvussu eg geri hesar vegleiðingar so kanst tú lesa meira her:
                     </p>
                     <div>
                       <Button 
@@ -420,7 +420,7 @@ export default function Home() {
                         onClick={() => setOpenDialog('vegleidingar')}
                         data-testid="button-case-0"
                       >
-                        Tak niður ókeypis
+                        Les meira um hettar
                       </Button>
                     </div>
                   </div>
@@ -440,9 +440,9 @@ export default function Home() {
                     />
                   </div>
                   <div className="p-8 lg:p-12 flex flex-col justify-center lg:col-start-1">
-                    <h3 className="text-2xl lg:text-3xl font-bold mb-6">Vitlíki til týðing úr Donskum til Føroyskt</h3>
+                    <h3 className="text-2xl lg:text-3xl font-bold mb-6">Sergjørt amboð til týðing úr Donskum til Føroyskt</h3>
                     <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-                      Eg hjálpti við at skriva birt og finna tað rætta modelli, úrsliti var eitt vitlíki amboð sum skrivaði betri Føroyskt enn nakað vit hava sæð áður. Um tú hevur eina uppgávu tú vil loysa við vitlíki, so kan eg ráðgeva um hvussu tú ger tað best.
+                      Onkumtíð so skal man bara hava hjálp frá vitlíki til eina ávísa uppgávu. Tildømis um tú skal týða Donsk skjal til Føroyskt. Hettar var ein uppgáva eg havi loyst fyri ein kunda. Les meira um hvussu tað gekk fyri seg her:
                     </p>
                     <div>
                       <Button 
@@ -473,7 +473,7 @@ export default function Home() {
                   <div className="p-8 lg:p-12 flex flex-col justify-center">
                     <h3 className="text-2xl lg:text-3xl font-bold mb-6">Kreativt vitlíki: myndir, filmar og annað</h3>
                     <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-                      Vitlíki kann skapa alt millum himmal og jørð: myndir, filmar, tónleik og nógv annað. Hygg her fyri at síggja nakað av tí eg havi skapa við vitlíki
+                      Vitlíki kann skapa alt millum himmal og jørð: myndir, filmar, tónleik og nógv annað. Eg deili regluliga tíðindir og ymiskar royndir eg geri við vitlíki, serliga í mun til at skapa tilfar við vitlíki, tú kann síggja nógv ting eg havi roynt á sosialum miðlum.
                     </p>
                     <div className="space-y-4">
                       <p className="text-sm text-muted-foreground italic">

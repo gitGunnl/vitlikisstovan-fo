@@ -217,35 +217,35 @@ export const siteConfig = {
       "Síggj her dømir uppá hvussu eg geri hugskot til nýtilig úrslit – á skrivstovum, í tænastum og í mentanini.",
     highlights: [
       {
-        title: "Vegleiðingar",
+        title: "Vegleiðingar og verkstovur",
         description:
-          "Eg havi gjørt nógvar vegleðingar til ymiskir bólkar, tildømis lærarar, námsfrøðingar og rithøvundar. Tú kann síggja tvey ókeypis dømir her:",
+          "Eg havi gjørt nógvar vegleðingar og verkstovur til ymiskir bólkar, tildømis lærarar, námsfrøðingar, rithøvundar og eitt ótal av skrivstovufólki. Um tú vil læra meira um hvussu eg geri hesar vegleiðingar so kanst tú lesa meira her:",
         image:
           "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
         imageAlt: "Samstarv á eini skrivstovu",
-        buttonText: "Tak niður ókeypis",
+        buttonText: "Les meira um hettar",
         buttonVariant: "default",
         buttonHref: "#"
       },
       {
-        title: "Vitlíki til týðing úr Donskum til Føroyskt",
+        title: "Sergjørt amboð til týðing úr Donskum til Føroyskt",
         description:
-          "Eg hjálpti við at skriva birt og finna tað rætta modelli, úrsliti var eitt vitlíki amboð sum skrivaði betri Føroyskt enn nakað vit hava sæð áður. Um tú hevur eina uppgávu tú vil loysa við vitlíki, so kan eg ráðgeva um hvussu tú ger tað best. ",
+          "Onkumtíð so skal man bara hava hjálp frá vitlíki til eina ávísa uppgávu. Tildømis um tú skal týða Donsk skjal til Føroyskt. Hettar var ein uppgáva eg havi loyst fyri ein kunda. Les meira um hvussu tað gekk fyri seg her:",
         image:
           "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
         imageAlt: "Bøkur og tilfar um málslæru",
-        buttonText: "Síggj dømið",
+        buttonText: "Les meira",
         buttonVariant: "outline",
         buttonHref: "#"
       },
       {
         title: "Kreativt vitlíki: myndir, filmar og annað",
         description:
-          "Vitlíki kann skapa alt millum himmal og jørð: myndir, filmar, tónleik og nógv annað. Hygg her fyri at síggja nakað av tí eg havi skapa við vitlíki",
+          "Vitlíki kann skapa alt millum himmal og jørð: myndir, filmar, tónleik og nógv annað. Eg deili regluliga tíðindir og ymiskar royndir eg geri við vitlíki, serliga í mun til at skapa tilfar við vitlíki, tú kann síggja nógv ting eg havi roynt á sosialum miðlum.",
         image:
           "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
         imageAlt: "Filmframleiðsla og kreativt studio",
-        buttonText: "Kanna verkætlanirnar",
+        buttonText: "",
         buttonVariant: "outline",
         buttonHref: "#"
       }

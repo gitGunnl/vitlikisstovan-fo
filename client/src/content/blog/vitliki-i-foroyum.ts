@@ -148,7 +148,7 @@ const post = {
 
   <figure class="not-prose my-6">
     <img
-      src="/images/blog/foroyskt-vitliki-2025/translation-pipeline-diagram.svg"
+      src="/images/blog/foroyskt-vitliki-2025/translation-pipeline-diagram.png"
       alt="Diagram of translation setup layered over general LLM output"
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
@@ -162,7 +162,7 @@ const post = {
 
   <figure class="not-prose my-6">
     <img
-      src="/images/blog/foroyskt-vitliki-2025/asr-speech-to-text.png"
+      src="/images/blog/foroyskt-vitliki-2025/asr-speech-to-text.gif"
       alt="Faroese speech goes in, text comes out"
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
@@ -191,7 +191,7 @@ const post = {
 
   <figure class="not-prose my-6">
     <img
-      src="/images/blog/foroyskt-vitliki-2025/asr-pipeline-diagram.svg"
+      src="/images/blog/foroyskt-vitliki-2025/asr-pipeline-diagram.png"
       alt="Diagram of Faroese ASR setup"
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
@@ -205,7 +205,7 @@ const post = {
 
   <figure class="not-prose my-6">
     <img
-      src="/images/blog/foroyskt-vitliki-2025/tts-text-to-speech.png"
+      src="/images/blog/foroyskt-vitliki-2025/tts-text-to-speech.gif"
       alt="Faroese text to speech block"
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
@@ -225,16 +225,6 @@ const post = {
   <hr class="my-8 border-border/60" />
 
   <h3 class="mt-8">✍️ Føroyskt LLM (Føroyskt “ChatGPT”)</h3>
-
-  <figure class="not-prose my-6">
-    <img
-      src="/images/blog/foroyskt-vitliki-2025/fo-llm-text-in-text-out.png"
-      alt="Text in, text out diagram for a Faroese LLM concept"
-      class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
-      loading="lazy" decoding="async"
-    />
-    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>[diagram showing text in text out.]</em></figcaption>
-  </figure>
 
   <p><strong>Hugskotið:</strong> <em>gptfo_instruct_6.7B</em> (Barbara Scalvini) tekur ímóti føroyskum instruktiónum, t.d. “Ger hetta meira vinarligt”, og umskrivar tekstin.</p>
   <p><strong>Veruleikin:</strong> <strong>Riggar</strong> sum eitt konseptprógv, men úrslitini eru <strong>klombrut</strong> og <strong>óstøðug</strong>. Sjálvt við mentanarligum birtum <strong>megnar tað ikki at standa seg</strong> ímóti Gemini ella ChatGPT.</p>
