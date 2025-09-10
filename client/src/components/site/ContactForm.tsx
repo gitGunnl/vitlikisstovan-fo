@@ -16,74 +16,36 @@ import { contactFormSchema, type ContactForm } from "@shared/schema";
 import { useToast } from "@/hooks/use-toast";
 import { MessageSquare, Mail, Phone, Facebook, Linkedin } from "lucide-react";
 import { siteConfig } from "@/content/site";
-import { useState, useEffect } from "react";
 
 export default function ContactSection() {
   const { toast } = useToast();
-  const [formStartTime, setFormStartTime] = useState<number>(0);
-
-  useEffect(() => {
-    setFormStartTime(Date.now());
-  }, []);
 
   const form = useForm<ContactForm>({
     resolver: zodResolver(contactFormSchema),
     defaultValues: {
       name: "",
       email: "",
-      message: "",
-      honeypot: "",
+      message: ""
     },
   });
 
   const contactMutation = useMutation({
     mutationFn: async (data: ContactForm) => {
-      const submissionTime = Date.now();
+      // Submit to Google Forms
+      const formData = new FormData();
+      formData.append('entry.1179687836', data.name);
+      formData.append('entry.263197538', data.email);
+      formData.append('entry.240567695', data.message);
       
-      // Submit to Google Forms (primary destination)
-      try {
-        const formData = new FormData();
-        formData.append('entry.1179687836', data.name);
-        formData.append('entry.263197538', data.email);
-        formData.append('entry.240567695', data.message);
-        
-        await fetch('https://docs.google.com/forms/d/e/1FAIpQLSf8FFci-J91suIjxY2xh4GD-DQ-UfZftUNxq3dUdXkgJAjB1Q/formResponse', {
-          method: 'POST',
-          body: formData,
-          mode: 'no-cors',
-          signal: AbortSignal.timeout(10000) // 10 second timeout
-        });
-        
-        console.log('Successfully submitted to Google Forms');
-      } catch (error) {
-        console.error('Google Forms submission failed:', error);
-      }
+      await fetch('https://docs.google.com/forms/d/e/1FAIpQLSf8FFci-J91suIjxY2xh4GD-DQ-UfZftUNxq3dUdXkgJAjB1Q/formResponse', {
+        method: 'POST',
+        body: formData,
+        mode: 'no-cors',
+        signal: AbortSignal.timeout(10000) // 10 second timeout
+      });
       
-      // Also submit to API endpoint for logging
-      try {
-        const response = await fetch("/api/contact", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            ...data,
-            formStartTime,
-            submissionTime,
-          }),
-        });
-
-        if (response.ok) {
-          return response.json();
-        }
-        
-        // If API fails, still return success since Google Forms was submitted
-        return { success: true, message: "Boðið er sent við Google Forms" };
-      } catch (apiError) {
-        console.warn('API submission failed, but Google Forms submission succeeded');
-        // Still return success since we submitted to Google Forms
-        return { success: true, message: "Boðið er sent við Google Forms" };
-      }
+      // Return success since Google Forms doesn't provide response in no-cors mode
+      return { success: true, message: "Boðið er sent!" };
     },
     onSuccess: () => {
       toast({
@@ -91,7 +53,6 @@ export default function ContactSection() {
         description: "Takk fyri títt boð. Vit svara tær skjótt.",
       });
       form.reset();
-      setFormStartTime(Date.now());
     },
     onError: (error: Error) => {
       toast({
@@ -103,23 +64,6 @@ export default function ContactSection() {
   });
 
   const onSubmit = async (data: ContactForm) => {
-    // Honeypot check
-    if (data.honeypot && data.honeypot.trim() !== "") {
-      return; // Silently reject
-    }
-    
-    // Timestamp check - minimum 3 seconds
-    const submissionTime = Date.now();
-    const timeTaken = (submissionTime - formStartTime) / 1000;
-    if (timeTaken < 3) {
-      toast({
-        title: "Ov skjótt",
-        description: "Bíða eitt løtu áðrenn tú sendur formið aftur.",
-        variant: "destructive",
-      });
-      return;
-    }
-    
     contactMutation.mutate(data);
   };
 
@@ -212,25 +156,6 @@ export default function ContactSection() {
             
             <Form {...form}>
               <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                {/* Honeypot field - hidden from users */}
-                <FormField
-                  control={form.control}
-                  name="honeypot"
-                  render={({ field }) => (
-                    <FormItem className="absolute left-[-9999px] opacity-0 pointer-events-none">
-                      <FormLabel>Lat hetta rútið vera tømt</FormLabel>
-                      <FormControl>
-                        <Input
-                          {...field}
-                          type="text"
-                          autoComplete="off"
-                          tabIndex={-1}
-                        />
-                      </FormControl>
-                    </FormItem>
-                  )}
-                />
-
                 <FormField
                   control={form.control}
                   name="name"
