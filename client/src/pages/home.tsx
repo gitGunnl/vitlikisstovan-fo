@@ -434,7 +434,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:grid-flow-dense">
                   <div className="lg:col-start-2">
                     <img 
-                      src="https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
+                      src="/images/dansk til foroyskt.gif"
                       alt="Bøkur og tilfar um málslæru"
                       className="w-full h-64 lg:h-full object-cover" 
                     />
