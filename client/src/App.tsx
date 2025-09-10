@@ -12,6 +12,7 @@ import Contact from "@/pages/contact";
 import Blog from "@/pages/blog";
 import BlogPost from "@/pages/blog-post";
 import Tilarbeidis from "@/pages/tilarbeidis";
+import Verkstova from "@/pages/verkstova";
 
 function Router() {
   return (
@@ -24,6 +25,7 @@ function Router() {
       <Route path="/tilarbeidis" component={Tilarbeidis} />
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
+      <Route path="/verkstova" component={Verkstova} />
       <Route component={NotFound} />
     </Switch>
   );
