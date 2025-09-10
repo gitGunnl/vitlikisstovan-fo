@@ -58,6 +58,27 @@ const timelineData: TimelineEvent[] = [
     summary:
       "Næsta stigið: seta okkum í samband við valdar bólkar og skipa fyri samrøður fyri at avdúkað dagligar avbjóðingar.",
   },
+  {
+    id: "evt-007",
+    date: "2025-08-14",
+    title: "Bólkarnir eru valdir",
+    summary:
+      "Eftir at hava meta teir tjúgu bólkarnar eftir okkara styrkistølum, eru finalir bólkarnir valdir til royndarverkætlanina.",
+  },
+  {
+    id: "evt-008",
+    date: "2025-08-20",
+    title: "Menning av samrøðu amboði",
+    summary:
+      "Vit menna strukturað amboð fyri samrøður við valdu bólkarnar, fyri at tryggja at vit fáa innsýn í teirra dagligu arbeiðsrútinur og avbjóðingar.",
+  },
+  {
+    id: "evt-009",
+    date: "2025-09-06",
+    title: "Fyrstu royndir við samrøður við námsfrøðingar er býrja",
+    summary:
+      "Byrjum fyrstu samrøðurnar við námsfrøðingar frá valdu bólkunum fyri at skilja teirra uppgávur og hvussu vitlíki kann hjálpa teimum.",
+  },
 ];
 
 const Tilarbeidis = () => {
