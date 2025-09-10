@@ -63,21 +63,21 @@ const timelineData: TimelineEvent[] = [
     date: "2025-08-14",
     title: "Bólkarnir eru valdir",
     summary:
-      "Eftir at hava meta teir tjúgu bólkarnar eftir okkara styrkistølum, eru finalir bólkarnir valdir til royndarverkætlanina.",
+      "Eftir at hava mett teir tjúgu bólkarnar eftir okkara styrkistølum, eru endaligu bólkarnir valdir til royndarverkætlanina.",
   },
   {
     id: "evt-008",
     date: "2025-08-20",
     title: "Menning av samrøðu amboði",
     summary:
-      "Vit menna strukturað amboð fyri samrøður við valdu bólkarnar, fyri at tryggja at vit fáa innsýn í teirra dagligu arbeiðsrútinur og avbjóðingar.",
+      "Vit menna eitt samrøðu amboð sum nýtur vitlíki til at læra nógv meira um valdu bólkarnar, fyri at royna at fáa eitt breitt og munagott innlit í teirra dagligu arbeiðsrútinur og avbjóðingar.",
   },
   {
     id: "evt-009",
     date: "2025-09-06",
-    title: "Fyrstu royndir við samrøður við námsfrøðingar er býrja",
+    title: "Fyrstu royndar samrøður við námsfrøðingar er býrja",
     summary:
-      "Byrjum fyrstu samrøðurnar við námsfrøðingar frá valdu bólkunum fyri at skilja teirra uppgávur og hvussu vitlíki kann hjálpa teimum.",
+      "Royndir eru farnar ígongd við fyrstu samrøðurnar við nakrar fáa námsfrøðingar fyri at vita um tað nýggja amboði riggar væl.",
   },
 ];
 
