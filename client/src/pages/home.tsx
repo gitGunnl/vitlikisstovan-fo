@@ -465,7 +465,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                   <div>
                     <img 
-                      src="https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
+                      src="/images/AI image example.jpeg"
                       alt="Filmframleiðsla og kreativt studio"
                       className="w-full h-64 lg:h-full object-cover" 
                     />
