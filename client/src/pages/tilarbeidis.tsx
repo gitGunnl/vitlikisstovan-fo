@@ -1,10 +1,9 @@
 // client/src/pages/tilarbeidis.tsx
 import { useEffect, useState } from "react";
 import { Calendar } from "lucide-react";
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import SEO from "@/components/SEO";
-import { siteUrl } from "@/lib/seo";
+import Header from "@/components/site/Header";
+import Footer from "@/components/site/Footer";
+import { seoConfig } from "@/content/seo";
 
 type TimelineEvent = {
   id: string;
@@ -84,6 +83,22 @@ const Tilarbeidis = () => {
   };
 
   useEffect(() => {
+    // Set page metadata
+    document.title = "Til arbeiðis - " + seoConfig.title;
+
+    const metaDescription = document.querySelector('meta[name="description"]');
+    const content = "Fylg okkara verkætlan og arbeiðsætlan, meðan vit menna vitlíki vegleiðingar til Føroyska vinnulívið.";
+    if (metaDescription) {
+      metaDescription.setAttribute("content", content);
+    } else {
+      const meta = document.createElement("meta");
+      meta.name = "description";
+      meta.content = content;
+      document.head.appendChild(meta);
+    }
+  }, []);
+
+  useEffect(() => {
     const handleScroll = () => {
       const sections = timelineData.map((evt) =>
         document.getElementById(evt.id)
@@ -104,7 +119,7 @@ const Tilarbeidis = () => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const id = (entry.target as HTMLElement).id;
-            setVisibleEvents((prev) => new Set([...prev, id]));
+            setVisibleEvents((prev) => new Set([...Array.from(prev), id]));
           }
         });
       },
@@ -130,15 +145,8 @@ const Tilarbeidis = () => {
   }, []);
 
   return (
-    <>
-      <SEO
-        title="Til arbeiðis - Vitlíkisstovan"
-        description="Arbeiðsdagur við vitlíki og effektivum verkfřrum."
-        url={`${siteUrl}/tilarbeidis`}
-      />
-
-      <div className="min-h-screen bg-background text-foreground">
-        <Navigation />
+    <div className="min-h-screen bg-background text-foreground">
+        <Header />
 
         {/* Hero Section */}
         <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 text-center">
@@ -417,7 +425,6 @@ const Tilarbeidis = () => {
 
         <Footer />
       </div>
-    </>
   );
 };
 
