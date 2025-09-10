@@ -63,7 +63,7 @@ const timelineData: TimelineEvent[] = [
     date: "2025-08-14",
     title: "Bólkarnir eru valdir",
     summary:
-      "Eftir at hava mett teir tjúgu bólkarnar eftir okkara styrkistølum, eru endaligu bólkarnir valdir til royndarverkætlanina.",
+      "Eftir at hava mett teir tjúgu bólkarnar eftir okkara styrkistølum, eru endaligu bólkarnir valdir til royndarverkætlanina: Hjálparfólk, Heilsurøktarar og heimarøktarfólk, Námsfrøðingar, Fólkaskúlalærarar, Listafólk (ikki-talgild), Tænastustarvsfólk (handil, gistingarhús, móttøka), Ítróttarvenjarar, og Sjúkrarøktarfrøðingar (sjúkrahús & klinikkir).",
   },
   {
     id: "evt-008",
