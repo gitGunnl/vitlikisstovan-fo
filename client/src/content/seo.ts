@@ -1,14 +1,14 @@
 export const seoConfig = {
-  title: "Vitlíkisstovan - AI & Coding Education | Faroese-First Approach",
-  description: "Professional AI and coding education with Faroese-first approach. 3-month flagship program, consulting services, and practical training for modern digital careers.",
+  title: "Vitlíkisstovan - Vitlíki til arbeiði í Føroyum",
+  description: "Vitlíki upplæring til øll á skrivstovuni og uttanfyri. Vitlíki ráðgeving og menning av vitlíki amboðum.",
   keywords: [
-    "AI education",
-    "coding bootcamp",
-    "Faroese education",
-    "programming training",
-    "digital transformation",
-    "technology consulting",
-    "career development"
+    "Vitlíki",
+    "AI in the Faroe Islands",
+    "AI development in Faroese",
+    "Skeið",
+    "Vitlíki verkstova",
+    "vitlíki ráðgeving",
+    "Vitlíki hjálp"
   ],
   author: "Vitlíkisstovan",
   ogImage: "/images/og-image.png", // Placeholder path
