@@ -559,6 +559,33 @@ export default function Home() {
 
         
 
+        {/* Bottom CTA */}
+        <Section className="py-16 bg-muted/30">
+          <div className="mx-auto max-w-2xl text-center">
+            <button
+              onClick={() => {
+                const element = document.querySelector('#consulting');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="group flex items-center gap-3 mx-auto px-6 py-4 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+            >
+              <span className="text-lg font-medium">
+                Um tú ert her fyri ráðgeving ella annað, les meira longur nirrið
+              </span>
+              <svg 
+                className="w-5 h-5 transition-transform group-hover:translate-x-1" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+              </svg>
+            </button>
+          </div>
+        </Section>
+
         {/* Contact */}
         <div id="contact">
           <ContactSection />
