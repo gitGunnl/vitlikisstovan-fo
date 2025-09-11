@@ -13,17 +13,13 @@ publicDir = "dist"
 [env]
 PORT = "5000"
 
-[[deployment.rewrites]]
-from = "/*"
-to = "/index.html"
-
 [[ports]]
 localPort = 5000
 externalPort = 80
 
-[[ports]]
-localPort = 37693
-externalPort = 3000
+[[deployment.rewrites]]
+from = "/*"
+to = "/index.html"
 
 [workflows]
 runButton = "Project"

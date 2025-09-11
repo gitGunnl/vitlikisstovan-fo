@@ -32,16 +32,17 @@ export default function Verkstova() {
   const { toast } = useToast();
 
   useEffect(() => {
-    // Set page metadata
-    document.title = "Workshop Access | Verkstova Training Solution";
-    
+    // Set page metadata (Faroese)
+    document.title = "Atgongd til verkstovu | Verkstova venjingarskipan";
+
+    const content = "Fá atgongd til verkstovuna.";
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Access your workshop materials and guided prompts for interactive training sessions.');
+      metaDescription.setAttribute("content", content);
     } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = 'Access your workshop materials and guided prompts for interactive training sessions.';
+      const meta = document.createElement("meta");
+      meta.name = "description";
+      meta.content = content;
       document.head.appendChild(meta);
     }
   }, []);
@@ -49,14 +50,15 @@ export default function Verkstova() {
   const handlePasswordSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const foundWorkshop = getWorkshopByPassword(password);
-    
+
     if (foundWorkshop) {
       setWorkshop(foundWorkshop);
       setError("");
       setCurrentStep(0);
       setHasConfirmed(false);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
-      setError("Workshop code not recognized. Please check with your workshop organizer.");
+      setError("Verkstovu kotan varð ikki funnin. Vinarliga set teg í samband við fyriskiparan á info@ritvit.fo ella tlf. 919444.");
     }
   };
 
@@ -64,13 +66,13 @@ export default function Verkstova() {
     try {
       await navigator.clipboard.writeText(prompt);
       toast({
-        title: "Prompt copied!",
-        description: "The prompt has been copied to your clipboard.",
+        title: "Birt avrita!",
+        description: "Birt er nú avrita til tína teldu.",
       });
     } catch (err) {
       toast({
-        title: "Copy failed",
-        description: "Please select and copy the text manually.",
+        title: "Avritan miseydnaðist",
+        description: "Vinarliga avrita tekstin við hánd.",
         variant: "destructive",
       });
     }
@@ -80,7 +82,7 @@ export default function Verkstova() {
     if (currentStep < workshop!.steps.length - 1) {
       setCurrentStep(currentStep + 1);
       setHasConfirmed(false);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
@@ -88,7 +90,7 @@ export default function Verkstova() {
     if (currentStep > 0) {
       setCurrentStep(currentStep - 1);
       setHasConfirmed(false);
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
@@ -97,6 +99,8 @@ export default function Verkstova() {
     setPassword("");
     setCurrentStep(0);
     setHasConfirmed(false);
+    setShowExitDialog(false);
+    window.scrollTo({ top: 0 });
   };
 
   const progressPercentage = workshop ? ((currentStep + 1) / workshop.steps.length) * 100 : 0;
@@ -106,48 +110,61 @@ export default function Verkstova() {
     return (
       <>
         <Header />
-        <main className="min-h-screen flex items-center justify-center px-4 py-12 bg-gradient-to-b from-background to-muted/20">
+        <main className="min-h-screen flex items-center justify-center px-4 py-10 sm:py-12 bg-gradient-to-b from-background to-muted/20">
           <Card className="w-full max-w-md" data-testid="card-workshop-login">
             <CardHeader className="text-center">
               <div className="mx-auto mb-4 p-3 bg-primary/10 rounded-full w-fit">
-                <Lock className="h-8 w-8 text-primary" />
+                <Lock className="h-8 w-8 text-primary" aria-hidden="true" />
               </div>
-              <CardTitle className="text-2xl">Workshop Access</CardTitle>
-              <CardDescription>
-                Enter your workshop code to access your training materials
+              <CardTitle className="text-2xl sm:text-3xl">Atgongd til verkstovu</CardTitle>
+              <CardDescription className="mt-1">
+                Skriva tína verkstovu kotu fyri at fáa atgongd til venjingartilfarið
               </CardDescription>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handlePasswordSubmit} className="space-y-4">
+              <form onSubmit={handlePasswordSubmit} className="space-y-4" noValidate>
                 <div className="space-y-2">
-                  <Label htmlFor="workshop-code">Workshop Code</Label>
+                  <Label htmlFor="workshop-code">Verkstovu kota</Label>
                   <Input
                     id="workshop-code"
                     type="text"
-                    placeholder="Enter your workshop code"
+                    inputMode="text"
+                    autoCapitalize="off"
+                    autoCorrect="off"
+                    spellCheck={false}
+                    placeholder="Skriva tína verkstovu kotu"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     className="text-center text-lg"
+                    aria-invalid={!!error}
+                    aria-describedby={error ? "workshop-code-error" : undefined}
+                    enterKeyHint="go"
                     data-testid="input-workshop-code"
                   />
                   {error && (
-                    <p className="text-sm text-destructive mt-2" data-testid="text-error">
+                    <p
+                      id="workshop-code-error"
+                      className="text-sm text-destructive mt-2"
+                      role="alert"
+                      aria-live="polite"
+                      data-testid="text-error"
+                    >
                       {error}
                     </p>
                   )}
                 </div>
-                <Button 
-                  type="submit" 
-                  className="w-full" 
+                <Button
+                  type="submit"
+                  className="w-full"
                   size="lg"
                   data-testid="button-access-workshop"
                 >
-                  Access Workshop
+                  Fá atgongd til verkstovu
                 </Button>
               </form>
             </CardContent>
             <CardFooter className="text-center text-sm text-muted-foreground">
-              If you don't have a workshop code, please contact your workshop organizer.
+              Hevur tú ikki eina verkstovu kotu, vinarliga set teg í samband við fyriskiparan á info@ritvit.fo ella tlf. 919444.
             </CardFooter>
           </Card>
         </main>
@@ -167,32 +184,32 @@ export default function Verkstova() {
         <div className="container mx-auto px-4 py-8 max-w-4xl">
           {/* Workshop Header */}
           <div className="mb-8 text-center">
-            <h1 className="text-3xl font-bold mb-2" data-testid="text-workshop-title">
+            <h1 className="text-2xl sm:text-3xl font-bold mb-2" data-testid="text-workshop-title">
               {workshop.name}
             </h1>
             <p className="text-muted-foreground" data-testid="text-company">
-              {workshop.company} Workshop
+              Verkstova hjá {workshop.company}
             </p>
           </div>
 
           {/* Progress Bar */}
-          <div className="mb-8">
-            <div className="flex justify-between text-sm mb-2">
+          <div className="mb-8" aria-live="polite">
+            <div className="flex items-center justify-between text-xs sm:text-sm mb-2">
               <span data-testid="text-progress">
-                Step {currentStep + 1} of {workshop.steps.length}
+                Stig {currentStep + 1} av {workshop.steps.length}
               </span>
               <span className="text-muted-foreground">
-                {Math.round(progressPercentage)}% Complete
+                {Math.round(progressPercentage)}% liðugt
               </span>
             </div>
-            <Progress value={progressPercentage} className="h-2" />
+            <Progress value={progressPercentage} className="h-2" aria-label="Framgongd" />
           </div>
 
           {/* Step Card */}
           <Card className="mb-8" data-testid={`card-step-${currentStep}`}>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5 text-primary" />
+                <CheckCircle className="h-5 w-5 text-primary" aria-hidden="true" />
                 {currentStepData.title}
               </CardTitle>
               <CardDescription className="text-base mt-2">
@@ -202,20 +219,22 @@ export default function Verkstova() {
             <CardContent className="space-y-6">
               {/* Prompt Section */}
               <div className="space-y-3">
-                <div className="flex justify-between items-center">
-                  <Label className="text-base font-semibold">Prompt:</Label>
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                  <Label className="text-base font-semibold">Birt:</Label>
                   <Button
                     variant="outline"
                     size="sm"
                     onClick={() => handleCopyPrompt(currentStepData.prompt)}
+                    aria-label="Avrita birt"
                     data-testid={`button-copy-prompt-${currentStep}`}
+                    className="sm:self-end"
                   >
-                    <Copy className="h-4 w-4 mr-1" />
-                    Copy Prompt
+                    <Copy className="h-4 w-4 mr-1" aria-hidden="true" />
+                    Avrita birt
                   </Button>
                 </div>
-                <div className="bg-muted/50 p-4 rounded-lg border" data-testid={`text-prompt-${currentStep}`}>
-                  <p className="text-sm leading-relaxed whitespace-pre-wrap">
+                <div className="bg-muted/50 p-4 rounded-lg border overflow-x-auto" data-testid={`text-prompt-${currentStep}`}>
+                  <p className="text-sm leading-relaxed whitespace-pre-wrap break-words font-mono">
                     {currentStepData.prompt}
                   </p>
                 </div>
@@ -232,8 +251,8 @@ export default function Verkstova() {
                       className="mt-1"
                       data-testid={`checkbox-confirm-${currentStep}`}
                     />
-                    <Label 
-                      htmlFor="confirmation" 
+                    <Label
+                      htmlFor="confirmation"
                       className="text-sm font-medium leading-relaxed cursor-pointer"
                     >
                       {currentStepData.confirmationText}
@@ -242,37 +261,41 @@ export default function Verkstova() {
                 </div>
               )}
             </CardContent>
-            <CardFooter className="flex justify-between gap-4">
+
+            {/* Navigation Buttons */}
+            <CardFooter className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 sm:gap-4">
               <Button
                 variant="outline"
                 onClick={handlePrevious}
                 disabled={currentStep === 0}
+                className="w-full sm:w-auto"
                 data-testid="button-previous"
               >
-                <ArrowLeft className="h-4 w-4 mr-1" />
-                Previous
+                <ArrowLeft className="h-4 w-4 mr-1" aria-hidden="true" />
+                Aftur
               </Button>
 
               <AlertDialog open={showExitDialog} onOpenChange={setShowExitDialog}>
                 <AlertDialogTrigger asChild>
                   <Button
                     variant="outline"
+                    className="w-full sm:w-auto"
                     data-testid="button-exit"
                   >
-                    Exit Workshop
+                    Far úr verkstovuni
                   </Button>
                 </AlertDialogTrigger>
                 <AlertDialogContent>
                   <AlertDialogHeader>
-                    <AlertDialogTitle>Exit Workshop?</AlertDialogTitle>
+                    <AlertDialogTitle>Far úr verkstovuni?</AlertDialogTitle>
                     <AlertDialogDescription>
-                      Are you sure you want to exit the workshop? Your progress will not be saved.
+                      Ert tú viss/ur í, at tú vil fara úr verkstovuni? Framgongdin verður ikki goymd.
                     </AlertDialogDescription>
                   </AlertDialogHeader>
                   <AlertDialogFooter>
-                    <AlertDialogCancel>Continue Workshop</AlertDialogCancel>
+                    <AlertDialogCancel>Halt fram við verkstovuni</AlertDialogCancel>
                     <AlertDialogAction onClick={handleExit}>
-                      Exit Workshop
+                      Far úr verkstovuni
                     </AlertDialogAction>
                   </AlertDialogFooter>
                 </AlertDialogContent>
@@ -281,30 +304,30 @@ export default function Verkstova() {
               {currentStep === workshop.steps.length - 1 ? (
                 <Button
                   onClick={handleExit}
-                  className="ml-auto"
+                  className="w-full sm:w-auto sm:ml-auto"
                   data-testid="button-complete"
                 >
-                  Complete Workshop
+                  Ger verkstovuna liðuga
                 </Button>
               ) : (
                 <Button
                   onClick={handleNext}
                   disabled={!canProceed}
-                  className="ml-auto"
+                  className="w-full sm:w-auto sm:ml-auto"
                   data-testid="button-next"
                 >
-                  Next Step
-                  <ArrowRight className="h-4 w-4 ml-1" />
+                  Næsta stig
+                  <ArrowRight className="h-4 w-4 ml-1" aria-hidden="true" />
                 </Button>
               )}
             </CardFooter>
           </Card>
 
           {/* Help Text */}
-          <div className="text-center text-sm text-muted-foreground">
+          <div className="text-center text-sm text-muted-foreground" aria-live="polite">
             {currentStepData.requiresConfirmation && !hasConfirmed && (
               <p data-testid="text-confirmation-required">
-                Please confirm the checkbox above before proceeding to the next step.
+                Vinarliga vátta kassan omanfyri, áðrenn tú heldur fram til næsta stig.
               </p>
             )}
           </div>

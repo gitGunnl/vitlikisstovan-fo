@@ -14,12 +14,12 @@ export interface Workshop {
 
 export const workshops: Record<string, Workshop> = {
   bakkafrost: {
-    name: "Innovation Workshop",
+    name: "Vitlíki verkstova",
     company: "Bakkafrost",
     steps: [
       {
-        title: "Step 1: Vision Exploration",
-        description: "Start by exploring your company's vision for sustainable aquaculture innovation.",
+        title: "Stig 1: Vitlíki verkstova",
+        description: "Avrita birti niðanfyri og kopiera tað inn í ChatGPT og send tað avstað. Svara síðani uppá spurningarnir sum vera settir.",
         prompt: "Describe three innovative approaches that could transform salmon farming in the next 5 years. Consider technology, sustainability, and market needs.",
         requiresConfirmation: false
       },
@@ -53,12 +53,12 @@ export const workshops: Record<string, Workshop> = {
     ]
   },
   betri: {
-    name: "Digital Banking Innovation Workshop",
+    name: "Vitlíki verkstova",
     company: "Betri",
     steps: [
       {
-        title: "Step 1: Customer Journey Mapping",
-        description: "Map out your ideal digital banking customer experience.",
+        title: "Stig 1: Vitlíki samrøða",
+        description: "Koyr birti niðanfyri inn á ChatGPT/Copilot og send tað avstað.",
         prompt: "Describe the perfect digital banking journey from account opening to daily banking. Focus on reducing friction points and enhancing user delight.",
         requiresConfirmation: false
       },
