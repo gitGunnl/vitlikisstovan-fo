@@ -86,10 +86,6 @@ export default function BlogPost() {
         <Section className="py-16">
           <div className="mx-auto max-w-3xl">
             <div className="mb-8">
-              <Link href="/blog" className="text-primary hover:underline mb-4 inline-block">
-                ← Aftur til blogg
-              </Link>
-              
               <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
                 <div className="flex items-center gap-1">
                   <Clock className="w-4 h-4" />
