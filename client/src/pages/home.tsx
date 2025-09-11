@@ -428,7 +428,7 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
                   <div>
                     <img 
-                      src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400"
+                      src="/images/verkstovur.jpeg"
                       alt="Samstarv á eini skrivstovu"
                       className="w-full h-64 lg:h-full object-cover" 
                     />

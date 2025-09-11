@@ -221,7 +221,7 @@ export const siteConfig = {
         description:
           "Eg havi gjørt nógvar vegleðingar og verkstovur til ymiskir bólkar, tildømis lærarar, námsfrøðingar, rithøvundar og eitt ótal av skrivstovufólki. Um tú vil læra meira um hvussu eg geri hesar vegleiðingar so kanst tú lesa meira her:",
         image:
-          "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+          "client/public/verkstovur.jpeg",
         imageAlt: "Samstarv á eini skrivstovu",
         buttonText: "Les meira um hettar",
         buttonVariant: "default",
