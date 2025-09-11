@@ -11,9 +11,9 @@ const rootDir = join(__dirname, '..');
 
 console.log('Starting Vite development server for static site...');
 
-// Start Vite development server with Replit host configuration
-// The --host flag allows all hosts which works around Replit's dynamic host names
-const vite = spawn('npx', ['vite', '--host', '0.0.0.0', '--port', '5000', '--strictPort'], {
+// Start Vite development server with custom configuration for Replit
+// Using a custom config file that allows all hosts to work around Replit's dynamic host names
+const vite = spawn('npx', ['vite', '--config', 'vite.config.custom.js', '--host', '--port', '5000'], {
   cwd: rootDir,
   stdio: 'inherit',
   shell: true,
