@@ -55,6 +55,7 @@ const post = {
 
   <p><strong>Ikon‑legend:</strong> 🟩 klárt / 🟨 brúkilig roynd / 🟥 á granskingarstigi</p>
 
+  <!-- Original Table Layout -->
   <div class="not-prose my-6 overflow-x-auto">
     <table class="table-auto w-full border border-border/60 rounded-lg overflow-hidden">
       <thead class="bg-muted/50">
@@ -104,7 +105,398 @@ const post = {
     </table>
   </div>
 
-  <p><em>Ath.: Leinkjur til royndir verða lagdar inn, tá greinin verður løgd út á heimasíðuna.</em></p>
+  <h4 class="text-lg font-semibold mt-12 mb-6">Alternativ 1: Kortloysnin (Card Layout)</h4>
+  <div class="not-prose grid gap-6 md:grid-cols-2 my-6">
+    <!-- EN→FO Card -->
+    <div class="border border-border/60 rounded-lg p-6 bg-background shadow-sm">
+      <div class="flex items-center justify-between mb-4">
+        <h5 class="font-bold text-lg">EN→FO týðing</h5>
+        <span class="text-2xl">🟨</span>
+      </div>
+      <p class="text-sm text-muted-foreground mb-3">
+        <strong>Modell:</strong> barbaroo/nllb_200_1.3B_en_fo
+      </p>
+      <div class="space-y-3">
+        <div>
+          <span class="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full">Styrkir</span>
+          <p class="text-sm mt-2">Lætt at koyra á egnan <strong>servara</strong>; ofta javnbjóðis <strong>ChatGPT‑4o</strong></p>
+        </div>
+        <div>
+          <span class="text-xs font-medium text-red-600 bg-red-50 px-2 py-1 rounded-full">Veikleikar</span>
+          <p class="text-sm mt-2">Slær ikki <strong>Gemini 2.5 Pro</strong></p>
+        </div>
+        <div>
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Nýtist til</span>
+          <p class="text-sm mt-2">Týða LLM‑úrslit til føroyskt; trygg dátustýring</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ASR Card -->
+    <div class="border border-border/60 rounded-lg p-6 bg-background shadow-sm">
+      <div class="flex items-center justify-between mb-4">
+        <h5 class="font-bold text-lg">ASR (talu→tekst)</h5>
+        <span class="text-2xl">🟨</span>
+      </div>
+      <p class="text-sm text-muted-foreground mb-3">
+        <strong>Modell:</strong> Whisper-large (føroyskt tillagað)
+      </p>
+      <div class="space-y-3">
+        <div>
+          <span class="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full">Styrkir</span>
+          <p class="text-sm mt-2">Reinar upptøkur → <strong>lesiligur tekstur</strong></p>
+        </div>
+        <div>
+          <span class="text-xs font-medium text-red-600 bg-red-50 px-2 py-1 rounded-full">Veikleikar</span>
+          <p class="text-sm mt-2">Óljóð, um tvey tosa í senn, málføri/fakmál</p>
+        </div>
+        <div>
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Nýtist til</span>
+          <p class="text-sm mt-2">Notatir, protokollar</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TTS Card -->
+    <div class="border border-border/60 rounded-lg p-6 bg-background shadow-sm">
+      <div class="flex items-center justify-between mb-4">
+        <h5 class="font-bold text-lg">TTS (tekst→talu)</h5>
+        <span class="text-2xl">🟨</span>
+      </div>
+      <p class="text-sm text-muted-foreground mb-3">
+        <strong>Modell:</strong> Meta MMS TTS (fao)
+      </p>
+      <div class="space-y-3">
+        <div>
+          <span class="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full">Styrkir</span>
+          <p class="text-sm mt-2">Klárt og skiljandi</p>
+        </div>
+        <div>
+          <span class="text-xs font-medium text-red-600 bg-red-50 px-2 py-1 rounded-full">Veikleikar</span>
+          <p class="text-sm mt-2">Mekanisk, fáar røddir</p>
+        </div>
+        <div>
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Nýtist til</span>
+          <p class="text-sm mt-2">Fráboðanir, innanhýsis amboð</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LLM Card -->
+    <div class="border border-border/60 rounded-lg p-6 bg-background shadow-sm">
+      <div class="flex items-center justify-between mb-4">
+        <h5 class="font-bold text-lg">Føroyskt LLM</h5>
+        <span class="text-2xl">🟥</span>
+      </div>
+      <p class="text-sm text-muted-foreground mb-3">
+        <strong>Modell:</strong> gptfo_instruct_6.7B
+      </p>
+      <div class="space-y-3">
+        <div>
+          <span class="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full">Styrkir</span>
+          <p class="text-sm mt-2">Konseptprógv</p>
+        </div>
+        <div>
+          <span class="text-xs font-medium text-red-600 bg-red-50 px-2 py-1 rounded-full">Veikleikar</span>
+          <p class="text-sm mt-2">Óstøðugt, klombrut</p>
+        </div>
+        <div>
+          <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Nýtist til</span>
+          <p class="text-sm mt-2">Gransking/royndir</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h4 class="text-lg font-semibold mt-12 mb-6">Alternativ 2: Listuloysnin (List Layout)</h4>
+  <div class="not-prose space-y-8 my-6">
+    <!-- EN→FO List Item -->
+    <div class="border-l-4 border-yellow-400 pl-6 py-4 bg-gradient-to-r from-yellow-50/30 to-transparent rounded-r-lg">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+        <h5 class="font-bold text-xl">EN→FO týðing</h5>
+        <div class="flex items-center gap-2 text-sm">
+          <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full font-medium">🟨 Brúkilig roynd</span>
+        </div>
+      </div>
+      <p class="font-mono text-sm mb-4 text-muted-foreground bg-gray-100 px-3 py-1 rounded inline-block">
+        barbaroo/nllb_200_1.3B_en_fo
+      </p>
+      <div class="grid md:grid-cols-3 gap-4 text-sm">
+        <div>
+          <h6 class="font-semibold text-green-700 mb-2">✓ Styrkir</h6>
+          <p>Lætt at koyra á egnan <strong>servara</strong>; ofta javnbjóðis <strong>ChatGPT‑4o</strong></p>
+        </div>
+        <div>
+          <h6 class="font-semibold text-red-700 mb-2">✗ Veikleikar</h6>
+          <p>Slær ikki <strong>Gemini 2.5 Pro</strong></p>
+        </div>
+        <div>
+          <h6 class="font-semibold text-blue-700 mb-2">→ Brúk til</h6>
+          <p>Týða LLM‑úrslit til føroyskt; trygg dátustýring</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ASR List Item -->
+    <div class="border-l-4 border-yellow-400 pl-6 py-4 bg-gradient-to-r from-yellow-50/30 to-transparent rounded-r-lg">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+        <h5 class="font-bold text-xl">ASR (talu→tekst)</h5>
+        <div class="flex items-center gap-2 text-sm">
+          <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full font-medium">🟨 Brúkilig roynd</span>
+        </div>
+      </div>
+      <p class="font-mono text-sm mb-4 text-muted-foreground bg-gray-100 px-3 py-1 rounded inline-block">
+        Whisper-large (føroyskt tillagað)
+      </p>
+      <div class="grid md:grid-cols-3 gap-4 text-sm">
+        <div>
+          <h6 class="font-semibold text-green-700 mb-2">✓ Styrkir</h6>
+          <p>Reinar upptøkur → <strong>lesiligur tekstur</strong></p>
+        </div>
+        <div>
+          <h6 class="font-semibold text-red-700 mb-2">✗ Veikleikar</h6>
+          <p>Óljóð, um tvey tosa í senn, málføri/fakmál</p>
+        </div>
+        <div>
+          <h6 class="font-semibold text-blue-700 mb-2">→ Brúk til</h6>
+          <p>Notatir, protokollar</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- TTS List Item -->
+    <div class="border-l-4 border-yellow-400 pl-6 py-4 bg-gradient-to-r from-yellow-50/30 to-transparent rounded-r-lg">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+        <h5 class="font-bold text-xl">TTS (tekst→talu)</h5>
+        <div class="flex items-center gap-2 text-sm">
+          <span class="bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full font-medium">🟨 Brúkilig roynd</span>
+        </div>
+      </div>
+      <p class="font-mono text-sm mb-4 text-muted-foreground bg-gray-100 px-3 py-1 rounded inline-block">
+        Meta MMS TTS (fao)
+      </p>
+      <div class="grid md:grid-cols-3 gap-4 text-sm">
+        <div>
+          <h6 class="font-semibold text-green-700 mb-2">✓ Styrkir</h6>
+          <p>Klárt og skiljandi</p>
+        </div>
+        <div>
+          <h6 class="font-semibold text-red-700 mb-2">✗ Veikleikar</h6>
+          <p>Mekanisk, fáar røddir</p>
+        </div>
+        <div>
+          <h6 class="font-semibold text-blue-700 mb-2">→ Brúk til</h6>
+          <p>Fráboðanir, innanhýsis amboð</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LLM List Item -->
+    <div class="border-l-4 border-red-400 pl-6 py-4 bg-gradient-to-r from-red-50/30 to-transparent rounded-r-lg">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-3">
+        <h5 class="font-bold text-xl">Føroyskt LLM</h5>
+        <div class="flex items-center gap-2 text-sm">
+          <span class="bg-red-100 text-red-800 px-3 py-1 rounded-full font-medium">🟥 Granskingarstigi</span>
+        </div>
+      </div>
+      <p class="font-mono text-sm mb-4 text-muted-foreground bg-gray-100 px-3 py-1 rounded inline-block">
+        gptfo_instruct_6.7B
+      </p>
+      <div class="grid md:grid-cols-3 gap-4 text-sm">
+        <div>
+          <h6 class="font-semibold text-green-700 mb-2">✓ Styrkir</h6>
+          <p>Konseptprógv</p>
+        </div>
+        <div>
+          <h6 class="font-semibold text-red-700 mb-2">✗ Veikleikar</h6>
+          <p>Óstøðugt, klombrut</p>
+        </div>
+        <div>
+          <h6 class="font-semibold text-blue-700 mb-2">→ Brúk til</h6>
+          <p>Gransking/royndir</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h4 class="text-lg font-semibold mt-12 mb-6">Alternativ 3: Sammandráttarloysnin (Summary Boxes)</h4>
+  <div class="not-prose space-y-6 my-6">
+    <!-- EN→FO Summary Box -->
+    <div class="bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-6">
+      <div class="flex items-start justify-between mb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+            EN
+          </div>
+          <div>
+            <h5 class="font-bold text-lg text-gray-900">EN→FO týðing</h5>
+            <p class="text-sm text-gray-600 font-mono">nllb_200_1.3B_en_fo</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-3xl mb-1">🟨</span>
+          <span class="text-xs text-center leading-tight text-gray-600">Brúkilig<br/>roynd</span>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg p-4 space-y-3">
+        <div class="flex gap-4">
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+              <span class="text-sm font-medium text-green-700">Gott</span>
+            </div>
+            <p class="text-sm text-gray-700">Sjálv-hýst, javnbjóðis ChatGPT-4o</p>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+              <span class="text-sm font-medium text-red-700">Ikki so gott</span>
+            </div>
+            <p class="text-sm text-gray-700">Slær ikki Gemini 2.5 Pro</p>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-3 h-3 bg-blue-400 rounded-full"></div>
+              <span class="text-sm font-medium text-blue-700">Best til</span>
+            </div>
+            <p class="text-sm text-gray-700">LLM týðingar, trygg dáta</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ASR Summary Box -->
+    <div class="bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-200 rounded-xl p-6">
+      <div class="flex items-start justify-between mb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+            🎤
+          </div>
+          <div>
+            <h5 class="font-bold text-lg text-gray-900">ASR (talu→tekst)</h5>
+            <p class="text-sm text-gray-600 font-mono">Whisper-large</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-3xl mb-1">🟨</span>
+          <span class="text-xs text-center leading-tight text-gray-600">Brúkilig<br/>roynd</span>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg p-4 space-y-3">
+        <div class="flex gap-4">
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+              <span class="text-sm font-medium text-green-700">Gott</span>
+            </div>
+            <p class="text-sm text-gray-700">Reinar upptøkur til lesiligur tekst</p>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+              <span class="text-sm font-medium text-red-700">Ikki so gott</span>
+            </div>
+            <p class="text-sm text-gray-700">Óljóð, fleiri talara, málføri</p>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-3 h-3 bg-blue-400 rounded-full"></div>
+              <span class="text-sm font-medium text-blue-700">Best til</span>
+            </div>
+            <p class="text-sm text-gray-700">Notatir, protokollar</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TTS Summary Box -->
+    <div class="bg-gradient-to-br from-green-50 to-teal-50 border border-green-200 rounded-xl p-6">
+      <div class="flex items-start justify-between mb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+            🔊
+          </div>
+          <div>
+            <h5 class="font-bold text-lg text-gray-900">TTS (tekst→talu)</h5>
+            <p class="text-sm text-gray-600 font-mono">Meta MMS TTS</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-3xl mb-1">🟨</span>
+          <span class="text-xs text-center leading-tight text-gray-600">Brúkilig<br/>roynd</span>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg p-4 space-y-3">
+        <div class="flex gap-4">
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+              <span class="text-sm font-medium text-green-700">Gott</span>
+            </div>
+            <p class="text-sm text-gray-700">Klárt og skiljandi</p>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+              <span class="text-sm font-medium text-red-700">Ikki so gott</span>
+            </div>
+            <p class="text-sm text-gray-700">Mekanisk, fáar røddir</p>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-3 h-3 bg-blue-400 rounded-full"></div>
+              <span class="text-sm font-medium text-blue-700">Best til</span>
+            </div>
+            <p class="text-sm text-gray-700">Fráboðanir, amboð</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- LLM Summary Box -->
+    <div class="bg-gradient-to-br from-gray-50 to-slate-50 border border-gray-300 rounded-xl p-6 opacity-75">
+      <div class="flex items-start justify-between mb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 bg-gray-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
+            AI
+          </div>
+          <div>
+            <h5 class="font-bold text-lg text-gray-900">Føroyskt LLM</h5>
+            <p class="text-sm text-gray-600 font-mono">gptfo_instruct_6.7B</p>
+          </div>
+        </div>
+        <div class="flex flex-col items-center">
+          <span class="text-3xl mb-1">🟥</span>
+          <span class="text-xs text-center leading-tight text-gray-600">Gransking<br/>stigi</span>
+        </div>
+      </div>
+      <div class="bg-white rounded-lg p-4 space-y-3">
+        <div class="flex gap-4">
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-3 h-3 bg-green-400 rounded-full"></div>
+              <span class="text-sm font-medium text-green-700">Gott</span>
+            </div>
+            <p class="text-sm text-gray-700">Konseptprógv</p>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-3 h-3 bg-red-400 rounded-full"></div>
+              <span class="text-sm font-medium text-red-700">Ikki so gott</span>
+            </div>
+            <p class="text-sm text-gray-700">Óstøðugt, klombrut</p>
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center gap-2 mb-2">
+              <div class="w-3 h-3 bg-blue-400 rounded-full"></div>
+              <span class="text-sm font-medium text-blue-700">Best til</span>
+            </div>
+            <p class="text-sm text-gray-700">Gransking, royndir</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <hr class="my-8 border-border/60" />
 </section>
@@ -117,7 +509,7 @@ const post = {
   <figure class="not-prose my-6">
     <img
       src="/images/blog/foroyskt-vitliki-2025/en-to-fo-translation.gif"
-      alt="Small animation: English text in → Faroese text out"
+      alt="Hvussu tað riggar: enskan tekst in → føroyskan tekst út"
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
     />
