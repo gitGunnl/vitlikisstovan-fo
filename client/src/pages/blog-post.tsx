@@ -71,9 +71,6 @@ export default function BlogPost() {
           <Section className="py-16">
             <div className="mx-auto max-w-3xl text-center">
               <h1 className="text-2xl font-bold mb-4">Grein ikki funnin</h1>
-              <Link href="/blog" className="text-primary hover:underline">
-                ← Aftur til blogg
-              </Link>
             </div>
           </Section>
         </main>
