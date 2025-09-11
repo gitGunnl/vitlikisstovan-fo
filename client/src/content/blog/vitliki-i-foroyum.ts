@@ -53,58 +53,6 @@ const post = {
 <section aria-labelledby="sec-3">
   <h2 id="sec-3">3) Yvirlit: Hvat finst í dag?</h2>
 
-  <p><strong>Ikon‑legend:</strong> 🟩 klárt / 🟨 brúkilig roynd / 🟥 á granskingarstigi</p>
-
-  <!-- Original Table Layout -->
-  <div class="not-prose my-6 overflow-x-auto">
-    <table class="table-auto w-full border border-border/60 rounded-lg overflow-hidden">
-      <thead class="bg-muted/50">
-        <tr>
-          <th class="px-3 py-2 text-left">Evni</th>
-          <th class="px-3 py-2 text-left">Modell / Tól</th>
-          <th class="px-3 py-2 text-left">Støða</th>
-          <th class="px-3 py-2 text-left">Styrkir</th>
-          <th class="px-3 py-2 text-left">Veikleikar</th>
-          <th class="px-3 py-2 text-left">Hvat hóskar til nú</th>
-        </tr>
-      </thead>
-      <tbody class="divide-y divide-border/50">
-        <tr>
-          <td class="px-3 py-3"><strong>EN→FO týðing</strong></td>
-          <td class="px-3 py-3">barbaroo/<strong>nllb_200_1.3B_en_fo</strong></td>
-          <td class="px-3 py-3">🟨</td>
-          <td class="px-3 py-3">Lætt at koyra á egnan <strong>servara</strong>; ofta javnbjóðis <strong>ChatGPT‑4o</strong></td>
-          <td class="px-3 py-3">Slær ikki <strong>Gemini 2.5 Pro</strong></td>
-          <td class="px-3 py-3">Týða LLM‑úrslit til føroyskt; trygg dátustýring</td>
-        </tr>
-        <tr>
-          <td class="px-3 py-3"><strong>ASR (talu→tekst)</strong></td>
-          <td class="px-3 py-3"><strong>Whisper‑large</strong> (føroyskt tillagað)</td>
-          <td class="px-3 py-3">🟨</td>
-          <td class="px-3 py-3">Reinar upptøkur → <strong>lesiligur tekstur</strong></td>
-          <td class="px-3 py-3">Óljóð, um tvey tosa í senn, málføri/fakmál</td>
-          <td class="px-3 py-3">Notatir, protokollar</td>
-        </tr>
-        <tr>
-          <td class="px-3 py-3"><strong>TTS (tekst→talu)</strong></td>
-          <td class="px-3 py-3"><strong>Meta MMS TTS (fao)</strong></td>
-          <td class="px-3 py-3">🟨</td>
-          <td class="px-3 py-3">Klárt og skiljandi</td>
-          <td class="px-3 py-3">Mekanisk, fáar røddir</td>
-          <td class="px-3 py-3">Fráboðanir, innanhýsis amboð</td>
-        </tr>
-        <tr>
-          <td class="px-3 py-3"><strong>Føroyskt LLM</strong></td>
-          <td class="px-3 py-3"><strong>gptfo_instruct_6.7B</strong></td>
-          <td class="px-3 py-3">🟥</td>
-          <td class="px-3 py-3">Konseptprógv</td>
-          <td class="px-3 py-3">Óstøðugt, klombrut</td>
-          <td class="px-3 py-3">Gransking/royndir</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
   <div class="not-prose grid gap-6 md:grid-cols-2 my-6">
     <!-- EN→FO Card -->
     <div class="border border-border/60 rounded-lg p-6 bg-background shadow-sm">
@@ -118,7 +66,7 @@ const post = {
       <div class="space-y-3">
         <div>
           <span class="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full">Styrkir</span>
-          <p class="text-sm mt-2">Lætt at koyra á egnan <strong>servara</strong>; ofta javnbjóðis <strong>ChatGPT‑4o</strong></p>
+          <p class="text-sm mt-2">Skal ikki nýta sergjørt birt til at rigga væl; Lætt at koyra á egnan <strong>servara</strong>; ofta javnbjóðis <strong>ChatGPT‑4o</strong></p>
         </div>
         <div>
           <span class="text-xs font-medium text-red-600 bg-red-50 px-2 py-1 rounded-full">Veikleikar</span>
@@ -126,7 +74,7 @@ const post = {
         </div>
         <div>
           <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Nýtist til</span>
-          <p class="text-sm mt-2">Týða LLM‑úrslit til føroyskt; trygg dátustýring</p>
+          <p class="text-sm mt-2">Týða LLM‑úrslit til føroyskt;</p>
         </div>
       </div>
     </div>
@@ -147,11 +95,11 @@ const post = {
         </div>
         <div>
           <span class="text-xs font-medium text-red-600 bg-red-50 px-2 py-1 rounded-full">Veikleikar</span>
-          <p class="text-sm mt-2">Óljóð, um tvey tosa í senn, málføri/fakmál</p>
+          <p class="text-sm mt-2">Óljóð ger skjótt so úrslit vera væl vánaligari, kann ikki skilja ímillum um tvey tosa í senn</p>
         </div>
         <div>
           <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Nýtist til</span>
-          <p class="text-sm mt-2">Notatir, protokollar</p>
+          <p class="text-sm mt-2">Notatir, skriva uttan at brúka hendurnar</p>
         </div>
       </div>
     </div>
@@ -168,11 +116,11 @@ const post = {
       <div class="space-y-3">
         <div>
           <span class="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full">Styrkir</span>
-          <p class="text-sm mt-2">Klárt og skiljandi</p>
+          <p class="text-sm mt-2">Klárt og lætt skiljandi</p>
         </div>
         <div>
           <span class="text-xs font-medium text-red-600 bg-red-50 px-2 py-1 rounded-full">Veikleikar</span>
-          <p class="text-sm mt-2">Mekanisk, fáar røddir</p>
+          <p class="text-sm mt-2">Mekanisk rødd, bara ein rødd</p>
         </div>
         <div>
           <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Nýtist til</span>
@@ -193,11 +141,11 @@ const post = {
       <div class="space-y-3">
         <div>
           <span class="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full">Styrkir</span>
-          <p class="text-sm mt-2">Konseptprógv</p>
+          <p class="text-sm mt-2">Kann koyrast á einum servara.</p>
         </div>
         <div>
           <span class="text-xs font-medium text-red-600 bg-red-50 px-2 py-1 rounded-full">Veikleikar</span>
-          <p class="text-sm mt-2">Óstøðugt, klombrut</p>
+          <p class="text-sm mt-2">Óstøðugt, klombrut og ikki gott nokk til nakað veruligt arbeiði enn</p>
         </div>
         <div>
           <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Nýtist til</span>
@@ -242,7 +190,7 @@ const post = {
 
   <p><strong>Hvat er so best:</strong> Undir røttum umstøðum er <strong>Gemini 2.5 Pro</strong> best til <strong>føroyskt</strong> sambært mínum royndum; tó krevur tað eitt gott birt og man kann ikki sjálv/ur hýsa modellinum.</p>
 
-  <p>Tú kann royna modellið her: <em>[link]</em></p>
+  <p>Tú kann royna modellið her: <em>https://huggingface.co/spaces/barbaroo/English-Faroese</em></p>
 
   <figure class="not-prose my-6">
     <img
