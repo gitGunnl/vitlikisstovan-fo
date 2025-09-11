@@ -10,9 +10,16 @@ export default defineConfig(
         clientPort: 443,
         protocol: 'wss'
       },
-      host: true, // This allows all hosts
+      host: '0.0.0.0',
       port: 5000,
-      strictPort: true
+      strictPort: true,
+      // Allow all hosts - this is the key setting for Replit
+      allowedHosts: [
+        '.replit.dev',
+        '.replit.app',
+        '.repl.co',
+        'localhost'
+      ]
     }
   })
 );
