@@ -190,7 +190,7 @@ const post = {
 
   <p><strong>Hvat er so best:</strong> Undir røttum umstøðum er <strong>Gemini 2.5 Pro</strong> best til <strong>føroyskt</strong> sambært mínum royndum; tó krevur tað eitt gott birt og man kann ikki sjálv/ur hýsa modellinum.</p>
 
-  <p>Tú kann royna modellið her: <em>https://huggingface.co/spaces/barbaroo/English-Faroese</em></p>
+  <p>Tú kann royna modellið her: <a href="https://huggingface.co/spaces/barbaroo/English-Faroese" target="_blank" rel="noopener noreferrer">https://huggingface.co/spaces/barbaroo/English-Faroese</a></p>
 
   <figure class="not-prose my-6">
     <img
