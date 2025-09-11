@@ -27,8 +27,8 @@ const post = {
 
   <figure class="not-prose my-6">
     <img
-      src="/images/blog/foroyskt-vitliki-2025/house-tools-analogy.png"
-      alt="Analogy: models are tools like hammers and saws; people and workflows build the house"
+      src="/images/verkstova.jpeg"
+      alt="Verkstova image"
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
     />
