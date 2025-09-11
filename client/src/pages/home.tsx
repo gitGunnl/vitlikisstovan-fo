@@ -537,26 +537,93 @@ export default function Home() {
 
           {/* Dialog for Vegleiðingar */}
           <Dialog open={openDialog === 'vegleidingar'} onOpenChange={() => setOpenDialog(null)}>
-            <DialogContent className="max-w-md">
+            <DialogContent className="max-w-2xl">
               <DialogHeader>
-                <DialogTitle>Vegleiðingar - Ókeypis Niðurtak</DialogTitle>
+                <DialogTitle>Vegleiðingar & Verkstovur</DialogTitle>
                 <DialogDescription>
-                  Her kanst tú taka niður ókeypis vegleiðingar til ChatGPT og vitlíki amboð.
+                  Eg havi hildið hópin av verkstovum, og vit hava gjørt enn fleiri – sera væl
+                  umtóktar – vegleiðingar um, hvussu tú brúkar ChatGPT og onnur vitlíki‑amboð
+                  í veruligum arbeiðsuppgávum.
                 </DialogDescription>
               </DialogHeader>
-              <div className="space-y-4">
-                <p>Tøkar vegleiðingar fyri at byrja við vitlíki í tínum arbeiði.</p>
-                <div className="flex gap-2">
-                  <Button className="flex-1">
-                    Tak niður PDF
-                  </Button>
-                  <Button variant="outline" className="flex-1">
-                    Síggj Online
-                  </Button>
-                </div>
+
+              <div className="space-y-6">
+                {/* Free sample guides */}
+                <section className="space-y-2">
+                  <h4 className="text-lg font-semibold">Ókeypis dømi (2 vegleiðingar)</h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Vit bjóða tvey ókeypis royndarskjøl: eitt ætlað <strong>lærarum</strong> og eitt ætlað
+                    <strong> politikarum</strong>. Bæði innihalda listar við gagnligum nýtslum fyri hesi
+                    starvsøki – og <em>neyv stig‑fyrir‑stig</em> leiðbeining um, hvussu tú gert hesar
+                    uppgávur við vitlíki.
+                  </p>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <Button asChild className="w-full">
+                      {/* TODO: Set correct PDF path */}
+                      <a href="/downloads/vegleiding-larar.pdf" download>
+                        <FileText className="mr-2 h-4 w-4" />
+                        Tak niður: Lærarar (PDF)
+                      </a>
+                    </Button>
+
+                    <Button asChild variant="outline" className="w-full">
+                      {/* TODO: Set correct PDF path */}
+                      <a href="/downloads/vegleiding-politikarar.pdf" download>
+                        <FileText className="mr-2 h-4 w-4" />
+                        Tak niður: Politikarar (PDF)
+                      </a>
+                    </Button>
+                  </div>
+                </section>
+
+                {/* Order your own guide */}
+                <section className="space-y-2">
+                  <h4 className="text-lg font-semibold">Bílegg vegleiðing til títt arbeiðsøki</h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Tú kanst fáa eina <strong>sergjørda vegleiðing</strong> til júst tykkara arbeiðsuppgávur
+                    fyri <strong>1600 DKK</strong>. Vit savna best‑practice nýtslur og gera greiðar, praktiskar
+                    leiðbeiningar, so alt kann nýtast beinanvegin.
+                  </p>
+
+                  <div className="flex flex-wrap gap-3">
+                    <Button
+                      onClick={() => {
+                        setOpenDialog(null);
+                        const el = document.querySelector('#contact');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      }}
+                      aria-label="Bílegg vegleiðing"
+                    >
+                      <Mail className="mr-2 h-4 w-4" />
+                      Bílegg vegleiðing (1600 DKK)
+                    </Button>
+                  </div>
+                </section>
+
+                {/* Project: Vitlíki til arbeiði */}
+                <section className="space-y-2">
+                  <h4 className="text-lg font-semibold">“Vitlíki til arbeiði”</h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Í verkætlanini <strong>Vitlíki til arbeiði</strong> skriva vit vegleiðingar til fólk og
+                    fakbólkar, sum veruliga hava tørv á hjálpini. Endamálið er at fáa vitlíki út til tey, sum
+                    annars ikki røkka tí – við greiðum dømun og einfaldari framgongd.
+                  </p>
+                </section>
+
+                {/* Workshops */}
+                <section className="space-y-2">
+                  <h4 className="text-lg font-semibold">Verkstovur – einfalt og praktiskt</h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Vit skipa eisini fyri verkstovum, har vit gera vitlíki <em>lætt at skilja</em> og
+                    <em> beinanvegin praktiskt</em>. Luttakarar fáa fyrimyndir, skabelónir og stuðul,
+                    so úrslitini koma sama dag.
+                  </p>
+                </section>
               </div>
             </DialogContent>
           </Dialog>
+
 
           {/* Dialog for Týðingar */}
           <Dialog open={openDialog === 'tydingar'} onOpenChange={() => setOpenDialog(null)}>

@@ -7,8 +7,9 @@ channel = "stable-24_05"
 
 [deployment]
 deploymentTarget = "static"
-build = ["npm", "run", "build", "&&", "node", "scripts/fix-deployment.js"]
+build = ["sh", "-c", "npm run build && node scripts/fix-deployment.js"]
 publicDir = "dist"
+run = ["sh", "-c", ""]
 
 [env]
 PORT = "5000"
