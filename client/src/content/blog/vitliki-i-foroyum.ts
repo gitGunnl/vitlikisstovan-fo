@@ -170,7 +170,7 @@ const post = {
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
     />
-    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>[small image showing english text goes in and Faroese text goes out. gif]</em></figcaption>
+    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>[lítil mynd sum vísir enskan tekst fer inn og føroyskan tekst kemur út. gif]</em></figcaption>
   </figure>
 
   <p><strong>Hví hetta hevur týdning:</strong> Um ensk→føroysk týðing riggar væl, ber til at leggja hana oman á ChatGPT, Gemini ella onnur stór málmodell og fáa úrslit á <strong>føroyskum, ið kennast heilt natúrlig</strong>. Sí mynd niðanfyri.</p>
@@ -199,7 +199,7 @@ const post = {
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
     />
-    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>[diagram of translation setup]</em></figcaption>
+    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>[diagram av týðingarskipanini]</em></figcaption>
   </figure>
 
   <hr class="my-8 border-border/60" />
@@ -213,7 +213,7 @@ const post = {
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
     />
-    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>[small image of faroese speech goes in, text comes out.]</em></figcaption>
+    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>[lítil mynd av føroyskari talu fer inn, tekstur kemur út.]</em></figcaption>
   </figure>
 
   <p><strong>Hví hetta hevur týdning:</strong> Tað letur upp fyri tveimum vanligum nýtsluháttum:</p>
@@ -243,7 +243,7 @@ const post = {
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
     />
-    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>[diagram of speech setup]</em></figcaption>
+    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>[diagram av taluskipanini]</em></figcaption>
   </figure>
 
   <hr class="my-8 border-border/60" />
@@ -257,7 +257,7 @@ const post = {
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
     />
-    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>[small diagram showing faroese text goes in and faroese sound comes out.]</em></figcaption>
+    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>[lítið diagram sum vísir føroysk tekst fer inn og føroyskt ljóð kemur út.]</em></figcaption>
   </figure>
 
   <p><strong>Hví hetta hevur týdning:</strong> Gevur skipanum eina <strong>føroyska rødd</strong> til fráboðanir og hondfría vitlíksnýtslu – og nógvar møguleikar fyri sjónveik.</p>
