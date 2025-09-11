@@ -10,16 +10,20 @@ deploymentTarget = "static"
 build = ["npm", "run", "build"]
 publicDir = "dist"
 
-[[ports]]
-localPort = 5000
-externalPort = 80
-
 [env]
 PORT = "5000"
 
 [[deployment.rewrites]]
 from = "/*"
 to = "/index.html"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[[ports]]
+localPort = 37693
+externalPort = 3000
 
 [workflows]
 runButton = "Project"
