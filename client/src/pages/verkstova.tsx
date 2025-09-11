@@ -5,6 +5,17 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Progress } from "@/components/ui/progress";
 import { Checkbox } from "@/components/ui/checkbox";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger,
+} from "@/components/ui/alert-dialog";
 import { useToast } from "@/hooks/use-toast";
 import { getWorkshopByPassword, Workshop, WorkshopStep } from "@/data/workshops";
 import { Copy, ArrowRight, ArrowLeft, Lock, CheckCircle } from "lucide-react";
@@ -17,6 +28,7 @@ export default function Verkstova() {
   const [currentStep, setCurrentStep] = useState(0);
   const [hasConfirmed, setHasConfirmed] = useState(false);
   const [error, setError] = useState("");
+  const [showExitDialog, setShowExitDialog] = useState(false);
   const { toast } = useToast();
 
   useEffect(() => {
@@ -190,23 +202,22 @@ export default function Verkstova() {
             <CardContent className="space-y-6">
               {/* Prompt Section */}
               <div className="space-y-3">
-                <Label className="text-base font-semibold">Prompt:</Label>
-                <div className="relative">
-                  <div className="bg-muted/50 p-4 rounded-lg border" data-testid={`text-prompt-${currentStep}`}>
-                    <p className="text-sm leading-relaxed whitespace-pre-wrap">
-                      {currentStepData.prompt}
-                    </p>
-                  </div>
+                <div className="flex justify-between items-center">
+                  <Label className="text-base font-semibold">Prompt:</Label>
                   <Button
                     variant="outline"
                     size="sm"
-                    className="absolute top-2 right-2"
                     onClick={() => handleCopyPrompt(currentStepData.prompt)}
                     data-testid={`button-copy-prompt-${currentStep}`}
                   >
                     <Copy className="h-4 w-4 mr-1" />
                     Copy Prompt
                   </Button>
+                </div>
+                <div className="bg-muted/50 p-4 rounded-lg border" data-testid={`text-prompt-${currentStep}`}>
+                  <p className="text-sm leading-relaxed whitespace-pre-wrap">
+                    {currentStepData.prompt}
+                  </p>
                 </div>
               </div>
 
@@ -242,13 +253,30 @@ export default function Verkstova() {
                 Previous
               </Button>
 
-              <Button
-                variant="outline"
-                onClick={handleExit}
-                data-testid="button-exit"
-              >
-                Exit Workshop
-              </Button>
+              <AlertDialog open={showExitDialog} onOpenChange={setShowExitDialog}>
+                <AlertDialogTrigger asChild>
+                  <Button
+                    variant="outline"
+                    data-testid="button-exit"
+                  >
+                    Exit Workshop
+                  </Button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <AlertDialogHeader>
+                    <AlertDialogTitle>Exit Workshop?</AlertDialogTitle>
+                    <AlertDialogDescription>
+                      Are you sure you want to exit the workshop? Your progress will not be saved.
+                    </AlertDialogDescription>
+                  </AlertDialogHeader>
+                  <AlertDialogFooter>
+                    <AlertDialogCancel>Continue Workshop</AlertDialogCancel>
+                    <AlertDialogAction onClick={handleExit}>
+                      Exit Workshop
+                    </AlertDialogAction>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
 
               {currentStep === workshop.steps.length - 1 ? (
                 <Button
