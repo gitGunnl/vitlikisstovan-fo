@@ -8,6 +8,7 @@ import ContactSection from "@/components/site/ContactForm";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import { siteConfig } from "@/content/site";
 import { seoConfig } from "@/content/seo";
 import { 
@@ -74,7 +75,7 @@ export default function Home() {
       >
         {/* Background overlay for readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60 hero-overlay"></div>
-        
+
         {/* Animated gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10 animate-pulse"></div>
 
@@ -91,7 +92,7 @@ export default function Home() {
             secondary={siteConfig.hero.secondaryCTA}
             className="mt-2 mb-16"
           />
-          
+
           {/* Bottom of Hero CTA */}
           <div className="mt-16">
             <button
@@ -149,7 +150,7 @@ export default function Home() {
                         <GraduationCap key={index} className="w-6 h-6 text-primary" />,
                         <CheckCircle key={index} className="w-6 h-6 text-primary" />
                       ];
-                      
+
                       return (
                         <div key={index} className="flex items-start space-x-4 p-2">
                           <div className="flex-shrink-0 mt-1">
@@ -242,7 +243,7 @@ export default function Home() {
                           <GraduationCap className="w-5 h-5 text-primary" />,
                           <Users className="w-5 h-5 text-primary" />
                         ];
-                        
+
                         return (
                           <div key={index} className="flex items-start space-x-4">
                             <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
@@ -256,7 +257,7 @@ export default function Home() {
                         );
                       }) || []}
                     </div>
-                    
+
                     <div className="space-y-4">
                       {siteConfig.program.delivery.items?.slice(Math.ceil(siteConfig.program.delivery.items.length / 2)).map((item, index) => {
                         const icons = [
@@ -264,7 +265,7 @@ export default function Home() {
                           <Lightbulb className="w-5 h-5 text-primary" />,
                           <MessageCircle className="w-5 h-5 text-primary" />
                         ];
-                        
+
                         return (
                           <div key={index} className="flex items-start space-x-4">
                             <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
@@ -279,7 +280,7 @@ export default function Home() {
                       }) || []}
                     </div>
                   </div>
-                  
+
                   {siteConfig.program.delivery.note && (
                     <div className="mt-8 pt-6 border-t">
                       <p className="text-sm text-center italic text-muted-foreground">
@@ -313,7 +314,7 @@ export default function Home() {
                   <Users key={index} className="w-6 h-6" />,
                   <Palette key={index} className="w-6 h-6" />
                 ];
-                
+
                 return (
                   <CardFeature
                     key={index}
@@ -348,7 +349,7 @@ export default function Home() {
                     <MessageCircle key={index} className="w-6 h-6" />,
                     <Zap key={index} className="w-6 h-6" />
                   ];
-                  
+
                   return (
                     <CardFeature
                       key={index}
@@ -436,7 +437,7 @@ export default function Home() {
                   <div className="p-8 lg:p-12 flex flex-col justify-center">
                     <h3 className="text-2xl lg:text-3xl font-bold mb-6">Vegleiðingar og verkstovur</h3>
                     <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-                      Eg havi gjørt nógvar vegleðingar og verkstovur til ymiskir bólkar, tildømis lærarar, námsfrøðingar, rithøvundar og eitt ótal av skrivstovufólki. Um tú vil læra meira um hvussu eg geri hesar vegleiðingar so kanst tú lesa meira her:
+                      Eg havi gjørt nógvar vegleiðingar og verkstovur til ymiskir bólkar, tildømis lærarar, námsfrøðingar, rithøvundar og eitt ótal av skrivstovufólki. Um tú vil læra meira um hvussu eg geri hesar vegleiðingar so kanst tú lesa meira her:
                     </p>
                     <div>
                       <Button 
@@ -547,80 +548,82 @@ export default function Home() {
                 </DialogDescription>
               </DialogHeader>
 
-              <div className="space-y-6">
-                {/* Free sample guides */}
-                <section className="space-y-2">
-                  <h4 className="text-lg font-semibold">Ókeypis dømi (2 vegleiðingar)</h4>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Vit bjóða tvey ókeypis royndarskjøl: eitt ætlað <strong>lærarum</strong> og eitt ætlað
-                    <strong> politikarum</strong>. Bæði innihalda listar við gagnligum nýtslum fyri hesi
-                    starvsøki – og <em>neyv stig‑fyrir‑stig</em> leiðbeining um, hvussu tú gert hesar
-                    uppgávur við vitlíki.
-                  </p>
+              <ScrollArea className="h-[400px] px-2">
+                <div className="space-y-6 pr-4">
+                  {/* Free sample guides */}
+                  <section className="space-y-2">
+                    <h4 className="text-lg font-semibold">Ókeypis dømi (2 vegleiðingar)</h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Vit bjóða tvey ókeypis royndarskjøl: eitt ætlað <strong>lærarum</strong> og eitt ætlað
+                      <strong> politikarum</strong>. Bæði innihalda listar við gagnligum nýtslum fyri hesi
+                      starvsøki – og <em>neyv stig‑fyrir‑stig</em> leiðbeining um, hvussu tú gert hesar
+                      uppgávur við vitlíki.
+                    </p>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <Button asChild className="w-full">
-                      {/* TODO: Set correct PDF path */}
-                      <a href="/downloads/vegleiding-larar.pdf" download>
-                        <FileText className="mr-2 h-4 w-4" />
-                        Tak niður: Lærarar (PDF)
-                      </a>
-                    </Button>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <Button asChild className="w-full">
+                        {/* TODO: Set correct PDF path */}
+                        <a href="/downloads/vegleiding-larar.pdf" download>
+                          <FileText className="mr-2 h-4 w-4" />
+                          Tak niður: Lærarar (PDF)
+                        </a>
+                      </Button>
 
-                    <Button asChild variant="outline" className="w-full">
-                      {/* TODO: Set correct PDF path */}
-                      <a href="/downloads/vegleiding-politikarar.pdf" download>
-                        <FileText className="mr-2 h-4 w-4" />
-                        Tak niður: Politikarar (PDF)
-                      </a>
-                    </Button>
-                  </div>
-                </section>
+                      <Button asChild variant="outline" className="w-full">
+                        {/* TODO: Set correct PDF path */}
+                        <a href="/downloads/vegleiding-politikarar.pdf" download>
+                          <FileText className="mr-2 h-4 w-4" />
+                          Tak niður: Politikarar (PDF)
+                        </a>
+                      </Button>
+                    </div>
+                  </section>
 
-                {/* Order your own guide */}
-                <section className="space-y-2">
-                  <h4 className="text-lg font-semibold">Bílegg vegleiðing til títt arbeiðsøki</h4>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Tú kanst fáa eina <strong>sergjørda vegleiðing</strong> til júst tykkara arbeiðsuppgávur
-                    fyri <strong>1600 DKK</strong>. Vit savna best‑practice nýtslur og gera greiðar, praktiskar
-                    leiðbeiningar, so alt kann nýtast beinanvegin.
-                  </p>
+                  {/* Order your own guide */}
+                  <section className="space-y-2">
+                    <h4 className="text-lg font-semibold">Bílegg vegleiðing til títt arbeiðsøki</h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Tú kanst fáa eina <strong>sergjørda vegleiðing</strong> til júst tykkara arbeiðsuppgávur
+                      fyri <strong>1600 DKK</strong>. Vit savna best‑practice nýtslur og gera greiðar, praktiskar
+                      leiðbeiningar, so alt kann nýtast beinanvegin.
+                    </p>
 
-                  <div className="flex flex-wrap gap-3">
-                    <Button
-                      onClick={() => {
-                        setOpenDialog(null);
-                        const el = document.querySelector('#contact');
-                        if (el) el.scrollIntoView({ behavior: 'smooth' });
-                      }}
-                      aria-label="Bílegg vegleiðing"
-                    >
-                      <Mail className="mr-2 h-4 w-4" />
-                      Bílegg vegleiðing (1600 DKK)
-                    </Button>
-                  </div>
-                </section>
+                    <div className="flex flex-wrap gap-3">
+                      <Button
+                        onClick={() => {
+                          setOpenDialog(null);
+                          const el = document.querySelector('#contact');
+                          if (el) el.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        aria-label="Bílegg vegleiðing"
+                      >
+                        <Mail className="mr-2 h-4 w-4" />
+                        Bílegg vegleiðing (1600 DKK)
+                      </Button>
+                    </div>
+                  </section>
 
-                {/* Project: Vitlíki til arbeiði */}
-                <section className="space-y-2">
-                  <h4 className="text-lg font-semibold">“Vitlíki til arbeiði”</h4>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Í verkætlanini <strong>Vitlíki til arbeiði</strong> skriva vit vegleiðingar til fólk og
-                    fakbólkar, sum veruliga hava tørv á hjálpini. Endamálið er at fáa vitlíki út til tey, sum
-                    annars ikki røkka tí – við greiðum dømun og einfaldari framgongd.
-                  </p>
-                </section>
+                  {/* Project: Vitlíki til arbeiði */}
+                  <section className="space-y-2">
+                    <h4 className="text-lg font-semibold">“Vitlíki til arbeiði”</h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Í verkætlanini <strong>Vitlíki til arbeiði</strong> skriva vit vegleiðingar til fólk og
+                      fakbólkar, sum veruliga hava tørv á hjálpini. Endamálið er at fáa vitlíki út til tey, sum
+                      annars ikki røkka tí – við greiðum dømun og einfaldari framgongd.
+                    </p>
+                  </section>
 
-                {/* Workshops */}
-                <section className="space-y-2">
-                  <h4 className="text-lg font-semibold">Verkstovur – einfalt og praktiskt</h4>
-                  <p className="text-muted-foreground leading-relaxed">
-                    Vit skipa eisini fyri verkstovum, har vit gera vitlíki <em>lætt at skilja</em> og
-                    <em> beinanvegin praktiskt</em>. Luttakarar fáa fyrimyndir, skabelónir og stuðul,
-                    so úrslitini koma sama dag.
-                  </p>
-                </section>
-              </div>
+                  {/* Workshops */}
+                  <section className="space-y-2">
+                    <h4 className="text-lg font-semibold">Verkstovur – einfalt og praktiskt</h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Vit skipa eisini fyri verkstovum, har vit gera vitlíki <em>lætt at skilja</em> og
+                      <em> beinanvegin praktiskt</em>. Luttakarar fáa fyrimyndir, skabelónir og stuðul,
+                      so úrslitini koma sama dag.
+                    </p>
+                  </section>
+                </div>
+              </ScrollArea>
             </DialogContent>
           </Dialog>
 
@@ -649,7 +652,7 @@ export default function Home() {
           </Dialog>
         </Section>
 
-        
+
 
         {/* Contact */}
         <div id="contact">
