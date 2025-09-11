@@ -6,7 +6,6 @@ const post = {
   slug: "foroyskt-vitliki-2025-hvat-riggar-nu",
   excerpt:
     "Eitt skjótt yvirlit yvir modellini, meting av avrikum og ein hugleiðing um hvat eigur at mennast næst — við greiðum stigum fyri fyritøkur og gransking.",
-  date: "2025-09-09",
   readTime: "12 min",
   author: "Vitlíkisstovan",
   // IMPORTANT: content is semantic HTML. Text is unchanged.
