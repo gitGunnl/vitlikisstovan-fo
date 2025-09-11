@@ -11,11 +11,17 @@ const rootDir = join(__dirname, '..');
 
 console.log('Starting Vite development server for static site...');
 
-// Start Vite development server
-const vite = spawn('npx', ['vite', '--host', '0.0.0.0', '--port', '5000'], {
+// Start Vite development server with Replit host configuration
+// The --host flag allows all hosts which works around Replit's dynamic host names
+const vite = spawn('npx', ['vite', '--host', '0.0.0.0', '--port', '5000', '--strictPort'], {
   cwd: rootDir,
   stdio: 'inherit',
-  shell: true
+  shell: true,
+  env: {
+    ...process.env,
+    // Force Vite to accept all hosts for Replit development
+    VITE_CJS_IGNORE_WARNING: 'true'
+  }
 });
 
 vite.on('error', (err) => {
