@@ -195,11 +195,11 @@ const post = {
   <figure class="not-prose my-6">
     <img
       src="/images/blog/foroyskt-vitliki-2025/translation-pipeline-diagram.png"
-      alt="Diagram of translation setup layered over general LLM output"
+      alt="Dømi um hvussu man kann nýta ein týðara saman við ChatGPT fyri at fáa svar at kennast føroysk"
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
     />
-    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>[diagram av týðingarskipanini]</em></figcaption>
+    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>Dømi um hvussu man kann nýta ein týðara saman við ChatGPT fyri at fáa svar at kennast føroysk</em></figcaption>
   </figure>
 
   <hr class="my-8 border-border/60" />
@@ -213,7 +213,7 @@ const post = {
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
     />
-    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>[lítil mynd av føroyskari talu fer inn, tekstur kemur út.]</em></figcaption>
+    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>føroyskari talu fer inn, tekstur kemur út.]</em></figcaption>
   </figure>
 
   <p><strong>Hví hetta hevur týdning:</strong> Tað letur upp fyri tveimum vanligum nýtsluháttum:</p>
