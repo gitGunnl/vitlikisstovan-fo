@@ -6,6 +6,13 @@ This is a static website for Vitlíkisstovan, an AI and coding education platfor
 
 Preferred communication style: Simple, everyday language.
 
+## Development Best Practices
+
+### Content Management
+- **Single Source of Truth**: All site content and configuration should be centralized in `client/src/content/site.ts` to prevent duplication and inconsistencies
+- **No Hard-coded Content**: Components should never contain hard-coded text. Instead, they should import and use data from the site configuration
+- **Structured Data**: Content should be organized in logical sections within site.ts (hero, program, cases, etc.) for maintainability
+
 # System Architecture
 
 ## Frontend Architecture
