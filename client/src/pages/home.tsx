@@ -541,8 +541,7 @@ export default function Home() {
                       <Button
                         onClick={() => {
                           setOpenDialog(null);
-                          const el = document.querySelector('#contact');
-                          if (el) el.scrollIntoView({ behavior: 'smooth' });
+                          window.location.href = '/contact';
                         }}
                         aria-label="Bílegg vegleiðing"
                       >
@@ -568,13 +567,12 @@ export default function Home() {
                       <Button
                         onClick={() => {
                           setOpenDialog(null);
-                          const el = document.querySelector('#contact');
-                          if (el) el.scrollIntoView({ behavior: 'smooth' });
+                          window.location.href = '/vitliki-til-arbeidis';
                         }}
-                        aria-label="Sign up for Vitlíki til arbeiði"
+                        aria-label="Les meira um hesa verkætlan"
                       >
                         <Mail className="mr-2 h-4 w-4" />
-                        Tekn sting upp til kunning
+                        Les meira um hesa verkætlan
                       </Button>
                     </div>
                   </section>
