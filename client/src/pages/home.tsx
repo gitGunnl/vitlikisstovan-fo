@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import Section from "@/components/site/Section";
@@ -182,8 +182,8 @@ export default function Home() {
                 <CardContent className="p-8">
                   <div className="flex flex-col md:flex-row items-center justify-between gap-6">
                     {siteConfig.program.howItWorks.steps?.map((step, index) => (
-                      <>
-                        <div key={index} className="flex-1 text-center">
+                      <React.Fragment key={index}>
+                        <div className="flex-1 text-center">
                           <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                             <span className="text-primary-foreground font-bold text-xl">{step.number}</span>
                           </div>
@@ -198,7 +198,7 @@ export default function Home() {
                             </svg>
                           </div>
                         )}
-                      </>
+                      </React.Fragment>
                     )) || []}
                   </div>
                 </CardContent>
