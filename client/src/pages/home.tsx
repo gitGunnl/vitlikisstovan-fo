@@ -664,15 +664,19 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {siteConfig.resources.items.map((resource, index) => (
+            {siteConfig.resources.items.map((resource, index) => {
+              const iconComponents: { [key: string]: JSX.Element } = {
+                FileText: <FileText className={`h-6 w-6 ${resource.iconColor}`} />,
+                Video: <Video className={`h-6 w-6 ${resource.iconColor}`} />,
+                MessageCircle: <MessageCircle className={`h-6 w-6 ${resource.iconColor}`} />
+              };
+
+              return (
                 <Card key={index} className="relative overflow-hidden group hover:shadow-lg transition-shadow duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className={`p-3 rounded-xl ${resource.iconBg} flex-shrink-0`}>
-                        {React.createElement(
-                          eval(resource.icon), 
-                          { className: `h-6 w-6 ${resource.iconColor}` }
-                        )}
+                        {iconComponents[resource.icon] || <FileText className={`h-6 w-6 ${resource.iconColor}`} />}
                       </div>
                       <div>
                         <h3 className="text-lg font-semibold mb-2">{resource.title}</h3>
@@ -690,8 +694,8 @@ export default function Home() {
                     </div>
                   </CardContent>
                 </Card>
-              )) || []}
-          </div>
+              );
+            }) || []}</div>
         </Section>
 
         {/* Contact Section */}
