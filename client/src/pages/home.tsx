@@ -664,36 +664,33 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {siteConfig.resources.items?.map((item, index) => {
-              const iconComponents: { [key: string]: JSX.Element } = {
-                FileText: <FileText className="w-8 h-8" />,
-                Video: <Video className="w-8 h-8" />,
-                MessageCircle: <MessageCircle className="w-8 h-8" />
-              };
-
-              return (
-                <Card key={index} className="bg-card hover:shadow-lg transition-shadow">
+            {siteConfig.resources.items.map((resource, index) => (
+                <Card key={index} className="relative overflow-hidden group hover:shadow-lg transition-shadow duration-300">
                   <CardContent className="p-6">
-                    <div className={`w-16 h-16 ${item.iconBg} rounded-lg flex items-center justify-center mb-4`}>
-                      <div className={item.iconColor}>
-                        {iconComponents[item.icon] || <FileText className="w-8 h-8" />}
+                    <div className="flex items-start gap-4">
+                      <div className={`p-3 rounded-xl ${resource.iconBg} flex-shrink-0`}>
+                        {React.createElement(
+                          eval(resource.icon), 
+                          { className: `h-6 w-6 ${resource.iconColor}` }
+                        )}
+                      </div>
+                      <div>
+                        <h3 className="text-lg font-semibold mb-2">{resource.title}</h3>
+                        <p className="text-sm text-muted-foreground mb-4">{resource.description}</p>
+                        <Button
+                          className={resource.buttonStyle}
+                          data-testid={`button-resource-${index}`}
+                          asChild
+                        >
+                          <a href={resource.href} target="_blank" rel="noopener noreferrer">
+                            {resource.buttonText}
+                          </a>
+                        </Button>
                       </div>
                     </div>
-                    <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
-                    <p className="text-sm text-muted-foreground mb-4">{item.description}</p>
-                    <Button
-                      className={item.buttonStyle}
-                      data-testid={`button-resource-${index}`}
-                      asChild
-                    >
-                      <a href={item.href} target="_blank" rel="noopener noreferrer">
-                        {item.buttonText}
-                      </a>
-                    </Button>
                   </CardContent>
                 </Card>
-              );
-            }) || []}
+              )) || []}
           </div>
         </Section>
 
