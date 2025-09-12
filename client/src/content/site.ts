@@ -65,15 +65,18 @@ export const siteConfig = {
       title: "Soleiðis byrja vit",
       steps: [
         {
-          title: "1) Samrøða (1 tími)",
+          title: "Samrøða (1 tími)",
+          number: "1",
           description: "Vit tosa um tykkara veruleika og seta rammuna fyri skeiðið."
         },
         {
-          title: "2) Uppseting",
-          description: "Vit seta leiðreglur, finna amboð og halda verkstovur."
+          title: "Uppseting",
+          number: "2",
+          description: "Vit gera leiðreglur, velja amboð og fyrireika verkstovur - tit skula bara læra."
         },
         {
-          title: "3) Læra og brúka",
+          title: "Læra og brúka",
+          number: "3",
           description: "Verkstovur og stuðul á staðnum – og eftirfylging eftir 2–3 vikur."
         }
       ]
@@ -221,33 +224,32 @@ export const siteConfig = {
         description:
           "Eg havi gjørt nógvar vegleðingar og verkstovur til ymiskir bólkar, tildømis lærarar, námsfrøðingar, rithøvundar og eitt ótal av skrivstovufólki. Um tú vil læra meira um hvussu eg geri hesar vegleiðingar so kanst tú lesa meira her:",
         image:
-          "client/public/verkstovur.jpeg",
+          "/images/verkstovur.jpeg",
         imageAlt: "Samstarv á eini skrivstovu",
         buttonText: "Les meira um hettar",
         buttonVariant: "default",
-        buttonHref: "#"
+        dialogId: "vegleidingar"
       },
       {
         title: "Sergjørt amboð til týðing úr Donskum til Føroyskt",
         description:
           "Onkumtíð so skal man bara hava hjálp frá vitlíki til eina ávísa uppgávu. Tildømis um tú skal týða Donsk skjal til Føroyskt. Hettar var ein uppgáva eg havi loyst fyri ein kunda. Les meira um hvussu tað gekk fyri seg her:",
         image:
-          "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+          "/images/dansk til foroyskt.gif",
         imageAlt: "Bøkur og tilfar um málslæru",
-        buttonText: "Les meira",
+        buttonText: "Síggj dømið",
         buttonVariant: "outline",
-        buttonHref: "#"
+        dialogId: "tydingar"
       },
       {
         title: "Kreativt vitlíki: myndir, filmar og annað",
         description:
           "Vitlíki kann skapa alt millum himmal og jørð: myndir, filmar, tónleik og nógv annað. Eg deili regluliga tíðindir og ymiskar royndir eg geri við vitlíki, serliga í mun til at skapa tilfar við vitlíki, tú kann síggja nógv ting eg havi roynt á sosialum miðlum.",
         image:
-          "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=400",
+          "/images/AI image example.jpeg",
         imageAlt: "Filmframleiðsla og kreativt studio",
-        buttonText: "",
-        buttonVariant: "outline",
-        buttonHref: "#"
+        followText: "Fylg okkum á sosialu miðlunum fyri at síggja dømi um tað vit hava skapað og fáa reglubundnar innsiktir um hvat er møguligt við vitlíki:",
+        showSocialLinks: true
       }
     ]
   },

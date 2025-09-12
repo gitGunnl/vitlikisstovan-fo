@@ -170,55 +170,41 @@ export default function Home() {
           )}
 
           {/* How It Works Process */}
-          <div className="mb-24">
-            <div className="mx-auto max-w-4xl text-center mb-12">
-              <h3 className="text-2xl font-bold tracking-tight mb-4">
-                Soleiðis byrja vit
-              </h3>
+          {siteConfig.program.howItWorks && (
+            <div className="mb-24">
+              <div className="mx-auto max-w-4xl text-center mb-12">
+                <h3 className="text-2xl font-bold tracking-tight mb-4">
+                  {siteConfig.program.howItWorks.title}
+                </h3>
+              </div>
+
+              <Card className="bg-background max-w-5xl mx-auto border shadow-sm">
+                <CardContent className="p-8">
+                  <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+                    {siteConfig.program.howItWorks.steps?.map((step, index) => (
+                      <>
+                        <div key={index} className="flex-1 text-center">
+                          <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
+                            <span className="text-primary-foreground font-bold text-xl">{step.number}</span>
+                          </div>
+                          <h4 className="font-semibold mb-2">{step.title}</h4>
+                          <p className="text-sm text-muted-foreground">{step.description}</p>
+                        </div>
+
+                        {index < siteConfig.program.howItWorks.steps.length - 1 && (
+                          <div className="hidden md:block text-muted-foreground">
+                            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
+                              <path d="M13 7l5 5-5 5M6 12h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                            </svg>
+                          </div>
+                        )}
+                      </>
+                    )) || []}
+                  </div>
+                </CardContent>
+              </Card>
             </div>
-
-            <Card className="bg-background max-w-5xl mx-auto border shadow-sm">
-              <CardContent className="p-8">
-                <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                  <div className="flex-1 text-center">
-                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-primary-foreground font-bold text-xl">1</span>
-                    </div>
-                    <h4 className="font-semibold mb-2">Samrøða (1 tími)</h4>
-                    <p className="text-sm text-muted-foreground">Vit tosa um tykkara veruleika og seta rammuna fyri skeiðið.</p>
-                  </div>
-
-                  <div className="hidden md:block text-muted-foreground">
-                    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-                      <path d="M13 7l5 5-5 5M6 12h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-
-                  <div className="flex-1 text-center">
-                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-primary-foreground font-bold text-xl">2</span>
-                    </div>
-                    <h4 className="font-semibold mb-2">Uppseting</h4>
-                    <p className="text-sm text-muted-foreground">Vit gera leiðreglur, velja amboð og fyrireika verkstovur - tit skula bara læra.</p>
-                  </div>
-
-                  <div className="hidden md:block text-muted-foreground">
-                    <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-                      <path d="M13 7l5 5-5 5M6 12h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </div>
-
-                  <div className="flex-1 text-center">
-                    <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                      <span className="text-primary-foreground font-bold text-xl">3</span>
-                    </div>
-                    <h4 className="font-semibold mb-2">Læra og brúka</h4>
-                    <p className="text-sm text-muted-foreground">Verkstovur og stuðul á staðnum – og eftirfylging eftir 2–3 vikur.</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+          )}
 
           {/* Delivery Section */}
           {siteConfig.program.delivery && (
@@ -423,117 +409,82 @@ export default function Home() {
           </div>
 
           <div className="space-y-12">
-            {/* First Card - Vegleiðingar */}
-            <Card className="bg-card border overflow-hidden case-card-1">
-              <CardContent className="p-0">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                  <div>
-                    <img 
-                      src="/images/verkstovur.jpeg"
-                      alt="Samstarv á eini skrivstovu"
-                      className="w-full h-64 lg:h-full object-cover" 
-                    />
-                  </div>
-                  <div className="p-8 lg:p-12 flex flex-col justify-center">
-                    <h3 className="text-2xl lg:text-3xl font-bold mb-6">Vegleiðingar og verkstovur</h3>
-                    <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-                      Eg havi gjørt nógvar vegleiðingar og verkstovur til ymiskir bólkar, tildømis lærarar, námsfrøðingar, rithøvundar og eitt ótal av skrivstovufólki. Um tú vil læra meira um hvussu eg geri hesar vegleiðingar so kanst tú lesa meira her:
-                    </p>
-                    <div>
-                      <Button 
-                        variant="default"
-                        size="lg"
-                        onClick={() => setOpenDialog('vegleidingar')}
-                        data-testid="button-case-0"
-                      >
-                        Les meira um hettar
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Second Card - Vitlíki til týðing */}
-            <Card className="bg-card border overflow-hidden case-card-2">
-              <CardContent className="p-0">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 lg:grid-flow-dense">
-                  <div className="lg:col-start-2">
-                    <img 
-                      src="/images/dansk til foroyskt.gif"
-                      alt="Bøkur og tilfar um málslæru"
-                      className="w-full h-64 lg:h-full object-cover" 
-                    />
-                  </div>
-                  <div className="p-8 lg:p-12 flex flex-col justify-center lg:col-start-1">
-                    <h3 className="text-2xl lg:text-3xl font-bold mb-6">Sergjørt amboð til týðing úr Donskum til Føroyskt</h3>
-                    <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-                      Onkumtíð so skal man bara hava hjálp frá vitlíki til eina ávísa uppgávu. Tildømis um tú skal týða Donsk skjal til Føroyskt. Hettar var ein uppgáva eg havi loyst fyri ein kunda. Les meira um hvussu tað gekk fyri seg her:
-                    </p>
-                    <div>
-                      <Button 
-                        variant="outline"
-                        size="lg"
-                        onClick={() => setOpenDialog('tydingar')}
-                        data-testid="button-case-1"
-                      >
-                        Síggj dømið
-                      </Button>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Third Card - Kreativt vitlíki */}
-            <Card className="bg-card border overflow-hidden case-card-3">
-              <CardContent className="p-0">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                  <div>
-                    <img 
-                      src="/images/AI image example.jpeg"
-                      alt="Filmframleiðsla og kreativt studio"
-                      className="w-full h-64 lg:h-full object-cover" 
-                    />
-                  </div>
-                  <div className="p-8 lg:p-12 flex flex-col justify-center">
-                    <h3 className="text-2xl lg:text-3xl font-bold mb-6">Kreativt vitlíki: myndir, filmar og annað</h3>
-                    <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
-                      Vitlíki kann skapa alt millum himmal og jørð: myndir, filmar, tónleik og nógv annað. Eg deili regluliga tíðindir og ymiskar royndir eg geri við vitlíki, serliga í mun til at skapa tilfar við vitlíki, tú kann síggja nógv ting eg havi roynt á sosialum miðlum.
-                    </p>
-                    <div className="space-y-4">
-                      <p className="text-sm text-muted-foreground italic">
-                        Fylg okkum á sosialu miðlunum fyri at síggja dømi um tað vit hava skapað og fáa reglubundnar innsiktir um hvat er møguligt við vitlíki:
-                      </p>
-                      <div className="flex items-center gap-4">
-                        <a 
-                          href="https://facebook.com/vitlikisstovan" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 hover:bg-blue-200 text-blue-700 font-medium transition-colors"
-                        >
-                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
-                          </svg>
-                          Facebook
-                        </a>
-                        <a 
-                          href="https://linkedin.com/company/vitlikisstovan" 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors"
-                        >
-                          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                          </svg>
-                          LinkedIn
-                        </a>
+            {siteConfig.cases.highlights?.map((highlight, index) => {
+              const isEven = index % 2 === 0;
+              return (
+                <Card key={index} className={`bg-card border overflow-hidden case-card-${index + 1}`}>
+                  <CardContent className="p-0">
+                    <div className={`grid grid-cols-1 lg:grid-cols-2 gap-0 ${!isEven ? 'lg:grid-flow-dense' : ''}`}>
+                      <div className={!isEven ? 'lg:col-start-2' : ''}>
+                        <img 
+                          src={highlight.image}
+                          alt={highlight.imageAlt}
+                          className="w-full h-64 lg:h-full object-cover" 
+                        />
+                      </div>
+                      <div className={`p-8 lg:p-12 flex flex-col justify-center ${!isEven ? 'lg:col-start-1' : ''}`}>
+                        <h3 className="text-2xl lg:text-3xl font-bold mb-6">{highlight.title}</h3>
+                        <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+                          {highlight.description}
+                        </p>
+                        
+                        {/* Handle different case types */}
+                        {highlight.dialogId && highlight.buttonText && (
+                          <div>
+                            <Button 
+                              variant={highlight.buttonVariant as "default" | "outline"}
+                              size="lg"
+                              onClick={() => setOpenDialog(highlight.dialogId!)}
+                              data-testid={`button-case-${index}`}
+                            >
+                              {highlight.buttonText}
+                            </Button>
+                          </div>
+                        )}
+                        
+                        {highlight.showSocialLinks && (
+                          <div className="space-y-4">
+                            {highlight.followText && (
+                              <p className="text-sm text-muted-foreground italic">
+                                {highlight.followText}
+                              </p>
+                            )}
+                            <div className="flex items-center gap-4">
+                              {siteConfig.social.facebook && (
+                                <a 
+                                  href={siteConfig.social.facebook}
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 hover:bg-blue-200 text-blue-700 font-medium transition-colors"
+                                >
+                                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                  </svg>
+                                  Facebook
+                                </a>
+                              )}
+                              {siteConfig.social.linkedin && (
+                                <a 
+                                  href={siteConfig.social.linkedin}
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                  className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors"
+                                >
+                                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                  </svg>
+                                  LinkedIn
+                                </a>
+                              )}
+                            </div>
+                          </div>
+                        )}
                       </div>
                     </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+                  </CardContent>
+                </Card>
+              );
+            }) || []}
           </div>
 
           {/* Dialog for Vegleiðingar */}
@@ -605,59 +556,151 @@ export default function Home() {
 
                   {/* Project: Vitlíki til arbeiði */}
                   <section className="space-y-2">
-                    <h4 className="text-lg font-semibold">“Vitlíki til arbeiði”</h4>
+                    <h4 className="text-lg font-semibold">"Vitlíki til arbeiði"</h4>
                     <p className="text-muted-foreground leading-relaxed">
-                      Í verkætlanini <strong>Vitlíki til arbeiði</strong> skriva vit vegleiðingar til fólk og
-                      fakbólkar, sum veruliga hava tørv á hjálpini. Endamálið er at fáa vitlíki út til tey, sum
-                      annars ikki røkka tí – við greiðum dømun og einfaldari framgongd.
+                      <strong>Tað almenna</strong> stuðlar okkum í at menna <strong>"Vitlíki til arbeiði"</strong> –
+                      ein 20‑partur online kusskeið fyri lærarar, námsfrøðingar, dagstovnarar og eisini onnur, sum vilja
+                      læra at brúka ChatGPT og vitlíki í arbeiði.
                     </p>
-                  </section>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Vit ætla okkum at hava klar útgávu í <strong>januar 2025</strong>.
+                    </p>
 
-                  {/* Workshops */}
-                  <section className="space-y-2">
-                    <h4 className="text-lg font-semibold">Verkstovur – einfalt og praktiskt</h4>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Vit skipa eisini fyri verkstovum, har vit gera vitlíki <em>lætt at skilja</em> og
-                      <em> beinanvegin praktiskt</em>. Luttakarar fáa fyrimyndir, skabelónir og stuðul,
-                      so úrslitini koma sama dag.
-                    </p>
+                    <div className="flex flex-wrap gap-3">
+                      <Button
+                        onClick={() => {
+                          setOpenDialog(null);
+                          const el = document.querySelector('#contact');
+                          if (el) el.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        aria-label="Sign up for Vitlíki til arbeiði"
+                      >
+                        <Mail className="mr-2 h-4 w-4" />
+                        Tekn teg upp til kunning
+                      </Button>
+                    </div>
                   </section>
                 </div>
               </ScrollArea>
             </DialogContent>
           </Dialog>
 
-
-          {/* Dialog for Týðingar */}
+          {/* Dialog for Týðing */}
           <Dialog open={openDialog === 'tydingar'} onOpenChange={() => setOpenDialog(null)}>
-            <DialogContent className="max-w-md">
+            <DialogContent className="max-w-2xl">
               <DialogHeader>
-                <DialogTitle>Vitlíki Týðing - Danskt til Føroyskt</DialogTitle>
+                <DialogTitle>Týðing úr Donskum til Føroyskt</DialogTitle>
                 <DialogDescription>
-                  Síggj hvussu vit byggdu eitt vitlíki amboð til týðing millum mál.
+                  Sergjørt vitlíki‑amboð sum týðir beinleiðis úr Donskum til Føroyskt – spara tíð og fá betri úrslit.
                 </DialogDescription>
               </DialogHeader>
-              <div className="space-y-4">
-                <p>Hetta verkætlan vísir hvussu vitlíki kann hjálpa við málslæru og týðingum.</p>
-                <div className="flex gap-2">
-                  <Button className="flex-1">
-                    Síggj Case Study
-                  </Button>
-                  <Button variant="outline" className="flex-1">
-                    Royn Amboðið
-                  </Button>
+
+              <ScrollArea className="h-[400px] px-2">
+                <div className="space-y-6 pr-4">
+                  <section className="space-y-2">
+                    <h4 className="text-lg font-semibold">Hvat vit hava gjørt</h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Vit hava ment eitt <strong>sergjørt vitlíki‑amboð</strong>, sum kann týða beinleiðis úr Donskum til
+                      Føroyskt. Hetta amboðið hevur vit trænt við fleiri hundrað dømum av góðum týðingum, so tað veit, hvussu
+                      man týðir nágreyniliga og natúrliga til Føroyskt.
+                    </p>
+                  </section>
+
+                  <section className="space-y-2">
+                    <h4 className="text-lg font-semibold">Hvussu tað virkar</h4>
+                    <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
+                      <li>Tú sendir okkum donskt skjal (Word, PDF ella annað)</li>
+                      <li>Vit týða skjalið við okkara sergjørda vitlíki‑amboði</li>
+                      <li>Vit eftirarbeiða úrslitið, so tað lýtur natúrligt</li>
+                      <li>Tú fært eina góða týðing – skjótt og billigt</li>
+                    </ol>
+                  </section>
+
+                  <section className="space-y-2">
+                    <h4 className="text-lg font-semibold">Prísur</h4>
+                    <div className="rounded-lg border p-4 bg-muted/30">
+                      <p className="text-muted-foreground">
+                        <strong>0,50 DKK fyri hvørt orð</strong> (umleið helvtin av vanligum týðingarprísi)
+                      </p>
+                      <p className="text-sm text-muted-foreground mt-2">
+                        T.d. eitt skjal við 1000 orðum kostar 500 DKK at týða.
+                      </p>
+                    </div>
+                  </section>
+
+                  <section className="space-y-2">
+                    <h4 className="text-lg font-semibold">Bílegg týðing</h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Vil tú hava týtt eitt skjal? Send okkum skjalið og vit geva tær eitt tilboð sama dag.
+                    </p>
+
+                    <div className="flex flex-wrap gap-3 mt-4">
+                      <Button
+                        onClick={() => {
+                          setOpenDialog(null);
+                          const el = document.querySelector('#contact');
+                          if (el) el.scrollIntoView({ behavior: 'smooth' });
+                        }}
+                        aria-label="Bílegg týðing"
+                      >
+                        <Mail className="mr-2 h-4 w-4" />
+                        Bílegg týðing
+                      </Button>
+                    </div>
+                  </section>
                 </div>
-              </div>
+              </ScrollArea>
             </DialogContent>
           </Dialog>
         </Section>
 
+        {/* Resources Section */}
+        <Section id="resources" className="py-24 bg-background">
+          <div className="mx-auto max-w-4xl text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+              {siteConfig.resources.title}
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              {siteConfig.resources.subtitle}
+            </p>
+          </div>
 
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {siteConfig.resources.items?.map((item, index) => {
+              const iconComponents: { [key: string]: JSX.Element } = {
+                FileText: <FileText className="w-8 h-8" />,
+                Video: <Video className="w-8 h-8" />,
+                MessageCircle: <MessageCircle className="w-8 h-8" />
+              };
 
-        {/* Contact */}
-        <div id="contact">
-          <ContactSection />
-        </div>
+              return (
+                <Card key={index} className="bg-card hover:shadow-lg transition-shadow">
+                  <CardContent className="p-6">
+                    <div className={`w-16 h-16 ${item.iconBg} rounded-lg flex items-center justify-center mb-4`}>
+                      <div className={item.iconColor}>
+                        {iconComponents[item.icon] || <FileText className="w-8 h-8" />}
+                      </div>
+                    </div>
+                    <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
+                    <p className="text-sm text-muted-foreground mb-4">{item.description}</p>
+                    <Button 
+                      className={item.buttonStyle}
+                      data-testid={`button-resource-${index}`}
+                      asChild
+                    >
+                      <a href={item.href}>
+                        {item.buttonText}
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              );
+            }) || []}
+          </div>
+        </Section>
+
+        {/* Contact Section */}
+        <ContactSection />
       </main>
 
       <Footer />
