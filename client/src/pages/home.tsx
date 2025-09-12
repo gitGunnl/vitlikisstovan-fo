@@ -519,17 +519,11 @@ export default function Home() {
                         </a>
                       </Button>
 
-                      <Button 
-                        variant="outline" 
-                        className="w-full"
-                        onClick={() => {
-                          setOpenDialog(null);
-                          const el = document.querySelector('#contact');
-                          if (el) el.scrollIntoView({ behavior: 'smooth' });
-                        }}
-                      >
-                        <FileText className="mr-2 h-4 w-4" />
-                        Tak niður: Politikarar (PDF)
+                      <Button asChild variant="outline" className="w-full">
+                        <a href="/Vegleiding_Spar_tíd_og_betra_um_undirvisingina_vid_ChatGPT.pdf" target="_blank" rel="noopener noreferrer">
+                          <FileText className="mr-2 h-4 w-4" />
+                          Tak niður: Politikarar (PDF)
+                        </a>
                       </Button>
                     </div>
                   </section>
