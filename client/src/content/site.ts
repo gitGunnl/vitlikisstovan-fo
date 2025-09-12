@@ -140,7 +140,7 @@ export const siteConfig = {
   consulting: {
     title: "Ráðgeving & verkætlanir",
     subtitle:
-      "Frá vitlíki strategi til vitlíki menning. Umframt kreativar vitlíki verkætlanir – okkara uppgáva er at gera vitlíki nýtiligt fyri teg.",
+      "Frá vitlíki strategi til vitlíki menning – mín uppgáva er at gera vitlíki nýtiligt fyri teg.",
     services: [
       {
         title: "Tað almenna",
