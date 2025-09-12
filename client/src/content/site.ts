@@ -177,7 +177,7 @@ export const siteConfig = {
       {
         title: "Professionelt og handaligt",
         description:
-          "Vitlíki er eitt eymt evni og tað eru líka nógvir meiningar sum tað eru fólk. Tað havi eg fulla viring fyri og arbeiðis á ein praktiskan hátt uttan at trakkað ov nógv fólk yvur tædnar."
+          "Vitlíki er eitt eymt evni og tað eru líka nógvir meiningar sum tað eru fólk. Tað havi eg fulla viring fyri og arbeiðis á ein ein praktiskan hátt uttan at trakkað ov nógv fólk yvur tædnar."
       },
       {
         title: "Greitt samskifti",
@@ -268,7 +268,7 @@ export const siteConfig = {
         iconColor: "text-destructive",
         buttonText: "Tak niður PDF",
         buttonStyle: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        href: "#"
+        href: "/Vegleiðing Spar tíð og betra um undirvísingina  við ChatGPT.pdf"
       },
       {
         title: "Innleiðandi video (1 min)",

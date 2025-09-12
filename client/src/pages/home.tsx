@@ -11,14 +11,14 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { siteConfig } from "@/content/site";
 import { seoConfig } from "@/content/seo";
-import { 
-  GraduationCap, 
-  Building2, 
-  Users, 
-  Palette, 
-  Globe, 
-  Lightbulb, 
-  MessageCircle, 
+import {
+  GraduationCap,
+  Building2,
+  Users,
+  Palette,
+  Globe,
+  Lightbulb,
+  MessageCircle,
   Zap,
   CheckCircle,
   FileText,
@@ -69,8 +69,8 @@ export default function Home() {
 
       <main>
         {/* Hero Section */}
-      <section 
-        id="hero" 
+      <section
+        id="hero"
         className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 hero-background overflow-hidden"
       >
         {/* Background overlay for readability */}
@@ -84,7 +84,7 @@ export default function Home() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 text-white hero-text leading-tight">
             {siteConfig.hero.title}
           </h1>
-          <p className="text-xl sm:text-2xl mb-10 text-white/95 max-w-2xl mx-auto hero-text leading-relaxed">
+          <p className="text-xl sm:text-2xl mb-10 text-white/95 hero-text leading-relaxed">
             {siteConfig.hero.subtitle}
           </p>
           <CTAButtons
@@ -107,10 +107,10 @@ export default function Home() {
               <span className="text-lg font-medium">
                 Um tú ert her fyri ráðgeving ella annað, les meira longur nirrið
               </span>
-              <svg 
-                className="w-5 h-5 transition-transform group-hover:translate-y-1" 
-                fill="none" 
-                stroke="currentColor" 
+              <svg
+                className="w-5 h-5 transition-transform group-hover:translate-y-1"
+                fill="none"
+                stroke="currentColor"
                 viewBox="0 0 24 24"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
@@ -359,8 +359,8 @@ export default function Home() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
                       <div className="lg:col-span-1 text-center lg:text-left">
                         <div className="w-32 h-32 mx-auto lg:mx-0 mb-4 overflow-hidden rounded-full border-4 border-primary/20">
-                          <img 
-                            src="/me.jpg" 
+                          <img
+                            src="/me.jpg"
                             alt="Portrait of Gunnleygur Clementsen"
                             className="w-full h-full object-cover"
                           />
@@ -416,10 +416,10 @@ export default function Home() {
                   <CardContent className="p-0">
                     <div className={`grid grid-cols-1 lg:grid-cols-2 gap-0 ${!isEven ? 'lg:grid-flow-dense' : ''}`}>
                       <div className={!isEven ? 'lg:col-start-2' : ''}>
-                        <img 
+                        <img
                           src={highlight.image}
                           alt={highlight.imageAlt}
-                          className="w-full h-64 lg:h-full object-cover" 
+                          className="w-full h-64 lg:h-full object-cover"
                         />
                       </div>
                       <div className={`p-8 lg:p-12 flex flex-col justify-center ${!isEven ? 'lg:col-start-1' : ''}`}>
@@ -427,11 +427,11 @@ export default function Home() {
                         <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
                           {highlight.description}
                         </p>
-                        
+
                         {/* Handle different case types */}
                         {highlight.dialogId && highlight.buttonText && (
                           <div>
-                            <Button 
+                            <Button
                               variant={highlight.buttonVariant as "default" | "outline"}
                               size="lg"
                               onClick={() => setOpenDialog(highlight.dialogId!)}
@@ -441,7 +441,7 @@ export default function Home() {
                             </Button>
                           </div>
                         )}
-                        
+
                         {highlight.showSocialLinks && (
                           <div className="space-y-4">
                             {highlight.followText && (
@@ -451,9 +451,9 @@ export default function Home() {
                             )}
                             <div className="flex items-center gap-4">
                               {siteConfig.social.facebook && (
-                                <a 
+                                <a
                                   href={siteConfig.social.facebook}
-                                  target="_blank" 
+                                  target="_blank"
                                   rel="noopener noreferrer"
                                   className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-100 hover:bg-blue-200 text-blue-700 font-medium transition-colors"
                                 >
@@ -464,9 +464,9 @@ export default function Home() {
                                 </a>
                               )}
                               {siteConfig.social.linkedin && (
-                                <a 
+                                <a
                                   href={siteConfig.social.linkedin}
-                                  target="_blank" 
+                                  target="_blank"
                                   rel="noopener noreferrer"
                                   className="flex items-center gap-2 px-4 py-2 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-medium transition-colors"
                                 >
@@ -513,16 +513,14 @@ export default function Home() {
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                       <Button asChild className="w-full">
-                        {/* TODO: Set correct PDF path */}
-                        <a href="/downloads/vegleiding-larar.pdf" download>
+                        <a href="/downloads/vegleiding-larar.pdf" target="_blank" rel="noopener noreferrer">
                           <FileText className="mr-2 h-4 w-4" />
                           Tak niður: Lærarar (PDF)
                         </a>
                       </Button>
 
                       <Button asChild variant="outline" className="w-full">
-                        {/* TODO: Set correct PDF path */}
-                        <a href="/downloads/vegleiding-politikarar.pdf" download>
+                        <a href="/downloads/vegleiding-politikarar.pdf" target="_blank" rel="noopener noreferrer">
                           <FileText className="mr-2 h-4 w-4" />
                           Tak niður: Politikarar (PDF)
                         </a>
@@ -576,7 +574,7 @@ export default function Home() {
                         aria-label="Sign up for Vitlíki til arbeiði"
                       >
                         <Mail className="mr-2 h-4 w-4" />
-                        Tekn teg upp til kunning
+                        Tekn sting upp til kunning
                       </Button>
                     </div>
                   </section>
@@ -683,12 +681,12 @@ export default function Home() {
                     </div>
                     <h3 className="text-lg font-semibold mb-2">{item.title}</h3>
                     <p className="text-sm text-muted-foreground mb-4">{item.description}</p>
-                    <Button 
+                    <Button
                       className={item.buttonStyle}
                       data-testid={`button-resource-${index}`}
                       asChild
                     >
-                      <a href={item.href}>
+                      <a href={item.href} target="_blank" rel="noopener noreferrer">
                         {item.buttonText}
                       </a>
                     </Button>
