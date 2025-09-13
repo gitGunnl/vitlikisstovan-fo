@@ -554,12 +554,11 @@ export default function Home() {
                   <section className="space-y-2">
                     <h4 className="text-lg font-semibold">"Vitlíki til arbeiðis"</h4>
                     <p className="text-muted-foreground leading-relaxed">
-                      <strong>Tað almenna</strong> stuðlar okkum í at menna <strong>"Vitlíki til arbeiði"</strong> –
-                      ein 20‑partur online kusskeið fyri lærarar, námsfrøðingar, dagstovnarar og eisini onnur, sum vilja
-                      læra at brúka ChatGPT og vitlíki í arbeiði.
+                      <strong>Granskingar grunnurin</strong> hevur stuðla mær í at menna <strong>"Vitlíki til arbeiðis"</strong> –
+                    ein verkætlan har eg hjálpi ávísum bólkum at koma gott ígongd við vitlíki. Felags fyri hesar bólkar er at tað eru bólkar í ikki sita við teldu dagliga, hesir bólk eru í vanda fyri at koma ov seint ígong við vitlíki og tí hjálpi eg júst teimum.
                     </p>
                     <p className="text-muted-foreground leading-relaxed">
-                      Vit ætla okkum at hava klar útgávu í <strong>januar 2025</strong>.
+                      Fyrstu vegleiðingar vera klárar í býrjani av Novembur 2025.
                     </p>
 
                     <div className="flex flex-wrap gap-3">
