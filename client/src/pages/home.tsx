@@ -520,7 +520,7 @@ export default function Home() {
                       </Button>
 
                       <Button asChild variant="outline" className="w-full">
-                        <a href="/Vegleiding_Spar_tíd_og_betra_um_undirvisingina_vid_ChatGPT.pdf" target="_blank" rel="noopener noreferrer">
+                        <a href="/Ein_handalig_vegleiding_til_politikarir.pdf" target="_blank" rel="noopener noreferrer">
                           <FileText className="mr-2 h-4 w-4" />
                           Tak niður: Politikarar (PDF)
                         </a>
@@ -530,7 +530,7 @@ export default function Home() {
 
                   {/* Order your own guide */}
                   <section className="space-y-2">
-                    <h4 className="text-lg font-semibold">Bílegg vegleiðing til títt arbeiðsøki</h4>
+                    <h4 className="text-lg font-semibold">Bílegg vegleiðing til títt arbeiðisøki</h4>
                     <p className="text-muted-foreground leading-relaxed">
                       Tú kanst fáa eina <strong>sergjørda vegleiðing</strong> til júst tykkara arbeiðsuppgávur
                       fyri <strong>1600 DKK</strong>. Vit savna best‑practice nýtslur og gera greiðar, praktiskar
