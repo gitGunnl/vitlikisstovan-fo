@@ -33,7 +33,7 @@ export default function Header() {
             Um okkum
           </a>
           <a href="/okkara-taenastur" className="text-foreground/80 hover:text-foreground transition-colors">
-            Okkara tænastur
+            Tænastur
           </a>
           {/* <a href="/blog" className="text-foreground/80 hover:text-foreground transition-colors">
             Blogg
