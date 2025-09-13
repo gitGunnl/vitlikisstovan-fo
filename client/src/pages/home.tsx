@@ -567,7 +567,7 @@ export default function Home() {
                       <Button
                         onClick={() => {
                           setOpenDialog(null);
-                          window.location.href = '/vitliki-til-arbeidis';
+                          window.location.href = '/tilarbeidis';
                         }}
                         aria-label="Les meira um hesa verkætlan"
                       >
