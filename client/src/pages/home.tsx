@@ -120,79 +120,78 @@ export default function Home() {
         </div>
       </section>
 
-        {/* News Button - Option 1: Sliding Tab */}
-        <div className="relative">
-          <div className="fixed right-0 top-1/2 transform -translate-y-1/2 z-50">
-            <a
-              href="/blog/vitliki-i-foroyum"
-              className="group flex items-center bg-gradient-to-r from-primary to-primary/80 text-primary-foreground px-6 py-3 rounded-l-lg shadow-lg hover:shadow-xl transition-all duration-300 transform translate-x-4 hover:translate-x-0"
-            >
-              <div className="flex items-center gap-3">
-                <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                <div className="text-sm font-medium">
-                  <div className="text-xs opacity-80">NÝTT</div>
-                  <div>Føroysk vitlíki model</div>
-                </div>
-                <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        {/* News Button - Option 2: Floating Bubble (Hidden by default) */}
-        <div className="hidden relative">
-          <div className="fixed bottom-8 right-8 z-50">
-            <a
-              href="/blog/vitliki-i-foroyum"
-              className="group relative flex items-center justify-center w-16 h-16 bg-primary text-primary-foreground rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
-            >
-              <div className="absolute -top-2 -right-2 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center">
-                <span className="text-xs font-bold text-white">!</span>
-              </div>
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-              </svg>
-              
-              {/* Tooltip */}
-              <div className="absolute bottom-full mb-2 right-0 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none">
-                <div className="bg-gray-900 text-white text-xs rounded py-2 px-3 whitespace-nowrap">
-                  <div className="font-semibold">NÝTT: Føroysk vitlíki model</div>
-                  <div className="text-gray-300">Les meira um nýggju granskingarnar</div>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-        {/* News Button - Option 3: Animated Banner (Hidden by default) */}
-        <div className="hidden relative">
-          <div className="bg-gradient-to-r from-primary/90 to-accent/90 py-3 px-4 border-b shadow-sm">
-            <div className="max-w-7xl mx-auto flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <div className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-yellow-400 rounded-full animate-bounce"></div>
-                  <span className="text-sm font-semibold text-white">NÝGGJAR TÍÐINDI</span>
-                </div>
-                <p className="text-sm text-white/90">
-                  Eitt yvurlit yvur Føroysk vitlíki model og hvussu væl tey rigga - les meira um nýggju granskingarnar
-                </p>
-              </div>
-              <div className="flex items-center gap-3">
+        {/* News Buttons - Below Hero Section */}
+        <div className="py-8 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-7xl mx-auto">
+            
+            {/* News Button - Option 1: Side Tab Style */}
+            <div className="mb-8">
+              <div className="flex justify-end">
                 <a
                   href="/blog/vitliki-i-foroyum"
-                  className="text-sm font-medium text-white bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-colors duration-200"
+                  className="group flex items-center bg-gradient-to-r from-primary to-primary/80 text-primary-foreground px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
-                  Les meira
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                    <div className="text-sm font-medium">
+                      <div className="text-xs opacity-80">NÝGGJUR BLOGGUR</div>
+                      <div>Føroysk vitlíki model</div>
+                    </div>
+                    <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </a>
-                <button className="text-white/70 hover:text-white p-1">
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
               </div>
             </div>
+
+            {/* News Button - Option 2: Card Style (Hidden by default) */}
+            <div className="hidden mb-8">
+              <div className="max-w-md ml-auto">
+                <a
+                  href="/blog/vitliki-i-foroyum"
+                  className="group block p-4 bg-primary text-primary-foreground rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs font-semibold opacity-80">NÝGGJUR BLOGGUR</span>
+                    <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  </div>
+                  <h3 className="font-medium mb-1">Føroysk vitlíki model</h3>
+                  <p className="text-xs opacity-75">Les meira um nýggju granskingarnar</p>
+                </a>
+              </div>
+            </div>
+
+            {/* News Button - Option 3: Banner Style (Hidden by default) */}
+            <div className="hidden mb-8">
+              <div className="bg-gradient-to-r from-primary/90 to-accent/90 py-3 px-4 rounded-lg shadow-sm">
+                <div className="flex items-center justify-between">
+                  <div className="flex items-center gap-4">
+                    <div className="flex items-center gap-2">
+                      <div className="w-2 h-2 bg-yellow-400 rounded-full animate-bounce"></div>
+                      <span className="text-sm font-semibold text-white">NÝGGJUR BLOGGUR</span>
+                    </div>
+                    <p className="text-sm text-white/90">
+                      Føroysk vitlíki model - les meira um nýggju granskingarnar
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <a
+                      href="/blog/vitliki-i-foroyum"
+                      className="text-sm font-medium text-white bg-white/20 hover:bg-white/30 px-4 py-2 rounded-lg transition-colors duration-200"
+                    >
+                      Les meira
+                    </a>
+                    <button className="text-white/70 hover:text-white p-1">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
 
