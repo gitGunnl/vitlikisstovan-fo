@@ -532,9 +532,8 @@ export default function Home() {
                   <section className="space-y-2">
                     <h4 className="text-lg font-semibold">Bílegg vegleiðing til títt arbeiðisøki</h4>
                     <p className="text-muted-foreground leading-relaxed">
-                      Tú kanst fáa eina <strong>sergjørda vegleiðing</strong> til júst tykkara arbeiðsuppgávur
-                      fyri <strong>1600 DKK</strong>. Vit savna best‑practice nýtslur og gera greiðar, praktiskar
-                      leiðbeiningar, so alt kann nýtast beinanvegin.
+                      Tú fær eina <strong>sergjørda vegleiðing</strong> til júst tínar arbeiðsuppgávur
+                      fyri <strong>1600 DKK</strong>. So veit tú akkurát hvat tú skal nýta vitlíki til.
                     </p>
 
                     <div className="flex flex-wrap gap-3">
@@ -553,7 +552,7 @@ export default function Home() {
 
                   {/* Project: Vitlíki til arbeiði */}
                   <section className="space-y-2">
-                    <h4 className="text-lg font-semibold">"Vitlíki til arbeiði"</h4>
+                    <h4 className="text-lg font-semibold">"Vitlíki til arbeiðis"</h4>
                     <p className="text-muted-foreground leading-relaxed">
                       <strong>Tað almenna</strong> stuðlar okkum í at menna <strong>"Vitlíki til arbeiði"</strong> –
                       ein 20‑partur online kusskeið fyri lærarar, námsfrøðingar, dagstovnarar og eisini onnur, sum vilja
