@@ -99,6 +99,14 @@ export default function Home() {
         {/* Animated gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10 animate-pulse"></div>
 
+        {/* Special blog slide background effect */}
+        {currentSlide === 1 && (
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
+          </div>
+        )}
+
         {/* Navigation Arrows */}
         <button
           onClick={handlePrevSlide}
@@ -139,22 +147,53 @@ export default function Home() {
                     pointerEvents: isActive ? 'auto' : 'none'
                   }}
                 >
+                  {/* Blog Badge for slide 2 */}
+                  {index === 1 && (
+                    <div 
+                      className="inline-flex items-center gap-2 mb-8"
+                      style={{
+                        transform: isActive ? 'translateY(0) scale(1)' : 'translateY(-20px) scale(0.8)',
+                        opacity: isActive ? 1 : 0,
+                        transition: 'all 600ms cubic-bezier(0.34, 1.56, 0.64, 1)',
+                        transitionDelay: isActive ? '100ms' : '0ms'
+                      }}
+                    >
+                      <span className="relative inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold text-sm uppercase tracking-wider rounded-full shadow-2xl">
+                        <span className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full blur-md opacity-75 animate-pulse"></span>
+                        <span className="relative flex items-center gap-2">
+                          <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
+                          Nýggjur bloggur
+                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                          </svg>
+                        </span>
+                      </span>
+                    </div>
+                  )}
                   <h1 
-                    className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 text-white hero-text leading-tight"
+                    className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 hero-text leading-tight ${
+                      index === 1 
+                        ? 'bg-gradient-to-r from-white via-emerald-200 to-white bg-clip-text text-transparent' 
+                        : 'text-white'
+                    }`}
                     style={{
                       transform: isActive ? 'translateY(0)' : 'translateY(20px)',
                       transition: 'transform 800ms cubic-bezier(0.34, 1.56, 0.64, 1)',
-                      transitionDelay: isActive ? '200ms' : '0ms'
+                      transitionDelay: isActive ? '200ms' : '0ms',
+                      filter: index === 1 ? 'drop-shadow(0 0 30px rgba(52, 211, 153, 0.5))' : 'none'
                     }}
                   >
                     {slide.title}
                   </h1>
                   <p 
-                    className="text-xl sm:text-2xl mb-10 text-white/95 hero-text leading-relaxed"
+                    className={`text-xl sm:text-2xl mb-10 hero-text leading-relaxed ${
+                      index === 1 ? 'text-white' : 'text-white/95'
+                    }`}
                     style={{
                       transform: isActive ? 'translateY(0) scale(1)' : 'translateY(30px) scale(0.95)',
                       transition: 'transform 900ms cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-                      transitionDelay: isActive ? '350ms' : '0ms'
+                      transitionDelay: isActive ? '350ms' : '0ms',
+                      textShadow: index === 1 ? '0 2px 20px rgba(16, 185, 129, 0.3)' : 'inherit'
                     }}
                   >
                     {slide.subtitle}
@@ -167,11 +206,32 @@ export default function Home() {
                       transitionDelay: isActive ? '500ms' : '0ms'
                     }}
                   >
-                    <CTAButtons
-                      primary={slide.primaryCTA}
-                      secondary={slide.secondaryCTA}
-                      className="mt-2 mb-16"
-                    />
+                    {index === 1 ? (
+                      <div className="flex justify-center">
+                        <a 
+                          href={slide.primaryCTA.href}
+                          className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold text-lg rounded-full shadow-2xl hover:shadow-emerald-500/50 transform hover:scale-105 transition-all duration-300"
+                          data-testid="button-blog-cta"
+                        >
+                          <span className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                          <span className="relative flex items-center gap-3">
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                            </svg>
+                            {slide.primaryCTA.text}
+                            <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                            </svg>
+                          </span>
+                        </a>
+                      </div>
+                    ) : (
+                      <CTAButtons
+                        primary={slide.primaryCTA}
+                        secondary={slide.secondaryCTA}
+                        className="mt-2 mb-16"
+                      />
+                    )}
                   </div>
 
                   {/* Bottom of Hero CTA - only show on first slide */}
