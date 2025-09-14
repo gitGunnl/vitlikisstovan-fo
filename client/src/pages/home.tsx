@@ -835,24 +835,24 @@ export default function Home() {
           <Dialog open={openDialog === 'tydingar'} onOpenChange={() => setOpenDialog(null)}>
             <DialogContent className="max-w-2xl">
               <DialogHeader>
-                <DialogTitle>Vitlíki Týðing – Danskt til Føroyskt</DialogTitle>
+                <DialogTitle>Vitlíki týðing – danskt til føroyskt</DialogTitle>
                 <DialogDescription>
-                  Ein væl eydnað AI‑verkætlan: frá royndum og frágreiðing til eitt brúkiligt amboð.
+                  Ein væl eydnað vitlíki‑verkætlan: Frá undankanning og frágreiðing til eitt hent amboð.
                 </DialogDescription>
               </DialogHeader>
 
               <div className="space-y-6">
                 <p className="text-muted-foreground leading-relaxed">
                   Ein kunda skuldi týða ein hóp av skjalum úr <strong>donskum til føroyskt</strong> og spurdi,
-                  um vitlíki kundi hjálpa. Eg segði ja: fyrst skriva vit eina sera góða <em>prompt</em>,
-                  og síðani <strong>royndu vit hesa promptina á fleiri framkomnum frontier‑modellum</strong>.
+                  um vitlíki kundi hjálpa. Eg segði "møguliga, men eg kann vísa tykkum akkruát hvussu gott vitlíki kann týða úr donskum til føroyskt og so kunna tit taka avgerð um tit vilja færa víðari við hesum. Fyrst gera vit eitt sera gitt birt <em>(prompt)</em>,
+                  og síðani <strong>royndu vit hetta birti á øllum teimum bestu altjóða modellunum.</strong>"
                   Niðurstøðurnar vórðu lagdar fram í eini greiðari <strong>frágreiðing</strong>.
                 </p>
 
                 <div className="rounded-lg border bg-muted/30 p-4">
-                  <h4 className="font-semibold mb-3">Frá roynd til amboð</h4>
+                  <h4 className="font-semibold mb-3">Frá undankanning til amboð</h4>
                   <p className="text-sm text-muted-foreground mb-4">
-                    Kundi var nøgdur, og vit bygdu síðani eitt einfalt – men sterkt – amboð:
+                    Kundin var væl nøgdur við hvussu vitlíki umsetti tekstin, og vit bygdu síðani eitt einfalt – men sterkt – amboð:
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -862,7 +862,7 @@ export default function Home() {
                       </div>
                       <div>
                         <h5 className="font-medium">Inntøka av skjalum</h5>
-                        <p className="text-sm text-muted-foreground">Tekur donsk skjöl inn.</p>
+                        <p className="text-sm text-muted-foreground">Tekur donsk word skjøl inn.</p>
                       </div>
                     </div>
 
@@ -871,8 +871,8 @@ export default function Home() {
                         <Globe className="w-4 h-4 text-primary" />
                       </div>
                       <div>
-                        <h5 className="font-medium">AI‑týðing</h5>
-                        <p className="text-sm text-muted-foreground">Ger fyribils týðing til føroyskt.</p>
+                        <h5 className="font-medium">Vitlíki‑týðing</h5>
+                        <p className="text-sm text-muted-foreground">Brúkti birti vit høvdu gjørt frammanundan til at týða tekstin til føroyskt.</p>
                       </div>
                     </div>
 
@@ -881,9 +881,9 @@ export default function Home() {
                         <MessageCircle className="w-4 h-4 text-primary" />
                       </div>
                       <div>
-                        <h5 className="font-medium">Yvirlit yvir setningar</h5>
+                        <h5 className="font-medium">Yvirlit yvir allar setningar</h5>
                         <p className="text-sm text-muted-foreground">
-                          Vísir hvønn setning til mannagongd, har menniskja kann rætta.
+                          Amboði vísir allar teir umsettu setningarnar, soleiðis at eitt fólk kann rætt og góðkenna alt árenn tað ferð víðari.
                         </p>
                       </div>
                     </div>
@@ -893,9 +893,9 @@ export default function Home() {
                         <CheckCircle className="w-4 h-4 text-primary" />
                       </div>
                       <div>
-                        <h5 className="font-medium">Sannreinan & góðkenning</h5>
+                        <h5 className="font-medium">Góðkenning</h5>
                         <p className="text-sm text-muted-foreground">
-                          Setningar kunnu merkjast sum “góðkend” eftir rætting.
+                          Setningar kunnu merkjast sum “góðkent” eftir rætting. Hettar kallast "Human in the loop" og er eitt sera vigtigt ting at hava við, tá ið man arbeiður við vitlíki.
                         </p>
                       </div>
                     </div>
@@ -907,7 +907,7 @@ export default function Home() {
                       <div>
                         <h5 className="font-medium">Útflutningur til Word</h5>
                         <p className="text-sm text-muted-foreground">
-                          Tá alt skjalið er sannreinað, verður endaligi teksturin fluttur út sum Word‑fíla.
+                          Tá alt skjalið er góðkent, verður endaligi teksturin fluttur út sum Word‑fíla á føroyskum.
                         </p>
                       </div>
                     </div>
@@ -915,7 +915,7 @@ export default function Home() {
                 </div>
 
                 <blockquote className="border-l-4 border-primary pl-4 italic text-muted-foreground">
-                  Stutt sagt: eitt gott AI‑verkætlan, sum riggaði væl – og gav skjót, dygdargóð úrslit.
+                  Stutt sagt: ein sera væl eydna vitlíki‑verkætlan, sum riggaði væl – og gav skjót, dygdargóð úrslit.
                 </blockquote>
 
                 
