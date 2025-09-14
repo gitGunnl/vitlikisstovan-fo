@@ -94,28 +94,8 @@ export default function Home() {
         id="hero"
         className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 hero-background overflow-hidden"
       >
-        {/* Background Video */}
-        <video
-          className="hero-background-video"
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="metadata"
-          poster="/images/hero-background.webp"
-          onError={(e) => {
-            // Hide video on error and show fallback image
-            e.currentTarget.style.display = 'none';
-          }}
-        >
-          <source src="/hero section video small.webm" type="video/webm" />
-        </video>
-
-        {/* Fallback Background Image - shown when video fails or doesn't load */}
-        <div className="hero-background-image"></div>
-
         {/* Background overlay for readability */}
-        <div className="hero-background-overlay"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60 hero-overlay"></div>
 
         {/* Animated gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10 animate-pulse"></div>
