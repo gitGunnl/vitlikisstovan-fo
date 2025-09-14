@@ -19,8 +19,8 @@ localPort = 5000
 externalPort = 80
 
 [[ports]]
-localPort = 39705
-externalPort = 3000
+localPort = 33061
+externalPort = 3001
 
 [[deployment.rewrites]]
 from = "/*"

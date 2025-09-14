@@ -306,7 +306,7 @@ export default function Home() {
       </section>
 
         {/* News Buttons - Below Hero Section */}
-        <div className="py-8 px-4 sm:px-6 lg:px-8">
+        <div className="py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
 
             {/* News Button - Option 1: Side Tab Style */}
@@ -658,8 +658,8 @@ export default function Home() {
         )}
 
         {/* Case Highlights */}
-        <Section id="cases" className="py-24">
-          <div className="mx-auto max-w-4xl text-center mb-16">
+        <Section id="cases" className="py-28">
+          <div className="mx-auto max-w-4xl text-center mb-20">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
               {siteConfig.cases.title}
             </h2>
@@ -668,7 +668,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-16">
             {siteConfig.cases.highlights?.map((highlight, index) => {
               const isEven = index % 2 === 0;
               return (
@@ -682,9 +682,9 @@ export default function Home() {
                           className="w-full h-64 lg:h-full object-cover"
                         />
                       </div>
-                      <div className={`p-8 lg:p-12 flex flex-col justify-center ${!isEven ? 'lg:col-start-1' : ''}`}>
-                        <h3 className="text-2xl lg:text-3xl font-bold mb-6">{highlight.title}</h3>
-                        <p className="text-muted-foreground mb-8 text-lg leading-relaxed">
+                      <div className={`p-10 lg:p-14 flex flex-col justify-center ${!isEven ? 'lg:col-start-1' : ''}`}>
+                        <h3 className="text-2xl lg:text-3xl font-bold mb-8">{highlight.title}</h3>
+                        <p className="text-muted-foreground mb-10 text-lg leading-[1.8]">
                           {highlight.description}
                         </p>
 
@@ -749,29 +749,29 @@ export default function Home() {
 
                  {/* Dialog for Vegleiðingar */}
                   <Dialog open={openDialog === 'vegleidingar'} onOpenChange={() => setOpenDialog(null)}>
-                    <DialogContent className="max-w-2xl">
-                      <DialogHeader>
-                        <DialogTitle>Vegleiðingar & Verkstovur</DialogTitle>
-                        <DialogDescription>
+                    <DialogContent className="max-w-2xl max-h-[85vh]">
+                      <DialogHeader className="mb-4">
+                        <DialogTitle className="text-xl font-bold mb-2">Vegleiðingar & Verkstovur</DialogTitle>
+                        <DialogDescription className="text-base leading-relaxed">
                           Eg havi hildið hópin av verkstovum, og vit hava gjørt enn fleiri – sera væl
                           umtóktar – vegleiðingar um, hvussu tú brúkar ChatGPT og onnur vitlíki‑amboð
                           í veruligum arbeiðsuppgávum.
                         </DialogDescription>
                       </DialogHeader>
 
-                      <ScrollArea className="h-[400px] px-2">
-                        <div className="space-y-6 pr-4">
+                      <ScrollArea className="h-[500px] px-4">
+                        <div className="space-y-8 pr-6">
                           {/* Free sample guides */}
-                          <section className="space-y-2">
-                            <h4 className="text-lg font-semibold">Ókeypis dømi (2 vegleiðingar)</h4>
-                            <p className="text-muted-foreground leading-relaxed">
+                          <section className="space-y-4">
+                            <h4 className="text-lg font-semibold mb-2">Ókeypis dømi (2 vegleiðingar)</h4>
+                            <p className="text-muted-foreground leading-[1.7] mb-4">
                               Vit bjóða tvey ókeypis royndarskjøl: eitt ætlað <strong>lærarum</strong> og eitt ætlað
                               <strong> politikarum</strong>. Bæði innihalda listar við gagnligum nýtslum fyri hesi
                               starvsøki – og <em>neyv stig‑fyrir‑stig</em> leiðbeining um, hvussu tú gert hesar
                               uppgávur við vitlíki.
                             </p>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
                               <Button asChild className="w-full">
                                 <a href="/Vegleiding_Spar_tíd_og_betra_um_undirvisingina_vid_ChatGPT.pdf" target="_blank" rel="noopener noreferrer">
                                   <FileText className="mr-2 h-4 w-4" />
@@ -789,9 +789,9 @@ export default function Home() {
                           </section>
 
                           {/* Order your own guide */}
-                          <section className="space-y-2">
-                            <h4 className="text-lg font-semibold">Bílegg vegleiðing til títt arbeiðisøki</h4>
-                            <p className="text-muted-foreground leading-relaxed">
+                          <section className="space-y-4">
+                            <h4 className="text-lg font-semibold mb-2">Bílegg vegleiðing til títt arbeiðisøki</h4>
+                            <p className="text-muted-foreground leading-[1.7] mb-4">
                               Tú fær eina <strong>sergjørda vegleiðing</strong> til júst tínar arbeiðsuppgávur
                               fyri <strong>1600 DKK</strong>. So veit tú akkurát hvat tú skal nýta vitlíki til.
                             </p>
@@ -811,17 +811,17 @@ export default function Home() {
                           </section>
 
                           {/* Project: Vitlíki til arbeiði */}
-                          <section className="space-y-2">
-                            <h4 className="text-lg font-semibold">"Vitlíki til arbeiðis"</h4>
-                            <p className="text-muted-foreground leading-relaxed">
+                          <section className="space-y-4">
+                            <h4 className="text-lg font-semibold mb-2">"Vitlíki til arbeiðis"</h4>
+                            <p className="text-muted-foreground leading-[1.7] mb-3">
                               <strong>Granskingar grunnurin</strong> hevur stuðla mær í at menna <strong>"Vitlíki til arbeiðis"</strong> –
                             ein verkætlan har eg hjálpi ávísum bólkum at koma gott ígongd við vitlíki. Felags fyri hesar bólkar er at tað eru bólkar í ikki sita við teldu dagliga, hesir bólk eru í vanda fyri at koma ov seint ígong við vitlíki og tí hjálpi eg júst teimum.
                             </p>
-                            <p className="text-muted-foreground leading-relaxed">
+                            <p className="text-muted-foreground leading-[1.7] mb-4">
                               Fyrstu vegleiðingar vera klárar í býrjani av Novembur 2025.
                             </p>
 
-                            <div className="flex flex-wrap gap-3">
+                            <div className="flex flex-wrap gap-3 mt-4">
                               <Button
                                 onClick={() => {
                                   setOpenDialog(null);
@@ -841,17 +841,17 @@ export default function Home() {
 
           {/* Dialog for Týðingar */}
           <Dialog open={openDialog === 'tydingar'} onOpenChange={() => setOpenDialog(null)}>
-            <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
-              <DialogHeader className="pb-6">
-                <DialogTitle className="text-2xl font-bold">Vitlíki týðing – danskt til føroyskt</DialogTitle>
+            <DialogContent className="max-w-3xl max-h-[85vh] overflow-y-auto">
+              <DialogHeader className="pb-8">
+                <DialogTitle className="text-2xl font-bold mb-3">Vitlíki týðing – danskt til føroyskt</DialogTitle>
                 <DialogDescription className="text-lg leading-relaxed pt-2">
                   Ein væl eydnað vitlíki‑verkætlan: Frá undankanning og frágreiðing til eitt hent amboð.
                 </DialogDescription>
               </DialogHeader>
 
-              <div className="space-y-8">
-                <div className="bg-gradient-to-r from-muted/50 to-muted/30 p-6 rounded-xl border">
-                  <p className="text-foreground leading-loose text-base">
+              <div className="space-y-10">
+                <div className="bg-gradient-to-r from-muted/50 to-muted/30 p-8 rounded-xl border">
+                  <p className="text-foreground leading-[1.8] text-base">
                     Ein kunda skuldi týða ein hóp av skjalum úr <strong>donskum til føroyskt</strong> og spurdi,
                     um vitlíki kundi hjálpa. Eg segði "møguliga, men eg kann vísa tykkum akkruát hvussu gott vitlíki kann týða úr donskum til føroyskt og so kunna tit taka avgerð um tit vilja færa víðari við hesum. Fyrst gera vit eitt sera gitt birt <em>(prompt)</em>,
                     og síðani <strong>royndu vit hetta birti á øllum teimum bestu altjóða modellunum.</strong>"
@@ -860,8 +860,8 @@ export default function Home() {
                 </div>
 
                 <div className="rounded-xl border-2 border-primary/20 bg-gradient-to-br from-background to-muted/20 p-8">
-                  <div className="mb-6">
-                    <h4 className="font-bold text-xl mb-3 text-foreground">Frá undankanning til amboð</h4>
+                  <div className="mb-8">
+                    <h4 className="font-bold text-xl mb-4 text-foreground">Frá undankanning til amboð</h4>
                     <p className="text-muted-foreground leading-relaxed">
                       Kundin var væl nøgdur við hvussu vitlíki umsetti tekstin, og vit bygdu síðani eitt einfalt – men sterkt – amboð:
                     </p>
@@ -926,8 +926,8 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-primary/5 to-primary/10 p-6 rounded-xl border-l-4 border-primary">
-                  <blockquote className="text-lg italic text-foreground leading-relaxed font-medium">
+                <div className="bg-gradient-to-r from-primary/5 to-primary/10 p-8 rounded-xl border-l-4 border-primary mt-6">
+                  <blockquote className="text-lg italic text-foreground leading-[1.7] font-medium">
                     Stutt sagt: ein sera væl eydna vitlíki‑verkætlan, sum riggaði væl – og gav skjót, dygdargóð úrslit.
                   </blockquote>
                 </div>
