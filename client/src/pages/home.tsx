@@ -930,52 +930,6 @@ export default function Home() {
 
         </Section>
 
-        {/* Resources Section */}
-        <Section id="resources" className="py-24 bg-background">
-          <div className="mx-auto max-w-4xl text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
-              {siteConfig.resources.title}
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              {siteConfig.resources.subtitle}
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {siteConfig.resources.items.map((resource, index) => {
-              const iconComponents: { [key: string]: JSX.Element } = {
-                FileText: <FileText className={`h-6 w-6 ${resource.iconColor}`} />,
-                Video: <Video className={`h-6 w-6 ${resource.iconColor}`} />,
-                MessageCircle: <MessageCircle className={`h-6 w-6 ${resource.iconColor}`} />
-              };
-
-              return (
-                <Card key={index} className="relative overflow-hidden group hover:shadow-lg transition-shadow duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className={`p-3 rounded-xl ${resource.iconBg} flex-shrink-0`}>
-                        {iconComponents[resource.icon] || <FileText className={`h-6 w-6 ${resource.iconColor}`} />}
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-semibold mb-2">{resource.title}</h3>
-                        <p className="text-sm text-muted-foreground mb-4">{resource.description}</p>
-                        <Button
-                          className={resource.buttonStyle}
-                          data-testid={`button-resource-${index}`}
-                          asChild
-                        >
-                          <a href={resource.href} target="_blank" rel="noopener noreferrer">
-                            {resource.buttonText}
-                          </a>
-                        </Button>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              );
-            }) || []}</div>
-        </Section>
-
         {/* Contact Section */}
         <ContactSection />
       </main>
