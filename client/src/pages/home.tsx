@@ -300,7 +300,7 @@ export default function Home() {
         {/* News Buttons - Below Hero Section */}
         <div className="py-8 px-4 sm:px-6 lg:px-8">
           <div className="max-w-7xl mx-auto">
-            
+
             {/* News Button - Option 1: Side Tab Style */}
             <div className="mb-8">
               <div className="flex justify-end">
@@ -368,7 +368,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            
+
           </div>
         </div>
 
@@ -833,80 +833,84 @@ export default function Home() {
 
           {/* Dialog for Týðingar */}
           <Dialog open={openDialog === 'tydingar'} onOpenChange={() => setOpenDialog(null)}>
-            <DialogContent className="max-w-2xl">
-              <DialogHeader>
-                <DialogTitle>Vitlíki týðing – danskt til føroyskt</DialogTitle>
-                <DialogDescription>
+            <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">
+              <DialogHeader className="pb-6">
+                <DialogTitle className="text-2xl font-bold">Vitlíki týðing – danskt til føroyskt</DialogTitle>
+                <DialogDescription className="text-lg leading-relaxed pt-2">
                   Ein væl eydnað vitlíki‑verkætlan: Frá undankanning og frágreiðing til eitt hent amboð.
                 </DialogDescription>
               </DialogHeader>
 
-              <div className="space-y-6">
-                <p className="text-muted-foreground leading-relaxed">
-                  Ein kunda skuldi týða ein hóp av skjalum úr <strong>donskum til føroyskt</strong> og spurdi,
-                  um vitlíki kundi hjálpa. Eg segði "møguliga, men eg kann vísa tykkum akkruát hvussu gott vitlíki kann týða úr donskum til føroyskt og so kunna tit taka avgerð um tit vilja færa víðari við hesum. Fyrst gera vit eitt sera gitt birt <em>(prompt)</em>,
-                  og síðani <strong>royndu vit hetta birti á øllum teimum bestu altjóða modellunum.</strong>"
-                  Niðurstøðurnar vórðu lagdar fram í eini greiðari <strong>frágreiðing</strong>.
-                </p>
-
-                <div className="rounded-lg border bg-muted/30 p-4">
-                  <h4 className="font-semibold mb-3">Frá undankanning til amboð</h4>
-                  <p className="text-sm text-muted-foreground mb-4">
-                    Kundin var væl nøgdur við hvussu vitlíki umsetti tekstin, og vit bygdu síðani eitt einfalt – men sterkt – amboð:
+              <div className="space-y-8">
+                <div className="bg-gradient-to-r from-muted/50 to-muted/30 p-6 rounded-xl border">
+                  <p className="text-foreground leading-loose text-base">
+                    Ein kunda skuldi týða ein hóp av skjalum úr <strong>donskum til føroyskt</strong> og spurdi,
+                    um vitlíki kundi hjálpa. Eg segði "møguliga, men eg kann vísa tykkum akkruát hvussu gott vitlíki kann týða úr donskum til føroyskt og so kunna tit taka avgerð um tit vilja færa víðari við hesum. Fyrst gera vit eitt sera gitt birt <em>(prompt)</em>,
+                    og síðani <strong>royndu vit hetta birti á øllum teimum bestu altjóða modellunum.</strong>"
+                    Niðurstøðurnar vórðu lagdar fram í eini greiðari <strong>frágreiðing</strong>.
                   </p>
+                </div>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <FileText className="w-4 h-4 text-primary" />
+                <div className="rounded-xl border-2 border-primary/20 bg-gradient-to-br from-background to-muted/20 p-8">
+                  <div className="mb-6">
+                    <h4 className="font-bold text-xl mb-3 text-foreground">Frá undankanning til amboð</h4>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Kundin var væl nøgdur við hvussu vitlíki umsetti tekstin, og vit bygdu síðani eitt einfalt – men sterkt – amboð:
+                    </p>
+                  </div>
+
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div className="flex items-start gap-4 p-4 rounded-lg bg-background/60 border border-border/50 hover:shadow-md transition-shadow">
+                      <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center flex-shrink-0">
+                        <FileText className="w-5 h-5 text-primary" />
                       </div>
-                      <div>
-                        <h5 className="font-medium">Inntøka av skjalum</h5>
-                        <p className="text-sm text-muted-foreground">Tekur donsk word skjøl inn.</p>
+                      <div className="flex-1">
+                        <h5 className="font-semibold text-base mb-2">Inntøka av skjalum</h5>
+                        <p className="text-sm text-muted-foreground leading-relaxed">Tekur donsk word skjøl inn.</p>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3">
-                      <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <Globe className="w-4 h-4 text-primary" />
+                    <div className="flex items-start gap-4 p-4 rounded-lg bg-background/60 border border-border/50 hover:shadow-md transition-shadow">
+                      <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center flex-shrink-0">
+                        <Globe className="w-5 h-5 text-primary" />
                       </div>
-                      <div>
-                        <h5 className="font-medium">Vitlíki‑týðing</h5>
-                        <p className="text-sm text-muted-foreground">Brúkti birti vit høvdu gjørt frammanundan til at týða tekstin til føroyskt.</p>
+                      <div className="flex-1">
+                        <h5 className="font-semibold text-base mb-2">Vitlíki‑týðing</h5>
+                        <p className="text-sm text-muted-foreground leading-relaxed">Brúkti birti vit høvdu gjørt frammanundan til at týða tekstin til føroyskt.</p>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3">
-                      <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <MessageCircle className="w-4 h-4 text-primary" />
+                    <div className="flex items-start gap-4 p-4 rounded-lg bg-background/60 border border-border/50 hover:shadow-md transition-shadow">
+                      <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center flex-shrink-0">
+                        <MessageCircle className="w-5 h-5 text-primary" />
                       </div>
-                      <div>
-                        <h5 className="font-medium">Yvirlit yvir allar setningar</h5>
-                        <p className="text-sm text-muted-foreground">
+                      <div className="flex-1">
+                        <h5 className="font-semibold text-base mb-2">Yvirlit yvir allar setningar</h5>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
                           Amboði vísir allar teir umsettu setningarnar, soleiðis at eitt fólk kann rætt og góðkenna alt árenn tað ferð víðari.
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3">
-                      <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <CheckCircle className="w-4 h-4 text-primary" />
+                    <div className="flex items-start gap-4 p-4 rounded-lg bg-background/60 border border-border/50 hover:shadow-md transition-shadow">
+                      <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="w-5 h-5 text-primary" />
                       </div>
-                      <div>
-                        <h5 className="font-medium">Góðkenning</h5>
-                        <p className="text-sm text-muted-foreground">
-                          Setningar kunnu merkjast sum “góðkent” eftir rætting. Hettar kallast "Human in the loop" og er eitt sera vigtigt ting at hava við, tá ið man arbeiður við vitlíki.
+                      <div className="flex-1">
+                        <h5 className="font-semibold text-base mb-2">Góðkenning</h5>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
+                          Setningar kunnu merkjast sum "góðkent" eftir rætting. Hettar kallast "Human in the loop" og er eitt sera viktigt ting at hava við, tá ið man arbeiður við vitlíki.
                         </p>
                       </div>
                     </div>
 
-                    <div className="flex items-start gap-3 sm:col-span-2">
-                      <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
-                        <FileText className="w-4 h-4 text-primary" />
+                    <div className="flex items-start gap-4 p-4 rounded-lg bg-background/60 border border-border/50 hover:shadow-md transition-shadow lg:col-span-2">
+                      <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center flex-shrink-0">
+                        <FileText className="w-5 h-5 text-primary" />
                       </div>
-                      <div>
-                        <h5 className="font-medium">Útflutningur til Word</h5>
-                        <p className="text-sm text-muted-foreground">
+                      <div className="flex-1">
+                        <h5 className="font-semibold text-base mb-2">Útflutningur til Word</h5>
+                        <p className="text-sm text-muted-foreground leading-relaxed">
                           Tá alt skjalið er góðkent, verður endaligi teksturin fluttur út sum Word‑fíla á føroyskum.
                         </p>
                       </div>
@@ -914,11 +918,11 @@ export default function Home() {
                   </div>
                 </div>
 
-                <blockquote className="border-l-4 border-primary pl-4 italic text-muted-foreground">
-                  Stutt sagt: ein sera væl eydna vitlíki‑verkætlan, sum riggaði væl – og gav skjót, dygdargóð úrslit.
-                </blockquote>
-
-                
+                <div className="bg-gradient-to-r from-primary/5 to-primary/10 p-6 rounded-xl border-l-4 border-primary">
+                  <blockquote className="text-lg italic text-foreground leading-relaxed font-medium">
+                    Stutt sagt: ein sera væl eydna vitlíki‑verkætlan, sum riggaði væl – og gav skjót, dygdargóð úrslit.
+                  </blockquote>
+                </div>
               </div>
             </DialogContent>
           </Dialog>
