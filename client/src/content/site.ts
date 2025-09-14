@@ -34,16 +34,16 @@ export const siteConfig = {
       {
         title: "Nýtt blogginnlegg: Føroysk vitlíki modellir",
         subtitle:
-          "Les tað nýggja blogginnleggið um hvussu vitlíki kann broyta tínar arbeiðshættir og gera teg meira produktivan.",
+          "Les tað nýggja blogginnleggið um hvrøji Føroysk vitlíki model eru tøk, hvussu góð tey eru og hvat tey kunna brúkast til.",
         primaryCTA: {
           text: "Les blogginnleggið",
           href: "/blog/vitliki-i-foroyum"
         }
       },
       {
-        title: "Vitlíkis ráðgeving til tykkara fyritøku",
+        title: "Vitlíkis ráðgeving júst til tín",
         subtitle:
-          "Eg veita alt slag av ráðgeving innan vitlíki strategy, um tað er tekniskir trupulleikar ella hvussu man nýtur vitlíki í tí kreativa arbeiðinum, so kann eg lættiliga leiðbeina tykkum tann rættan vegin.",
+          "Eg veiti alskyns slag av ráðgeving innan vitlíki strategi, um tað er tekniskt arbeiði ella hvussu man nýtur vitlíki í tí kreativa arbeiðinum, so kann eg lættiliga leiðbeina tykkum tann rættan vegin.",
         primaryCTA: {
           text: "Bílegg eina samrøðu",
           href: "/contact"
