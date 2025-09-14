@@ -832,72 +832,112 @@ export default function Home() {
           </Dialog>
 
           {/* Dialog for Týðing */}
+          {/* Dialog for Týðingar */}
           <Dialog open={openDialog === 'tydingar'} onOpenChange={() => setOpenDialog(null)}>
             <DialogContent className="max-w-2xl">
               <DialogHeader>
-                <DialogTitle>Týðing úr Donskum til Føroyskt</DialogTitle>
+                <DialogTitle>Vitlíki Týðing – Danskt til Føroyskt</DialogTitle>
                 <DialogDescription>
-                  Sergjørt vitlíki‑amboð sum týðir beinleiðis úr Donskum til Føroyskt – spara tíð og fá betri úrslit.
+                  Ein væl eydnað AI‑verkætlan: frá royndum og frágreiðing til eitt brúkiligt amboð.
                 </DialogDescription>
               </DialogHeader>
 
-              <ScrollArea className="h-[400px] px-2">
-                <div className="space-y-6 pr-4">
-                  <section className="space-y-2">
-                    <h4 className="text-lg font-semibold">Hvat vit hava gjørt</h4>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Vit hava ment eitt <strong>sergjørt vitlíki‑amboð</strong>, sum kann týða beinleiðis úr Donskum til
-                      Føroyskt. Hetta amboðið hevur vit trænt við fleiri hundrað dømum av góðum týðingum, so tað veit, hvussu
-                      man týðir nágreyniliga og natúrliga til Føroyskt.
-                    </p>
-                  </section>
+              <div className="space-y-6">
+                <p className="text-muted-foreground leading-relaxed">
+                  Ein kunda skuldi týða ein hóp av skjalum úr <strong>donskum til føroyskt</strong> og spurdi,
+                  um vitlíki kundi hjálpa. Eg segði ja: fyrst skriva vit eina sera góða <em>prompt</em>,
+                  og síðani <strong>royndu vit hesa promptina á fleiri framkomnum frontier‑modellum</strong>.
+                  Niðurstøðurnar vórðu lagdar fram í eini greiðari <strong>frágreiðing</strong>.
+                </p>
 
-                  <section className="space-y-2">
-                    <h4 className="text-lg font-semibold">Hvussu tað virkar</h4>
-                    <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-                      <li>Tú sendir okkum donskt skjal (Word, PDF ella annað)</li>
-                      <li>Vit týða skjalið við okkara sergjørda vitlíki‑amboði</li>
-                      <li>Vit eftirarbeiða úrslitið, so tað lýtur natúrligt</li>
-                      <li>Tú fært eina góða týðing – skjótt og billigt</li>
-                    </ol>
-                  </section>
+                <div className="rounded-lg border bg-muted/30 p-4">
+                  <h4 className="font-semibold mb-3">Frá roynd til amboð</h4>
+                  <p className="text-sm text-muted-foreground mb-4">
+                    Kundi var nøgdur, og vit bygdu síðani eitt einfalt – men sterkt – amboð:
+                  </p>
 
-                  <section className="space-y-2">
-                    <h4 className="text-lg font-semibold">Prísur</h4>
-                    <div className="rounded-lg border p-4 bg-muted/30">
-                      <p className="text-muted-foreground">
-                        <strong>0,50 DKK fyri hvørt orð</strong> (umleið helvtin av vanligum týðingarprísi)
-                      </p>
-                      <p className="text-sm text-muted-foreground mt-2">
-                        T.d. eitt skjal við 1000 orðum kostar 500 DKK at týða.
-                      </p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div className="flex items-start gap-3">
+                      <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <FileText className="w-4 h-4 text-primary" />
+                      </div>
+                      <div>
+                        <h5 className="font-medium">Inntøka av skjalum</h5>
+                        <p className="text-sm text-muted-foreground">Tekur donsk skjöl inn.</p>
+                      </div>
                     </div>
-                  </section>
 
-                  <section className="space-y-2">
-                    <h4 className="text-lg font-semibold">Bílegg týðing</h4>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Vil tú hava týtt eitt skjal? Send okkum skjalið og vit geva tær eitt tilboð sama dag.
-                    </p>
-
-                    <div className="flex flex-wrap gap-3 mt-4">
-                      <Button
-                        onClick={() => {
-                          setOpenDialog(null);
-                          const el = document.querySelector('#contact');
-                          if (el) el.scrollIntoView({ behavior: 'smooth' });
-                        }}
-                        aria-label="Bílegg týðing"
-                      >
-                        <Mail className="mr-2 h-4 w-4" />
-                        Bílegg týðing
-                      </Button>
+                    <div className="flex items-start gap-3">
+                      <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <Globe className="w-4 h-4 text-primary" />
+                      </div>
+                      <div>
+                        <h5 className="font-medium">AI‑týðing</h5>
+                        <p className="text-sm text-muted-foreground">Ger fyribils týðing til føroyskt.</p>
+                      </div>
                     </div>
-                  </section>
+
+                    <div className="flex items-start gap-3">
+                      <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <MessageCircle className="w-4 h-4 text-primary" />
+                      </div>
+                      <div>
+                        <h5 className="font-medium">Yvirlit yvir setningar</h5>
+                        <p className="text-sm text-muted-foreground">
+                          Vísir hvønn setning til mannagongd, har menniskja kann rætta.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3">
+                      <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="w-4 h-4 text-primary" />
+                      </div>
+                      <div>
+                        <h5 className="font-medium">Sannreinan & góðkenning</h5>
+                        <p className="text-sm text-muted-foreground">
+                          Setningar kunnu merkjast sum “góðkend” eftir rætting.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div className="flex items-start gap-3 sm:col-span-2">
+                      <div className="w-9 h-9 rounded-md bg-primary/10 flex items-center justify-center flex-shrink-0">
+                        <FileText className="w-4 h-4 text-primary" />
+                      </div>
+                      <div>
+                        <h5 className="font-medium">Útflutningur til Word</h5>
+                        <p className="text-sm text-muted-foreground">
+                          Tá alt skjalið er sannreinað, verður endaligi teksturin fluttur út sum Word‑fíla.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </ScrollArea>
+
+                <blockquote className="border-l-4 border-primary pl-4 italic text-muted-foreground">
+                  Stutt sagt: eitt gott AI‑verkætlan, sum riggaði væl – og gav skjót, dygdargóð úrslit.
+                </blockquote>
+
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <Button asChild className="flex-1" data-testid="button-tydingar-case">
+                    {/* TODO: Set correct link */}
+                    <a href="/cases/tydingar" onClick={() => setOpenDialog(null)}>Síggj case study</a>
+                  </Button>
+                  <Button
+                    asChild
+                    variant="outline"
+                    className="flex-1"
+                    data-testid="button-tydingar-demo"
+                  >
+                    {/* TODO: Set correct link */}
+                    <a href="/apps/tyding" onClick={() => setOpenDialog(null)}>Royn amboðið</a>
+                  </Button>
+                </div>
+              </div>
             </DialogContent>
           </Dialog>
+
         </Section>
 
         {/* Resources Section */}
