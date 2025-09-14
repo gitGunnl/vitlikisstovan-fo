@@ -2,7 +2,7 @@
 
 const post = {
   title:
-    "Føroyskt vitlíki 2025: Hvat riggar nú, hvar er fløskuhálsurin – og hvat eigur at mennast",
+    "Føroyskt vitlíki modellir 2025: Hvat er tøkt, hvussu væl rigga tey – og hvat kunna tey brúkast til?",
   slug: "foroyskt-vitliki-2025-hvat-riggar-nu",
   excerpt:
     "Eitt skjótt yvirlit yvir føroyku modellini, meting av avrikum og ein hugleiðing um hvat eigur at mennast næst — við greiðum stigum fyri fyritøkur og gransking.",
