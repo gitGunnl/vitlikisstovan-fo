@@ -189,7 +189,7 @@ const Tilarbeidis = () => {
             <div className="bg-gradient-to-r from-primary/20 via-primary/15 to-accent/20 border-2 border-primary/40 rounded-2xl p-8 shadow-lg">
               <div className="text-center">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-foreground">
-                 Samrøður við námsfrøðingar og hjálpara fólk eru býrjaðar!
+                 Samrøður við námsfrøðingar og hjálparafólk eru býrjaðar!
                 </h2>
                 <p className="text-lg text-foreground/90 mb-8 leading-relaxed max-w-3xl mx-auto">
                   Um tú ert hjálparafólk ella námfrøðingur og gjarna vil hjálpa við hesi verkætlar, so kanst tú trýsta á tín knøtt niðanfyri, fyri at tosa við eitt vitlíki modell um títt starv. Tað tekur áleið 15 min. og hjálpur hesa verkætlan sera nógv.
@@ -227,7 +227,7 @@ const Tilarbeidis = () => {
               <div className="flex items-center gap-3">
                 <span className="text-2xl">🔍</span>
                 <div>
-                  <h3 className="font-bold text-lg text-primary">
+                  <h3 className="font-bold text-lg">
                     Núverandi uppgáva:
                   </h3>
                   <p className="text-foreground/90">
@@ -265,7 +265,18 @@ const Tilarbeidis = () => {
               <CollapsibleContent className="overflow-hidden">
                 <div className="p-6 bg-background/40 border-x border-b border-border/50 rounded-b-xl">
                   <p className="text-foreground/80 leading-relaxed">
-                    Hetta er ein dummy lýsing av verkætlanini. Henda verður víðkað síðani.
+                    Vitlíki-amboð (AI-amboð) gerast skjótt alsamt meira tøk, men nógv arbeiðsfólk í Føroyum eru í iva um,
+                    hvussu tey skulu fara í gongd við at brúka tey. Henda verkætlanin er serliga sett í verk fyri at røkka tey
+                    arbeiðisfólk, sum helst fara at hava trupult við at taka vitlíki til sín – tað eru fólk í vinnugreinum, har
+                    starvsfólk ofta hava færri royndir við teldur í gerandisdegnum í mun til skrivstovufólk, har lítil fígging er til
+                    tøkni útbygging, og greinar har starvsfólk ofta ikki hava tøkniliga bakgrund.
+                    Vit fara at gera 6–8 stuttar, lætt skiljandi frágreiðingar, sum hvør sær verða tillagað eini ávísari vinnugrein.
+                    Frágreiðingarnar fara greiðiliga at vísa, hvussu verandi vitlíki-amboð, serliga mál menni sum ChatGPT,
+                    kunnu loysa veruligar og ítøkiligar trupulleikar, sum hesi starvsfólk hava. Við at veita sera handaliga
+                    vegleiðing, vilja vit minka um tær forðingar, sum halda fólki aftur frá at royna vitlíki til arbeiðis, og hjálpa
+                    teimum, ið hava mest brúk fyri tí, so tey fáa eina kærkomna hjálpandi hánd í einari tíð har arbeiðis landslagi
+                    broytur seg skjótari enn nakrantíð áður. Átaki hjálpur ikki bara fólk at brúka tøknina sum hon er í dag, men
+                    hjálpur teimum eisini at skilja hvussu tey kunna brúka tøknina so við og við at tøknin mennist.
                   </p>
                 </div>
               </CollapsibleContent>
