@@ -188,10 +188,10 @@ const Tilarbeidis = () => {
             <div className="bg-gradient-to-r from-primary/20 via-primary/15 to-accent/20 border-2 border-primary/40 rounded-2xl p-8 shadow-lg">
               <div className="text-center">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-foreground">
-                 Samrøður eru ígongd!
+                 Samrøður við námsfrøðingar og hjálpara fólk eru býrjaðar!
                 </h2>
                 <p className="text-lg text-foreground/90 mb-8 leading-relaxed max-w-3xl mx-auto">
-                  Samrøður við námsfrøðingar og hjálparafólk eru ígongd. Um tú ert hjálparafólk ella námfrøðingur og gjarna vil hjálpa við hesi verkætlar, so kanst tú trýst á tín knøtt niðanfyri, fyri at tosa við eitt vitlíki modell um títt starv. Tað tekur áleið 15 min.
+                  Um tú ert hjálparafólk ella námfrøðingur og gjarna vil hjálpa við hesi verkætlar, so kanst tú trýsta á tín knøtt niðanfyri, fyri at tosa við eitt vitlíki modell um títt starv. Tað tekur áleið 15 min. og hjálpur hesa verkætlan sera nógv.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
