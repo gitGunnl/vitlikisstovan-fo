@@ -24,7 +24,8 @@ import {
   FileText,
   Video,
   Mail,
-  Phone
+  Phone,
+  Download
 } from "lucide-react";
 
 export default function Home() {
@@ -131,14 +132,14 @@ export default function Home() {
 
         {/* Carousel Container */}
         <div className="relative z-10 w-full max-w-4xl mx-auto">
-          <div 
+          <div
             className="flex transition-transform duration-1000 ease-in-out"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
             {slides.map((slide, index) => {
               const isActive = index === currentSlide;
               return (
-                <div 
+                <div
                   key={index}
                   className="w-full flex-shrink-0 text-center px-4"
                   style={{
@@ -149,7 +150,7 @@ export default function Home() {
                 >
                   {/* Blog Badge for slide 2 */}
                   {index === 1 && (
-                    <div 
+                    <div
                       className="inline-flex items-center gap-2 mb-8"
                       style={{
                         transform: isActive ? 'translateY(0) scale(1)' : 'translateY(-20px) scale(0.8)',
@@ -170,10 +171,10 @@ export default function Home() {
                       </span>
                     </div>
                   )}
-                  <h1 
+                  <h1
                     className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 hero-text leading-tight ${
-                      index === 1 
-                        ? 'bg-gradient-to-r from-white via-emerald-200 to-white bg-clip-text text-transparent' 
+                      index === 1
+                        ? 'bg-gradient-to-r from-white via-emerald-200 to-white bg-clip-text text-transparent'
                         : 'text-white'
                     }`}
                     style={{
@@ -185,7 +186,7 @@ export default function Home() {
                   >
                     {slide.title}
                   </h1>
-                  <p 
+                  <p
                     className={`text-xl sm:text-2xl mb-10 hero-text leading-relaxed ${
                       index === 1 ? 'text-white' : 'text-white/95'
                     }`}
@@ -208,7 +209,7 @@ export default function Home() {
                   >
                     {index === 1 ? (
                       <div className="flex justify-center">
-                        <a 
+                        <a
                           href={slide.primaryCTA.href}
                           className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold text-lg rounded-full shadow-2xl hover:shadow-emerald-500/50 transform hover:scale-105 transition-all duration-300"
                           data-testid="button-blog-cta"
@@ -236,7 +237,7 @@ export default function Home() {
 
                   {/* Bottom of Hero CTA - only show on first slide */}
                   {index === 0 && (
-                    <div 
+                    <div
                       className="mt-16"
                       style={{
                         transform: isActive ? 'translateY(0)' : 'translateY(50px)',
@@ -282,8 +283,8 @@ export default function Home() {
               key={index}
               onClick={() => setCurrentSlide(index)}
               className={`rounded-full transition-all ${
-                currentSlide === index 
-                  ? 'w-8 h-2 bg-white' 
+                currentSlide === index
+                  ? 'w-8 h-2 bg-white'
                   : 'w-2 h-2 bg-white/40 hover:bg-white/60'
               }`}
               style={{
@@ -741,85 +742,71 @@ export default function Home() {
 
           {/* Dialog for Vegleiðingar */}
           <Dialog open={openDialog === 'vegleidingar'} onOpenChange={() => setOpenDialog(null)}>
-            <DialogContent className="max-w-2xl">
-              <DialogHeader>
-                <DialogTitle>Vegleiðingar & Verkstovur</DialogTitle>
-                <DialogDescription>
+            <DialogContent className="max-w-3xl max-h-[85vh]">
+              <DialogHeader className="pb-6 border-b border-border/40">
+                <DialogTitle className="text-2xl font-bold text-foreground">Vegleiðingar & Verkstovur</DialogTitle>
+                <DialogDescription className="text-base leading-relaxed text-muted-foreground pt-3">
                   Eg havi hildið hópin av verkstovum, og vit hava gjørt enn fleiri – sera væl
                   umtóktar – vegleiðingar um, hvussu tú brúkar ChatGPT og onnur vitlíki‑amboð
                   í veruligum arbeiðsuppgávum.
                 </DialogDescription>
               </DialogHeader>
 
-              <ScrollArea className="h-[400px] px-2">
-                <div className="space-y-6 pr-4">
+              <ScrollArea className="flex-1 max-h-[60vh]">
+                <div className="space-y-8 p-6">
                   {/* Free sample guides */}
-                  <section className="space-y-2">
-                    <h4 className="text-lg font-semibold">Ókeypis dømi (2 vegleiðingar)</h4>
-                    <p className="text-muted-foreground leading-relaxed">
+                  <section className="space-y-4 p-6 bg-muted/30 rounded-lg border border-border/40">
+                    <h4 className="text-lg font-semibold text-foreground flex items-center gap-2">
+                      <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                      Ókeypis dømi (2 vegleiðingar)
+                    </h4>
+                    <p className="text-muted-foreground leading-relaxed text-sm">
                       Vit bjóða tvey ókeypis royndarskjøl: eitt ætlað <strong>lærarum</strong> og eitt ætlað
                       <strong> politikarum</strong>. Bæði innihalda listar við gagnligum nýtslum fyri hesi
                       starvsøki – og <em>neyv stig‑fyrir‑stig</em> leiðbeining um, hvussu tú gert hesar
-                      uppgávur við vitlíki.
                     </p>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                      <Button asChild className="w-full">
-                        <a href="/Vegleiding_Spar_tíd_og_betra_um_undirvisingina_vid_ChatGPT.pdf" target="_blank" rel="noopener noreferrer">
-                          <FileText className="mr-2 h-4 w-4" />
-                          Tak niður: Lærarar (PDF)
-                        </a>
-                      </Button>
-
-                      <Button asChild variant="outline" className="w-full">
-                        <a href="/Ein_handalig_vegleiding_til_politikarir.pdf" target="_blank" rel="noopener noreferrer">
-                          <FileText className="mr-2 h-4 w-4" />
-                          Tak niður: Politikarar (PDF)
-                        </a>
-                      </Button>
-                    </div>
-                  </section>
-
-                  {/* Order your own guide */}
-                  <section className="space-y-2">
-                    <h4 className="text-lg font-semibold">Bílegg vegleiðing til títt arbeiðisøki</h4>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Tú fær eina <strong>sergjørda vegleiðing</strong> til júst tínar arbeiðsuppgávur
-                      fyri <strong>1600 DKK</strong>. So veit tú akkurát hvat tú skal nýta vitlíki til.
-                    </p>
-
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-3 mt-4">
                       <Button
                         onClick={() => {
                           setOpenDialog(null);
-                          window.location.href = '/contact';
+                          window.location.href = '/okkara-taenastur';
                         }}
-                        aria-label="Bílegg vegleiðing"
+                        aria-label="Síggj ókeypis royndarskjøl"
+                        className="bg-green-600 hover:bg-green-700 text-white"
                       >
-                        <Mail className="mr-2 h-4 w-4" />
-                        Bílegg vegleiðing (1600 DKK)
+                        <Download className="mr-2 h-4 w-4" />
+                        Síggj ókeypis royndarskjøl
                       </Button>
                     </div>
                   </section>
 
-                  {/* Project: Vitlíki til arbeiði */}
-                  <section className="space-y-2">
-                    <h4 className="text-lg font-semibold">"Vitlíki til arbeiðis"</h4>
-                    <p className="text-muted-foreground leading-relaxed">
-                      <strong>Granskingar grunnurin</strong> hevur stuðla mær í at menna <strong>"Vitlíki til arbeiðis"</strong> –
-                    ein verkætlan har eg hjálpi ávísum bólkum at koma gott ígongd við vitlíki. Felags fyri hesar bólkar er at tað eru bólkar í ikki sita við teldu dagliga, hesir bólk eru í vanda fyri at koma ov seint ígong við vitlíki og tí hjálpi eg júst teimum.
-                    </p>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Fyrstu vegleiðingar vera klárar í býrjani av Novembur 2025.
-                    </p>
+                  {/* Complete guide collection */}
+                  <section className="space-y-4 p-6 bg-primary/5 rounded-lg border border-primary/20">
+                    <h4 className="text-lg font-semibold text-foreground flex items-center gap-2">
+                      <span className="w-2 h-2 bg-primary rounded-full"></span>
+                      Allar vegleiðingar (8+ vegleiðingar)
+                    </h4>
+                    <div className="space-y-3">
+                      <p className="text-muted-foreground leading-relaxed text-sm">
+                        Til tær, sum vilja hava <strong>alt kortini</strong> – alt tað, vit hava lært
+                        um at nýta ChatGPT og AI í hvørdagsarbeiði. Hetta fevnir um fleiri
+                        starvsgrupper, íroðandi tekniskar vegleiðingar og dýpri kunning.
+                      </p>
+                      <p className="text-muted-foreground leading-relaxed text-sm italic">
+                        Fyrstu vegleiðingar vera klárar í býrjani av Novembur 2025.
+                      </p>
+                    </div>
 
-                    <div className="flex flex-wrap gap-3">
+                    <div className="flex flex-wrap gap-3 mt-4">
                       <Button
                         onClick={() => {
                           setOpenDialog(null);
                           window.location.href = '/tilarbeidis';
                         }}
                         aria-label="Les meira um hesa verkætlan"
+                        variant="outline"
+                        className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                       >
                         <Mail className="mr-2 h-4 w-4" />
                         Les meira um hesa verkætlan
@@ -899,7 +886,7 @@ export default function Home() {
                       <div className="flex-1">
                         <h5 className="font-semibold text-base mb-2">Góðkenning</h5>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                          Setningar kunnu merkjast sum "góðkent" eftir rætting. Hettar kallast "Human in the loop" og er eitt sera viktigt ting at hava við, tá ið man arbeiður við vitlíki.
+                          Setningar kunnu merkjast sum "góðkent" eftir rætting. Hettar kallast "Human in the loop" og er eitt sera vitalt ting at hava við, tá ið man arbeiður við vitlíki.
                         </p>
                       </div>
                     </div>
