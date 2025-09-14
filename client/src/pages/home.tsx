@@ -831,7 +831,6 @@ export default function Home() {
             </DialogContent>
           </Dialog>
 
-          {/* Dialog for Týðing */}
           {/* Dialog for Týðingar */}
           <Dialog open={openDialog === 'tydingar'} onOpenChange={() => setOpenDialog(null)}>
             <DialogContent className="max-w-2xl">
@@ -937,6 +936,7 @@ export default function Home() {
               </div>
             </DialogContent>
           </Dialog>
+
 
         </Section>
 
