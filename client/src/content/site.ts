@@ -37,7 +37,7 @@ export const siteConfig = {
           "Les okkara nýggja blogginnlegg um hvussu vitlíki kann broyta tínar arbeiðshættir og gera teg meira produktivan.",
         primaryCTA: {
           text: "Les blogginnleggið",
-          href: "/blog/vitliki-broytir-arbeidhaettin"
+          href: "/blog/vitliki-i-foroyum"
         }
       },
       {
@@ -46,7 +46,7 @@ export const siteConfig = {
           "Eg veita alt slag av ráðgeving innan vitlíki strategy, um tað er tekniskir trupulleikar ella hvussu man nýtur vitlíki í tí kreativa arbeiðinum, so kann eg lættiliga leiðbeina tykkum tann rættan vegin.",
         primaryCTA: {
           text: "Bílegg eina samrøðu",
-          href: "#contact"
+          href: "/contact"
         }
       }
     ]
