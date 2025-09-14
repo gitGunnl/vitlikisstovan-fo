@@ -822,9 +822,22 @@ export default function Home() {
                             </p>
 
                             <div className="flex flex-wrap gap-3">
-              </ScrollArea>
-            </DialogContent>
-          </Dialog>
+                              <Button
+                                onClick={() => {
+                                  setOpenDialog(null);
+                                  window.location.href = '/contact';
+                                }}
+                                aria-label="Kontakt um Vitlíki til arbeiðis"
+                              >
+                                <Mail className="mr-2 h-4 w-4" />
+                                Kontakt um "Vitlíki til arbeiðis"
+                              </Button>
+                            </div>
+                          </section>
+                        </div>
+                      </ScrollArea>
+                    </DialogContent>
+                  </Dialog>
 
           {/* Dialog for Týðingar */}
           <Dialog open={openDialog === 'tydingar'} onOpenChange={() => setOpenDialog(null)}>
