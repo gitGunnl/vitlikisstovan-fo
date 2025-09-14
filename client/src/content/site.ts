@@ -28,7 +28,7 @@ export const siteConfig = {
         },
         secondaryCTA: {
           text: "Lær meira um útbúgvingina",
-          href: "/course-details"
+          href: "#program"
         }
       },
       {
