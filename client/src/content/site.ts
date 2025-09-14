@@ -17,17 +17,39 @@ export const siteConfig = {
   },
 
   hero: {
-    title: "Eisini tú kann meistra Vitlíki!",
-    subtitle:
-      "Eg veit akkurát hvussu tit kunna koma frá nýbyrjandi innan vitlíki til dugnaligir vitlíkis brúkarir. Eg taki mær av øllum, tit skulla bara lurta og læra.",
-    primaryCTA: {
-      text: "Bílegg vitlíkis útbúgving til tykkara skrivstovu.",
-      href: "#contact"
-    },
-    secondaryCTA: {
-      text: "Lær meira um útbúgvingina",
-      href: "/course-details"
-    }
+    slides: [
+      {
+        title: "Eisini tú kann meistra Vitlíki!",
+        subtitle:
+          "Eg veit akkurát hvussu tit kunna koma frá nýbyrjandi innan vitlíki til dugnaligir vitlíkis brúkarir. Eg taki mær av øllum, tit skulla bara lurta og læra.",
+        primaryCTA: {
+          text: "Bílegg vitlíkis útbúgving til tykkara skrivstovu.",
+          href: "#contact"
+        },
+        secondaryCTA: {
+          text: "Lær meira um útbúgvingina",
+          href: "/course-details"
+        }
+      },
+      {
+        title: "Nýggj blogginnlegg: Hvussu vitlíki broytir arbeiðshættin",
+        subtitle:
+          "Les okkara nýggja blogginnlegg um hvussu vitlíki kann broyta tínar arbeiðshættir og gera teg meira produktivan.",
+        primaryCTA: {
+          text: "Les blogginnleggið",
+          href: "/blog/vitliki-broytir-arbeidhaettin"
+        }
+      },
+      {
+        title: "Vitlíkis ráðgeving til tykkara fyritøku",
+        subtitle:
+          "Eg veita alt slag av ráðgeving innan vitlíki strategy, um tað er tekniskir trupulleikar ella hvussu man nýtur vitlíki í tí kreativa arbeiðinum, so kann eg lættiliga leiðbeina tykkum tann rættan vegin.",
+        primaryCTA: {
+          text: "Bílegg eina samrøðu",
+          href: "#contact"
+        }
+      }
+    ]
   },
 
   program: {
