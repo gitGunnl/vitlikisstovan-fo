@@ -4,7 +4,7 @@ import Footer from "@/components/site/Footer";
 import Section from "@/components/site/Section";
 import CardFeature from "@/components/site/CardFeature";
 import CTAButtons from "@/components/site/CTAButtons";
-import ContactSection from "@/components/site/ContactForm";
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -976,8 +976,7 @@ export default function Home() {
             }) || []}</div>
         </Section>
 
-        {/* Contact Section */}
-        <ContactSection />
+        
       </main>
 
       <Footer />
