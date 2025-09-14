@@ -32,9 +32,9 @@ export const siteConfig = {
         }
       },
       {
-        title: "Nýggj blogginnlegg: Hvussu vitlíki broytir arbeiðshættin",
+        title: "Nýtt blogginnlegg: Føroysk vitlíki modellir",
         subtitle:
-          "Les okkara nýggja blogginnlegg um hvussu vitlíki kann broyta tínar arbeiðshættir og gera teg meira produktivan.",
+          "Les tað nýggja blogginnleggið um hvussu vitlíki kann broyta tínar arbeiðshættir og gera teg meira produktivan.",
         primaryCTA: {
           text: "Les blogginnleggið",
           href: "/blog/vitliki-i-foroyum"
