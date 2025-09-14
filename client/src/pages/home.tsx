@@ -97,7 +97,7 @@ export default function Home() {
       >
         {/* Video Background with Image Fallback */}
         <VideoBackground
-          videoSrc="/hero section video small.webm"
+          videoSrc="/hero section video.webm"
           posterSrc="/images/hero-background.webp"
         />
 
