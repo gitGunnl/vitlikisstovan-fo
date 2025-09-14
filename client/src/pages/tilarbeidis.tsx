@@ -182,6 +182,32 @@ const Tilarbeidis = () => {
           </div>
         </section>
 
+        {/* Interview Announcement */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-12">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-r from-primary/20 via-primary/15 to-accent/20 border-2 border-primary/40 rounded-2xl p-8 shadow-lg">
+              <div className="text-center">
+                <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-foreground">
+                  🎯 Samrøður eru ígongd!
+                </h2>
+                <p className="text-lg text-foreground/90 mb-8 leading-relaxed max-w-3xl mx-auto">
+                  Samrøður við námsfrøðingar og hjálparafólk eru ígongd. Um tú ert hjálparafólk ella námfrøðingur og gjarna vil hjálpa við hesi verkætlar, so kanst tú trýst á tín knøtt niðanfyri, fyri at tosa við eitt vitlíki modell um títt starv. Tað tekur áleið 15 min.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                  <button className="flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:scale-105 transform">
+                    <span className="text-xl">🎓</span>
+                    Fær til Námsfrøðingar samrøðu
+                  </button>
+                  <button className="flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:scale-105 transform">
+                    <span className="text-xl">🤝</span>
+                    Fær til Hjálparafólk samrøðu
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Status Boxes */}
         <section className="px-4 sm:px-6 lg:px-8 mb-12">
           <div className="max-w-4xl mx-auto space-y-4">
