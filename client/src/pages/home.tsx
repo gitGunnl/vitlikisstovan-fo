@@ -747,72 +747,81 @@ export default function Home() {
             }) || []}
           </div>
 
-          {/* Dialog for Vegleiðingar */}
-          <Dialog open={openDialog === 'vegleidingar'} onOpenChange={() => setOpenDialog(null)}>
-            <DialogContent className="max-w-3xl max-h-[85vh]">
-              <DialogHeader className="pb-6">
-                <DialogTitle className="text-2xl font-bold">Vegleiðingar & Verkstovur</DialogTitle>
-                <DialogDescription className="text-lg leading-relaxed pt-2">
-                  Eg havi hildið hópin av verkstovum, og vit hava gjørt enn fleiri – sera væl umtóktar – vegleiðingar um, hvussu tú brúkar ChatGPT og onnur vitlíki‑amboð í veruligum arbeiðsuppgávum.
-                </DialogDescription>
-              </DialogHeader>
+                 {/* Dialog for Vegleiðingar */}
+                  <Dialog open={openDialog === 'vegleidingar'} onOpenChange={() => setOpenDialog(null)}>
+                    <DialogContent className="max-w-2xl">
+                      <DialogHeader>
+                        <DialogTitle>Vegleiðingar & Verkstovur</DialogTitle>
+                        <DialogDescription>
+                          Eg havi hildið hópin av verkstovum, og vit hava gjørt enn fleiri – sera væl
+                          umtóktar – vegleiðingar um, hvussu tú brúkar ChatGPT og onnur vitlíki‑amboð
+                          í veruligum arbeiðsuppgávum.
+                        </DialogDescription>
+                      </DialogHeader>
 
-              <ScrollArea className="flex-1 max-h-[60vh]">
-                <div className="space-y-8 p-6">
-                  {/* Free sample guides */}
-                  <section className="space-y-4 p-6 bg-muted/30 rounded-lg border">
-                    <h4 className="text-lg font-semibold flex items-center gap-2">
-                      <span className="w-2 h-2 bg-green-500 rounded-full"></span>
-                      Ókeypis dømi (2 vegleiðingar)
-                    </h4>
-                    <p className="text-muted-foreground leading-relaxed">
-                      Vit bjóða tvey ókeypis royndarskjøl: eitt ætlað <strong>lærarum</strong> og eitt ætlað <strong>politikarum</strong>. Bæði innihalda listar við gagnligum nýtslum fyri hesi starvsøki – og <em>neyv stig‑fyrir‑stig</em> leiðbeining um, hvussu tú gert hesar
-                    </p>
+                      <ScrollArea className="h-[400px] px-2">
+                        <div className="space-y-6 pr-4">
+                          {/* Free sample guides */}
+                          <section className="space-y-2">
+                            <h4 className="text-lg font-semibold">Ókeypis dømi (2 vegleiðingar)</h4>
+                            <p className="text-muted-foreground leading-relaxed">
+                              Vit bjóða tvey ókeypis royndarskjøl: eitt ætlað <strong>lærarum</strong> og eitt ætlað
+                              <strong> politikarum</strong>. Bæði innihalda listar við gagnligum nýtslum fyri hesi
+                              starvsøki – og <em>neyv stig‑fyrir‑stig</em> leiðbeining um, hvussu tú gert hesar
+                              uppgávur við vitlíki.
+                            </p>
 
-                    <div className="flex flex-wrap gap-3 mt-6">
-                      <Button
-                        onClick={() => {
-                          setOpenDialog(null);
-                          window.location.href = '/okkara-taenastur';
-                        }}
-                        className="bg-green-600 hover:bg-green-700 text-white"
-                      >
-                        <Download className="mr-2 h-4 w-4" />
-                        Síggj ókeypis royndarskjøl
-                      </Button>
-                    </div>
-                  </section>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                              <Button asChild className="w-full">
+                                <a href="/Vegleiding_Spar_tíd_og_betra_um_undirvisingina_vid_ChatGPT.pdf" target="_blank" rel="noopener noreferrer">
+                                  <FileText className="mr-2 h-4 w-4" />
+                                  Tak niður: Lærarar (PDF)
+                                </a>
+                              </Button>
 
-                  {/* Complete guide collection */}
-                  <section className="space-y-4 p-6 bg-primary/5 rounded-lg border border-primary/20">
-                    <h4 className="text-lg font-semibold flex items-center gap-2">
-                      <span className="w-2 h-2 bg-primary rounded-full"></span>
-                      Allar vegleiðingar (8+ vegleiðingar)
-                    </h4>
-                    <div className="space-y-4">
-                      <p className="text-muted-foreground leading-relaxed">
-                        Til tær, sum vilja hava <strong>alt kortini</strong> – alt tað, vit hava lært um at nýta ChatGPT og AI í hvørdagsarbeiði. Hetta fevnir um fleiri starvsgrupper, íroðandi tekniskar vegleiðingar og dýpri kunning.
-                      </p>
-                      <p className="text-muted-foreground leading-relaxed italic">
-                        Fyrstu vegleiðingar vera klárar í býrjani av Novembur 2025.
-                      </p>
-                    </div>
+                              <Button asChild variant="outline" className="w-full">
+                                <a href="/Ein_handalig_vegleiding_til_politikarir.pdf" target="_blank" rel="noopener noreferrer">
+                                  <FileText className="mr-2 h-4 w-4" />
+                                  Tak niður: Politikarar (PDF)
+                                </a>
+                              </Button>
+                            </div>
+                          </section>
 
-                    <div className="flex flex-wrap gap-3 mt-6">
-                      <Button
-                        onClick={() => {
-                          setOpenDialog(null);
-                          window.location.href = '/tilarbeidis';
-                        }}
-                        variant="outline"
-                        className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                      >
-                        <Mail className="mr-2 h-4 w-4" />
-                        Les meira um hesa verkætlan
-                      </Button>
-                    </div>
-                  </section>
-                </div>
+                          {/* Order your own guide */}
+                          <section className="space-y-2">
+                            <h4 className="text-lg font-semibold">Bílegg vegleiðing til títt arbeiðisøki</h4>
+                            <p className="text-muted-foreground leading-relaxed">
+                              Tú fær eina <strong>sergjørda vegleiðing</strong> til júst tínar arbeiðsuppgávur
+                              fyri <strong>1600 DKK</strong>. So veit tú akkurát hvat tú skal nýta vitlíki til.
+                            </p>
+
+                            <div className="flex flex-wrap gap-3">
+                              <Button
+                                onClick={() => {
+                                  setOpenDialog(null);
+                                  window.location.href = '/contact';
+                                }}
+                                aria-label="Bílegg vegleiðing"
+                              >
+                                <Mail className="mr-2 h-4 w-4" />
+                                Bílegg vegleiðing (1600 DKK)
+                              </Button>
+                            </div>
+                          </section>
+
+                          {/* Project: Vitlíki til arbeiði */}
+                          <section className="space-y-2">
+                            <h4 className="text-lg font-semibold">"Vitlíki til arbeiðis"</h4>
+                            <p className="text-muted-foreground leading-relaxed">
+                              <strong>Granskingar grunnurin</strong> hevur stuðla mær í at menna <strong>"Vitlíki til arbeiðis"</strong> –
+                            ein verkætlan har eg hjálpi ávísum bólkum at koma gott ígongd við vitlíki. Felags fyri hesar bólkar er at tað eru bólkar í ikki sita við teldu dagliga, hesir bólk eru í vanda fyri at koma ov seint ígong við vitlíki og tí hjálpi eg júst teimum.
+                            </p>
+                            <p className="text-muted-foreground leading-relaxed">
+                              Fyrstu vegleiðingar vera klárar í býrjani av Novembur 2025.
+                            </p>
+
+                            <div className="flex flex-wrap gap-3">
               </ScrollArea>
             </DialogContent>
           </Dialog>
