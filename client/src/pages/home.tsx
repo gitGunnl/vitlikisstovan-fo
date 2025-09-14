@@ -750,36 +750,31 @@ export default function Home() {
           {/* Dialog for Vegleiðingar */}
           <Dialog open={openDialog === 'vegleidingar'} onOpenChange={() => setOpenDialog(null)}>
             <DialogContent className="max-w-3xl max-h-[85vh]">
-              <DialogHeader className="pb-6 border-b border-border/40">
-                <DialogTitle className="text-2xl font-bold text-foreground">Vegleiðingar & Verkstovur</DialogTitle>
-                <DialogDescription className="text-base leading-relaxed text-muted-foreground pt-3">
-                  Eg havi hildið hópin av verkstovum, og vit hava gjørt enn fleiri – sera væl
-                  umtóktar – vegleiðingar um, hvussu tú brúkar ChatGPT og onnur vitlíki‑amboð
-                  í veruligum arbeiðsuppgávum.
+              <DialogHeader className="pb-6">
+                <DialogTitle className="text-2xl font-bold">Vegleiðingar & Verkstovur</DialogTitle>
+                <DialogDescription className="text-lg leading-relaxed pt-2">
+                  Eg havi hildið hópin av verkstovum, og vit hava gjørt enn fleiri – sera væl umtóktar – vegleiðingar um, hvussu tú brúkar ChatGPT og onnur vitlíki‑amboð í veruligum arbeiðsuppgávum.
                 </DialogDescription>
               </DialogHeader>
 
               <ScrollArea className="flex-1 max-h-[60vh]">
                 <div className="space-y-8 p-6">
                   {/* Free sample guides */}
-                  <section className="space-y-4 p-6 bg-muted/30 rounded-lg border border-border/40">
-                    <h4 className="text-lg font-semibold text-foreground flex items-center gap-2">
+                  <section className="space-y-4 p-6 bg-muted/30 rounded-lg border">
+                    <h4 className="text-lg font-semibold flex items-center gap-2">
                       <span className="w-2 h-2 bg-green-500 rounded-full"></span>
                       Ókeypis dømi (2 vegleiðingar)
                     </h4>
-                    <p className="text-muted-foreground leading-relaxed text-sm">
-                      Vit bjóða tvey ókeypis royndarskjøl: eitt ætlað <strong>lærarum</strong> og eitt ætlað
-                      <strong> politikarum</strong>. Bæði innihalda listar við gagnligum nýtslum fyri hesi
-                      starvsøki – og <em>neyv stig‑fyrir‑stig</em> leiðbeining um, hvussu tú gert hesar
+                    <p className="text-muted-foreground leading-relaxed">
+                      Vit bjóða tvey ókeypis royndarskjøl: eitt ætlað <strong>lærarum</strong> og eitt ætlað <strong>politikarum</strong>. Bæði innihalda listar við gagnligum nýtslum fyri hesi starvsøki – og <em>neyv stig‑fyrir‑stig</em> leiðbeining um, hvussu tú gert hesar
                     </p>
 
-                    <div className="flex flex-wrap gap-3 mt-4">
+                    <div className="flex flex-wrap gap-3 mt-6">
                       <Button
                         onClick={() => {
                           setOpenDialog(null);
                           window.location.href = '/okkara-taenastur';
                         }}
-                        aria-label="Síggj ókeypis royndarskjøl"
                         className="bg-green-600 hover:bg-green-700 text-white"
                       >
                         <Download className="mr-2 h-4 w-4" />
@@ -790,28 +785,25 @@ export default function Home() {
 
                   {/* Complete guide collection */}
                   <section className="space-y-4 p-6 bg-primary/5 rounded-lg border border-primary/20">
-                    <h4 className="text-lg font-semibold text-foreground flex items-center gap-2">
+                    <h4 className="text-lg font-semibold flex items-center gap-2">
                       <span className="w-2 h-2 bg-primary rounded-full"></span>
                       Allar vegleiðingar (8+ vegleiðingar)
                     </h4>
-                    <div className="space-y-3">
-                      <p className="text-muted-foreground leading-relaxed text-sm">
-                        Til tær, sum vilja hava <strong>alt kortini</strong> – alt tað, vit hava lært
-                        um at nýta ChatGPT og AI í hvørdagsarbeiði. Hetta fevnir um fleiri
-                        starvsgrupper, íroðandi tekniskar vegleiðingar og dýpri kunning.
+                    <div className="space-y-4">
+                      <p className="text-muted-foreground leading-relaxed">
+                        Til tær, sum vilja hava <strong>alt kortini</strong> – alt tað, vit hava lært um at nýta ChatGPT og AI í hvørdagsarbeiði. Hetta fevnir um fleiri starvsgrupper, íroðandi tekniskar vegleiðingar og dýpri kunning.
                       </p>
-                      <p className="text-muted-foreground leading-relaxed text-sm italic">
+                      <p className="text-muted-foreground leading-relaxed italic">
                         Fyrstu vegleiðingar vera klárar í býrjani av Novembur 2025.
                       </p>
                     </div>
 
-                    <div className="flex flex-wrap gap-3 mt-4">
+                    <div className="flex flex-wrap gap-3 mt-6">
                       <Button
                         onClick={() => {
                           setOpenDialog(null);
                           window.location.href = '/tilarbeidis';
                         }}
-                        aria-label="Les meira um hesa verkætlan"
                         variant="outline"
                         className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                       >
