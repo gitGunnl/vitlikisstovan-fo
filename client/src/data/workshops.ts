@@ -18,7 +18,7 @@ export const workshops: Record<string, Workshop> = {
     company: "Bakkafrost",
     steps: [
       {
-        title: "Stig 1: Vitlíki verkstova",
+        title: "Stig 1: Si",
         description: "Avrita birti niðanfyri og kopiera tað inn í ChatGPT og send tað avstað. Svara síðani uppá spurningarnir sum vera settir.",
         prompt: "Describe three innovative approaches that could transform salmon farming in the next 5 years. Consider technology, sustainability, and market needs.",
         requiresConfirmation: false
