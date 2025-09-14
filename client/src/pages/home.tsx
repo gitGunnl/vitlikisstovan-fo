@@ -102,19 +102,21 @@ export default function Home() {
         {/* Navigation Arrows */}
         <button
           onClick={handlePrevSlide}
-          className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 p-3 text-white/60 hover:text-white transition-colors duration-200"
+          className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 p-3 text-white/40 hover:text-white/80 transition-all duration-300 hover:scale-110"
           data-testid="button-carousel-prev"
+          aria-label="Previous slide"
         >
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
           </svg>
         </button>
         <button
           onClick={handleNextSlide}
-          className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 p-3 text-white/60 hover:text-white transition-colors duration-200"
+          className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 p-3 text-white/40 hover:text-white/80 transition-all duration-300 hover:scale-110"
           data-testid="button-carousel-next"
+          aria-label="Next slide"
         >
-          <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
           </svg>
         </button>
@@ -122,70 +124,114 @@ export default function Home() {
         {/* Carousel Container */}
         <div className="relative z-10 w-full max-w-4xl mx-auto">
           <div 
-            className="flex transition-transform duration-700 ease-in-out"
+            className="flex transition-transform duration-1000 ease-in-out"
             style={{ transform: `translateX(-${currentSlide * 100}%)` }}
           >
-            {slides.map((slide, index) => (
-              <div 
-                key={index}
-                className="w-full flex-shrink-0 text-center px-4 animate-fade-in"
-              >
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 text-white hero-text leading-tight">
-                  {slide.title}
-                </h1>
-                <p className="text-xl sm:text-2xl mb-10 text-white/95 hero-text leading-relaxed">
-                  {slide.subtitle}
-                </p>
-                <CTAButtons
-                  primary={slide.primaryCTA}
-                  secondary={slide.secondaryCTA}
-                  className="mt-2 mb-16"
-                />
-
-                {/* Bottom of Hero CTA - only show on first slide */}
-                {index === 0 && (
-                  <div className="mt-16">
-                    <button
-                      onClick={() => {
-                        const element = document.querySelector('#consulting');
-                        if (element) {
-                          element.scrollIntoView({ behavior: 'smooth' });
-                        }
-                      }}
-                      className="group flex items-center gap-3 mx-auto px-6 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 border border-white/20"
-                      data-testid="button-scroll-consulting"
-                    >
-                      <span className="text-lg font-medium">
-                        Um tú ert her fyri ráðgeving ella annað, les meira longur nirrið
-                      </span>
-                      <svg
-                        className="w-5 h-5 transition-transform group-hover:translate-y-1"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                      </svg>
-                    </button>
+            {slides.map((slide, index) => {
+              const isActive = index === currentSlide;
+              return (
+                <div 
+                  key={index}
+                  className="w-full flex-shrink-0 text-center px-4"
+                  style={{
+                    opacity: isActive ? 1 : 0,
+                    transition: 'opacity 600ms ease-in-out',
+                    pointerEvents: isActive ? 'auto' : 'none'
+                  }}
+                >
+                  <h1 
+                    className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 text-white hero-text leading-tight"
+                    style={{
+                      transform: isActive ? 'translateY(0)' : 'translateY(20px)',
+                      transition: 'transform 800ms cubic-bezier(0.34, 1.56, 0.64, 1)',
+                      transitionDelay: isActive ? '200ms' : '0ms'
+                    }}
+                  >
+                    {slide.title}
+                  </h1>
+                  <p 
+                    className="text-xl sm:text-2xl mb-10 text-white/95 hero-text leading-relaxed"
+                    style={{
+                      transform: isActive ? 'translateY(0) scale(1)' : 'translateY(30px) scale(0.95)',
+                      transition: 'transform 900ms cubic-bezier(0.25, 0.46, 0.45, 0.94)',
+                      transitionDelay: isActive ? '350ms' : '0ms'
+                    }}
+                  >
+                    {slide.subtitle}
+                  </p>
+                  <div
+                    style={{
+                      transform: isActive ? 'translateY(0)' : 'translateY(40px)',
+                      opacity: isActive ? 1 : 0,
+                      transition: 'all 1000ms cubic-bezier(0.16, 1, 0.3, 1)',
+                      transitionDelay: isActive ? '500ms' : '0ms'
+                    }}
+                  >
+                    <CTAButtons
+                      primary={slide.primaryCTA}
+                      secondary={slide.secondaryCTA}
+                      className="mt-2 mb-16"
+                    />
                   </div>
-                )}
-              </div>
-            ))}
+
+                  {/* Bottom of Hero CTA - only show on first slide */}
+                  {index === 0 && (
+                    <div 
+                      className="mt-16"
+                      style={{
+                        transform: isActive ? 'translateY(0)' : 'translateY(50px)',
+                        opacity: isActive ? 1 : 0,
+                        transition: 'all 1100ms cubic-bezier(0.22, 1, 0.36, 1)',
+                        transitionDelay: isActive ? '650ms' : '0ms'
+                      }}
+                    >
+                      <button
+                        onClick={() => {
+                          const element = document.querySelector('#consulting');
+                          if (element) {
+                            element.scrollIntoView({ behavior: 'smooth' });
+                          }
+                        }}
+                        className="group flex items-center gap-3 mx-auto px-6 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 border border-white/20"
+                        data-testid="button-scroll-consulting"
+                      >
+                        <span className="text-lg font-medium">
+                          Um tú ert her fyri ráðgeving ella annað, les meira longur nirrið
+                        </span>
+                        <svg
+                          className="w-5 h-5 transition-transform group-hover:translate-y-1"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                        </svg>
+                      </button>
+                    </div>
+                  )}
+                </div>
+              );
+            })}
           </div>
         </div>
 
         {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
           {slides.map((_, index) => (
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+              className={`rounded-full transition-all ${
                 currentSlide === index 
-                  ? 'w-8 bg-white' 
-                  : 'bg-white/40 hover:bg-white/60'
+                  ? 'w-8 h-2 bg-white' 
+                  : 'w-2 h-2 bg-white/40 hover:bg-white/60'
               }`}
+              style={{
+                transition: 'all 400ms cubic-bezier(0.34, 1.56, 0.64, 1)'
+              }}
               data-testid={`button-slide-indicator-${index}`}
+              aria-label={`Go to slide ${index + 1}`}
+              aria-current={currentSlide === index ? 'true' : 'false'}
             />
           ))}
         </div>
