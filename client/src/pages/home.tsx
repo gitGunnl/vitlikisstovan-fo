@@ -65,7 +65,7 @@ export default function Home() {
 
   // Auto-rotate carousel
   useEffect(() => {
-    const intervals = [6000, 6000, 6000]; // Different timing for each slide
+    const intervals = [10000, 10000, 10000]; // Different timing for each slide
     const timer = setTimeout(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, intervals[currentSlide]);
