@@ -194,10 +194,15 @@ const Tilarbeidis = () => {
                   Samrøður við námsfrøðingar og hjálparafólk eru ígongd. Um tú ert hjálparafólk ella námfrøðingur og gjarna vil hjálpa við hesi verkætlar, so kanst tú trýst á tín knøtt niðanfyri, fyri at tosa við eitt vitlíki modell um títt starv. Tað tekur áleið 15 min.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <button className="flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:scale-105 transform">
+                  <a
+                    href="https://interview-tool.replit.app/i/eb859a69-2e6c-4e36-be1a-68e39226f53e/a8f7218d6a0643b3aa8d0b17efcb6db4"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:scale-105 transform"
+                  >
                     <span className="text-xl">🎓</span>
                     Fær til Námsfrøðingar samrøðu
-                  </button>
+                  </a>
                   <a
                     href="https://interview-tool.replit.app/i/fdf4c068-eed5-492f-abd5-31cd168f9ead/ebe41d395e3546369d5528c185f7ab93"
                     target="_blank"
