@@ -1,9 +1,10 @@
 // client/src/pages/tilarbeidis.tsx
 import { useEffect, useState } from "react";
-import { Calendar } from "lucide-react";
+import { Calendar, ChevronDown } from "lucide-react";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import { seoConfig } from "@/content/seo";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 
 type TimelineEvent = {
   id: string;
@@ -248,6 +249,27 @@ const Tilarbeidis = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Project Description Dropdown */}
+        <section className="px-4 sm:px-6 lg:px-8 mb-12">
+          <div className="max-w-4xl mx-auto">
+            <Collapsible>
+              <CollapsibleTrigger className="flex items-center justify-between w-full p-6 bg-background/60 border border-border/50 rounded-xl hover:border-primary/30 hover:bg-background/70 transition-all duration-300 group">
+                <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
+                  Verkætlanarlýsing
+                </h3>
+                <ChevronDown className="w-5 h-5 text-foreground/60 transition-transform duration-200 group-data-[state=open]:rotate-180" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="overflow-hidden">
+                <div className="p-6 bg-background/40 border-x border-b border-border/50 rounded-b-xl">
+                  <p className="text-foreground/80 leading-relaxed">
+                    Hetta er ein dummy lýsing av verkætlanini. Henda verður víðkað síðani.
+                  </p>
+                </div>
+              </CollapsibleContent>
+            </Collapsible>
           </div>
         </section>
 
