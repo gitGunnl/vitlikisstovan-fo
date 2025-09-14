@@ -5,6 +5,7 @@ import Section from "@/components/site/Section";
 import CardFeature from "@/components/site/CardFeature";
 import CTAButtons from "@/components/site/CTAButtons";
 import ContactSection from "@/components/site/ContactForm";
+import VideoBackground from "@/components/site/VideoBackground";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
@@ -92,13 +93,19 @@ export default function Home() {
         {/* Hero Section */}
       <section
         id="hero"
-        className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 hero-background overflow-hidden"
+        className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden"
       >
+        {/* Video Background with Image Fallback */}
+        <VideoBackground
+          videoSrc="/hero section video small.webm"
+          posterSrc="/images/hero-background.webp"
+        />
+
         {/* Background overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60 hero-overlay"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60 hero-overlay pointer-events-none"></div>
 
         {/* Animated gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10 animate-pulse pointer-events-none"></div>
 
         {/* Special blog slide background effect */}
         {currentSlide === 1 && (
