@@ -918,21 +918,7 @@ export default function Home() {
                   Stutt sagt: eitt gott AI‑verkætlan, sum riggaði væl – og gav skjót, dygdargóð úrslit.
                 </blockquote>
 
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <Button asChild className="flex-1" data-testid="button-tydingar-case">
-                    {/* TODO: Set correct link */}
-                    <a href="/cases/tydingar" onClick={() => setOpenDialog(null)}>Síggj case study</a>
-                  </Button>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="flex-1"
-                    data-testid="button-tydingar-demo"
-                  >
-                    {/* TODO: Set correct link */}
-                    <a href="/apps/tyding" onClick={() => setOpenDialog(null)}>Royn amboðið</a>
-                  </Button>
-                </div>
+                
               </div>
             </DialogContent>
           </Dialog>
