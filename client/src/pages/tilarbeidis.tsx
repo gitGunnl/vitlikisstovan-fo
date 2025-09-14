@@ -198,10 +198,15 @@ const Tilarbeidis = () => {
                     <span className="text-xl">🎓</span>
                     Fær til Námsfrøðingar samrøðu
                   </button>
-                  <button className="flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:scale-105 transform">
+                  <a
+                    href="https://interview-tool.replit.app/i/fdf4c068-eed5-492f-abd5-31cd168f9ead/ebe41d395e3546369d5528c185f7ab93"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:scale-105 transform"
+                  >
                     <span className="text-xl">🤝</span>
                     Fær til Hjálparafólk samrøðu
-                  </button>
+                  </a>
                 </div>
               </div>
             </div>
