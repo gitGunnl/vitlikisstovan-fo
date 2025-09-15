@@ -12,19 +12,29 @@ interface CTAButtonsProps {
 }
 
 export default function CTAButtons({ primary, secondary, className }: CTAButtonsProps) {
+  // Check if primary button text is long (more than 30 characters)
+  const isPrimaryLong = primary && primary.text.length > 30;
+  
   return (
-    <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-in ${className || ''}`}>
+    <div className={`flex flex-col gap-4 justify-center animate-fade-in ${className || ''}`}>
       {primary && (
-        <Button asChild className="group h-auto py-3 px-6 sm:py-3 sm:px-6 text-sm sm:text-base whitespace-normal text-center leading-tight min-h-[48px] flex items-center justify-center">
-          <a href={primary.href} data-testid="button-primary-cta" className="flex items-center justify-center text-center">
-            <span className="relative block leading-tight">
+        <div className="flex flex-col items-center gap-3">
+          {isPrimaryLong && (
+            <p className="text-white/95 text-sm sm:text-base text-center leading-relaxed max-w-md px-4">
               {primary.text}
-              <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                {primary.text}
+            </p>
+          )}
+          <Button asChild className="group h-auto py-3 px-6 sm:py-3 sm:px-6 text-sm sm:text-base whitespace-normal text-center leading-tight min-h-[48px] flex items-center justify-center">
+            <a href={primary.href} data-testid="button-primary-cta" className="flex items-center justify-center text-center">
+              <span className="relative block leading-tight">
+                {isPrimaryLong ? "Les meira" : primary.text}
+                <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  {isPrimaryLong ? "Les meira" : primary.text}
+                </span>
               </span>
-            </span>
-          </a>
-        </Button>
+            </a>
+          </Button>
+        </div>
       )}
       {secondary && (
         <Button asChild variant="outline" className="group bg-white/10 border-white/30 text-white hover:bg-white/20 h-auto py-3 px-6 sm:py-3 sm:px-6 text-sm sm:text-base whitespace-normal text-center leading-tight min-h-[48px] flex items-center justify-center">
