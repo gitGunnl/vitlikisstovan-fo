@@ -194,7 +194,7 @@ export const siteConfig = {
       {
         title: "Føroyskt í hásæti",
         description:
-          "Vegleiðing, sum virðir okkara mál og mentan, samstundis sum hon lýkur altjóða tøknilig krøv."
+          "Vegleiðing, sum virðir okkara mál og mentan, samstundis sum hon lýkur altjóða tøknilig krøv. Og so er tað stutt flutt."
       },
       {
         title: "Professionelt og handaligt",
