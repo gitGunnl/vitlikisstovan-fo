@@ -805,14 +805,13 @@ export default function Home() {
 
                             <div className="flex flex-wrap gap-3">
                               <Button
-                                onClick={() => {
-                                  setOpenDialog(null);
-                                  window.location.href = '/contact';
-                                }}
+                                asChild
                                 aria-label="Bílegg vegleiðing"
                               >
-                                <Mail className="mr-2 h-4 w-4" />
-                                Bílegg vegleiðing (1600 DKK)
+                                <a href="/contact">
+                                  <Mail className="mr-2 h-4 w-4" />
+                                  Bílegg vegleiðing (1600 DKK)
+                                </a>
                               </Button>
                             </div>
                           </section>
