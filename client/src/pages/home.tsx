@@ -158,7 +158,7 @@ export default function Home() {
                   {/* Blog Badge for slide 2 */}
                   {index === 1 && (
                     <div
-                      className="inline-flex items-center gap-2 mb-3 sm:mb-8"
+                      className="inline-flex items-center gap-2 mb-4 sm:mb-6"
                       style={{
                         transform: isActive ? 'translateY(0) scale(1)' : 'translateY(-20px) scale(0.8)',
                         opacity: isActive ? 1 : 0,
@@ -166,17 +166,10 @@ export default function Home() {
                         transitionDelay: isActive ? '100ms' : '0ms'
                       }}
                     >
-                      <span className="relative inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold text-xs sm:text-sm uppercase tracking-wider rounded-full shadow-2xl">
-                        {/* Remove blur effect on mobile for better readability */}
-                        <span className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full opacity-50 sm:opacity-75 animate-pulse hidden sm:block blur-md"></span>
-                        {/* Add solid background for mobile */}
-                        <span className="absolute inset-0 bg-gradient-to-r from-emerald-600/90 to-teal-600/90 rounded-full sm:hidden"></span>
-                        <span className="relative flex items-center gap-2 z-10">
+                      <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-emerald-600/80 text-white font-semibold text-xs uppercase tracking-wider rounded-full shadow-lg">
+                        <span className="flex items-center gap-2">
                           <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-                          Nýggjur bloggur
-                          <svg className="w-3 sm:w-4 h-3 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                          </svg>
+                          NýGGJUR BLOGGUR
                         </span>
                       </span>
                     </div>
@@ -184,18 +177,28 @@ export default function Home() {
                   <h1
                     className={`text-2xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-6 hero-text leading-snug sm:leading-tight ${
                       index === 1
-                        ? 'bg-gradient-to-r from-white via-emerald-200 to-white bg-clip-text text-transparent'
+                        ? 'text-white'
                         : 'text-white'
                     }`}
                     style={{
                       transform: isActive ? 'translateY(0)' : 'translateY(20px)',
                       transition: 'transform 800ms cubic-bezier(0.34, 1.56, 0.64, 1)',
                       transitionDelay: isActive ? '200ms' : '0ms',
-                      filter: index === 1 ? 'drop-shadow(0 0 30px rgba(52, 211, 153, 0.5))' : 'none',
-                      WebkitTextFillColor: index === 1 ? 'transparent' : 'inherit'
+                      filter: index === 1 ? 'drop-shadow(0 0 30px rgba(52, 211, 153, 0.3))' : 'none'
                     }}
                   >
-                    {slide.title}
+                    {index === 1 ? (
+                      <>
+                        <span className="block text-xl sm:text-3xl lg:text-4xl mb-2 text-emerald-400 font-medium">
+                          Nýtt blogginnlegg:
+                        </span>
+                        <span className="block">
+                          Føroysk vitlíki modellir
+                        </span>
+                      </>
+                    ) : (
+                      slide.title
+                    )}
                   </h1>
                   <p
                     className={`text-base sm:text-xl lg:text-2xl mb-6 sm:mb-10 hero-text leading-normal sm:leading-relaxed px-2 sm:px-0 ${
