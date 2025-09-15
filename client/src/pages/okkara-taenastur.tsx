@@ -285,7 +285,7 @@ export default function Taenastur() {
                   </div>
 
                   <p className="text-muted-foreground leading-relaxed text-lg">
-                    Um tú hevur brúk fyri flottum visuellum lutum, men ikki hevur tíðna til at gera tað? Eg kann gera vitlíki tilfar sergjørt til tín smag ella tykkara brand - frá eygafangandi video og myndir til fullar heimasíður.
+                    Hevur tú tørv á flottum visuellum lutum, men ikki tíðina til at gera tað? Eg kann gera vitlíki tilfar sergjørt til tín smag ella tykkara brand - frá eygafangandi video og myndir til fullar heimasíður.
                   </p>
 
                   <div className="flex flex-wrap gap-3">
