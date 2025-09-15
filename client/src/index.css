@@ -22,7 +22,7 @@
 /* Mobile adjustments */
 @media (max-width: 640px) {
   .hero-background {
-    min-height: 60vh;
+    min-height: 70vh;
     background-attachment: scroll;
     /* Darken the gradient overlay on mobile for better text contrast */
     background-image: 

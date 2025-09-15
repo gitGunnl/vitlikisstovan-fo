@@ -158,7 +158,7 @@ export default function Home() {
                   {/* Blog Badge for slide 2 */}
                   {index === 1 && (
                     <div
-                      className="inline-flex items-center gap-2 mb-6 sm:mb-8"
+                      className="inline-flex items-center gap-2 mb-3 sm:mb-8"
                       style={{
                         transform: isActive ? 'translateY(0) scale(1)' : 'translateY(-20px) scale(0.8)',
                         opacity: isActive ? 1 : 0,
@@ -182,7 +182,7 @@ export default function Home() {
                     </div>
                   )}
                   <h1
-                    className={`text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 hero-text leading-tight ${
+                    className={`text-2xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-6 hero-text leading-snug sm:leading-tight ${
                       index === 1
                         ? 'bg-gradient-to-r from-white via-emerald-200 to-white bg-clip-text text-transparent'
                         : 'text-white'
@@ -198,7 +198,7 @@ export default function Home() {
                     {slide.title}
                   </h1>
                   <p
-                    className={`text-lg sm:text-xl lg:text-2xl mb-8 sm:mb-10 hero-text leading-relaxed px-2 sm:px-0 ${
+                    className={`text-base sm:text-xl lg:text-2xl mb-6 sm:mb-10 hero-text leading-normal sm:leading-relaxed px-2 sm:px-0 ${
                       index === 1 ? 'text-white' : 'text-white/95'
                     }`}
                     style={{
@@ -222,7 +222,7 @@ export default function Home() {
                       <div className="flex justify-center">
                         <a
                           href={slide.primaryCTA.href}
-                          className="group relative inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold text-base sm:text-lg rounded-full shadow-2xl hover:shadow-emerald-500/50 transform hover:scale-105 transition-all duration-300"
+                          className="group relative inline-flex items-center gap-2 sm:gap-3 px-5 sm:px-8 py-2.5 sm:py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-medium sm:font-semibold text-sm sm:text-lg rounded-full shadow-lg sm:shadow-2xl hover:shadow-emerald-500/50 transform hover:scale-105 transition-all duration-300"
                           data-testid="button-blog-cta"
                         >
                           <span className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
@@ -249,7 +249,7 @@ export default function Home() {
                   {/* Bottom of Hero CTA - only show on first slide */}
                   {index === 0 && (
                     <div
-                      className="mt-16"
+                      className="mt-8 sm:mt-16"
                       style={{
                         transform: isActive ? 'translateY(0)' : 'translateY(50px)',
                         opacity: isActive ? 1 : 0,
@@ -264,14 +264,14 @@ export default function Home() {
                             element.scrollIntoView({ behavior: 'smooth' });
                           }
                         }}
-                        className="group flex flex-col sm:flex-row items-center gap-2 sm:gap-3 mx-auto px-4 sm:px-6 py-3 sm:py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 border border-white/20"
+                        className="group inline-flex items-center gap-2 mx-auto px-4 sm:px-6 py-2 sm:py-3 bg-white/15 backdrop-blur-sm text-white rounded-full hover:bg-white/25 transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 border border-white/30"
                         data-testid="button-scroll-consulting"
                       >
-                        <span className="text-sm sm:text-lg font-medium text-center sm:text-left">
+                        <span className="text-xs sm:text-base font-medium">
                           Um tú ert her fyri ráðgeving ella annað, les meira longur nirrið
                         </span>
                         <svg
-                          className="w-5 h-5 transition-transform group-hover:translate-y-1"
+                          className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-y-1"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"

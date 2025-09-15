@@ -13,9 +13,9 @@ interface CTAButtonsProps {
 
 export default function CTAButtons({ primary, secondary, className }: CTAButtonsProps) {
   return (
-    <div className={`flex flex-col sm:flex-row gap-4 justify-center animate-fade-in ${className || ''}`}>
+    <div className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center animate-fade-in ${className || ''}`}>
       {primary && (
-        <Button asChild size="lg" className="group">
+        <Button asChild className="group h-auto py-2.5 px-5 sm:py-3 sm:px-6 text-sm sm:text-base">
           <a href={primary.href} data-testid="button-primary-cta">
             <span className="relative">
               {primary.text}
@@ -27,7 +27,7 @@ export default function CTAButtons({ primary, secondary, className }: CTAButtons
         </Button>
       )}
       {secondary && (
-        <Button asChild size="lg" variant="outline" className="group bg-white/10 border-white/30 text-white hover:bg-white/20">
+        <Button asChild variant="outline" className="group bg-white/10 border-white/30 text-white hover:bg-white/20 h-auto py-2.5 px-5 sm:py-3 sm:px-6 text-sm sm:text-base">
           <a href={secondary.href} data-testid="button-secondary-cta">
             <span className="relative">
               {secondary.text}
