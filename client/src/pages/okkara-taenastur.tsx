@@ -313,8 +313,7 @@ export default function Taenastur() {
                   </div>
 
                   <p className="text-muted-foreground leading-relaxed text-lg">
-                    Want to master AI creative tools yourself? Join our hands-on workshops where we teach you to use cutting-edge AI platforms for generating professional videos, images, and creative content.
-                    Vilt tú meistra vitlíki til kreativt arbeiði? Bílegg eina handaliga verkstovu har eg seti leg á og vísu tær hvørji amboð er røtt til tín og hvussu tú best kemur ígongd við at gera video, myndir, tónleik og annað kreativt tilfar, alt gjørt við vitlíki.
+                    Vilt tú meistra vitlíki til kreativt arbeiði? Bílegg eina handaliga verkstovu har eg seti lag á og vísu tær hvørji amboð er røtt til tín og hvussu tú best kemur ígongd við at gera video, myndir, tónleik og annað kreativt tilfar, alt gjørt við vitlíki.
                   </p>
 
                   <div className="flex flex-wrap gap-3">
