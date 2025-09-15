@@ -19,7 +19,7 @@ export const siteConfig = {
   hero: {
     slides: [
       {
-        title: "Eisini tú kann meistra Vitlíki!",
+        title: "Eisini tú kann meistra vitlíki!",
         subtitle:
           "Eg veit akkurát hvussu tit kunna koma frá nýbyrjandi innan vitlíki til dugnaligir vitlíkis brúkarir. Eg taki mær av øllum, tit skulla bara lurta og læra.",
         primaryCTA: {
@@ -34,7 +34,7 @@ export const siteConfig = {
       {
         title: "Nýtt blogginnlegg: Føroysk vitlíki modellir",
         subtitle:
-          "Les tað nýggja blogginnleggið um hvrøji Føroysk vitlíki model eru tøk, hvussu góð tey eru og hvat tey kunna brúkast til.",
+          "Les tað nýggja blogginnleggið um hvørji Føroysk vitlíki model eru tøk, hvussu góð tey eru og hvat tey kunna brúkast til.",
         primaryCTA: {
           text: "Les blogginnleggið",
           href: "/blog/vitliki-i-foroyum"
