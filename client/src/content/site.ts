@@ -19,7 +19,7 @@ export const siteConfig = {
   hero: {
     slides: [
       {
-        title: "Eisini tú kann meistra vitlíki!",
+        title: "Eisini tú kanst meistra vitlíki!",
         subtitle:
           "Eg veit akkurát hvussu tit kunna koma frá nýbyrjandi innan vitlíki til dugnaligir vitlíkis brúkarir. Eg taki mær av øllum, tit skulla bara lurta og læra.",
         primaryCTA: {
