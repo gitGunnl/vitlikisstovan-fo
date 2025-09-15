@@ -182,7 +182,7 @@ export default function Taenastur() {
                       </li>
                     </ul>
                     <p className="leading-relaxed mb-4">
-                      Ein fyrilestur, sum gevur yvirlit, vísir møguleikar og
+                      Ein fyrilestur, sum gevur yvirlit, vísur møguleikar og
                       leggur fram praktisk dømi, so tit fara avstað við nýggjari
                       tilgongd til vitlíki – og eini sterkari støðu í
                       framtíðini.
@@ -278,7 +278,7 @@ export default function Taenastur() {
               </div>
               <div className="flex flex-col md:flex-row gap-12">
                 {/* We Create for You */}
-                <div className="space-y-6 md:w-1/2">
+                <div className="space-y-6">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shadow-lg">
                       <svg className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -302,7 +302,7 @@ export default function Taenastur() {
                 </div>
 
                 {/* We Teach You */}
-                <div className="space-y-6 md:w-1/2">
+                <div className="space-y-6">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg">
                       <GraduationCap className="h-8 w-8 text-white" />
