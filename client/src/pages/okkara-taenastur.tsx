@@ -384,7 +384,7 @@ export default function Taenastur() {
         <Section className="py-20 sm:py-24">
           <div className="mx-auto max-w-3xl text-center">
             <h3 className="text-2xl sm:text-3xl font-semibold mb-3">
-              Vilt tú býrja tína vitlíki-ferð?
+              Vilt tú byrja tína vitlíki-ferð?
             </h3>
             <p className="mb-8">
               Byrja við okkara ChatGPT-skeiði í dag.
