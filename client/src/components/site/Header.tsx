@@ -77,7 +77,7 @@ export default function Header() {
               onClick={closeMobileMenu}
               className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary hover:bg-accent/50 rounded-md transition-all duration-200"
             >
-              Okkara tænastur
+              Tænastur
             </a>
             {/* <a
               href="/blog"

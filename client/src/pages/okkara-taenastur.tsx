@@ -273,7 +273,7 @@ export default function Taenastur() {
                   AI Creative Studio
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Professional AI-generated content and creative workshops
+                  Vitlíki generera tilfar og kreativar verkstovur
                 </p>
               </div>
               <div className="grid md:grid-cols-2 gap-12">
@@ -286,18 +286,18 @@ export default function Taenastur() {
                       </svg>
                     </div>
                     <h3 className="text-2xl font-bold text-foreground">
-                      We Create for You
+                      Eg skapi fyri teg
                     </h3>
                   </div>
                   
                   <p className="text-muted-foreground leading-relaxed text-lg">
-                    Need stunning visuals but don't have the time? We'll create professional AI-generated content tailored to your brand - from eye-catching videos and images to complete visual campaigns.
+                    Um tú hevur brúk fyri flottum visuellum lutum, men ikki tíðna til at gera tað? Eg kann gera vitlíki tilfar sergjørt til tín smag ella tykkara brand - frá eygafangandi video og myndir til fullar heimasíður eg nýta vitlíki til at gera títt tilfar.
                   </p>
                   
                   <div className="flex flex-wrap gap-3">
-                    <span className="px-4 py-2 text-sm rounded-full bg-purple-100 text-purple-700 border border-purple-200 font-medium">AI Videos</span>
-                    <span className="px-4 py-2 text-sm rounded-full bg-pink-100 text-pink-700 border border-pink-200 font-medium">Images & Graphics</span>
-                    <span className="px-4 py-2 text-sm rounded-full bg-orange-100 text-orange-700 border border-orange-200 font-medium">Brand Assets</span>
+                    <span className="px-4 py-2 text-sm rounded-full bg-purple-100 text-purple-700 border border-purple-200 font-medium">Vitlíki video</span>
+                    <span className="px-4 py-2 text-sm rounded-full bg-pink-100 text-pink-700 border border-pink-200 font-medium">Myndir & grafik</span>
+                    <span className="px-4 py-2 text-sm rounded-full bg-orange-100 text-orange-700 border border-orange-200 font-medium">Branding tilfar</span>
                   </div>
                 </div>
 
@@ -308,18 +308,19 @@ export default function Taenastur() {
                       <GraduationCap className="h-8 w-8 text-white" />
                     </div>
                     <h3 className="text-2xl font-bold text-foreground">
-                      We Teach You
+                      Eg læri teg
                     </h3>
                   </div>
                   
                   <p className="text-muted-foreground leading-relaxed text-lg">
                     Want to master AI creative tools yourself? Join our hands-on workshops where we teach you to use cutting-edge AI platforms for generating professional videos, images, and creative content.
+                    Vilt tú meistra vitlíki til kreativt arbeiði? Bílegg eina handaliga verkstovu har eg seti leg á og vísu tær hvørji amboð er røtt til tín og hvussu tú best kemur ígongd við at gera video, myndir, tónleik og annað kreativt tilfar, alt gjørt við vitlíki.
                   </p>
                   
                   <div className="flex flex-wrap gap-3">
-                    <span className="px-4 py-2 text-sm rounded-full bg-blue-100 text-blue-700 border border-blue-200 font-medium">Workshops</span>
-                    <span className="px-4 py-2 text-sm rounded-full bg-cyan-100 text-cyan-700 border border-cyan-200 font-medium">Hands-on Training</span>
-                    <span className="px-4 py-2 text-sm rounded-full bg-teal-100 text-teal-700 border border-teal-200 font-medium">Tool Mastery</span>
+                    <span className="px-4 py-2 text-sm rounded-full bg-blue-100 text-blue-700 border border-blue-200 font-medium">Verkstovur</span>
+                    <span className="px-4 py-2 text-sm rounded-full bg-cyan-100 text-cyan-700 border border-cyan-200 font-medium">Handalig upplæring</span>
+                    <span className="px-4 py-2 text-sm rounded-full bg-teal-100 text-teal-700 border border-teal-200 font-medium">Meistra vitlíki amboð</span>
                   </div>
                 </div>
               </div>
@@ -334,13 +335,19 @@ export default function Taenastur() {
                     </div>
                     <div>
                       <p className="text-lg font-semibold text-purple-800 mb-2">
-                        ✨ Ready to unleash AI creativity?
+                        ✨ Vil tú frígeva skapandi megina í vitlíki?
                       </p>
                       <p className="text-purple-700 mb-4">
-                        Whether you need content created or want to learn the tools yourself, we'll help you harness the power of AI to create stunning visuals that captivate your audience.
+                        Eg dugi at brúka vitlíki-amboð til at skapa myndir, video, tónleik og nógv annað tilfari, ið fangar áskoðaran. 
+                      </p>
+                      <p className="text-purple-700 mb-4">
+                        Eg geri tilfar sum vanliga hevði tikið tímar at framleiða uppá stutta tíð – alt gjørt við nýggjastu og bestu vitlíki-tøknini.
+                      </p>
+                      <p className="text-purple-700 mb-4">
+                        Um tú bara vilt hava meg at gera arbeiðið, ella sjálvur vilt læra at stýra hesum amboðum, so kan eg hjálpa tær við báðum.
                       </p>
                       <p className="text-purple-700 text-sm mb-4">
-                        Follow us on social media to see examples of what we've created and get regular insights on what's possible with AI:
+                        Fylg Vitlíkistovuna á sosialum miðlum fyri at síggja dømir av ymiskum tilfari, fáa íblástur og lær meira um, hvat ber til við vitlíki.
                       </p>
                       <div className="flex items-center gap-4">
                         <a 
@@ -381,7 +388,7 @@ export default function Taenastur() {
               Vilt tú býrja tína vitlíki-ferð?
             </h3>
             <p className="mb-8">
-              Byrja við okkara KjattGPT-skeiði í dag.
+              Byrja við okkara ChatGPT-skeiði í dag.
             </p>
             <a
               href="#contact"
