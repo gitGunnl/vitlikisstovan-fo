@@ -55,7 +55,7 @@ export default function Taenastur() {
               Við einari skipaðari tilgongd tryggja vit, at tykkara toymi kann
               nýta vitlíki á ein munagóðan hátt í gerandisdegnum.
             </p>
-            
+
           </div>
         </Section>
 
@@ -91,7 +91,7 @@ export default function Taenastur() {
 
                   <p className="font-semibold mb-6">Prísur: 1.200 DKK</p>
 
-                  
+
                 </div>
               </div>
             </div>
@@ -137,7 +137,7 @@ export default function Taenastur() {
 
                     <p className="font-semibold mb-4">Prísur: 1.200 DKK</p>
 
-                    
+
 
                     <p className="italic text-muted-foreground mt-4">
                       Hendan tænastan hjálpir tær at finna beinraktar uppgá.
@@ -190,7 +190,7 @@ export default function Taenastur() {
 
                     <p className="font-semibold mb-4">Prísur: 18.000 DKK</p>
 
-                    
+
 
                     <p className="italic text-muted-foreground mt-4">
                       Perfekt til fyritøkur, ið vilja vera á odda við vitlíkii –
@@ -219,7 +219,7 @@ export default function Taenastur() {
                       burturúr hesa nýggju tøkni.
                     </p>
 
-                    
+
 
                     <p className="italic text-muted-foreground mt-4">
                       Okkara serfrøði ger tað nógv smidligari at fáa tykkara
@@ -249,7 +249,7 @@ export default function Taenastur() {
                       sniðgjørdar loysnir, ið hóska til tín tørv.
                     </p>
 
-                    
+
 
                     <p className="italic text-muted-foreground mt-4">
                       Hevur tú eina ítøkiliga mannagongd, tú vilt automatisera
@@ -276,9 +276,9 @@ export default function Taenastur() {
                   Vitlíki generera tilfar og kreativar verkstovur
                 </p>
               </div>
-              <div className="grid md:grid-cols-2 gap-12">
+              <div className="flex flex-col md:flex-row gap-12">
                 {/* We Create for You */}
-                <div className="space-y-6">
+                <div className="space-y-6 md:w-1/2">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center shadow-lg">
                       <svg className="h-8 w-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -289,11 +289,11 @@ export default function Taenastur() {
                       Eg skapi fyri teg
                     </h3>
                   </div>
-                  
+
                   <p className="text-muted-foreground leading-relaxed text-lg">
                     Um tú hevur brúk fyri flottum visuellum lutum, men ikki tíðna til at gera tað? Eg kann gera vitlíki tilfar sergjørt til tín smag ella tykkara brand - frá eygafangandi video og myndir til fullar heimasíður eg nýta vitlíki til at gera títt tilfar.
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-3">
                     <span className="px-4 py-2 text-sm rounded-full bg-purple-100 text-purple-700 border border-purple-200 font-medium">Vitlíki video</span>
                     <span className="px-4 py-2 text-sm rounded-full bg-pink-100 text-pink-700 border border-pink-200 font-medium">Myndir & grafik</span>
@@ -302,7 +302,7 @@ export default function Taenastur() {
                 </div>
 
                 {/* We Teach You */}
-                <div className="space-y-6">
+                <div className="space-y-6 md:w-1/2">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center shadow-lg">
                       <GraduationCap className="h-8 w-8 text-white" />
@@ -311,12 +311,12 @@ export default function Taenastur() {
                       Eg læri teg
                     </h3>
                   </div>
-                  
+
                   <p className="text-muted-foreground leading-relaxed text-lg">
                     Want to master AI creative tools yourself? Join our hands-on workshops where we teach you to use cutting-edge AI platforms for generating professional videos, images, and creative content.
                     Vilt tú meistra vitlíki til kreativt arbeiði? Bílegg eina handaliga verkstovu har eg seti leg á og vísu tær hvørji amboð er røtt til tín og hvussu tú best kemur ígongd við at gera video, myndir, tónleik og annað kreativt tilfar, alt gjørt við vitlíki.
                   </p>
-                  
+
                   <div className="flex flex-wrap gap-3">
                     <span className="px-4 py-2 text-sm rounded-full bg-blue-100 text-blue-700 border border-blue-200 font-medium">Verkstovur</span>
                     <span className="px-4 py-2 text-sm rounded-full bg-cyan-100 text-cyan-700 border border-cyan-200 font-medium">Handalig upplæring</span>
@@ -327,7 +327,7 @@ export default function Taenastur() {
 
               <div className="mt-12 pt-8 border-t border-purple-200/30">
                 <div className="bg-gradient-to-r from-purple-50 via-pink-50 to-orange-50 border border-purple-200/50 rounded-2xl p-8">
-                  <div className="flex items-start gap-4 mb-6">
+                  <div className="flex flex-col items-start gap-4 mb-6">
                     <div className="h-12 w-12 rounded-xl bg-gradient-to-br from-purple-500 to-orange-500 flex items-center justify-center flex-shrink-0">
                       <svg className="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -349,7 +349,7 @@ export default function Taenastur() {
                       <p className="text-purple-700 text-sm mb-4">
                         Fylg Vitlíkistovuna á sosialum miðlum fyri at síggja dømir av ymiskum tilfari, fáa íblástur og lær meira um, hvat ber til við vitlíki.
                       </p>
-                      <div className="flex items-center gap-4">
+                      <div className="flex flex-wrap gap-4">
                         <a 
                           href="https://facebook.com/vitlikisstovan" 
                           target="_blank" 
