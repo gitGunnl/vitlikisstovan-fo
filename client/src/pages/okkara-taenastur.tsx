@@ -270,7 +270,7 @@ export default function Taenastur() {
                   Vitlíki generera tilfar og kreativar verkstovur
                 </p>
               </div>
-              <div className="flex flex-col md:flex-row gap-12">
+              <div className="flex flex-col gap-12">
                 {/* We Create for You */}
                 <div className="space-y-6">
                   <div className="flex items-center gap-4 mb-6">
