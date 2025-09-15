@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import Section from "@/components/site/Section";
+import { Badge } from "@/components/ui/badge";
 import { seoConfig } from "@/content/seo";
 import {
   Bot,
@@ -56,7 +57,6 @@ export default function Taenastur() {
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
                Við einari skipaðari tilgongd tryggji eg, at tykkara toymi kann nýta vitlíki á ein munagóðan hátt í gerandisdegnum.
             </p>
-
           </div>
         </Section>
 
@@ -80,8 +80,14 @@ export default function Taenastur() {
                     Býrjunarskeið í ChatGPT til Føroysk skrivstovufólk
                   </h3>
 
-                  <p className="font-medium mb-1">(Besta fyrsta stig)</p>
-                  <p className="font-medium mb-4">Net skeið</p>
+                  <div className="flex gap-2 mb-4">
+                    <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200">
+                      Besta fyrsta stig
+                    </Badge>
+                    <Badge variant="outline" className="border-blue-200 text-blue-700">
+                      Net skeið
+                    </Badge>
+                  </div>
 
                   <p className="leading-relaxed mb-4">
                     Okkara umfatandi skeið lærir teg at brúka KjattGPT
@@ -113,9 +119,11 @@ export default function Taenastur() {
                     <h3 className="text-2xl font-semibold mb-2">
                       1. 15 hættir at brúka KjattGPT
                     </h3>
-                    <p className="text-muted-foreground mb-4">
-                      (Mælt til sum næsta stig)
-                    </p>
+                    <div className="mb-4">
+                      <Badge variant="secondary" className="bg-orange-100 text-orange-800 border-orange-200">
+                        Mælt til sum næsta stig
+                      </Badge>
+                    </div>
                     <p className="leading-relaxed mb-4">
                       Spar tær vikur av feilum og skeivum royndum – vit geva tær
                       15 tillagaðar mátar at brúka KjattGPT í tínum arbeiði.
@@ -153,9 +161,11 @@ export default function Taenastur() {
                     <h3 className="text-2xl font-semibold mb-2">
                       2. Fyrilestur: vitlíki - Frá Óvissu til Møguleikar
                     </h3>
-                    <p className="text-muted-foreground mb-4">
-                      (Til toymir &amp; fyritøkur)
-                    </p>
+                    <div className="mb-4">
+                      <Badge variant="secondary" className="bg-purple-100 text-purple-800 border-purple-200">
+                        Til toymir &amp; fyritøkur
+                      </Badge>
+                    </div>
                     <p className="leading-relaxed mb-4">
                       vitlíki er komið – og tað broytir hvussu vit arbeiða
                       uppá. Men hvat merkir tað í veruleikanum? Hvat kann
@@ -206,7 +216,11 @@ export default function Taenastur() {
                     <h3 className="text-2xl font-semibold mb-2">
                       3. vitlíki-upplæring
                     </h3>
-                    <p className="text-muted-foreground mb-4">(Handalig hjálp)</p>
+                    <div className="mb-4">
+                      <Badge variant="secondary" className="bg-cyan-100 text-cyan-800 border-cyan-200">
+                        Handalig hjálp
+                      </Badge>
+                    </div>
                     <p className="leading-relaxed mb-4">
                       Tá ið títt toymi hevur fingið grundvitan, veita vit
                       hjálp til at innarbeiða KjattGPT ella Copilot í
@@ -234,9 +248,11 @@ export default function Taenastur() {
                     <h3 className="text-2xl font-semibold mb-2">
                       4. Serloysnir til sjálvirkan
                     </h3>
-                    <p className="text-muted-foreground mb-4">
-                      (Sniðgjørdar loysnir)
-                    </p>
+                    <div className="mb-4">
+                      <Badge variant="secondary" className="bg-pink-100 text-pink-800 border-pink-200">
+                        Sniðgjørdar loysnir
+                      </Badge>
+                    </div>
                     <p className="leading-relaxed mb-4">
                       Ger tínar vitlíki-automatións hugskot til veruleika við
                       mínari menningar serfrøði. Eg hjálpi tær at byggja
