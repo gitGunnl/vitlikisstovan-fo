@@ -46,7 +46,7 @@ export default function VideoBackground({ videoSrc, posterSrc, className = '' }:
       {/* Video element */}
       <video
         ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover object-bottom"
         autoPlay
         loop
         muted

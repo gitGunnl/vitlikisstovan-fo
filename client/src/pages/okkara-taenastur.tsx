@@ -91,7 +91,7 @@ export default function Taenastur() {
 
                   <p className="leading-relaxed mb-4">
                     Okkara umfatandi skeið lærir teg at brúka KjattGPT
-                    effektivt í gerandisarbeiði. Perfekt til bæði ný byrjandi
+                    effektivt í gerandisarbeiði. Hóskar væl til bæði ný byrjandi
                     og yrkisfólk. Flestu av okkara kundum byrja sína vitlíki-ferð
                     her.
                   </p>
@@ -145,7 +145,7 @@ export default function Taenastur() {
 
 
                     <p className="italic text-muted-foreground mt-4">
-                      Hendan tænastan hjálpir tær at finna beinraktar uppgá.
+                      Hendan tænastan hjálpir tær at finna útav akkurát hvørja uppgávu TÚ kanst nýta vitlíki til.
                     </p>
                   </div>
                 </div>
@@ -159,7 +159,7 @@ export default function Taenastur() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-semibold mb-2">
-                      2. Fyrilestur: vitlíki - Frá Óvissu til Møguleikar
+                      2. Fyrilestur: Vitlíki - Frá Óvissu til Møguleikar
                     </h3>
                     <div className="mb-4">
                       <Badge variant="secondary" className="bg-purple-100 text-purple-800 border-purple-200">
@@ -199,8 +199,8 @@ export default function Taenastur() {
 
 
                     <p className="italic text-muted-foreground mt-4">
-                      Perfekt til fyritøkur, ið vilja vera á odda við vitlíkii –
-                      Og ynskja starvsfólk uttan óneyðugan ótta ella óvissu.
+                      Hóskar væl til fyritøkur, ið vilja vera á odda við vitlíkii –
+                      og ynskja starvsfólk uttan óneyðugan ótta ella óvissu.
                     </p>
                   </div>
                 </div>
@@ -254,7 +254,7 @@ export default function Taenastur() {
                       </Badge>
                     </div>
                     <p className="leading-relaxed mb-4">
-                      Ger tínar vitlíki-automatións hugskot til veruleika við
+                      Ger tíni vitlíki hugskot til veruleika við
                       mínari menningar serfrøði. Eg hjálpi tær at byggja
                       sniðgjørdar loysnir, ið hóska til tín tørv.
                     </p>
@@ -262,9 +262,9 @@ export default function Taenastur() {
 
 
                     <p className="italic text-muted-foreground mt-4">
-                      Hevur tú eina ítøkiliga mannagongd tú vilt automatisera
+                      Hevur tú eina ítøkiliga mannagongd tú vilt sjálvvirka
                       við vitlíki? Ella hevur tú eitt slóðbrótandi hugskot til
-                      hvussu tín vinna kann brúka vitlíki á ein nýggjan hátt?
+                      hvussu tín vinna kann nýta vitlíki á ein nýggjan hátt?
                       Eg kann hjálpa við at gera tínar visjónir til veruleika.
                     </p>
                   </div>

@@ -190,7 +190,7 @@ export default function Home() {
                     {index === 1 ? (
                       <>
                         <span className="block text-xl sm:text-3xl lg:text-4xl mb-2 text-emerald-400 font-medium">
-                          Nýtt blogginnlegg:
+                          Nýggjur bloggur:
                         </span>
                         <span className="block">
                           Føroysk vitlíki modellir

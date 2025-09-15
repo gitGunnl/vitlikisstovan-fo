@@ -32,7 +32,7 @@ export const siteConfig = {
         }
       },
       {
-        title: "Nýtt blogginnlegg: Føroysk vitlíki modellir",
+        title: "Nýggjur bloggur: Føroysk vitlíki modellir",
         subtitle:
           "Les tað nýggja blogginnleggið um hvørji Føroysk vitlíki model eru tøk, hvussu góð tey eru og hvat tey kunna brúkast til.",
         primaryCTA: {
@@ -306,7 +306,7 @@ export const siteConfig = {
       {
         title: "Stutt framløga at deila",
         description:
-          "2–3 síður, sum tú kanst senda runt eftir ein fund – perfekt til innanhýsis kunning.",
+          "2–3 síður, sum tú kanst senda runt eftir ein fund – hóskar sera væl til til innanhýsis kunning.",
         icon: "MessageCircle",
         iconBg: "bg-chart-2/10",
         iconColor: "text-chart-2",
