@@ -388,7 +388,7 @@ export default function Taenastur() {
               className="inline-flex items-center gap-2 rounded-2xl px-6 py-3 font-medium bg-primary text-primary-foreground hover:opacity-90 transition"
               aria-label="Byrja nú"
             >
-              [Byrja nú]
+              Bílegg nú
               <Rocket className="h-5 w-5" />
             </a>
           </div>
