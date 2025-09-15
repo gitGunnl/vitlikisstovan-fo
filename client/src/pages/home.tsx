@@ -158,7 +158,7 @@ export default function Home() {
                   {/* Blog Badge for slide 2 */}
                   {index === 1 && (
                     <div
-                      className="inline-flex items-center gap-2 mb-8"
+                      className="inline-flex items-center gap-2 mb-6 sm:mb-8"
                       style={{
                         transform: isActive ? 'translateY(0) scale(1)' : 'translateY(-20px) scale(0.8)',
                         opacity: isActive ? 1 : 0,
@@ -166,12 +166,15 @@ export default function Home() {
                         transitionDelay: isActive ? '100ms' : '0ms'
                       }}
                     >
-                      <span className="relative inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-bold text-sm uppercase tracking-wider rounded-full shadow-2xl">
-                        <span className="absolute inset-0 bg-gradient-to-r from-emerald-400 to-teal-400 rounded-full blur-md opacity-75 animate-pulse"></span>
-                        <span className="relative flex items-center gap-2">
+                      <span className="relative inline-flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-emerald-600 to-teal-600 text-white font-bold text-xs sm:text-sm uppercase tracking-wider rounded-full shadow-2xl">
+                        {/* Remove blur effect on mobile for better readability */}
+                        <span className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-full opacity-50 sm:opacity-75 animate-pulse hidden sm:block blur-md"></span>
+                        {/* Add solid background for mobile */}
+                        <span className="absolute inset-0 bg-gradient-to-r from-emerald-600/90 to-teal-600/90 rounded-full sm:hidden"></span>
+                        <span className="relative flex items-center gap-2 z-10">
                           <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
                           Nýggjur bloggur
-                          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <svg className="w-3 sm:w-4 h-3 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                           </svg>
                         </span>
@@ -179,7 +182,7 @@ export default function Home() {
                     </div>
                   )}
                   <h1
-                    className={`text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 hero-text leading-tight ${
+                    className={`text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4 sm:mb-6 hero-text leading-tight ${
                       index === 1
                         ? 'bg-gradient-to-r from-white via-emerald-200 to-white bg-clip-text text-transparent'
                         : 'text-white'
@@ -188,13 +191,14 @@ export default function Home() {
                       transform: isActive ? 'translateY(0)' : 'translateY(20px)',
                       transition: 'transform 800ms cubic-bezier(0.34, 1.56, 0.64, 1)',
                       transitionDelay: isActive ? '200ms' : '0ms',
-                      filter: index === 1 ? 'drop-shadow(0 0 30px rgba(52, 211, 153, 0.5))' : 'none'
+                      filter: index === 1 ? 'drop-shadow(0 0 30px rgba(52, 211, 153, 0.5))' : 'none',
+                      WebkitTextFillColor: index === 1 ? 'transparent' : 'inherit'
                     }}
                   >
                     {slide.title}
                   </h1>
                   <p
-                    className={`text-xl sm:text-2xl mb-10 hero-text leading-relaxed ${
+                    className={`text-lg sm:text-xl lg:text-2xl mb-8 sm:mb-10 hero-text leading-relaxed px-2 sm:px-0 ${
                       index === 1 ? 'text-white' : 'text-white/95'
                     }`}
                     style={{
@@ -218,16 +222,16 @@ export default function Home() {
                       <div className="flex justify-center">
                         <a
                           href={slide.primaryCTA.href}
-                          className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold text-lg rounded-full shadow-2xl hover:shadow-emerald-500/50 transform hover:scale-105 transition-all duration-300"
+                          className="group relative inline-flex items-center gap-2 sm:gap-3 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-semibold text-base sm:text-lg rounded-full shadow-2xl hover:shadow-emerald-500/50 transform hover:scale-105 transition-all duration-300"
                           data-testid="button-blog-cta"
                         >
                           <span className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                          <span className="relative flex items-center gap-3">
-                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <span className="relative flex items-center gap-2 sm:gap-3">
+                            <svg className="w-4 sm:w-5 h-4 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                             </svg>
                             {slide.primaryCTA.text}
-                            <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg className="w-3 sm:w-4 h-3 sm:h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                             </svg>
                           </span>
@@ -260,10 +264,10 @@ export default function Home() {
                             element.scrollIntoView({ behavior: 'smooth' });
                           }
                         }}
-                        className="group flex items-center gap-3 mx-auto px-6 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 border border-white/20"
+                        className="group flex flex-col sm:flex-row items-center gap-2 sm:gap-3 mx-auto px-4 sm:px-6 py-3 sm:py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg hover:bg-white/20 transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 border border-white/20"
                         data-testid="button-scroll-consulting"
                       >
-                        <span className="text-lg font-medium">
+                        <span className="text-sm sm:text-lg font-medium text-center sm:text-left">
                           Um tú ert her fyri ráðgeving ella annað, les meira longur nirrið
                         </span>
                         <svg
