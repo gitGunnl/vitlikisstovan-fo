@@ -48,13 +48,13 @@ export default function Taenastur() {
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
               Eg hjálpi við øllum sum snýr seg um vitlíki.
             </h1>
-            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-6">
               Eg hjálpi føroyskum fyritøkum og stovnum at taka
               vitlíki-tøkni til sín, við praktiskum amboðum sum ChatGPT og
               CoPilot, mynda og video generering og menning av vitlíki amboðum.
-            <p>
-               Við einari skipaðari tilgongd tryggji eg, at tykkara toymi kann nýta vitlíki á ein munagóðan hátt í gerandisdegnum.
             </p>
+            <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
+               Við einari skipaðari tilgongd tryggji eg, at tykkara toymi kann nýta vitlíki á ein munagóðan hátt í gerandisdegnum.
             </p>
 
           </div>
