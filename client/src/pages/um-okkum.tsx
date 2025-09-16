@@ -109,7 +109,7 @@ export default function UmOkkum() {
                     <div className="border-t pt-6">
                       <h3 className="text-xl font-bold mb-4 flex items-center">
                         <span className="bg-black text-white w-8 h-8 rounded-full inline-flex items-center justify-center mr-3 text-sm">2</span>
-                        Ein nýggj ásannan                      </h3>
+                        Ein nýggj ásannan
                       </h3>
                       <p className="text-gray-700 leading-relaxed mb-4">So ein dag gekk tað upp fyri mær:</p>
                       <ul className="space-y-2 ml-12">
