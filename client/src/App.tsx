@@ -13,6 +13,7 @@ import Blog from "@/pages/blog";
 import BlogPost from "@/pages/blog-post";
 import Tilarbeidis from "@/pages/tilarbeidis";
 import Verkstova from "@/pages/verkstova";
+import Podcast from "@/pages/Podcast";
 
 function Router() {
   return (
@@ -26,6 +27,7 @@ function Router() {
       <Route path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/verkstova" component={Verkstova} />
+      <Route path="/podcast" component={Podcast} />
       <Route component={NotFound} />
     </Switch>
   );
