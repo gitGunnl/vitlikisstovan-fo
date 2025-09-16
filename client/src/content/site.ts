@@ -250,7 +250,7 @@ export const siteConfig = {
         description:
           "Interactive workshops where your team learns to use AI tools together. Through hands-on exercises and real-world examples, participants gain practical skills they can apply immediately in their daily work.",
         image:
-          "/images/verkstovur.jpeg",
+          "/images/verkstova.jpeg",
         imageAlt: "Team workshop in progress",
         buttonText: "Les meira um hettar",
         buttonVariant: "default",
