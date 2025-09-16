@@ -41,11 +41,11 @@ export const siteConfig = {
         }
       },
       {
-        title: "Vitlíkis ráðgeving júst til tín",
+        title: "Vitlíkisráðgeving snikka til tín",
         subtitle:
-          "Eg veiti alskyns slag av ráðgeving innan vitlíki strategi, um tað er tekniskt arbeiði ella hvussu man nýtur vitlíki í tí kreativa arbeiðinum, so kann eg lættiliga leiðbeina tykkum tann rættan vegin.",
+          "Er tørvurin ein vitlíkistrategi, vegleiðing í sambandi við tekniskt arbeiði, nýtsla av vitlíki í kreativum arbeiði ella eitt fjórða - so leiðbeini eg tykkum lættliga rætta vegin.",
         primaryCTA: {
-          text: "Bílegg eina samrøðu",
+          text: "Bílegg eina ókeypis samrøðu",
           href: "/contact"
         }
       }
