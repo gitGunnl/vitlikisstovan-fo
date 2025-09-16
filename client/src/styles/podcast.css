@@ -191,43 +191,71 @@
         font-size: 1.2rem;
     }
     
-    /* Parallax Layers Mobile */
-    .parallax-layer img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-        min-height: 100%;
+    /* Parallax Layers Mobile - Show only background, mountain, grass, cloud */
+    
+    /* Z-index ordering for mobile */
+    .layer-bg {
+        z-index: 1;
     }
     
-    .layer-bg img {
-        object-position: center center;
-    }
-    
-    .layer-mid img {
-        object-position: center bottom;
-        opacity: 0.8;
-    }
-    
-    .layer-front img {
-        object-position: center bottom;
-        opacity: 0.9;
-    }
-    
-    .troll-sheep {
-        display: none; /* Hide complex animations on mobile */
+    .layer-mid {
+        z-index: 2;
     }
     
     .layer-clouds {
-        opacity: 0.9;
+        z-index: 3;
+        opacity: 1;
     }
     
-    .layer-clouds img {
-        width: 60%;
+    .layer-front {
+        z-index: 4;
+    }
+    
+    /* Background - fills container */
+    .layer-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        bottom: 0;
+    }
+    
+    /* Mountain - spans width, anchored to bottom */
+    .layer-mid img {
+        width: 100vw;
         height: auto;
         left: 50%;
-        top: 10%;
         transform: translateX(-50%);
-        animation: none; /* Disable animation on mobile for performance */
+        bottom: 0;
+        opacity: 1;
+        object-fit: contain;
+    }
+    
+    /* Hide troll, show only grass */
+    .layer-front .troll-sheep {
+        display: none !important;
+    }
+    
+    .layer-front .grass {
+        display: block;
+        width: 110vw;
+        height: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        opacity: 1;
+        z-index: 1;
+    }
+    
+    /* Cloud - natural size, not cropped */
+    .layer-clouds img {
+        width: 50vw;
+        height: auto;
+        top: 8vh;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: none;
+        opacity: 1;
     }
     
     /* Content Sections Mobile */
@@ -421,18 +449,33 @@
         font-size: 1.5rem;
     }
 
+    /* Same layer fixes as mobile but with larger sizes for tablets */
     .layer-bg img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
         object-position: center center;
     }
 
     .layer-mid img {
+        width: 100vw;
+        height: auto;
         object-position: center bottom;
-        opacity: 0.7;
+        opacity: 1;
+        bottom: 0;
     }
     
-    .layer-front img {
-        object-position: center bottom;
-        opacity: 0.7;
+    .layer-front .grass {
+        width: 110vw;
+        height: auto;
+        opacity: 1;
+        bottom: 0;
+    }
+    
+    .layer-clouds img {
+        width: 45vw;
+        height: auto;
+        opacity: 1;
     }
     
     /* Tokni box tablet */
