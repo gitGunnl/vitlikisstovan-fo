@@ -168,10 +168,10 @@ export default function Podcast() {
                     <p className="tokni-description">Bringing Faroese stories to life with cutting-edge AI technology. Explore the intersection of tradition and innovation.</p>
                     <p className="tokni-social-text">Learn more about AI and our projects on social media:</p>
                     <div className="tokni-social-links">
-                      <a href="https://linkedin.com/company/tøkni-tænastan" className="tokni-social-link">
+                      <a href="https://linkedin.com/company/vitlikisstovan" className="tokni-social-link">
                         <i className="fab fa-linkedin"></i>
                       </a>
-                      <a href="https://www.facebook.com/profile.php?id=61557593776267" className="tokni-social-link">
+                      <a href="https://facebook.com/vitlikisstovan" className="tokni-social-link">
                         <i className="fab fa-facebook"></i>
                       </a>
                     </div>
@@ -211,7 +211,7 @@ export default function Podcast() {
                 <div className="board-content">
                   <h2 className="cta-title">✨ Want to use AI in a more exciting way at work?</h2>
                   <p className="cta-text">
-                    Book a presentation or workshop at <a href="https://ritvit.fo" className="cta-link">ritvit.fo</a> or call <span className="phone-number">919444</span> to invite a real human (and his AI helpers) to your team.
+                    Book a presentation or workshop at <a href="https://vitlikisstovan.fo" className="cta-link">vitlikisstovan.fo</a> or call <span className="phone-number">919444</span> to invite a real human (and his AI helpers) to your team.
                   </p>
                   <div className="social-links" style={{ marginTop: '20px', display: 'flex', gap: '15px', justifyContent: 'center' }}>
                     <a 
