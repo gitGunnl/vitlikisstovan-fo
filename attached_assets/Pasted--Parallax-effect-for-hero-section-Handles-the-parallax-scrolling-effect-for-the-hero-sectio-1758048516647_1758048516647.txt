@@ -1,0 +1,114 @@
+/**
+ * Parallax effect for hero section
+ * Handles the parallax scrolling effect for the hero section layers
+ */
+document.addEventListener('DOMContentLoaded', function() {
+    // Get parallax elements
+    const parallaxLayers = document.querySelectorAll('.parallax-layer');
+    const trollAndSheep = document.querySelector('.troll-sheep');
+    
+    // Variables to track mouse movement
+    let lastMouseX = 0;
+    let rotationAngle = 0;
+    let movingRight = false;
+    
+    // Handle parallax effect on scroll
+    function handleParallax() {
+        // Get scroll position
+        const scrollTop = window.pageYOffset;
+        
+        // Update each layer position based on scroll
+        parallaxLayers.forEach(layer => {
+            const speed = layer.getAttribute('data-speed');
+            const yPos = -(scrollTop * speed);
+            
+            // Apply the transform without affecting the rotation of troll and sheep
+            if (layer.classList.contains('layer-front') && trollAndSheep) {
+                // For the layer with troll and sheep, apply translateY to the layer
+                // and keep rotation on the image itself
+                layer.style.transform = `translateY(${yPos}px)`;
+                
+                // The image itself keeps its rotation
+                if (rotationAngle !== 0) {
+                    trollAndSheep.style.transform = `rotate(${rotationAngle}deg)`;
+                }
+            } else {
+                layer.style.transform = `translateY(${yPos}px)`;
+            }
+        });
+    }
+    
+    // Handle mouse movement to rotate the troll and sheep
+    function handleMouseMove(e) {
+        if (!trollAndSheep) return;
+        
+        const currentMouseX = e.clientX;
+        
+        // Determine direction (right or left)
+        const isMovingRight = currentMouseX > lastMouseX;
+        
+        // Only update the rotation when direction changes
+        if (isMovingRight !== movingRight) {
+            movingRight = isMovingRight;
+            
+            // Set rotation based on direction (subtle rotation of just a few degrees)
+            rotationAngle = movingRight ? 3 : -3;
+            
+            // Get current scroll position for translateY
+            const scrollTop = window.pageYOffset;
+            const speed = trollAndSheep.parentElement.getAttribute('data-speed') || 0;
+            const yPos = -(scrollTop * speed);
+            
+            // Apply both the translateY and rotation to maintain vertical position
+            trollAndSheep.style.transition = 'transform 0.5s ease';
+            trollAndSheep.style.transform = `translateY(0) rotate(${rotationAngle}deg)`;
+            trollAndSheep.style.transformOrigin = 'bottom center';
+        }
+        
+        lastMouseX = currentMouseX;
+    }
+    
+    // Check if we're on a device that can handle parallax well
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    
+    if (!isMobile) {
+        // Add scroll event listener
+        window.addEventListener('scroll', handleParallax);
+        
+        // Add mouse movement listener
+        window.addEventListener('mousemove', handleMouseMove);
+        
+        // Initial call to set positions
+        handleParallax();
+    }
+    
+    // Handle scroll animations
+    const scrollElements = document.querySelectorAll('.illustration-card, .scroll-visible');
+    
+    const elementInView = (el, dividend = 1) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+            elementTop <= (window.innerHeight || document.documentElement.clientHeight) / dividend
+        );
+    };
+    
+    const displayScrollElement = element => {
+        element.classList.add('in-view');
+    };
+    
+    const handleScrollAnimation = () => {
+        scrollElements.forEach(el => {
+            if (elementInView(el, 1.25)) {
+                displayScrollElement(el);
+            }
+        });
+    };
+    
+    // Add scroll event for animations
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+    
+    // Initial check for elements in view
+    handleScrollAnimation();
+});
