@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 
 interface AudioPlayerProps {
   audioSrc: string;
@@ -11,105 +11,224 @@ export default function AudioPlayer({ audioSrc, title = "Audio Player" }: AudioP
   const [progress, setProgress] = useState(0);
   const [currentTime, setCurrentTime] = useState(0);
   const [audioLevels, setAudioLevels] = useState([0, 0, 0, 0]);
+  const [isAudioContextReady, setIsAudioContextReady] = useState(false);
+  const [hasUserInteracted, setHasUserInteracted] = useState(false);
   
   const audioRef = useRef<HTMLAudioElement>(null);
   const audioContextRef = useRef<AudioContext | null>(null);
   const analyserRef = useRef<AnalyserNode | null>(null);
   const sourceRef = useRef<MediaElementAudioSourceNode | null>(null);
   const animationFrameRef = useRef<number | null>(null);
+  const previousLevelsRef = useRef([0, 0, 0, 0]);
+  const lastUpdateTimeRef = useRef(0);
 
-  const initializeAudioContext = () => {
+  // Check browser support for Web Audio API
+  const isWebAudioSupported = useCallback(() => {
+    return !!(window.AudioContext || (window as any).webkitAudioContext);
+  }, []);
+
+  // Detect mobile devices for special handling
+  const isMobile = useCallback(() => {
+    return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  }, []);
+
+  const initializeAudioContext = useCallback(async () => {
     if (!audioRef.current || audioContextRef.current) {
-      console.log('Audio context already exists or no audio element');
+      return false;
+    }
+
+    if (!isWebAudioSupported()) {
+      console.warn('Web Audio API not supported in this browser');
+      return false;
+    }
+
+    try {
+      // Use the appropriate AudioContext constructor
+      const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
+      const audioContext = new AudioContextClass();
+      
+      // Handle Safari/iOS auto-play policy
+      if (audioContext.state === 'suspended') {
+        await audioContext.resume();
+      }
+      
+      const analyser = audioContext.createAnalyser();
+      
+      // Optimized settings for voice/speech detection
+      analyser.fftSize = 512; // Higher for better frequency resolution
+      analyser.smoothingTimeConstant = 0.4; // Balanced smoothing
+      analyser.minDecibels = -90;
+      analyser.maxDecibels = -10;
+      
+      // Create source node (handle potential errors)
+      try {
+        const source = audioContext.createMediaElementSource(audioRef.current);
+        source.connect(analyser);
+        analyser.connect(audioContext.destination);
+        sourceRef.current = source;
+      } catch (error) {
+        // Source may already be created
+        console.warn('Audio source connection warning:', error);
+      }
+      
+      audioContextRef.current = audioContext;
+      analyserRef.current = analyser;
+      setIsAudioContextReady(true);
+      
+      return true;
+    } catch (error) {
+      console.error('Failed to initialize audio context:', error);
+      return false;
+    }
+  }, [isWebAudioSupported]);
+
+  // Calculate RMS for accurate volume level
+  const calculateRMS = (dataArray: Uint8Array): number => {
+    let sum = 0;
+    for (let i = 0; i < dataArray.length; i++) {
+      const amplitude = (dataArray[i] - 128) / 128;
+      sum += amplitude * amplitude;
+    }
+    return Math.sqrt(sum / dataArray.length);
+  };
+
+  // Find max value in Uint8Array (compatible with all browsers)
+  const findMaxValue = (array: Uint8Array): number => {
+    let max = 0;
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] > max) max = array[i];
+    }
+    return max;
+  };
+
+  const updateAudioLevels = useCallback(() => {
+    // Throttle updates for performance (30-60 FPS)
+    const now = Date.now();
+    if (now - lastUpdateTimeRef.current < 16) { // ~60fps
+      if (isPlaying) {
+        animationFrameRef.current = requestAnimationFrame(updateAudioLevels);
+      }
+      return;
+    }
+    lastUpdateTimeRef.current = now;
+
+    if (!analyserRef.current || !isAudioContextReady) {
+      // Fallback animation when Web Audio isn't available
+      if (isPlaying) {
+        const time = Date.now() / 1000;
+        const fallbackLevels = [
+          Math.abs(Math.sin(time * 2)) * 0.6 + 0.2,
+          Math.abs(Math.sin(time * 2.5 + 0.5)) * 0.8 + 0.1,
+          Math.abs(Math.sin(time * 3 + 1)) * 0.5 + 0.3,
+          Math.abs(Math.sin(time * 2.2 + 1.5)) * 0.7 + 0.2,
+        ];
+        setAudioLevels(fallbackLevels);
+        animationFrameRef.current = requestAnimationFrame(updateAudioLevels);
+      }
       return;
     }
 
     try {
-      const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
-      const analyser = audioContext.createAnalyser();
-      const source = audioContext.createMediaElementSource(audioRef.current);
+      // Get time domain data for voice detection
+      const bufferLength = analyserRef.current.fftSize;
+      const timeDataArray = new Uint8Array(bufferLength);
+      analyserRef.current.getByteTimeDomainData(timeDataArray);
+
+      // Calculate RMS (Root Mean Square) for accurate volume
+      const rms = calculateRMS(timeDataArray);
       
-      // Better settings for speech/voice analysis
-      analyser.fftSize = 256;
-      analyser.smoothingTimeConstant = 0.3;
-      analyser.minDecibels = -90;
-      analyser.maxDecibels = -10;
+      // Get frequency data for additional detail
+      const freqDataArray = new Uint8Array(analyserRef.current.frequencyBinCount);
+      analyserRef.current.getByteFrequencyData(freqDataArray);
       
-      source.connect(analyser);
-      analyser.connect(audioContext.destination);
+      // Find max frequency value (browser-compatible way)
+      const maxFreq = findMaxValue(freqDataArray) / 255;
       
-      audioContextRef.current = audioContext;
-      analyserRef.current = analyser;
-      sourceRef.current = source;
+      // Combine RMS and frequency for better response
+      const volumeLevel = Math.min(1, Math.pow(rms * 2.5, 0.6));
+      const freqInfluence = maxFreq * 0.3;
+      const combinedLevel = Math.min(1, volumeLevel + freqInfluence);
       
-      console.log('Audio context initialized successfully');
+      // Apply exponential smoothing for natural movement
+      const smoothingFactor = 0.3;
+      const previousLevels = previousLevelsRef.current;
+      
+      // Generate 4 bars with smooth transitions
+      const newLevels = [
+        previousLevels[0] * (1 - smoothingFactor) + (combinedLevel * 0.9) * smoothingFactor,
+        previousLevels[1] * (1 - smoothingFactor) + (combinedLevel * 1.1) * smoothingFactor,
+        previousLevels[2] * (1 - smoothingFactor) + (combinedLevel * 0.7) * smoothingFactor,
+        previousLevels[3] * (1 - smoothingFactor) + (combinedLevel * 1.0) * smoothingFactor,
+      ];
+      
+      // Add subtle variation for liveliness
+      const levels = newLevels.map(level => 
+        Math.min(1, Math.max(0, level + (Math.random() - 0.5) * 0.05))
+      );
+      
+      previousLevelsRef.current = levels;
+      setAudioLevels(levels);
     } catch (error) {
-      console.warn('Web Audio API not supported:', error);
+      console.warn('Error updating audio levels:', error);
+      // Fall back to simple animation
+      setAudioLevels([0.3, 0.4, 0.2, 0.3]);
     }
-  };
-
-  const updateAudioLevels = () => {
-    if (!analyserRef.current) {
-      console.log('No analyser available');
-      return;
-    }
-
-    const bufferLength = analyserRef.current.frequencyBinCount;
-    const dataArray = new Uint8Array(bufferLength);
-    analyserRef.current.getByteFrequencyData(dataArray);
-
-    // Use time domain data for better responsiveness to speech
-    const timeDataArray = new Uint8Array(analyserRef.current.fftSize);
-    analyserRef.current.getByteTimeDomainData(timeDataArray);
-
-    // Calculate overall volume level
-    let sum = 0;
-    for (let i = 0; i < timeDataArray.length; i++) {
-      sum += Math.abs(timeDataArray[i] - 128);
-    }
-    const averageLevel = sum / timeDataArray.length / 128;
-
-    // Create 4 bars with some variation based on frequency data
-    const frequencyLevel = Math.max(...dataArray) / 255;
-    const combinedLevel = Math.max(averageLevel, frequencyLevel);
-    
-    // Generate 4 bars with slight variations for visual appeal
-    const levels = [
-      Math.min(1, combinedLevel * 0.8 + Math.random() * 0.2),
-      Math.min(1, combinedLevel * 1.0 + Math.random() * 0.3),
-      Math.min(1, combinedLevel * 0.6 + Math.random() * 0.4),
-      Math.min(1, combinedLevel * 0.9 + Math.random() * 0.2),
-    ];
-
-    setAudioLevels(levels);
 
     if (isPlaying) {
       animationFrameRef.current = requestAnimationFrame(updateAudioLevels);
     }
-  };
+  }, [isPlaying, isAudioContextReady]);
 
   const togglePlayback = async () => {
-    if (audioRef.current) {
+    if (!audioRef.current) return;
+
+    // Mark that user has interacted (needed for mobile)
+    setHasUserInteracted(true);
+
+    try {
       if (isPlaying) {
+        // Pause playback
         audioRef.current.pause();
         if (animationFrameRef.current) {
           cancelAnimationFrame(animationFrameRef.current);
         }
+        // Smoothly animate levels to zero
+        setAudioLevels([0, 0, 0, 0]);
+        previousLevelsRef.current = [0, 0, 0, 0];
       } else {
         // Initialize audio context on first play (required by browsers)
         if (!audioContextRef.current) {
-          initializeAudioContext();
+          const initialized = await initializeAudioContext();
+          if (!initialized) {
+            console.warn('Audio context initialization failed, using fallback animation');
+          }
         }
         
-        // Resume audio context if suspended
+        // Resume audio context if suspended (common on mobile)
         if (audioContextRef.current?.state === 'suspended') {
-          await audioContextRef.current.resume();
+          try {
+            await audioContextRef.current.resume();
+          } catch (error) {
+            console.warn('Failed to resume audio context:', error);
+          }
         }
         
-        audioRef.current.play();
-        updateAudioLevels();
+        // Start playback
+        try {
+          await audioRef.current.play();
+          updateAudioLevels();
+        } catch (error) {
+          console.error('Playback failed:', error);
+          // Handle autoplay restrictions
+          if (error instanceof DOMException && error.name === 'NotAllowedError') {
+            alert('Please click play again to start audio playback.');
+            return;
+          }
+        }
       }
       setIsPlaying(!isPlaying);
+    } catch (error) {
+      console.error('Toggle playback error:', error);
     }
   };
 
@@ -129,6 +248,7 @@ export default function AudioPlayer({ audioSrc, title = "Audio Player" }: AudioP
     setProgress(0);
     setCurrentTime(0);
     setAudioLevels([0, 0, 0, 0]);
+    previousLevelsRef.current = [0, 0, 0, 0];
     if (animationFrameRef.current) {
       cancelAnimationFrame(animationFrameRef.current);
     }
@@ -140,17 +260,48 @@ export default function AudioPlayer({ audioSrc, title = "Audio Player" }: AudioP
     return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
   };
 
-  // Cleanup on unmount
+  // Initialize on mount and handle mobile touch events
   useEffect(() => {
+    // Pre-check browser capabilities
+    if (!isWebAudioSupported()) {
+      console.info('Web Audio API not supported, using fallback animations');
+    }
+
+    // Handle visibility change (pause when hidden)
+    const handleVisibilityChange = () => {
+      if (document.hidden && isPlaying && audioRef.current) {
+        audioRef.current.pause();
+        setIsPlaying(false);
+      }
+    };
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    // Cleanup
     return () => {
+      document.removeEventListener('visibilitychange', handleVisibilityChange);
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current);
       }
-      if (audioContextRef.current) {
-        audioContextRef.current.close();
+      if (audioContextRef.current && audioContextRef.current.state !== 'closed') {
+        audioContextRef.current.close().catch(console.warn);
       }
     };
-  }, []);
+  }, [isPlaying, isWebAudioSupported]);
+
+  // Handle audio context state changes
+  useEffect(() => {
+    if (!audioContextRef.current) return;
+
+    const handleStateChange = () => {
+      setIsAudioContextReady(audioContextRef.current?.state === 'running');
+    };
+
+    audioContextRef.current.addEventListener('statechange', handleStateChange);
+    return () => {
+      audioContextRef.current?.removeEventListener('statechange', handleStateChange);
+    };
+  }, [audioContextRef.current]);
 
   return (
     <div className="p-3 bg-muted/30 rounded-lg border border-border/30">
@@ -183,24 +334,39 @@ export default function AudioPlayer({ audioSrc, title = "Audio Player" }: AudioP
             </span>
           </div>
         </div>
-        {/* Real-time Audio Visualizer */}
-        <div className="flex items-center gap-1">
+        {/* Real-time Audio Visualizer with Cross-Browser Support */}
+        <div className="flex items-center gap-0.5" aria-label="Audio level indicator">
           {audioLevels.map((level, index) => {
-            // Fallback animation if Web Audio API isn't working
-            const fallbackHeight = isPlaying && !audioContextRef.current ? 
-              12 + Math.sin(Date.now() / 200 + index) * 6 : 8;
-            const height = audioContextRef.current ? 
-              Math.max(8, level * 20 + 8) : fallbackHeight;
+            // Calculate height with smooth scaling
+            const minHeight = 6;
+            const maxHeight = 24;
+            const height = minHeight + (maxHeight - minHeight) * level;
+            
+            // Dynamic opacity based on level
+            const opacity = isPlaying ? 0.4 + level * 0.6 : 0.3;
             
             return (
-              <div 
+              <div
                 key={index}
-                className="w-1 bg-primary rounded-full transition-all duration-75 ease-out"
-                style={{ 
-                  height: `${height}px`,
-                  opacity: isPlaying ? Math.max(0.3, level || 0.6) : 0.3
+                className="relative"
+                style={{
+                  width: '3px',
+                  height: `${maxHeight}px`,
+                  display: 'flex',
+                  alignItems: 'flex-end',
                 }}
-              />
+              >
+                <div
+                  className="w-full bg-primary rounded-full"
+                  style={{
+                    height: `${height}px`,
+                    opacity,
+                    transform: 'translateZ(0)', // Hardware acceleration
+                    transition: 'height 100ms cubic-bezier(0.4, 0, 0.2, 1), opacity 150ms ease-out',
+                    willChange: 'height, opacity',
+                  }}
+                />
+              </div>
             );
           })}
         </div>
@@ -210,10 +376,15 @@ export default function AudioPlayer({ audioSrc, title = "Audio Player" }: AudioP
         preload="metadata"
         onTimeUpdate={handleTimeUpdate}
         onEnded={handleEnded}
+        onLoadedMetadata={() => console.log('Audio metadata loaded')}
+        onError={(e) => console.error('Audio error:', e)}
+        playsInline // Important for iOS
         crossOrigin="anonymous"
       >
         <source src={audioSrc} type="audio/wav" />
-        Tín browser støðir ikki audio.
+        <source src={audioSrc} type="audio/mpeg" />
+        <source src={audioSrc} type="audio/ogg" />
+        Your browser does not support audio playback.
       </audio>
     </div>
   );
