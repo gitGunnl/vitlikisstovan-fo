@@ -155,25 +155,7 @@ export default function Home() {
                     pointerEvents: isActive ? 'auto' : 'none'
                   }}
                 >
-                  {/* Blog Badge for slide 2 */}
-                  {index === 1 && (
-                    <div
-                      className="inline-flex items-center gap-2 mb-4 sm:mb-6"
-                      style={{
-                        transform: isActive ? 'translateY(0) scale(1)' : 'translateY(-20px) scale(0.8)',
-                        opacity: isActive ? 1 : 0,
-                        transition: 'all 600ms cubic-bezier(0.34, 1.56, 0.64, 1)',
-                        transitionDelay: isActive ? '100ms' : '0ms'
-                      }}
-                    >
-                      <span className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 bg-emerald-600/80 text-white font-semibold text-xs uppercase tracking-wider rounded-full shadow-lg">
-                        <span className="flex items-center gap-2">
-                          <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
-                          NýGGJUR BLOGGUR
-                        </span>
-                      </span>
-                    </div>
-                  )}
+                  
                   <h1
                     className={`text-2xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-6 hero-text leading-snug sm:leading-tight ${
                       index === 1
