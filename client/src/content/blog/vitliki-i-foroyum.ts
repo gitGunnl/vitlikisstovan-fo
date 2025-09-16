@@ -118,6 +118,7 @@ const post = {
       </p>
       
       <!-- Audio Player Component -->
+      <p>Hoyr her hvussu tað ljóðar tá ið vitlíki ger Føroyskun tekst til talu.</p>
       <div class="mb-4" data-audio-player="/faroese_long.wav" data-title="Føroysk talu dømi"></div>
 
       <div class="space-y-3">
