@@ -249,10 +249,10 @@ export default function Home() {
                             element.scrollIntoView({ behavior: 'smooth' });
                           }
                         }}
-                        className="group inline-flex items-center gap-2 mx-auto px-4 sm:px-6 py-2 sm:py-3 bg-white/15 backdrop-blur-sm text-white rounded-full hover:bg-white/25 transition-all duration-200 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/50 focus:ring-offset-2 border border-white/30"
+                        className="group inline-flex items-center gap-2 sm:gap-3 mx-auto px-5 sm:px-8 py-2.5 sm:py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-medium sm:font-semibold text-sm sm:text-base rounded-full shadow-lg sm:shadow-xl hover:shadow-emerald-500/50 transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:ring-offset-2"
                         data-testid="button-scroll-consulting"
                       >
-                        <span className="text-xs sm:text-base font-medium">
+                        <span className="relative">
                           Um tú ert her fyri ráðgeving ella annað, les meira longur nirrið
                         </span>
                         <svg
