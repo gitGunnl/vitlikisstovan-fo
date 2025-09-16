@@ -218,7 +218,16 @@
     }
     
     .layer-clouds {
-        opacity: 0.5;
+        opacity: 0.9;
+    }
+    
+    .layer-clouds img {
+        width: 60%;
+        height: auto;
+        left: 50%;
+        top: 10%;
+        transform: translateX(-50%);
+        animation: none; /* Disable animation on mobile for performance */
     }
     
     /* Content Sections Mobile */
