@@ -235,15 +235,26 @@ export const siteConfig = {
     title: "Úrvald úrslit og samstørv",
     highlights: [
       {
-        title: "Vegleiðingar og verkstovur",
+        title: "Vegleiðingar",
         description:
-          "Eg havi gjørt nógvar vegleðingar og verkstovur til ymiskir bólkar, tildømis lærarar, námsfrøðingar, rithøvundar og eitt ótal av skrivstovufólki. Um tú vil læra meira um hvussu eg geri hesar vegleiðingar so kanst tú lesa meira her:",
+          "I provide personalized AI guidance tailored to your specific work tasks and challenges. Get a custom guide that shows exactly how AI can transform your daily workflow, complete with step-by-step instructions and practical examples from your field.",
         image:
           "/images/verkstovur.jpeg",
-        imageAlt: "Samstarv á eini skrivstovu",
+        imageAlt: "Personalized AI guidance session",
         buttonText: "Les meira um hettar",
         buttonVariant: "default",
         dialogId: "vegleidingar"
+      },
+      {
+        title: "Verkstovur",
+        description:
+          "Interactive workshops where your team learns to use AI tools together. Through hands-on exercises and real-world examples, participants gain practical skills they can apply immediately in their daily work.",
+        image:
+          "/images/verkstovur.jpeg",
+        imageAlt: "Team workshop in progress",
+        buttonText: "Les meira um hettar",
+        buttonVariant: "default",
+        dialogId: "verkstovur"
       },
       {
         title: "Sergjørt amboð til týðing úr Donskum til Føroyskt",

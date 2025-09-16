@@ -740,16 +740,38 @@ export default function Home() {
                   <Dialog open={openDialog === 'vegleidingar'} onOpenChange={() => setOpenDialog(null)}>
                     <DialogContent className="max-w-2xl max-h-[85vh]">
                       <DialogHeader className="mb-4">
-                        <DialogTitle className="text-xl font-bold mb-2">Vegleiðingar & Verkstovur</DialogTitle>
+                        <DialogTitle className="text-xl font-bold mb-2">Personalized AI Guidance</DialogTitle>
                         <DialogDescription className="text-base leading-relaxed">
-                          Eg havi hildið hópin av verkstovum, og vit hava gjørt enn fleiri – sera væl
-                          umtóktar – vegleiðingar um, hvussu tú brúkar ChatGPT og onnur vitlíki‑amboð
-                          í veruligum arbeiðsuppgávum.
+                          Transform your workflow with AI guidance designed specifically for your needs. 
+                          I create custom guides that show you exactly how to use AI tools for your unique work challenges.
                         </DialogDescription>
                       </DialogHeader>
 
                       <ScrollArea className="h-[500px] px-4">
                         <div className="space-y-8 pr-6">
+                          {/* What you get */}
+                          <section className="space-y-4">
+                            <h4 className="text-lg font-semibold mb-2">What You Get</h4>
+                            <ul className="space-y-3 text-muted-foreground">
+                              <li className="flex items-start gap-2">
+                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                                <span>Detailed analysis of your work processes</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                                <span>Custom guide with step-by-step instructions</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                                <span>Practical examples from your industry</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                                <span>Templates and prompts you can use immediately</span>
+                              </li>
+                            </ul>
+                          </section>
+
                           {/* Free sample guides */}
                           <section className="space-y-4">
                             <h4 className="text-lg font-semibold mb-2">Ókeypis dømi (2 vegleiðingar)</h4>
@@ -797,6 +819,69 @@ export default function Home() {
                               </Button>
                             </div>
                           </section>
+                        </div>
+                      </ScrollArea>
+                    </DialogContent>
+                  </Dialog>
+
+                  {/* Dialog for Verkstovur */}
+                  <Dialog open={openDialog === 'verkstovur'} onOpenChange={() => setOpenDialog(null)}>
+                    <DialogContent className="max-w-2xl max-h-[85vh]">
+                      <DialogHeader className="mb-4">
+                        <DialogTitle className="text-xl font-bold mb-2">AI Workshops & Training</DialogTitle>
+                        <DialogDescription className="text-base leading-relaxed">
+                          Bring AI literacy to your entire team through engaging, practical workshops. 
+                          Participants learn by doing, with exercises tailored to your organization's needs.
+                        </DialogDescription>
+                      </DialogHeader>
+
+                      <ScrollArea className="h-[500px] px-4">
+                        <div className="space-y-8 pr-6">
+                          {/* What workshops cover */}
+                          <section className="space-y-4">
+                            <h4 className="text-lg font-semibold mb-2">What Workshops Cover</h4>
+                            <ul className="space-y-3 text-muted-foreground">
+                              <li className="flex items-start gap-2">
+                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                                <span>Understanding AI capabilities and limitations</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                                <span>Hands-on practice with ChatGPT and other tools</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                                <span>Creating effective prompts for your field</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                                <span>Collaborative exercises with real work scenarios</span>
+                              </li>
+                              <li className="flex items-start gap-2">
+                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                                <span>Best practices for AI safety and ethics</span>
+                              </li>
+                            </ul>
+                          </section>
+
+                          {/* Workshop formats */}
+                          <section className="space-y-4">
+                            <h4 className="text-lg font-semibold mb-2">Workshop Formats</h4>
+                            <div className="space-y-3">
+                              <div className="p-4 border rounded-lg">
+                                <h5 className="font-semibold mb-1">Half-Day Introduction Sessions</h5>
+                                <p className="text-sm text-muted-foreground">Perfect for teams getting started with AI tools</p>
+                              </div>
+                              <div className="p-4 border rounded-lg">
+                                <h5 className="font-semibold mb-1">Full-Day Deep Dives</h5>
+                                <p className="text-sm text-muted-foreground">Comprehensive training for specific use cases</p>
+                              </div>
+                              <div className="p-4 border rounded-lg">
+                                <h5 className="font-semibold mb-1">Multi-Session Programs</h5>
+                                <p className="text-sm text-muted-foreground">Ongoing training for complete AI transformation</p>
+                              </div>
+                            </div>
+                          </section>
 
                           {/* Project: Vitlíki til arbeiði */}
                           <section className="space-y-4">
@@ -819,6 +904,26 @@ export default function Home() {
                               >
                                 <Mail className="mr-2 h-4 w-4" />
                                 Kontakt um "Vitlíki til arbeiðis"
+                              </Button>
+                            </div>
+                          </section>
+
+                          {/* Book a workshop */}
+                          <section className="space-y-4">
+                            <h4 className="text-lg font-semibold mb-2">Book a Workshop</h4>
+                            <p className="text-muted-foreground leading-[1.7] mb-4">
+                              Ready to bring AI skills to your team? Let's discuss your needs and create a 
+                              workshop tailored to your organization.
+                            </p>
+                            <div className="flex flex-wrap gap-3">
+                              <Button
+                                asChild
+                                aria-label="Book a workshop"
+                              >
+                                <a href="/contact">
+                                  <Mail className="mr-2 h-4 w-4" />
+                                  Book a Workshop
+                                </a>
                               </Button>
                             </div>
                           </section>
