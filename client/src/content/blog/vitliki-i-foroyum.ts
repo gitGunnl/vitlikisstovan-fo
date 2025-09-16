@@ -275,6 +275,11 @@ const post = {
 
   <p><strong>Hví hetta hevur týdning:</strong> Gevur skipanum eina <strong>føroyska rødd</strong> til fráboðanir og hondfría vitlíksnýtslu – og nógvar møguleikar fyri sjónveik.</p>
   <p><strong>Hvat vit hava:</strong> <strong>Meta MMS TTS (fao)</strong> — ein rødd, <strong>klár men mekanisk</strong>.</p>
+  
+  <!-- Audio Player Component for TTS description -->
+  <p>Hoyr eitt dømi um hvussu tað ljóðar:</p>
+  <div class="mb-4" data-audio-player="/faroese_long.wav" data-title="Føroysk talu dømi"></div>
+  
   <p><strong>Hóskar nú til:</strong> Fráboðanir til sjónveik og innanhýsis amboð til fyritøkur.</p>
   <p><strong>Næsta stigið:</strong> <strong>At gera tað meira veruleika kent</strong> og <strong>fleiri røddir</strong>.</p>
 
