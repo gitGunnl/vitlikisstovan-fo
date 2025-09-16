@@ -21,10 +21,10 @@ const post = {
   <p>Hetta er títt skjóta innlit í føroyskt <strong>vitlíki</strong> í 2025: <em>Hvat finst, hvussu væl tað riggar í verki, og mín meining til hvat vit eiga at raðfesta næstu 12 mánaðirnar.</em> Vit hyggja uppá:</p>
   <ul>
     <li>eitt <strong>yvirlit</strong> yvir ymisku føroysku modellini og hvussu væl tey rigga. <em>(Hoyr millum annað vitlíki tosa Føroyskt.)</em></li>
-    <li>eina <strong>greiða strategi</strong>: set <strong>EN→FO týðing</strong> og <strong>føroyska talu til tekst</strong> fremst,</li>
+    <li>eina <strong>greiða strategi</strong>: Set <strong>EN til FO týðing</strong> og <strong>føroyska talu til tekst</strong> fremst,</li>
     <li> <strong>hví dátur er fløskuhálsurin</strong> — og hvussu vit fáa gongd á eitt føroyskt dátuinfrakervi.</li>
   </ul>
-  <p><em>Myndburðurin, vit brúka her, er einfaldur:</em> modell eru sum <strong>hamarar og sagir</strong>. Men ein hamari byggir ikki eitt hús sjálvur — ein dugnaligur persónur við røttum amboðum og røttum arbeiðsgongdum byggir hús við hamara. Tí er tað eisini umroðandi at byggja vitlíki amboð sum kunna brúkast til veruligt arbeiði.</p>
+  <p><em>Myndburðurin, vit brúka her, er einfaldur:</em> modell eru sum <strong>hamarar og sagir</strong>. Men ein hamari byggir ikki eitt hús sjálvur — ein dugnaligur persónur við røttum amboðum og røttum arbeiðsgongdum byggir hús við hamara. Tí er tað eisini umráðandi at byggja vitlíki amboð sum kunna brúkast til veruligt arbeiði.</p>
 
   <figure class="not-prose my-6">
     <img
