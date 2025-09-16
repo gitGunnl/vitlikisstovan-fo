@@ -233,8 +233,6 @@ export const siteConfig = {
 
   cases: {
     title: "Úrvald úrslit og samstørv",
-    subtitle:
-      "Síggj her dømir uppá hvussu eg geri hugskot til nýtilig úrslit – á skrivstovum, í tænastum og í mentanini.",
     highlights: [
       {
         title: "Vegleiðingar og verkstovur",
