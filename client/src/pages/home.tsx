@@ -301,26 +301,21 @@ export default function Home() {
             {/* News Button - Option 1: Side Tab Style */}
             <div className="mb-8">
               <div className="flex justify-end">
-                <button
-                  onClick={() => {
-                    const element = document.querySelector('#program');
-                    if (element) {
-                      element.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}
+                <a
+                  href="/blog/vitliki-i-foroyum"
                   className="group flex items-center bg-gradient-to-r from-primary to-primary/80 text-primary-foreground px-6 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
                 >
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                     <div className="text-sm font-medium">
-                      <div className="text-xs opacity-80">LES MEIRA</div>
-                      <div>Um okkara arbeiði</div>
+                      <div className="text-xs opacity-80">NÝGGJUR BLOGGUR</div>
+                      <div>Føroysk vitlíki model</div>
                     </div>
                     <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>
-                </button>
+                </a>
               </div>
             </div>
 
