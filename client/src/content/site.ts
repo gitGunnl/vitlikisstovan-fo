@@ -237,9 +237,9 @@ export const siteConfig = {
       {
         title: "Vegleiðingar",
         description:
-          "I provide personalized AI guidance tailored to your specific work tasks and challenges. Get a custom guide that shows exactly how AI can transform your daily workflow, complete with step-by-step instructions and practical examples from your field.",
+          "Vegleiðingarnar veita ávísum arbeiðsbólkum innlit í júst hvørjar arbeiðsuppgávur tey kunnu loysa við vitlíki - og hvørjar uppgávur, ið ikki eru hóskandi til vitlíki. Í vegleiðingunum eru listar og frymlar (skabelónir) við ítøkiligum og viðkomandi uppgávum, og hvussu vitlíki verður brúkt at loysa tær. Eitt úrslitagott arbeiðsamboð, ið tú ikki vil vera fyriuttan.",
         image:
-          "/images/verkstovur.jpeg",
+          "/images/vegleiding.png",
         imageAlt: "Personalized AI guidance session",
         buttonText: "Les meira um hettar",
         buttonVariant: "default",
@@ -248,9 +248,9 @@ export const siteConfig = {
       {
         title: "Verkstovur",
         description:
-          "Interactive workshops where your team learns to use AI tools together. Through hands-on exercises and real-world examples, participants gain practical skills they can apply immediately in their daily work.",
+          "Áður havi eg havt verkstovur fyri fakbólkum av lærarum, námsfrøðingum, rithøvundum og skrivstovufólki av alskyns slagi. Verkstovurnar hava til endamál at greiða frá vitlíki á einfaldan og nýtiligan hátt - so at øll kunnu vera við. Harafturat eru verkstovurnar handaligar, so at luttakandi í verki kunnu loysa viðkomandi arbeiðsuppgávur við vitlíki.",
         image:
-          "/images/verkstova.jpeg",
+          "/images/verkstovur.jpeg",
         imageAlt: "Team workshop in progress",
         buttonText: "Les meira um hettar",
         buttonVariant: "default",

@@ -740,38 +740,14 @@ export default function Home() {
                   <Dialog open={openDialog === 'vegleidingar'} onOpenChange={() => setOpenDialog(null)}>
                     <DialogContent className="max-w-2xl max-h-[85vh]">
                       <DialogHeader className="mb-4">
-                        <DialogTitle className="text-xl font-bold mb-2">Personalized AI Guidance</DialogTitle>
+                        <DialogTitle className="text-xl font-bold mb-2">Vegleiðingar & Verkstovur</DialogTitle>
                         <DialogDescription className="text-base leading-relaxed">
-                          Transform your workflow with AI guidance designed specifically for your needs. 
-                          I create custom guides that show you exactly how to use AI tools for your unique work challenges.
+                          
                         </DialogDescription>
                       </DialogHeader>
 
                       <ScrollArea className="h-[500px] px-4">
                         <div className="space-y-8 pr-6">
-                          {/* What you get */}
-                          <section className="space-y-4">
-                            <h4 className="text-lg font-semibold mb-2">What You Get</h4>
-                            <ul className="space-y-3 text-muted-foreground">
-                              <li className="flex items-start gap-2">
-                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                                <span>Detailed analysis of your work processes</span>
-                              </li>
-                              <li className="flex items-start gap-2">
-                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                                <span>Custom guide with step-by-step instructions</span>
-                              </li>
-                              <li className="flex items-start gap-2">
-                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                                <span>Practical examples from your industry</span>
-                              </li>
-                              <li className="flex items-start gap-2">
-                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                                <span>Templates and prompts you can use immediately</span>
-                              </li>
-                            </ul>
-                          </section>
-
                           {/* Free sample guides */}
                           <section className="space-y-4">
                             <h4 className="text-lg font-semibold mb-2">Ókeypis dømi (2 vegleiðingar)</h4>
@@ -799,9 +775,34 @@ export default function Home() {
                             </div>
                           </section>
 
+                          {/* Project: Vitlíki til arbeiði */}
+                          <section className="space-y-4">
+                            <h4 className="text-lg font-semibold mb-2">"Vitlíki til arbeiðis"</h4>
+                            <p className="text-muted-foreground leading-[1.7] mb-3">
+                              <strong>Granskingar grunnurin</strong> hevur stuðla mær í at menna <strong>"Vitlíki til arbeiðis"</strong> –
+                            ein verkætlan har eg geri vegleiðingar sum skula hjálpa ávísum bólkum at koma gott ígongd við vitlíki. Felags fyri hesar bólkar er at tað eru bólkar í ikki sita við teldu dagliga, hesir bólk eru í vanda fyri at koma ov seint ígong við vitlíki og tí hjálpi eg júst teimum.
+                            </p>
+                            <p className="text-muted-foreground leading-[1.7] mb-4">
+                              Fyrstu vegleiðingar vera klárar í býrjani av Novembur 2025.
+                            </p>
+
+                            <div className="flex flex-wrap gap-3 mt-4">
+                              <Button
+                                onClick={() => {
+                                  setOpenDialog(null);
+                                  window.location.href = '/contact';
+                                }}
+                                aria-label="Kontakt um Vitlíki til arbeiðis"
+                              >
+                                <Mail className="mr-2 h-4 w-4" />
+                                Samband í mun til "Vitlíki til arbeiðis"
+                              </Button>
+                            </div>
+                          </section>
+
                           {/* Order your own guide */}
                           <section className="space-y-4">
-                            <h4 className="text-lg font-semibold mb-2">Bílegg vegleiðing til títt arbeiðisøki</h4>
+                            <h4 className="text-lg font-semibold mb-2">Bílegg eina vegleiðing.</h4>
                             <p className="text-muted-foreground leading-[1.7] mb-4">
                               Tú fær eina <strong>sergjørda vegleiðing</strong> til júst tínar arbeiðsuppgávur
                               fyri <strong>1600 DKK</strong>. So veit tú akkurát hvat tú skal nýta vitlíki til.
@@ -883,7 +884,7 @@ export default function Home() {
                             </div>
                           </section>
 
-                          {/* Project: Vitlíki til arbeiði */}
+                          {/* Project: Vitlíki til arbeiðis */}
                           <section className="space-y-4">
                             <h4 className="text-lg font-semibold mb-2">"Vitlíki til arbeiðis"</h4>
                             <p className="text-muted-foreground leading-[1.7] mb-3">
