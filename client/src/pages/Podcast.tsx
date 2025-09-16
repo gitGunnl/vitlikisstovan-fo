@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import { siteConfig } from "@/content/site";
+import PodcastPlayer from "@/components/podcast/PodcastPlayer";
+import episodes from "@/data/podcastEpisodes";
 
 export default function Podcast() {
   useEffect(() => {
@@ -195,27 +197,8 @@ export default function Podcast() {
                 <div className="frame-header">
                   <h2 className="section-title">Listen to Our Episodes</h2>
                 </div>
-                <div className="player-container">
-                  {/* Placeholder for Podbean player - would be replaced with actual embed code */}
-                  <div className="podcast-player">
-                    <div className="player-placeholder">
-                      <i className="fas fa-podcast"></i>
-                      <p>Latest Episodes from the Faroe Islands</p>
-                      {/* Podbean podcast player iframe */}
-                      <iframe 
-                        title="Most interesting stories from the Faroe Islands. Told by AI." 
-                        allowTransparency={true}
-                        height="315" 
-                        width="100%" 
-                        style={{ border: 'none', minWidth: 'min(100%, 430px)', height: '315px' }}
-                        scrolling="no" 
-                        data-name="pb-iframe-player" 
-                        src="https://www.podbean.com/player-v2/?i=hqxzi-139ff97-pbblog-playlist&share=1&download=1&rtl=0&fonts=Arial&skin=1&font-color=auto&logo_link=episode_page&order=episodic&limit=10&filter=all&ss=a713390a017602015775e868a2cf26b0&btn-skin=7&size=315" 
-                        loading="lazy" 
-                        allowFullScreen
-                      />
-                    </div>
-                  </div>
+                <div className="player-container py-6">
+                  <PodcastPlayer episodes={episodes} />
                 </div>
               </div>
             </div>
