@@ -19,15 +19,21 @@ export default function AudioPlayer({ audioSrc, title = "Audio Player" }: AudioP
   const animationFrameRef = useRef<number | null>(null);
 
   const initializeAudioContext = () => {
-    if (!audioRef.current || audioContextRef.current) return;
+    if (!audioRef.current || audioContextRef.current) {
+      console.log('Audio context already exists or no audio element');
+      return;
+    }
 
     try {
       const audioContext = new (window.AudioContext || (window as any).webkitAudioContext)();
       const analyser = audioContext.createAnalyser();
       const source = audioContext.createMediaElementSource(audioRef.current);
       
-      analyser.fftSize = 64;
-      analyser.smoothingTimeConstant = 0.8;
+      // Better settings for speech/voice analysis
+      analyser.fftSize = 256;
+      analyser.smoothingTimeConstant = 0.3;
+      analyser.minDecibels = -90;
+      analyser.maxDecibels = -10;
       
       source.connect(analyser);
       analyser.connect(audioContext.destination);
@@ -35,33 +41,45 @@ export default function AudioPlayer({ audioSrc, title = "Audio Player" }: AudioP
       audioContextRef.current = audioContext;
       analyserRef.current = analyser;
       sourceRef.current = source;
+      
+      console.log('Audio context initialized successfully');
     } catch (error) {
       console.warn('Web Audio API not supported:', error);
     }
   };
 
   const updateAudioLevels = () => {
-    if (!analyserRef.current) return;
+    if (!analyserRef.current) {
+      console.log('No analyser available');
+      return;
+    }
 
     const bufferLength = analyserRef.current.frequencyBinCount;
     const dataArray = new Uint8Array(bufferLength);
     analyserRef.current.getByteFrequencyData(dataArray);
 
-    // Sample 4 frequency ranges for visualization
-    const ranges = [
-      { start: 0, end: Math.floor(bufferLength * 0.1) },      // Low
-      { start: Math.floor(bufferLength * 0.1), end: Math.floor(bufferLength * 0.3) }, // Mid-low
-      { start: Math.floor(bufferLength * 0.3), end: Math.floor(bufferLength * 0.6) }, // Mid-high
-      { start: Math.floor(bufferLength * 0.6), end: bufferLength } // High
-    ];
+    // Use time domain data for better responsiveness to speech
+    const timeDataArray = new Uint8Array(analyserRef.current.fftSize);
+    analyserRef.current.getByteTimeDomainData(timeDataArray);
 
-    const levels = ranges.map(range => {
-      let sum = 0;
-      for (let i = range.start; i < range.end; i++) {
-        sum += dataArray[i];
-      }
-      return (sum / (range.end - range.start)) / 255; // Normalize to 0-1
-    });
+    // Calculate overall volume level
+    let sum = 0;
+    for (let i = 0; i < timeDataArray.length; i++) {
+      sum += Math.abs(timeDataArray[i] - 128);
+    }
+    const averageLevel = sum / timeDataArray.length / 128;
+
+    // Create 4 bars with some variation based on frequency data
+    const frequencyLevel = Math.max(...dataArray) / 255;
+    const combinedLevel = Math.max(averageLevel, frequencyLevel);
+    
+    // Generate 4 bars with slight variations for visual appeal
+    const levels = [
+      Math.min(1, combinedLevel * 0.8 + Math.random() * 0.2),
+      Math.min(1, combinedLevel * 1.0 + Math.random() * 0.3),
+      Math.min(1, combinedLevel * 0.6 + Math.random() * 0.4),
+      Math.min(1, combinedLevel * 0.9 + Math.random() * 0.2),
+    ];
 
     setAudioLevels(levels);
 
@@ -167,16 +185,24 @@ export default function AudioPlayer({ audioSrc, title = "Audio Player" }: AudioP
         </div>
         {/* Real-time Audio Visualizer */}
         <div className="flex items-center gap-1">
-          {audioLevels.map((level, index) => (
-            <div 
-              key={index}
-              className="w-1 bg-primary rounded-full transition-all duration-75 ease-out"
-              style={{ 
-                height: `${Math.max(8, level * 20 + 8)}px`,
-                opacity: isPlaying ? Math.max(0.3, level) : 0.3
-              }}
-            />
-          ))}
+          {audioLevels.map((level, index) => {
+            // Fallback animation if Web Audio API isn't working
+            const fallbackHeight = isPlaying && !audioContextRef.current ? 
+              12 + Math.sin(Date.now() / 200 + index) * 6 : 8;
+            const height = audioContextRef.current ? 
+              Math.max(8, level * 20 + 8) : fallbackHeight;
+            
+            return (
+              <div 
+                key={index}
+                className="w-1 bg-primary rounded-full transition-all duration-75 ease-out"
+                style={{ 
+                  height: `${height}px`,
+                  opacity: isPlaying ? Math.max(0.3, level || 0.6) : 0.3
+                }}
+              />
+            );
+          })}
         </div>
       </div>
       <audio 
