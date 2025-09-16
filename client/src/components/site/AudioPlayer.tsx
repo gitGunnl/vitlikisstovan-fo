@@ -33,8 +33,15 @@ export default function AudioPlayer({ audioSrc, title = "Audio Player" }: AudioP
   }, []);
 
   const initializeAudioContext = useCallback(async () => {
-    if (!audioRef.current || audioContextRef.current) {
+    if (!audioRef.current) {
+      console.error('No audio element available');
       return false;
+    }
+    
+    // Check if already initialized
+    if (audioContextRef.current && sourceRef.current) {
+      console.log('Audio context already initialized');
+      return true;
     }
 
     if (!isWebAudioSupported()) {
@@ -46,10 +53,13 @@ export default function AudioPlayer({ audioSrc, title = "Audio Player" }: AudioP
       // Use the appropriate AudioContext constructor
       const AudioContextClass = window.AudioContext || (window as any).webkitAudioContext;
       const audioContext = new AudioContextClass();
+      console.log('Created audio context, state:', audioContext.state);
       
       // Handle Safari/iOS auto-play policy
       if (audioContext.state === 'suspended') {
+        console.log('Audio context suspended, resuming...');
         await audioContext.resume();
+        console.log('Audio context resumed, new state:', audioContext.state);
       }
       
       const analyser = audioContext.createAnalyser();
@@ -60,20 +70,26 @@ export default function AudioPlayer({ audioSrc, title = "Audio Player" }: AudioP
       analyser.minDecibels = -90;
       analyser.maxDecibels = -10;
       
-      // Create source node (handle potential errors)
-      try {
-        const source = audioContext.createMediaElementSource(audioRef.current);
-        source.connect(analyser);
-        analyser.connect(audioContext.destination);
-        sourceRef.current = source;
-      } catch (error) {
-        // Source may already be created
-        console.warn('Audio source connection warning:', error);
+      // Only create source if not already created
+      if (!sourceRef.current) {
+        try {
+          console.log('Creating media element source...');
+          const source = audioContext.createMediaElementSource(audioRef.current);
+          source.connect(analyser);
+          analyser.connect(audioContext.destination);
+          sourceRef.current = source;
+          console.log('Audio graph connected successfully');
+        } catch (error) {
+          // This might happen if source was already created
+          console.error('Failed to create audio source:', error);
+          return false;
+        }
       }
       
       audioContextRef.current = audioContext;
       analyserRef.current = analyser;
       setIsAudioContextReady(true);
+      console.log('Audio context initialization complete');
       
       return true;
     } catch (error) {
@@ -180,7 +196,7 @@ export default function AudioPlayer({ audioSrc, title = "Audio Player" }: AudioP
   }, [isPlaying, isAudioContextReady]);
 
   const togglePlayback = async () => {
-    console.log('Toggle playback called, audioRef:', audioRef.current);
+    console.log('Toggle playback called');
     console.log('Current isPlaying state:', isPlaying);
     
     if (!audioRef.current) {
@@ -202,38 +218,39 @@ export default function AudioPlayer({ audioSrc, title = "Audio Player" }: AudioP
         // Smoothly animate levels to zero
         setAudioLevels([0, 0, 0, 0]);
         previousLevelsRef.current = [0, 0, 0, 0];
+        setIsPlaying(false);
       } else {
         console.log('Starting playback...');
         console.log('Audio src:', audioRef.current.src);
         console.log('Audio readyState:', audioRef.current.readyState);
         console.log('Audio duration:', audioRef.current.duration);
         
-        // Initialize audio context on first play (required by browsers)
-        if (!audioContextRef.current) {
-          console.log('Initializing audio context...');
-          const initialized = await initializeAudioContext();
-          if (!initialized) {
-            console.warn('Audio context initialization failed, using fallback animation');
-          }
-        }
-        
-        // Resume audio context if suspended (common on mobile)
-        if (audioContextRef.current?.state === 'suspended') {
-          console.log('Resuming suspended audio context...');
-          try {
-            await audioContextRef.current.resume();
-            console.log('Audio context resumed successfully');
-          } catch (error) {
-            console.warn('Failed to resume audio context:', error);
-          }
-        }
-        
-        // Start playback
+        // Try simple playback first
         try {
           console.log('Attempting to play audio...');
-          await audioRef.current.play();
-          console.log('Audio playback started successfully');
-          updateAudioLevels();
+          const playPromise = audioRef.current.play();
+          
+          if (playPromise !== undefined) {
+            await playPromise;
+            console.log('Audio playback started successfully');
+            setIsPlaying(true);
+            
+            // Initialize audio context after playback starts
+            if (!audioContextRef.current && isWebAudioSupported()) {
+              console.log('Initializing audio context for visualization...');
+              setTimeout(async () => {
+                const initialized = await initializeAudioContext();
+                if (initialized) {
+                  updateAudioLevels();
+                }
+              }, 100);
+            } else if (audioContextRef.current) {
+              updateAudioLevels();
+            } else {
+              // Use fallback animation
+              updateAudioLevels();
+            }
+          }
         } catch (error) {
           console.error('Playback failed:', error);
           if (error instanceof Error) {
@@ -243,13 +260,17 @@ export default function AudioPlayer({ audioSrc, title = "Audio Player" }: AudioP
             if (error instanceof DOMException && error.name === 'NotAllowedError') {
               alert('Please click play again to start audio playback.');
               return;
+            } else if (error instanceof DOMException && error.name === 'NotSupportedError') {
+              alert('Audio format not supported. Please try a different browser.');
+              return;
             }
           }
+          setIsPlaying(false);
         }
       }
-      setIsPlaying(!isPlaying);
     } catch (error) {
       console.error('Toggle playback error:', error);
+      setIsPlaying(false);
     }
   };
 
@@ -329,10 +350,8 @@ export default function AudioPlayer({ audioSrc, title = "Audio Player" }: AudioP
       <div className="flex items-center gap-3">
         <button 
           className="w-8 h-8 rounded-full bg-primary hover:bg-primary/90 flex items-center justify-center text-primary-foreground transition-colors"
-          onClick={() => {
-            console.log('Button clicked!');
-            togglePlayback();
-          }}
+          onClick={togglePlayback}
+          aria-label={isPlaying ? 'Pause' : 'Play'}
         >
           {isPlaying ? (
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -398,7 +417,7 @@ export default function AudioPlayer({ audioSrc, title = "Audio Player" }: AudioP
       <audio 
         ref={audioRef}
         src={audioSrc}
-        preload="metadata"
+        preload="auto"
         onTimeUpdate={handleTimeUpdate}
         onEnded={handleEnded}
         onLoadedMetadata={() => {
@@ -407,11 +426,21 @@ export default function AudioPlayer({ audioSrc, title = "Audio Player" }: AudioP
           console.log('Audio duration:', audioRef.current?.duration);
         }}
         onError={(e) => {
-          console.error('Audio error:', e);
+          const audio = e.currentTarget as HTMLAudioElement;
+          console.error('Audio error event:', e);
+          console.error('Error code:', audio.error?.code);
+          console.error('Error message:', audio.error?.message);
           console.error('Failed to load audio from:', audioSrc);
         }}
         onCanPlayThrough={() => console.log('Audio can play through')}
+        onPlay={() => console.log('Audio play event fired')}
+        onPause={() => console.log('Audio pause event fired')}
+        onPlaying={() => console.log('Audio is playing')}
+        onWaiting={() => console.log('Audio is waiting for data')}
+        onStalled={() => console.log('Audio stalled')}
         playsInline // Important for iOS
+        controls={false}
+        muted={false}
       >
         Your browser does not support audio playback.
       </audio>
