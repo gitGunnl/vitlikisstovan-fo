@@ -5,23 +5,23 @@ import Footer from "@/components/site/Footer";
 import Section from "@/components/site/Section";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { seoConfig } from "@/content/seo";
+import { updateMetaTags } from "@/lib/meta";
 import { Link } from "wouter";
 import { CalendarDays } from "lucide-react";
 
 export default function Blog() {
   useEffect(() => {
-    document.title = "Blogg - " + seoConfig.title;
-
-    const metaDescription = document.querySelector('meta[name="description"]');
-    const content = "Les okkara nýggjastu greinar um vitlíki, koding og tøkni í Føroyum.";
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
+    const fullTitle = `Blogg - ${seoConfig.title}`;
+    const description = "Les okkara nýggjastu greinar um vitlíki, koding og tøkni í Føroyum.";
+    
+    updateMetaTags({
+      title: fullTitle,
+      description: description,
+      image: seoConfig.ogImage,
+      url: `${window.location.origin}/blog`,
+      type: 'website',
+      siteName: seoConfig.siteName
+    });
   }, []);
 
   // This will eventually come from your content system

@@ -8,6 +8,7 @@ import AudioPlayer from "@/components/site/AudioPlayer";
 import { Badge } from "@/components/ui/badge";
 import { Clock, Calendar, User } from "lucide-react";
 import { seoConfig } from "@/content/seo";
+import { updateMetaTags } from "@/lib/meta";
 import { Link } from "wouter";
 
 
@@ -26,18 +27,21 @@ export default function BlogPost() {
         const postModule = await import(`@/content/blog/${slug}.ts`);
         setPost(postModule.default);
 
-        // Set page metadata
-        document.title = postModule.default.title + " - " + seoConfig.title;
-
-        const metaDescription = document.querySelector('meta[name="description"]');
-        if (metaDescription) {
-          metaDescription.setAttribute("content", postModule.default.excerpt);
-        } else {
-          const meta = document.createElement("meta");
-          meta.name = "description";
-          meta.content = postModule.default.excerpt;
-          document.head.appendChild(meta);
-        }
+        // Set page metadata with Open Graph support
+        const fullTitle = `${postModule.default.title} - ${seoConfig.title}`;
+        const postUrl = `${window.location.origin}/blog/${slug}`;
+        const postImage = postModule.default.ogImage || `/images/blog/${slug}/og-image.jpg`;
+        
+        updateMetaTags({
+          title: fullTitle,
+          description: postModule.default.excerpt,
+          image: postImage,
+          url: postUrl,
+          type: 'article',
+          publishedTime: postModule.default.date,
+          author: postModule.default.author || seoConfig.author,
+          siteName: seoConfig.siteName
+        });
       } catch (error) {
         console.error("Failed to load blog post:", error);
         setPost(null);

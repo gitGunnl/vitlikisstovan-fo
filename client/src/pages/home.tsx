@@ -29,6 +29,40 @@ import {
   Download
 } from "lucide-react";
 
+// Utility function to update meta tags
+function updateMetaTags({ title, description, image, url, type, siteName }) {
+  const updateTag = (name, content) => {
+    let tag = document.querySelector(`meta[name="${name}"]`) || document.querySelector(`meta[property="${name}"]`);
+    if (!tag) {
+      tag = document.createElement('meta');
+      if (name.startsWith('og:')) {
+        tag.setAttribute('property', name);
+      } else {
+        tag.setAttribute('name', name);
+      }
+      document.head.appendChild(tag);
+    }
+    tag.setAttribute('content', content);
+  };
+
+  document.title = title;
+  updateTag('description', description);
+  updateTag('og:title', title);
+  updateTag('og:description', description);
+  updateTag('og:image', image);
+  updateTag('og:url', url);
+  updateTag('og:type', type);
+  if (siteName) {
+    updateTag('og:site_name', siteName);
+  }
+
+  // Add Twitter card specific tags
+  updateTag('twitter:card', 'summary_large_image');
+  updateTag('twitter:title', title);
+  updateTag('twitter:description', description);
+  updateTag('twitter:image', image);
+}
+
 export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
   const [openDialog, setOpenDialog] = useState<string | null>(null);
@@ -37,18 +71,17 @@ export default function Home() {
 
   useEffect(() => {
     setIsMounted(true);
-    // Set page metadata
-    document.title = seoConfig.title;
+    // Set page metadata with Open Graph support
+    const fullTitle = `${siteConfig.siteName} - ${siteConfig.tagline}`;
 
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', seoConfig.description);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = seoConfig.description;
-      document.head.appendChild(meta);
-    }
+    updateMetaTags({
+      title: fullTitle,
+      description: seoConfig.description,
+      image: seoConfig.ogImage,
+      url: window.location.origin,
+      type: 'website',
+      siteName: seoConfig.siteName
+    });
 
     // Handle hash navigation (e.g., #contact)
     const hash = window.location.hash;
@@ -155,7 +188,7 @@ export default function Home() {
                     pointerEvents: isActive ? 'auto' : 'none'
                   }}
                 >
-                  
+
                   <h1
                     className={`text-2xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-6 hero-text leading-snug sm:leading-tight ${
                       index === 1
@@ -742,7 +775,7 @@ export default function Home() {
                       <DialogHeader className="mb-4">
                         <DialogTitle className="text-xl font-bold mb-2">Vegleiðingar & Verkstovur</DialogTitle>
                         <DialogDescription className="text-base leading-relaxed">
-                          
+
                         </DialogDescription>
                       </DialogHeader>
 
@@ -824,7 +857,7 @@ export default function Home() {
                       </ScrollArea>
                     </DialogContent>
                   </Dialog>
-          
+
           {/* Dialog for Verkstovur */}
             <Dialog open={openDialog === 'verkstovur'} onOpenChange={() => setOpenDialog(null)}>
             <DialogContent className="max-w-2xl max-h-[85vh]">
@@ -906,7 +939,7 @@ export default function Home() {
             </ScrollArea>
             </DialogContent>
             </Dialog>
-         
+
           {/* Dialog for Týðingar */}
           <Dialog open={openDialog === 'tydingar'} onOpenChange={() => setOpenDialog(null)}>
             <DialogContent className="max-w-3xl max-h-[85vh] overflow-y-auto">

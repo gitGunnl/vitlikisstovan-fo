@@ -8,6 +8,7 @@ const post = {
     "Eitt skjótt yvirlit yvir føroysku modellini, meting av avrikum og ein hugleiðing um hvat eigur at mennast næst — við greiðum stigum fyri fyritøkur og gransking.",
   readTime: "12 min",
   author: "Vitlíkisstovan",
+  ogImage: "/images/blog/foroyskt-vitliki-2025/og-image.jpg",
   // IMPORTANT: content is semantic HTML. Text is unchanged.
   content: `
 <!-- Keep H1 for accessibility but hide visually to avoid duplicate page titles -->
@@ -116,7 +117,7 @@ const post = {
       <p class="text-sm text-muted-foreground mb-3">
         <strong>Modell:</strong> Meta MMS TTS (fao)
       </p>
-      
+
       <!-- Audio Player Component -->
       <p>Hoyr her hvussu tað ljóðar tá ið vitlíki ger føroyskan tekst til talu.</p>
       <div class="mb-4" data-audio-player="/faroese_long.wav" data-title="Føroysk talu dømi"></div>
@@ -137,7 +138,7 @@ const post = {
       </div>
     </div>
 
-    
+
 
     <!-- LLM Card -->
     <div class="border border-border/60 rounded-lg p-6 bg-background shadow-sm">
@@ -231,7 +232,7 @@ const post = {
 
   <p><strong>Hví hetta modelli hevur týdning:</strong> Tað letur upp fyri tveimum vanligum nýtsluháttum:</p>
   <ol>
-    <li><strong>Fundarsamandráttir</strong> (Har vitlíki skrivar alt niður sum verur tosa um á einum fundi)</li>
+    <li><strong>Fundarsamandráttir</strong> (Har vitlíki skrivar alt niðanfyri sum verður tosa um á einum fundi)</li>
     <li><strong>At tosa við vitlíki</strong> heldur enn at skriva. (So man kann brúka tað í støðum har hendurnar ikki eru fríðar.)</li>
   </ol>
 
@@ -275,11 +276,11 @@ const post = {
 
   <p><strong>Hví hetta hevur týdning:</strong> Gevur skipanum eina <strong>føroyska rødd</strong> til fráboðanir og hondfría vitlíksnýtslu – og nógvar møguleikar fyri sjónveik.</p>
   <p><strong>Hvat vit hava:</strong> <strong>Meta MMS TTS (fao)</strong> — ein rødd, <strong>klár men mekanisk</strong>.</p>
-  
+
   <!-- Audio Player Component for TTS description -->
   <p>Hoyr eitt dømi um hvussu tað ljóðar:</p>
   <div class="mb-4" data-audio-player="/faroese_long.wav" data-title="Føroysk talu dømi"></div>
-  
+
   <p><strong>Hóskar nú til:</strong> Fráboðanir til sjónveik og innanhýsis amboð til fyritøkur.</p>
   <p><strong>Næsta stigið:</strong> <strong>At gera tað meira veruleika kent</strong> og <strong>fleiri røddir</strong>.</p>
 
