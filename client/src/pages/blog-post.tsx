@@ -52,22 +52,27 @@ export default function BlogPost() {
   }, [slug]);
 
   useEffect(() => {
-    // Find and replace audio player placeholders with React components
-    const placeholders = document.querySelectorAll('[data-audio-player]');
-    placeholders.forEach((placeholder) => {
-      const audioSrc = placeholder.getAttribute('data-audio-player');
-      const title = placeholder.getAttribute('data-title');
+    if (post) {
+      // Wait a bit for the content to render to the DOM
+      setTimeout(() => {
+        // Find and replace audio player placeholders with React components
+        const placeholders = document.querySelectorAll('[data-audio-player]');
+        placeholders.forEach((placeholder) => {
+          const audioSrc = placeholder.getAttribute('data-audio-player');
+          const title = placeholder.getAttribute('data-title');
 
-      if (audioSrc && title) {
-        // Clear the placeholder content
-        placeholder.innerHTML = '';
+          if (audioSrc && title) {
+            // Clear the placeholder content
+            placeholder.innerHTML = '';
 
-        // Create and render the React component
-        const root = createRoot(placeholder);
-        root.render(<AudioPlayer audioSrc={audioSrc} title={title} />);
-      }
-    });
-  }, [slug]);
+            // Create and render the React component
+            const root = createRoot(placeholder);
+            root.render(<AudioPlayer audioSrc={audioSrc} title={title} />);
+          }
+        });
+      }, 100);
+    }
+  }, [post]);
 
   if (loading) {
     return (
