@@ -72,7 +72,7 @@ export default function Verkstova() {
     } catch (err) {
       toast({
         title: "Avritan miseydnaðist",
-        description: "Vinarliga avrita tekstin við hánd.",
+        description: "Vinarliga avrita tekstin við hond.",
         variant: "destructive",
       });
     }

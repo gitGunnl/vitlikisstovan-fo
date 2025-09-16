@@ -25,7 +25,7 @@ export default function Taenastur() {
 
     const metaDescription = document.querySelector('meta[name="description"]');
     const content =
-      "Vit hjálpa við øllum sum snýr seg um vitlíki. Les um skeið, fyrilestrar, ráðgeving og serloysnir – alt bygt til føroyskar fyritøkur og stovnar.";
+      "Eg hjálpi við øllum, sum snýr seg um vitlíki. Les um skeið, fyrilestrar, ráðgeving og serloysnir – alt bygt til føroyskar fyritøkur og stovnar.";
     if (metaDescription) {
       metaDescription.setAttribute("content", content);
     } else {
@@ -47,15 +47,15 @@ export default function Taenastur() {
         <Section className="py-20 sm:py-24">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight mb-6">
-              Eg hjálpi við øllum sum snýr seg um vitlíki.
+              Eg hjálpi við øllum, sum snýr seg um vitlíki.
             </h1>
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed mb-6">
               Eg hjálpi føroyskum fyritøkum og stovnum at taka
-              vitlíki-tøkni til sín, við praktiskum amboðum sum ChatGPT og
-              CoPilot, mynda og video generering og menning av vitlíki amboðum.
+              vitlíkistøkni til sín, við praktiskum amboðum sum ChatGPT og
+              CoPilot, mynda- og videogenerering og menning av vitlíkisamboðum.
             </p>
             <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-               Við einari skipaðari tilgongd tryggji eg, at tykkara toymi kann nýta vitlíki á ein munagóðan hátt í gerandisdegnum.
+               Við einari skipaðari tilgongd tryggji eg, at tykkara toymi kann nýta vitlíki á einum munagóðum hátti í gerandisdegnum.
             </p>
           </div>
         </Section>
@@ -77,22 +77,21 @@ export default function Taenastur() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-semibold mb-2">
-                    Býrjunarskeið í ChatGPT til Føroysk skrivstovufólk
+                    Byrjunarskeið í ChatGPT til føroysk skrivstovufólk
                   </h3>
 
                   <div className="flex gap-2 mb-4">
                     <Badge variant="secondary" className="bg-green-100 text-green-800 border-green-200">
-                      Besta fyrsta stig
+                      Besta fyrsta stigið
                     </Badge>
                     <Badge variant="outline" className="border-blue-200 text-blue-700">
-                      Net skeið
+                      Netskeið
                     </Badge>
                   </div>
 
                   <p className="leading-relaxed mb-4">
                     Okkara umfatandi skeið lærir teg at brúka KjattGPT
-                    effektivt í gerandisarbeiði. Hóskar væl til bæði ný byrjandi
-                    og yrkisfólk. Flestu av okkara kundum byrja sína vitlíki-ferð
+                    effektivt í gerandisarbeiði. Hóskar væl til bæði nýbyrjarar og yrkisfólk. Flestu av okkara kundum byrja sína vitlíkisferð
                     her.
                   </p>
                 </div>
@@ -121,19 +120,16 @@ export default function Taenastur() {
                     </h3>
                     <div className="mb-4">
                       <Badge variant="secondary" className="bg-orange-100 text-orange-800 border-orange-200">
-                        Mælt til sum næsta stig
+                        Mælt til sum næsta stigið
                       </Badge>
                     </div>
                     <p className="leading-relaxed mb-4">
                       Spar tær vikur av feilum og skeivum royndum – vit geva tær
                       15 tillagaðar mátar at brúka KjattGPT í tínum arbeiði.
-                      Hendan tænastan hjálpir tær at finna beinraktar uppgábur
-                      tú kanst brúka KjattGPT til í júst tínum arbeiði - í dag.
+                      Hendan tænastan hjálpir tær at finna beinraktar uppgávur, sum tú kanst brúka KjattGPT til í júst tínum arbeiði - í dag.
                     </p>
                     <p className="leading-relaxed mb-4">
-                      Hettar gera vit við at taka ein fund, so fortelur tú mær
-                      akkruát hvat tú gert og so sigi eg tær akkurát hvat tú
-                      kanst brúka ChatGPT til.
+                      Hetta gera vit við at taka ein fund, so fortelur tú mær akkurát, hvat tú gert, og so sigi eg tær akkurát, hvat tú kanst brúka ChatGPT til.
                     </p>
                     <p className="leading-relaxed mb-4">
                       Tað tekur 1 til 2 tímar og sparir fleiri vikur av leitan
@@ -145,7 +141,7 @@ export default function Taenastur() {
 
 
                     <p className="italic text-muted-foreground mt-4">
-                      Hendan tænastan hjálpir tær at finna útav akkurát hvørja uppgávu TÚ kanst nýta vitlíki til.
+                      Hendan tænastan hjálpir tær at finna út av akkurát hvørja uppgávu TÚ kanst nýta vitlíki til.
                     </p>
                   </div>
                 </div>
@@ -167,8 +163,7 @@ export default function Taenastur() {
                       </Badge>
                     </div>
                     <p className="leading-relaxed mb-4">
-                      vitlíki er komið – og tað broytir hvussu vit arbeiða
-                      uppá. Men hvat merkir tað í veruleikanum? Hvat kann
+                      Vitlíki er komið – og tað broytir okkara arbeiðishættir. Men hvat merkir tað í veruleikanum? Hvat kann
                       vitlíki – og hvat kann tað ikki? Hesin fyrilesturin gevur
                       eina greiða fatan av, hvussu vitlíki kann nýtast í
                       gerandisdegnum, so óvissa og ivi verða skift út við
@@ -176,7 +171,7 @@ export default function Taenastur() {
                     </p>
                     <ul className="list-disc pl-6 space-y-2 mb-4">
                       <li>
-                        🔹 <strong>Minni yvi, meira greiði</strong> – Skil
+                        🔹 <strong>Minni ivi, meira greiði</strong> – Skil
                         vitlíki uttan torskilt tekniskt mál.
                       </li>
                       <li>
@@ -185,7 +180,7 @@ export default function Taenastur() {
                       </li>
                       <li>
                         🔹 <strong>Ítøkiligur íblástur</strong> – Uppliv, hvussu
-                        vitlíki kann gera arbeiðið lættari og meir munagott.
+                        vitlíki kann gera arbeiðið lættari og meira munagott.
                       </li>
                     </ul>
                     <p className="leading-relaxed mb-4">
@@ -199,14 +194,14 @@ export default function Taenastur() {
 
 
                     <p className="italic text-muted-foreground mt-4">
-                      Hóskar væl til fyritøkur, ið vilja vera á odda við vitlíkii –
+                      Hóskar væl til fyritøkur, ið vilja vera á odda við vitlíki –
                       og ynskja starvsfólk uttan óneyðugan ótta ella óvissu.
                     </p>
                   </div>
                 </div>
               </div>
 
-              {/* 3. vitlíki-ráðgeving */}
+              {/* 3. vitlíkisráðgeving */}
               <div className="rounded-3xl border bg-card text-card-foreground shadow-sm p-6 sm:p-8">
                 <div className="flex items-start gap-4">
                   <div className="hidden sm:flex h-12 w-12 items-center justify-center rounded-2xl bg-muted/60">
@@ -214,7 +209,7 @@ export default function Taenastur() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-semibold mb-2">
-                      3. vitlíki-upplæring
+                      3. Vitlíkisupplæring
                     </h3>
                     <div className="mb-4">
                       <Badge variant="secondary" className="bg-cyan-100 text-cyan-800 border-cyan-200">
@@ -225,13 +220,13 @@ export default function Taenastur() {
                       Tá ið títt toymi hevur fingið grundvitan, veita vit
                       hjálp til at innarbeiða KjattGPT ella Copilot í
                       tykkara arbeiðsgongd. Vit arbeiða beinleiðis saman við
-                      tykkara starvsfólki fyri at tryggja at øll fáa sum mest
-                      burturúr hesa nýggju tøkni.
+                      tykkara starvsfólkum fyri at tryggja, at øll fáa sum mest
+                      burtur úr hesari nýggju tøkni.
                     </p>
 
                     <p className="italic text-muted-foreground mt-4">
                       Okkara serfrøði ger tað nógv smidligari at fáa tykkara
-                      toymi at innleiða vitlíki-amboð inn í teirra dagliga
+                      toymi at innleiða vitlíkisamboð inn í teirra dagliga
                       arbeiði.
                     </p>
                   </div>
@@ -255,15 +250,15 @@ export default function Taenastur() {
                     </div>
                     <p className="leading-relaxed mb-4">
                       Ger tíni vitlíki hugskot til veruleika við
-                      mínari menningar serfrøði. Eg hjálpi tær at byggja
+                      mínari menningarserfrøði. Eg hjálpi tær at byggja
                       sniðgjørdar loysnir, ið hóska til tín tørv.
                     </p>
 
 
 
                     <p className="italic text-muted-foreground mt-4">
-                      Hevur tú eina ítøkiliga mannagongd tú vilt sjálvvirka
-                      við vitlíki? Ella hevur tú eitt slóðbrótandi hugskot til
+                      Hevur tú eina ítøkiliga mannagongd, sum tú vilt sjálvvirka
+                      við vitlíki? Ella hevur tú eitt slóðbrótandi hugskot um,
                       hvussu tín vinna kann nýta vitlíki á ein nýggjan hátt?
                       Eg kann hjálpa við at gera tínar visjónir til veruleika.
                     </p>
@@ -283,7 +278,7 @@ export default function Taenastur() {
                   Skapandi vitlíki
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Vitlíki generera tilfar og kreativar verkstovur
+                  Eg skapi tilfar við vitlíki og haldi kreativar verkstovur
                 </p>
               </div>
               <div className="flex flex-col gap-12">
@@ -301,12 +296,12 @@ export default function Taenastur() {
                   </div>
 
                   <p className="text-muted-foreground leading-relaxed text-lg">
-                    Hevur tú tørv á flottum visuellum lutum, men ikki tíðina til at gera tað? Eg kann gera vitlíki tilfar sergjørt til tín smag ella tykkara brand - frá eygafangandi video og myndir til fullar heimasíður.
+                    Hevur tú tørv á flottum visuellum lutum, men ikki tíðina til at gera tað? Eg kann gera vitlíkistilfar sergjørt til tín smakk ella tykkara brand - frá eygafangandi video og myndir til fullar heimasíður.
                   </p>
 
                   <div className="flex flex-wrap gap-3">
-                    <span className="px-4 py-2 text-sm rounded-full bg-purple-100 text-purple-700 border border-purple-200 font-medium">Vitlíki video</span>
-                    <span className="px-4 py-2 text-sm rounded-full bg-pink-100 text-pink-700 border border-pink-200 font-medium">Myndir & grafik</span>
+                    <span className="px-4 py-2 text-sm rounded-full bg-purple-100 text-purple-700 border border-purple-200 font-medium">Vitlíkisvideo</span>
+                    <span className="px-4 py-2 text-sm rounded-full bg-pink-100 text-pink-700 border border-pink-200 font-medium">Myndir & grafikkur</span>
                     <span className="px-4 py-2 text-sm rounded-full bg-orange-100 text-orange-700 border border-orange-200 font-medium">Branding tilfar</span>
                   </div>
                 </div>
@@ -323,13 +318,13 @@ export default function Taenastur() {
                   </div>
 
                   <p className="text-muted-foreground leading-relaxed text-lg">
-                    Vilt tú meistra vitlíki til kreativt arbeiði? Bílegg eina handaliga verkstovu har eg seti lag á og vísu tær hvørji amboð er røtt til tín og hvussu tú best kemur ígongd við at gera video, myndir, tónleik og annað kreativt tilfar, alt gjørt við vitlíki.
+                    Vilt tú meistra vitlíki til kreativt arbeiði? Bílegg eina handaliga verkstovu, har eg seti lag á og vísi tær, hvørji amboð eru røtt til tín, og hvussu tú best kemur í gongd við at gera video, myndir, tónleik og annað kreativt tilfar, alt gjørt við vitlíki.
                   </p>
 
                   <div className="flex flex-wrap gap-3">
                     <span className="px-4 py-2 text-sm rounded-full bg-blue-100 text-blue-700 border border-blue-200 font-medium">Verkstovur</span>
                     <span className="px-4 py-2 text-sm rounded-full bg-cyan-100 text-cyan-700 border border-cyan-200 font-medium">Handalig upplæring</span>
-                    <span className="px-4 py-2 text-sm rounded-full bg-teal-100 text-teal-700 border border-teal-200 font-medium">Meistra vitlíki amboð</span>
+                    <span className="px-4 py-2 text-sm rounded-full bg-teal-100 text-teal-700 border border-teal-200 font-medium">Meistra vitlíkisamboð</span>
                   </div>
                 </div>
               </div>
@@ -344,19 +339,19 @@ export default function Taenastur() {
                     </div>
                     <div>
                       <p className="text-lg font-semibold text-purple-800 mb-2">
-                        ✨ Vil tú frígeva skapandi megina í vitlíki?
+                        ✨ Vilt tú frígeva skapandi megina í vitlíki?
                       </p>
                       <p className="text-purple-700 mb-4">
-                        Eg dugi at brúka vitlíki-amboð til at skapa myndir, video, tónleik og nógv annað tilfari, ið fangar áskoðaran. 
+                        Eg dugi at brúka vitlíkisamboð til at skapa myndir, video, tónleik og nógv annað tilfar, ið fangar áskoðaran. 
                       </p>
                       <p className="text-purple-700 mb-4">
-                        Við vitlíki kann mann ofta gera tilfar sum vanliga hevði tikið tímar at framleiða uppá stutta tíð – alt gjørt við nýggjastu og bestu vitlíki-tøknini.
+                        Við vitlíki kann ein ofta gera tilfar, sum vanliga hevði tikið tímar at framleiða, upp á stutta tíð – alt gjørt við nýggjastu og bestu vitlíkistøknini.
                       </p>
                       <p className="text-purple-700 mb-4">
-                        Um tú bara vilt hava meg at gera arbeiðið, ella sjálvur vilt læra at stýra hesum amboðum, so kan eg hjálpa tær við báðum.
+                        Um tú bara vilt hava meg at gera arbeiðið, ella sjálvur vilt læra at stýra hesum amboðum, so kann eg hjálpa tær við báðum.
                       </p>
                       <p className="text-purple-700 text-sm mb-4">
-                        Fylg Vitlíkistovuna á sosialum miðlum fyri at síggja dømir av ymiskum tilfari, fáa íblástur og lær meira um, hvat ber til við vitlíki.
+                        Fylg Vitlíkistovuni á sosialum miðlum fyri at síggja dømir av ymiskum tilfari, fáa íblástur og læra meira um, hvat ber til við vitlíki.
                       </p>
                       <div className="flex flex-wrap gap-4">
                         <a 
@@ -394,7 +389,7 @@ export default function Taenastur() {
         <Section className="py-20 sm:py-24">
           <div className="mx-auto max-w-3xl text-center">
             <h3 className="text-2xl sm:text-3xl font-semibold mb-3">
-              Vilt tú byrja tína vitlíki-ferð?
+              Vilt tú byrja tína vitlíkisferð?
             </h3>
             <p className="mb-8">
               Byrja við okkara ChatGPT-skeiði í dag.

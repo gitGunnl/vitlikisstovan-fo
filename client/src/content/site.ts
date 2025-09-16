@@ -21,25 +21,25 @@ export const siteConfig = {
       {
         title: "Eisini tú kanst meistra vitlíki!",
         subtitle:
-          "Vitlíkisstovan mennir tykkum frá at vera nýbyrjarar innan vitlíki til dugnaligar vitlíkisbrúkarar. Eg taki mær at øllum - tit skulu einans lurta og læra.",
+          "Vitlíkisstovan mennir tykkum frá at vera nýbyrjarar innan vitlíki til dugnaligar vitlíkisbrúkarar. Eg taki mær av øllum - tit skulu einans lurta og læra.",
         primaryCTA: {
           text: "Les meira um gongdina frá at vera nýbyrjari til dugnaligur vitlíkisbrúkari her:",
           href: "#contact"
         }
       },
       {
-        title: "Nýggjur bloggur: Føroysk vitlíkiamboð",
+        title: "Nýggjur bloggur: Føroysk vitlíkisamboð",
         subtitle:
-          "Les nýggjasta bloggin um hvørji føroysk vitlíkimodell eru tøk, hvat tey kunnu brúkast til og hvussu góð tey eru.",
+          "Les nýggjasta bloggin um hvørji føroysk vitlíkismodell eru tøk, hvat tey kunnu brúkast til og hvussu góð tey eru.",
         primaryCTA: {
           text: "Les bloggin",
           href: "/blog/vitliki-i-foroyum"
         }
       },
       {
-        title: "Vitlíkisráðgeving snikka til tín",
+        title: "Vitlíkisráðgeving, snikkað til tín",
         subtitle:
-          "Er tørvurin ein vitlíkistrategi, vegleiðing í sambandi við tekniskt arbeiði, nýtsla av vitlíki í kreativum arbeiði ella eitt fjórða - so leiðbeini eg tykkum lættliga rætta vegin.",
+          "Er tørvurin ein vitlíkistrategi, vegleiðing í sambandi við tekniskt arbeiði, nýtslu av vitlíki í kreativum arbeiði ella eitt fjórða - so leiðbeini eg tykkum lættliga rætta vegin.",
         primaryCTA: {
           text: "Bílegg eina ókeypis samrøðu",
           href: "/contact"
@@ -49,12 +49,12 @@ export const siteConfig = {
   },
 
   program: {
-    title: "Frá forvitin til framkomin: Eitt 12-vikurs skeið til skrivstovufólk",
+    title: "Frá forvitin til framkomin: Eitt 12-vikuskeið til skrivstovufólk",
     subtitle:
-      "Hetta er eitt einfalt og úrslitssøkið skeið til tykkara skrivstovu. Eg komi út til tykkara, seti alt upp og læri toymið alt tað skal duga. Tit samlast nakrar ferðir og læra at arbeiða trygt og munagott við vitlíki.",
+      "Hetta er eitt einfalt og úrslitssøkið skeið til tykkara skrivstovu. Eg komi út til tykkara, seti alt upp og læri toymið alt, sum tað skal duga. Tit samlast nakrar ferðir og læra at arbeiða trygt og munagott við vitlíki.",
 
     whatWeDeliver: {
-      title: "Vit fáa stýr uppá",
+      title: "Vit fáa stýr upp á",
       items: [
         {
           title: "Leiðreglur og mannagongdir",
@@ -74,7 +74,7 @@ export const siteConfig = {
         {
           title: "Yvirlit yvir uppgávur",
           description:
-            "Ein greiðan lista yvir hvat tit kunnu loysa við vitlíki - og hvussu."
+            "Ein greiður listi yvir, hvat tit kunnu loysa við vitlíki - og hvussu."
         }
       ]
     },
@@ -90,7 +90,7 @@ export const siteConfig = {
         {
           title: "Uppseting",
           number: "2",
-          description: "Vit gera leiðreglur, velja amboð og fyrireika verkstovur - tit skula bara læra."
+          description: "Vit gera leiðreglur, velja amboð og fyrireika verkstovur - tit skulu bara læra."
         },
         {
           title: "Læra og brúka",
@@ -121,7 +121,7 @@ export const siteConfig = {
         },
         {
           title: "Tilfar",
-          description: "Tit fáa frymlar og leiðbeiningar, sniðgivnar til júst tykkara tørv, at hava við hondina í arbeiðnum frameftir."
+          description: "Tit fáa frymlar og leiðbeiningar, sniðgivnir til júst tykkara tørv, at hava við hondina í arbeiðnum frameftir."
         },
         {
           title: "Greining",
@@ -139,7 +139,7 @@ export const siteConfig = {
       "Starvsfólk duga at brúka vitlíki tryggt og munagott.",
       "Leiðreglur, sum øll skilja og halda seg til.",
       "Amboðini eru væl sett upp og klár at brúka.",
-      "Greið yvirlit yvir, hvar vitlíki ger mun.",
+      "Greitt yvirlit yvir, hvar vitlíki ger mun.",
       "Vanar og arbeiðisháttir, sum halda fram."
     ],
 
@@ -160,12 +160,12 @@ export const siteConfig = {
   consulting: {
     title: "Ráðgeving & verkætlanir",
     subtitle:
-      "Frá vitlíkistrategi til vitlíkimenning - mín uppgáva er at gera vitlíki nýtiligt fyri teg.",
+      "Frá vitlíkistrategi til vitlíkismenning - mín uppgáva er at gera vitlíki nýtiligt fyri teg.",
     services: [
       {
         title: "Tað almenna",
         description:
-          "Framløgur um vitlíki og málrættaðar vitlíkiverkstovur. Evni: Visjónir og heildarætlanir fyri vitlíki, stýring og etikkur."
+          "Framløgur um vitlíki og málrættaðar vitlíkisverkstovur. Evni: Visjónir og heildarætlanir fyri vitlíki, stýring og etikkur."
       },
       {
         title: "Fyritøkur",
@@ -189,7 +189,7 @@ export const siteConfig = {
       {
         title: "Føroyskt í hásæti",
         description:
-          "Vitlíkisstovan veitir vegleiðing, ið virðir okkara mál og mentan, samstundis sum fylgt verður við vanligum tøkniligum krøvum. Og so er tað stutt flutt."
+          "Vitlíkisstovan veitir vegleiðing, ið virðir okkara mál og mentan, samstundis sum fylgt verður við vanligum tøkniligum krøvum. Og so er tað stuttflutt."
       },
       {
         title: "Yrkisligt og veruligt",
@@ -213,7 +213,7 @@ export const siteConfig = {
       name: "Gunnleygur Clementsen",
       role: "Stovnari og ráðgevi",
       summary:
-        "Ein el-verkfrøðingur, sum gjørdist vitlíkisráðgevi. Síðani 2022 havi eg brúkt ChatGPT dagliga; fyrst sum verkfrøðingur í Danmark, og nú við at hjálpa føroyskum stovnum og fyritøkum at taka vitlíki til sín. Eg havi fylgt við menningini í vitlíki í meira enn 10 ár, og havi roynt fleiri hundrað amboð. Eg veit tískil hvat riggar og hvørja góðsku tú kann fáa burturúr, um amboðini verða brúkt rætt.",
+        "Ein el-verkfrøðingur, sum gjørdist vitlíkisráðgevi. Síðani 2022 havi eg brúkt ChatGPT dagliga; fyrst sum verkfrøðingur í Danmark, og nú við at hjálpa føroyskum stovnum og fyritøkum at taka vitlíki til sín. Eg havi fylgt við menningini í vitlíki í meira enn 10 ár, og havi roynt fleiri hundrað amboð. Eg veit tískil hvat riggar og hvørja góðsku tú kann fáa burtur úr, um amboðini verða brúkt rætt.",
       bullets: [
         "Stovnaði Vitlíkisstovuna fyri at hjálpa føroyskum arbeiðstoymum at fáa gagn av vitlíki.",
         "Úrslit fram um (ov nógv) tos: Sjóneykan er á arbeiðsgongdir, sum spara tíð, betra um skrivlig avrik og minka um endurtakandi uppgávur.",
@@ -221,7 +221,7 @@ export const siteConfig = {
         "Føroyskt í hásæti: Vegleiðing, sum er lagað til okkara mál, mentan og almenna veruleika."
       ],
       quote:
-        "Vitlíki er ikki fjarløgd framtíð – tað er mátin, vit arbeiða uppá nú. Lat okkum fáa tað at rigga fyri títt toymið.",
+        "Vitlíki er ikki fjarløgd framtíð – tað er mátin, vit arbeiða upp á nú. Lat okkum fáa tað at rigga fyri títt toymið.",
       headshotUrl: "/images/founder.jpg",
       headshotAlt: "Mynd av Gunnleygi Clementsen",
       links: [
@@ -241,7 +241,7 @@ export const siteConfig = {
         image:
           "/images/vegleiding.png",
         imageAlt: "Personalized AI guidance session",
-        buttonText: "Les meira um hettar",
+        buttonText: "Les meira um hetta",
         buttonVariant: "default",
         dialogId: "vegleidingar"
       },
@@ -252,14 +252,14 @@ export const siteConfig = {
         image:
           "/images/verkstovur.jpeg",
         imageAlt: "Team workshop in progress",
-        buttonText: "Les meira um hettar",
+        buttonText: "Les meira um hetta",
         buttonVariant: "default",
         dialogId: "verkstovur"
       },
       {
         title: "Sergjørt amboð til týðing úr donskum til føroyskt",
         description:
-          "Onkuntíð er tað nokk um vitlíki hjálpir við einari ávísari uppgávu. Eitt nú um tú skal týða donsk skjøl til føroyskt. Hetta var ein av uppgávunum, ið eg loysti fyri ein kunda.",
+          "Onkuntíð er tað nóg mikið, um vitlíki hjálpir við einari ávísari uppgávu. Eitt nú um tú skalt týða donsk skjøl til føroyskt. Hetta var ein av uppgávunum, ið eg loysti fyri ein kunda.",
         image:
           "/images/dansk til foroyskt.gif",
         imageAlt: "Bøkur og tilfar um málslæru",
@@ -324,10 +324,10 @@ export const siteConfig = {
   contact: {
     title: "Hug at byrja?",
     subtitle:
-      "Sig mær hvat tú hugsar, so sigi eg tær hvussu vitlíka kann hjálpa.",
+      "Sig mær hvat tú hugsar, so sigi eg tær, hvussu vitlíki kann hjálpa.",
     sectionTitle: "Allir spurningar eru vælkomnir",
     description:
-      "Antin tú hevur áhugað í 12-vikursskeiðnum til títt toymið, ráðgevingm íkasti til eina kreativa verkætlan ella eitt fjórða - so svari eg tær áðrenn næsti gerandisdagur er lokin.",
+      "Antin tú hevur áhugað í 12-vikursskeiðnum til títt toymið, ráðgeving, íkast til eina kreativa verkætlan ella eitt fjórða - so svari eg tær áðrenn næsti gerandisdagur er lokin.",
     email: "info@ritvit.fo",
     phone: "+298 919444",
     bookingUrl: ""

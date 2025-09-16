@@ -15,7 +15,7 @@ export default function UmOkkum() {
 
     const metaDescription = document.querySelector('meta[name="description"]');
     const content =
-      "Lær meira um Vitlíkisstovuna og okkara uppgávu at vegleiða føroyskar fyrirtøkur í vitlíkis tímanum.";
+      "Lær meira um Vitlíkisstovuna og okkara uppgávu at vegleiða føroyskar fyritøkur í vitlíki.";
     if (metaDescription) {
       metaDescription.setAttribute("content", content);
     } else {
@@ -44,11 +44,11 @@ export default function UmOkkum() {
               </h1>
               <div className="max-w-3xl mx-auto text-center">
                 <p className="text-2xl font-serif italic text-gray-700 mb-4">
-                  "Eg royni bera vitlíki til Føroyar – og víðari"
+                  "Eg royni at grundfesta vitlíki í Føroyum – og víðari"
                 </p>
                 <Separator className="my-6" />
                 <p className="text-lg text-gray-600">
-                  Stig fyri stig broytur vitlíki heimin. Eg kann syrgja fyri, at tú ikki verur afturúr sigldur.
+                  Stig fyri stig broytir vitlíki heimin. Eg kann syrgja fyri, at tú ikki verður afturúrsigldur.
                 </p>
               </div>
             </div>
@@ -71,13 +71,13 @@ export default function UmOkkum() {
                   </header>
                   <div className="prose max-w-none">
                     <p className="text-lg leading-relaxed mb-4">
-                      <span className="font-bold text-xl">Vitlíkisstovan</span> var stovna av einføldum orsøkum:
+                      <span className="font-bold text-xl">Vitlíkisstovan</span> varð stovnað av einføldum orsøkum:
                     </p>
                     <blockquote className="border-l-4 border-black pl-6 my-6 text-xl font-serif italic">
                       "At hjálpa føroyskum fyritøkum at brúka vitlíki."
                     </blockquote>
                     <p className="text-gray-700">
-                      Eg eru nú komin fram til at hettar skal gerast í trimum stigum og eg kann hjálpa allan vegin.
+                      Mín niðurstøða er, at hetta skal gerast í trimum stigum og eg kann hjálpa allan vegin.
                     </p>
                   </div>
                 </article>
@@ -101,7 +101,7 @@ export default function UmOkkum() {
                         Eg havi altíð verið bergtikin av <strong>nýggjari tøkni</strong> – øllum tí, sum broytir, hvussu vit arbeiða og liva.
                       </p>
                       <p className="text-gray-700 leading-relaxed">
-                        Sum verkfrøðingur arbeiddi eg við framkomnum skipanum, men einkt fangaði meg sum vitlíki.
+                        Sum verkfrøðingur arbeiddi eg við framkomnum skipanum, men vitlíki fangaði meg meira enn nakað annað.
                       </p>
                     </div>
 
@@ -109,11 +109,11 @@ export default function UmOkkum() {
                     <div className="border-t pt-6">
                       <h3 className="text-xl font-bold mb-4 flex items-center">
                         <span className="bg-black text-white w-8 h-8 rounded-full inline-flex items-center justify-center mr-3 text-sm">2</span>
-                        Eyðnarviðurkanning
+                        Ein nýggj ásannan                      </h3>
                       </h3>
                       <p className="text-gray-700 leading-relaxed mb-4">So ein dag gekk tað upp fyri mær:</p>
                       <ul className="space-y-2 ml-12">
-                        <li className="list-disc"><strong>vitlíki er ikki bara fyri stórar tøkni-risar.</strong></li>
+                        <li className="list-disc"><strong>vitlíki er ikki bara fyri stórar tøknirisar.</strong></li>
                         <li className="list-disc"><strong>vitlíki er ikki bara framtíð – tað er nú.</strong></li>
                         <li className="list-disc"><strong>vitlíki kann nýtast í øllum fyritøkum – eisini í Føroyum.</strong></li>
                       </ul>
@@ -129,11 +129,11 @@ export default function UmOkkum() {
                         Trupulleikin? <strong>Flestu hava ikki tíð at seta seg inn í tað.</strong>
                       </p>
                       <p className="text-gray-700 leading-relaxed mb-4">
-                        Tí stovnaði eg <strong>Vitlíkisstovuna</strong> – fyri at byggja brúnna millum <strong>møguleikarnar hjá vitlíkii</strong> og <strong>veruligu tørvin hjá føroyskum fyritøkum</strong>.
+                        Tí stovnaði eg <strong>Vitlíkisstovuna</strong> – fyri at byggja brúnna millum <strong>møguleikarnar í vitlíki</strong> og <strong>veruliga tørvin hjá føroyskum fyritøkum</strong>.
                       </p>
                       <div className="bg-gray-100 p-4 border-l-4 border-black">
                         <p className="font-medium">
-                          Nú hjálpa vit fyritøkum at sjálvvirka uppgávur, effektivisera arbeiðið og brúka vitlíki fult út – so tær kunnu fokusera uppá tað, sum veruliga hevur týdning.
+                          Nú hjálpa vit fyritøkum at sjálvvirka uppgávur, effektivisera arbeiðið og brúka vitlíki fult út – so tær kunnu leggja dent á tað, sum veruliga hevur týdning.
                         </p>
                       </div>
                     </div>
@@ -150,7 +150,7 @@ export default function UmOkkum() {
                   
                   <div className="space-y-8">
                     <p className="text-xl font-serif italic text-gray-800 leading-relaxed">
-                      vitlíki er ikki bara fyri <strong>Silicon Valley</strong>. Tað er fyri tína fyritøku. Títt toymi. Tína gerandisdag.
+                      vitlíki er ikki bara til <strong>Silicon Valley</strong>. Tað er til tína fyritøku. Títt toymi. Tín gerandisdag.
                     </p>
                     
                     <div className="border-t pt-8">
@@ -163,7 +163,7 @@ export default function UmOkkum() {
                           </div>
                           <div className="flex-1">
                             <h4 className="text-lg font-bold mb-2 text-gray-900">Lætt og atkomuligt</h4>
-                            <p className="text-gray-700 leading-relaxed">Vitlíki kann forklárast øgiliga fløkt og tað kann forklárast minni fløkt, eg geri vitlíki lætt og atkomuligt fyri øll.</p>
+                            <p className="text-gray-700 leading-relaxed">Vitlíki kann verða greitt frá á ein sera fløktan hátt, men eisini á ein einfaldan hátt. Eg geri vitlíki lætt og atkomuligt fyri øll.</p>
                           </div>
                         </div>
                         
@@ -173,7 +173,7 @@ export default function UmOkkum() {
                           </div>
                           <div className="flex-1">
                             <h4 className="text-lg font-bold mb-2 text-gray-900">At skilja</h4>
-                            <p className="text-gray-700 leading-relaxed">At hjálpa øllum í Føroyum at skilja hvar teirra pláss kemur at vera, so við og við at vitlíki verur klókari.</p>
+                            <p className="text-gray-700 leading-relaxed">At hjálpa øllum í Føroyum at skilja, hvat teirra pláss kemur at vera, so við og við sum vitlíki verður klókari.</p>
                           </div>
                         </div>
                         
@@ -183,7 +183,7 @@ export default function UmOkkum() {
                           </div>
                           <div className="flex-1">
                             <h4 className="text-lg font-bold mb-2 text-gray-900">Verulig úrslit</h4>
-                            <p className="text-gray-700 leading-relaxed">Skapa vitlíki-loysnir, sum veruliga rigga. Tað er ov nógv tóm luft og dreymar í vitlíki prátinum, eg skerið ígjøgnum alt tað sum ikki riggar.</p>
+                            <p className="text-gray-700 leading-relaxed">At skapa vitlíki-loysnir, sum veruliga rigga. Tað er ov nógv tóm luft og dreymar í vitlíkisprátinum. Eg skeri ígjøgnum alt tað, sum ikki riggar.</p>
                           </div>
                         </div>
                       </div>
@@ -191,7 +191,7 @@ export default function UmOkkum() {
                     
                     <div className="bg-black text-white p-8 rounded-lg">
                       <p className="text-lg font-serif text-center leading-relaxed">
-                        "Eg selji ikki bara 'vitlíki-ráðgeving'. Eg læri teg hvussu tú kann nýta vitlíki munagott og trygt."
+                        "Eg selji ikki bara 'vitlíki-ráðgeving'. Eg læri teg at nýta vitlíki munagott og trygt."
                       </p>
                     </div>
                   </div>
@@ -205,7 +205,7 @@ export default function UmOkkum() {
                 {/* Quick Facts Card */}
                 <Card className="border-2 border-black">
                   <CardHeader className="bg-black text-white rounded-t-[calc(theme(borderRadius.lg)-7px)]">
-                    <CardTitle className="text-sm uppercase tracking-widest">Skjót Fakta</CardTitle>
+                    <CardTitle className="text-sm uppercase tracking-widest">Skjót fakta</CardTitle>
                   </CardHeader>
                   <CardContent className="pt-6 space-y-4">
                     <div>
@@ -215,7 +215,7 @@ export default function UmOkkum() {
                     <Separator />
                     <div>
                       <p className="text-xs uppercase text-gray-500 mb-1">Fokus</p>
-                      <p className="font-bold">Vitlíki upplæring, ráðgeving og menning</p>
+                      <p className="font-bold">Vitlíkisupplæring, ráðgeving og menning</p>
                     </div>
                     <Separator />
                     <div>
@@ -243,7 +243,7 @@ export default function UmOkkum() {
                       <ul className="space-y-3 text-sm">
                         <li>
                           <span className="font-bold block">Vit tosa títt mál</span>
-                          <span className="text-gray-600">Ongar torgreiddar forklaringar</span>
+                          <span className="text-gray-600">Ongar torgreiddar frágreiðingar</span>
                         </li>
                         <li>
                           <span className="font-bold block">Skjót úrslit</span>
@@ -255,7 +255,7 @@ export default function UmOkkum() {
                         </li>
                         <li>
                           <span className="font-bold block">Praktisk nýtsla</span>
-                          <span className="text-gray-600">Eg vil at tú fær gagn av vitlíki</span>
+                          <span className="text-gray-600">Mítt mál er, at tú fært gagn av vitlíki</span>
                         </li>
                       </ul>
                     </div>

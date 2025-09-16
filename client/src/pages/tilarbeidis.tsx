@@ -21,7 +21,7 @@ const timelineData: TimelineEvent[] = [
     date: "2025-05-01",
     title: "Verkætlanin fíggjað",
     summary:
-      'Átakið tryggjaði sær játtan, ið gevur okkum tilfeingi at kanna nýtslumøguleikar av vitlíki hjá starvsfólki í úrvaldu bólkunum.',
+      'Átakið tryggjaði sær játtan, ið gevur okkum tilfeingi at kanna vitlíkis-nýtslumøguleikar hjá starvsfólki í úrvaldu bólkunum.',
   },
   {
     id: "evt-002",
@@ -34,7 +34,7 @@ const timelineData: TimelineEvent[] = [
     date: "2025-07-07",
     title: "Verkstova um bólkaval",
     summary:
-      'Verkstovan um at geva íblástur til hvørjir bólkar kunna hava størsta gagn av hesum átakinum og til at meta styrkistøl fyri yrkisbólkar til royndarverkætlanir.',
+      'Verkstovan um at geva íblástur til hvørjir bólkar kunnu hava størsta gagn av hesum átakinum og til at meta styrkistøl fyri yrkisbólkar til royndarverkætlanir.',
     mediaType: "image",
     mediaSrc: "/images/verkstova.jpeg",
   },
@@ -50,14 +50,14 @@ const timelineData: TimelineEvent[] = [
     date: "2025-07-15",
     title: "Samrøða við miðlar",
     summary:
-      "Hava gjørt fyrstu samrøðu við tíðarritið hjá Granskingarráðnum um verkætlanina og um leiklutin hjá vitlíki í føroyskum arbeiðslívi. Greinin er ikki komin út enn.",
+      "Hava gjørt fyrstu samrøðu við tíðarritið hjá Vísindavøku um verkætlanina og um leiklutin hjá vitlíki í føroyskum arbeiðslívi. Greinin er ikki komin út enn.",
   },
   {
     id: "evt-006",
     date: "2025-08-01",
     title: "Kanningarstig",
     summary:
-      "Næsta stigið: seta okkum í samband við valdar bólkar og skipa fyri samrøður fyri at avdúkað dagligar avbjóðingar.",
+      "Næsta stigið: seta okkum í samband við valdar bólkar og skipa fyri samrøður fyri at avdúka dagligar avbjóðingar.",
   },
   {
     id: "evt-007",
@@ -69,23 +69,32 @@ const timelineData: TimelineEvent[] = [
   {
     id: "evt-008",
     date: "2025-08-20",
-    title: "Menning av samrøðu amboði",
+    title: "Menning av samrøðuamboði",
     summary:
-      "Vit menna eitt samrøðu amboð sum nýtur vitlíki til at læra nógv meira um valdu bólkarnar, fyri at royna at fáa eitt breitt og munagott innlit í teirra dagligu arbeiðsrútinur og avbjóðingar.",
+      "Vit menna eitt samrøðu amboð, sum nýtir vitlíki til at læra nógv meira um valdu bólkarnar, fyri at royna at fáa eitt breitt og munagott innlit í teirra dagligu arbeiðsrútinur og avbjóðingar.",
   },
   {
     id: "evt-009",
     date: "2025-09-06",
-    title: "Fyrstu royndar samrøður við námsfrøðingar er býrja",
+    title: "Fyrstu royndarsamrøður við námsfrøðingar eru býrjaðar",
     summary:
-      "Royndir eru farnar ígongd við fyrstu samrøðurnar við nakrar fáa námsfrøðingar fyri at vita um tað nýggja amboði riggar væl.",
+      "Royndir eru farnar ígongd við fyrstu samrøðurnar við nakrar fáar námsfrøðingar fyri at vita um tað nýggja amboðið riggar væl.",
   },
   {
     id: "evt-010",
+    date: "2025-09-13",
+    title: "Greinin um verkætlanina er komin út í Sosialin.",
+    summary:
+      "Í Sosialinum hesa vikuna ber til at lesa blaði Vísindavøka, har millum annað ber til at lesa eina grein um hesa verkætlan og um vitlíki meira generalt.",
+    mediaType: "image",
+    mediaSrc: "/images/sosialurin.png",
+  },
+  {
+    id: "evt-011",
     date: "2025-09-15",
     title: "Samrøður við námsfrøðingar og hjálparafólk eru býrjaðar!",
     summary:
-      "Um tú ert hjálparafólk ella námfrøðingur og gjarna vil hjálpa við hesi verkætlar, so kanst tú trýsta á tín knøtt niðanfyri, fyri at tosa við eitt vitlíki modell um títt starv. Tað tekur áleið 15 min. og hjálpur hesa verkætlan sera nógv.",
+      "Um tú ert hjálparafólk ella námsfrøðingur og gjarna vil hjálpa við hesari verkætlar, so kanst tú trýsta á tín knøtt niðanfyri, fyri at tosa við eitt vitlíkismodell um títt starv. Tað tekur áleið 15 min. og hjálpir hesari verkætlan sera nógv.",
     mediaType: "buttons" as const,
   },
 ];
@@ -117,7 +126,7 @@ const Tilarbeidis = () => {
     document.title = "Til arbeiðis - " + seoConfig.title;
 
     const metaDescription = document.querySelector('meta[name="description"]');
-    const content = "Fylg okkara verkætlan og arbeiðiætlan, meðan vit menna vitlíki vegleiðingar til Føroyska vinnulívið.";
+    const content = "Fylg okkara verkætlan og arbeiðisætlan, meðan vit menna vitlíkivegleiðingar til føroyska vinnulívið.";
     if (metaDescription) {
       metaDescription.setAttribute("content", content);
     } else {
@@ -186,7 +195,7 @@ const Tilarbeidis = () => {
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
               Fylg við okkara arbeiðsætlan, meðan vit menna vitlíki vegleiðingar
-              til Føroyska vinnulívið.
+              til føroyska vinnulívið.
             </p>
           </div>
         </section>
@@ -200,7 +209,7 @@ const Tilarbeidis = () => {
                  Samrøður við námsfrøðingar og hjálparafólk eru býrjaðar!
                 </h2>
                 <p className="text-lg text-foreground/90 mb-8 leading-relaxed max-w-3xl mx-auto">
-                  Um tú ert hjálparafólk ella námfrøðingur og gjarna vil hjálpa við hesi verkætlar, so kanst tú trýsta á tín knøtt niðanfyri, fyri at tosa við eitt vitlíki modell um títt starv. Tað tekur áleið 15 min. og hjálpur hesa verkætlan sera nógv.
+                  Um tú ert hjálparafólk ella námsfrøðingur og gjarna vil hjálpa við hesari verkætlar, so kanst tú trýsta á tín knøtt niðanfyri, fyri at tosa við eitt vitlíkismodell um títt starv. Tað tekur áleið 15 min. og hjálpir hesari verkætlan sera nógv.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -210,7 +219,7 @@ const Tilarbeidis = () => {
                     className="flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:scale-105 transform"
                   >
                     <span className="text-xl">🎓</span>
-                    Fær til Námsfrøðingar samrøðu
+                    Far til námsfrøðingar samrøðu
                   </a>
                   <a
                     href="https://interview-tool.replit.app/i/fdf4c068-eed5-492f-abd5-31cd168f9ead/ebe41d395e3546369d5528c185f7ab93"
@@ -219,7 +228,7 @@ const Tilarbeidis = () => {
                     className="flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:scale-105 transform"
                   >
                     <span className="text-xl">🤝</span>
-                    Fær til Hjálparafólk samrøðu
+                    Far til hjálparafólk samrøðu
                   </a>
                 </div>
               </div>
@@ -278,18 +287,18 @@ const Tilarbeidis = () => {
                   </p>
 
                   <p className="text-foreground/80 leading-loose text-lg">
-                    Henda verkætlanin er serliga sett í verk fyri at røkka tey arbeiðisfólk, sum helst fara at hava trupult við at taka vitlíki til sín – tað eru fólk í vinnugreinum, har starvsfólk ofta hava færri royndir við teldur í gerandisdegnum í mun til skrivstovufólk, har lítil fígging er til tøkni útbygging, og greinar har starvsfólk ofta ikki hava tøkniliga bakgrund.
+                    Henda verkætlanin er serliga sett í verk fyri at røkka teimum arbeiðisfólkum, sum helst fara at hava trupult við at taka vitlíki til sín – tað eru fólk í vinnugreinum, har starvsfólk ofta hava færri royndir við teldur í gerandisdegnum í mun til skrivstovufólk, har lítil fígging er til tøkniútbygging, og greinar har starvsfólk ofta ikki hava tøkniliga bakgrund.
                   </p>
 
                   <p className="text-foreground/80 leading-loose text-lg">
-                    Vit fara at gera 6–8 stuttar, lætt skiljandi frágreiðingar, sum hvør sær verða tillagað eini ávísari vinnugrein. Frágreiðingarnar fara greiðiliga at vísa, hvussu verandi vitlíki-amboð, serliga mál menni sum ChatGPT, kunnu loysa veruligar og ítøkiligar trupulleikar, sum hesi starvsfólk hava.
+                    Vit fara at gera 6–8 stuttar, lætt skiljandi frágreiðingar, sum hvør sær verða tillagað eini ávísari vinnugrein. Frágreiðingarnar fara greiðiliga at vísa, hvussu verandi vitlíki-amboð, serliga málmenni sum ChatGPT, kunnu loysa veruligar og ítøkiligar trupulleikar, sum hesi starvsfólk hava.
                   </p>
 
                   <p className="text-foreground/80 leading-loose text-lg">
-                    Við at veita sera handaliga vegleiðing, vilja vit minka um tær forðingar, sum halda fólki aftur frá at royna vitlíki til arbeiðis, og hjálpa teimum, ið hava mest brúk fyri tí, so tey fáa eina kærkomna hjálpandi hánd í einari tíð har arbeiðis landslagi broytur seg skjótt.
+                    Við at veita sera handaliga vegleiðing, vilja vit minka um tær forðingar, sum halda fólki aftur frá at royna vitlíki til arbeiðis, og hjálpa teimum, ið hava mest brúk fyri tí, so tey fáa eina kærkomna hjálpandi hond í einari tíð har arbeiðislandslagi broytist skjótt.
                   </p>
                   <p className="text-foreground/80 leading-relaxed mt-4">
-                    Átaki hjálpur ikki bara fólk at brúka tøknina sum hon er í dag, men hjálpur teimum eisini at skilja hvussu tey kunna brúka tøknina so við og við at tøknin mennist.
+                    Átakð hjálpur ikki bara fólk at brúka tøknina sum hon er í dag, men hjálpur teimum eisini at skilja hvussu tey kunnu brúka tøknina so við og við sum tøknin mennist.
                   </p>
                 </div>
                 </div>
@@ -505,8 +514,7 @@ const Tilarbeidis = () => {
             </h2>
             <p className="text-xl text-muted-foreground mb-8">
               Fylg okkum á LinkedIn og Facebook, har vit deila nógv meira um
-              vitlíki í Føroyum. Ver fyrst at læra um nýggjar møguleikar innan
-              vitlíki!
+              vitlíki í Føroyum. Ver millum tey fyrstu at læra um nýggjar møguleikar innan vitlíki!
             </p>
             <div className="flex gap-4 justify-center">
               <a
