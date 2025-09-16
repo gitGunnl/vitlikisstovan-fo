@@ -148,7 +148,7 @@ export default function Podcast() {
               <div className="paper-bg">
                 <div className="description-box">
                   <p className="podcast-description">
-                    From ancient myths about giants and witches to the true tale of the time locals used sheep to hack Google Maps — this podcast dives into the most fascinating, strange, and unforgettable stories from the Faroe Islands. Quirky, dark, or epic — the stories are real. The voice is AI.
+                    From ancient myths about giants and witches to the true tale of the time locals used sheep to hack Google Maps — this podcast dives into the most fascinating, strange, and unforgettable stories from the Faroe Islands. Quirky, dark, or epic — the stories are real. The voices are AI.
                   </p>
                 </div>
               </div>
@@ -161,10 +161,10 @@ export default function Podcast() {
               <div className="tokni-box">
                 <div className="tokni-content">
                   <div className="tokni-logo">
-                    <img src="/images/podcast/logo square.jpg" alt="Tøkni Tænastan Logo" className="tokni-logo-img" />
+                    <img src="/images/podcast/logo square.jpg" alt="Vitlíkisstovan Logo" className="tokni-logo-img" />
                   </div>
                   <div className="tokni-text">
-                    <h3 className="tokni-title">A Tøkni Tænastan AI Project</h3>
+                    <h3 className="tokni-title">A Vitlíkisstovan AI Project</h3>
                     <p className="tokni-description">Bringing Faroese stories to life with cutting-edge AI technology. Explore the intersection of tradition and innovation.</p>
                     <p className="tokni-social-text">Learn more about AI and our projects on social media:</p>
                     <div className="tokni-social-links">
@@ -213,6 +213,70 @@ export default function Podcast() {
                   <p className="cta-text">
                     Book a presentation or workshop at <a href="https://ritvit.fo" className="cta-link">ritvit.fo</a> or call <span className="phone-number">919444</span> to invite a real human (and his AI helpers) to your team.
                   </p>
+                  <div className="social-links" style={{ marginTop: '20px', display: 'flex', gap: '15px', justifyContent: 'center' }}>
+                    <a 
+                      href="https://facebook.com/vitlikisstovan" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="social-link"
+                      style={{ 
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        padding: '10px 20px',
+                        backgroundColor: '#1877F2',
+                        color: 'white',
+                        borderRadius: '8px',
+                        textDecoration: 'none',
+                        fontWeight: '600',
+                        transition: 'transform 0.2s, box-shadow 0.2s'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = 'translateY(-2px)';
+                        e.currentTarget.style.boxShadow = '0 4px 12px rgba(24, 119, 242, 0.3)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.boxShadow = 'none';
+                      }}
+                    >
+                      <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                      </svg>
+                      Facebook
+                    </a>
+                    <a 
+                      href="https://linkedin.com/company/vitlikisstovan" 
+                      target="_blank" 
+                      rel="noopener noreferrer" 
+                      className="social-link"
+                      style={{ 
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '8px',
+                        padding: '10px 20px',
+                        backgroundColor: '#0A66C2',
+                        color: 'white',
+                        borderRadius: '8px',
+                        textDecoration: 'none',
+                        fontWeight: '600',
+                        transition: 'transform 0.2s, box-shadow 0.2s'
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = 'translateY(-2px)';
+                        e.currentTarget.style.boxShadow = '0 4px 12px rgba(10, 102, 194, 0.3)';
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = 'translateY(0)';
+                        e.currentTarget.style.boxShadow = 'none';
+                      }}
+                    >
+                      <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                      LinkedIn
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
