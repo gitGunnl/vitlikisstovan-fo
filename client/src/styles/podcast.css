@@ -191,71 +191,17 @@
         font-size: 1.2rem;
     }
     
-    /* Parallax Layers Mobile - Show only background, mountain, grass, cloud */
+    /* Parallax Layers Mobile - Keep images at their natural sizes */
     
-    /* Z-index ordering for mobile */
-    .layer-bg {
-        z-index: 1;
+    /* Hide decorative elements on mobile */
+    .troll-sheep {
+        display: none;
     }
     
-    .layer-mid {
-        z-index: 2;
-    }
-    
-    .layer-clouds {
-        z-index: 3;
-        opacity: 1;
-    }
-    
-    .layer-front {
-        z-index: 4;
-    }
-    
-    /* Background - fills container */
-    .layer-bg img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center center;
-        bottom: 0;
-    }
-    
-    /* Mountain - spans width, anchored to bottom */
-    .layer-mid img {
-        width: 100vw;
-        height: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 0;
-        opacity: 1;
-        object-fit: contain;
-    }
-    
-    /* Hide troll, show only grass */
-    .layer-front .troll-sheep {
-        display: none !important;
-    }
-    
-    .layer-front .grass {
-        display: block;
-        width: 110vw;
-        height: auto;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 0;
-        opacity: 1;
-        z-index: 1;
-    }
-    
-    /* Cloud - natural size, not cropped */
-    .layer-clouds img {
-        width: 50vw;
-        height: auto;
-        top: 8vh;
-        left: 50%;
-        transform: translateX(-50%);
-        animation: none;
-        opacity: 1;
+    .sheep-laptop,
+    .troll-peek,
+    .sparkle {
+        display: none;
     }
     
     /* Content Sections Mobile */
@@ -433,7 +379,6 @@
 
     .hero-section {
         height: 60vh;
-        min-height: 450px;
     }
     
     .hero-content {
@@ -449,33 +394,12 @@
         font-size: 1.5rem;
     }
 
-    /* Same layer fixes as mobile but with larger sizes for tablets */
     .layer-bg img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center center;
+        object-position: center;
     }
 
-    .layer-mid img {
-        width: 100vw;
-        height: auto;
-        object-position: center bottom;
-        opacity: 1;
-        bottom: 0;
-    }
-    
-    .layer-front .grass {
-        width: 110vw;
-        height: auto;
-        opacity: 1;
-        bottom: 0;
-    }
-    
-    .layer-clouds img {
-        width: 45vw;
-        height: auto;
-        opacity: 1;
+    .layer-mid, .layer-front {
+        opacity: 0.7;
     }
     
     /* Tokni box tablet */
