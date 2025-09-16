@@ -24,16 +24,36 @@ export default function CTAButtons({ primary, secondary, className }: CTAButtons
               {primary.text}
             </p>
           )}
-          <Button asChild className="group h-auto py-3 px-6 sm:py-3 sm:px-6 text-sm sm:text-base whitespace-normal text-center leading-tight min-h-[48px] flex items-center justify-center">
-            <a href={primary.href} data-testid="button-primary-cta" className="flex items-center justify-center text-center">
+          {(isPrimaryLong || primary.text === "Les meira") ? (
+            <Button 
+              onClick={() => {
+                const element = document.querySelector('#program');
+                if (element) {
+                  element.scrollIntoView({ behavior: 'smooth' });
+                }
+              }}
+              className="group h-auto py-3 px-6 sm:py-3 sm:px-6 text-sm sm:text-base whitespace-normal text-center leading-tight min-h-[48px] flex items-center justify-center"
+              data-testid="button-primary-cta"
+            >
               <span className="relative block leading-tight">
-                {isPrimaryLong ? "Les meira" : primary.text}
+                Les meira
                 <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {isPrimaryLong ? "Les meira" : primary.text}
+                  Les meira
                 </span>
               </span>
-            </a>
-          </Button>
+            </Button>
+          ) : (
+            <Button asChild className="group h-auto py-3 px-6 sm:py-3 sm:px-6 text-sm sm:text-base whitespace-normal text-center leading-tight min-h-[48px] flex items-center justify-center">
+              <a href={primary.href} data-testid="button-primary-cta" className="flex items-center justify-center text-center">
+                <span className="relative block leading-tight">
+                  {primary.text}
+                  <span className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {primary.text}
+                  </span>
+                </span>
+              </a>
+            </Button>
+          )}
         </div>
       )}
       {secondary && (
