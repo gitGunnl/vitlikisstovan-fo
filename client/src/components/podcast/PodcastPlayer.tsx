@@ -164,220 +164,115 @@ export default function PodcastPlayer({
   }, [currentTime, duration]);
 
   return (
-    <div ref={containerRef} className="w-full max-w-4xl mx-auto px-4 sm:px-0">
-      {/* Now playing header - vertical on mobile, horizontal on desktop */}
-      <div className="bg-white/60 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
-        
-        {/* Mobile Layout (vertical card) */}
-        <div className="sm:hidden">
-          {/* Large Album Art for Mobile */}
-          <div className="w-full aspect-square rounded-t-xl overflow-hidden bg-slate-100 dark:bg-slate-800">
-            {current?.imageUrl ? (
-              <img src={current.imageUrl} alt="" className="w-full h-full object-cover" />
-            ) : (
-              <div className="w-full h-full grid place-items-center text-slate-400 text-xs">
-                no image
-              </div>
-            )}
-          </div>
-          
-          {/* Episode Info */}
-          <div className="px-4 pt-4 pb-2">
-            <h2 className="font-semibold text-lg leading-tight text-center" title={current?.title}>
-              {current?.title || "—"}
-            </h2>
-            <div className="text-sm text-slate-500 dark:text-slate-400 text-center mt-1">
-              {current?.publishedAt || "Episode"}
+    <div ref={containerRef} className="w-full max-w-4xl mx-auto">
+      {/* Now playing header */}
+      <div className="flex items-center gap-4 p-4 bg-white/60 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
+        <div className="w-20 h-20 rounded-md overflow-hidden bg-slate-100 dark:bg-slate-800 shrink-0">
+          {current?.imageUrl ? (
+            <img src={current.imageUrl} alt="" className="w-full h-full object-cover" />
+          ) : (
+            <div className="w-full h-full grid place-items-center text-slate-400 text-xs">
+              no image
             </div>
+          )}
+        </div>
+        <div className="min-w-0 flex-1">
+          <div className="text-sm text-slate-500 dark:text-slate-400 truncate">
+            {current?.publishedAt || "Episode"}
           </div>
-
-          {/* Progress Bar for Mobile */}
-          <div className="px-4 pb-2">
-            <div className="relative">
-              <input
-                type="range"
-                min={0}
-                max={duration || 0}
-                step={0.1}
-                value={currentTime}
-                onChange={(e) => seekTo(Number(e.target.value))}
-                className="w-full appearance-none h-1.5 rounded-full bg-slate-200 dark:bg-slate-700 accent-slate-900 dark:accent-white cursor-pointer"
-                aria-label="Seek"
-              />
-              <div
-                className="pointer-events-none absolute inset-y-0 left-0 rounded-full bg-slate-900/20 dark:bg-white/20"
-                style={{ width: `${progressPercent}%` }}
-              />
-            </div>
-            <div className="flex justify-between mt-1">
-              <span className="text-xs text-slate-600 dark:text-slate-400 tabular-nums">
-                {formatTime(currentTime)}
-              </span>
-              <span className="text-xs text-slate-600 dark:text-slate-400 tabular-nums">
-                {formatTime(duration)}
-              </span>
-            </div>
-          </div>
-
-          {/* Compact Controls for Mobile (icons only) */}
-          <div className="flex items-center justify-center gap-4 px-4 pb-4">
+          <h2 className="font-semibold text-lg leading-tight truncate" title={current?.title}>
+            {current?.title || "—"}
+          </h2>
+          <div className="mt-2 flex items-center gap-2">
             <button
-              className="p-2 text-slate-600 dark:text-slate-400 disabled:opacity-30"
+              className="px-3 py-1.5 rounded-md border border-slate-300 dark:border-slate-700 text-sm"
               onClick={prevEpisode}
               disabled={!hasPrev}
               aria-label="Previous episode"
-              title="Previous"
+              title="Previous episode"
             >
-              <span className="text-2xl">⏮</span>
+              ⏮ Prev
             </button>
 
             <button
-              className="p-2 text-slate-600 dark:text-slate-400"
-              onClick={() => seekBy(-seekStepSeconds)}
-              aria-label={`Back ${seekStepSeconds} seconds`}
-              title={`-${seekStepSeconds}s`}
-            >
-              <span className="text-2xl">⏪</span>
-            </button>
-
-            <button
-              className="p-3 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900"
+              className="px-4 py-1.5 rounded-md bg-slate-900 text-white dark:bg-white dark:text-slate-900 text-sm font-medium"
               onClick={togglePlay}
               aria-label={isPlaying ? "Pause" : "Play"}
               title={isPlaying ? "Pause" : "Play"}
             >
-              <span className="text-3xl">{isPlaying ? "⏸" : "▶️"}</span>
+              {isPlaying ? "⏸ Pause" : "▶ Play"}
             </button>
 
             <button
-              className="p-2 text-slate-600 dark:text-slate-400"
+              className="px-3 py-1.5 rounded-md border border-slate-300 dark:border-slate-700 text-sm"
+              onClick={() => seekBy(-seekStepSeconds)}
+              aria-label={`Back ${seekStepSeconds} seconds`}
+              title={`Back ${seekStepSeconds}s`}
+            >
+              −{seekStepSeconds}s
+            </button>
+
+            <button
+              className="px-3 py-1.5 rounded-md border border-slate-300 dark:border-slate-700 text-sm"
               onClick={() => seekBy(seekStepSeconds)}
               aria-label={`Forward ${seekStepSeconds} seconds`}
-              title={`+${seekStepSeconds}s`}
+              title={`Forward ${seekStepSeconds}s`}
             >
-              <span className="text-2xl">⏩</span>
+              +{seekStepSeconds}s
             </button>
 
             <button
-              className="p-2 text-slate-600 dark:text-slate-400 disabled:opacity-30"
+              className="px-3 py-1.5 rounded-md border border-slate-300 dark:border-slate-700 text-sm"
               onClick={nextEpisode}
               disabled={!hasNext}
               aria-label="Next episode"
-              title="Next"
+              title="Next episode"
             >
-              <span className="text-2xl">⏭</span>
+              Next ⏭
             </button>
-          </div>
-        </div>
-
-        {/* Desktop Layout (horizontal) */}
-        <div className="hidden sm:flex items-center gap-4 p-4">
-          <div className="w-20 h-20 rounded-md overflow-hidden bg-slate-100 dark:bg-slate-800 shrink-0">
-            {current?.imageUrl ? (
-              <img src={current.imageUrl} alt="" className="w-full h-full object-cover" />
-            ) : (
-              <div className="w-full h-full grid place-items-center text-slate-400 text-xs">
-                no image
-              </div>
-            )}
-          </div>
-          <div className="min-w-0 flex-1">
-            <div className="text-sm text-slate-500 dark:text-slate-400 truncate">
-              {current?.publishedAt || "Episode"}
-            </div>
-            <h2 className="font-semibold text-lg leading-tight truncate" title={current?.title}>
-              {current?.title || "—"}
-            </h2>
-            <div className="mt-2 flex items-center gap-2">
-              <button
-                className="px-3 py-1.5 rounded-md border border-slate-300 dark:border-slate-700 text-sm"
-                onClick={prevEpisode}
-                disabled={!hasPrev}
-                aria-label="Previous episode"
-                title="Previous episode"
-              >
-                ⏮ Prev
-              </button>
-
-              <button
-                className="px-4 py-1.5 rounded-md bg-slate-900 text-white dark:bg-white dark:text-slate-900 text-sm font-medium"
-                onClick={togglePlay}
-                aria-label={isPlaying ? "Pause" : "Play"}
-                title={isPlaying ? "Pause" : "Play"}
-              >
-                {isPlaying ? "⏸ Pause" : "▶ Play"}
-              </button>
-
-              <button
-                className="px-3 py-1.5 rounded-md border border-slate-300 dark:border-slate-700 text-sm"
-                onClick={() => seekBy(-seekStepSeconds)}
-                aria-label={`Back ${seekStepSeconds} seconds`}
-                title={`Back ${seekStepSeconds}s`}
-              >
-                −{seekStepSeconds}s
-              </button>
-
-              <button
-                className="px-3 py-1.5 rounded-md border border-slate-300 dark:border-slate-700 text-sm"
-                onClick={() => seekBy(seekStepSeconds)}
-                aria-label={`Forward ${seekStepSeconds} seconds`}
-                title={`Forward ${seekStepSeconds}s`}
-              >
-                +{seekStepSeconds}s
-              </button>
-
-              <button
-                className="px-3 py-1.5 rounded-md border border-slate-300 dark:border-slate-700 text-sm"
-                onClick={nextEpisode}
-                disabled={!hasNext}
-                aria-label="Next episode"
-                title="Next episode"
-              >
-                Next ⏭
-              </button>
-            </div>
-          </div>
-        </div>
-
-        {/* Desktop Progress bar */}
-        <div className="hidden sm:block px-4 pb-3">
-          <div className="flex items-center gap-3">
-            <span className="tabular-nums text-xs text-slate-600 dark:text-slate-400 w-14 text-right">
-              {formatTime(hoverTime ?? currentTime)}
-            </span>
-
-            <div className="relative flex-1 group">
-              <input
-                type="range"
-                min={0}
-                max={duration || 0}
-                step={0.1}
-                value={currentTime}
-                onChange={(e) => seekTo(Number(e.target.value))}
-                onMouseMove={(e) => {
-                  const el = e.currentTarget;
-                  const rect = el.getBoundingClientRect();
-                  const ratio = Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width));
-                  setHoverTime((duration || 0) * ratio);
-                }}
-                onMouseLeave={() => setHoverTime(null)}
-                className="w-full appearance-none h-2 rounded-md bg-slate-200 dark:bg-slate-700 accent-slate-900 dark:accent-white cursor-pointer"
-                aria-label="Seek"
-              />
-              <div
-                className="pointer-events-none absolute inset-y-0 left-0 rounded-md bg-slate-900/10 dark:bg-white/15"
-                style={{ width: `${progressPercent}%` }}
-              />
-            </div>
-
-            <span className="tabular-nums text-xs text-slate-600 dark:text-slate-400 w-14">
-              {formatTime(duration)}
-            </span>
           </div>
         </div>
       </div>
 
-      {/* Episode list - responsive */}
+      {/* Progress bar */}
+      <div className="mt-3 px-1">
+        <div className="flex items-center gap-3">
+          <span className="tabular-nums text-xs text-slate-600 dark:text-slate-400 w-14 text-right">
+            {formatTime(hoverTime ?? currentTime)}
+          </span>
+
+          <div className="relative flex-1 group">
+            <input
+              type="range"
+              min={0}
+              max={duration || 0}
+              step={0.1}
+              value={currentTime}
+              onChange={(e) => seekTo(Number(e.target.value))}
+              onMouseMove={(e) => {
+                const el = e.currentTarget;
+                const rect = el.getBoundingClientRect();
+                const ratio = Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width));
+                setHoverTime((duration || 0) * ratio);
+              }}
+              onMouseLeave={() => setHoverTime(null)}
+              className="w-full appearance-none h-2 rounded-md bg-slate-200 dark:bg-slate-700 accent-slate-900 dark:accent-white cursor-pointer"
+              aria-label="Seek"
+            />
+            {/* simple filled bar for visual progress (range accent covers thumb; this adds a subtle bg) */}
+            <div
+              className="pointer-events-none absolute inset-y-0 left-0 rounded-md bg-slate-900/10 dark:bg-white/15"
+              style={{ width: `${progressPercent}%` }}
+            />
+          </div>
+
+          <span className="tabular-nums text-xs text-slate-600 dark:text-slate-400 w-14">
+            {formatTime(duration)}
+          </span>
+        </div>
+      </div>
+
+      {/* Episode list */}
       <div className="mt-6 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 bg-white/50 dark:bg-slate-900/50">
         {episodes.map((ep, i) => {
           const active = i === index;
@@ -386,13 +281,12 @@ export default function PodcastPlayer({
               key={ep.id}
               onClick={() => playEpisode(i)}
               className={[
-                "w-full text-left flex items-center gap-3 px-3 py-2 hover:bg-slate-50/80 dark:hover:bg-slate-800/60",
+                "w-full text-left grid grid-cols-[56px,1fr,auto] gap-3 items-center px-3 py-2 hover:bg-slate-50/80 dark:hover:bg-slate-800/60",
                 active ? "bg-slate-50 dark:bg-slate-800/60" : "",
               ].join(" ")}
               aria-current={active ? "true" : undefined}
             >
-              {/* Smaller thumbnail on mobile */}
-              <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-md overflow-hidden bg-slate-100 dark:bg-slate-800 shrink-0">
+              <div className="w-14 h-14 rounded-md overflow-hidden bg-slate-100 dark:bg-slate-800">
                 {ep.imageUrl ? (
                   <img src={ep.imageUrl} alt="" className="w-full h-full object-cover" />
                 ) : (
@@ -402,7 +296,7 @@ export default function PodcastPlayer({
                 )}
               </div>
 
-              <div className="min-w-0 flex-1">
+              <div className="min-w-0">
                 <div className="text-sm font-medium truncate">
                   {active ? "▸ " : ""}{ep.title}
                 </div>
@@ -411,8 +305,7 @@ export default function PodcastPlayer({
                 </div>
               </div>
 
-              {/* Hide duration on mobile, show on desktop */}
-              <div className="hidden sm:block text-xs text-slate-500 dark:text-slate-400 tabular-nums">
+              <div className="text-xs text-slate-500 dark:text-slate-400 tabular-nums">
                 {i === index ? formatTime(currentTime) + " / " + formatTime(duration) : ""}
               </div>
             </button>
