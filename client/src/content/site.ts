@@ -189,39 +189,39 @@ export const siteConfig = {
       {
         title: "Føroyskt í hásæti",
         description:
-          "Vegleiðing, sum virðir okkara mál og mentan, samstundis sum hon lýkur altjóða tøknilig krøv. Og so er tað stutt flutt."
+          "Vitlíkisstovan veitir vegleiðing, ið virðir okkara mál og mentan, samstundis sum fylgt verður við vanligum tøkniligum krøvum. Og so er tað stutt flutt."
       },
       {
-        title: "Professionelt og handaligt",
+        title: "Yrkisligt og veruligt",
         description:
-          "Vitlíki er eitt eymt evni og tað eru líka nógvir meiningar sum tað eru fólk. Tað havi eg fulla viring fyri og arbeiðis á ein ein praktiskan hátt uttan at trakkað ov nógv fólk yvur tædnar."
+          "Vitlíki er eitt eymt evni, og eru meiningarnar um tað líka nógvar, sum tað eru fólk. Tað havi eg virðing fyri, og er arbeiði tískil grundað á verkligar arbeiðshættir og veruligar uppgávuloysnir - sum ikki traðkar ov nógv fólk yvir tærnar."
       },
       {
         title: "Greitt samskifti",
         description:
-          "Eg miðli fløkt hugtøk á einfaldan hátt. Um tað er verkstovur, framløgur, skabelónir ella annað tilfar, so vera tingið fortald so tey eru til at skilja."
+          "Vitlíkisstovan miðlar fløkt hugtøk á einfaldan hátt. Umvegis verkstovur, framløgur, arbeiðsleistir og annað tilfar, verður stórur dentur lagdur á, at tingini verða greidd frá, so tey eru til at skilja."
       },
       {
-        title: "Effektivt & smidligt",
+        title: "Úrslitagott og smidligt",
         description:
-          "Einstaklinga fyritøka – ongar óneyðugar útreiðslur. Skjótari avgerðir, enn skjótari veiting."
+          "Vitlíkisstovan er ein einstaklingafyritøka - her eru ongar óneyðugar útreiðslur. Skjótar avgerðir og enn skjótari veiting."
       }
     ],
 
     founder: {
       heading: "Hvør stendur aftanfyri?",
       name: "Gunnleygur Clementsen",
-      role: "Stovnari & høvuðsráðgevi",
+      role: "Stovnari og ráðgevi",
       summary:
-        "El-verkfrøðingur, sum gjørdist vitlíkisráðgevi. Síðan 2022 havi eg brúkt ChatGPT dagliga – fyrst sum verkfrøðingur nirrið, og nú fulla tíð við at hjálpa føroyskum stovnum og fyritøkum at taka vitlíki til sín. Eg havi fylgt við menningini innan vitlíki í meira enn 10 ár og roynt fleiri hundrað amboð – eisini tey sum ikki vórðu búgvin – so tú fært tað, sum veruliga riggar.",
+        "Ein el-verkfrøðingur, sum gjørdist vitlíkisráðgevi. Síðani 2022 havi eg brúkt ChatGPT dagliga; fyrst sum verkfrøðingur í Danmark, og nú við at hjálpa føroyskum stovnum og fyritøkum at taka vitlíki til sín. Eg havi fylgt við menningini í vitlíki í meira enn 10 ár, og havi roynt fleiri hundrað amboð. Eg veit tískil hvat riggar og hvørja góðsku tú kann fáa burturúr, um amboðini verða brúkt rætt.",
       bullets: [
-        "Stovnaði Vitlíkisstovuna fyri at hjálpa føroyskum toymum at fáa gagn av vitlíki.",
-        "Úrslit fram um yvirdrivið tos: arbeiðsgongdir, sum spara tíð, betra um skrivlig avrik og minka um endurtakandi uppgávur.",
+        "Stovnaði Vitlíkisstovuna fyri at hjálpa føroyskum arbeiðstoymum at fáa gagn av vitlíki.",
+        "Úrslit fram um (ov nógv) tos: Sjóneykan er á arbeiðsgongdir, sum spara tíð, betra um skrivlig avrik og minka um endurtakandi uppgávur.",
         "Royndir við stórum stovnum og almennum áhugapørtum, umframt smærri fyritøkum og skúlum.",
-        "Føroyskt í hásæti: vegleiðing, sum er lagað til okkara mál, mentan og almenna veruleika."
+        "Føroyskt í hásæti: Vegleiðing, sum er lagað til okkara mál, mentan og almenna veruleika."
       ],
       quote:
-        "Vitlíki er ikki fjarløgd framtíð – tað er mátin, vit arbeiða uppá nú. Lat okkum fáa tað at rigga fyri títt toymi.",
+        "Vitlíki er ikki fjarløgd framtíð – tað er mátin, vit arbeiða uppá nú. Lat okkum fáa tað at rigga fyri títt toymið.",
       headshotUrl: "/images/founder.jpg",
       headshotAlt: "Mynd av Gunnleygi Clementsen",
       links: [
@@ -232,7 +232,7 @@ export const siteConfig = {
   },
 
   cases: {
-    title: "Úrvald dømi",
+    title: "Úrvald úrslit og samstørv",
     subtitle:
       "Síggj her dømir uppá hvussu eg geri hugskot til nýtilig úrslit – á skrivstovum, í tænastum og í mentanini.",
     highlights: [
