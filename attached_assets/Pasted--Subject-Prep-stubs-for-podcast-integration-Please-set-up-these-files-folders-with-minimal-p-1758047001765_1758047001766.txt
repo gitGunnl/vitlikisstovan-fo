@@ -1,0 +1,63 @@
+**Subject:** Prep stubs for `/podcast` integration
+
+Please set up these files/folders with minimal placeholder content so we can drop in the podcast page later.
+
+1. **Page + Route**
+
+* `client/src/pages/Podcast.tsx`
+
+  * Export a functional component named `Podcast`.
+  * Render `<Header />`, `<main className="pt-16">Podcast page placeholder</main>` (no nav link), and either our `<Footer />` or nothing (your call for now).
+  * In `useEffect`, set `document.title` to `"Podcast – " + siteConfig.siteName` and set a basic meta description.
+  * Also in `useEffect`, add `document.body.classList.add('podcast-page')` on mount and remove it on unmount.
+* `client/src/App.tsx`
+
+  * Register a new route: `path="/podcast"` -> `Podcast`.
+  * **Do not** add it to the header/navigation.
+
+2. **Styles**
+
+* `client/src/styles/podcast.css`
+
+  * Create the file with a few placeholders:
+
+    * `:root { /* TODO: podcast color vars */ }`
+    * `body.podcast-page { /* TODO: bg + layout just for podcast page */ }`
+    * `.hero-section, .parallax-layer, .storybook-title { /* TODO: stubs */ }`
+* Import it so it loads:
+
+  * Either at the end of `client/src/index.css` via `@import "./styles/podcast.css";`
+  * **or** import it inside `Podcast.tsx`. Your choice—just make sure it’s included.
+
+3. **Fonts & Icons (head tags)**
+
+* `client/index.html` (in `<head>`)
+
+  * Add placeholder links (commented is fine) for Google Fonts and Font Awesome so we can enable them later:
+
+    * `<!-- TODO: Google Fonts for Abril Fatface, Indie Flower, Lora, Patrick Hand -->`
+    * `<!-- TODO: Font Awesome 6 link for social/brand icons -->`
+
+4. **Assets**
+
+* `public/images/podcast/`
+
+  * Create the folder and add empty placeholders or `.gitkeep` for the following expected files (names only; actual assets will come later):
+
+    * `background.png`, `middle-layer.png`, `troll-and-sheep.png`, `grass.png`, `cloud.png`, `logo-square.jpg`
+
+5. **Interaction Stubs**
+
+* In `Podcast.tsx`, add an empty `useEffect` block for future parallax/scroll-reveal hooks with TODO comments:
+
+  * `// TODO: parallax scroll handler`
+  * `// TODO: mousemove tilt handler`
+  * `// TODO: scroll-into-view reveal`
+
+6. **Lint/TS**
+
+* Ensure the new files compile cleanly (no unused imports, no TS errors) and that `/podcast` renders the placeholder without affecting other routes.
+
+Feel free to suggest a setup that works best for our project.
+
+That’s it for now—no nav changes yet. After this, I’ll drop in the real markup/CSS/JS.

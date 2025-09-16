@@ -12,11 +12,11 @@ export default function Contact() {
 
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', "Hav samband við Vitlíkisstovan. Send okkum boð ella ring til okkara fyri at víðka tína vitlíki møguleikar.");
+      metaDescription.setAttribute('content', "Set teg í samband við Vitlíkisstovuna. Sig mær hvat tú hugsar, so sigi eg tær, hvussu vitlíki kann hjálpa. Antin tú hevur áhugað í 12-vikursskeiðnum til títt toymið, ráðgeving, íkast til eina kreativa verkætlan ella eitt fjórða - so svari eg tær áðrenn næsti gerandisdagur er lokin.");
     } else {
       const meta = document.createElement('meta');
       meta.name = 'description';
-      meta.content = "Hav samband við Vitlíkisstovan. Send okkum boð ella ring til okkara fyri at víðka tína vitlíki møguleikar.";
+      meta.content = "Set teg í samband við Vitlíkisstovuna. Sig mær hvat tú hugsar, so sigi eg tær, hvussu vitlíki kann hjálpa.";
       document.head.appendChild(meta);
     }
   }, []);

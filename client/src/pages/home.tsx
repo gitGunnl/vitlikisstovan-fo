@@ -208,7 +208,7 @@ export default function Home() {
                           Nýggjur bloggur:
                         </span>
                         <span className="block">
-                          Føroysk vitlíki modellir
+                          Føroysk vitlíkismodell
                         </span>
                       </>
                     ) : (
@@ -286,7 +286,7 @@ export default function Home() {
                         data-testid="button-scroll-consulting"
                       >
                         <span className="relative">
-                          Um tú ert her fyri ráðgeving ella annað, les meira longur nirrið
+                          Um tú ert her fyri ráðgeving ella annað, les meira longur niðri
                         </span>
                         <svg
                           className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-y-1"
@@ -363,7 +363,7 @@ export default function Home() {
                     <span className="text-xs font-semibold opacity-80">NÝGGJUR BLOGGUR</span>
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                   </div>
-                  <h3 className="font-medium mb-1">Føroysk vitlíki model</h3>
+                  <h3 className="font-medium mb-1">Føroysk vitlíkismodell</h3>
                   <p className="text-xs opacity-75">Les meira um nýggju granskingarnar</p>
                 </a>
               </div>
@@ -379,7 +379,7 @@ export default function Home() {
                       <span className="text-sm font-semibold text-white">NÝGGJUR BLOGGUR</span>
                     </div>
                     <p className="text-sm text-white/90">
-                      Føroysk vitlíki model - les meira um nýggju granskingarnar
+                      Føroysk vitlíkismodell - les meira um nýggju granskingarnar
                     </p>
                   </div>
                   <div className="flex items-center gap-3">
@@ -787,7 +787,7 @@ export default function Home() {
                             <p className="text-muted-foreground leading-[1.7] mb-4">
                               Vit bjóða tvey ókeypis royndarskjøl: eitt ætlað <strong>lærarum</strong> og eitt ætlað
                               <strong> politikarum</strong>. Bæði innihalda listar við gagnligum nýtslum fyri hesi
-                              starvsøki – og <em>neyv stig‑fyrir‑stig</em> leiðbeining um, hvussu tú gert hesar
+                              starvsøki – og <em>eina neyva stig‑fyrir‑stig leiðbeining</em> um, hvussu tú gert hesar
                               uppgávur við vitlíki.
                             </p>
 
@@ -812,11 +812,11 @@ export default function Home() {
                           <section className="space-y-4">
                             <h4 className="text-lg font-semibold mb-2">"Vitlíki til arbeiðis"</h4>
                             <p className="text-muted-foreground leading-[1.7] mb-3">
-                              <strong>Granskingar grunnurin</strong> hevur stuðla mær í at menna <strong>"Vitlíki til arbeiðis"</strong> –
-                            ein verkætlan har eg geri vegleiðingar sum skula hjálpa ávísum bólkum at koma gott ígongd við vitlíki. Felags fyri hesar bólkar er at tað eru bólkar í ikki sita við teldu dagliga, hesir bólk eru í vanda fyri at koma ov seint ígong við vitlíki og tí hjálpi eg júst teimum.
+                              <strong>Granskingargrunnurin</strong> hevur stuðlað mær í at menna <strong>"Vitlíki til arbeiðis"</strong> –
+                            ein verkætlan har eg geri vegleiðingar, sum skulu hjálpa ávísum bólkum at koma gott ígongd við vitlíki. Felags fyri hesar bólkar er at tað eru bólkar, sum ikki sita við teldu dagliga, hesir bólkar eru í vanda fyri at koma ov seint ígongd við vitlíki og tí hjálpi eg júst teimum.
                             </p>
                             <p className="text-muted-foreground leading-[1.7] mb-4">
-                              Fyrstu vegleiðingar vera klárar í býrjani av Novembur 2025.
+                              Fyrstu vegleiðingar vera klárar í byrjanini av novembur 2025.
                             </p>
 
                             <div className="flex flex-wrap gap-3 mt-4">
@@ -837,8 +837,8 @@ export default function Home() {
                           <section className="space-y-4">
                             <h4 className="text-lg font-semibold mb-2">Bílegg eina vegleiðing.</h4>
                             <p className="text-muted-foreground leading-[1.7] mb-4">
-                              Tú fær eina <strong>sergjørda vegleiðing</strong> til júst tínar arbeiðsuppgávur
-                              fyri <strong>1600 DKK</strong>. So veit tú akkurát hvat tú skal nýta vitlíki til.
+                              Tú fært eina <strong>sergjørda vegleiðing</strong> til júst tínar arbeiðsuppgávur
+                              fyri <strong>1600 DKK</strong>. So veit tú akkurát hvat tú skalt nýta vitlíki til.
                             </p>
 
                             <div className="flex flex-wrap gap-3">
@@ -881,11 +881,11 @@ export default function Home() {
             </li>
             <li className="flex items-start gap-2">
             <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-            <span>At brúka KjattGPT og onnur viðkomandi amboð í praksis.</span>
+            <span>At brúka KjattGPT og onnur viðkomandi amboð í verki.</span>
             </li>
             <li className="flex items-start gap-2">
             <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-            <span>At skapa munadygg birt, ið eru lagað til teirra egnu arbeiðsuppgávur.</span>
+            <span>At skapa munagóð birt, ið eru lagað til teirra egnu arbeiðsuppgávur.</span>
             </li>
             <li className="flex items-start gap-2">
             <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
@@ -903,16 +903,16 @@ export default function Home() {
             <h4 className="text-lg font-semibold mb-2">Dømi um verkstovur</h4>
             <div className="space-y-3">
             <div className="p-4 border rounded-lg">
-            <h5 className="font-semibold mb-1">Hálvdags innleiðsluskeið</h5>
+            <h5 className="font-semibold mb-1">Hálvdagsinnleiðsluskeið</h5>
             <p className="text-sm text-muted-foreground">Hetta sniðið hevur riggað serliga væl til starvsfólk, eitt nú á skrivstovum, ið skulu koma skjótt í gongd.</p>
             </div>
             <div className="p-4 border rounded-lg">
-            <h5 className="font-semibold mb-1">Heildags dýpdarskeið</h5>
+            <h5 className="font-semibold mb-1">Heildagsdýpdarskeið</h5>
             <p className="text-sm text-muted-foreground">Vit hava brúkt hetta til størri bólkar, eitt nú tá vit undirvístu umleið 200 lærarum, har dentur varð lagdur á ítøkiligar nýtsluhættir at fyrireika tímarnar.</p>
             </div>
             <div className="p-4 border rounded-lg">
             <h5 className="font-semibold mb-1">Skeiðsgongdir yvir fleiri dagar</h5>
-            <p className="text-sm text-muted-foreground">Til fyritøkur, sum ynskja at gera øll síni skrivstovufólk klár til at kunna arbeiða munagott og trygt við vitlíki. Hettar er viðmælt ein og hvørjari fyritøku sum vil taka vitlíki í álvara.</p>
+            <p className="text-sm text-muted-foreground">Til fyritøkur, sum ynskja at gera øll síni skrivstovufólk klár til at kunna arbeiða munagott og trygt við vitlíki. Hetta er viðmælt ein og hvørjari fyritøku sum vil taka vitlíki í álvara.</p>
             </div>
             </div>
             </section>
@@ -944,7 +944,7 @@ export default function Home() {
           <Dialog open={openDialog === 'tydingar'} onOpenChange={() => setOpenDialog(null)}>
             <DialogContent className="max-w-3xl max-h-[85vh] overflow-y-auto">
               <DialogHeader className="pb-8">
-                <DialogTitle className="text-2xl font-bold mb-3">Vitlíki týðing – danskt til føroyskt</DialogTitle>
+                <DialogTitle className="text-2xl font-bold mb-3">Vitlíkistýðing – danskt til føroyskt</DialogTitle>
                 <DialogDescription className="text-lg leading-relaxed pt-2">
                   Ein væl eydnað vitlíki‑verkætlan: Frá undankanning og frágreiðing til eitt hent amboð.
                 </DialogDescription>
@@ -953,9 +953,9 @@ export default function Home() {
               <div className="space-y-10">
                 <div className="bg-gradient-to-r from-muted/50 to-muted/30 p-8 rounded-xl border">
                   <p className="text-foreground leading-[1.8] text-base">
-                    Ein kunda skuldi týða ein hóp av skjalum úr <strong>donskum til føroyskt</strong> og spurdi,
-                    um vitlíki kundi hjálpa. Eg segði "møguliga, men eg kann vísa tykkum akkruát hvussu gott vitlíki kann týða úr donskum til føroyskt og so kunna tit taka avgerð um tit vilja færa víðari við hesum. Fyrst gera vit eitt sera gitt birt <em>(prompt)</em>,
-                    og síðani <strong>royndu vit hetta birti á øllum teimum bestu altjóða modellunum.</strong>"
+                    Ein kundi skuldi týða ein hóp av skjalum úr <strong>donskum til føroyskt</strong> og spurdi,
+                    um vitlíki kundi hjálpa. Eg segði "møguliga, men eg kann vísa tykkum akkurát hvussu gott vitlíki kann týða úr donskum til føroyskt og so kunnu tit taka avgerð, um tit vilja fara víðari við hesum. Fyrst gjørdu vit eitt sera gott birt <em>(prompt)</em>,
+                    og síðani <strong>royndu vit hetta birt á øllum teimum bestu altjóða modellunum.</strong>"
                     Niðurstøðurnar vórðu lagdar fram í eini greiðari <strong>frágreiðing</strong>.
                   </p>
                 </div>
@@ -974,8 +974,8 @@ export default function Home() {
                         <FileText className="w-5 h-5 text-primary" />
                       </div>
                       <div className="flex-1">
-                        <h5 className="font-semibold text-base mb-2">Inntøka av skjalum</h5>
-                        <p className="text-sm text-muted-foreground leading-relaxed">Tekur donsk word skjøl inn.</p>
+                        <h5 className="font-semibold text-base mb-2">Innlesing av skjølum</h5>
+                        <p className="text-sm text-muted-foreground leading-relaxed">Tekur inn donsk Word-skjøl.</p>
                       </div>
                     </div>
 
@@ -985,7 +985,7 @@ export default function Home() {
                       </div>
                       <div className="flex-1">
                         <h5 className="font-semibold text-base mb-2">Vitlíki‑týðing</h5>
-                        <p className="text-sm text-muted-foreground leading-relaxed">Brúkti birti vit høvdu gjørt frammanundan til at týða tekstin til føroyskt.</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">Nú brúktu vit birtið, sum vit høvdu gjørt frammanundan til at týða tekstin til føroyskt.</p>
                       </div>
                     </div>
 
@@ -996,7 +996,7 @@ export default function Home() {
                       <div className="flex-1">
                         <h5 className="font-semibold text-base mb-2">Yvirlit yvir allar setningar</h5>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                          Amboði vísir allar teir umsettu setningarnar, soleiðis at eitt fólk kann rætt og góðkenna alt árenn tað ferð víðari.
+                          Amboðið vísir allar teir umsettu setningarnar, soleiðis at eitt fólk kann rætta og góðkenna alt áðrenn tað fer víðari.
                         </p>
                       </div>
                     </div>
@@ -1008,7 +1008,7 @@ export default function Home() {
                       <div className="flex-1">
                         <h5 className="font-semibold text-base mb-2">Góðkenning</h5>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                          Setningar kunnu merkjast sum "góðkent" eftir rætting. Hettar kallast "Human in the loop" og er eitt sera vitalt ting at hava við, tá ið man arbeiður við vitlíki.
+                          Setningar kunnu merkjast sum "góðkendir" eftir rætting. Hetta kallast "Human in the loop" og er eitt sera vitalt ting at hava við, tá ið ein arbeiðir við vitlíki.
                         </p>
                       </div>
                     </div>
@@ -1020,7 +1020,7 @@ export default function Home() {
                       <div className="flex-1">
                         <h5 className="font-semibold text-base mb-2">Útflutningur til Word</h5>
                         <p className="text-sm text-muted-foreground leading-relaxed">
-                          Tá alt skjalið er góðkent, verður endaligi teksturin fluttur út sum Word‑fíla á føroyskum.
+                          Tá alt skjalið er góðkent, verður endaligi teksturin fluttur út sum Word‑fílu á føroyskum.
                         </p>
                       </div>
                     </div>
@@ -1029,7 +1029,7 @@ export default function Home() {
 
                 <div className="bg-gradient-to-r from-primary/5 to-primary/10 p-8 rounded-xl border-l-4 border-primary mt-6">
                   <blockquote className="text-lg italic text-foreground leading-[1.7] font-medium">
-                    Stutt sagt: ein sera væl eydna vitlíki‑verkætlan, sum riggaði væl – og gav skjót, dygdargóð úrslit.
+                    Stutt sagt: ein sera væl eydnað vitlíkisverkætlan, sum riggaði væl – og gav skjót, dygdargóð úrslit.
                   </blockquote>
                 </div>
               </div>

@@ -183,7 +183,7 @@ export default function UmOkkum() {
                           </div>
                           <div className="flex-1">
                             <h4 className="text-lg font-bold mb-2 text-gray-900">Verulig úrslit</h4>
-                            <p className="text-gray-700 leading-relaxed">At skapa vitlíki-loysnir, sum veruliga rigga. Tað er ov nógv tóm luft og dreymar í vitlíkisprátinum. Eg skeri ígjøgnum alt tað, sum ikki riggar.</p>
+                            <p className="text-gray-700 leading-relaxed">At skapa vitlíki-loysnir, sum veruliga rigga. Tað er ov nógv tóm luft og ov nógvir dreymar í vitlíkisprátinum. Eg skeri ígjøgnum alt tað, sum ikki riggar.</p>
                           </div>
                         </div>
                       </div>
@@ -264,7 +264,7 @@ export default function UmOkkum() {
 
                 {/* Call to Action Box */}
                 <div className="bg-black text-white p-6">
-                  <p className="text-xs uppercase tracking-widest mb-3">Til reiðar?</p>
+                  <p className="text-xs uppercase tracking-widest mb-3">Ert tú til reiðar?</p>
                   <p className="font-serif text-xl mb-4">Set teg í samband við meg.</p>
                   <div className="w-full h-0.5 bg-white/30"></div>
                 </div>

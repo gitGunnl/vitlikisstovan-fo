@@ -249,7 +249,7 @@ export default function Taenastur() {
                       </Badge>
                     </div>
                     <p className="leading-relaxed mb-4">
-                      Ger tíni vitlíki hugskot til veruleika við
+                      Ger tíni vitlíkishugskot til veruleika við
                       mínari menningarserfrøði. Eg hjálpi tær at byggja
                       sniðgjørdar loysnir, ið hóska til tín tørv.
                     </p>
@@ -345,13 +345,13 @@ export default function Taenastur() {
                         Eg dugi at brúka vitlíkisamboð til at skapa myndir, video, tónleik og nógv annað tilfar, ið fangar áskoðaran. 
                       </p>
                       <p className="text-purple-700 mb-4">
-                        Við vitlíki kann ein ofta gera tilfar, sum vanliga hevði tikið tímar at framleiða, upp á stutta tíð – alt gjørt við nýggjastu og bestu vitlíkistøknini.
+                        Við vitlíki kann ein ofta gera tilfar, sum vanliga hevði tikið tímar at framleiða, eftir stuttari tíð – alt gjørt við nýggjastu og bestu vitlíkistøknini.
                       </p>
                       <p className="text-purple-700 mb-4">
                         Um tú bara vilt hava meg at gera arbeiðið, ella sjálvur vilt læra at stýra hesum amboðum, so kann eg hjálpa tær við báðum.
                       </p>
                       <p className="text-purple-700 text-sm mb-4">
-                        Fylg Vitlíkistovuni á sosialum miðlum fyri at síggja dømir av ymiskum tilfari, fáa íblástur og læra meira um, hvat ber til við vitlíki.
+                        Fylg Vitlíkistovuni á sosialum miðlum fyri at síggja dømi av ymiskum tilfari, fáa íblástur og læra meira um, hvat ber til við vitlíki.
                       </p>
                       <div className="flex flex-wrap gap-4">
                         <a 

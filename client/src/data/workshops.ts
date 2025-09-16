@@ -14,7 +14,7 @@ export interface Workshop {
 
 export const workshops: Record<string, Workshop> = {
   bakkafrost: {
-    name: "Vitlíki verkstova",
+    name: "Vitlíkisverkstova",
     company: "Bakkafrost",
     steps: [
       {
@@ -53,7 +53,7 @@ export const workshops: Record<string, Workshop> = {
     ]
   },
   betri: {
-    name: "Vitlíki verkstova",
+    name: "Vitlíkisverkstova",
     company: "Betri",
     steps: [
       {

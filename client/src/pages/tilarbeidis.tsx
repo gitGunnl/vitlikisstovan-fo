@@ -57,7 +57,7 @@ const timelineData: TimelineEvent[] = [
     date: "2025-08-01",
     title: "Kanningarstig",
     summary:
-      "Næsta stigið: seta okkum í samband við valdar bólkar og skipa fyri samrøður fyri at avdúka dagligar avbjóðingar.",
+      "Næsta stigið: seta okkum í samband við valdar bólkar og at skipa fyri samrøðum fyri at avdúka dagligar avbjóðingar.",
   },
   {
     id: "evt-007",
@@ -71,30 +71,37 @@ const timelineData: TimelineEvent[] = [
     date: "2025-08-20",
     title: "Menning av samrøðuamboði",
     summary:
-      "Vit menna eitt samrøðu amboð, sum nýtir vitlíki til at læra nógv meira um valdu bólkarnar, fyri at royna at fáa eitt breitt og munagott innlit í teirra dagligu arbeiðsrútinur og avbjóðingar.",
+      "Vit menna eitt samrøðuamboð, sum nýtir vitlíki til at læra nógv meira um valdu bólkarnar, fyri at royna at fáa eitt breitt og munagott innlit í teirra dagligu arbeiðsrútinur og avbjóðingar.",
   },
   {
     id: "evt-009",
     date: "2025-09-06",
-    title: "Fyrstu royndarsamrøður við námsfrøðingar eru býrjaðar",
+    title: "Fyrstu royndarsamrøður við námsfrøðingar eru byrjaðar",
     summary:
-      "Royndir eru farnar ígongd við fyrstu samrøðurnar við nakrar fáar námsfrøðingar fyri at vita um tað nýggja amboðið riggar væl.",
+      "Fyrstu rpyndar samrøðurnar við nakrar fáar námsfrøðingar eru farnar ígongd, fyri at vita um tað nýggja amboðið riggar væl.",
   },
   {
     id: "evt-010",
     date: "2025-09-13",
-    title: "Greinin um verkætlanina er komin út í Sosialin.",
+    title: "Greinin um verkætlanina er komin út í Sosialinum.",
     summary:
-      "Í Sosialinum hesa vikuna ber til at lesa blaði Vísindavøka, har millum annað ber til at lesa eina grein um hesa verkætlan og um vitlíki meira generalt.",
+      "Í Sosialinum hesa vikuna ber til at lesa blaðið Vísindavøka, har millum annað ber til at lesa eina grein um hesa verkætlan og um vitlíki sum heild.",
     mediaType: "image",
     mediaSrc: "/images/sosialurin.png",
   },
   {
+    id: "evt-010",
+    date: "2025-09-13",
+    title: "Royndir við samrøðutólið eydnaðist sera væl.",
+    summary:
+      "Royndir við samrøðutólið eydnaðist sera væl, so tí verur nú fari ígongd við nógv fleiri samrøður.",
+  },
+  {
     id: "evt-011",
     date: "2025-09-15",
-    title: "Samrøður við námsfrøðingar og hjálparafólk eru býrjaðar!",
+    title: "Samrøður við námsfrøðingar og hjálparafólk eru byrjaðar!",
     summary:
-      "Um tú ert hjálparafólk ella námsfrøðingur og gjarna vil hjálpa við hesari verkætlar, so kanst tú trýsta á tín knøtt niðanfyri, fyri at tosa við eitt vitlíkismodell um títt starv. Tað tekur áleið 15 min. og hjálpir hesari verkætlan sera nógv.",
+      "Um tú ert hjálparafólk ella námsfrøðingur og gjarna vil hjálpa við hesari verkætlan, so kanst tú trýsta á tín knøtt niðanfyri, fyri at tosa við eitt vitlíkismodell um títt starv. Tað tekur áleið 15 min. og hjálpir hesari verkætlan sera nógv.",
     mediaType: "buttons" as const,
   },
 ];
@@ -191,10 +198,10 @@ const Tilarbeidis = () => {
         <section className="pt-24 pb-16 px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              Verkætlanar dagføringar – Vitlíki til arbeiðis
+              Verkætlanardagføringar – Vitlíki til arbeiðis
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Fylg við okkara arbeiðsætlan, meðan vit menna vitlíki vegleiðingar
+              Fylg við okkara arbeiðsætlan, meðan vit menna vitlíkivegleiðingar
               til føroyska vinnulívið.
             </p>
           </div>
@@ -206,10 +213,10 @@ const Tilarbeidis = () => {
             <div className="bg-gradient-to-r from-primary/20 via-primary/15 to-accent/20 border-2 border-primary/40 rounded-2xl p-8 shadow-lg">
               <div className="text-center">
                 <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-foreground">
-                 Samrøður við námsfrøðingar og hjálparafólk eru býrjaðar!
+                 Samrøður við námsfrøðingar og hjálparafólk eru byrjaðar!
                 </h2>
                 <p className="text-lg text-foreground/90 mb-8 leading-relaxed max-w-3xl mx-auto">
-                  Um tú ert hjálparafólk ella námsfrøðingur og gjarna vil hjálpa við hesari verkætlar, so kanst tú trýsta á tín knøtt niðanfyri, fyri at tosa við eitt vitlíkismodell um títt starv. Tað tekur áleið 15 min. og hjálpir hesari verkætlan sera nógv.
+                  Um tú ert hjálparafólk ella námsfrøðingur og gjarna vil hjálpa við hesari verkætlan, so kanst tú trýsta á tín knøtt niðanfyri, fyri at tosa við eitt vitlíkismodell um títt starv. Tað tekur áleið 15 min. og hjálpir hesari verkætlan sera nógv.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
@@ -219,7 +226,7 @@ const Tilarbeidis = () => {
                     className="flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:scale-105 transform"
                   >
                     <span className="text-xl">🎓</span>
-                    Far til námsfrøðingar samrøðu
+                    Far til námsfrøðingasamrøðu
                   </a>
                   <a
                     href="https://interview-tool.replit.app/i/fdf4c068-eed5-492f-abd5-31cd168f9ead/ebe41d395e3546369d5528c185f7ab93"
@@ -228,7 +235,7 @@ const Tilarbeidis = () => {
                     className="flex items-center justify-center gap-3 px-8 py-4 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:scale-105 transform"
                   >
                     <span className="text-xl">🤝</span>
-                    Far til hjálparafólk samrøðu
+                    Far til hjálparafólkasamrøðu
                   </a>
                 </div>
               </div>
@@ -291,14 +298,14 @@ const Tilarbeidis = () => {
                   </p>
 
                   <p className="text-foreground/80 leading-loose text-lg">
-                    Vit fara at gera 6–8 stuttar, lætt skiljandi frágreiðingar, sum hvør sær verða tillagað eini ávísari vinnugrein. Frágreiðingarnar fara greiðiliga at vísa, hvussu verandi vitlíki-amboð, serliga málmenni sum ChatGPT, kunnu loysa veruligar og ítøkiligar trupulleikar, sum hesi starvsfólk hava.
+                    Vit fara at gera 6–8 stuttar, lættskiljandi frágreiðingar, sum verða tillagaðar ávísum vinnugreinum. Frágreiðingarnar fara greiðiliga at vísa, hvussu verandi vitlíki-amboð, serliga málmenni sum ChatGPT, kunnu loysa veruligar og ítøkiligar trupulleikar, sum hesi starvsfólk hava.
                   </p>
 
                   <p className="text-foreground/80 leading-loose text-lg">
-                    Við at veita sera handaliga vegleiðing, vilja vit minka um tær forðingar, sum halda fólki aftur frá at royna vitlíki til arbeiðis, og hjálpa teimum, ið hava mest brúk fyri tí, so tey fáa eina kærkomna hjálpandi hond í einari tíð har arbeiðislandslagi broytist skjótt.
+                    Við at veita sera handaliga vegleiðing, vilja vit minka um tær forðingar, sum halda fólki aftur frá at royna vitlíki til arbeiðis, og hjálpa teimum, ið hava mest brúk fyri tí, so tey fáa eina kærkomna hjálpandi hond í einari tíð, tá ið arbeiðslandslagi broytist skjótt.
                   </p>
                   <p className="text-foreground/80 leading-relaxed mt-4">
-                    Átakð hjálpur ikki bara fólk at brúka tøknina sum hon er í dag, men hjálpur teimum eisini at skilja hvussu tey kunnu brúka tøknina so við og við sum tøknin mennist.
+                    Átakið hjálpir ikki bara fólk at brúka tøknina sum hon er í dag, men hjálpir teimum eisini at skilja hvussu tey kunnu brúka tøknina so við og við sum tøknin mennist.
                   </p>
                 </div>
                 </div>
@@ -404,7 +411,7 @@ const Tilarbeidis = () => {
                             className="flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:scale-105 transform"
                           >
                             <span className="text-xl">🎓</span>
-                            Fær til Námsfrøðingar samrøðu
+                            Far til námsfrøðingar samrøðu
                           </a>
                           <a
                             href="https://interview-tool.replit.app/i/fdf4c068-eed5-492f-abd5-31cd168f9ead/ebe41d395e3546369d5528c185f7ab93"
@@ -413,7 +420,7 @@ const Tilarbeidis = () => {
                             className="flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:scale-105 transform"
                           >
                             <span className="text-xl">🤝</span>
-                            Fær til Hjálparafólk samrøðu
+                            Far til hjálparafólk samrøðu
                           </a>
                         </div>
                       )}
