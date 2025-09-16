@@ -25,10 +25,6 @@ export const siteConfig = {
         primaryCTA: {
           text: "Bílegg vitlíkis útbúgving til tykkara skrivstovu.",
           href: "#contact"
-        },
-        secondaryCTA: {
-          text: "Lær meira um útbúgvingina",
-          href: "#program"
         }
       },
       {
