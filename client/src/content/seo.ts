@@ -11,7 +11,7 @@ export const seoConfig = {
     "Vitlíki hjálp"
   ],
   author: "Vitlíkisstovan",
-  ogImage: "/images/og-image.png", // Default site image
+  ogImage: "/images/blog/foroyskt-vitliki-2025/og-image.png", // Default site image
   twitterCard: "summary_large_image",
   canonical: "https://vitlikisstovan.fo",
   language: "fo",
