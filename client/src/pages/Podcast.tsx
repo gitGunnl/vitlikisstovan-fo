@@ -120,11 +120,11 @@ export default function Podcast() {
             </div>
             <div className="parallax-layer layer-mid" data-speed="0.5">
               {/* Middle Layer - Mid-distance hills */}
-              <img src="/images/podcast/middle-layer.png" alt="Faroe Islands landscape middle" />
+              <img src="/images/podcast/middle layer.png" alt="Faroe Islands landscape middle" />
             </div>
             <div className="parallax-layer layer-front" data-speed="0.8">
               {/* Front Layer - Close up elements */}
-              <img src="/images/podcast/troll-and-sheep.png" alt="Faroe Islands landscape foreground" className="troll-sheep" />
+              <img src="/images/podcast/troll and sheep.png" alt="Faroe Islands landscape foreground" className="troll-sheep" />
               <img src="/images/podcast/grass.png" alt="Grass foreground" className="grass" />
             </div>
             <div className="parallax-layer layer-clouds" data-speed="0.3">
@@ -161,7 +161,7 @@ export default function Podcast() {
               <div className="tokni-box">
                 <div className="tokni-content">
                   <div className="tokni-logo">
-                    <img src="/images/podcast/logo-square.jpg" alt="Tøkni Tænastan Logo" className="tokni-logo-img" />
+                    <img src="/images/podcast/logo square.jpg" alt="Tøkni Tænastan Logo" className="tokni-logo-img" />
                   </div>
                   <div className="tokni-text">
                     <h3 className="tokni-title">A Tøkni Tænastan AI Project</h3>
