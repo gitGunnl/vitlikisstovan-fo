@@ -790,7 +790,7 @@ export default function Home() {
                               <Button
                                 onClick={() => {
                                   setOpenDialog(null);
-                                  window.location.href = '/contact';
+                                  window.location.href = '/tilarbeidis';
                                 }}
                                 aria-label="Les meira um verkætlanina her"
                               >
@@ -852,7 +852,7 @@ export default function Home() {
             </li>
             <li className="flex items-start gap-2">
             <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-            <span>At skapa munadygg byrt, ið eru lagað til teirra egnu arbeiðsuppgávur.</span>
+            <span>At skapa munadygg birt, ið eru lagað til teirra egnu arbeiðsuppgávur.</span>
             </li>
             <li className="flex items-start gap-2">
             <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
@@ -871,15 +871,15 @@ export default function Home() {
             <div className="space-y-3">
             <div className="p-4 border rounded-lg">
             <h5 className="font-semibold mb-1">Hálvdags innleiðsluskeið</h5>
-            <p className="text-sm text-muted-foreground">Hetta sniðið hevur riggað serliga væl til starvsfólkabólkar, eitt nú á skrivstovum, ið skulu koma skjótt í gongd.</p>
+            <p className="text-sm text-muted-foreground">Hetta sniðið hevur riggað serliga væl til starvsfólk, eitt nú á skrivstovum, ið skulu koma skjótt í gongd.</p>
             </div>
             <div className="p-4 border rounded-lg">
             <h5 className="font-semibold mb-1">Heildags dýpdarskeið</h5>
-            <p className="text-sm text-muted-foreground">Vit hava brúkt hetta til størri bólkar, eitt nú tá vit undirvístu umleið 200 lærarum, har dentur varð lagdur á ítøkiligar nýtsluhættir í undirvísingini.</p>
+            <p className="text-sm text-muted-foreground">Vit hava brúkt hetta til størri bólkar, eitt nú tá vit undirvístu umleið 200 lærarum, har dentur varð lagdur á ítøkiligar nýtsluhættir at fyrireika tímarnar.</p>
             </div>
             <div className="p-4 border rounded-lg">
             <h5 className="font-semibold mb-1">Skeiðsgongdir yvir fleiri dagar</h5>
-            <p className="text-sm text-muted-foreground">Til fyritøkur, sum ynskja eina djypri menning, hava vit skipað fyri skeiðsgongdum yvir fleiri dagar fyri at tryggja eina varandi umskipan.</p>
+            <p className="text-sm text-muted-foreground">Til fyritøkur, sum ynskja at gera øll síni skrivstovufólk klár til at kunna arbeiða munagott og trygt við vitlíki. Hettar er viðmælt ein og hvørjari fyritøku sum vil taka vitlíki í álvara.</p>
             </div>
             </div>
             </section>
@@ -888,7 +888,7 @@ export default function Home() {
             <section className="space-y-4">
             <h4 className="text-lg font-semibold mb-2">Bílegg eina verkstovu</h4>
             <p className="text-muted-foreground leading-[1.7] mb-4">
-            Hevur tú áhuga í eini líknandi verkstovu fyri tína fyritøku? Set teg í samband við meg, so finna vit eina loysn, ið er lagað til júst tykkara tørv.
+            Hevur tú áhuga í eini verkstovu til tína fyritøku? Set teg í samband við meg, so finna vit eina loysn, ið er lagað til júst tykkara tørv.
             </p>
             <div className="flex flex-wrap gap-3">
             <Button

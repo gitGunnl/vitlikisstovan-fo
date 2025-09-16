@@ -1,0 +1,78 @@
+You don’t need anything “OEM.” For Facebook (and most platforms), you add **Open Graph** meta tags to the page’s `<head>`. The key one is `og:image`.
+
+Here’s the quick setup:
+
+1. **Put Open Graph tags in your blog page’s `<head>`**
+
+```html
+<!-- Required -->
+<meta property="og:title" content="Your blog post title" />
+<meta property="og:description" content="A clear, enticing summary (2–3 sentences)." />
+<meta property="og:url" content="https://yourdomain.fo/blog/post-slug" />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="https://yourdomain.fo/og-images/post-slug.jpg" />
+<!-- Helpful: sizing hints -->
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<!-- Optional but nice -->
+<meta property="og:site_name" content="Vitlíkisstovan" />
+```
+
+If you’re using Next.js/React:
+
+```tsx
+import Head from "next/head";
+
+export default function BlogPost() {
+  return (
+    <>
+      <Head>
+        <title>Your blog post title</title>
+        <meta property="og:title" content="Your blog post title" />
+        <meta property="og:description" content="Short summary…" />
+        <meta property="og:url" content="https://yourdomain.fo/blog/post-slug" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content="https://yourdomain.fo/og-images/post-slug.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Your blog post title" />
+        <meta name="twitter:description" content="Short summary…" />
+        <meta name="twitter:image" content="https://yourdomain.fo/og-images/post-slug.jpg" />
+      </Head>
+      {/* … */}
+    </>
+  );
+}
+```
+
+2. **Image requirements (works best across platforms)**
+
+* **Size:** 1200×630 px (1.91:1). Minimum 600×315; absolute minimum 200×200.
+* **Format:** JPG or PNG (JPG usually smaller). Keep under \~2–3 MB (hard limit is higher, but don’t push it).
+* **URL must be absolute** (include `https://…`), publicly accessible (no auth), and return HTTP 200 with a proper `Content-Type` (e.g., `image/jpeg`).
+
+3. **Per-post vs. fallback**
+
+* Ideally each blog post has its **own** `og:image`.
+* You can set a **site-wide default** (e.g., in your layout) and override it per post.
+
+4. **Force Facebook to (re)scrape**
+
+* After you add/change tags, use Facebook’s **Sharing Debugger** (search “Facebook Sharing Debugger”), paste your URL, and click **Scrape Again**. This clears the old cache and shows you exactly what Facebook sees.
+* If it shows errors, fix them and scrape again.
+
+5. **Common gotchas**
+
+* The image URL redirects to a different domain or to HTTP → make sure final is **HTTPS** on the same host when possible.
+* Hotlink protection or IP blocking on your CDN blocks the **facebookexternalhit** crawler → whitelist it.
+* Multiple `og:image` tags: Facebook usually uses the **first** one.
+* Don’t rely only on regular `<img>` in the HTML; **only meta tags** control link previews.
+
+6. **Nice extras**
+
+* Add `og:image:secure_url` mirroring `og:image` if you serve both http/https (not required if you’re all-HTTPS).
+* Add `article:published_time` and `article:author` for blog posts (optional, but good).
+* Add `canonical` link tag to avoid preview confusion if you have multiple URLs for the same post.
+
+If you want, I can quickly sketch a clean, on-brand 1200×630 cover image concept for your blog posts (title area + subtle “Vitlíkisstovan” brand cues) that you can reuse as a template—just say the post title and vibe you want.
