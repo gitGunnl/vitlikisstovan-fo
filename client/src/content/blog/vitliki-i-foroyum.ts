@@ -117,43 +117,8 @@ const post = {
         <strong>Modell:</strong> Meta MMS TTS (fao)
       </p>
       
-      <!-- Audio Player -->
-      <div class="mb-4 p-3 bg-muted/30 rounded-lg border border-border/30">
-        <div class="flex items-center gap-3">
-          <button 
-            id="tts-play-btn" 
-            class="w-8 h-8 rounded-full bg-primary hover:bg-primary/90 flex items-center justify-center text-primary-foreground transition-colors"
-            onclick="toggleTTSAudio()"
-          >
-            <svg id="play-icon" class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M8 5v14l11-7z"/>
-            </svg>
-            <svg id="pause-icon" class="w-4 h-4 hidden" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
-            </svg>
-          </button>
-          <div class="flex-1">
-            <div class="text-sm font-medium mb-1">Føroysk talu dømi</div>
-            <div class="flex items-center gap-2">
-              <div class="flex-1 h-1 bg-border rounded-full overflow-hidden">
-                <div id="progress-bar" class="h-full bg-primary transition-all duration-300" style="width: 0%"></div>
-              </div>
-              <span id="time-display" class="text-xs text-muted-foreground">0:00</span>
-            </div>
-          </div>
-          <!-- Speaking Animation -->
-          <div id="speaking-animation" class="hidden flex items-center gap-1">
-            <div class="w-1 h-3 bg-primary rounded-full animate-pulse"></div>
-            <div class="w-1 h-4 bg-primary rounded-full animate-pulse" style="animation-delay: 0.2s"></div>
-            <div class="w-1 h-2 bg-primary rounded-full animate-pulse" style="animation-delay: 0.4s"></div>
-            <div class="w-1 h-5 bg-primary rounded-full animate-pulse" style="animation-delay: 0.6s"></div>
-          </div>
-        </div>
-        <audio id="tts-audio" preload="metadata">
-          <source src="/client/src/content/blog/faroese_long.wav" type="audio/wav">
-          Tín browser støðir ikki audio.
-        </audio>
-      </div>
+      <!-- Audio Player Component -->
+      <div class="mb-4" data-audio-player="/faroese_long.wav" data-title="Føroysk talu dømi"></div>
 
       <div class="space-y-3">
         <div>
@@ -171,56 +136,7 @@ const post = {
       </div>
     </div>
 
-    <script>
-      function toggleTTSAudio() {
-        const audio = document.getElementById('tts-audio');
-        const playIcon = document.getElementById('play-icon');
-        const pauseIcon = document.getElementById('pause-icon');
-        const speakingAnimation = document.getElementById('speaking-animation');
-        const progressBar = document.getElementById('progress-bar');
-        const timeDisplay = document.getElementById('time-display');
-        
-        if (audio.paused) {
-          audio.play();
-          playIcon.classList.add('hidden');
-          pauseIcon.classList.remove('hidden');
-          speakingAnimation.classList.remove('hidden');
-        } else {
-          audio.pause();
-          playIcon.classList.remove('hidden');
-          pauseIcon.classList.add('hidden');
-          speakingAnimation.classList.add('hidden');
-        }
-      }
-      
-      document.addEventListener('DOMContentLoaded', function() {
-        const audio = document.getElementById('tts-audio');
-        const progressBar = document.getElementById('progress-bar');
-        const timeDisplay = document.getElementById('time-display');
-        const playIcon = document.getElementById('play-icon');
-        const pauseIcon = document.getElementById('pause-icon');
-        const speakingAnimation = document.getElementById('speaking-animation');
-        
-        audio.addEventListener('timeupdate', function() {
-          if (audio.duration) {
-            const progress = (audio.currentTime / audio.duration) * 100;
-            progressBar.style.width = progress + '%';
-            
-            const minutes = Math.floor(audio.currentTime / 60);
-            const seconds = Math.floor(audio.currentTime % 60);
-            timeDisplay.textContent = minutes + ':' + (seconds < 10 ? '0' : '') + seconds;
-          }
-        });
-        
-        audio.addEventListener('ended', function() {
-          playIcon.classList.remove('hidden');
-          pauseIcon.classList.add('hidden');
-          speakingAnimation.classList.add('hidden');
-          progressBar.style.width = '0%';
-          timeDisplay.textContent = '0:00';
-        });
-      });
-    </script>
+    
 
     <!-- LLM Card -->
     <div class="border border-border/60 rounded-lg p-6 bg-background shadow-sm">

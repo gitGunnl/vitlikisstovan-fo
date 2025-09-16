@@ -1,15 +1,19 @@
-
-import { useEffect, useState } from "react";
-import { useRoute } from "wouter";
+import React, { useEffect, useState } from "react";
+import { useRoute, useParams } from "wouter";
+import { createRoot } from "react-dom/client";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import Section from "@/components/site/Section";
+import AudioPlayer from "@/components/site/AudioPlayer";
+import { Badge } from "@/components/ui/badge";
+import { Clock, Calendar, User } from "lucide-react";
 import { seoConfig } from "@/content/seo";
-import { CalendarDays, Clock } from "lucide-react";
 import { Link } from "wouter";
 
+
 export default function BlogPost() {
-  const [match, params] = useRoute("/blog/:slug");
+  const params = useParams();
+  const slug = params.slug;
   const [post, setPost] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
@@ -19,12 +23,12 @@ export default function BlogPost() {
     const loadPost = async () => {
       try {
         // Import the blog post content dynamically
-        const postModule = await import(`@/content/blog/${params?.slug}.ts`);
+        const postModule = await import(`@/content/blog/${slug}.ts`);
         setPost(postModule.default);
-        
+
         // Set page metadata
         document.title = postModule.default.title + " - " + seoConfig.title;
-        
+
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
           metaDescription.setAttribute("content", postModule.default.excerpt);
@@ -42,10 +46,28 @@ export default function BlogPost() {
       }
     };
 
-    if (params?.slug) {
+    if (slug) {
       loadPost();
     }
-  }, [params?.slug]);
+  }, [slug]);
+
+  useEffect(() => {
+    // Find and replace audio player placeholders with React components
+    const placeholders = document.querySelectorAll('[data-audio-player]');
+    placeholders.forEach((placeholder) => {
+      const audioSrc = placeholder.getAttribute('data-audio-player');
+      const title = placeholder.getAttribute('data-title');
+
+      if (audioSrc && title) {
+        // Clear the placeholder content
+        placeholder.innerHTML = '';
+
+        // Create and render the React component
+        const root = createRoot(placeholder);
+        root.render(<AudioPlayer audioSrc={audioSrc} title={title} />);
+      }
+    });
+  }, [slug]);
 
   if (loading) {
     return (
@@ -96,13 +118,13 @@ export default function BlogPost() {
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
                 {post.title}
               </h1>
-              
+
               <p className="text-lg text-muted-foreground">
                 {post.excerpt}
               </p>
             </div>
 
-            <div 
+            <div
               className="prose prose-gray max-w-none prose-headings:font-semibold prose-a:text-primary prose-a:no-underline hover:prose-a:underline"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
