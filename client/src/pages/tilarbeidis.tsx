@@ -373,19 +373,21 @@ const Tilarbeidis = () => {
                       </p>
 
                       {evt.mediaSrc && (
-                        <div className="aspect-video w-full rounded-lg overflow-hidden border border-border/40">
+                        <div className="w-full rounded-lg overflow-hidden border border-border/40">
                           {evt.mediaType === "video" ? (
-                            <iframe
-                              src={evt.mediaSrc}
-                              className="w-full h-full"
-                              allowFullScreen
-                              title={evt.title}
-                            />
+                            <div className="aspect-video">
+                              <iframe
+                                src={evt.mediaSrc}
+                                className="w-full h-full"
+                                allowFullScreen
+                                title={evt.title}
+                              />
+                            </div>
                           ) : (
                             <img
                               src={evt.mediaSrc}
                               alt={evt.title}
-                              className="w-full h-full object-cover"
+                              className="w-full h-auto"
                               loading="lazy"
                               decoding="async"
                             />
