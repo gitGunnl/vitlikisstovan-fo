@@ -300,6 +300,20 @@
     .player-container {
         padding: 15px 10px;
     }
+    
+    /* Mobile-specific player styles */
+    @media (max-width: 640px) {
+        /* Make progress bar easier to tap on mobile */
+        input[type="range"] {
+            height: 12px;
+        }
+        
+        /* Ensure buttons are properly sized for touch */
+        button {
+            min-height: 44px;
+            min-width: 44px;
+        }
+    }
 
     /* Social Links in CTA Mobile */
     .social-link {
