@@ -792,10 +792,10 @@ export default function Home() {
                                   setOpenDialog(null);
                                   window.location.href = '/contact';
                                 }}
-                                aria-label="Kontakt um Vitlíki til arbeiðis"
+                                aria-label="Les meira um verkætlanina her"
                               >
                                 <Mail className="mr-2 h-4 w-4" />
-                                Samband í mun til "Vitlíki til arbeiðis"
+                                Les meira um verkætlanina her
                               </Button>
                             </div>
                           </section>
@@ -824,115 +824,89 @@ export default function Home() {
                       </ScrollArea>
                     </DialogContent>
                   </Dialog>
+          
+          {/* Dialog for Verkstovur */}
+            <Dialog open={openDialog === 'verkstovur'} onOpenChange={() => setOpenDialog(null)}>
+            <DialogContent className="max-w-2xl max-h-[85vh]">
+            <DialogHeader className="mb-4">
+            <DialogTitle className="text-xl font-bold mb-2">Verkstovur og skeið</DialogTitle>
+            <DialogDescription className="text-base leading-relaxed">
+            Eg havi hildið hópin av verkstovum um hvussu tú brúkar ChatGPT og onnur vitlíki‑amboð
+            í veruligum arbeiðsuppgávum.
+            </DialogDescription>
+            </DialogHeader>
 
-                  {/* Dialog for Verkstovur */}
-                  <Dialog open={openDialog === 'verkstovur'} onOpenChange={() => setOpenDialog(null)}>
-                    <DialogContent className="max-w-2xl max-h-[85vh]">
-                      <DialogHeader className="mb-4">
-                        <DialogTitle className="text-xl font-bold mb-2">AI Workshops & Training</DialogTitle>
-                        <DialogDescription className="text-base leading-relaxed">
-                          Bring AI literacy to your entire team through engaging, practical workshops. 
-                          Participants learn by doing, with exercises tailored to your organization's needs.
-                        </DialogDescription>
-                      </DialogHeader>
+            <ScrollArea className="h-[500px] px-4">
+            <div className="space-y-8 pr-6">
+            {/* What participants learn */}
+            <section className="space-y-4">
+            <h4 className="text-lg font-semibold mb-2">Hvat luttakararnir læra</h4>
+            <ul className="space-y-3 text-muted-foreground">
+            <li className="flex items-start gap-2">
+            <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+            <span>At skilja møguleikar og avmarkingar við vitlíki.</span>
+            </li>
+            <li className="flex items-start gap-2">
+            <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+            <span>At brúka KjattGPT og onnur viðkomandi amboð í praksis.</span>
+            </li>
+            <li className="flex items-start gap-2">
+            <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+            <span>At skapa munadygg byrt, ið eru lagað til teirra egnu arbeiðsuppgávur.</span>
+            </li>
+            <li className="flex items-start gap-2">
+            <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+            <span>Høvuðsdentur verður lagdur á felags venjingar við dømum úr gerandisdegnum.</span>
+            </li>
+            <li className="flex items-start gap-2">
+            <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+            <span>Vit gjøgnumganga góðar mannagongdir fyri trygd og etikki innan vitlíki.</span>
+            </li>
+            </ul>
+            </section>
 
-                      <ScrollArea className="h-[500px] px-4">
-                        <div className="space-y-8 pr-6">
-                          {/* What workshops cover */}
-                          <section className="space-y-4">
-                            <h4 className="text-lg font-semibold mb-2">What Workshops Cover</h4>
-                            <ul className="space-y-3 text-muted-foreground">
-                              <li className="flex items-start gap-2">
-                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                                <span>Understanding AI capabilities and limitations</span>
-                              </li>
-                              <li className="flex items-start gap-2">
-                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                                <span>Hands-on practice with ChatGPT and other tools</span>
-                              </li>
-                              <li className="flex items-start gap-2">
-                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                                <span>Creating effective prompts for your field</span>
-                              </li>
-                              <li className="flex items-start gap-2">
-                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                                <span>Collaborative exercises with real work scenarios</span>
-                              </li>
-                              <li className="flex items-start gap-2">
-                                <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
-                                <span>Best practices for AI safety and ethics</span>
-                              </li>
-                            </ul>
-                          </section>
+            {/* Workshop formats */}
+            <section className="space-y-4">
+            <h4 className="text-lg font-semibold mb-2">Dømi um verkstovur</h4>
+            <div className="space-y-3">
+            <div className="p-4 border rounded-lg">
+            <h5 className="font-semibold mb-1">Hálvdags innleiðsluskeið</h5>
+            <p className="text-sm text-muted-foreground">Hetta sniðið hevur riggað serliga væl til starvsfólkabólkar, eitt nú á skrivstovum, ið skulu koma skjótt í gongd.</p>
+            </div>
+            <div className="p-4 border rounded-lg">
+            <h5 className="font-semibold mb-1">Heildags dýpdarskeið</h5>
+            <p className="text-sm text-muted-foreground">Vit hava brúkt hetta til størri bólkar, eitt nú tá vit undirvístu umleið 200 lærarum, har dentur varð lagdur á ítøkiligar nýtsluhættir í undirvísingini.</p>
+            </div>
+            <div className="p-4 border rounded-lg">
+            <h5 className="font-semibold mb-1">Skeiðsgongdir yvir fleiri dagar</h5>
+            <p className="text-sm text-muted-foreground">Til fyritøkur, sum ynskja eina djypri menning, hava vit skipað fyri skeiðsgongdum yvir fleiri dagar fyri at tryggja eina varandi umskipan.</p>
+            </div>
+            </div>
+            </section>
 
-                          {/* Workshop formats */}
-                          <section className="space-y-4">
-                            <h4 className="text-lg font-semibold mb-2">Workshop Formats</h4>
-                            <div className="space-y-3">
-                              <div className="p-4 border rounded-lg">
-                                <h5 className="font-semibold mb-1">Half-Day Introduction Sessions</h5>
-                                <p className="text-sm text-muted-foreground">Perfect for teams getting started with AI tools</p>
-                              </div>
-                              <div className="p-4 border rounded-lg">
-                                <h5 className="font-semibold mb-1">Full-Day Deep Dives</h5>
-                                <p className="text-sm text-muted-foreground">Comprehensive training for specific use cases</p>
-                              </div>
-                              <div className="p-4 border rounded-lg">
-                                <h5 className="font-semibold mb-1">Multi-Session Programs</h5>
-                                <p className="text-sm text-muted-foreground">Ongoing training for complete AI transformation</p>
-                              </div>
-                            </div>
-                          </section>
-
-                          {/* Project: Vitlíki til arbeiðis */}
-                          <section className="space-y-4">
-                            <h4 className="text-lg font-semibold mb-2">"Vitlíki til arbeiðis"</h4>
-                            <p className="text-muted-foreground leading-[1.7] mb-3">
-                              <strong>Granskingar grunnurin</strong> hevur stuðla mær í at menna <strong>"Vitlíki til arbeiðis"</strong> –
-                            ein verkætlan har eg hjálpi ávísum bólkum at koma gott ígongd við vitlíki. Felags fyri hesar bólkar er at tað eru bólkar í ikki sita við teldu dagliga, hesir bólk eru í vanda fyri at koma ov seint ígong við vitlíki og tí hjálpi eg júst teimum.
-                            </p>
-                            <p className="text-muted-foreground leading-[1.7] mb-4">
-                              Fyrstu vegleiðingar vera klárar í býrjani av Novembur 2025.
-                            </p>
-
-                            <div className="flex flex-wrap gap-3 mt-4">
-                              <Button
-                                onClick={() => {
-                                  setOpenDialog(null);
-                                  window.location.href = '/contact';
-                                }}
-                                aria-label="Kontakt um Vitlíki til arbeiðis"
-                              >
-                                <Mail className="mr-2 h-4 w-4" />
-                                Kontakt um "Vitlíki til arbeiðis"
-                              </Button>
-                            </div>
-                          </section>
-
-                          {/* Book a workshop */}
-                          <section className="space-y-4">
-                            <h4 className="text-lg font-semibold mb-2">Book a Workshop</h4>
-                            <p className="text-muted-foreground leading-[1.7] mb-4">
-                              Ready to bring AI skills to your team? Let's discuss your needs and create a 
-                              workshop tailored to your organization.
-                            </p>
-                            <div className="flex flex-wrap gap-3">
-                              <Button
-                                asChild
-                                aria-label="Book a workshop"
-                              >
-                                <a href="/contact">
-                                  <Mail className="mr-2 h-4 w-4" />
-                                  Book a Workshop
-                                </a>
-                              </Button>
-                            </div>
-                          </section>
-                        </div>
-                      </ScrollArea>
-                    </DialogContent>
-                  </Dialog>
-
+            {/* Book a workshop */}
+            <section className="space-y-4">
+            <h4 className="text-lg font-semibold mb-2">Bílegg eina verkstovu</h4>
+            <p className="text-muted-foreground leading-[1.7] mb-4">
+            Hevur tú áhuga í eini líknandi verkstovu fyri tína fyritøku? Set teg í samband við meg, so finna vit eina loysn, ið er lagað til júst tykkara tørv.
+            </p>
+            <div className="flex flex-wrap gap-3">
+            <Button
+            asChild
+            aria-label="Bílegg eina verkstovu"
+            >
+            <a href="/contact">
+            <Mail className="mr-2 h-4 w-4" />
+            Bílegg verkstovu
+            </a>
+            </Button>
+            </div>
+            </section>
+            </div>
+            </ScrollArea>
+            </DialogContent>
+            </Dialog>
+         
           {/* Dialog for Týðingar */}
           <Dialog open={openDialog === 'tydingar'} onOpenChange={() => setOpenDialog(null)}>
             <DialogContent className="max-w-3xl max-h-[85vh] overflow-y-auto">

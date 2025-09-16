@@ -257,24 +257,24 @@ export const siteConfig = {
         dialogId: "verkstovur"
       },
       {
-        title: "Sergjørt amboð til týðing úr Donskum til Føroyskt",
+        title: "Sergjørt amboð til týðing úr donskum til føroyskt",
         description:
-          "Onkumtíð so skal man bara hava hjálp frá vitlíki til eina ávísa uppgávu. Tildømis um tú skal týða Donsk skjal til Føroyskt. Hettar var ein uppgáva eg havi loyst fyri ein kunda. Les meira um hvussu tað gekk fyri seg her:",
+          "Onkuntíð er tað nokk um vitlíki hjálpir við einari ávísari uppgávu. Eitt nú um tú skal týða donsk skjøl til føroyskt. Hetta var ein av uppgávunum, ið eg loysti fyri ein kunda.",
         image:
           "/images/dansk til foroyskt.gif",
         imageAlt: "Bøkur og tilfar um málslæru",
-        buttonText: "Síggj dømið",
+        buttonText: "Sí dømi",
         buttonVariant: "outline",
         dialogId: "tydingar"
       },
       {
         title: "Kreativt vitlíki: myndir, filmar og annað",
         description:
-          "Vitlíki kann skapa alt millum himmal og jørð: myndir, filmar, tónleik og nógv annað. Eg deili regluliga tíðindir og ymiskar royndir eg geri við vitlíki, serliga í mun til at skapa tilfar við vitlíki, tú kann síggja nógv ting eg havi roynt á sosialum miðlum.",
+          "Vitlíki kann skapa alt millum himmal og jørð: Myndir, filmar, tónleik og nógv annað. Eg deili regluliga ymiskt tilfar, ið eg skapi við vitlíki, umframt vitlíkisviðkomandi tíðindi, á sosialu miðlunum hjá Vitlíkisstovuni. Fylg Vitlíkisstovuni her:",
         image:
           "/images/AI image example.jpeg",
         imageAlt: "Filmframleiðsla og kreativt studio",
-        followText: "Fylg okkum á sosialu miðlunum fyri at síggja dømi um tað vit hava skapað og fáa reglubundnar innsiktir um hvat er møguligt við vitlíki:",
+        followText: "",
         showSocialLinks: true
       }
     ]
@@ -324,10 +324,10 @@ export const siteConfig = {
   contact: {
     title: "Hug at byrja?",
     subtitle:
-      "Sig mær hvat tú hugsar, so sigi eg tær hvussu vitlíki kann hjálpa við hesum.",
+      "Sig mær hvat tú hugsar, so sigi eg tær hvussu vitlíka kann hjálpa.",
     sectionTitle: "Allir spurningar eru vælkomnir",
     description:
-      "Antin tú hevur áhuga í 12-vikuskeiðnum, ráðgeving ella eini kreativari verkætlan, so svara vit innan ein arbeiðsdag.",
+      "Antin tú hevur áhugað í 12-vikursskeiðnum til títt toymið, ráðgevingm íkasti til eina kreativa verkætlan ella eitt fjórða - so svari eg tær áðrenn næsti gerandisdagur er lokin.",
     email: "info@ritvit.fo",
     phone: "+298 919444",
     bookingUrl: ""

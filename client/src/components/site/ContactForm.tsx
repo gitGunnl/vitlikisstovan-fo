@@ -121,7 +121,7 @@ export default function ContactSection() {
               </div>
               
               <div className="pt-6 mt-6 border-t">
-                <p className="text-base font-medium text-foreground mb-6">Fylg okkum fyri at læra meira um vitlíki</p>
+                <p className="text-base font-medium text-foreground mb-6">Fylg Vitlíkisstovuni fyri at læra meira um vitlíki</p>
                 <div className="flex items-center gap-6">
                   <a 
                     href={siteConfig.social.facebook} 
@@ -209,7 +209,7 @@ export default function ContactSection() {
                         <Textarea
                           {...field}
                           rows={5}
-                          placeholder="Seg okkum um títt verkætlan ella spurnin..."
+                          placeholder="Skriva tín spurning ella greið frá tíni verkætlan..."
                           className="resize-none"
                           data-testid="textarea-message"
                         />
