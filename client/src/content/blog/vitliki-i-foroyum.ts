@@ -17,13 +17,13 @@ const post = {
 
 <section aria-labelledby="sec-1">
   <h2 id="sec-1">1) Hvat fært tú burtur úr at lesa hetta?</h2>
-  <p>Hetta er títt skjóta innlit í føroyskt <strong>vitlíki</strong> í 2025: <em>Hvat finst, hvussu væl tað riggar í verki, og mína meining til hvat viteiga at raðfesta næstu 12 mánaðirnar.</em> Vit hyggja uppá:</p>
+  <p>Hetta er títt skjóta innlit í føroyskt <strong>vitlíki</strong> í 2025: <em>Hvat finst, hvussu væl tað riggar í verki, og mín meining til hvat vit eiga at raðfesta næstu 12 mánaðirnar.</em> Vit hyggja uppá:</p>
   <ul>
     <li>eitt <strong>yvirlit</strong> yvir ymisku føroysku modellini,</li>
     <li>eina <strong>greiða strategi</strong>: set <strong>EN→FO týðing</strong> og <strong>føroyska talu til tekst</strong> fremst,</li>
     <li> <strong>hví dátur er fløskuhálsurin</strong> — og hvussu vit fáa gongd á eitt føroyskt dátuinfrakervi.</li>
   </ul>
-  <p><em>Myndburðurin, vit brúka her, er einfaldur:</em> modell eru sum <strong>hamarar og sagir</strong>. Men ein hamari byggir ikki eitt hús — ein dugnaligur persónur við røttum amboðum og røttum arbeiðsgongdum byggir hús við hamara. Tí er tað umroðandi at byggja amboð sum kunna brúkast til veruligt arbeiði.</p>
+  <p><em>Myndburðurin, vit brúka her, er einfaldur:</em> modell eru sum <strong>hamarar og sagir</strong>. Men ein hamari byggir ikki eitt hús sjálvur — ein dugnaligur persónur við røttum amboðum og røttum arbeiðsgongdum byggir hús við hamara. Tí er tað eisini umroðandi at byggja vitlíki amboð sum kunna brúkast til veruligt arbeiði.</p>
 
   <figure class="not-prose my-6">
     <img
@@ -40,12 +40,12 @@ const post = {
 <section aria-labelledby="sec-2">
   <h2 id="sec-2">2) Í stuttum</h2>
   <ul>
-    <li>Vit hava eina fyrstu bylgju av <strong>føroyskum vitlíki‑amboðum</strong>. Tey eru <strong>brúkilig til nógv ting</strong> — men ikki klár til at vera brúkt allataðni.</li>
+    <li>Vit hava longu eina fyrstu bylgju av <strong>føroyskum vitlíki‑amboðum</strong>. Tey eru <strong>brúkilig til nógv ting</strong> — men ikki klár til at vera brúkt allataðni.</li>
     <li><strong>Fløskuhálsurin er dátur</strong>: Granskarir hava alt ov lítið av føroyskum dátum at arbeiða við, og loyvini í hesum sambandi eru ofta ógreið. Hetta er ein <strong>infrakervisuppgáva</strong> sum onkur má fáa løn fyri at loysa.</li>
     <li><strong>Strategi nú:</strong> Raðfest <strong>enskt til føroyska týðing</strong> og <strong>føroyska talu til tekst (ASR)</strong> modell. Tey geva skjótast virði og leggja lunnar undir veruliga nýttu av vitlíki á Føroyskum.</li>
     <li><strong>Ikki jagstra eitt fullkomið føroyskt ChatGPT beint nú.</strong> Brúka heldur tað, vit hava (týðing + ASR) til <strong>smáar, álítandi loysnir</strong> — og fóðrið skipanirnar við <strong>betri dátum</strong>.</li>
-    <li><strong>Fyritøkur kunnu gott byrja at nýta vitlíki í dag</strong>: Men tú fáa best úrslit um tú arbeiður á enskum og bara týður til føroyskt tá ið tað er neyðugt. Hettar er óheppi fyri tað Føroyska máli á arbeiðis plássinum.</li>
-    <li>o Føroyskt vitlíki sum oftast ikki er klárt til nakað kunde vent, so kunna Fyritøkur spæla við Føroyskt vitlíki til innanhýsis amboð, so sum at avskriva reinar ljóð upptøkur á Føroyskum ella geva innanhýsis amboðum eina <strong>føroyska rødd</strong>.</li>
+    <li><strong>Fyritøkur kunnu gott byrja at nýta vitlíki í dag</strong>: Men tú fær besta úrsliti um tú arbeiður á enskum og bara týður til føroyskt tá ið tað er neyðugt. Hettar er óheppi fyri tað Føroyska máli á arbeiðis plássinum.</li>
+    <li>Sjálvt um føroysku vitlíki amboðini ikki eru klár til nakað kunda vent, so kunna Fyritøkur spæla við føroyskt vitlíki til innanhýsis amboð, so sum at avskriva reinar ljóð upptøkur á Føroyskum ella geva innanhýsis amboðum eina <strong>føroyska rødd</strong>. <em>(Tú kann hoyra hvussu hettar ljóðar longur nirrið!)</em> </li>
   </ul>
   <hr class="my-8 border-border/60" />
 </section>
