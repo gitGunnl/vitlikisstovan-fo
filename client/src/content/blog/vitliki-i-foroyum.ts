@@ -8,7 +8,7 @@ const post = {
     "Eitt skjótt yvirlit yvir føroysku modellini, meting av avrikum og ein hugleiðing um hvat eigur at mennast næst — við greiðum stigum fyri fyritøkur og gransking.",
   readTime: "12 min",
   author: "Vitlíkisstovan",
-  ogImage: "/images/blog/foroyskt-vitliki-2025/Screenshot of blog top.png",
+  ogImage: "/images/blog/foroyskt-vitliki-2025/og-image.png",
   // IMPORTANT: content is semantic HTML. Text is unchanged.
   content: `
 <!-- Keep H1 for accessibility but hide visually to avoid duplicate page titles -->
