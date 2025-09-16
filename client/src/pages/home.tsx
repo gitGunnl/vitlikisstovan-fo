@@ -309,7 +309,7 @@ export default function Home() {
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                     <div className="text-sm font-medium">
                       <div className="text-xs opacity-80">NÝGGJUR BLOGGUR</div>
-                      <div>Føroysk vitlíki model</div>
+                      <div>Føroysk vitlíkiamboð</div>
                     </div>
                     <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

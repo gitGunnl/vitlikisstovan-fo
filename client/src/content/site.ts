@@ -21,18 +21,18 @@ export const siteConfig = {
       {
         title: "Eisini tú kanst meistra vitlíki!",
         subtitle:
-          "Eg veit akkurát hvussu tit kunna koma frá nýbyrjandi innan vitlíki til dugnaligir vitlíkis brúkarir. Eg taki mær av øllum, tit skulla bara lurta og læra.",
+          "Vitlíkisstovan mennir tykkum frá at vera nýbyrjarar innan vitlíki til dugnaligar vitlíkisbrúkarar. Eg taki mær at øllum - tit skulu einans lurta og læra.",
         primaryCTA: {
-          text: "Bílegg vitlíkis útbúgving til tykkara skrivstovu.",
+          text: "Les meira um gongdina frá at vera nýbyrjari til dugnaligur vitlíkisbrúkari her:",
           href: "#contact"
         }
       },
       {
-        title: "Nýggjur bloggur: Føroysk vitlíki modellir",
+        title: "Nýggjur bloggur: Føroysk vitlíkiamboð",
         subtitle:
-          "Les tað nýggja blogginnleggið um hvørji Føroysk vitlíki model eru tøk, hvussu góð tey eru og hvat tey kunna brúkast til.",
+          "Les nýggjasta bloggin um hvørji føroysk vitlíkimodell eru tøk, hvat tey kunnu brúkast til og hvussu góð tey eru.",
         primaryCTA: {
-          text: "Les blogginnleggið",
+          text: "Les bloggin",
           href: "/blog/vitliki-i-foroyum"
         }
       },
@@ -49,32 +49,32 @@ export const siteConfig = {
   },
 
   program: {
-    title: "Frá forvitin til framkomin: Ein 12-viku útbúgving til skrivstovur",
+    title: "Frá forvitin til framkomin: Eitt 12-vikurs skeið til skrivstovufólk",
     subtitle:
-      "Einfalt skeið til tykkara skrivstovu. Eg komi út til tykkum, læri toymið og seti alt upp. Tit samlast nakrar ferðir og læra at arbeiða trygt og munagott við vitlíki.",
+      "Hetta er eitt einfalt og úrslitssøkið skeið til tykkara skrivstovu. Eg komi út til tykkara, seti alt upp og læri toymið alt tað skal duga. Tit samlast nakrar ferðir og læra at arbeiða trygt og munagott við vitlíki.",
 
     whatWeDeliver: {
-      title: "Eg hjálpa við hesum",
+      title: "Vit fáa stýr uppá",
       items: [
         {
           title: "Leiðreglur og mannagongdir",
           description:
-            "At orða, hvat starvsfólk kunnu og ikki kunnu gera við vitlíki – stutt og lætt at skilja."
+            "At orða hvat starvsfólk kunnu og ikki kunnu gera við vitlíki - á einfaldan og greiðan hátt, so tað er lætt at skilja."
         },
         {
           title: "Røtt amboð",
           description:
-            "At velja og seta upp røttu amboðini – ofta Copilot, men eisini onnur eftir tørvi."
+            "At velja og seta upp røttu amboðini - ofta Copilot, men eisini onnur eftir tørvi."
         },
         {
-          title: "Venjing á tykkara máli",
+          title: "Vitlíki fyri øll",
           description:
-            "Eg lýsi hvat vitlíki er og hvussu man kann brúka tað til arbeiðis á einum løttum máli - so kunna tit enduliga skilja hvat hettar er."
+            "At skilja hvat vitlíki er og hvussu tað kann brúkast til arbeiðis - á einføldum máli, so vit endaliga skilja hvat hetta í grundini er og kann."
         },
         {
           title: "Yvirlit yvir uppgávur",
           description:
-            "Tit fáa ein greiðan listu yvir, hvat tit kunna loysa við vitlíki – og hvussu."
+            "Ein greiðan lista yvir hvat tit kunnu loysa við vitlíki - og hvussu."
         }
       ]
     },
@@ -95,45 +95,44 @@ export const siteConfig = {
         {
           title: "Læra og brúka",
           number: "3",
-          description: "Verkstovur og stuðul á staðnum – og eftirfylging eftir 2–3 vikur."
+          description: "Verkstovur og lærara á tykkara skrivstovu – og eftirfylging eftir 2–3 vikur."
         }
       ]
     },
 
     delivery: {
-      title: "Hvat tú fært",
-      subtitle: "Vit bjóðar alt sum skal til fyri at tit kunna nýta vitlíki til arbeiðis.",
+      title: "Tit fáa",
       items: [
         {
           title: "Leiðreglur",
-          description: "Saman við tykkum skriva vit greiðar leiðreglur fyri vitlíkisbrúk á tykkara skrivstovu. So vita tit akkurát hvat tit sleppa at gera hjá tykkum."
+          description: "Saman við tykkum skriva vit greiðar leiðreglur fyri vitlíkisbrúk á tykkara skrivstovu. Tá verður tað týðiligt fyri starvsfólki hvat vitlíki kann brúkast til og hvussu."
         },
         {
           title: "Amboð og uppseting",
-          description: "Vit hjálpa tykkum at avgera hvørji amboð tit vilja brúka og kunna seta alt upp fyri tykkum. So eru tit røtt íklødd til at byrja."
+          description: "Eg hjálpi tykkum í avgerðini um hvørji amboð tit vilja nýta, og seti hesi upp fyri tykkum. Tá eru tit rætt íklødd og klár at byrja."
         },
         {
           title: "Verkstovur og netskeið",
-          description: "Vit nýta bæði verkstovur og sergjørd netskeið, so tit kunna læra skjótt og smidligani."
+          description: "Vit nýta bæði verkstovur og sergjørd netskeið, so tit kunnu læra skjótt og smidligt."
         },
         {
           title: "Stuðul og spurningar",
-          description: "Eg eri tøkur til at svara spurningum um alt sum hevur við vitlíki at gera."
+          description: "Eg eri tøkur at svara spurningum um alt, sum hevur við vitlíki at gera."
         },
         {
           title: "Tilfar",
-          description: "Skabelónir og leiðbeiningar sniðgivnar til júst tykkara tørv. So noyast tit ikki at minnast alt frá degi 1."
+          description: "Tit fáa frymlar og leiðbeiningar, sniðgivnar til júst tykkara tørv, at hava við hondina í arbeiðnum frameftir."
         },
         {
           title: "Greining",
-          description: "Eg hjálpi tykkum at finna akkurát hvørjar uppgávur tit skula loysa við við vitlíki og hvar vitlíki ikki skal brúkast."
+          description: "Eg hjálpi tykkum at finna ítøkiligu arbeiðsuppgávurnar at loysa við vitlíki, umframt hvar vitlíki ikki skal brúkast."
         },
         {
           title: "Framløgur",
-          description: "Eftir tørvi haldi eg framløgur fyri toymum um vitlíki. So tit læra at skilja tøknina ikki bara at brúka hana."
+          description: "Eftir tørvi haldi eg framløgur fyri toymum um vitlíki. Umframt at læra at brúka tøknina, er eisini umráðandi at skilja hana."
         }
       ],
-      note: "Alt verður lagað til tykkara serliga tørv og arbeiðshátt."
+      note: "Alt verður lagað til tykkara serstaka tørv og arbeiðshátt."
     },
 
     outcomes: [
@@ -161,22 +160,22 @@ export const siteConfig = {
   consulting: {
     title: "Ráðgeving & verkætlanir",
     subtitle:
-      "Frá vitlíki strategi til vitlíki menning – mín uppgáva er at gera vitlíki nýtiligt fyri teg.",
+      "Frá vitlíkistrategi til vitlíkimenning - mín uppgáva er at gera vitlíki nýtiligt fyri teg.",
     services: [
       {
         title: "Tað almenna",
         description:
-          "Visjón & heildarætlanir fyri vitlíki, stýring & etikkur, framløgur um vitlíki og málrættaðar vitlíki verkstovur."
+          "Framløgur um vitlíki og málrættaðar vitlíkiverkstovur. Evni: Visjónir og heildarætlanir fyri vitlíki, stýring og etikkur."
       },
       {
         title: "Fyritøkur",
         description:
-          "Vitlíki útbúgving, menning av vitlíki loysnum og ráðgeving."
+          "Skeið í vitlíki, menning av loysnum við vitlíki og málrættað ráðgeving."
       },
       {
         title: "Kreativt vitlíki",
         description:
-          "Myndir, heimasíður, filmar, tónleikur – alt ting vit gera við vitlíki fyri teg."
+          "Myndir, heimasíður, filmar, tónleikur - við vitlíki menni eg mangt og hvat fyri teg. Eisini tað, ið tú ikki hevur hugsað um enn."
       }
     ]
   },
@@ -184,7 +183,7 @@ export const siteConfig = {
   why: {
     title: "Hví Vitlíkisstovan?",
     subtitle:
-      "Vitlíkistovan er fyrsta av sínum slag í Føroyum. Vitlíkisstovan sameinar tøkniliga fatan og lokalan kunnleika – og hevur frá byrjan hugsað langskygt um, hvussu vitlíki best kemur føroyskum fyritøkum til gagns. Máli er ikki bara at læra nýggj amboð, men at broyta arbeiðshættir, styrkja avgerðartilgongdir og gera vitlíki til ein part av tykkara arbeiðismentan.",
+      "Vitlíkisstovan er fyrsta fyritøkan av sínum slag í Føroyum. Eg sameini tøkniliga fatan og staðbundnan kunnleika - og havi frá byrjan hugsað langskygt um, hvussu vitlíki best kemur føroyskum fyritøkum til gagns. Málið er ikki einans at læra um nýggj amboð, men at betra arbeiðshættir, styrkja avgerðartilgongdir og gera vitlíki til ein part av tykkara arbeiðsmentan.",
 
     features: [
       {
