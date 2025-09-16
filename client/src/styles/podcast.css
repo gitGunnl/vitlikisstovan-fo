@@ -182,39 +182,26 @@
     }
     
     .storybook-title {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         line-height: 1.2;
         margin-bottom: 10px;
     }
 
     .subtitle {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     
-    /* Parallax Layers Mobile */
-    .parallax-layer img {
-        object-fit: cover;
-        height: 100%;
-    }
+    /* Parallax Layers Mobile - Keep images at their natural sizes */
     
-    .layer-bg img {
-        object-position: center center;
-    }
-    
-    .layer-mid {
-        opacity: 0.8;
-    }
-    
-    .layer-front {
-        opacity: 0.9;
-    }
-    
+    /* Hide decorative elements on mobile */
     .troll-sheep {
-        display: none; /* Hide complex animations on mobile */
+        display: none;
     }
     
-    .layer-clouds {
-        opacity: 0.5;
+    .sheep-laptop,
+    .troll-peek,
+    .sparkle {
+        display: none;
     }
     
     /* Content Sections Mobile */
@@ -313,6 +300,20 @@
     .player-container {
         padding: 15px 10px;
     }
+    
+    /* Mobile-specific player styles */
+    @media (max-width: 640px) {
+        /* Make progress bar easier to tap on mobile */
+        input[type="range"] {
+            height: 12px;
+        }
+        
+        /* Ensure buttons are properly sized for touch */
+        button {
+            min-height: 44px;
+            min-width: 44px;
+        }
+    }
 
     /* Social Links in CTA Mobile */
     .social-link {
@@ -392,7 +393,6 @@
 
     .hero-section {
         height: 60vh;
-        min-height: 450px;
     }
     
     .hero-content {
@@ -400,12 +400,12 @@
     }
 
     .storybook-title {
-        font-size: 2.5rem;
+        font-size: 1.8rem;
         padding: 0 20px;
     }
     
     .subtitle {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
     .layer-bg img {
