@@ -19,7 +19,7 @@ const post = {
   <h2 id="sec-1">1) Hvat fært tú burtur úr at lesa hetta?</h2>
   <p>Hetta er títt skjóta innlit í føroyskt <strong>vitlíki</strong> í 2025: <em>Hvat finst, hvussu væl tað riggar í verki, og mín meining til hvat vit eiga at raðfesta næstu 12 mánaðirnar.</em> Vit hyggja uppá:</p>
   <ul>
-    <li>eitt <strong>yvirlit</strong> yvir ymisku føroysku modellini,</li>
+    <li>eitt <strong>yvirlit</strong> yvir ymisku føroysku modellini og hvussu væl tey rigga. <em>(Hoyr millum annað vitlíki tosa Føroyskt.)</em></li>
     <li>eina <strong>greiða strategi</strong>: set <strong>EN→FO týðing</strong> og <strong>føroyska talu til tekst</strong> fremst,</li>
     <li> <strong>hví dátur er fløskuhálsurin</strong> — og hvussu vit fáa gongd á eitt føroyskt dátuinfrakervi.</li>
   </ul>
