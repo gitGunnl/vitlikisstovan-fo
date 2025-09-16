@@ -790,7 +790,7 @@ export default function Home() {
                               <Button
                                 onClick={() => {
                                   setOpenDialog(null);
-                                  window.location.href = '/contact';
+                                  window.location.href = '/tilarbeidis';
                                 }}
                                 aria-label="Les meira um verkætlanina her"
                               >
@@ -1002,7 +1002,7 @@ export default function Home() {
               </div>
             </DialogContent>
           </Dialog>
-
+          </Dialog>
 
         </Section>
 
