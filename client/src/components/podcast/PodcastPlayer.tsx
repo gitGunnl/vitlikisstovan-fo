@@ -241,7 +241,7 @@ export default function PodcastPlayer({
             </button>
 
             <button
-              className="p-3 rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900"
+              className={`p-3 rounded-full ${isPlaying ? 'bg-slate-900 dark:bg-slate-900 text-white' : 'bg-white dark:bg-white text-slate-900'}`}
               onClick={togglePlay}
               aria-label={isPlaying ? "Pause" : "Play"}
               title={isPlaying ? "Pause" : "Play"}
@@ -300,7 +300,7 @@ export default function PodcastPlayer({
               </button>
 
               <button
-                className="px-4 py-1.5 rounded-md bg-slate-900 text-white dark:bg-white dark:text-slate-900 text-sm font-medium"
+                className={`px-4 py-1.5 rounded-md text-sm font-medium ${isPlaying ? 'bg-slate-900 text-white' : 'bg-white text-slate-900'}`}
                 onClick={togglePlay}
                 aria-label={isPlaying ? "Pause" : "Play"}
                 title={isPlaying ? "Pause" : "Play"}
