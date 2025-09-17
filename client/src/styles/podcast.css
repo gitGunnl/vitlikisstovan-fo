@@ -198,6 +198,10 @@
         display: none;
     }
     
+    .layer-mid {
+        display: none;
+    }
+    
     .sheep-laptop,
     .troll-peek,
     .sparkle {
