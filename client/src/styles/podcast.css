@@ -844,7 +844,7 @@ a:hover {
 .player-container {
     background-color: var(--faroe-sheep);
     border-radius: 8px;
-    padding: 30px;
+    padding: 0px;
     box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
