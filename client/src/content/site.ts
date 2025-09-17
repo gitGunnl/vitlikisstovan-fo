@@ -165,7 +165,7 @@ export const siteConfig = {
       {
         title: "Tað almenna",
         description:
-          "Framløgur um vitlíki og málrættaðar vitlíkisverkstovur. Evni: Visjónir og heildarætlanir fyri vitlíki, stýring og etikkur."
+          "Framløgur um vitlíki og málrættaðar vitlíkisverkstovur. Evni: Visjónir og heildarætlanir fyri vitlíki, hvussu tit tryggja skilagóða nýtslu og sunnan etikk."
       },
       {
         title: "Fyritøkur",
@@ -183,7 +183,7 @@ export const siteConfig = {
   why: {
     title: "Hví Vitlíkisstovan?",
     subtitle:
-      "Vitlíkisstovan er fyrsta fyritøkan av sínum slag í Føroyum. Her sameini eg tøkniliga fatan og staðbundnan kunnleika - og havi frá byrjan hugsað langskygt um, hvussu vitlíki best kemur føroyskum fyritøkum til gagns. Málið er ikki einans at nýta nýggj amboð, men at betra arbeiðshættir, styrkja avgerðartilgongdir og gera vitlíki til eitt munagott amboð í tykkara arbeiðsmentan.",
+      "Vitlíkisstovan er fyrsta fyritøkan av sínum slag í Føroyum. Her sameini eg tøkniliga fatan og staðbundnan kunnleika - og havi frá byrjan hugsað langskygt um, hvussu vitlíki best kemur føroyskum fyritøkum til gagns. Málið er ikki einans at nýta nýggj amboð, men at betra arbeiðshættir, betra um hvussu tit taka avgerðir og gera vitlíki til eitt munagott amboð í tykkara arbeiðsmentan.",
 
     features: [
       {
@@ -217,7 +217,7 @@ export const siteConfig = {
       bullets: [
         "Stovnaði Vitlíkisstovuna fyri at hjálpa føroyska arbeiðismarknaðinum at fáa gagn av vitlíki.",
         "Úrslit fram um (ov nógv) tos: Sjóneykan er á  at finna arbeiðsgongdir har vitlíki kann spara tær tíð, betra um títt skrivliga avrik og minka um tínar endurtakandi uppgávur.",
-        "Royndir við stórum stovnum og almennum áhugapørtum, umframt smærri fyritøkum og skúlum.",
+        "Royndir við stórum stovnum umframt smærri fyritøkum og skúlum.",
         "Føroyskt í hásæti: Vegleiðing, sum er lagað til okkara mál, mentan og almenna veruleika."
       ],
       quote:

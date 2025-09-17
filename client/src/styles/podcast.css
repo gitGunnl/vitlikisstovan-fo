@@ -194,7 +194,8 @@
     /* Parallax Layers Mobile - Keep images at their natural sizes */
     
     /* Hide decorative elements on mobile */
-    .troll-sheep {
+    .troll-sheep,
+    .grass {
         display: none;
     }
     
