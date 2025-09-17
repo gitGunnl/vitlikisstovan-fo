@@ -302,17 +302,10 @@
     }
     
     /* Mobile-specific player styles */
-    @media (max-width: 640px) {
-        /* Make progress bar easier to tap on mobile */
-        input[type="range"] {
-            height: 12px;
-        }
-        
-        /* Ensure buttons are properly sized for touch */
-        button {
-            min-height: 44px;
-            min-width: 44px;
-        }
+    .player-controls button {
+        /* Only apply to podcast player buttons */
+        min-height: 44px;
+        min-width: 44px;
     }
 
     /* Social Links in CTA Mobile */
