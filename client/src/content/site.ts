@@ -39,7 +39,7 @@ export const siteConfig = {
       {
         title: "Vitlíkisráðgeving, snikkað til tín",
         subtitle:
-          "Er tørvurin ein vitlíkistrategi, vegleiðing í sambandi við tekniskt arbeiði, nýtslu av vitlíki í kreativum arbeiði ella eitt fjórða - so leiðbeini eg tykkum lættliga rætta vegin.",
+          "Er tørvurin ein vitlíkistrategi, vegleiðing í sambandi við eina vitlíki verkætlan, nýtslu av vitlíki í kreativum arbeiði ella eitt fjórða - so leiðbeini eg tykkum lættliga rætta vegin.",
         primaryCTA: {
           text: "Bílegg eina ókeypis samrøðu",
           href: "/contact"
@@ -51,7 +51,7 @@ export const siteConfig = {
   program: {
     title: "Frá forvitin til framkomin: Eitt 12-vikuskeið til skrivstovufólk",
     subtitle:
-      "Hetta er eitt einfalt og úrslitssøkið skeið til tykkara skrivstovu. Eg komi út til tykkara, seti alt upp og læri toymið alt, sum tað skal duga. Tit samlast nakrar ferðir og læra at arbeiða trygt og munagott við vitlíki.",
+      "Hetta er eitt skeið sniðgivi til at læra øllum á tykkara skrivstovu akkurát hvussu tey kunnu fáa nýttu av vitlíki. Eg komi út til tykkara, seti alt upp og læri toymið alt, sum tað skal duga. Tit skula bara samlast nakrar ferðir og læra at arbeiða trygt og munagott við vitlíki, eg takið mær av restini",
 
     whatWeDeliver: {
       title: "Vit fáa stýr upp á",
@@ -85,7 +85,7 @@ export const siteConfig = {
         {
           title: "Samrøða (1 tími)",
           number: "1",
-          description: "Vit tosa um tykkara veruleika og seta rammuna fyri skeiðið."
+          description: "Vit tosa um hvat tit hava brúk fyri og seta rammuna fyri skeiðið."
         },
         {
           title: "Uppseting",
@@ -136,7 +136,7 @@ export const siteConfig = {
     },
 
     outcomes: [
-      "Starvsfólk duga at brúka vitlíki tryggt og munagott.",
+      "Starvsfólk duga at brúka vitlíki trygt og munagott.",
       "Leiðreglur, sum øll skilja og halda seg til.",
       "Amboðini eru væl sett upp og klár at brúka.",
       "Greitt yvirlit yvir, hvar vitlíki ger mun.",
@@ -183,18 +183,18 @@ export const siteConfig = {
   why: {
     title: "Hví Vitlíkisstovan?",
     subtitle:
-      "Vitlíkisstovan er fyrsta fyritøkan av sínum slag í Føroyum. Eg sameini tøkniliga fatan og staðbundnan kunnleika - og havi frá byrjan hugsað langskygt um, hvussu vitlíki best kemur føroyskum fyritøkum til gagns. Málið er ikki einans at læra um nýggj amboð, men at betra arbeiðshættir, styrkja avgerðartilgongdir og gera vitlíki til ein part av tykkara arbeiðsmentan.",
+      "Vitlíkisstovan er fyrsta fyritøkan av sínum slag í Føroyum. Her sameini eg tøkniliga fatan og staðbundnan kunnleika - og havi frá byrjan hugsað langskygt um, hvussu vitlíki best kemur føroyskum fyritøkum til gagns. Málið er ikki einans at nýta nýggj amboð, men at betra arbeiðshættir, styrkja avgerðartilgongdir og gera vitlíki til eitt munagott amboð í tykkara arbeiðsmentan.",
 
     features: [
       {
         title: "Føroyskt í hásæti",
         description:
-          "Vitlíkisstovan veitir vegleiðing, ið virðir okkara mál og mentan, samstundis sum fylgt verður við vanligum tøkniligum krøvum. Og so er tað stuttflutt."
+          "Vitlíkisstovan veitir vegleiðing, ið virðir okkara mál og mentan, eg havi serkunnleika í hvussu man fær besta føroyska úrsliti við vitlíki og hvar vitlíki ikki kann nýtast á Føroyskum enn. Og so er tað stuttflutt."
       },
       {
         title: "Yrkisligt og veruligt",
         description:
-          "Vitlíki er eitt eymt evni, og eru meiningarnar um tað líka nógvar, sum tað eru fólk. Tað havi eg virðing fyri, og er arbeiði tískil grundað á verkligar arbeiðshættir og veruligar uppgávuloysnir - sum ikki traðkar ov nógv fólk yvir tærnar."
+          "Vitlíki er eitt eymt evni, og meiningarnar um tað eru líka nógvar, sum tað eru fólk. Tað havi eg virðing fyri, og er arbeiði tískil grundað á verkligar arbeiðshættir og veruligar uppgávuloysnir - sum ikki traðkar ov nógv fólk yvir tærnar."
       },
       {
         title: "Greitt samskifti",
@@ -215,13 +215,13 @@ export const siteConfig = {
       summary:
         "Ein el-verkfrøðingur, sum gjørdist vitlíkisráðgevi. Síðani 2022 havi eg brúkt ChatGPT dagliga; fyrst sum verkfrøðingur í Danmark, og nú við at hjálpa føroyskum stovnum og fyritøkum at taka vitlíki til sín. Eg havi fylgt við menningini í vitlíki í meira enn 10 ár, og havi roynt fleiri hundrað amboð. Eg veit tískil hvat riggar og hvørja góðsku tú kann fáa burtur úr, um amboðini verða brúkt rætt.",
       bullets: [
-        "Stovnaði Vitlíkisstovuna fyri at hjálpa føroyskum arbeiðstoymum at fáa gagn av vitlíki.",
-        "Úrslit fram um (ov nógv) tos: Sjóneykan er á arbeiðsgongdir, sum spara tíð, betra um skrivlig avrik og minka um endurtakandi uppgávur.",
+        "Stovnaði Vitlíkisstovuna fyri at hjálpa føroyska arbeiðismarknaðinum at fáa gagn av vitlíki.",
+        "Úrslit fram um (ov nógv) tos: Sjóneykan er á  at finna arbeiðsgongdir har vitlíki kann spara tær tíð, betra um títt skrivliga avrik og minka um tínar endurtakandi uppgávur.",
         "Royndir við stórum stovnum og almennum áhugapørtum, umframt smærri fyritøkum og skúlum.",
         "Føroyskt í hásæti: Vegleiðing, sum er lagað til okkara mál, mentan og almenna veruleika."
       ],
       quote:
-        "Vitlíki er ikki fjarløgd framtíð – tað er mátin, vit arbeiða upp á nú. Lat okkum fáa tað at rigga fyri títt toymið.",
+        "Vitlíki er ikki fjarløgd framtíð – tað er veruleikin í dag og eg haldi at øll hava uppiborið at skilja vitlíki og hvussu tað kemur at ávirka tey.",
       headshotUrl: "/images/founder.jpg",
       headshotAlt: "Mynd av Gunnleygi Clementsen",
       links: [
@@ -237,7 +237,7 @@ export const siteConfig = {
       {
         title: "Vegleiðingar",
         description:
-          "Vegleiðingarnar veita ávísum arbeiðsbólkum innlit í júst hvørjar arbeiðsuppgávur tey kunnu loysa við vitlíki - og hvørjar uppgávur, ið ikki eru hóskandi til vitlíki. Í vegleiðingunum eru listar og frymlar (skabelónir) við ítøkiligum og viðkomandi uppgávum, og hvussu vitlíki verður brúkt at loysa tær. Eitt úrslitagott arbeiðsamboð, ið tú ikki vil vera fyriuttan.",
+          "Mínar vegleiðingar veita ávísum arbeiðsbólkum innlit í júst hvørjar arbeiðsuppgávur tey kunnu loysa við vitlíki - og hvørjar uppgávur, ið ikki eru hóskandi til vitlíki. Í vegleiðingunum eru birt og frymlar (skabelónir) við ítøkiligum og viðkomandi uppgávum, og hvussu vitlíki verður brúkt at loysa tær. Eitt úrslitagott arbeiðsamboð, ið tú ikki vil vera fyriuttan.",
         image:
           "/images/vegleiding.png",
         imageAlt: "Personalized AI guidance session",
