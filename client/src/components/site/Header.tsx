@@ -24,9 +24,7 @@ export default function Header() {
             alt={siteConfig.siteName}
             className="h-8 w-8 object-contain"
           />
-          <span className="font-bold text-lg text-gray-900">
-            <span className="text-blue-600">VITLÍKI</span>, <span className="text-green-600">vegleiðing røttu</span>.
-          </span>
+          <span className="font-bold text-lg text-gray-900">{siteConfig.siteName}</span>
         </a>
 
         {/* Desktop Navigation */}
