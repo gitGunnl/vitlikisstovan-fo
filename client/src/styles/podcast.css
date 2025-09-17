@@ -828,6 +828,7 @@ a:hover {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
     border: 12px solid var(--faroe-earth);
     position: relative;
+    z-index: 1;
 }
 
 .frame-header {
@@ -1004,7 +1005,8 @@ a:hover {
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
     position: relative;
     border: 15px solid var(--faroe-moss);
-    overflow: hidden;
+    overflow: visible;
+    z-index: 1;
 }
 
 .board-content {
@@ -1013,6 +1015,7 @@ a:hover {
     border-radius: 8px;
     text-align: center;
     position: relative;
+    z-index: 2;
 }
 
 .cta-title {
