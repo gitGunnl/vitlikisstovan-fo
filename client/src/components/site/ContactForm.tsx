@@ -168,6 +168,7 @@ export default function ContactSection() {
                         <Input
                           {...field}
                           placeholder="Títt navn"
+                          autoComplete="name"
                           data-testid="input-name"
                         />
                       </FormControl>
@@ -189,6 +190,7 @@ export default function ContactSection() {
                           {...field}
                           type="email"
                           placeholder="tín.teldupostur@dømi.fo"
+                          autoComplete="email"
                           data-testid="input-email"
                         />
                       </FormControl>
@@ -211,6 +213,7 @@ export default function ContactSection() {
                           rows={5}
                           placeholder="Skriva tín spurning ella greið frá tíni verkætlan..."
                           className="resize-none"
+                          autoComplete="off"
                           data-testid="textarea-message"
                         />
                       </FormControl>
