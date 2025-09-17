@@ -170,17 +170,17 @@
         height: 50vh;
         min-height: 400px;
     }
-
+    
     .parallax-container {
         height: 100%;
     }
-
+    
     .hero-content {
         padding-top: 10vh;
         padding-left: 20px;
         padding-right: 20px;
     }
-
+    
     .storybook-title {
         font-size: 1.2rem;
         line-height: 1.15;
@@ -190,36 +190,36 @@
     .subtitle {
         font-size: 0.9rem;
     }
-
+    
     /* Parallax Layers Mobile - Keep images at their natural sizes */
-
+    
     /* Hide decorative elements on mobile */
     .troll-sheep,
     .grass {
         display: none;
     }
-
+    
     .layer-mid {
         display: none;
     }
-
+    
     .sheep-laptop,
     .troll-peek,
     .sparkle {
         display: none;
     }
-
+    
     /* Content Sections Mobile */
     .container {
         padding: 0 15px;
     }
-
+    
     .intro-section,
     .cta-section,
     .tokni-section {
         padding: 30px 0;
     }
-
+    
     .podcast-section {
         padding: 0px 0;
     }
@@ -229,38 +229,38 @@
         padding: 15px;
         line-height: 1.5;
     }
-
+    
     /* Tokni Section Mobile */
     .tokni-box {
         margin: 0 10px;
     }
-
+    
     .tokni-content {
         flex-direction: column;
         gap: 15px;
         padding: 20px;
     }
-
+    
     .tokni-logo {
         width: 80px;
         height: 80px;
     }
-
+    
     .tokni-title {
         font-size: 1.4rem;
         text-align: center;
     }
-
+    
     .tokni-description {
         font-size: 0.95rem;
         text-align: center;
     }
-
+    
     .tokni-social-text {
         font-size: 0.9rem;
         text-align: center;
     }
-
+    
     .tokni-social-links {
         justify-content: center;
     }
@@ -275,7 +275,7 @@
         font-size: 1rem;
         line-height: 1.5;
     }
-
+    
     .village-board {
         margin: 0 10px;
         border-width: 8px;
@@ -299,11 +299,11 @@
         background: transparent !important;
         box-shadow: none !important;
     }
-
+    
     .frame-header {
         display: none !important;
     }
-
+    
     .section-title {
         font-size: 1.3rem;
         margin-bottom: 0.5rem;
@@ -315,7 +315,7 @@
         background-color: var(--faroe-sheep);
         border-radius: 8px;
     }
-
+    
     /* Mobile-specific player styles */
     .player-controls button {
         /* Only apply to podcast player buttons */
@@ -328,7 +328,7 @@
         padding: 8px 15px !important;
         font-size: 0.9rem;
     }
-
+    
     .social-link svg {
         width: 16px !important;
         height: 16px !important;
@@ -391,13 +391,13 @@
     .hero-content {
         padding-top: 15vh;
     }
-
+    
     .container {
         max-width: 1200px;
         margin: 0 auto;
         padding: 0 20px;
     }
-
+    
     .paper-bg,
     .storybook-frame,
     .village-board,
@@ -414,7 +414,7 @@
         max-width: 1320px;
         padding: 0 40px;
     }
-
+    
     .paper-bg,
     .storybook-frame,
     .village-board,
@@ -423,7 +423,7 @@
         margin-left: auto;
         margin-right: auto;
     }
-
+    
     .intro-section,
     .podcast-section,
     .cta-section,
@@ -444,7 +444,7 @@
     .hero-section {
         height: 60vh;
     }
-
+    
     .hero-content {
         padding-top: 12vh;
     }
@@ -456,17 +456,17 @@
     .layer-mid, .layer-front {
         opacity: 0.7;
     }
-
+    
     /* Tokni box tablet */
     .tokni-content {
         gap: 20px;
     }
-
+    
     .tokni-logo {
         width: 100px;
         height: 100px;
     }
-
+    
     /* Remove decorative frame on mobile/tablet */
     .storybook-frame {
         border: 0;
@@ -475,11 +475,11 @@
         box-shadow: none;
         margin: 0;
     }
-
+    
     .frame-header {
         display: none;
     }
-
+    
     /* Compact padding for player on mobile/tablet */
     .player-container {
         padding: 0px;
@@ -992,24 +992,19 @@ a:hover {
 
 /* CTA Section */
 .cta-section {
-    padding: 80px 0;
-    background: linear-gradient(135deg, var(--faroe-sky) 0%, var(--faroe-grass) 100%);
+    padding: 6rem 0;
     position: relative;
-    overflow: hidden;
+    z-index: 1;
 }
 
-/* Reduce wobbling animation */
 .village-board {
-    animation: gentleFloat 8s ease-in-out infinite;
-}
-
-@keyframes gentleFloat {
-    0%, 100% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-3px);
-    }
+    background-color: var(--faroe-earth);
+    border-radius: 15px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    position: relative;
+    border: 15px solid var(--faroe-moss);
+    overflow: hidden;
 }
 
 .board-content {
