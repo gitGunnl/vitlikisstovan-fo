@@ -126,7 +126,7 @@ export default function Home() {
         {/* Hero Section */}
       <section
         id="hero"
-        className="relative min-h-[70vh] sm:min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden"
+        className="relative min-h-[80vh] sm:min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden pt-20 sm:pt-0"
       >
         {/* Video Background with Image Fallback */}
         <VideoBackground
@@ -259,7 +259,7 @@ export default function Home() {
                       <CTAButtons
                         primary={slide.primaryCTA}
                         secondary={slide.secondaryCTA}
-                        className="mt-2 mb-16"
+                        className="mt-2"
                       />
                     )}
                   </div>
@@ -267,7 +267,7 @@ export default function Home() {
                   {/* Bottom of Hero CTA - only show on first slide */}
                   {index === 0 && (
                     <div
-                      className="mt-8 sm:mt-16"
+                      className="mt-6 sm:mt-16"
                       style={{
                         transform: isActive ? 'translateY(0)' : 'translateY(50px)',
                         opacity: isActive ? 1 : 0,
@@ -282,14 +282,15 @@ export default function Home() {
                             element.scrollIntoView({ behavior: 'smooth' });
                           }
                         }}
-                        className="group inline-flex items-center gap-2 sm:gap-3 mx-auto px-5 sm:px-8 py-2.5 sm:py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-medium sm:font-semibold text-sm sm:text-base rounded-full shadow-lg sm:shadow-xl hover:shadow-emerald-500/50 transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:ring-offset-2"
+                        className="group inline-flex items-center gap-2 sm:gap-3 mx-auto px-4 sm:px-8 py-2 sm:py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-medium sm:font-semibold text-xs sm:text-base rounded-full shadow-lg sm:shadow-xl hover:shadow-emerald-500/50 transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:ring-offset-2"
                         data-testid="button-scroll-consulting"
                       >
-                        <span className="relative">
-                          Um tú ert her fyri ráðgeving ella annað, les meira longur niðri
+                        <span className="relative text-center">
+                          <span className="hidden sm:inline">Um tú ert her fyri ráðgeving ella annað, les meira longur niðri</span>
+                          <span className="sm:hidden">Les meira um ráðgeving</span>
                         </span>
                         <svg
-                          className="w-4 h-4 sm:w-5 sm:h-5 transition-transform group-hover:translate-y-1"
+                          className="w-3 h-3 sm:w-5 sm:h-5 transition-transform group-hover:translate-y-1"
                           fill="none"
                           stroke="currentColor"
                           viewBox="0 0 24 24"
