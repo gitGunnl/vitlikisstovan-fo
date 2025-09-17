@@ -68,7 +68,7 @@ const episodes: Episode[] = [
     id: "nykur",
     title: "Whispers of the Water Horse: The Legend of the Nykur",
     audioUrl: "/podcasts/Whispers of the Water Horse_ The Legend of the Nykur.m4a",
-    imageUrl: "/images/podcast/logo square.jpg",
+    imageUrl: "/images/podcast/thumbnail_nykur_whispers_of_the_water_horse.png",
     publishedAt: "December 2024",
   },
 ];
