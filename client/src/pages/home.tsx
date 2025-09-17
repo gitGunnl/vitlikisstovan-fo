@@ -211,6 +211,10 @@ export default function Home() {
                           Føroysk vitlíkismodell
                         </span>
                       </>
+                    ) : index === 0 ? (
+                      <>
+                        Við <span className="text-blue-600 font-bold">røttu vegleiðing</span> kanst tú eisini meistra <span className="text-green-600 font-bold">VITLÍKI</span>!
+                      </>
                     ) : (
                       slide.title
                     )}
