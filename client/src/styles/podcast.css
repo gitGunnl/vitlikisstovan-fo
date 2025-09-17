@@ -215,10 +215,13 @@
     }
     
     .intro-section,
-    .podcast-section,
     .cta-section,
     .tokni-section {
         padding: 30px 0;
+    }
+    
+    .podcast-section {
+        padding: 20px 0;
     }
 
     .podcast-description {
@@ -289,12 +292,14 @@
     }
 
     .storybook-frame {
-        border-width: 6px;
-        margin: 0 10px;
+        border-width: 4px;
+        margin: 0 5px;
+        padding: 10px;
     }
     
     .frame-header {
-        padding: 8px;
+        padding: 5px;
+        margin-bottom: 1rem;
     }
     
     .section-title {
@@ -303,7 +308,7 @@
 
     /* Podcast Player Mobile */
     .player-container {
-        padding: 15px 10px;
+        padding: 10px 5px;
     }
     
     /* Mobile-specific player styles */
