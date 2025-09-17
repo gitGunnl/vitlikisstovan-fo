@@ -291,24 +291,29 @@
         margin: 0 10px;
     }
 
+    /* Remove decorative frame on mobile to maximize space */
     .storybook-frame {
-        border-width: 4px;
-        margin: 0 5px;
-        padding: 10px;
+        border: none !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
     }
     
     .frame-header {
-        padding: 5px;
-        margin-bottom: 1rem;
+        display: none !important;
     }
     
     .section-title {
         font-size: 1.3rem;
+        margin-bottom: 0.5rem;
     }
 
-    /* Podcast Player Mobile */
+    /* Podcast Player Mobile - maximized space */
     .player-container {
-        padding: 10px 5px;
+        padding: 6px 8px;
+        background-color: var(--faroe-sheep);
+        border-radius: 8px;
     }
     
     /* Mobile-specific player styles */
@@ -462,9 +467,24 @@
         height: 100px;
     }
     
-    /* Ensure podcast player is responsive */
+    /* Remove decorative frame on mobile/tablet */
+    .storybook-frame {
+        border: 0;
+        padding: 0;
+        background: transparent;
+        box-shadow: none;
+        margin: 0;
+    }
+    
+    .frame-header {
+        display: none;
+    }
+    
+    /* Compact padding for player on mobile/tablet */
     .player-container {
-        padding: 20px 15px;
+        padding: 8px;
+        background-color: var(--faroe-sheep);
+        border-radius: 8px;
     }
 }
 /* Base Styles and Variables */

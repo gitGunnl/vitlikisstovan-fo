@@ -164,7 +164,7 @@ export default function PodcastPlayer({
   }, [currentTime, duration]);
 
   return (
-    <div ref={containerRef} className="w-full max-w-4xl mx-auto px-4 sm:px-0">
+    <div ref={containerRef} className="w-full max-w-4xl mx-auto px-2 sm:px-0">
       {/* Now playing header - vertical on mobile, horizontal on desktop */}
       <div className="bg-white/60 dark:bg-slate-900/60 rounded-xl border border-slate-200 dark:border-slate-800 shadow-sm">
         
