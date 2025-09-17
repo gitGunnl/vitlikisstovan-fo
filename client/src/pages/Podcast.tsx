@@ -213,7 +213,7 @@ export default function Podcast() {
                   <p className="cta-text">
                     Book a presentation or workshop at <a href="https://vitlikisstovan.fo" className="cta-link">vitlikisstovan.fo</a> or call <span className="phone-number">919444</span> to invite a real human (and his AI helpers) to your team.
                   </p>
-                  <div className="social-links" style={{ marginTop: '20px', display: 'flex', gap: '15px', justifyContent: 'center' }}>
+                  <div className="social-links" style={{ marginTop: '20px', display: 'flex', gap: '15px', justifyContent: 'center', position: 'relative', zIndex: 9999 }}>
                     <a 
                       href="https://facebook.com/vitlikisstovan" 
                       target="_blank" 
@@ -229,7 +229,9 @@ export default function Podcast() {
                         borderRadius: '8px',
                         textDecoration: 'none',
                         fontWeight: '600',
-                        transition: 'transform 0.2s, box-shadow 0.2s'
+                        transition: 'transform 0.2s, box-shadow 0.2s',
+                        position: 'relative',
+                        zIndex: 9999
                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.transform = 'translateY(-2px)';
@@ -260,7 +262,9 @@ export default function Podcast() {
                         borderRadius: '8px',
                         textDecoration: 'none',
                         fontWeight: '600',
-                        transition: 'transform 0.2s, box-shadow 0.2s'
+                        transition: 'transform 0.2s, box-shadow 0.2s',
+                        position: 'relative',
+                        zIndex: 9999
                       }}
                       onMouseEnter={(e) => {
                         e.currentTarget.style.transform = 'translateY(-2px)';
