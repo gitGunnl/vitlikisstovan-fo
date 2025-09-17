@@ -19,7 +19,7 @@ export const siteConfig = {
   hero: {
     slides: [
       {
-        title: "Eisini tú kanst meistra vitlíki!",
+        title: "Við røttu vegleiðing kanst tú eisini meistra VITLÍKI!",
         subtitle:
           "Vitlíkisstovan mennir tykkum frá at vera nýbyrjarar innan vitlíki til dugnaligar vitlíkisbrúkarar. Eg taki mær av øllum - tit skulu einans lurta og læra.",
         primaryCTA: {
