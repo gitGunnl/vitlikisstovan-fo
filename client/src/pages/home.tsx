@@ -211,10 +211,6 @@ export default function Home() {
                           Føroysk vitlíkismodell
                         </span>
                       </>
-                    ) : index === 0 ? (
-                      <>
-                        Við <span className="text-blue-600 font-bold">røttu vegleiðing</span> kanst tú eisini meistra <span className="text-green-600 font-bold">VITLÍKI</span>!
-                      </>
                     ) : (
                       slide.title
                     )}
@@ -290,7 +286,7 @@ export default function Home() {
                         data-testid="button-scroll-consulting"
                       >
                         <span className="relative text-center">
-                          <span className="hidden sm:inline">Um tú ert her fyri ráðgeving ella annað, les meira longur niðri</span>
+                          <span className="hidden sm:inline">Framløgu ella ráðgeving? Les longur niðri </span>
                           <span className="sm:hidden">Les meira um ráðgeving</span>
                         </span>
                         <svg

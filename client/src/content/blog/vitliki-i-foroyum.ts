@@ -17,11 +17,11 @@ const post = {
 <hr class="my-8 border-border/60" />
 
 <section aria-labelledby="sec-1">
-  <h2 id="sec-1">1) Hvat fært tú burtur úr at lesa hetta?</h2>
+  <h2 id="sec-1">1) Vit hyggja at:</h2>
   <p>Hetta er títt innlit í føroyskt <strong>vitlíki</strong> í 2025: <em>Hvat finst, hvussu væl tað riggar í verki, og mín meining um, hvat vit eiga at raðfesta næstu 12 mánaðirnar.</em> Vit hyggja at:</p>
   <ul>
-    <li>eitt <strong>yvirlit</strong> yvir ymisku føroysku modellini og hvussu væl tey rigga. <em>(Hoyr millum annað vitlíki tosa føroyskt.)</em></li>
-    <li>eina <strong>greiða strategi</strong>: Set <strong>EN til FO týðing</strong> og <strong>føroyska talu til tekst</strong> fremst,</li>
+    <li>einum <strong>yvirliti</strong> yvir ymisku føroysku modellini og hvussu væl tey rigga <em>(hoyr millum annað vitlíki tosa føroyskt),</em></li>
+    <li>eini <strong>greiðari strategi</strong> fyri tína fyritøku: Set <strong>EN til FO týðing</strong> og <strong>føroyska talu til tekst</strong> fremst,</li>
     <li> <strong>hví dátur eru fløskuhálsurin</strong> — og hvussu vit fáa gongd á eitt føroyskt dátuinfrakervi.</li>
   </ul>
   <p><em>Myndburðurin, vit brúka her, er einfaldur:</em> modell eru sum <strong>hamarar og sagir</strong>. Men ein hamari byggir ikki eitt hús sjálvur — ein dugnaligur persónur við røttum amboðum og røttum arbeiðsgongdum byggir hús við hamara. Tí er tað eisini umráðandi at byggja vitlíkisamboð sum kunnu brúkast til veruligt arbeiði.</p>
@@ -68,7 +68,7 @@ const post = {
       <div class="space-y-3">
         <div>
           <span class="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded-full">Styrkir</span>
-          <p class="text-sm mt-2">Skal ikki nýta sergjørt birt til at rigga væl; Lætt at koyra á egnan <strong>servara</strong>; ofta javnbjóðis <strong>ChatGPT‑4o</strong></p>
+          <p class="text-sm mt-2">Skal ikki nýta sergjørt birt til at rigga væl. Lætt at koyra á egnan <strong>servara</strong>; ofta javnbjóðis <strong>ChatGPT‑4o.</strong></p>
         </div>
         <div>
           <span class="text-xs font-medium text-red-600 bg-red-50 px-2 py-1 rounded-full">Veikleikar</span>
@@ -76,7 +76,7 @@ const post = {
         </div>
         <div>
           <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Kann nýtast til</span>
-          <p class="text-sm mt-2">Týða alskyns enskar tekstir til føroyskt. Týða LLM‑úrslit til føroyskt;</p>
+          <p class="text-sm mt-2">Týða alskyns enskar tekstir til føroyskt. Týða LLM‑úrslit til føroyskt.</p>
         </div>
       </div>
     </div>
@@ -87,7 +87,7 @@ const post = {
         <h5 class="font-bold text-lg">ASR (talu→tekst)</h5>
         <span class="text-2xl">🟨</span>
       </div>
-      <p>Amboð at tosa á føroyskum og so verður talan umgjørd til tekst. (avskriving)</p>
+      <p>Amboð at tosa á føroyskum og so verður talan umgjørd til tekst (avskriving).</p>
       <p class="text-sm text-muted-foreground mb-3">
         <strong>Modell:</strong> Whisper-large (tillagað til føroyskt)
       </p>
@@ -98,7 +98,7 @@ const post = {
         </div>
         <div>
           <span class="text-xs font-medium text-red-600 bg-red-50 px-2 py-1 rounded-full">Veikleikar</span>
-          <p class="text-sm mt-2">Óljóð ger skjótt, at úrslitini verða væl vánaligari, og modellið kann ikki skilja, hvør tosar, tá ið tvey tosa í senn.</p>
+          <p class="text-sm mt-2">Óljóð ger skjótt at úrslitini verða væl vánaligari. Modellið kann ikki skilja hvær tosar, tá ið tvey tosa í senn.</p>
         </div>
         <div>
           <span class="text-xs font-medium text-blue-600 bg-blue-50 px-2 py-1 rounded-full">Kann nýtast til</span>
@@ -119,7 +119,7 @@ const post = {
       </p>
 
       <!-- Audio Player Component -->
-      <p>Hoyr her hvussu tað ljóðar tá ið vitlíkið ger føroyskan tekst til talu.</p>
+      <p>Hoyr her hvussu tað ljóðar tá ið vitlíki ger føroyskan tekst til talu.</p>
       <div class="mb-4" data-audio-player="/faroese_long.wav" data-title="Føroysk taludømi"></div>
 
       <div class="space-y-3">
@@ -182,7 +182,7 @@ const post = {
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
     />
-    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>enskur tekstur fer inn og føroyskur tekstur kemur út</em></figcaption>
+    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>Enskur tekstur fer inn og føroyskur tekstur kemur út.</em></figcaption>
   </figure>
 
   <p><strong>Hví hetta modellið hevur týdning:</strong> Um ensk→føroysk týðing riggar væl, ber til at leggja hana oman á ChatGPT, Gemini ella onnur stór málmodell og at fáa úrslit á <strong>føroyskum, so tað kennist, sum um modellið heilt natúrliga tosar føroyskt</strong>. Sí mynd niðanfyri.</p>
@@ -194,7 +194,7 @@ const post = {
     class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
     loading="lazy" decoding="async"
   />
-  <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>Dømi um hvussu ein kann nýta ein týðara saman við ChatGPT fyri at fáa svar at kennast føroysk</em></figcaption>
+  <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>Dømi um hvussu ein kann nýta ein týðara saman við ChatGPT fyri at fáa svar at kennast føroysk.</em></figcaption>
 </figure>
 
   <p><strong>Hvat er tøkt:</strong></p>
@@ -218,7 +218,7 @@ const post = {
 
   <hr class="my-8 border-border/60" />
 
-  <h3 class="mt-8">🗣️ føroysk tala til tekst (ASR)</h3>
+  <h3 class="mt-8">🗣️ Føroysk tala til tekst (ASR)</h3>
 
   <figure class="not-prose my-6">
     <img
@@ -227,27 +227,28 @@ const post = {
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
     />
-    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>føroysk tala fer inn, tekstur kemur út.</em></figcaption>
+    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>Føroysk tala fer inn, tekstur kemur út.</em></figcaption>
   </figure>
 
-  <p><strong>Hví hetta modellið hevur týdning:</strong> Tað letur upp fyri tveimum vanligum nýtsluháttum:</p>
+  <p><strong>Hví hetta modellið hevur týdning: </strong> Tað kann hjálpa væl í uppgávum innan:</p>
   <ol>
-    <li><strong>Fundarsamandráttir</strong> (Har vitlíkið skrivar alt niður sum tosað verður um á einum fundi)</li>
-    <li><strong>At tosa við vitlíki</strong> heldur enn at skriva. (So ein kann brúka tað í støðum har hendurnar ikki eru fríar.)</li>
+    <li><strong>Fundarsamandráttir: </strong> Har vitlíki skrivar alt niður, sum tosað verður um á einum fundi.</li>
+    <li><strong>At tosa við vitlíki:</strong> So ein kann samskifta við vitlíki í støðum har hendurnar ikki eru fríar.</li>
+    <li><strong>Skriviarbeiði:</strong> Tú tosar, vitlíki skrivar. Hetta kann spara tær nógva tíð á tínum fyrsta útkasti.</li>
   </ol>
 
   <p><strong>Bakgrund:</strong> <strong>Verkætlanarbólkurin Ravnur</strong> undir <strong>Grunninum Talutøkni</strong> bygdi BLARK 1.0 og savnaði inn meira enn 100 tímar av føroyskari talu til sonevnda <strong>Ravnursson</strong>-savnið. Við hesum dátum hava <strong>Carlos Daniel Hernández Mena</strong> (<strong>Reykjavík University / Language and Voice Lab</strong>) og <strong>Annika Simonsen</strong> (<strong>University of Iceland</strong>) tillagað <strong>Whisper-large</strong> til føroyskt mál.</p>
 
   <p><strong>Soleiðis riggar tað í dag:</strong></p>
   <ul>
-    <li><strong>Styrkir:</strong> Reinar og stillar upptøkur verða avskrivaðar til <strong>lesiligan tekst</strong> við lutfalsliga fáum feilum.</li>
-    <li><strong>Veikleikar:</strong> <strong>Óljóð, fólk sum tosa í munnin á hvørjum øðrum, málføri og fakmál</strong> eru framvegis ein avbjóðing.</li>
-    <li><strong>Kann longu brúkast til:</strong> <strong>At avskriva</strong> tað sum ein einsamallur persónur sigur, tildømis ein framløga. Ella setast upp til eitt vitlíkismodell, so ein kann tosa við vitlíkið.</li>
-    <li><strong>Næsta stigið:</strong> Tørvur er á fleiri dátum: <strong>fjøltáttaðum ljóðupptøkum við røttum loyvum</strong>, betri <strong>tolsemi fyri óljóði og at skipanin skilir, hvør tosar</strong>.</li>
+    <li><strong>Styrkir:</strong> Reinar og stillar upptøkur verða avskrivaðar til lesiligan tekstvið lutfalsliga fáum feilum.</li>
+    <li><strong>Veikleikar:</strong> Óljóð, fólk sum tosa í munnin á hvørjum øðrum, málføri og fakmáleru framvegis ein avbjóðing.</li>
+    <li><strong>Kann longu brúkast til:</strong> At avskriva tað sum ein einsamallur persónur sigur, tildømis ein framløga. Ella setast upp til eitt vitlíkismodell, so ein kann tosa við vitlíki.</li>
+    <li><strong>Næsta stigið:</strong> Tørvur er á fleiri dátum: fjøltáttaðum ljóðupptøkum við røttum loyvum, betri tolsemi fyri óljóði og at skipanin skilir, hvør tosar.</li>
   </ul>
 
   <div class="my-4 rounded-lg border bg-muted/40 p-4">
-    <p class="m-0"><strong>Niðurstøða:</strong> 🟨 <strong>Ein sterk byrjan, og er longu **brúkiligt** at seta saman við vitlíkismodellum.</strong> Hent í skipaðum umhvørvi, men riggar ikki enn í óskipaðum umhvørvi, har fleiri tosa í senn.</p>
+    <p class="m-0"><strong>Niðurstøða:</strong> 🟨 Ein sterk byrjan, og er <strong>longu brúkiligt</strong> at seta saman við vitlíkismodellum. Hent í skipaðum umhvørvi, men riggar ikki enn í óskipaðum umhvørvi, har fleiri tosa í senn.</p>
   </div>
 
   <figure class="not-prose my-6">
@@ -257,7 +258,7 @@ const post = {
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
     />
-    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>Dømi um hvussu modellið kann brúkast til at tosa við ChatGPT</em></figcaption>
+    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>Dømi um hvussu modellið kann brúkast til at tosa við ChatGPT.</em></figcaption>
   </figure>
 
   <hr class="my-8 border-border/60" />
@@ -271,10 +272,10 @@ const post = {
       class="w-full max-w-3xl mx-auto rounded-lg border shadow-sm"
       loading="lazy" decoding="async"
     />
-    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>føroyskur tekst fer inn og føroysk tala kemur út.</em></figcaption>
+    <figcaption class="mt-2 text-sm text-muted-foreground text-center"><em>Føroyskur tekstur fer inn og føroysk tala kemur út.</em></figcaption>
   </figure>
 
-  <p><strong>Hví hetta hevur týdning:</strong> Gevur skipanum eina <strong>føroyska rødd</strong> til fráboðanir og hándfríða vitlíksnýtslu – og nógvar møguleikar fyri sjónveik.</p>
+  <p><strong>Hví hetta hevur týdning:</strong> Gevur skipanum eina <strong>føroyska rødd</strong> til fráboðanir og hondfríða vitlíksnýtslu – og nógvar møguleikar fyri sjónveik.</p>
   <p><strong>Hvat vit hava:</strong> <strong>Meta MMS TTS (fao)</strong> — ein rødd, <strong>klár men mekanisk</strong>.</p>
 
   <!-- Audio Player Component for TTS description -->
@@ -295,7 +296,7 @@ const post = {
   <p><strong>Hugskotið:</strong> <em>gptfo_instruct_6.7B</em> (Barbara Scalvini) tekur ímóti føroyskum boðum, t.d. “Ger hetta meira vinarligt”, og umskrivar tekstin.</p>
   <p><strong>Veruleikin:</strong> <strong>Riggar</strong> sum eitt konseptprógv, men úrslitini eru <strong>klombrutt</strong> og <strong>óstøðug</strong>. Sjálvt við góðum birtum <strong>megnar tað ikki at standa seg</strong> ímóti Gemini ella ChatGPT.</p>
   <p><strong>Hóskar nú til:</strong> Gransking og royndir.</p>
-  <p><strong>Tørvur er á:</strong> <strong>Nógv meira av føroyskum teksti</strong> at venja við  (Dátatrupulleikin aftur!). Og so eisini meira gransking og royndir, hetta er ein ring uppgáva.</p>
+  <p><strong>Tørvur er á:</strong> <strong>Nógv meira av føroyskum teksti</strong> at venja við  (dátatrupulleikin aftur!). Eisini er tørvur á meira gransking og royndum - hetta er ein torfør uppgáva.</p>
 
   <div class="my-4 rounded-lg border bg-muted/40 p-4">
     <p class="m-0"><strong>Niðurstøða:</strong> 🟥 Á granskingarstigi, ikki klárt til nýtslu — og tað verður tað ikki uttan fleiri dátur.</p>
@@ -309,7 +310,7 @@ const post = {
 
   <p>Amboð á byrjunarstigi kunnu gagna, um tey verða brúkt rætt.</p>
 
-  <h3 class="mt-6">✅ Tú kanst arbeiða á enskum og týða at enda til føroyskt</h3>
+  <h3 class="mt-6">✅ Tú kanst arbeið á enskum og týð seinni til føroyskt</h3>
   <p>Skriva uppkøst, legg til rættis og tak samanum á enskum við Copilot, Gemini ella ChatGPT. <strong>Týð síðani úrslitini til føroyskt</strong>, tá ið tað er neyðugt. Henda <strong>tvídeilda arbeiðsgongdin</strong> gevur tær størsta fyrimunin longu nú.</p>
 
   <h3 class="mt-6">🗣️ Avskriva reinar ljóðupptøkur</h3>
@@ -328,7 +329,7 @@ const post = {
   <ol>
     <li><strong>Ein sterkur EN→FO týðari</strong> við nóg góðari góðsku at varðveita týdning og tónalag. Letur upp fyri <strong>føroyskum úrslitum</strong>, sum kennast natúrlig, bygd oman á altjóða stór málmodell. <strong>Samstundis:</strong> víðka føroyska dátugrundarlagið við meira tilfar og røttum loyvum. <em>Men onkur má fáa løn fyri at gera hetta!</em></li>
     <li><strong>ASR (tala→tekst), sum klárar ein vanligan fund</strong>. Amboðið má klára ymisk máldám, fólk sum tosa í munnin á hvørjum øðrum, og skrivstovuóljóð. <strong>Samstundis:</strong> savna fjølbroyttar, lógligar ljóðupptøkur við avskriftum; miðið eftir veruligum arbeiðstilburðum.</li>
-    <li><strong>Betri føroyskt TTS (tekst→talu)</strong> — fleiri týðiligar og natúrligar røddir. <strong>Samstundis:</strong> røkja útaluorðabók;.</li>
+    <li><strong>Betri føroyskt TTS (tekst→talu)</strong> — fleiri týðiligar og natúrligar røddir. <strong>Samstundis:</strong> røkja úttaluorðabók.</li>
   </ol>
   <p><strong>Leggið til viks í løtuni:</strong> Eitt fullkomið føroyskt LLM. Hjálpið heldur vinnuni við amboðum, tey hava brúk fyri.</p>
 
@@ -337,7 +338,7 @@ const post = {
 
 <section aria-labelledby="sec-7">
   <h2 id="sec-7">7) Dátur eru fløskuhálsurin – soleiðis loysa vit tað</h2>
-  <p>Góðska í vitlíki fylgir <strong>dátugóðsku</strong>. Okkum tørvar <strong>føroysk tekst‑ og ljóðsøvn</strong> við <strong>hágóðsku, breidd og røttum loyvum</strong>. Hetta er ein <strong>mál‑infrakervisuppgáva</strong>, ikki eitt frítíðarítriv — so onkur má fáa pengar fyri at arbeiða við hesum.</p>
+  <p>Góðskan á vitlíki fylgir góðskuni á dátunum, ið vitlíki verður ment við. Okkum tørvar <strong>føroysk tekst‑ og ljóðsøvn</strong> við <strong>hágóðsku, breidd og røttum loyvum</strong>. Hetta er ein <strong>mál‑infrakervisuppgáva</strong>, ikki eitt frítíðarítriv — so onkur má fáa pengar fyri at arbeiða við hesum.</p>
 
   <p>Hvat krevst nú:</p>
   <ul>
@@ -365,13 +366,13 @@ const post = {
   <ul>
     <li>Føroysku vitlíkismodellini eru <strong>amboð,</strong> sum vinnan kann nýta at byggja spennandi ting burturúr longu í dag.</li>
     <li>Betri <strong>EN→FO</strong> <strong>týðing</strong> og <strong>talu-til-tekst-modell</strong> geva <strong>skjótast virði</strong> og leggja <strong>lunnar</strong> undir alt víðari arbeiði við vitlíki.</li>
-    <li><strong>nllb_200_1.3B_en_fo</strong> er eitt <strong>sterkt, opið val</strong> men <strong>Gemini 2.5 Pro</strong> er <strong>best</strong> á natúrligum føroyskum sambært mínum royndum.</li>
-    <li><strong>Dátur</strong> (góðska, breidd og loyviviðurskifti) eru <strong>høvuðsforðingin</strong> í víðarimenningini av føroyskum vitlíki — og loysnin er eitt toymi við greiðum leiklutum og veruligari fígging, so fólk kunnu fáa løn fyri at loysa hesa forðing.</li>
+    <li><strong>nllb_200_1.3B_en_fo</strong> er eitt <strong>sterkt, opin loyvir,</strong> men <strong>Gemini 2.5 Pro</strong> er <strong>best</strong> á natúrligum føroyskum.</li>
+    <li><strong>Dátur</strong> (góðska, breidd og loyviviðurskifti) eru <strong>høvuðsforðingin</strong> í víðarimenningini av føroyskum vitlíki — og loysnin er eitt toymið við greiðum leiklutum og veruligari fígging, so fólk kunnu fáa løn fyri at loysa hesa forðing.</li>
   </ul>
 
   <p><strong>Vitlíkisstovan</strong> byggir ikki amboð. <strong>Vit byggja hús.</strong></p>
 
-  <p>Um tykkara toymi vil royna eitt av hesum amboðunum — ella vil hava eina erliga meting av, hvat er vert at gera — so hjálpa vit fegin.</p>
+  <p>Um tykkara toymið vil royna eitt av hesum amboðunum — ella vil hava eina erliga meting av, hvat er vert at gera — so hjálpa vit fegin.</p>
 </section>
   `,
 } as const;
