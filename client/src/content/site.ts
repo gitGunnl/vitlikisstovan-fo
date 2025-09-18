@@ -37,7 +37,7 @@ export const siteConfig = {
         }
       },
       {
-        title: "Vitlíkisráðgeving, snikkað til tín",
+        title: "Vitlíkisráðgeving, snikkað til tín tørv",
         subtitle:
           "Er tørvurin ein vitlíkistrategi, vegleiðing í sambandi við eina vitlíki verkætlan, nýtslu av vitlíki í kreativum arbeiði ella eitt fjórða - so leiðbeini eg tykkum lættliga rætta vegin.",
         primaryCTA: {
