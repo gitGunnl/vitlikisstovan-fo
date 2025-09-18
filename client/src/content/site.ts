@@ -294,7 +294,7 @@ export const siteConfig = {
         iconColor: "text-destructive",
         buttonText: "Tak niður PDF",
         buttonStyle: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        href: "/Vegleiding_Spar_tíd_og_betra_um_undirvisingina_vid_ChatGPT.pdf"
+        href: "/vegleiding_undirvisarir.pdf"
       },
       {
         title: "Innleiðandi video (1 min)",

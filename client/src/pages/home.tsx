@@ -794,7 +794,7 @@ export default function Home() {
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-6">
                               <Button asChild className="w-full">
-                                <a href="/Vegleiding_Spar_tíd_og_betra_um_undirvisingina_vid_ChatGPT.pdf" target="_blank" rel="noopener noreferrer">
+                                <a href="/vegleiding_undirvisarir.pdf" target="_blank" rel="noopener noreferrer">
                                   <FileText className="mr-2 h-4 w-4" />
                                   Tak niður: Lærarar (PDF)
                                 </a>
