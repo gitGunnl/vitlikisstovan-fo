@@ -140,7 +140,9 @@ Constraints:
             prompt: `
 I want to work a bit on discovering what can be done regarding a job summary and how they can use ChatPGT to help them in their work. Here is the job summary:
 
-[paste job summary here]
+<job_summary>
+<------------ADD HERE--------------->
+</job_summary>
 
 Look on the web for what tasks other LLM users say can be automated using ChatGPT and similar AI tech in the field we are exploring.
 
@@ -163,7 +165,7 @@ We are exploring how language models (LLMs) can automate tasks in the Faroe Isla
 I want you to propose a list of **15** things my client can use ChatGPT for. Here is information about my client:
 
 <client_information>
-
+<------------ADD HERE--------------->
 </client_information>
 
 Below is guidance on what types of tasks ChatGPT is good at for this client. Use it to shape your ideas and avoid suggesting things the model cannot do.
@@ -248,8 +250,9 @@ ChatGPT is a versatile language model that excels at drafting, structuring, expl
 </tasks_types>
 
 We already found these tasks from searching the internet:
-<tasksFound>
 
+<tasksFound>
+<------------ADD HERE--------------->
 </tasksFound>
 
 ### Your task
