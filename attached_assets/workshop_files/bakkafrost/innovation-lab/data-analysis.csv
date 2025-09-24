@@ -1,0 +1,21 @@
+Mánuður,Framleiðsla (tonn),Temperatur (°C),Fóður Nýtsla (tonn),Vøkstur (%),Deyðiligheit (%),CO2 útlát (tonn)
+Januar,450,6.2,520,8.5,1.2,125
+Februar,465,5.8,535,8.8,1.1,128
+Mars,480,6.5,545,9.2,0.9,130
+Apríl,510,7.1,560,9.8,0.8,133
+Mai,535,8.3,575,10.2,0.7,135
+Juni,560,9.5,590,10.8,0.6,138
+Juli,585,10.2,605,11.2,0.5,140
+August,610,10.8,620,11.5,0.5,143
+September,630,9.6,635,11.0,0.6,145
+Oktober,645,8.2,650,10.5,0.7,148
+November,660,6.9,665,9.8,0.9,150
+Desember,675,6.0,680,9.2,1.0,153
+
+# Viðmerkingar:
+# - Framleiðsla: Mánaðarlig framleiðsla í tonnum
+# - Temperatur: Miðal sjóvar temperatur
+# - Fóður Nýtsla: Total fóður brúkt í tonnum
+# - Vøkstur: Prosentvís vøkstur samanborið við undanfarna mánað
+# - Deyðiligheit: Prosent av fiski sum doyði
+# - CO2 útlát: Beint og óbeint CO2 útlát í tonnum
