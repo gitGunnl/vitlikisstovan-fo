@@ -285,47 +285,33 @@ Keep the writing concise, specific to the client, and practical. Avoid generic �
             {
             title: "Stig 6: Bygg víðari – partur 1",
             description: "Kopiera birti niðanfyri,  og send.",
-            prompt: "add prompt here",
+            prompt: "Very good. Now I want you to think outside the box. Make another analysis of tasks my client can use ChatGPT for. For this analysis, I want you to find tasks that could revolutionize their worklife and field. Give these ideas a rating for how hard it is to implement and how positively impactful it could be for their worklife.",
             requiresConfirmation: false
             },
             {
             title: "Stig 7: Bygg víðari – partur 2",
-            description: "Kopiera fyriskipanina niðanfyri, legg við (sum merkt) tað, sum skal leggjast afturat, og send. Tak eisini niður tilfarið niðanfyri til tína verkætlan.",
-            prompt: "add prompt here",
-            requiresConfirmation: false,
-            files: [
-              {
-                name: "Verkætlanar fyrimynd",
-                filename: "project-template.md",
-                description: "Ein fyrimynd til at strukturera tína verkætlan"
-              },
-              {
-                name: "Data greiningar ark",
-                filename: "data-analysis.csv",
-                description: "Excel/CSV ark við dømi um laksafarm data til greining"
-              },
-              {
-                name: "Koða dømi",
-                filename: "example-code.js",
-                description: "JavaScript koða dømi fyri data greining og sustainability útrokningar"
-              }
-            ]
-            },
-            {
-            title: "Stig 8: Bygg víðari – partur 3",
-            description: "Kopiera fyriskipanina niðanfyri, legg við (sum merkt) tað, sum skal leggjast afturat, og send.",
-            prompt: "add prompt here",
+            description: "Kopiera birtið niðanfyri inn í sama kjatt og send.",
+            prompt: `Very good. Now, one last time, lose any predefined notion of how my client’s work should be done and give me a list of revolutionary ways of doing their work with AI, totally based on first principal thinking. Give these ideas a rating for how hard it is to implement and how positively impactful it could be on their worklife.
+
+              Be careful the ideas don’t fall outside what they actually do, but are ideas on how to do their jobs in a totally new and improved way.
+`,
             requiresConfirmation: false
             },
             {
-            title: "Stig 9: Kanna gjøgnumførsluna",
-            description: "Les listan og eyðmerk hugskot, sum ikki eru gjøgnumførilig (ella ikki lønandi) fyri tykkara veruleika. Merk tey sum 'ikki gjøgnumførilig' ella flyt tey longur út í tíð.",
-            prompt: "add prompt here",
+            title: "Stig 8: Ger fyrsta listan",
+            description: "Kopiera birtið inn í ChatGPT og send.",
+            prompt: "Now looking at all the lists you have made, I want you to think about which of these my client should start with. Make a list of the top 5 best and most practical ideas from the lists, these should be the low hanging fruits that give big results.",
             requiresConfirmation: false
             },
             {
-            title: "Stig 10: Liðugt – takk fyri",
-            description: "Tað var verkstovan – vónandi dámdi tær. Tú kanst prenta listan og leggja hann á náttborðið og lesa hann áðrenn tú sovnar, um tú vilt halda dampin.",
+            title: "Stig 9: Ger listan lidnan",
+            description: "Kopiera birtið inn í ChatGPT og send.",
+            prompt: "Now come up with the rest of the list, this should be the top 6-20 ideas, be sure to carefully rank each idea, and then list them.",
+            requiresConfirmation: false
+            },
+            {
+            title: "Stig 10: Liðugt – takk fyri!",
+            description: "Hattar var verkstovan – vónandi hevur tú nú ein góðan lista. Nú kanst tú prenta listan og leggja hann á náttborðið og lesa hann áðrenn tú sovnar.",
             prompt: "add prompt here",
             requiresConfirmation: false
             }
