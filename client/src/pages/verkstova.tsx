@@ -67,10 +67,14 @@ export default function Verkstova() {
   const handleCopyPrompt = async (prompt: string) => {
     try {
       await navigator.clipboard.writeText(prompt);
-      toast({
+      const toastInstance = toast({
         title: "Birt avrita!",
         description: "Birt er nú avrita til tína teldu.",
       });
+      // Dismiss after 1 second
+      setTimeout(() => {
+        toastInstance.dismiss();
+      }, 1000);
     } catch (err) {
       toast({
         title: "Avritan miseydnaðist",
