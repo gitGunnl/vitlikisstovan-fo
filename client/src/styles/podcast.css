@@ -506,8 +506,8 @@
     --text-fun: 'Patrick Hand', cursive;
 }
 
-/* General Styles */
-body {
+/* General Styles - Only apply when on podcast page */
+body.podcast-page {
     font-family: var(--text-serif);
     color: #333;
     background-color: var(--faroe-cloud);
@@ -517,18 +517,23 @@ body {
     background-attachment: fixed;
 }
 
-h1, h2, h3, h4, h5, h6 {
+.podcast-page h1, 
+.podcast-page h2, 
+.podcast-page h3, 
+.podcast-page h4, 
+.podcast-page h5, 
+.podcast-page h6 {
     font-family: var(--storybook-title);
     color: var(--faroe-deep-blue);
 }
 
-a {
+.podcast-page a {
     color: var(--faroe-blue);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-a:hover {
+.podcast-page a:hover {
     color: var(--faroe-deep-blue);
     text-decoration: underline;
 }
