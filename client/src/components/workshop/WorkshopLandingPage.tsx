@@ -18,10 +18,10 @@ export function WorkshopLandingPage({ workshop, onLabSelect }: WorkshopLandingPa
             <span>{workshop.company}</span>
           </div>
           <h1 className="text-4xl font-bold mb-4">
-            Vælkomin til {workshop.name}
+            Vælkomin til vitlíkisverkstovu
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Vel tað lab, sum tú vil arbeiða við í dag. Hvørt lab hevur sítt egna fokus og mál.
+            Vel verkstovuna niðanfyri.
           </p>
         </div>
 

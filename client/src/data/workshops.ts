@@ -31,8 +31,8 @@ export interface Workshop {
       labs: [
         {
           id: "innovation-lab",
-          name: "Verkstova",
-          description: "Explore innovative approaches to transform salmon farming using AI and technology.",
+          name: "Verkstova 1",
+          description: "Hvat júst tú kann nýta ChatGPT/CoPilot til.",
           steps: [
         // s1 — leave as is
             {
@@ -44,19 +44,24 @@ export interface Workshop {
             {
             title: "Stig 2: Samandráttur (við Thinking-modellinum)",
             description: "Skift fyrst til 'Thinking'-modellið. Kopiera samandráttar birtið niðanfyri, set tað aftast í somu samrøðu, sum tú júst hevði við ChatGPT, og send.",
-            prompt: "d",
+            prompt: `
+            dfsffsd
+            sdfdsffds
+            dsffdssfd
+            sfdfdsfds
+            `,
             requiresConfirmation: true,
             confirmationText: "Eg vátti, at eg havi fingið ein fullfíggjaðan samandrátt, lisið hann og staðfest, at hann er rættur."
             },
             {
-            title: "Stig 3: Opna nýggjan flipa við ChatGPT",
-            description: "Opna ein nýggjan flipa í kaganum og lat upp ChatGPT aftur. Vit fara at brúka henda flipa til framhaldið, meðan hin fyrri er opin við samandráttinum.",
-            prompt: "add prompt here",
+            title: "Stig 3: Opna nýtt vindeyga og fær aftur inn á ChatGPT",
+            description: "Opna eitt nýtt vindeyga  í kaganum og lat upp ChatGPT aftur. Læt fyrra vindeyga  við samandráttinum vera opið.",
+            prompt: `te`,
             requiresConfirmation: false
             },
             {
-            title: "Stig 4: Samandráttur + vefsøk",
-            description: "Kopiera fyriskipanina niðanfyri inn í nýggja ChatGPT-kjakið, lím samandráttin inn har tað er merkt, tendra vefsøk, og send.",
+            title: "Stig 4: Samandráttur og 'web-search'",
+            description: "Kopiera birti niðanfyri inn í nýggja ChatGPT-vindeyga, skoyt samandráttin inn har tað er merkt, tendra 'web search', og send.",
             prompt: "add prompt here",
             requiresConfirmation: false
             },
