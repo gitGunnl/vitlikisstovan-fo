@@ -275,32 +275,6 @@ export default function Verkstova() {
                 Aftur
               </Button>
 
-              <AlertDialog open={showExitDialog} onOpenChange={setShowExitDialog}>
-                <AlertDialogTrigger asChild>
-                  <Button
-                    variant="outline"
-                    className="w-full sm:w-auto"
-                    data-testid="button-exit"
-                  >
-                    Far úr verkstovuni
-                  </Button>
-                </AlertDialogTrigger>
-                <AlertDialogContent>
-                  <AlertDialogHeader>
-                    <AlertDialogTitle>Far úr verkstovuni?</AlertDialogTitle>
-                    <AlertDialogDescription>
-                      Ert tú viss/ur í, at tú vil fara úr verkstovuni? Framgongdin verður ikki goymd.
-                    </AlertDialogDescription>
-                  </AlertDialogHeader>
-                  <AlertDialogFooter>
-                    <AlertDialogCancel>Halt fram við verkstovuni</AlertDialogCancel>
-                    <AlertDialogAction onClick={handleExit}>
-                      Far úr verkstovuni
-                    </AlertDialogAction>
-                  </AlertDialogFooter>
-                </AlertDialogContent>
-              </AlertDialog>
-
               {currentStep === workshop.steps.length - 1 ? (
                 <Button
                   onClick={handleExit}
@@ -322,6 +296,35 @@ export default function Verkstova() {
               )}
             </CardFooter>
           </Card>
+
+          {/* Exit Button - Outside the card */}
+          <div className="flex justify-center mb-6">
+            <AlertDialog open={showExitDialog} onOpenChange={setShowExitDialog}>
+              <AlertDialogTrigger asChild>
+                <Button
+                  variant="outline"
+                  className="text-red-600 border-red-200 hover:bg-red-50 hover:text-red-700 hover:border-red-300 transition-colors"
+                  data-testid="button-exit"
+                >
+                  Far úr verkstovuni
+                </Button>
+              </AlertDialogTrigger>
+              <AlertDialogContent>
+                <AlertDialogHeader>
+                  <AlertDialogTitle>Far úr verkstovuni?</AlertDialogTitle>
+                  <AlertDialogDescription>
+                    Ert tú viss/ur í, at tú vil fara úr verkstovuni? Framgongdin verður ikki goymd.
+                  </AlertDialogDescription>
+                </AlertDialogHeader>
+                <AlertDialogFooter>
+                  <AlertDialogCancel>Halt fram við verkstovuni</AlertDialogCancel>
+                  <AlertDialogAction onClick={handleExit} className="bg-red-600 hover:bg-red-700">
+                    Far úr verkstovuni
+                  </AlertDialogAction>
+                </AlertDialogFooter>
+              </AlertDialogContent>
+            </AlertDialog>
+          </div>
 
           {/* Help Text */}
           <div className="text-center text-sm text-muted-foreground" aria-live="polite">
