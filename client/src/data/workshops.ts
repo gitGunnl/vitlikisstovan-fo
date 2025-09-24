@@ -75,9 +75,26 @@ export interface Workshop {
             },
             {
             title: "Stig 7: Bygg víðari – partur 2",
-            description: "Kopiera fyriskipanina niðanfyri, legg við (sum merkt) tað, sum skal leggjast afturat, og send.",
+            description: "Kopiera fyriskipanina niðanfyri, legg við (sum merkt) tað, sum skal leggjast afturat, og send. Tak eisini niður tilfarið niðanfyri til tína verkætlan.",
             prompt: "add prompt here",
-            requiresConfirmation: false
+            requiresConfirmation: false,
+            files: [
+              {
+                name: "Verkætlanar fyrimynd",
+                filename: "project-template.md",
+                description: "Ein fyrimynd til at strukturera tína verkætlan"
+              },
+              {
+                name: "Data greiningar ark",
+                filename: "data-analysis.csv",
+                description: "Excel/CSV ark við dømi um laksafarm data til greining"
+              },
+              {
+                name: "Koða dømi",
+                filename: "example-code.js",
+                description: "JavaScript koða dømi fyri data greining og sustainability útrokningar"
+              }
+            ]
             },
             {
             title: "Stig 8: Bygg víðari – partur 3",
