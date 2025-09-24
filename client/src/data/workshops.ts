@@ -1,7 +1,7 @@
 export interface WorkshopStep {
   title: string;
   description: string;
-  prompt: string;
+  prompt?: string;
   requiresConfirmation?: boolean;
   confirmationText?: string;
   files?: {
