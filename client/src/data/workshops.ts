@@ -31,7 +31,7 @@ export interface Workshop {
       labs: [
         {
           id: "innovation-lab",
-          name: "Innovation Lab",
+          name: "Verkstova",
           description: "Explore innovative approaches to transform salmon farming using AI and technology.",
           steps: [
         // s1 — leave as is
