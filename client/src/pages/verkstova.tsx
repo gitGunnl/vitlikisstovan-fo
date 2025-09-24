@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { useToast } from "@/hooks/use-toast";
 import { getWorkshopByPassword, Workshop, WorkshopStep, Lab } from "@/data/workshops";
-import { Copy, ArrowRight, ArrowLeft, Lock, CheckCircle } from "lucide-react";
+import { Copy, ArrowRight, ArrowLeft, Lock, CheckCircle, FileDown, Download } from "lucide-react";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import { WorkshopLandingPage } from "@/components/workshop/WorkshopLandingPage";
@@ -268,6 +268,49 @@ export default function Verkstova() {
                   </p>
                 </div>
               </div>
+
+              {/* Downloadable Files Section */}
+              {currentStepData.files && currentStepData.files.length > 0 && (
+                <div className="space-y-3">
+                  <Label className="text-base font-semibold">Niðurtøkufílur:</Label>
+                  <div className="space-y-2">
+                    {currentStepData.files.map((file, index) => (
+                      <div
+                        key={index}
+                        className="flex items-center justify-between p-3 bg-muted/30 rounded-lg border"
+                        data-testid={`file-download-${currentStep}-${index}`}
+                      >
+                        <div className="flex items-center gap-3">
+                          <FileDown className="h-5 w-5 text-primary flex-shrink-0" aria-hidden="true" />
+                          <div className="min-w-0">
+                            <p className="font-medium truncate">{file.name}</p>
+                            {file.description && (
+                              <p className="text-sm text-muted-foreground">
+                                {file.description}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          asChild
+                          className="flex-shrink-0 ml-3"
+                          data-testid={`button-download-${currentStep}-${index}`}
+                        >
+                          <a
+                            href={`/attached_assets/workshop_files/${workshop.company.toLowerCase()}/${selectedLab.id}/${file.filename}`}
+                            download={file.filename}
+                          >
+                            <Download className="h-4 w-4 mr-1" aria-hidden="true" />
+                            Tak niður
+                          </a>
+                        </Button>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Confirmation Checkbox */}
               {currentStepData.requiresConfirmation && (
