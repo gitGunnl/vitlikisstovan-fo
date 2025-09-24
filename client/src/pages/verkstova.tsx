@@ -302,8 +302,8 @@ export default function Verkstova() {
             <AlertDialog open={showExitDialog} onOpenChange={setShowExitDialog}>
               <AlertDialogTrigger asChild>
                 <Button
-                  variant="outline"
-                  className="text-red-600 border-red-200 hover:bg-red-50 hover:text-red-700 hover:border-red-300 transition-colors"
+                  variant="destructive"
+                  className="bg-red-600 hover:bg-red-700 text-white"
                   data-testid="button-exit"
                 >
                   Far úr verkstovuni
