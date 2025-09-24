@@ -4,6 +4,11 @@ export interface WorkshopStep {
   prompt: string;
   requiresConfirmation?: boolean;
   confirmationText?: string;
+  files?: {
+    name: string;        // Display name for the file
+    filename: string;    // Actual filename in attached_assets
+    description?: string; // Optional description of the file
+  }[];
 }
 
 export interface Lab {
@@ -38,8 +43,8 @@ export interface Workshop {
             },
             {
             title: "Stig 2: Samandráttur (við Thinking-modellinum)",
-            description: "Skift fyrst til 'Thinking'-modellið. Kopiera samandráttarfyriskipanina niðanfyri, set hana aftast í somu samrøðu, sum tú júst hevði við ChatGPT, og send.",
-            prompt: "add prompt here",
+            description: "Skift fyrst til 'Thinking'-modellið. Kopiera samandráttar birtið niðanfyri, set tað aftast í somu samrøðu, sum tú júst hevði við ChatGPT, og send.",
+            prompt: "d",
             requiresConfirmation: true,
             confirmationText: "Eg vátti, at eg havi fingið ein fullfíggjaðan samandrátt, lisið hann og staðfest, at hann er rættur."
             },
