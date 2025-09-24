@@ -17,14 +17,16 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { useToast } from "@/hooks/use-toast";
-import { getWorkshopByPassword, Workshop, WorkshopStep } from "@/data/workshops";
+import { getWorkshopByPassword, Workshop, WorkshopStep, Lab } from "@/data/workshops";
 import { Copy, ArrowRight, ArrowLeft, Lock, CheckCircle } from "lucide-react";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
+import { WorkshopLandingPage } from "@/components/workshop/WorkshopLandingPage";
 
 export default function Verkstova() {
   const [password, setPassword] = useState("");
   const [workshop, setWorkshop] = useState<Workshop | null>(null);
+  const [selectedLab, setSelectedLab] = useState<Lab | null>(null);
   const [currentStep, setCurrentStep] = useState(0);
   const [hasConfirmed, setHasConfirmed] = useState(false);
   const [error, setError] = useState("");
@@ -79,7 +81,7 @@ export default function Verkstova() {
   };
 
   const handleNext = () => {
-    if (currentStep < workshop!.steps.length - 1) {
+    if (selectedLab && currentStep < selectedLab.steps.length - 1) {
       setCurrentStep(currentStep + 1);
       setHasConfirmed(false);
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -96,6 +98,7 @@ export default function Verkstova() {
 
   const handleExit = () => {
     setWorkshop(null);
+    setSelectedLab(null);
     setPassword("");
     setCurrentStep(0);
     setHasConfirmed(false);
@@ -103,8 +106,23 @@ export default function Verkstova() {
     window.scrollTo({ top: 0 });
   };
 
-  const progressPercentage = workshop ? ((currentStep + 1) / workshop.steps.length) * 100 : 0;
+  const handleBackToLabSelection = () => {
+    setSelectedLab(null);
+    setCurrentStep(0);
+    setHasConfirmed(false);
+    window.scrollTo({ top: 0 });
+  };
 
+  const handleLabSelect = (lab: Lab) => {
+    setSelectedLab(lab);
+    setCurrentStep(0);
+    setHasConfirmed(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const progressPercentage = selectedLab ? ((currentStep + 1) / selectedLab.steps.length) * 100 : 0;
+
+  // Password Entry Screen
   if (!workshop) {
     // Password Entry Screen
     return (
@@ -173,10 +191,21 @@ export default function Verkstova() {
     );
   }
 
-  const currentStepData: WorkshopStep = workshop.steps[currentStep];
+  // Lab Selection Screen
+  if (!selectedLab) {
+    return (
+      <>
+        <Header />
+        <WorkshopLandingPage workshop={workshop} onLabSelect={handleLabSelect} />
+        <Footer />
+      </>
+    );
+  }
+
+  const currentStepData: WorkshopStep = selectedLab.steps[currentStep];
   const canProceed = !currentStepData.requiresConfirmation || hasConfirmed;
 
-  // Workshop Interface
+  // Lab Steps Interface
   return (
     <>
       <Header />
@@ -185,7 +214,7 @@ export default function Verkstova() {
           {/* Workshop Header */}
           <div className="mb-8 text-center">
             <h1 className="text-2xl sm:text-3xl font-bold mb-2" data-testid="text-workshop-title">
-              {workshop.name}
+              {workshop.name} - {selectedLab.name}
             </h1>
             <p className="text-muted-foreground" data-testid="text-company">
               Verkstova hjá {workshop.company}
@@ -196,7 +225,7 @@ export default function Verkstova() {
           <div className="mb-8" aria-live="polite">
             <div className="flex items-center justify-between text-xs sm:text-sm mb-2">
               <span data-testid="text-progress">
-                Stig {currentStep + 1} av {workshop.steps.length}
+                Stig {currentStep + 1} av {selectedLab.steps.length}
               </span>
               <span className="text-muted-foreground">
                 {Math.round(progressPercentage)}% liðugt
@@ -275,7 +304,7 @@ export default function Verkstova() {
                 Aftur
               </Button>
 
-              {currentStep === workshop.steps.length - 1 ? (
+              {currentStep === selectedLab.steps.length - 1 ? (
                 <Button
                   onClick={handleExit}
                   className="w-full sm:w-auto sm:ml-auto"
@@ -297,8 +326,16 @@ export default function Verkstova() {
             </CardFooter>
           </Card>
 
-          {/* Exit Button - Outside the card */}
-          <div className="flex justify-center mb-6">
+          {/* Navigation Buttons - Outside the card */}
+          <div className="flex justify-center gap-4 mb-6">
+            <Button
+              variant="outline"
+              onClick={handleBackToLabSelection}
+              data-testid="button-back-to-labs"
+            >
+              <ArrowLeft className="h-4 w-4 mr-1" aria-hidden="true" />
+              Aftur til lab val
+            </Button>
             <AlertDialog open={showExitDialog} onOpenChange={setShowExitDialog}>
               <AlertDialogTrigger asChild>
                 <Button
