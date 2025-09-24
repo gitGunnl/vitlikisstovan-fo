@@ -4,6 +4,7 @@ import Footer from "@/components/site/Footer";
 import { siteConfig } from "@/content/site";
 import PodcastPlayer from "@/components/podcast/PodcastPlayer";
 import episodes from "@/data/podcastEpisodes";
+import "@/styles/podcast.css";
 
 export default function Podcast() {
   useEffect(() => {
