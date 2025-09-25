@@ -312,8 +312,31 @@ Keep the writing concise, specific to the client, and practical. Avoid generic �
             },
             {
             title: "Stig 8: Ger fyrsta listan",
-            description: "Kopiera birtið inn í ChatGPT og send.",
-            prompt: "Now looking at all the lists you have made, I want you to think about which of these my client should start with. Make a list of the top 5 best and most practical ideas from the lists, these should be the low hanging fruits that give big results.",
+            description: "Í hesum stigi vit arbeida við fleiri ymiskum birtum og tekstum til at gera ein fullfíggjaðan lista.",
+            // Example using the new multiple content sections format
+            content: [
+              {
+                text: "Fyrst, les henda tekstin gjølla. Hetta er vegleiðing fyri fyrsta partin av uppgávuni. Tú skalt hugsa um hvussu ChatGPT kann hjálpa við at loysa hesar avbjóðingar í tínum arbeiði."
+              },
+              {
+                text: "Nú kopiera hetta fyrsta birtið og brúka tað í ChatGPT:",
+                prompt: "Now looking at all the lists you have made, I want you to think about which of these my client should start with. Make a list of the top 5 best and most practical ideas from the lists, these should be the low hanging fruits that give big results.",
+                label: "Fyrsta birt - Top 5 lista"
+              },
+              {
+                text: "Eftir at tú hevur fingið svar frá ChatGPT um fyrsta partin, halt fram við næsta stigi. Les svari gjølla og ger tær noteringar um hvussu hetta kann tillagast til tín virkisemi."
+              },
+              {
+                text: "Nú kopiera annað birtið sum byggir víðari á fyrsta svari:",
+                prompt: "For each of the 5 ideas above, provide: 1) Specific first steps to implement, 2) Expected time to see results, 3) Potential challenges and how to overcome them.",
+                label: "Annað birt - Ítøkilig stig"
+              },
+              {
+                text: "Til seinast, brúka hetta triðja birtið til at fáa eitt yvirlit:",
+                prompt: "Create a one-page action plan that I can present to my team, focusing on the quickest wins we can achieve in the next 30 days using AI tools.",
+                label: "Triðja birt - Átaksætlan"
+              }
+            ],
             requiresConfirmation: false
             },
             {
