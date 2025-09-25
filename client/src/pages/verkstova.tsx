@@ -209,7 +209,109 @@ export default function Verkstova() {
   const currentStepData: WorkshopStep = selectedLab.steps[currentStep];
   const canProceed = !currentStepData.requiresConfirmation || hasConfirmed;
 
-  // Lab Steps Interface
+  // Special display for "Nøkur hugskot" - show all prompts on one page
+  if (selectedLab.id === "Nøkur hugskot") {
+    return (
+      <>
+        <Header />
+        <main className="min-h-screen bg-gradient-to-b from-background to-muted/20">
+          <div className="container mx-auto px-4 py-8 max-w-4xl">
+            {/* Workshop Header */}
+            <div className="mb-8 text-center">
+              <h1 className="text-2xl sm:text-3xl font-bold mb-2" data-testid="text-workshop-title">
+                {workshop.name} - {selectedLab.name}
+              </h1>
+              <p className="text-muted-foreground mb-4" data-testid="text-company">
+                Verkstova hjá {workshop.company}
+              </p>
+              <p className="text-lg text-muted-foreground">
+                {selectedLab.description}
+              </p>
+            </div>
+
+            {/* All Prompts Display */}
+            <div className="space-y-6">
+              {selectedLab.steps.map((step, index) => (
+                <Card key={index} className="overflow-hidden" data-testid={`card-idea-${index}`}>
+                  <CardHeader className="pb-3">
+                    <CardTitle className="flex items-center gap-2 text-lg">
+                      <CheckCircle className="h-5 w-5 text-primary flex-shrink-0" aria-hidden="true" />
+                      {step.title}
+                    </CardTitle>
+                    <CardDescription className="text-sm mt-1">
+                      {step.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-3">
+                      <div className="flex items-center justify-between">
+                        <Label className="text-sm font-semibold">Birt:</Label>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() => handleCopyPrompt(step.prompt)}
+                          aria-label={`Avrita birt ${index + 1}`}
+                          data-testid={`button-copy-prompt-${index}`}
+                        >
+                          <Copy className="h-4 w-4 mr-1" aria-hidden="true" />
+                          Avrita
+                        </Button>
+                      </div>
+                      <div className="bg-muted/50 p-3 rounded-lg border max-h-40 overflow-y-auto" data-testid={`text-prompt-${index}`}>
+                        <p className="text-xs leading-relaxed whitespace-pre-wrap break-words font-mono">
+                          {step.prompt}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+
+            {/* Navigation Buttons */}
+            <div className="flex justify-center gap-4 mt-8">
+              <Button
+                variant="outline"
+                onClick={handleBackToLabSelection}
+                data-testid="button-back-to-labs"
+              >
+                <ArrowLeft className="h-4 w-4 mr-1" aria-hidden="true" />
+                Aftur til lab val
+              </Button>
+              <AlertDialog open={showExitDialog} onOpenChange={setShowExitDialog}>
+                <AlertDialogTrigger asChild>
+                  <Button
+                    variant="destructive"
+                    className="bg-red-600 hover:bg-red-700 text-white"
+                    data-testid="button-exit"
+                  >
+                    Far úr verkstovuni
+                  </Button>
+                </AlertDialogTrigger>
+                <AlertDialogContent>
+                  <AlertDialogHeader>
+                    <AlertDialogTitle>Far úr verkstovuni?</AlertDialogTitle>
+                    <AlertDialogDescription>
+                      Ert tú viss/ur í, at tú vil fara úr verkstovuni?
+                    </AlertDialogDescription>
+                  </AlertDialogHeader>
+                  <AlertDialogFooter>
+                    <AlertDialogCancel>Halt fram við verkstovuni</AlertDialogCancel>
+                    <AlertDialogAction onClick={handleExit} className="bg-red-600 hover:bg-red-700">
+                      Far úr verkstovuni
+                    </AlertDialogAction>
+                  </AlertDialogFooter>
+                </AlertDialogContent>
+              </AlertDialog>
+            </div>
+          </div>
+        </main>
+        <Footer />
+      </>
+    );
+  }
+
+  // Regular Lab Steps Interface
   return (
     <>
       <Header />

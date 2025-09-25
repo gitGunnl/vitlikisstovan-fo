@@ -315,75 +315,84 @@ Keep the writing concise, specific to the client, and practical. Avoid generic �
             {
             title: "Stig 10: Liðugt – takk fyri!",
             description: "Hattar var verkstovan – vónandi hevur tú nú ein góðan lista. Nú kanst tú prenta listan og leggja hann á náttborðið og lesa hann áðrenn tú sovnar.",
-            prompt: "add prompt here",
             requiresConfirmation: false
             }
             ]
             },
         {
-          id: "Nøkur hugskot",
-          name: "Nøkur hugskot",
-          description: "Nøkur hugskot til hvat tú kann gera næst.",
+          id: "next-steps-lab",
+          name: "Next Steps Lab",
+          description: "Convert your job summary + top‑20 use cases into actionable assets (tests, guardrails, playbooks, deep research). Lane defaults: Amber — describe/redact/synthetic; keep sources in M365.",
           steps: [
             {
-              title: "Hugskot 1: Automatisera dagligar uppgávur",
-              description: "Brúka AI til at automatisera tínar dagligu uppgávur og spara tíð.",
-              prompt: "List 10 repetitive tasks in your daily work that could be automated using AI tools. For each task, suggest a specific AI tool or automation approach and estimate time savings per week.",
-              requiresConfirmation: false
+              title: "Step 1: Assumption Map & Confidence Heatmap",
+              description: "De‑risk your top ideas by exposing hidden assumptions and prioritizing fast validations. Lane: Amber. Action: paste job summary + top‑20 use cases.",
+              prompt: "You are my Assumption Mapper. Using my job summary and top‑20 use cases (pasted below), build a table with columns: Assumption | Affects which use‑case(s) | Confidence (Low/Med/High) | Business impact if wrong (1–5) | 48‑hour test to validate | Owner | Data needed. Then prioritize by (impact × (1–confidence)) and propose the first 3 tests to run this week. Materials: <PASTE JOB SUMMARY + TOP‑20 LIST>",
+              requiresConfirmation: true,
+              confirmationText: "I confirm I created the assumption table and selected 3 validation tests."
             },
             {
-              title: "Hugskot 2: Persónlig AI assistent",
-              description: "Bygg tín egna persónliga AI assistent sum hjálpir tær við arbeiði.",
-              prompt: "Design a personal AI assistant tailored to your specific work needs. What features would it have? How would it integrate with your existing tools? Create a detailed specification including daily interactions.",
-              requiresConfirmation: false
+              title: "Step 2: Edge‑Case Bank & Fallback Protocols",
+              description: "Design reliability before you launch. Enumerate odd scenarios, first moves, and fallbacks so workflows don’t jam. Lane: Amber.",
+              prompt: "Act as a Risk‑aware Ops Designer. From my top‑20 use cases, generate an Edge‑Case Bank. For each high‑value workflow, list 5 edge cases, detection cues, first response, fallback path, and who to notify. End with a top‑5 edge‑case rehearsal plan for the team. Materials: <PASTE JOB SUMMARY + TOP‑20 LIST>",
+              requiresConfirmation: true,
+              confirmationText: "I confirm I built the edge‑case bank and rehearsal plan."
             },
             {
-              title: "Hugskot 3: Data greining við AI",
-              description: "Brúka AI til at greina data og finna mynstur sum tú ikki sært.",
-              prompt: "Identify a dataset in your organization that's underutilized. Describe 5 ways AI could analyze this data to uncover hidden insights, predict trends, or optimize operations. Include specific AI techniques for each approach.",
-              requiresConfirmation: false
+              title: "Step 3: Data Coverage & Trust Contract",
+              description: "Answer “Can we trust this?” up front. Add a concise trust box to reports and a 2‑line disclaimer for email summaries. Lane: Amber.",
+              prompt: "Be my Data Trust Editor. For each reporting/analysis use case, draft a Data Coverage & Trust Contract: What’s included/excluded • Freshness • Known gaps • Quality checks • Caveats • When to escalate. Produce a reader‑friendly box for pasting atop reports and a 2‑line disclaimer for email summaries. Materials: <PASTE JOB SUMMARY + TOP‑20 LIST>",
+              requiresConfirmation: true,
+              confirmationText: "I confirm I added a trust box + 2‑line disclaimer to our templates."
             },
             {
-              title: "Hugskot 4: AI-drivin kunning",
-              description: "Skapa betri kunningartænastur við AI teknologi.",
-              prompt: "Design an AI-powered customer service system that could handle 80% of customer inquiries. Include conversation flows, escalation triggers, and personalization strategies. How would it learn and improve over time?",
-              requiresConfirmation: false
+              title: "Step 4: Quality Rubric & Calibration Pack",
+              description: "Raise quality and consistency. Define clear scoring anchors and self‑check guidance for your 3 most common artifacts. Lane: Green/Amber.",
+              prompt: "You are a Rubric Builder. Pick 3 recurring artifacts in my role (e.g., incident notes, SOP updates, stakeholder emails). For each, create a 5‑criteria scoring rubric (1–5) with clear anchor examples of 1 vs 5. Then grade this sample (I’ll paste) and recommend one rewrite to reach a 4+. Materials: <PASTE JOB SUMMARY + TYPICAL ARTIFACTS>",
+              requiresConfirmation: true,
+              confirmationText: "I confirm I have 3 rubrics with anchors and a calibrated rewrite."
             },
             {
-              title: "Hugskot 5: Innihaldsskapan við AI",
-              description: "Brúka AI til at skapa innihald - tekst, myndir, video og meira.",
-              prompt: "Create a content generation strategy using AI for your organization. Cover blog posts, social media, reports, and visual content. Include tools, workflows, quality control measures, and how to maintain brand voice.",
-              requiresConfirmation: false
+              title: "Step 5: Non‑Goals Charter & Anti‑Patterns",
+              description: "Prevent scope‑creep and misuse. Write what we will NOT do, why, the risk, and the exception path. Lane: Green.",
+              prompt: "Act as my Scope Bodyguard. From my top‑20, draft a Non‑Goals Charter: what we will NOT do, why, and the risk of doing it. Add an Anti‑Patterns section: “If you see X, do Y instead.” Close with a simple “How to request an exception” flow. Materials: <PASTE JOB SUMMARY + TOP‑20 LIST>",
+              requiresConfirmation: true,
+              confirmationText: "I confirm I documented Non‑Goals, Anti‑Patterns, and exceptions."
             },
             {
-              title: "Hugskot 6: Forutsiga við AI",
-              description: "Bygg forutsigandi modellar sum hjálpa við avgerðum.",
-              prompt: "Identify 3 critical business decisions that could benefit from predictive AI. For each, design a prediction model including: data needed, accuracy requirements, update frequency, and how predictions would influence decision-making.",
-              requiresConfirmation: false
+              title: "Step 6: Guardrails & Redaction Playbook",
+              description: "Make safe usage repeatable. Create Green/Amber/Red examples from your work, token redaction patterns, and an output‑only strategy. Lane: Amber/Red (policy).",
+              prompt: "You are a Safety Coach. Build a Guardrails & Redaction Playbook for my role: Green/Amber/Red examples mapped to my top‑20 use cases; how to describe vs paste; token redaction patterns (names, IDs); synthetic twin guidance; output‑only patterns (tables/outlines). End with a 30‑second self‑check to run before any prompt. Materials: <PASTE JOB SUMMARY + TOP‑20 LIST>",
+              requiresConfirmation: true,
+              confirmationText: "I confirm I created the guardrails playbook with a 30‑second self‑check."
             },
             {
-              title: "Hugskot 7: AI fyri venjing",
-              description: "Skapa persónligar venjingarupplevingar við AI.",
-              prompt: "Design an AI-powered learning and development program for your team. Include personalized learning paths, skill gap analysis, progress tracking, and how AI would adapt content based on individual learning styles and pace.",
-              requiresConfirmation: false
+              title: "Step 7: Experiment Factory (Prove the Value)",
+              description: "Produce quick evidence. Ship five tiny experiments with success metrics, baseline, and kill criteria in one table. Lane: Green/Amber.",
+              prompt: "Be my Experiment Designer. For my top 5 promising use cases, define 1 tiny experiment each: Hypothesis • Success metric (simple) • Baseline vs AI‑assisted method • Sample size • 1‑week plan • Kill criteria. Output as a single table and propose a simple results log (spreadsheet columns). Materials: <PASTE JOB SUMMARY + TOP‑20 LIST>",
+              requiresConfirmation: true,
+              confirmationText: "I confirm I have 5 experiments with metrics and a results log."
             },
             {
-              title: "Hugskot 8: Procesoptimering við AI",
-              description: "Finn og betra ineffektiva processar við AI greining.",
-              prompt: "Map out your organization's most complex workflow. Redesign it using AI to eliminate bottlenecks, reduce errors, and improve speed. Include specific AI interventions at each step and expected efficiency gains.",
-              requiresConfirmation: false
+              title: "Step 8: Deep Research — Tenant‑Safe LLM ROI & Adoption Playbook",
+              description: "Executive‑ready, cited brief: workflows with ROI ranges, adoption model + guardrails, case studies, 90‑day plan, pitfalls. Run in Deep Research if enabled. Lane: Amber.",
+              prompt: "Deep Research mode. Using my job summary + top‑20 use cases (below), produce a Tenant‑Safe LLM ROI & Adoption Playbook. Deliver: 1) Executive summary (≤150 words); 2) Top 7 workflows with ROI ranges (minutes saved/week and a quality proxy), assumptions, and 2–3 credible citations each from the last 18 months; 3) Adoption model (skills, change mgmt, training) with guardrails (data residency, no‑training commitments, M365/Copilot governance); 4) 3 comparable case studies (manufacturing/food/remote ops) with outcomes; 5) A 90‑day pilot plan (weeks, milestones, metrics, owners); 6) Red‑team: top 5 pitfalls + early warning signs; 7) Annotated bibliography with source quality notes. Make it board‑ready and state what NOT to do. Materials: <PASTE JOB SUMMARY + TOP‑20 LIST>",
+              requiresConfirmation: true,
+              confirmationText: "I confirm I generated the ROI & Adoption Playbook with citations."
             },
             {
-              title: "Hugskot 9: AI trygdarkervi",
-              description: "Brúka AI til at betra trygd og avdekka hóttanir.",
-              prompt: "Design a comprehensive AI security system for your organization. Cover threat detection, anomaly identification, automated responses, and continuous learning. How would it balance security with user convenience?",
-              requiresConfirmation: false
+              title: "Step 9: Deep Research — Failure Pattern Atlas (Identity/Endpoints & Sites)",
+              description: "Build a living atlas of top failure modes with symptoms, first moves, baselines, early warnings, and checklists. Run in Deep Research if enabled. Lane: Amber.",
+              prompt: "Deep Research mode. Using my job summary, compile a Failure Pattern Atlas for M365 identity, endpoints, and distributed sites. Deliver: 1) Top 12 failure modes with symptoms, root‑cause patterns, and first moves; 2) A 90‑day “good enough” baseline: lowest‑regret checks/policies that won’t crush productivity (map to Microsoft baseline/CIS where relevant); 3) Early‑warning signals and simple weekly health checks (no code) + a triage decision tree; 4) 3 short case write‑ups from credible sources in the last 18 months; 5) Risks & trade‑offs table. Output a one‑pager for managers + a checklist for operators. Include links and dates. Materials: <PASTE JOB SUMMARY>",
+              requiresConfirmation: true,
+              confirmationText: "I confirm I produced the Failure Pattern Atlas with sources and checklists."
             },
             {
-              title: "Hugskot 10: Framtíðar AI strategi",
-              description: "Ger eina 5-ára ætlan fyri AI í tínum felag.",
-              prompt: "Create a 5-year AI transformation roadmap for your organization. Include: current state assessment, phased implementation plan, required skills and training, budget estimates, success metrics, and potential risks with mitigation strategies.",
-              requiresConfirmation: false
+              title: "Step 10: Escalation Ladder & Comms Tree",
+              description: "Decide faster under pressure. Define who decides, how fast, fallbacks, and who to inform with ready‑to‑send templates. Lane: Green.",
+              prompt: "Be my Ops Playbook Writer. For the top 5 workflows most likely to jam, produce an Escalation Ladder (trigger → decider → target response time → fallback if unavailable) and a Comms Tree (who to notify, in what order, with a 50‑word template). Keep it to one page. Materials: <PASTE JOB SUMMARY + TOP‑20 LIST>",
+              requiresConfirmation: true,
+              confirmationText: "I confirm I have a 1‑page escalation ladder and comms tree."
             }
           ]
         }
