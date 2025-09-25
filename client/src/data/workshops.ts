@@ -1,7 +1,17 @@
+// Each content section can have text and an optional prompt to copy
+export interface ContentSection {
+  text: string;          // The text/instructions to display
+  prompt?: string;       // Optional prompt to copy (if present, shows copy button)
+  label?: string;        // Optional label for the prompt (defaults to "Birt:")
+}
+
 export interface WorkshopStep {
   title: string;
   description: string;
-  prompt?: string;
+  // Support both old format (for backwards compatibility) and new format
+  prompt?: string;       // Legacy single prompt - deprecated
+  // New format: multiple content sections
+  content?: ContentSection[];
   requiresConfirmation?: boolean;
   confirmationText?: string;
   files?: {
