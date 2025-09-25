@@ -17,7 +17,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { useToast } from "@/hooks/use-toast";
-import { getWorkshopByPassword, Workshop, WorkshopStep, Lab, ContentSection } from "@/data/workshops";
+import { getWorkshopByPassword, Workshop, WorkshopStep, Lab } from "@/data/workshops";
 import { Copy, ArrowRight, ArrowLeft, Lock, CheckCircle, FileDown, Download } from "lucide-react";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
@@ -250,70 +250,29 @@ export default function Verkstova() {
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-6">
-              {/* Content Sections - new format with multiple text/prompt pairs */}
-              {currentStepData.content && currentStepData.content.length > 0 ? (
-                <div className="space-y-6">
-                  {currentStepData.content.map((section, index) => (
-                    <div key={index} className="space-y-3">
-                      {/* Display text if present */}
-                      {section.text && (
-                        <div className="prose prose-sm max-w-none text-foreground">
-                          <p className="leading-relaxed whitespace-pre-wrap">{section.text}</p>
-                        </div>
-                      )}
-                      
-                      {/* Display prompt with copy button if present */}
-                      {section.prompt && (
-                        <div className="space-y-3">
-                          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                            <Label className="text-base font-semibold">{section.label || "Birt:"}</Label>
-                            <Button
-                              variant="outline"
-                              size="sm"
-                              onClick={() => handleCopyPrompt(section.prompt!)}
-                              aria-label={`Avrita ${section.label || "birt"} ${index + 1}`}
-                              data-testid={`button-copy-prompt-${currentStep}-${index}`}
-                              className="sm:self-end"
-                            >
-                              <Copy className="h-4 w-4 mr-1" aria-hidden="true" />
-                              Avrita {section.label ? section.label.toLowerCase() : "birt"}
-                            </Button>
-                          </div>
-                          <div className="bg-muted/50 p-4 rounded-lg border max-h-80 overflow-y-auto overflow-x-auto" data-testid={`text-prompt-${currentStep}-${index}`}>
-                            <p className="text-sm leading-relaxed whitespace-pre-wrap break-words font-mono">
-                              {section.prompt}
-                            </p>
-                          </div>
-                        </div>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              ) : (
-                /* Legacy single prompt format for backwards compatibility */
-                currentStepData.prompt && (
-                  <div className="space-y-3">
-                    <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-                      <Label className="text-base font-semibold">Birt:</Label>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        onClick={() => handleCopyPrompt(currentStepData.prompt!)}
-                        aria-label="Avrita birt"
-                        data-testid={`button-copy-prompt-${currentStep}`}
-                        className="sm:self-end"
-                      >
-                        <Copy className="h-4 w-4 mr-1" aria-hidden="true" />
-                        Avrita birt
-                      </Button>
-                    </div>
-                    <div className="bg-muted/50 p-4 rounded-lg border max-h-80 overflow-y-auto overflow-x-auto" data-testid={`text-prompt-${currentStep}`}>
-                      <p className="text-sm leading-relaxed whitespace-pre-wrap break-words font-mono">
-                        {currentStepData.prompt}
-                      </p>
-                    </div>
+              {/* Prompt Section */}
+              {currentStepData.prompt && (
+                <div className="space-y-3">
+                  <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                    <Label className="text-base font-semibold">Birt:</Label>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      onClick={() => handleCopyPrompt(currentStepData.prompt!)}
+                      aria-label="Avrita birt"
+                      data-testid={`button-copy-prompt-${currentStep}`}
+                      className="sm:self-end"
+                    >
+                      <Copy className="h-4 w-4 mr-1" aria-hidden="true" />
+                      Avrita birt
+                    </Button>
                   </div>
-                )
+                  <div className="bg-muted/50 p-4 rounded-lg border max-h-80 overflow-y-auto overflow-x-auto" data-testid={`text-prompt-${currentStep}`}>
+                    <p className="text-sm leading-relaxed whitespace-pre-wrap break-words font-mono">
+                      {currentStepData.prompt}
+                    </p>
+                  </div>
+                </div>
               )}
 
               {/* Downloadable Files Section */}
