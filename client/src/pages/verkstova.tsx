@@ -209,8 +209,8 @@ export default function Verkstova() {
   const currentStepData: WorkshopStep = selectedLab.steps[currentStep];
   const canProceed = !currentStepData.requiresConfirmation || hasConfirmed;
 
-  // Special display for "Nøkur hugskot" - show all prompts on one page
-  if (selectedLab.id === "Nøkur hugskot") {
+  // Special display for "Next Steps Lab" - show all prompts on one page
+  if (selectedLab.id === "next-steps-lab") {
     return (
       <>
         <Header />
