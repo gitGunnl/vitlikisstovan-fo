@@ -321,27 +321,68 @@ Keep the writing concise, specific to the client, and practical. Avoid generic �
             ]
             },
         {
-          id: "sustainability-lab",
-          name: "Sustainability Lab",
-          description: "Focus on sustainable practices and environmental impact in aquaculture.",
+          id: "Nøkur hugskot",
+          name: "Nøkur hugskot",
+          description: "Nøkur hugskot til hvat tú kann gera næst.",
           steps: [
             {
-              title: "Sustainability Assessment",
-              description: "Analyze current sustainability challenges in salmon farming.",
-              prompt: "Identify 5 key sustainability challenges in salmon farming and propose innovative solutions for each.",
+              title: "Hugskot 1: Automatisera dagligar uppgávur",
+              description: "Brúka AI til at automatisera tínar dagligu uppgávur og spara tíð.",
+              prompt: "List 10 repetitive tasks in your daily work that could be automated using AI tools. For each task, suggest a specific AI tool or automation approach and estimate time savings per week.",
               requiresConfirmation: false
             },
             {
-              title: "Environmental Impact Analysis",
-              description: "Evaluate environmental impact and mitigation strategies.",
-              prompt: "Describe methods to minimize environmental impact while maintaining productivity in salmon farming.",
-              requiresConfirmation: true,
-              confirmationText: "I have completed the environmental impact analysis."
+              title: "Hugskot 2: Persónlig AI assistent",
+              description: "Bygg tín egna persónliga AI assistent sum hjálpir tær við arbeiði.",
+              prompt: "Design a personal AI assistant tailored to your specific work needs. What features would it have? How would it integrate with your existing tools? Create a detailed specification including daily interactions.",
+              requiresConfirmation: false
             },
             {
-              title: "Future Sustainability Roadmap",
-              description: "Create a roadmap for sustainable aquaculture.",
-              prompt: "Design a 5-year roadmap for implementing sustainable practices in salmon farming operations.",
+              title: "Hugskot 3: Data greining við AI",
+              description: "Brúka AI til at greina data og finna mynstur sum tú ikki sært.",
+              prompt: "Identify a dataset in your organization that's underutilized. Describe 5 ways AI could analyze this data to uncover hidden insights, predict trends, or optimize operations. Include specific AI techniques for each approach.",
+              requiresConfirmation: false
+            },
+            {
+              title: "Hugskot 4: AI-drivin kunning",
+              description: "Skapa betri kunningartænastur við AI teknologi.",
+              prompt: "Design an AI-powered customer service system that could handle 80% of customer inquiries. Include conversation flows, escalation triggers, and personalization strategies. How would it learn and improve over time?",
+              requiresConfirmation: false
+            },
+            {
+              title: "Hugskot 5: Innihaldsskapan við AI",
+              description: "Brúka AI til at skapa innihald - tekst, myndir, video og meira.",
+              prompt: "Create a content generation strategy using AI for your organization. Cover blog posts, social media, reports, and visual content. Include tools, workflows, quality control measures, and how to maintain brand voice.",
+              requiresConfirmation: false
+            },
+            {
+              title: "Hugskot 6: Forutsiga við AI",
+              description: "Bygg forutsigandi modellar sum hjálpa við avgerðum.",
+              prompt: "Identify 3 critical business decisions that could benefit from predictive AI. For each, design a prediction model including: data needed, accuracy requirements, update frequency, and how predictions would influence decision-making.",
+              requiresConfirmation: false
+            },
+            {
+              title: "Hugskot 7: AI fyri venjing",
+              description: "Skapa persónligar venjingarupplevingar við AI.",
+              prompt: "Design an AI-powered learning and development program for your team. Include personalized learning paths, skill gap analysis, progress tracking, and how AI would adapt content based on individual learning styles and pace.",
+              requiresConfirmation: false
+            },
+            {
+              title: "Hugskot 8: Procesoptimering við AI",
+              description: "Finn og betra ineffektiva processar við AI greining.",
+              prompt: "Map out your organization's most complex workflow. Redesign it using AI to eliminate bottlenecks, reduce errors, and improve speed. Include specific AI interventions at each step and expected efficiency gains.",
+              requiresConfirmation: false
+            },
+            {
+              title: "Hugskot 9: AI trygdarkervi",
+              description: "Brúka AI til at betra trygd og avdekka hóttanir.",
+              prompt: "Design a comprehensive AI security system for your organization. Cover threat detection, anomaly identification, automated responses, and continuous learning. How would it balance security with user convenience?",
+              requiresConfirmation: false
+            },
+            {
+              title: "Hugskot 10: Framtíðar AI strategi",
+              description: "Ger eina 5-ára ætlan fyri AI í tínum felag.",
+              prompt: "Create a 5-year AI transformation roadmap for your organization. Include: current state assessment, phased implementation plan, required skills and training, budget estimates, success metrics, and potential risks with mitigation strategies.",
               requiresConfirmation: false
             }
           ]
