@@ -393,6 +393,34 @@ Keep the writing concise, specific to the client, and practical. Avoid generic �
               prompt: "Be my Ops Playbook Writer. For the top 5 workflows most likely to jam, produce an Escalation Ladder (trigger → decider → target response time → fallback if unavailable) and a Comms Tree (who to notify, in what order, with a 50‑word template). Keep it to one page. Materials: <PASTE JOB SUMMARY + TOP‑20 LIST>",
               requiresConfirmation: true,
               confirmationText: "I confirm I have a 1‑page escalation ladder and comms tree."
+            },
+            // Append these to next-steps-lab.steps
+            {
+              title: "Step 11.1: Describe Your Problem in Detail",
+              description:
+                "Clearly articulate the problem before asking for solutions. Include who is affected, where it shows up, what you’ve tried, constraints, stakes/impact, and the ideal outcome. Treat it like briefing a brilliant colleague. Lane: Amber — describe/redact names, IDs, order #s.",
+              prompt:
+                "Copy and paste the template and fill in the bracketed sections with your problem.\n\nMy problem is: [describe the issue in detail]\nWho is affected: [roles/teams/customers]\nWhere it shows up: [systems/processes/channels]\nImpact today: [time, risk, cost, CSAT, compliance]\nWhat I’ve tried: [attempts + outcomes]\nConstraints: [tools, policy, budget, people, time]\nIdeal outcome: [what 'good' looks like]\nSuccess signals: [how we’ll know it worked]",
+              requiresConfirmation: true,
+              confirmationText: "I confirm I wrote a detailed problem brief (with constraints, impact, and ideal outcome)."
+            },
+            {
+              title: "Step 11.2: Ask the AI to Become Your Coach (Clarify, No Solutions)",
+              description:
+                "Before brainstorming, switch the AI to a coaching mode to challenge assumptions and refine the problem. This yields a deeper, better-defined brief and prevents premature solutions.",
+              prompt:
+                "Act as a critical thinking coach. Based on the problem I just described, your only goal is to help me understand my problem better. Do NOT suggest any solutions. Ask me at least five clarifying questions that challenge assumptions, explore constraints, and help me define the problem more precisely. After I answer, ask follow-up questions until the problem statement is sharp.",
+              requiresConfirmation: true,
+              confirmationText: "I confirm I answered the coach’s questions and sharpened the problem statement."
+            },
+            {
+              title: "Step 11.3: Brainstorm a Universe of Solutions (Expert Panel)",
+              description:
+                "Now generate a broad, non-obvious solution set. Use multiple expert lenses to avoid sameness, and force categorization to balance quick wins vs strategic bets.",
+              prompt:
+                "Act as a panel of experts consisting of an innovator, a pragmatist, and a systems thinker. Using our entire conversation so far (my detailed problem and my answers to your questions), brainstorm 15 distinct and creative solutions. For each solution, provide a 1–2 sentence description and categorize it as one of: Quick Win (simple/easy), Strategic Project (more effort/high impact), or Unconventional Idea (out-of-the-box/status-quo challenge). Ensure diversity of approaches and call out any dependencies or prerequisites.",
+              requiresConfirmation: true,
+              confirmationText: "I confirm I generated 15 categorized solutions (quick wins, strategic projects, unconventional ideas)."
             }
           ]
         }
