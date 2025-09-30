@@ -22,94 +22,6 @@ type TimelineEvent = {
 
 const timelineData: TimelineEvent[] = [
   {
-    id: "evt-001",
-    date: "2025-05-01",
-    title: "Verkætlanin fíggjað",
-    summary:
-      'Átakið tryggjaði sær játtan, ið gevur okkum tilfeingi at kanna vitlíkis-nýtslumøguleikar hjá starvsfólki í úrvaldu bólkunum.',
-  },
-  {
-    id: "evt-002",
-    date: "2025-07-01",
-    title: "Verkætlanin byrjar",
-    summary: "Fyrsta arbeiðsætlanin kunngjørd.",
-  },
-  {
-    id: "evt-003",
-    date: "2025-07-07",
-    title: "Verkstova um bólkaval",
-    summary:
-      'Verkstovan um at geva íblástur til hvørjir bólkar kunnu hava størsta gagn av hesum átakinum og til at meta styrkistøl fyri yrkisbólkar til royndarverkætlanir.',
-    mediaType: "image",
-    mediaSrc: "/images/verkstova.jpeg",
-  },
-  {
-    id: "evt-004",
-    date: "2025-07-09",
-    title: "Raðfesting í gongd",
-    summary:
-      'Vit meta nú um teir tjúgu bólkarnar eftir hesum styrkistølum: "Fáir skíggjar, stórt starvsfólkatal og vitlíkis-nýtslumøguleikar."',
-  },
-  {
-    id: "evt-005",
-    date: "2025-07-15",
-    title: "Samrøða við miðlar",
-    summary:
-      "Hava gjørt fyrstu samrøðu við tíðarritið hjá Vísindavøku um verkætlanina og um leiklutin hjá vitlíki í føroyskum arbeiðslívi. Greinin er ikki komin út enn.",
-  },
-  {
-    id: "evt-006",
-    date: "2025-08-01",
-    title: "Kanningarstig",
-    summary:
-      "Næsta stigið: seta okkum í samband við valdar bólkar og at skipa fyri samrøðum fyri at avdúka dagligar avbjóðingar.",
-  },
-  {
-    id: "evt-007",
-    date: "2025-08-14",
-    title: "Bólkarnir eru valdir",
-    summary:
-      "Eftir at hava mett teir tjúgu bólkarnar eftir okkara styrkistølum, eru endaligu bólkarnir valdir til royndarverkætlanina: Hjálparfólk, Heilsurøktarar og heimarøktarfólk, Námsfrøðingar, Fólkaskúlalærarar, Listafólk (ikki-talgild), Tænastustarvsfólk (handil, gistingarhús, móttøka), Ítróttarvenjarar, og Sjúkrarøktarfrøðingar (sjúkrahús & klinikkir).",
-  },
-  {
-    id: "evt-008",
-    date: "2025-08-20",
-    title: "Menning av samrøðuamboði",
-    summary:
-      "Vit menna eitt samrøðuamboð, sum nýtir vitlíki til at læra nógv meira um valdu bólkarnar, fyri at royna at fáa eitt breitt og munagott innlit í teirra dagligu arbeiðsrútinur og avbjóðingar.",
-  },
-  {
-    id: "evt-009",
-    date: "2025-09-06",
-    title: "Fyrstu royndarsamrøður við námsfrøðingar eru byrjaðar",
-    summary:
-      "Fyrstu rpyndar samrøðurnar við nakrar fáar námsfrøðingar eru farnar ígongd, fyri at vita um tað nýggja amboðið riggar væl.",
-  },
-  {
-    id: "evt-010",
-    date: "2025-09-13",
-    title: "Greinin um verkætlanina er komin út í Sosialinum.",
-    summary:
-      "Í Sosialinum hesa vikuna ber til at lesa blaðið Vísindavøka, har millum annað ber til at lesa eina grein um hesa verkætlan og um vitlíki sum heild.",
-    mediaType: "image",
-    mediaSrc: "/images/sosialurin.png",
-  },
-  {
-    id: "evt-011",
-    date: "2025-09-13",
-    title: "Royndir við samrøðutólið eydnaðist sera væl.",
-    summary:
-      "Royndir við samrøðutólið eydnaðist sera væl, so tí verur nú fari ígongd við nógv fleiri samrøður.",
-  },
-  {
-    id: "evt-012",
-    date: "2025-09-15",
-    title: "Samrøður við námsfrøðingar og hjálparafólk eru byrjaðar!",
-    summary:
-      "Um tú ert hjálparafólk ella námsfrøðingur og gjarna vil hjálpa við hesari verkætlan, so kanst tú trýsta á tín knøtt niðanfyri, fyri at tosa við eitt vitlíkismodell um títt starv. Tað tekur áleið 15 min. og hjálpir hesari verkætlan sera nógv.",
-    mediaType: "buttons" as const,
-  },
-  {
     id: "evt-013",
     date: "2025-09-26",
     title: "Framløga til vísindavøka",
@@ -139,6 +51,94 @@ const timelineData: TimelineEvent[] = [
         content: "Hetta er innihaldið í fimta akkordioni. Seinastu upplýsingarnar koma her."
       }
     ]
+  },
+  {
+    id: "evt-012",
+    date: "2025-09-15",
+    title: "Samrøður við námsfrøðingar og hjálparafólk eru byrjaðar!",
+    summary:
+      "Um tú ert hjálparafólk ella námsfrøðingur og gjarna vil hjálpa við hesari verkætlan, so kanst tú trýsta á tín knøtt niðanfyri, fyri at tosa við eitt vitlíkismodell um títt starv. Tað tekur áleið 15 min. og hjálpir hesari verkætlan sera nógv.",
+    mediaType: "buttons" as const,
+  },
+  {
+    id: "evt-011",
+    date: "2025-09-13",
+    title: "Royndir við samrøðutólið eydnaðist sera væl.",
+    summary:
+      "Royndir við samrøðutólið eydnaðist sera væl, so tí verur nú fari ígongd við nógv fleiri samrøður.",
+  },
+  {
+    id: "evt-010",
+    date: "2025-09-13",
+    title: "Greinin um verkætlanina er komin út í Sosialinum.",
+    summary:
+      "Í Sosialinum hesa vikuna ber til at lesa blaðið Vísindavøka, har millum annað ber til at lesa eina grein um hesa verkætlan og um vitlíki sum heild.",
+    mediaType: "image",
+    mediaSrc: "/images/sosialurin.png",
+  },
+  {
+    id: "evt-009",
+    date: "2025-09-06",
+    title: "Fyrstu royndarsamrøður við námsfrøðingar eru byrjaðar",
+    summary:
+      "Fyrstu rpyndar samrøðurnar við nakrar fáar námsfrøðingar eru farnar ígongd, fyri at vita um tað nýggja amboðið riggar væl.",
+  },
+  {
+    id: "evt-008",
+    date: "2025-08-20",
+    title: "Menning av samrøðuamboði",
+    summary:
+      "Vit menna eitt samrøðuamboð, sum nýtir vitlíki til at læra nógv meira um valdu bólkarnar, fyri at royna at fáa eitt breitt og munagott innlit í teirra dagligu arbeiðsrútinur og avbjóðingar.",
+  },
+  {
+    id: "evt-007",
+    date: "2025-08-14",
+    title: "Bólkarnir eru valdir",
+    summary:
+      "Eftir at hava mett teir tjúgu bólkarnar eftir okkara styrkistølum, eru endaligu bólkarnir valdir til royndarverkætlanina: Hjálparfólk, Heilsurøktarar og heimarøktarfólk, Námsfrøðingar, Fólkaskúlalærarar, Listafólk (ikki-talgild), Tænastustarvsfólk (handil, gistingarhús, móttøka), Ítróttarvenjarar, og Sjúkrarøktarfrøðingar (sjúkrahús & klinikkir).",
+  },
+  {
+    id: "evt-006",
+    date: "2025-08-01",
+    title: "Kanningarstig",
+    summary:
+      "Næsta stigið: seta okkum í samband við valdar bólkar og at skipa fyri samrøðum fyri at avdúka dagligar avbjóðingar.",
+  },
+  {
+    id: "evt-005",
+    date: "2025-07-15",
+    title: "Samrøða við miðlar",
+    summary:
+      "Hava gjørt fyrstu samrøðu við tíðarritið hjá Vísindavøku um verkætlanina og um leiklutin hjá vitlíki í føroyskum arbeiðslívi. Greinin er ikki komin út enn.",
+  },
+  {
+    id: "evt-004",
+    date: "2025-07-09",
+    title: "Raðfesting í gongd",
+    summary:
+      'Vit meta nú um teir tjúgu bólkarnar eftir hesum styrkistølum: "Fáir skíggjar, stórt starvsfólkatal og vitlíkis-nýtslumøguleikar."',
+  },
+  {
+    id: "evt-003",
+    date: "2025-07-07",
+    title: "Verkstova um bólkaval",
+    summary:
+      'Verkstovan um at geva íblástur til hvørjir bólkar kunnu hava størsta gagn av hesum átakinum og til at meta styrkistøl fyri yrkisbólkar til royndarverkætlanir.',
+    mediaType: "image",
+    mediaSrc: "/images/verkstova.jpeg",
+  },
+  {
+    id: "evt-002",
+    date: "2025-07-01",
+    title: "Verkætlanin byrjar",
+    summary: "Fyrsta arbeiðsætlanin kunngjørd.",
+  },
+  {
+    id: "evt-001",
+    date: "2025-05-01",
+    title: "Verkætlanin fíggjað",
+    summary:
+      'Átakið tryggjaði sær játtan, ið gevur okkum tilfeingi at kanna vitlíkis-nýtslumøguleikar hjá starvsfólki í úrvaldu bólkunum.',
   },
 ];
 
