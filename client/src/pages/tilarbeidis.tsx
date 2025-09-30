@@ -28,7 +28,7 @@ const timelineData: TimelineEvent[] = [
     summary:
       "Sum ein partur av at miðla ",
     mediaType: "video",
-    mediaSrc: "https://youtu.be/I8oRK07dF2E",
+    mediaSrc: "https://www.youtube.com/embed/I8oRK07dF2E",
     accordions: [
       {
         title: "1. ",
