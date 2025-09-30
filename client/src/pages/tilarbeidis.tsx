@@ -513,9 +513,9 @@ const Tilarbeidis = () => {
                                   {accordion.title}
                                 </AccordionTrigger>
                                 <AccordionContent>
-                                  <p className="text-muted-foreground leading-relaxed">
+                                  <pre className="bg-muted/30 border border-border rounded-lg p-4 text-sm font-mono text-foreground whitespace-pre-wrap overflow-x-auto leading-relaxed">
                                     {accordion.content}
-                                  </p>
+                                  </pre>
                                 </AccordionContent>
                               </AccordionItem>
                             ))}
