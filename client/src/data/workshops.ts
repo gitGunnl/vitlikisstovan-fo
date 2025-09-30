@@ -31,7 +31,7 @@ export interface Workshop {
       labs: [
         {
           id: "innovation-lab",
-          name: "Verkstova 1",
+          name: "Verkstova 1: ",
           description: "Hvat júst tú kann nýta ChatGPT/CoPilot til.",
           steps: [
         // s1 — leave as is
