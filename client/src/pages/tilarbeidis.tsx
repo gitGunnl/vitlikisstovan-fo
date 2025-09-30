@@ -112,9 +112,9 @@ const timelineData: TimelineEvent[] = [
   {
     id: "evt-013",
     date: "2025-09-26",
-    title: "Nýggj tilvurði í verkætlanini",
+    title: "Framløga til vísindavøka",
     summary:
-      "Hetta er ein stuttlig lýsing av tí, sum hendir 26. september. Meira viðkomandi tilfar verður tøkt til seinni.",
+      "Sum ein partur av at miðla ",
     mediaType: "video",
     mediaSrc: "",
     accordions: [
