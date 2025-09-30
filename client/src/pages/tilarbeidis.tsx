@@ -5,6 +5,7 @@ import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import { seoConfig } from "@/content/seo";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 type TimelineEvent = {
   id: string;
@@ -13,6 +14,10 @@ type TimelineEvent = {
   summary: string;
   mediaType?: "image" | "video" | "buttons";
   mediaSrc?: string;
+  accordions?: Array<{
+    title: string;
+    content: string;
+  }>;
 };
 
 const timelineData: TimelineEvent[] = [
@@ -90,19 +95,50 @@ const timelineData: TimelineEvent[] = [
     mediaSrc: "/images/sosialurin.png",
   },
   {
-    id: "evt-010",
+    id: "evt-011",
     date: "2025-09-13",
     title: "Royndir við samrøðutólið eydnaðist sera væl.",
     summary:
       "Royndir við samrøðutólið eydnaðist sera væl, so tí verur nú fari ígongd við nógv fleiri samrøður.",
   },
   {
-    id: "evt-011",
+    id: "evt-012",
     date: "2025-09-15",
     title: "Samrøður við námsfrøðingar og hjálparafólk eru byrjaðar!",
     summary:
       "Um tú ert hjálparafólk ella námsfrøðingur og gjarna vil hjálpa við hesari verkætlan, so kanst tú trýsta á tín knøtt niðanfyri, fyri at tosa við eitt vitlíkismodell um títt starv. Tað tekur áleið 15 min. og hjálpir hesari verkætlan sera nógv.",
     mediaType: "buttons" as const,
+  },
+  {
+    id: "evt-013",
+    date: "2025-09-26",
+    title: "Nýggj tilvurði í verkætlanini",
+    summary:
+      "Hetta er ein stuttlig lýsing av tí, sum hendir 26. september. Meira viðkomandi tilfar verður tøkt til seinni.",
+    mediaType: "video",
+    mediaSrc: "",
+    accordions: [
+      {
+        title: "Fyrsti akkordionfytur",
+        content: "Hetta er innihaldið í fyrsta akkordioni. Tú kanst broyta hendan tekst eftir tørvi."
+      },
+      {
+        title: "Annar akkordionfytur",
+        content: "Hetta er innihaldið í øðrum akkordioni. Henda tekstin kann eisini broytast."
+      },
+      {
+        title: "Triðji akkordionfytur",
+        content: "Hetta er innihaldið í triðja akkordioni. Legg til eina lýsing her."
+      },
+      {
+        title: "Fjórði akkordionfytur",
+        content: "Hetta er innihaldið í fjórða akkordioni. Brúka hendan til fleiri upplýsingar."
+      },
+      {
+        title: "Fimti akkordionfytur",
+        content: "Hetta er innihaldið í fimta akkordioni. Seinastu upplýsingarnar koma her."
+      }
+    ]
   },
 ];
 
@@ -380,15 +416,21 @@ const Tilarbeidis = () => {
                       </p>
 
                       {evt.mediaSrc && (
-                        <div className="w-full rounded-lg overflow-hidden border border-border/40">
+                        <div className="w-full rounded-lg overflow-hidden border border-border/40 mb-6">
                           {evt.mediaType === "video" ? (
                             <div className="aspect-video">
-                              <iframe
-                                src={evt.mediaSrc}
-                                className="w-full h-full"
-                                allowFullScreen
-                                title={evt.title}
-                              />
+                              {evt.mediaSrc ? (
+                                <iframe
+                                  src={evt.mediaSrc}
+                                  className="w-full h-full"
+                                  allowFullScreen
+                                  title={evt.title}
+                                />
+                              ) : (
+                                <div className="w-full h-full bg-muted flex items-center justify-center text-muted-foreground">
+                                  Video verður lagt til seinni
+                                </div>
+                              )}
                             </div>
                           ) : (
                             <img
@@ -399,6 +441,33 @@ const Tilarbeidis = () => {
                               decoding="async"
                             />
                           )}
+                        </div>
+                      )}
+
+                      {evt.mediaType === "video" && !evt.mediaSrc && (
+                        <div className="w-full rounded-lg overflow-hidden border border-border/40 mb-6">
+                          <div className="aspect-video bg-muted flex items-center justify-center text-muted-foreground">
+                            Video verður lagt til seinni
+                          </div>
+                        </div>
+                      )}
+
+                      {evt.accordions && (
+                        <div className="mt-6">
+                          <Accordion type="single" collapsible className="w-full">
+                            {evt.accordions.map((accordion, index) => (
+                              <AccordionItem key={index} value={`item-${index}`}>
+                                <AccordionTrigger className="text-left">
+                                  {accordion.title}
+                                </AccordionTrigger>
+                                <AccordionContent>
+                                  <p className="text-muted-foreground leading-relaxed">
+                                    {accordion.content}
+                                  </p>
+                                </AccordionContent>
+                              </AccordionItem>
+                            ))}
+                          </Accordion>
                         </div>
                       )}
 
