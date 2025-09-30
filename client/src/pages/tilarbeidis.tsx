@@ -26,23 +26,21 @@ const timelineData: TimelineEvent[] = [
     date: "2025-09-26",
     title: "Framløga til Vísindavøka",
     summary:
-      "Sum ein partur av at miðla verkætlina havi eg givið eina framløgu á vísindavøku. Sí framløguna of tilhoyrandi birt niðanfyri. 👇️",
+      "Sum partur av at miðla verkætlanina havi eg givið eina framløgu á vísindavøku. Sí framløguna og tilhoyrandi birt niðanfyri. 👇️",
     mediaType: "video",
     mediaSrc: "https://www.youtube.com/embed/I8oRK07dF2E",
     accordions: [
       {
         title: "1. Finn títt næsta granskingar evni:",
-        content: `I am a researcher in th field of:
-        I am a researcher in th field of:
-        [A detailed description of what you research]
+        content: `I am a researcher in the field of:
+[A detailed description of what you research]
 
-        I want you to reserach what is the most exciting things to study close in my field.
+I want you to research what is the most exciting things to study close in my field.
 
-        Write a report that describes the newest findings in my field that are ripe for some more research to be done.
-        `
+Write a report that describes the newest findings in my field that are ripe for some more research to be done.`
       },
       {
-        title: "2)  Talgildar royndardukkur til spurnakanningar ",
+        title: "2. Talgildar royndardukkur til spurnakanningar",
         content: `Task: Pre-test a survey with a simulated person.
 
 [PERSONA_BIO]
@@ -61,7 +59,7 @@ Instructions:
 Create the table now.`
       },
       {
-        title: "3) Betri er at vera fyrivarin enn eftirsnarur ",
+        title: "3. Betri er at vera fyrivarin enn eftirsnarur",
         content: `Role: Hostile reviewer + safety coach.
 Input is a procedure/flow. Goal: prevent avoidable failure.
 
@@ -69,7 +67,7 @@ Produce:
 1) Top 10 failure modes (ordered by likelihood × impact) with short causes.
 2) Preventive checks (before/during/after) mapped to each failure.
 3) Quick contingencies if failure occurs (who/what/when).
-4) Minimal checklists (setup, run, teardown) and a 2‑minute “go/no‑go” gate.
+4) Minimal checklists (setup, run, teardown) and a 2‑minute "go/no‑go" gate.
 5) Data quality traps (bias, missingness, instrument drift) + fixes.
 
 Procedure:
@@ -80,7 +78,7 @@ Assume no PII; note GDPR risks if any.
 Return bullets and small tables. Keep it terse.`
       },
       {
-        title: "4) Ætl kapping (Hypotesu kapping)",
+        title: "4. Ætl kapping (Hypotesu kapping)",
         content: `You are running a 30‑minute hypothesis tournament.
 Context & constraints:
 
@@ -91,13 +89,13 @@ A) Generate 10 distinct, testable hypotheses. For each: why plausible (1‑2 lin
 
 B) Create a scoring rubric (1‑5): Novelty, Testability (≤8 weeks), Feasibility (Faroe/logistics/N), Impact if true, Ethical risk (low=5). Score all 10; show a ranked table.
 
-C) Red‑team the top 3: list confounds, measurement errors, GDPR/ethics snags; propose “fix‑first” edits (controls, instruments, sampling).
+C) Red‑team the top 3: list confounds, measurement errors, GDPR/ethics snags; propose "fix‑first" edits (controls, instruments, sampling).
 
 D) Recommend 1 winner + 1 runner‑up. Give a one‑pager for the winner: micro‑pilot steps, required data, and a stop/continue rule.
 Return: tables + bullets only. No fluff.`
       },
       {
-        title: "5) Kaldakrígsdómarin: Ein steinhørð afturmelding",
+        title: "5. Kaldakrígsdómarin: Ein steinhørð afturmelding",
         content: `Critique this outline, resume, plan, or project like a Cold War Russian Olympic judge.
 
 Be brutally honest. Score out of 100. Deduct points for every flaw in structure, clarity, originality, and feasibility.
