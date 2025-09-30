@@ -720,46 +720,7 @@ Keep the writing concise, specific to the client, and practical. Avoid generic "
             }
             ]
             },
-        {
-          id: "customer-experience",
-          name: "Customer Experience Lab",
-          description: "Design the perfect digital banking journey and enhance customer satisfaction.",
-          steps: [
-            {
-              title: "Stig 1: Vitlíki samrøða",
-              description: "Koyr birti niðanfyri inn á ChatGPT/Copilot og send tað avstað.",
-              prompt: "Describe the perfect digital banking journey from account opening to daily banking. Focus on reducing friction points and enhancing user delight.",
-              requiresConfirmation: false
-            },
-            {
-              title: "Step 2: Pain Point Analysis",
-              description: "Analyze current customer pain points in digital banking.",
-              prompt: "Identify 5 major pain points customers experience with current digital banking solutions. Rate each from 1-10 in terms of impact on customer satisfaction.",
-              requiresConfirmation: true,
-              confirmationText: "I confirm I have completed the pain point analysis"
-            },
-            {
-              title: "Step 3: Feature Ideation",
-              description: "Brainstorm innovative features for next-generation banking.",
-              prompt: "Design 3 innovative features that could differentiate your digital banking platform. Consider AI, personalization, and financial wellness.",
-              requiresConfirmation: false
-            },
-            {
-              title: "Step 4: Security & Trust Building",
-              description: "Design trust-building mechanisms for digital services.",
-              prompt: "Propose a comprehensive strategy to build and maintain customer trust in digital banking. Address security concerns, transparency, and communication.",
-              requiresConfirmation: true,
-              confirmationText: "I confirm I have the security strategy documented"
-            },
-            {
-              title: "Step 5: ROI Projection",
-              description: "Calculate the potential return on investment.",
-              prompt: "Estimate the ROI for your top 3 proposed features. Include implementation costs, timeline, expected user adoption rate, and revenue impact over 2 years.",
-              requiresConfirmation: true,
-              confirmationText: "I confirm I have prepared the ROI analysis"
-            }
-          ]
-        },
+        
         {
       id: "innovation-banking",
       name: "Banking Innovation Lab",
