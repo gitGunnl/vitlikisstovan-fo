@@ -31,8 +31,8 @@ const timelineData: TimelineEvent[] = [
     mediaSrc: "https://www.youtube.com/embed/I8oRK07dF2E",
     accordions: [
       {
-        title: "1. ",
-        content: "Hetta er innihaldið í fyrsta akkordioni. Tú kanst broyta hendan tekst eftir tørvi."
+        title: "1. Finn títt næsta granskingar evni:",
+        content: """I am a researcher in th field of:"""
       },
       {
         title: "Annar akkordionfytur",
