@@ -723,7 +723,7 @@ Keep the writing concise, specific to the client, and practical. Avoid generic "
         
         {
       id: "innovation-banking",
-      name: "Banking Innovation Lab",
+      name: "Verkstova 2: Lumma ráðgevin",
       description: "Explore cutting-edge technologies and features for next-generation banking.",
       steps: [
         {
