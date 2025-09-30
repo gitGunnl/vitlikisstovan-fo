@@ -28,10 +28,10 @@ const timelineData: TimelineEvent[] = [
     summary:
       "Sum ein partur av at miðla ",
     mediaType: "video",
-    mediaSrc: "",
+    mediaSrc: "https://youtu.be/I8oRK07dF2E",
     accordions: [
       {
-        title: "Fyrsti akkordionfytur",
+        title: "1. ",
         content: "Hetta er innihaldið í fyrsta akkordioni. Tú kanst broyta hendan tekst eftir tørvi."
       },
       {
