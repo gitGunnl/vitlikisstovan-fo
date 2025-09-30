@@ -24,31 +24,85 @@ const timelineData: TimelineEvent[] = [
   {
     id: "evt-013",
     date: "2025-09-26",
-    title: "Framløga til vísindavøka",
+    title: "Framløga til Vísindavøka",
     summary:
-      "Sum ein partur av at miðla ",
+      "Sum ein partur av at miðla verkætlina havi eg givið eina framløgu á vísindavøku. Sí framløguna of tilhoyrandi birt niðanfyri. 👇️",
     mediaType: "video",
     mediaSrc: "https://www.youtube.com/embed/I8oRK07dF2E",
     accordions: [
       {
         title: "1. Finn títt næsta granskingar evni:",
-        content: """I am a researcher in th field of:"""
+        content: `I am a researcher in th field of:
+        I am a researcher in th field of:
+        [A detailed description of what you research]
+
+        I want you to reserach what is the most exciting things to study close in my field.
+
+        Write a report that describes the newest findings in my field that are ripe for some more research to be done.
+        `
       },
       {
-        title: "Annar akkordionfytur",
-        content: "Hetta er innihaldið í øðrum akkordioni. Henda tekstin kann eisini broytast."
+        title: "2)  Talgildar royndardukkur til spurnakanningar ",
+        content: `Task: Pre-test a survey with a simulated person.
+
+[PERSONA_BIO]
+
+[SURVEY_ITEMS]
+
+Instructions:
+1) Stay in character. Start with a one-line persona recap.
+2) For EACH item, output a table row:
+   # | Answer | Think-aloud (1–2 sentences) | Friction (OK/Confusing/Leading/Loaded/Double-barrel/Jargon) | Micro-fix (≤12 words, if not OK)
+3) After the table, add bullets:
+   - Top 3 problems (item # + one-line why)
+   - Persona notes (tone, reading level, culture/translation traps)
+   - Go/No-Go for THIS persona (yes/no + one-line why)
+
+Create the table now.`
       },
       {
-        title: "Triðji akkordionfytur",
-        content: "Hetta er innihaldið í triðja akkordioni. Legg til eina lýsing her."
+        title: "3) Betri er at vera fyrivarin enn eftirsnarur ",
+        content: `Role: Hostile reviewer + safety coach.
+Input is a procedure/flow. Goal: prevent avoidable failure.
+
+Produce:
+1) Top 10 failure modes (ordered by likelihood × impact) with short causes.
+2) Preventive checks (before/during/after) mapped to each failure.
+3) Quick contingencies if failure occurs (who/what/when).
+4) Minimal checklists (setup, run, teardown) and a 2‑minute “go/no‑go” gate.
+5) Data quality traps (bias, missingness, instrument drift) + fixes.
+
+Procedure:
+
+[PASTE SOP / FIELD / TEST FLOW]
+
+Assume no PII; note GDPR risks if any.
+Return bullets and small tables. Keep it terse.`
       },
       {
-        title: "Fjórði akkordionfytur",
-        content: "Hetta er innihaldið í fjórða akkordioni. Brúka hendan til fleiri upplýsingar."
+        title: "4) Ætl kapping (Hypotesu kapping)",
+        content: `You are running a 30‑minute hypothesis tournament.
+Context & constraints:
+
+[PASTE BRIEF: problem, setting, N limit, season/logistics, equipment, ethics/GDPR notes].
+
+Do the following:
+A) Generate 10 distinct, testable hypotheses. For each: why plausible (1‑2 lines) + a fast falsification plan (≤8 weeks) within constraints.
+
+B) Create a scoring rubric (1‑5): Novelty, Testability (≤8 weeks), Feasibility (Faroe/logistics/N), Impact if true, Ethical risk (low=5). Score all 10; show a ranked table.
+
+C) Red‑team the top 3: list confounds, measurement errors, GDPR/ethics snags; propose “fix‑first” edits (controls, instruments, sampling).
+
+D) Recommend 1 winner + 1 runner‑up. Give a one‑pager for the winner: micro‑pilot steps, required data, and a stop/continue rule.
+Return: tables + bullets only. No fluff.`
       },
       {
-        title: "Fimti akkordionfytur",
-        content: "Hetta er innihaldið í fimta akkordioni. Seinastu upplýsingarnar koma her."
+        title: "5) Kaldakrígsdómarin: Ein steinhørð afturmelding",
+        content: `Critique this outline, resume, plan, or project like a Cold War Russian Olympic judge.
+
+Be brutally honest. Score out of 100. Deduct points for every flaw in structure, clarity, originality, and feasibility.
+
+End with a few fixes to reach ninety-plus.`
       }
     ]
   },
