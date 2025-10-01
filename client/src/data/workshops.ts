@@ -31,7 +31,7 @@ export interface Workshop {
       labs: [
         {
           id: "innovation-lab",
-          name: "Verkstova 1: ",
+          name: "Verkstova 1: Nýtslu spurtur",
           description: "Hvat júst tú kann nýta ChatGPT/CoPilot til.",
           steps: [
         // s1 — leave as is
@@ -427,13 +427,13 @@ Keep the writing concise, specific to the client, and practical. Avoid generic �
       ]
     },
     betri: {
-      name: "Digital Banking Verkstova",
+      name: "Betri Verkstova",
       company: "Betri",
       labs: [
         {
           id: "innovation-lab",
-          name: "Verkstova 1",
-          description: "Hvat júst tú kann nýta ChatGPT/CoPilot til.",
+          name: "Venjing 1: Nýtslu spurtur",
+          description: "Hvat kann TÚ nýta ChatGPT/CoPilot til?",
           steps: [
         // s1 — leave as is
             {
@@ -722,31 +722,168 @@ Keep the writing concise, specific to the client, and practical. Avoid generic "
             },
         
         {
-      id: "innovation-banking",
-      name: "Verkstova 2: Lumma ráðgevin",
-      description: "Explore cutting-edge technologies and features for next-generation banking.",
-      steps: [
-        {
-          title: "AI-Powered Banking",
-          description: "Design AI features for personalized banking experiences.",
-          prompt: "Propose 5 AI-powered features that could revolutionize personal banking. Consider chatbots, predictive analytics, and personalized financial advice.",
-          requiresConfirmation: false
-        },
-        {
-          title: "Open Banking Strategy",
-          description: "Develop an open banking strategy.",
-          prompt: "Create a comprehensive open banking strategy that leverages APIs and third-party integrations to enhance customer value.",
-          requiresConfirmation: true,
-          confirmationText: "I have completed the open banking strategy."
-        },
-        {
-          title: "Digital Wallet Innovation",
-          description: "Design next-generation digital wallet features.",
-          prompt: "Design innovative digital wallet features that go beyond payments. Consider loyalty programs, budgeting tools, and social features.",
-          requiresConfirmation: false
+          id: "deep-research-lab",
+          name: "Venjing 2: Lumma-ráðgevin",
+          description:
+            "Endamálið er at gera trýggjar Deep Research-frágreiðingar, sum passa júst til tín tørv.",
+          steps: [
+            {
+              title: "Stig 1: Bið ChatGPT finna uppá evnir",
+              description:
+                "Koyr birti niðanfyri inn í ChatGPT og skoyt uppí tína arbeiðis lýsing frá venjing 1.",
+              prompt: `
+**Role:** You are my **Research Triage Consultant**. Your job is to scan my context and propose **specific, high‑value topics** that are **well‑suited for ChatGPT Deep Research** (the tool that conducts multi‑step web investigations and synthesizes findings with citations) and are most valuable to me. Deep Research is most useful when:
+
+* The question requires **aggregating and comparing many independent sources** (especially recent, evolving, or niche info).
+* The answer must be **defensible and link‑backed** (citations, verifiability).
+* The task involves **multi-criteria comparisons**, **trend analysis**, **policy/standards tracking**, **competitive or market scans**, or **literature reviews**.
+  Deep Research is **not** ideal for: quick facts from a single source, pure ideation or editing, static backgrounders, or tasks solvable by reasoning over text I already have. (Use regular chat or Search for those.)
+
+**My job summary:**
+
+<job_summary>
+<<<<<YOUR JOB SUMMARY>>>>>
+</job_summary>
+
+### Your objectives
+
+1. **Triage my context** and identify where Deep Research would provide outsized value versus regular chat, look for both very valuable to my work and very intersting to me.
+2. **Propose 8–12 concrete Deep Research candidates** (investigations I could run as full reports).
+3. For each candidate, explain *why* it meets Deep Research criteria and how it would be a valuable report to have.
+
+### What to include for each suggested Deep Research topic
+
+* **Title** (clear, decision‑oriented).
+* **Primary decision(s) it will inform** (e.g., go/no‑go, prioritization, vendor selection, policy design).
+* **Key questions & comparisons** the report should answer (3–6 bullets).
+
+### Output format
+
+A list of 8 to 12 ideas for valuable and interesting reports I could generate, for each idea discribe what the report will be about clearly and tell me why it is either intersting or valuable.
+
+
+### Guardrails
+
+* Use **plain, verifiable language**; no marketing fluff.
+
+### Decision rule (apply this as you triage)
+
+* If a question could be answered by **one reputable source** or **by reasoning over text I’ve provided**, it belongs to regular chat—**exclude it**.
+* If it likely requires **surveying multiple sources**, **weighing evidence**, and producing a **citation‑rich brief**, **include it** as a Deep Research candidate.
+
+### Examples Where Deep Research shines most (evidence-backed)
+
+In addition to (a) scouring what users & thought leaders are saying and (b) surfacing authoritative sources, Deep Research is particularly valuable for:
+
+1. **Systematic evidence syntheses (systematic reviews / meta-analyses).** When we need a comprehensive, transparent, citation-rich answer across many studies and to show our method (PRISMA-style).
+
+2. **Scoping & mapping reviews.** When the goal is to chart the breadth of a topic, clarify definitions, and organize the literature before going deep.
+
+3. **Horizon scanning & foresight briefs.** Early-warning scans of emerging tech, risks, and weak signals, updated from multiple sources.
+
+4. **Environmental / landscape scans.** Side-by-side picture of internal/external factors, players, and trends to inform strategy.
+
+5. **Standards & regulatory change tracking.** Comparing frameworks (e.g., **NIST AI RMF**, **ISO/IEC 42001**) and monitoring updates across jurisdictions.
+
+6. **Multi-criteria comparisons & decision matrices (MCDA).** Turning messy, multi-factor choices into defensible rankings with explicit weights & trade-offs.
+
+7. **Vendor due diligence & procurement scoring (incl. TCO).** Building weighted scorecards, risk checks, and **total cost of ownership** comparisons from many documents.
+
+8. **Technology scouting & market/patent sweeps.** Systematically spotting relevant tech, players, and IP; mapping options to needs.
+
+9. **Evidence & gap maps.** Visual maps that show where evidence is strong/weak to guide priorities and next research.
+
+10. **Benchmarking & competitive landscape analyses.** Collecting comparable metrics/practices across peers and plotting where we lead or lag.
+              `,
+              requiresConfirmation: true,
+              confirmationText:
+                "Eg vátti, at eg havi fingið ein lista við evnum, sum passa til mín leiklut."
+            },
+            {
+              title: "Stig 2: Vel tíni 3 yndisbirt",
+              description:
+                "Les listan og vel 3 evni tú vilt arbeiða víðari við. Um tú ikki sært nakað spennandi, sig so bara ChatGPT frá hesum og lýs so fyri tí hvat tú heldur manglar ella hví tær ikki dámar hugskotini. Og royn so aftur.",
+              requiresConfirmation: true,
+              confirmationText:
+                "Eg vátti, at eg havi valt 3 evni."
+            },
+            {
+              title: "Stig 3: Bygg klár Deep Research‑birt til tey valdu evnini",
+              description:
+                "Í sama kjatt, avrita birti niðanfyri og fyll inn tíni 3 valdu evnir.",
+              prompt: `
+**New Role**
+Now you are a *Senior Research Prompt Architect* for Deep Research. Your job is to turn my chosen topics into interesting, high-value, high‑leverage Deep Research prompts.
+
+**Reader**
+Keep *my work description already shared in this chat* top‑of‑mind. Optimize for immediate business value to me.
+
+**Inputs**
+**Topics:** ⬇️
+
+<<<<<Paste Topics Here>>>>>
+
+**Report‑Type Menu (pick the best fit per topic; one per topic)**
+
+1. **Executive Brief** (board‑ready options & trade‑offs)
+2. **Vendor/Landscape Scan** (comparison matrix, must‑haves/stoppers)
+3. **Regulatory Watch** (what changed, who’s affected, by when)
+4. **Scenario & Risk Note** (base/optimistic/conservative + risk register)
+5. **Analytics QA Note** (definition pitfalls, edge cases, 5 spike tests)
+6. **RFP Rubric** (weights, must‑haves, stoppers, evidence prompts)
+7. **Customer/Ops Comms** (email/FAQ/SMS variants; if‑X‑then‑Y)
+8. **Implementation Playbook** (phased plan, RACI, day‑0/30/90 checks)
+9. **Opportunity Sizing (BOTE)** (assumptions, ranges, sensitivities)
+10. **Explainer / Myth‑Buster** (misconceptions vs facts with cites)
+
+**Rules for writing each short prompt (enforce all, keep it tight)**
+
+* **Objective & scope:** one crisp question; include time horizon & geography; state one exclusion.
+* **Sources:** prefer official/regulators, primary docs, peer‑reviewed, top institutes; *every non‑obvious claim must have inline citation with link + date*.
+* **Deliverable:** match the chosen report type; always include assumptions & limits; note disagreements.
+* **QA & failure modes:** require verification steps (e.g., quote key lines; cross‑check 2 sources).
+* **Constraints:** no PII; sanitized examples; output‑only; use **absolute dates**.
+* **Style:** plain language, active voice, decision‑oriented.
+* **Length:** each prompt ≤ **55 words**. Add a **≤12‑word** “Why it fits” line.
+* **Do not run research now**—only output prompts.
+
+**Report‑Type Defaults (use these deliverable shorthands inside prompts)**
+
+* *Executive Brief:* exec summary; options/criteria table; 3 scenarios; risk register; audit footer.
+* *Vendor/Landscape Scan:* comparison matrix (weights/scores); must‑haves/stoppers; red flags; evidence log.
+* *Regulatory Watch:* timeline + delta table; affected roles/processes; compliance checklist; watchlist.
+* *Scenario & Risk Note:* drivers; base/opt/con scenarios; triggers; mitigations; limits.
+* *Analytics QA Note:* definition pitfalls; edge cases; 5 spike tests; data hygiene caveats.
+* *RFP Rubric:* criteria + weights; stoppers; standardized vendor Qs; evidence prompts.
+* *Customer/Ops Comms:* 3 variants (email/FAQ/SMS); if‑X‑then‑Y flows; tone checks.
+* *Implementation Playbook:* phased plan; RACI; dependencies; day‑0/30/90 checklist.
+* *Opportunity Sizing (BOTE):* ranges with assumptions; sensitivity to 2–3 drivers; decision triggers.
+* *Explainer/Myth‑Buster:* concise explainer; misconceptions vs facts; quote bank.
+
+**Now generate**
+For each topic, select the best report type and produce one short prompt (≤200 words) that **explicitly** states: role+goal, scope (time/geo, one exclusion), source policy (prioritize/require citations), deliverable (per type), QA step, constraints. After each prompt, add a ≤12‑word *Why it fits* line.
+              `,
+              requiresConfirmation: true,
+              confirmationText:
+                "Eg vátti, at eg havi fingið 3 birt."
+            },
+            {
+              title: "Stig 4: Tendra Deep Research",
+              description:
+                "Nú skalt tú tendra tíni trý Deep Research, men bara eitt í senn. Opna eitt nýtt kjatt og koyr tað fyrsta birti inn. Trýst so á tað stóra + við kjatti og tendra fyri Deep Research. Send nú birti. Ger hettar fyri hvørt birt.",
+              requiresConfirmation: true,
+              confirmationText:
+                "Eg vátti, at eg havi sett 3 Deep Research‑uppgávur í gongd."
+            },
+            {
+              title: "Stig 6: Liðugt",
+              description:
+                "Nú arbeiður ChatGPT allarhelst uppá tínar frásagnir. Tá ið tær eru lidnar kunna tær takast niður sum PDF.",
+              requiresConfirmation: false
+            }
+          ]
         }
-      ]
-      }
+
     ]
   }
 };
