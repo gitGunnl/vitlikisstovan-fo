@@ -433,7 +433,7 @@ Keep the writing concise, specific to the client, and practical. Avoid generic �
         {
           id: "innovation-lab",
           name: "Venjing 1: Nýtslu spurtur",
-          description: "Hvat kann TÚ nýta ChatGPT/CoPilot til?",
+          description: "Hvat kann TÚ nýta ChatGPT til?",
           steps: [
         // s1 — leave as is
             {
@@ -497,42 +497,33 @@ You are a **neutral, professional interviewer**. Your single goal is to understa
             title: "Stig 2: Samandráttur (við Thinking-modellinum)",
             description: "Skift fyrst til 'Thinking'-modellið. Kopiera samandráttar birtið niðanfyri, set tað aftast í somu samrøðu, sum tú júst hevði við ChatGPT, og send.",
             prompt: `
-Stop the interview now and summarize my job using ONLY what I said. Do not invent facts. If something wasn't stated, write "Not stated."
+Stop the interview now and summarize my job using ONLY what I said.
 
-Produce a concise, well-structured Markdown summary designed to help find use cases for ChatGPT / Microsoft 365 Copilot.
+Produce a detailed, well-structured summary designed to help find use cases for ChatGPT.
 
 Return exactly these sections:
 
-1) Role Snapshot (1–2 sentences)
+1) Role Snapshot
    - What I do, who I serve, and the main outcomes.
 
-2) Core Responsibilities (5–8 bullets)
+2) Core Responsibilities
    - Start bullets with strong verbs; keep each to one line.
 
-3) Recurring Workflows & Deliverables (4–10 bullets)
+3) Recurring Workflows & Deliverables
    - For each, include: typical inputs → outputs (≤8 words each) and frequency if mentioned.
 
 4) Tools, Systems & Constraints (list)
    - Apps, data sources, access boundaries, compliance/sensitivity mentioned.
 
-5) Task Inventory for AI Mapping (table)
-   - Columns: Task (verb + object) | Inputs (≤6 words) | Outputs (≤6 words) | Frequency | AI Leverage Tags | Guardrail
-   - AI Leverage Tags: choose up to 3 from {draft, rewrite, summarize, translate, brainstorm, plan, classify, extract/transform text, Q&A assistant, spreadsheet help, email/brief/minutes, documentation, scenario planning}.
-   - Guardrail: G=Green (safe with redacted/synthetic data), A=Amber (caution/limited data), R=Red (don't use AI unless fully synthetic). If unclear, write "Unknown."
-
-6) Gaps & Assumptions (3–6 bullets)
-   - Missing details that would help identify more AI use cases (e.g., volumes, templates, repeatable steps).
-
 Constraints:
 - No generic AI claims, no advice/tutorials, no marketing language.
-- Base guardrails and tags strictly on what I said.
             `,
             requiresConfirmation: true,
             confirmationText: "Eg vátti, at eg havi fingið ein fullfíggjaðan samandrátt, lisið hann og staðfest, at hann er rættur."
             },
             {
             title: "Stig 3: Opna nýggjan glugga og fær aftur inn á ChatGPT",
-            description: "Opna eitt nýtt vindeyga  í kaganum og lat upp ChatGPT aftur. Læt fyrra vindeyga  við samandráttinum vera opið.",
+            description: "Opna eitt nýtt vindeyga í kaganum og lat upp ChatGPT aftur. Læt fyrra vindeyga við samandráttinum vera opið.",
             requiresConfirmation: false
             },
             {
@@ -561,15 +552,15 @@ We will use this description so the client can understand what is possible and u
             prompt: `
 ## Introduction
 
-We are exploring how language models (LLMs) can automate tasks in the Faroe Islands. The goal is to find tasks where automation streamlines workflows, saves time, removes boring work, and saves money.
+We are exploring how language models (LLMs) can automate tasks in an office setting in the Faroe Islands. The goal is to find tasks where automation streamlines workflows, saves time, removes boring work, and saves money.
 
-I want you to propose a list of **15** things my client can use ChatGPT for. Here is information about my client:
+I want you to propose a list of the **15** best things my client can use ChatGPT for. Here is information about my client:
 
 <client_information>
 <------------ADD HERE--------------->
 </client_information>
 
-Below is guidance on what types of tasks ChatGPT is good at for this client. Use it to shape your ideas and avoid suggesting things the model cannot do.
+Below is guidance on what types of tasks ChatGPT is good at. Use it to shape your ideas and avoid suggesting things the model cannot do.
 
 <tasks_types>
 
@@ -579,7 +570,7 @@ Below is guidance on what types of tasks ChatGPT is good at for this client. Use
 
 #### Introduction
 
-ChatGPT is a versatile language model that excels at drafting, structuring, explaining, translating, brainstorming, and supporting light analysis and visuals. It performs best with clear goals, concrete inputs, and a brief human check for accuracy and fit. The summaries below describe what it is typically **good at** and where it is **weaker**.
+ChatGPT is a versatile language model that excels at drafting, structuring, explaining, translating, brainstorming, role-playing, visuals, research and supporting analysis. It performs best with clear goals, concrete inputs, and a human validation for accuracy and fit. The summaries below describe what it is typically **good at** and where it is **weaker**.
 
 ---
 
@@ -603,7 +594,6 @@ ChatGPT is a versatile language model that excels at drafting, structuring, expl
 * **Cross‑functional communication:** ChatGPT is good at translating technical language to plain language and tailoring messages for different stakeholders.
 * **Persona / user‑story / JTBD drafting:** ChatGPT is good at turning interviews/notes into personas, user stories, acceptance criteria, and measurable outcomes.
 * **Localization QA (EN/DK → FO):** ChatGPT is good at back‑translation, enforcing a glossary, and calibrating tone across languages, with a final human pass for Faroese quality.
-* **Text anonymization / redaction:** ChatGPT is good at masking names, IDs, and sensitive details and at generating a verification checklist.
 * **Knowledge architecture:** ChatGPT is good at categorizing/tagging content and proposing taxonomies and naming conventions.
 * **Prompt library design & QA:** ChatGPT is good at drafting reusable prompt templates, rubrics, and style guides, and at testing prompts for consistency.
 * **Learning aids:** ChatGPT is good at producing micro‑lessons, quizzes, and flashcards for onboarding or policy training.
@@ -622,30 +612,32 @@ ChatGPT is a versatile language model that excels at drafting, structuring, expl
 * **Decision & strategy sparring:** ChatGPT is good at framing objectives, surfacing assumptions, expanding options, and comparing trade‑offs using simple multi‑criteria views.
 * **Quality feedback on drafts:** ChatGPT is good at structured critique for clarity, logic, evidence, tone, and consistency, and at sharpening executive summaries.
 * **Role‑play & communication rehearsal:** ChatGPT is good at simulating stakeholders, objections, negotiations, and difficult conversations for practice and refinement.
-* **Creativity & brainstorming:** ChatGPT is good at running idea sprints (e.g., SCAMPER, forced analogies) and then converging on practical options.
+* **Creativity & brainstorming:** ChatGPT is very good at running idea sprints, using lateral thinking to come up with many ideas.
 * **Risk thinking:** ChatGPT is good at pre‑mortems, red‑team vs. steelman perspectives, and proposing concrete mitigations.
 
 **Images, Coding & Voice**
 
-* **Image generation & image input:** ChatGPT is good at creating illustrations, mockups, icons, and slide‑style mood concepts, and at analyzing screenshots or diagrams; complex, brand‑perfect infographics remain a design task.
-* **Coding assistance:** ChatGPT is good at producing small scripts, explaining code, and generating tests for quick utilities (e.g., data cleaning); results benefit from a human review.
+* **Image generation:** ChatGPT is good at creating illustrations, mockups, icons, and slide‑style mood concepts.
+* **Image input:** ChatGPT is good at analyzing screenshots or diagrams; writing style sheets in Json format from an image or OCR for smaller images with text.
+* **Coding assistance:** ChatGPT is very good at producing well defined scripts and code, explaining code, and generating tests for quick utilities (e.g., data cleaning); results benefit from a human review.
 * **Voice for practice:** ChatGPT is good at voice‑based rehearsal (tone, pacing), English practice, and hands‑free brainstorming; it does not join or transcribe real meetings.
 
 ---
 
 #### Where ChatGPT Is Weaker (and Typical Workarounds)
 
-* **High‑precision extraction across many documents:** ChatGPT is weaker at perfectly consistent retrieval across large corpora; reliability improves when it quotes sources and a human verifies final numbers.
+* **High‑precision extraction across many documents:** ChatGPT is weaker at perfectly consistent retrieval across large corpora; reliability improves when it quotes sources and a human verifies final numbers. *Note: While it is possible to extract over many files through integrations with GitHub, Google Drive and many more, this is usually not advisable for companies yet.*
 * **Complex or regulated analytics at scale:** ChatGPT is weaker on very large datasets or high‑stakes financial/statistical work; it helps with scaffolding, explanations, and charts while specialized tools handle the core analysis.
 * **Very long documents in one go:** ChatGPT is weaker at sustaining perfect consistency over long, single‑pass drafts; results improve when work is broken into sections with a brief outline and a final consistency pass.
 * **Direct control of tools and systems:** ChatGPT does not operate calendars, send emails, or control enterprise tools; it drafts content and plans for a human to execute.
-* **Live meeting participation:** ChatGPT does not join or listen to meetings; meeting prep and debrief summaries are supported from user‑provided inputs.
+* **Live meeting participation:** ChatGPT does not join or listen to meetings in Faroese; meeting prep and debrief summaries are supported from user‑provided inputs.
+* **Understanding real world context:** ChatGPT does not understand real world context for final decisions, so it will often only be used for creating the ideas and the drafst (the first 80%), and the human will pick the best options and validate that everything makes sense.
 
 ---
 
 #### Faroese & Language Guidance
 
-* **Understanding vs. writing quality:** ChatGPT generally understands Faroese well but produces weaker Faroese writing. Quality is higher when drafting in English or Danish and then translating to Faroese with a short manual edit.
+* **Understanding vs. writing quality:** ChatGPT understands Faroese perfectly but produces weak Faroese writing. Quality is higher when drafting in English or Danish and then translating to Faroese with a short manual edit.
 * **Glossary & consistency:** A small glossary of preferred Faroese terms improves consistency; uncertain terms can be flagged for human review.
 
 </tasks_types>
@@ -667,11 +659,9 @@ Make a **well‑thought‑out list of 15 ideas** my client can use ChatGPT for. 
 
 **Important constraints**
 
-* **Do not** suggest actions that require controlling calendars, sending emails, or joining meetings. Drafts and guidance are fine; the human executes.
+* **Do not** suggest actions that require controlling calendars, sending emails, or joining meetings or any other things where the model would have to take action.
 * **Prefer ideas the client can do directly in ChatGPT** (no external integrations).
-* When an idea depends on **current information**, explicitly mention that it uses Search with citations.
-* When numbers matter, explicitly mention that it uses ADA (Python) with stated assumptions.
-* **Include at least 5 interactive "sparring/coaching" ideas** (decision support, feedback/critique, role‑play, brainstorming, or risk thinking).
+* **Include at least 5 interactive "sparring/coaching/role-play" ideas** (decision support, feedback/critique, role‑play, brainstorming, or risk thinking).
 
 **Output format (for each item, keep it tight):**
 
@@ -681,21 +671,21 @@ Make a **well‑thought‑out list of 15 ideas** my client can use ChatGPT for. 
    * **How ChatGPT helps:** (1 line; mention *Search/ADA/Image/Voice/Sparring* if relevant)
    * **Effort:** Low / Medium / High
 
-Keep the writing concise, specific to the client, and practical. Avoid generic "rewrite my email" ideas unless you make them unusually effective for this client's context.
+Keep the writing concise, specific to the client, and practical. Avoid generic "rewrite my email" ideas unless they are unusually valuable for this client's context.
             `,
             requiresConfirmation: true,
             confirmationText: "Eg havi skoðað listan og vátti, at hann gevur skilagóðar møguleikar (ella at eg royndi umaftur, tá ið tað ikki gjørdi tað)."
             },
             {
             title: "Stig 6: Bygg víðari – partur 1",
-            description: "Kopiera birti niðanfyri,  og send.",
+            description: "Kopiera birti niðanfyri og send.",
             prompt: "Very good. Now I want you to think outside the box. Make another analysis of tasks my client can use ChatGPT for. For this analysis, I want you to find tasks that could revolutionize their worklife and field. Give these ideas a rating for how hard it is to implement and how positively impactful it could be for their worklife.",
             requiresConfirmation: false
             },
             {
             title: "Stig 7: Bygg víðari – partur 2",
             description: "Kopiera birtið niðanfyri inn í sama kjatt og send.",
-            prompt: `Very good. Now, one last time, lose any predefined notion of how my client's work should be done and give me a list of revolutionary ways of doing their work with AI, totally based on first principal thinking. Give these ideas a rating for how hard it is to implement and how positively impactful it could be on their worklife.
+            prompt: `Very good. Now, one last time, lose any predefined notion of how my client's tasks should be done and give me a list of revolutionary ways of doing their work with AI, based on first principal thinking. Give these ideas a rating for how hard it is to implement and how positively impactful it could be on their worklife.
 
               Be careful the ideas don't fall outside what they actually do, but are ideas on how to do their jobs in a totally new and improved way.
 `,
@@ -703,19 +693,27 @@ Keep the writing concise, specific to the client, and practical. Avoid generic "
             },
             {
             title: "Stig 8: Ger fyrsta listan",
-            description: "Kopiera birtið inn í ChatGPT og send.",
-            prompt: "Now looking at all the lists you have made, I want you to think about which of these my client should start with. Make a list of the top 5 best and most practical ideas from the lists, these should be the low hanging fruits that give big results.",
+            description: `Kopiera birtið inn í ChatGPT og send.",
+            prompt: "Now looking at all the lists you have made, I want you to think about which of these my client should start with. Make a list of the top 5 best and most practical ideas from the lists, these should be the low hanging fruits that give big results.
+
+            For each ideas write a good mini-guide on how they actually do it in ChatGPT.
+            `,
             requiresConfirmation: false
             },
             {
             title: "Stig 9: Ger listan lidnan",
             description: "Kopiera birtið inn í ChatGPT og send.",
-            prompt: "Now come up with the rest of the list, this should be the top 6-20 ideas, be sure to carefully rank each idea, and then list them.",
+            prompt: "Now write out the rest of the list, this should be the top 6-15 ideas, be sure to carefully rank each idea, and then list them.",
             requiresConfirmation: false
             },
             {
-            title: "Stig 10: Liðugt – takk fyri!",
-            description: "Hattar var verkstovan – vónandi hevur tú nú ein góðan lista. Nú kanst tú prenta listan og leggja hann á náttborðið og lesa hann áðrenn tú sovnar.",
+            title: "Stig 10: Send listan til Hannu.",
+            description: "Tað er ætlanin at Vitlíkisstovan hyggur ígjøgnum tykkara listar og ger teir til virðismikklar vegleiðingar tit altíð kunna hava hjá, tí skula tit senda listan 1-15 til Hannu, um tit ynskja ein tílíkan lista. ",
+            requiresConfirmation: false
+            },
+            {
+            title: "Stig 11: Liðugt – takk fyri!",
+            description: "Hattar var venjingin – vónandi hevur tú nú ein góðan lista. Nú kanst tú prenta listan og leggja hann á náttborðið og lesa hann áðrenn tú sovnar.",
             requiresConfirmation: false
             }
             ]
@@ -742,7 +740,7 @@ Keep the writing concise, specific to the client, and practical. Avoid generic "
 **My job summary:**
 
 <job_summary>
-<<<<<YOUR JOB SUMMARY>>>>>
+<---------------YOUR JOB SUMMARY--------------->
 </job_summary>
 
 ### Your objectives
@@ -821,7 +819,7 @@ Keep *my work description already shared in this chat* top‑of‑mind. Optimize
 **Inputs**
 **Topics:** ⬇️
 
-<<<<<Paste Topics Here>>>>>
+<------------Paste Topics Here------------>
 
 **Report‑Type Menu (pick the best fit per topic; one per topic)**
 
