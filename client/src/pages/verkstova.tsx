@@ -461,7 +461,7 @@ export default function Verkstova() {
                   className="w-full sm:w-auto sm:ml-auto"
                   data-testid="button-complete"
                 >
-                  End venjingina
+                  Enda venjingina
                 </Button>
               ) : (
                 <Button
