@@ -693,8 +693,8 @@ Keep the writing concise, specific to the client, and practical. Avoid generic "
             },
             {
             title: "Stig 8: Ger fyrsta listan",
-            description: `Kopiera birtið inn í ChatGPT og send.",
-            prompt: "Now looking at all the lists you have made, I want you to think about which of these my client should start with. Make a list of the top 5 best and most practical ideas from the lists, these should be the low hanging fruits that give big results.
+            description: "Kopiera birtið inn í ChatGPT og send.",
+            prompt: `Now looking at all the lists you have made, I want you to think about which of these my client should start with. Make a list of the top 5 best and most practical ideas from the lists, these should be the low hanging fruits that give big results.
 
             For each ideas write a good mini-guide on how they actually do it in ChatGPT.
             `,
