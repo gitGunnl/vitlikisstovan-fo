@@ -1,0 +1,83 @@
+
+
+## What we’re doing
+
+Add a **small server-side HTTP gateway** to our existing site so a **Custom GPT (Actions)** can hit a few HTTPS endpoints that translate to **Usable’s MCP tools**. This avoids the multiple confirmations you get with the connector and keeps auth on the server.
+
+## Why
+
+* **Less friction** than the connector flow (fewer user approvals).
+* **Server-held secrets** (no token in the browser).
+* **Stable contract** for the GPT (simple REST + OpenAPI).
+
+## Inputs you’ll need
+
+* **Usable PAT** (Personal Access Token).
+* **Usable workspace ID** (optional; use if we want to target a specific workspace).
+* **Gateway API key** (what the GPT Action sends to our gateway).
+
+Provision as Replit secrets:
+
+* `USABLE_API_TOKEN`
+* `USABLE_WORKSPACE_ID` (optional)
+* `GATEWAY_API_KEY`
+
+## High-level shape (you choose the stack details)
+
+* Keep React/Vite as-is.
+* Turn the existing Express scaffold into a **hybrid server** (serve `/dist` in prod + mount API).
+* Maintain **one long-lived MCP client** connected to `https://usable.dev/api/mcp` using the PAT (Bearer).
+* Map 3 routes → 3 MCP tool calls. Exact tool names may differ by server version; prefer these aliases:
+
+  * search: `search_memory_fragments` (fallback: `agentic-search-fragments`)
+  * get: `get_memory_fragment_content` (fallback: `get-memory-fragment-content`)
+  * create: `create_memory_fragment` (fallback: `create-memory-fragment`)
+
+## Public API contract (for GPT Actions)
+
+All endpoints require `Authorization: Bearer <GATEWAY_API_KEY>`.
+
+1. **POST `/api/usable/fragments.search`**
+   **in:** `{ query: string, limit?: number }`
+   **out:** `{ items: [{ id: string, title: string, snippet?: string }] }`
+
+2. **GET `/api/usable/fragments/{id}`**
+   **out:** `{ id: string, title: string, content: string, metadata?: object }`
+
+3. **POST `/api/usable/fragments`**
+   **in:** `{ title: string, content: string, type?: "markdown"|"plaintext", workspaceId?: string }`
+   **out:** `{ id: string, title: string }`
+
+Normalize whatever the MCP returns to this shape.
+
+## OpenAPI (for the GPT)
+
+* Host **`/openapi.yaml`** (public).
+* Security scheme: **API key in header** named `Authorization` (we’ll send `Bearer <key>`).
+* Describe only the three routes above.
+
+## Security/ops (non-negotiables)
+
+* Never expose `USABLE_API_TOKEN` to the browser.
+* Add rate limiting + basic request size limits.
+* Timeouts (~20–30s) and clear HTTP 4xx/5xx on MCP errors.
+* Log with header redaction.
+
+## Acceptance checks
+
+* `curl` the three routes with `GATEWAY_API_KEY` → get sane JSON.
+* MCP client reconnects if token/workspace issues occur.
+* In GPT Builder, **import `/openapi.yaml`**, set **API Key auth**, and run:
+
+  1. create “Frontend Standards”,
+  2. search “frontend standards”,
+  3. get by id → returns created content.
+
+## Non-goals
+
+* No frontend changes (optional admin UI later).
+* No persistence other than Usable fragments.
+
+---
+
+If anything’s ambiguous (e.g., tool naming), pick the closest match from the MCP tool list at runtime and normalize the output to the contract above.

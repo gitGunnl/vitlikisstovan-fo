@@ -1,0 +1,169 @@
+''' 
+
+**Goal**
+Add a tiny **HTTP gateway** to our existing Replit web app so a **Custom GPT (Actions)** can hit clean HTTPS endpoints that the gateway translates into **Usable MCP** calls (`create`, `search`, `get`). This removes the chatty confirmations you see with connectors.
+
+**What to add (deliverables)**
+
+1. **Env secrets (Replit Secrets)**
+
+   * `USABLE_API_TOKEN` – PAT for Usable
+   * `USABLE_WORKSPACE_ID` – our workspace UUID (optional but preferred)
+   * `GATEWAY_API_KEY` – a key the GPT Action will send to our gateway
+
+2. **Three HTTPS endpoints (behind API-key auth)**
+
+   * `POST /api/usable/fragments.search`
+
+     * body: `{ "query": string, "limit"?: number }`
+     * returns: `{ "items": [{ "id": string, "title": string, "snippet"?: string }] }`
+   * `GET /api/usable/fragments/{id}`
+
+     * returns: `{ "id": string, "title": string, "content": string, "metadata"?: object }`
+   * `POST /api/usable/fragments`
+
+     * body: `{ "title": string, "content": string, "type"?: "markdown"|"plaintext", "workspaceId"?: string }`
+     * returns: `{ "id": string, "title": string }`
+
+   **Inbound auth:** require header `Authorization: Bearer <GATEWAY_API_KEY>`.
+   **Outbound auth (to Usable):** `Authorization: Bearer ${USABLE_API_TOKEN}`.
+
+3. **MCP bridge (inside the gateway)**
+
+   * Connect to **`https://usable.dev/api/mcp`** using HTTP transport.
+   * Map endpoints → MCP tools:
+
+     * `/fragments.search` → `agentic-search-fragments` *(or `search_memory_fragments` depending on server)* with `{ query, limit }`.
+     * `/fragments/{id}` → `get-memory-fragment-content` with `{ id }`.
+     * `/fragments` → `create_memory_fragment` with `{ title, content, type, workspace_id }`.
+   * Normalize responses to the shapes above.
+   * Add sane timeouts (20–30s) and translate MCP errors to HTTP 4xx/5xx.
+
+4. **OpenAPI spec (for the GPT Action)**
+
+   * Host at `GET /openapi.yaml` (public).
+   * Use **API Key (header)** security schema named `ApiKeyAuth` sending `Authorization: Bearer <key>`.
+   * Minimal 3-path spec is fine. (You can add descriptions later.)
+
+   **Template (drop-in YAML, replace `YOUR_DOMAIN`):**
+
+   ```yaml
+   openapi: 3.1.0
+   info: { title: Usable Gateway, version: "1.0.0" }
+   servers: [{ url: https://YOUR_DOMAIN }]
+   security: [{ ApiKeyAuth: [] }]
+   components:
+     securitySchemes:
+       ApiKeyAuth:
+         type: apiKey
+         in: header
+         name: Authorization
+   paths:
+     /api/usable/fragments.search:
+       post:
+         operationId: searchFragments
+         requestBody:
+           required: true
+           content:
+             application/json:
+               schema:
+                 type: object
+                 properties:
+                   query: { type: string }
+                   limit: { type: integer, minimum: 1, maximum: 50, default: 5 }
+                 required: [query]
+         responses:
+           "200":
+             description: OK
+             content:
+               application/json:
+                 schema:
+                   type: object
+                   properties:
+                     items:
+                       type: array
+                       items:
+                         type: object
+                         properties:
+                           id: { type: string }
+                           title: { type: string }
+                           snippet: { type: string }
+     /api/usable/fragments/{id}:
+       get:
+         operationId: getFragment
+         parameters:
+           - in: path
+             name: id
+             required: true
+             schema: { type: string }
+         responses:
+           "200":
+             description: OK
+             content:
+               application/json:
+                 schema:
+                   type: object
+                   properties:
+                     id: { type: string }
+                     title: { type: string }
+                     content: { type: string }
+                     metadata: { type: object, additionalProperties: true }
+     /api/usable/fragments:
+       post:
+         operationId: createFragment
+         requestBody:
+           required: true
+           content:
+             application/json:
+               schema:
+                 type: object
+                 properties:
+                   title: { type: string }
+                   content: { type: string }
+                   type:
+                     type: string
+                     enum: [markdown, plaintext]
+                   workspaceId: { type: string }
+                 required: [title, content]
+         responses:
+           "200":
+             description: OK
+             content:
+               application/json:
+                 schema:
+                   type: object
+                   properties:
+                     id: { type: string }
+                     title: { type: string }
+   ```
+
+5. **Server integration**
+
+   * If our site is already on **Node/Express**, add these routes to the existing server.
+   * If it’s static, add a tiny **Express** or **FastAPI** service to host both `openapi.yaml` and the `/api/usable/*` routes.
+   * Don’t expose the Usable token to the browser; the gateway runs server-side only.
+   * Optional: add simple rate limiting and request size caps (e.g., 1–2 MB).
+
+6. **Testing**
+
+   * From local: `curl -H "Authorization: Bearer $GATEWAY_API_KEY" https://YOUR_DOMAIN/api/usable/fragments.search -d '{"query":"frontend standards"}' -H "Content-Type: application/json"`
+   * Confirm 200 + items.
+   * Create → Get → verify content round-trip.
+
+7. **Wire it to a Custom GPT (Actions)**
+
+   * In GPT Builder → **Actions → Import** the `openapi.yaml` URL.
+   * Set **Authentication** = **API Key** → paste `GATEWAY_API_KEY`.
+   * In the GPT instructions, tell it when to call:
+
+     * search → `/fragments.search`
+     * fetch → `/fragments/{id}`
+     * create → `/fragments`
+
+**Notes**
+
+* Keep the gateway stateless; all state lives in Usable.
+* If the Usable MCP tool names differ on your server, adapt the three mappings accordingly.
+* Prefer `workspaceId` on create; otherwise the server default should apply.
+
+''' 
