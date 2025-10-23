@@ -250,7 +250,20 @@
 
   /* Focus styles for accessibility */
   *:focus-visible {
-    @apply outline outline-2 outline-offset-2 outline-ring;
+    @apply outline outline-2 outline-offset-2 outline-primary;
+    box-shadow: 0 0 0 3px hsl(var(--primary) / 0.2);
+  }
+  
+  /* Enhanced focus for interactive elements */
+  button:focus-visible,
+  a:focus-visible,
+  input:focus-visible,
+  textarea:focus-visible,
+  select:focus-visible {
+    @apply outline outline-2 outline-offset-2 outline-primary;
+    box-shadow: 0 0 0 3px hsl(var(--primary) / 0.3), 0 4px 12px hsl(var(--primary) / 0.1);
+    transform: translateY(-1px);
+    transition: all 0.2s ease-in-out;
   }
 
   /* Selection styles */
