@@ -22,6 +22,13 @@ type TimelineEvent = {
 
 const timelineData: TimelineEvent[] = [
   {
+    id: "evt-014",
+    date: "2024-10-07",
+    title: "Samrøður við námsfrøðingar og hjálparafólk eru komnar inn",
+    summary:
+      "Samrøður við námsfrøðingar og hjálparafólk eru komnar inn. Royndin við at nýta vitlíki til hettar eydnaðist betur enn vænta. Takk til øll sum svarðu.",
+  },
+  {
     id: "evt-013",
     date: "2025-09-26",
     title: "Framløga til Vísindavøka",
