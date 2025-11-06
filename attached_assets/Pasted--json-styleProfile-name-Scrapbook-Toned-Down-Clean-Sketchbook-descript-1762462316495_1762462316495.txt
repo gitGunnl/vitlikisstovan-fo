@@ -1,0 +1,86 @@
+```json
+{
+  "styleProfile": {
+    "name": "Scrapbook (Toned Down) / Clean Sketchbook",
+    "description": "A style that mimics a technical graph paper notebook or an architect's sketchbook. The aesthetic is clean, structured, and 'by hand,' combining neat handwritten fonts with technical monospaced fonts for headings and code. The color palette is minimal, primarily using 'pencil' gray, 'blueprint' blue, and 'markup' red.",
+    "theme": {
+      "overallVibe": [
+        "Technical",
+        "Drafting",
+        "Sketchbook",
+        "Analog",
+        "Clean",
+        "Structured"
+      ],
+      "palette": {
+        "pageBackground": "A very light gray or white, overlaid with a subtle, light-blue graph paper grid.",
+        "contentBackground": "A clean white 'paper' sheet with a subtle drop shadow and a thin gray border.",
+        "primaryText": "A dark, desaturated gray, like a sharp pencil or fine-tip black pen (e.g., #1f2937).",
+        "accentBlue": "A strong, primary 'blueprint' blue (e.g., #1d4ed8).",
+        "accentRed": "A bright 'markup' red, used sparingly (e.g., #be123c).",
+        "highlightBackground": "A very light, transparent blue, like a highlighter (e.g., #eff6ff)."
+      }
+    },
+    "typography": {
+      "body": {
+        "fontFamily": "'Patrick Hand', 'Kalam', or a similar neat, single-line handwritten font.",
+        "color": "primaryText",
+        "size": "1.3rem (Slightly larger than normal for a 'written' feel)",
+        "lineHeight": "1.7"
+      },
+      "headings": {
+        "fontFamily": "'Space Mono' or a similar clean, monospaced 'typewriter' font.",
+        "transform": "Uppercase",
+        "weight": "700"
+      },
+      "elements": {
+        "h1": {
+          "font": "headings",
+          "color": "primaryText",
+          "size": "2.5rem"
+        },
+        "h2": {
+          "font": "headings",
+          "color": "accentBlue",
+          "size": "2rem"
+        },
+        "h3": {
+          "font": "headings",
+          "color": "accentRed",
+          "size": "1.5rem",
+          "transform": "None (normal case)"
+        },
+        "subtitle": {
+          "font": "body",
+          "color": "A medium gray (#4b5563)",
+          "size": "1.5rem",
+          "border": "A thin, solid bottom border using a light version of accentBlue."
+        },
+        "list": {
+          "style": "Use a simple chevron '»' or dash '-' as the bullet point."
+        }
+      }
+    },
+    "components": {
+      "promptBlock": {
+        "description": "A distinct block for example prompts, styled like a highlighted note or diagram callout.",
+        "background": "highlightBackground",
+        "border": "1px solid a medium version of accentBlue (#93c5fd)",
+        "borderRadius": "0.25rem (slightly rounded, not sharp)",
+        "title": {
+          "font": "headings",
+          "color": "accentBlue",
+          "size": "1.1rem"
+        },
+        "codeBlock": {
+          "font": "headings (monospaced)",
+          "background": "A slightly darker, more saturated version of highlightBackground (e.g., #dbeafe)",
+          "color": "primaryText",
+          "padding": "1rem",
+          "borderRadius": "0.25rem"
+        }
+      }
+    }
+  }
+}
+```
