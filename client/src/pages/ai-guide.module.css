@@ -1,124 +1,200 @@
-/* Page Wrapper - Container for all scoped styles */
-.pageWrapper {
-  /* CSS Variables scoped to this component only */
-  --sketch-primary-text: #1f2937;
-  --sketch-accent-blue: #1d4ed8;
-  --sketch-accent-red: #be123c;
-  --sketch-highlight-bg: #eff6ff;
-  --sketch-highlight-border: #93c5fd;
-  --sketch-code-bg: #dbeafe;
-  --sketch-medium-gray: #4b5563;
-  --sketch-light-gray: #f3f4f6;
-  --sketch-white: #ffffff;
-  --sketch-shadow: rgba(0, 0, 0, 0.1);
-  --sketch-grid-color: #e0e7ff;
-  
-  /* Page styles */
-  min-height: 100vh;
-  width: 100%;
-  background: var(--sketch-light-gray);
-  position: relative;
-  overflow-x: hidden;
-  isolation: isolate;
+
+/* Kids Scrapbook Theme Variables */
+:root {
+  --scrapbook-bg: #f8f2e4;
+  --scrapbook-paper: #fff9f0;
+  --scrapbook-pink: #ff8fab;
+  --scrapbook-blue: #74c0fc;
+  --scrapbook-yellow: #fff066;
+  --scrapbook-green: #8ce99a;
+  --scrapbook-purple: #d0bfff;
+  --scrapbook-orange: #ffa94d;
+  --scrapbook-shadow: rgba(0, 0, 0, 0.1);
+  --scrapbook-text: #2d3748;
+  --crayon-red: #ff6b6b;
+  --crayon-blue: #4dabf7;
+  --washi-tape: #ff8cc8;
 }
 
-/* Graph Paper Background */
-.graphPaperBg {
-  position: relative;
-  min-height: 100vh;
-  background-color: #fafafa;
-  background-image: 
-    linear-gradient(var(--sketch-grid-color) 1px, transparent 1px),
-    linear-gradient(90deg, var(--sketch-grid-color) 1px, transparent 1px),
-    linear-gradient(var(--sketch-grid-color) 0.5px, transparent 0.5px),
-    linear-gradient(90deg, var(--sketch-grid-color) 0.5px, transparent 0.5px);
-  background-size: 
-    20px 20px,
-    20px 20px,
-    4px 4px,
-    4px 4px;
-  background-position: 
-    -1px -1px,
-    -1px -1px,
-    -1px -1px,
-    -1px -1px;
-}
-
-/* Container */
+/* Container with scrapbook background */
 .container {
-  max-width: 900px;
-  margin: 0 auto;
+  background: var(--scrapbook-bg);
+  background-image: 
+    radial-gradient(circle at 20% 50%, rgba(255, 140, 200, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(116, 192, 252, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(255, 240, 102, 0.1) 0%, transparent 50%);
+  min-height: 100vh;
   padding: 2rem 1rem;
+  font-family: 'Comic Neue', 'Patrick Hand', cursive;
 }
 
-/* Header */
-.header {
-  margin-bottom: 3rem;
-  text-align: center;
-}
-
-/* Paper Sheet Effect */
+/* Scrapbook paper sheets with washi tape */
 .paperSheet {
-  background: var(--sketch-white);
-  border: 1px solid #d1d5db;
-  border-radius: 0.25rem;
+  background: var(--scrapbook-paper);
+  border: 3px solid #e2e8f0;
+  border-radius: 15px;
   box-shadow: 
-    0 4px 6px -1px var(--sketch-shadow),
-    0 2px 4px -1px var(--sketch-shadow);
+    0 8px 25px var(--scrapbook-shadow),
+    0 3px 10px var(--scrapbook-shadow);
   padding: 2.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   position: relative;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transform: rotate(-0.5deg);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.paperSheet:nth-child(even) {
+  transform: rotate(0.5deg);
 }
 
 .paperSheet:hover {
-  transform: translateY(-2px);
+  transform: rotate(0deg) scale(1.02);
   box-shadow: 
-    0 10px 15px -3px var(--sketch-shadow),
-    0 4px 6px -2px var(--sketch-shadow);
+    0 15px 35px var(--scrapbook-shadow),
+    0 5px 15px var(--scrapbook-shadow);
 }
 
-/* Typography - Headings */
+/* Washi tape decorations */
+.paperSheet::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 20%;
+  width: 100px;
+  height: 20px;
+  background: var(--washi-tape);
+  transform: rotate(-10deg);
+  opacity: 0.8;
+  border-radius: 2px;
+}
+
+.paperSheet::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  right: 30%;
+  width: 80px;
+  height: 20px;
+  background: var(--scrapbook-blue);
+  transform: rotate(5deg);
+  opacity: 0.8;
+  border-radius: 2px;
+}
+
+/* Fun, colorful typography */
 .mainTitle {
-  font-family: 'Space Mono', monospace;
-  font-size: 2.5rem;
+  font-family: 'Fredoka One', 'Comic Neue', cursive;
+  font-size: 3rem;
   font-weight: 700;
-  text-transform: uppercase;
-  color: var(--sketch-primary-text);
-  letter-spacing: 0.05em;
-  margin-bottom: 1rem;
+  color: var(--crayon-red);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  text-shadow: 3px 3px 0px var(--scrapbook-yellow);
+  transform: rotate(-2deg);
+  position: relative;
 }
 
 .subtitle {
-  font-family: 'Patrick Hand', 'Kalam', cursive;
-  font-size: 1.5rem;
-  color: var(--sketch-medium-gray);
-  border-bottom: 2px solid var(--sketch-accent-blue);
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.8rem;
+  color: var(--crayon-blue);
+  text-align: center;
+  margin-bottom: 2rem;
+  transform: rotate(1deg);
+  border-bottom: 3px dashed var(--scrapbook-pink);
   padding-bottom: 0.5rem;
   display: inline-block;
-  margin: 0 auto;
 }
 
 .sectionTitle {
-  font-family: 'Space Mono', monospace;
-  font-size: 2rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--sketch-accent-blue);
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: var(--scrapbook-purple);
   margin-bottom: 1.5rem;
-  letter-spacing: 0.02em;
+  transform: rotate(-1deg);
+  text-shadow: 2px 2px 0px var(--scrapbook-green);
+  position: relative;
 }
 
-/* Typography - Body Text */
+/* Crayon-style underlines */
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background: linear-gradient(90deg, var(--scrapbook-yellow) 0%, var(--scrapbook-pink) 100%);
+  border-radius: 3px;
+  transform: rotate(0.5deg);
+}
+
+/* Body text with handwritten feel */
 .bodyText {
-  font-family: 'Patrick Hand', 'Kalam', cursive;
-  font-size: 1.3rem;
-  line-height: 1.7;
-  color: var(--sketch-primary-text);
-  margin-bottom: 1rem;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: var(--scrapbook-text);
+  margin-bottom: 1.5rem;
+  text-align: left;
 }
 
-/* Lists */
+/* Post-it note style for prompts */
+.promptNote {
+  background: var(--scrapbook-yellow);
+  background-image: linear-gradient(45deg, #fff066 25%, transparent 25%), 
+                   linear-gradient(-45deg, #fff066 25%, transparent 25%),
+                   linear-gradient(45deg, transparent 75%, #fff066 75%), 
+                   linear-gradient(-45deg, transparent 75%, #fff066 75%);
+  background-size: 20px 20px;
+  background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+  border: none;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  transform: rotate(-3deg);
+  box-shadow: 
+    0 4px 8px rgba(255, 240, 102, 0.3),
+    0 8px 16px var(--scrapbook-shadow);
+  position: relative;
+  transition: transform 0.3s ease;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.3rem;
+  color: var(--scrapbook-text);
+  font-weight: 500;
+}
+
+.promptNote:nth-child(even) {
+  transform: rotate(2deg);
+  background: var(--scrapbook-green);
+}
+
+.promptNote:nth-child(3n) {
+  transform: rotate(-1.5deg);
+  background: var(--scrapbook-pink);
+}
+
+.promptNote:hover {
+  transform: rotate(0deg) scale(1.05);
+  z-index: 10;
+}
+
+/* Push pin effect */
+.promptNote::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  background: var(--crayon-red);
+  border-radius: 50%;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Fun list styling */
 .principlesList,
 .pitfallsList {
   list-style: none;
@@ -127,172 +203,85 @@
 }
 
 .listItem {
-  font-family: 'Patrick Hand', 'Kalam', cursive;
+  font-family: 'Patrick Hand', cursive;
   font-size: 1.3rem;
-  line-height: 1.7;
-  color: var(--sketch-primary-text);
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: flex-start;
-  gap: 0.75rem;
-}
-
-.bulletIcon {
-  color: var(--sketch-accent-blue);
-  width: 1.2rem;
-  height: 1.2rem;
-  flex-shrink: 0;
-  margin-top: 0.2rem;
-}
-
-.pitfallMarker {
-  color: var(--sketch-accent-red);
-  font-weight: bold;
-  font-size: 1.4rem;
-  flex-shrink: 0;
-}
-
-/* Prompt Block Styling */
-.promptBlock {
-  background: var(--sketch-highlight-bg);
-  border: 1px solid var(--sketch-highlight-border);
-  border-radius: 0.25rem;
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
-  position: relative;
-}
-
-.promptBlock::before {
-  content: '';
-  position: absolute;
-  top: -5px;
-  left: 20px;
-  width: 30px;
-  height: 10px;
-  background: var(--sketch-white);
-  border-top: 1px solid var(--sketch-highlight-border);
-  border-left: 1px solid var(--sketch-highlight-border);
-  border-right: 1px solid var(--sketch-highlight-border);
-  border-radius: 5px 5px 0 0;
-}
-
-.promptTitle {
-  font-family: 'Space Mono', monospace;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--sketch-accent-blue);
+  color: var(--scrapbook-text);
   margin-bottom: 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-transform: none;
-}
-
-.promptIcon {
-  width: 1.2rem;
-  height: 1.2rem;
-}
-
-/* Code Block */
-.codeBlock {
-  background: var(--sketch-code-bg);
-  border-radius: 0.25rem;
-  padding: 1rem;
-  overflow-x: auto;
-}
-
-.codeContent {
-  font-family: 'Space Mono', monospace;
-  font-size: 0.95rem;
-  color: var(--sketch-primary-text);
-  line-height: 1.5;
-  margin: 0;
-  white-space: pre-wrap;
-}
-
-/* Tip Cards */
-.tipCard {
-  background: linear-gradient(135deg, var(--sketch-white) 0%, var(--sketch-highlight-bg) 100%);
-  border-left: 4px solid var(--sketch-accent-blue);
-  padding: 1.5rem;
-  margin-bottom: 1.5rem;
+  padding: 0.8rem 1.2rem;
+  background: var(--scrapbook-paper);
+  border-left: 5px solid var(--scrapbook-blue);
+  border-radius: 0 10px 10px 0;
+  box-shadow: 0 2px 8px var(--scrapbook-shadow);
   position: relative;
+  transform: rotate(-0.3deg);
 }
 
-.tipTitle {
-  font-family: 'Space Mono', monospace;
+.listItem:nth-child(even) {
+  border-left-color: var(--scrapbook-pink);
+  transform: rotate(0.3deg);
+}
+
+.listItem:nth-child(3n) {
+  border-left-color: var(--scrapbook-green);
+  transform: rotate(-0.5deg);
+}
+
+.listItem::before {
+  content: '★';
+  color: var(--scrapbook-yellow);
   font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--sketch-accent-red);
-  margin-bottom: 0.75rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  text-transform: none;
+  margin-right: 0.5rem;
+  text-shadow: 1px 1px 0px var(--scrapbook-orange);
 }
 
-.tipIcon {
-  width: 1.3rem;
-  height: 1.3rem;
-  color: var(--sketch-accent-blue);
-}
-
-/* Technique Cards */
-.techniqueCard {
-  margin-bottom: 2rem;
-}
-
-.techniqueTitle {
-  font-family: 'Space Mono', monospace;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--sketch-accent-red);
-  margin-bottom: 0.75rem;
-  text-transform: none;
-}
-
-/* Highlight Box */
-.highlightBox {
-  background: var(--sketch-highlight-bg);
-  border-left: 3px solid var(--sketch-accent-blue);
-  padding: 1rem 1.5rem;
-  margin-top: 1rem;
-  border-radius: 0 0.25rem 0.25rem 0;
-}
-
-.highlightText {
-  font-family: 'Patrick Hand', 'Kalam', cursive;
-  font-size: 1.2rem;
-  font-style: italic;
-  color: var(--sketch-primary-text);
-  line-height: 1.6;
-  margin: 0;
-}
-
-/* Signature Box */
+/* Signature box with cute styling */
 .signatureBox {
-  margin-top: 2rem;
-  text-align: right;
-  padding-top: 1.5rem;
-  border-top: 1px dashed var(--sketch-medium-gray);
+  margin-top: 2.5rem;
+  text-align: center;
+  padding: 2rem;
+  background: var(--scrapbook-paper);
+  border: 3px dashed var(--scrapbook-pink);
+  border-radius: 20px;
+  transform: rotate(-1deg);
+  position: relative;
 }
 
 .signature {
-  font-family: 'Patrick Hand', 'Kalam', cursive;
-  font-size: 1.5rem;
-  color: var(--sketch-accent-blue);
+  font-family: 'Dancing Script', 'Patrick Hand', cursive;
+  font-size: 2rem;
+  color: var(--crayon-blue);
   margin-bottom: 0.5rem;
   font-weight: 700;
+  transform: rotate(1deg);
 }
 
 .date {
-  font-family: 'Patrick Hand', 'Kalam', cursive;
-  font-size: 1.2rem;
-  color: var(--sketch-medium-gray);
+  font-family: 'Patrick Hand', cursive;
+  font-size: 1.3rem;
+  color: var(--scrapbook-text);
   margin: 0;
 }
 
-/* Responsive Design */
+/* Sticker decorations */
+.paperSheet:nth-child(odd)::after {
+  content: '🌟';
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 2rem;
+  transform: rotate(15deg);
+}
+
+.paperSheet:nth-child(even)::after {
+  content: '🎨';
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  font-size: 1.8rem;
+  transform: rotate(-15deg);
+}
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
   .container {
     padding: 1rem 0.5rem;
@@ -301,64 +290,43 @@
   .paperSheet {
     padding: 1.5rem;
     margin-bottom: 1.5rem;
+    transform: rotate(0deg);
   }
   
   .mainTitle {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
   
   .sectionTitle {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
   
   .bodyText,
   .listItem {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
   
   .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+  }
+  
+  .promptNote {
+    transform: rotate(-1deg);
+    padding: 1rem;
   }
 }
 
-/* Add some hand-drawn looking elements */
-.paperSheet::after {
-  content: '';
+/* Add some scattered doodles */
+.paperSheet:first-child::before {
+  content: '✨';
   position: absolute;
-  bottom: -2px;
-  right: -2px;
-  width: 20px;
-  height: 20px;
-  background: var(--sketch-white);
-  border-top: 1px solid #d1d5db;
-  border-left: 1px solid #d1d5db;
-  transform: rotate(45deg);
-  transform-origin: center;
+  top: 20px;
+  right: 50px;
+  font-size: 1.5rem;
+  animation: sparkle 2s ease-in-out infinite alternate;
 }
 
-/* Sketch-style underlines for links (if needed) */
-.sketchLink {
-  color: var(--sketch-accent-blue);
-  text-decoration: none;
-  position: relative;
-  font-family: 'Patrick Hand', 'Kalam', cursive;
-  font-size: 1.3rem;
-}
-
-.sketchLink::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: var(--sketch-accent-blue);
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-}
-
-.sketchLink:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
+@keyframes sparkle {
+  0% { transform: rotate(0deg) scale(1); }
+  100% { transform: rotate(180deg) scale(1.2); }
 }
