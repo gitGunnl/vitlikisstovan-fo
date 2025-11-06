@@ -6,9 +6,9 @@ import { ChevronRight, FileText, Code, Lightbulb, Target } from "lucide-react";
 
 export default function AIGuide() {
   useEffect(() => {
-    // Add Google Fonts link when component mounts
+    // Add Google Fonts link for scrapbook style when component mounts
     const link = document.createElement('link');
-    link.href = 'https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Kalam:wght@300;400;700&family=Space+Mono:wght@400;700&display=swap';
+    link.href = 'https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Kalam:wght@300;400;700&display=swap';
     link.rel = 'stylesheet';
     link.id = 'ai-guide-fonts';
     document.head.appendChild(link);
