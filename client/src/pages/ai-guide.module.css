@@ -1,8 +1,6 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Kalam:wght@300;400;700&family=Space+Mono:wght@400;700&display=swap');
-
-/* CSS Variables for the Scrapbook Theme */
-:root {
+/* Page Wrapper - Container for all scoped styles */
+.pageWrapper {
+  /* CSS Variables scoped to this component only */
   --sketch-primary-text: #1f2937;
   --sketch-accent-blue: #1d4ed8;
   --sketch-accent-red: #be123c;
@@ -14,15 +12,14 @@
   --sketch-white: #ffffff;
   --sketch-shadow: rgba(0, 0, 0, 0.1);
   --sketch-grid-color: #e0e7ff;
-}
-
-/* Page Wrapper */
-.pageWrapper {
+  
+  /* Page styles */
   min-height: 100vh;
   width: 100%;
   background: var(--sketch-light-gray);
   position: relative;
   overflow-x: hidden;
+  isolation: isolate;
 }
 
 /* Graph Paper Background */

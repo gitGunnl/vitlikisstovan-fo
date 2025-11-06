@@ -6,6 +6,13 @@ import { ChevronRight, FileText, Code, Lightbulb, Target } from "lucide-react";
 
 export default function AIGuide() {
   useEffect(() => {
+    // Add Google Fonts link when component mounts
+    const link = document.createElement('link');
+    link.href = 'https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Kalam:wght@300;400;700&family=Space+Mono:wght@400;700&display=swap';
+    link.rel = 'stylesheet';
+    link.id = 'ai-guide-fonts';
+    document.head.appendChild(link);
+    
     const fullTitle = `AI User Guide - ${seoConfig.title}`;
     const description = "Learn how to effectively use AI tools and prompts for your projects";
     
@@ -17,6 +24,14 @@ export default function AIGuide() {
       type: 'article',
       siteName: seoConfig.siteName
     });
+    
+    // Cleanup: Remove font link when component unmounts
+    return () => {
+      const fontLink = document.getElementById('ai-guide-fonts');
+      if (fontLink) {
+        fontLink.remove();
+      }
+    };
   }, []);
 
   return (
