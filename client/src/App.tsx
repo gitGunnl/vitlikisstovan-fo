@@ -14,6 +14,7 @@ import BlogPost from "@/pages/blog-post";
 import Tilarbeidis from "@/pages/tilarbeidis";
 import Verkstova from "@/pages/verkstova";
 import Podcast from "@/pages/Podcast";
+import AIGuide from "@/pages/ai-guide";
 
 function Router() {
   return (
@@ -28,6 +29,7 @@ function Router() {
       <Route path="/blog/:slug" component={BlogPost} />
       <Route path="/verkstova" component={Verkstova} />
       <Route path="/podcast" component={Podcast} />
+      <Route path="/ai-guide" component={AIGuide} />
       <Route component={NotFound} />
     </Switch>
   );
