@@ -12,10 +12,10 @@ export default function AIGuide() {
     link.rel = 'stylesheet';
     link.id = 'ai-guide-fonts';
     document.head.appendChild(link);
-
+    
     const fullTitle = `AI User Guide - ${seoConfig.title}`;
     const description = "Learn how to effectively use AI tools and prompts for your projects";
-
+    
     updateMetaTags({
       title: fullTitle,
       description: description,
@@ -24,7 +24,7 @@ export default function AIGuide() {
       type: 'article',
       siteName: seoConfig.siteName
     });
-
+    
     // Cleanup: Remove font link when component unmounts
     return () => {
       const fontLink = document.getElementById('ai-guide-fonts');
@@ -98,7 +98,7 @@ export default function AIGuide() {
               <h2 className={styles.sectionTitle} data-testid="text-section-prompts">
                 EFFECTIVE PROMPTS
               </h2>
-
+              
               <div className={styles.promptBlock}>
                 <h3 className={styles.promptTitle}>
                   <Code className={styles.promptIcon} />
@@ -139,7 +139,7 @@ explaining a project delay. Include:
               <h2 className={styles.sectionTitle} data-testid="text-section-practices">
                 BEST PRACTICES
               </h2>
-
+              
               <div className={styles.tipCard}>
                 <h3 className={styles.tipTitle}>
                   <Lightbulb className={styles.tipIcon} />
@@ -193,7 +193,7 @@ explaining a project delay. Include:
               <h2 className={styles.sectionTitle} data-testid="text-section-advanced">
                 ADVANCED TECHNIQUES
               </h2>
-
+              
               <div className={styles.techniqueCard}>
                 <h3 className={styles.techniqueTitle}>Chain of Thought Prompting</h3>
                 <p className={styles.bodyText}>
