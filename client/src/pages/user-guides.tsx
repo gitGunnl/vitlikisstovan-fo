@@ -36,6 +36,12 @@ export default function UserGuides() {
       title: "Bestu Practices Vegleiðing",
       description: "Lær seinastu praksis og prógvaðar strategiir fyri at fáa mest burtur úr okkara skipan. Inkluderar ráð, knøpp og framkomnar teknikkir.",
       href: "/user-guides/best-practices"
+    },
+    {
+      id: "ai-for-caretakers",
+      title: "AI fyri Umsorgarfólk",
+      description: "Ein praktisk vegleiðing um hvussu vitlíki kann hjálpa við dagligu umsorgararbeiði, dokumentering og samskifti við familju.",
+      href: "/user-guides/ai-for-caretakers"
     }
   ];
 
