@@ -83,8 +83,8 @@ export default function StrongAIForCaretakersLessPaperworkSaferDaysMoreHumanTime
         {/* Guide Content */}
         <Section className="py-8 sm:py-12">
           <article className="guide-content mx-auto max-w-4xl prose prose-gray prose-lg">
-            <h1><strong>AI for caretakers: Less Paperwork, Safer Days, More Human Time</strong></h1>
-            <p><strong>Copy‑paste AI prompts for caretakers — day‑books, handover, family messages, and activities (no personal data).</strong></p>
+            <h1><strong>AI til barnagarð: Nýtiligar amboð fyri dagliga arbeiði</strong></h1>
+            <p><strong>Praktisk vegleiðing um hvussu vitlíki kann hjálpa barnagarðslærarum við dagligu arbeiði, leskanarplaner og samskifti við foreldur.</strong></p>
             <hr />
             <h2 id="your-day-is-about-people-not-paperwork"><strong>Your Day Is About People, Not Paperwork</strong></h2>
             <p>We know your job is, first and foremost, &quot;on the floor.&quot; You are present with children, residents, and clients, making their day hang together—from breakfast and personal care to appointments and activities. This is the essential, human work.</p>
@@ -206,7 +206,7 @@ export default function StrongAIForCaretakersLessPaperworkSaferDaysMoreHumanTime
             <p><strong>Imagine this scenario:</strong> It’s a busy afternoon at the group home. Rain has forced you indoors, disrupting your planned walk. You now have five restless adult residents who usually enjoy structured outdoor time. You&#39;re in a small common area with basic materials like paper, pens, playing cards, magazines, and simple craft supplies.</p>
             <hr />
             <p><strong>Good example prompt (copy/paste this):</strong></p>
-            <p>I&#39;m a Helper at a group home in the Faroe Islands. Our outdoor walk was cancelled due to heavy rain.</p>
+            <p>I'm a Helper at a group home in the Faroe Islands. Our outdoor walk was cancelled due to heavy rain.</p>
             <ul>
               <li><p>Participants: 5 adults with varying cognitive and physical abilities</p>
             </li>
@@ -219,13 +219,13 @@ export default function StrongAIForCaretakersLessPaperworkSaferDaysMoreHumanTime
             </ul>
             <p>Please suggest a few low-prep, inclusive indoor activities that are relaxing and suitable for mixed abilities. Ask me first if anything needs clarification.</p>
             <p><strong>Follow-up Prompts:</strong><br />
-             If the suggestions aren&#39;t quite right, guide the AI clearly. For instance:</p>
+             If the suggestions aren't quite right, guide the AI clearly. For instance:</p>
             <ul>
-              <li><p>&quot;Suggest activities with even simpler instructions.&quot;</p>
+              <li><p>"Suggest activities with even simpler instructions."</p>
             </li>
-              <li><p>&quot;We liked the storytelling idea—give us two more calming narrative-based activities.&quot;</p>
+              <li><p>"We liked the storytelling idea—give us two more calming narrative-based activities."</p>
             </li>
-              <li><p>&quot;Make activities shorter, around 15 minutes each.&quot;</p>
+              <li><p>"Make activities shorter, around 15 minutes each."</p>
             </li>
             </ul>
             <p><strong>More Opportunities for Creative Sparring</strong></p>
@@ -249,7 +249,7 @@ export default function StrongAIForCaretakersLessPaperworkSaferDaysMoreHumanTime
             <p>Think of it as a practical assistant that creates the <em>exact</em> checklist you need for <em>right now</em>. Instead of relying on your memory or a generic paper list, you just tell the AI what&#39;s happening. It then creates a custom, step-by-step checklist for that specific situation.</p>
             <p>Here is the revised scenario description and the updated example prompt.</p>
             <hr />
-            <p><strong>Here&#39;s a perfect example:</strong></p>
+            <p><strong>Here's a perfect example:</strong></p>
             <p>Imagine you and a colleague have an early appointment with three residents at the health center tomorrow. You have to leave before your usual shift starts, making the morning feel rushed. The forecast is cold and windy, and you&#39;re taking a taxi.</p>
             <p>To make sure nothing gets forgotten, you add a few crucial real-life details: <strong>one of the residents, Mrs. P, needs her folding walker, and another, Mr. H, gets very anxious during transport and relies on his specific radio headset.</strong> You ask the AI to help you prepare the night before.</p>
             <hr />
@@ -266,7 +266,7 @@ export default function StrongAIForCaretakersLessPaperworkSaferDaysMoreHumanTime
             <p>Please create a short and practical checklist for us to prepare tonight, making tomorrow morning calmer. Make sure to include specific checks for the walker and headset. Keep it phone-friendly (10–14 items). Include a simple Green/Amber/Red readiness check at the end. Ask first if anything needs clarification. No personal data.</p>
             <hr />
             <h4 id="getting-the-checklist-just-right"><strong>Getting the Checklist Just Right</strong></h4>
-            <p>If the AI&#39;s first list isn&#39;t quite right, just tell it what to change. Be clear and specific.</p>
+            <p>If the AI&#39;s first list isn't quite right, just tell it what to change. Be clear and specific.</p>
             <ul>
               <li>“Make the checklist shorter, no more than 8 items.”  </li>
               <li>“Add reminders related to the weather (umbrellas, gloves).”  </li>
@@ -304,11 +304,11 @@ export default function StrongAIForCaretakersLessPaperworkSaferDaysMoreHumanTime
             <h3 id="follow-up-prompts"><strong>Follow-up prompts:</strong></h3>
             <p>If the result isn&#39;t quite right, just guide the AI a bit more:</p>
             <ul>
-              <li><p>&quot;Make the points even shorter.&quot;</p>
+              <li><p>"Make the points even shorter."</p>
             </li>
-              <li><p>&quot;Highlight the most urgent task.&quot;</p>
+              <li><p>"Highlight the most urgent task."</p>
             </li>
-              <li><p>&quot;Explain the Amber status more clearly.&quot;</p>
+              <li><p>"Explain the Amber status more clearly."</p>
             </li>
             </ul>
             <h3 id="more-ways-to-use-the-communication-helper"><strong>More ways to use the Communication Helper</strong></h3>
