@@ -53,35 +53,12 @@ export default function UserGuides() {
           <div className="mx-auto max-w-5xl">
             {/* Header */}
             <div className="text-center mb-12">
-              <div className="inline-flex items-center justify-center p-2 bg-primary/10 rounded-full mb-4">
-                <BookOpen className="h-8 w-8 text-primary" />
-              </div>
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
                 User Guides
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Explore our comprehensive guides to help you make the most of our platform. 
-                All guides are available online and can be downloaded as PDFs for offline reference.
+                Comprehensive guides to help you make the most of our platform.
               </p>
-            </div>
-
-            {/* Features */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12">
-              <div className="text-center p-4">
-                <FileText className="h-8 w-8 mx-auto mb-2 text-primary" />
-                <h3 className="font-semibold mb-1">Detailed Documentation</h3>
-                <p className="text-sm text-muted-foreground">Step-by-step instructions with examples</p>
-              </div>
-              <div className="text-center p-4">
-                <Download className="h-8 w-8 mx-auto mb-2 text-primary" />
-                <h3 className="font-semibold mb-1">PDF Download</h3>
-                <p className="text-sm text-muted-foreground">Save guides for offline access</p>
-              </div>
-              <div className="text-center p-4">
-                <BookOpen className="h-8 w-8 mx-auto mb-2 text-primary" />
-                <h3 className="font-semibold mb-1">Regular Updates</h3>
-                <p className="text-sm text-muted-foreground">Always up-to-date with latest features</p>
-              </div>
             </div>
 
             {/* Guide Cards */}
