@@ -19,6 +19,7 @@ import UserGuides from "@/pages/user-guides";
 import GettingStartedGuide from "@/pages/getting-started-guide";
 import BestPracticesGuide from "@/pages/best-practices-guide";
 import AIForCaretakersGuide from "@/pages/ai-for-caretakers-guide";
+import { lazy } from "react";
 
 function Router() {
   return (
@@ -38,6 +39,7 @@ function Router() {
       <Route path="/user-guides/getting-started" component={GettingStartedGuide} />
       <Route path="/user-guides/best-practices" component={BestPracticesGuide} />
       <Route path="/user-guides/ai-for-caretakers" component={AIForCaretakersGuide} />
+      <Route path="/user-guides/ai-for-kindergarten" component={lazy(() => import("@/pages/ai-for-kindergarten-guide"))} />
       <Route component={NotFound} />
     </Switch>
   );

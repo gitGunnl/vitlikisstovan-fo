@@ -26,22 +26,16 @@ export default function UserGuides() {
 
   const guides = [
     {
-      id: "getting-started",
-      title: "Komin í gongd Vegleiðing",
-      description: "Ein umfatandi vegleiðing til at hjálpa tær at koma í gongd við okkara skipan. Lær grundleggandi, set tín arbeiðsbúnað upp og skilja kjarnuspurningar.",
-      href: "/user-guides/getting-started"
-    },
-    {
-      id: "best-practices",
-      title: "Bestu Practices Vegleiðing",
-      description: "Lær seinastu praksis og prógvaðar strategiir fyri at fáa mest burtur úr okkara skipan. Inkluderar ráð, knøpp og framkomnar teknikkir.",
-      href: "/user-guides/best-practices"
-    },
-    {
       id: "ai-for-caretakers",
       title: "AI fyri Umsorgarfólk",
       description: "Ein praktisk vegleiðing um hvussu vitlíki kann hjálpa við dagligu umsorgararbeiði, dokumentering og samskifti við familju.",
       href: "/user-guides/ai-for-caretakers"
+    },
+    {
+      id: "ai-for-kindergarten",
+      title: "AI til barnagarð",
+      description: "Hvussu vitlíki kann hjálpa barnagarðslærarum við dagligu arbeiði, leskanarplaner og samskifti við foreldur.",
+      href: "/user-guides/ai-for-kindergarten"
     }
   ];
 
