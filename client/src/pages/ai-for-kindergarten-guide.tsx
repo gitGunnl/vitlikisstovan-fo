@@ -7,6 +7,7 @@ import Section from "@/components/site/Section";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Printer } from "lucide-react";
 import { seoConfig } from "@/content/seo";
+import { PrintHeaderFooter } from "@/components/site/PrintHeaderFooter";
 
 export default function StrongAIForCaretakersLessPaperworkSaferDaysMoreHumanTimeStrongGuide() {
   const search = useSearch();
@@ -63,6 +64,12 @@ export default function StrongAIForCaretakersLessPaperworkSaferDaysMoreHumanTime
       <style dangerouslySetInnerHTML={{ __html: customStyles }} />
 
       {!isPrintMode && <Header />}
+
+      {/* Print header/footer components - only visible in print */}
+      <PrintHeaderFooter 
+        title="AI til barnagarð"
+        subtitle="Vitlíkisstovan"
+      />
 
       <main className={`${!isPrintMode ? 'pt-16' : ''} bg-white`}>
         {/* Navigation - Hidden in print */}

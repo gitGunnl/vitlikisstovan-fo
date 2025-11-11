@@ -7,6 +7,7 @@ import Section from "@/components/site/Section";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Printer } from "lucide-react";
 import { seoConfig } from "@/content/seo";
+import { PrintHeaderFooter } from "@/components/site/PrintHeaderFooter";
 
 export default function SampleGuide() {
   const search = useSearch();
@@ -64,21 +65,11 @@ export default function SampleGuide() {
 
       {!isPrintMode && <Header />}
 
-      {/* Print-only header - hidden on screen, shown in print */}
-      <div className="print-header hidden">
-        <div className="flex justify-between items-center">
-          <span>AI for Caretakers Guide</span>
-          <span>Vitlíkisstovan</span>
-        </div>
-      </div>
-
-      {/* Print-only footer - hidden on screen, shown in print */}
-      <div className="print-footer hidden">
-        <div className="flex justify-between items-center text-xs">
-          <span>© 2024 Vitlíkisstovan</span>
-          <span className="print-page-number"></span>
-        </div>
-      </div>
+      {/* Print header/footer components - only visible in print */}
+      <PrintHeaderFooter 
+        title="AI for Caretakers Guide"
+        subtitle="Vitlíkisstovan"
+      />
 
       <main className={`${!isPrintMode ? 'pt-16' : ''} bg-white`}>
         {/* Navigation - Hidden in print */}

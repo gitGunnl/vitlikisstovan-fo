@@ -459,25 +459,16 @@
 
 /* Global Print Styles for Better PDF Generation */
 @media print {
-  /* Page setup with properly balanced margins */
+  /* Page setup */
   @page {
-    margin: 1in 0.75in 1in 0.75in; /* top right bottom left - balanced margins for clean layout */
-    size: A4;
-    
-    /* Counter for page numbers */
-    counter-increment: page;
+    size: letter;
+    margin: 0.5in; /* Smaller margins for more content space */
   }
   
-  /* First page specific margins - same as other pages for consistency */
-  @page :first {
-    margin: 1in 0.75in 1in 0.75in; /* Consistent margins throughout */
-  }
-  
-  /* Ensure main content has proper spacing without overlapping headers/footers */
-  main {
-    margin: 0 !important;
-    padding: 0 !important;
-    /* Content will flow naturally within page margins */
+  /* Reset body for print */
+  body {
+    margin: 0;
+    padding: 0;
   }
 
   /* Hide non-essential elements */
@@ -485,81 +476,78 @@
   footer,
   nav,
   .no-print,
-  button:not(.print-button),
+  button,
   .navigation,
   .sidebar {
     display: none !important;
   }
   
-  /* Print headers and footers using running headers/footers for proper positioning */
+  /* Fixed position header - repeats on every page */
   .print-header {
     display: block !important;
-    position: running(header);
-    font-size: 10pt;
-    color: #666;
-    text-align: center;
+    position: fixed;
+    top: 0.5in; /* Respect page margin */
+    left: 0.5in;
+    right: 0.5in;
+    height: 0.3in;
+    background: white;
+    z-index: 1000;
+    padding: 0.05in 0;
     border-bottom: 1px solid #ddd;
-    padding-bottom: 0.25in;
-    margin-bottom: 0.25in;
   }
   
+  .print-header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 9pt;
+    color: #666;
+    height: 100%;
+  }
+  
+  .print-header-title {
+    font-weight: 600;
+    font-size: 9pt;
+  }
+  
+  .print-header-subtitle {
+    font-style: italic;
+    font-size: 9pt;
+  }
+  
+  /* Fixed position footer - repeats on every page */
   .print-footer {
     display: block !important;
-    position: running(footer);
-    font-size: 9pt;
-    color: #666;
-    text-align: center;
+    position: fixed;
+    bottom: 0.5in; /* Respect page margin */
+    left: 0.5in;
+    right: 0.5in;
+    height: 0.25in;
+    background: white;
+    z-index: 1000;
+    padding: 0.05in 0;
     border-top: 1px solid #ddd;
-    padding-top: 0.15in;
-    margin-top: 0.25in;
   }
   
-  /* Page margins with header/footer areas */
-  @page {
-    @top-center {
-      content: element(header);
-      width: 100%;
-    }
-    
-    @bottom-center {
-      content: element(footer);
-      width: 100%;
-    }
-    
-    @bottom-right {
-      content: "Page " counter(page);
-      font-size: 9pt;
-      color: #666;
-    }
-  }
-  
-  /* Fallback for browsers that don't support running headers */
-  .print-header,
-  .print-footer {
-    display: none !important;
-  }
-  
-  /* Simple header/footer for better compatibility */
-  .guide-content::before {
-    content: attr(data-header);
-    display: block;
-    font-size: 10pt;
+  .print-footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 8pt;
     color: #666;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 0.5em;
-    margin-bottom: 1em;
+    height: 100%;
   }
   
-  .guide-content::after {
-    content: "© 2024 Vitlíkisstovan";
-    display: block;
-    font-size: 9pt;
-    color: #666;
-    text-align: center;
-    border-top: 1px solid #ddd;
-    padding-top: 0.5em;
-    margin-top: 2em;
+  /* Page numbering */
+  .page-number::after {
+    content: counter(page);
+  }
+  
+  /* Add padding to main content to avoid overlap with fixed header/footer */
+  main {
+    padding-top: 0.9in !important; /* 0.5in margin + 0.3in header + 0.1in spacing */
+    padding-bottom: 0.85in !important; /* 0.5in margin + 0.25in footer + 0.1in spacing */
+    margin: 0 !important;
   }
 
   /* Reset backgrounds for better printing */
@@ -688,5 +676,20 @@
 
   .avoid-break {
     page-break-inside: avoid;
+  }
+  
+  /* Ensure guide content uses full width in print */
+  .guide-content {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 0.25in !important;
+  }
+}
+
+/* Hide print-only elements on screen */
+@media screen {
+  .print-header,
+  .print-footer {
+    display: none !important;
   }
 }
