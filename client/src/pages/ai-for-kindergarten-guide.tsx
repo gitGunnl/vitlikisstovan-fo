@@ -99,7 +99,7 @@ export default function AIForKindergartenGuide() {
 
         {/* Guide Content */}
         <Section className="py-8 sm:py-12">
-          <article className="guide-content mx-auto max-w-4xl prose prose-gray prose-lg">
+          <article className="guide-content mx-auto max-w-3xl prose prose-gray prose-lg">
             <h1><strong>AI til barnagarð: Nýtiligar amboð fyri dagliga arbeiði</strong></h1>
             <p><strong>Praktisk vegleiðing um hvussu vitlíki kann hjálpa barnagarðslærarum við dagligu arbeiði, leskanarplaner og samskifti við foreldur.</strong></p>
             <hr />

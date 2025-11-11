@@ -98,7 +98,7 @@ export default function SampleGuide() {
 
         {/* Guide Content */}
         <Section className="py-8 sm:py-12">
-          <article className="guide-content mx-auto max-w-4xl prose prose-gray prose-lg">
+          <article className="guide-content mx-auto max-w-3xl prose prose-gray prose-lg">
             <h1><strong>AI for caretakers: Less Paperwork, Safer Days, More Human Time</strong></h1>
             <p><strong>Copy‑paste AI prompts for caretakers — day‑books, handover, family messages, and activities (no personal data).</strong></p>
             <hr />
