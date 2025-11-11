@@ -74,6 +74,22 @@ export default function GettingStartedGuide() {
       
       {!isPrintMode && <Header />}
       
+      {/* Print-only header - hidden on screen, shown in print */}
+      <div className="print-header hidden">
+        <div className="flex justify-between items-center">
+          <span>Getting Started Guide</span>
+          <span>Vitlíkisstovan</span>
+        </div>
+      </div>
+      
+      {/* Print-only footer - hidden on screen, shown in print */}
+      <div className="print-footer hidden">
+        <div className="flex justify-between items-center text-xs">
+          <span>© 2024 Vitlíkisstovan</span>
+          <span className="print-page-number"></span>
+        </div>
+      </div>
+      
       <main className={`${!isPrintMode ? 'pt-16' : ''} bg-white`}>
         {/* Navigation - Hidden in print */}
         {!isPrintMode && (
