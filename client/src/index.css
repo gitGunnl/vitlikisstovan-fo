@@ -459,10 +459,18 @@
 
 /* Global Print Styles for Better PDF Generation */
 @media print {
-  /* Reset page margins and size for PDF */
+  /* Page setup with margins for headers/footers */
   @page {
-    margin: 0.75in;
+    margin: 1.2in 0.75in 1in 0.75in; /* top right bottom left - space for headers/footers */
     size: A4;
+    
+    /* Counter for page numbers */
+    counter-increment: page;
+  }
+  
+  /* First page specific margins (optional - can have different margins) */
+  @page :first {
+    margin-top: 0.75in; /* Less top margin on first page */
   }
 
   /* Hide non-essential elements */
@@ -474,6 +482,52 @@
   .navigation,
   .sidebar {
     display: none !important;
+  }
+  
+  /* Show print-only headers and footers */
+  .print-header {
+    display: block !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0.75in;
+    padding: 0.25in 0.75in;
+    text-align: center;
+    font-size: 10pt;
+    color: #666;
+    border-bottom: 1px solid #ddd;
+    background: white;
+    z-index: 1000;
+  }
+  
+  .print-footer {
+    display: block !important;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 0.5in;
+    padding: 0.15in 0.75in;
+    font-size: 9pt;
+    color: #666;
+    border-top: 1px solid #ddd;
+    background: white;
+    z-index: 1000;
+  }
+  
+  /* Page number styling */
+  .print-page-number {
+    position: fixed;
+    bottom: 0.3in;
+    right: 0.75in;
+    font-size: 9pt;
+    color: #666;
+    z-index: 1001;
+  }
+  
+  .print-page-number::after {
+    content: "Page " counter(page);
   }
 
   /* Reset backgrounds for better printing */
