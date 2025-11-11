@@ -470,7 +470,7 @@
   
   /* Ensure main content has proper spacing for fixed headers/footers */
   main {
-    margin-top: 1.2in !important;
+    margin-top: 1.8in !important;
     margin-bottom: 1in !important;
     padding: 0 !important;
   }
