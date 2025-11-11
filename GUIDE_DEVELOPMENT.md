@@ -91,6 +91,22 @@ export default function YourGuideNameGuide() {
       
       {!isPrintMode && <Header />}
       
+      {/* Print-only header - hidden on screen, shown in print */}
+      <div className="print-header hidden">
+        <div className="flex justify-between items-center">
+          <span>Your Guide Title</span>
+          <span>Your Organization Name</span>
+        </div>
+      </div>
+      
+      {/* Print-only footer - hidden on screen, shown in print */}
+      <div className="print-footer hidden">
+        <div className="flex justify-between items-center text-xs">
+          <span>© 2024 Your Organization</span>
+          <span className="print-page-number"></span>
+        </div>
+      </div>
+      
       <main className={`${!isPrintMode ? 'pt-16' : ''} bg-white`}>
         {/* Navigation - Hidden in print */}
         {!isPrintMode && (
@@ -310,6 +326,65 @@ className="guide-accent"  // uses custom color
 ```
 
 ## Print/PDF Optimization
+
+### Headers and Footers
+
+Print headers and footers are automatically supported in all guides. They appear on every printed page and contain:
+
+#### Header Content (top of each page)
+- Left side: Guide title
+- Right side: Organization name
+
+#### Footer Content (bottom of each page)
+- Left side: Copyright notice
+- Right side: Page number (automatic)
+
+#### How to Customize Headers/Footers
+
+In your guide template, update these elements:
+
+```jsx
+{/* Print-only header */}
+<div className="print-header hidden">
+  <div className="flex justify-between items-center">
+    <span>Your Guide Title Here</span>
+    <span>Your Organization Name</span>
+  </div>
+</div>
+
+{/* Print-only footer */}
+<div className="print-footer hidden">
+  <div className="flex justify-between items-center text-xs">
+    <span>© 2024 Your Organization</span>
+    <span className="print-page-number"></span> {/* Auto page numbers */}
+  </div>
+</div>
+```
+
+**Important Notes:**
+- Headers/footers are hidden on screen (`hidden` class) but visible in print
+- Page numbers are automatically generated using CSS counters
+- The styles are defined in `client/src/index.css` globally
+- Each guide can customize the text content but the layout is consistent
+
+#### Advanced Customization
+
+If you need different header/footer styles for a specific guide, add to your `customStyles`:
+
+```css
+@media print {
+  .print-header {
+    font-size: 11pt !important;
+    color: #333 !important;
+    /* Your custom header styles */
+  }
+  
+  .print-footer {
+    font-size: 8pt !important;
+    /* Your custom footer styles */
+  }
+}
+```
 
 ### Page Breaks
 ```jsx
