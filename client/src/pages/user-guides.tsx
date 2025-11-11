@@ -29,18 +29,12 @@ export default function UserGuides() {
       id: "getting-started",
       title: "Getting Started Guide",
       description: "A comprehensive guide to help you get started with our platform. Learn the basics, set up your environment, and understand core concepts.",
-      topics: ["Initial Setup", "Basic Concepts", "First Steps", "Common Tasks"],
-      readTime: "15 min read",
-      pages: "12 pages",
       href: "/user-guides/getting-started"
     },
     {
       id: "best-practices",
       title: "Best Practices Guide",
       description: "Learn industry best practices and proven strategies for getting the most out of our platform. Includes tips, tricks, and advanced techniques.",
-      topics: ["Optimization Tips", "Security Guidelines", "Performance", "Workflows"],
-      readTime: "20 min read",
-      pages: "18 pages",
       href: "/user-guides/best-practices"
     }
   ];
@@ -94,35 +88,13 @@ export default function UserGuides() {
             <div className="grid gap-6">
               {guides.map((guide) => (
                 <Card key={guide.id} className="overflow-hidden hover:shadow-lg transition-shadow">
-                  <CardHeader className="pb-4">
-                    <div className="flex justify-between items-start">
-                      <div className="flex-1">
-                        <CardTitle className="text-xl mb-2">{guide.title}</CardTitle>
-                        <CardDescription className="text-base">
-                          {guide.description}
-                        </CardDescription>
-                      </div>
-                    </div>
+                  <CardHeader>
+                    <CardTitle className="text-xl mb-2">{guide.title}</CardTitle>
+                    <CardDescription className="text-base">
+                      {guide.description}
+                    </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="mb-4">
-                      <div className="flex flex-wrap gap-2 mb-3">
-                        {guide.topics.map((topic, index) => (
-                          <span
-                            key={index}
-                            className="px-3 py-1 bg-secondary text-secondary-foreground rounded-full text-sm"
-                          >
-                            {topic}
-                          </span>
-                        ))}
-                      </div>
-                      <div className="flex gap-4 text-sm text-muted-foreground">
-                        <span>{guide.readTime}</span>
-                        <span>•</span>
-                        <span>{guide.pages}</span>
-                      </div>
-                    </div>
-                    
                     <div className="flex gap-3">
                       <Link href={guide.href} className="flex-1">
                         <Button className="w-full" variant="default">
