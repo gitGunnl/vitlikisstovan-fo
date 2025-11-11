@@ -5,15 +5,15 @@ import Footer from "@/components/site/Footer";
 import Section from "@/components/site/Section";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { BookOpen, Download, FileText, ArrowRight } from "lucide-react";
+import { BookOpen, Download, FileText, ArrowRight, GraduationCap, Briefcase, Code, Palette } from "lucide-react";
 import { seoConfig } from "@/content/seo";
 
 export default function UserGuides() {
   useEffect(() => {
-    document.title = "User Guides - " + seoConfig.title;
-    
+    document.title = "Brúkaravegleiðingar - " + seoConfig.title;
+
     const metaDescription = document.querySelector('meta[name="description"]');
-    const content = "Access comprehensive user guides and documentation. Download guides as PDFs for offline reference.";
+    const content = "Fá atgongd til umfatandi brúkaravegleiðingar og tilhoyrandi skjøl. Lær meira um okkara skipan.";
     if (metaDescription) {
       metaDescription.setAttribute('content', content);
     } else {
@@ -27,14 +27,14 @@ export default function UserGuides() {
   const guides = [
     {
       id: "getting-started",
-      title: "Getting Started Guide",
-      description: "A comprehensive guide to help you get started with our platform. Learn the basics, set up your environment, and understand core concepts.",
+      title: "Komin í gongd Vegleiðing",
+      description: "Ein umfatandi vegleiðing til at hjálpa tær at koma í gongd við okkara skipan. Lær grundleggandi, set tín arbeiðsbúnað upp og skilja kjarnuspurningar.",
       href: "/user-guides/getting-started"
     },
     {
       id: "best-practices",
-      title: "Best Practices Guide",
-      description: "Learn industry best practices and proven strategies for getting the most out of our platform. Includes tips, tricks, and advanced techniques.",
+      title: "Bestu Practices Vegleiðing",
+      description: "Lær seinastu praksis og prógvaðar strategiir fyri at fáa mest burtur úr okkara skipan. Inkluderar ráð, knøpp og framkomnar teknikkir.",
       href: "/user-guides/best-practices"
     }
   ];
@@ -47,17 +47,17 @@ export default function UserGuides() {
   return (
     <>
       <Header />
-      
+
       <main className="pt-16">
         <Section className="py-16 sm:py-20">
           <div className="mx-auto max-w-5xl">
             {/* Header */}
             <div className="text-center mb-12">
               <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4">
-                User Guides
+                Brúkaravegleiðingar
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Comprehensive guides to help you make the most of our platform.
+                Umfatandi vegleiðingar til at hjálpa tær at fáa mest burtur úr okkara skipan.
               </p>
             </div>
 
@@ -76,14 +76,14 @@ export default function UserGuides() {
                       <Link href={guide.href} className="flex-1">
                         <Button className="w-full" variant="default">
                           <BookOpen className="h-4 w-4 mr-2" />
-                          Read Guide
+                          Les vegleiðing
                           <ArrowRight className="h-4 w-4 ml-2" />
                         </Button>
                       </Link>
                       <Button
                         variant="outline"
                         onClick={() => handlePrintGuide(guide.href)}
-                        title="Download as PDF"
+                        title="Sæk niður sum PDF"
                       >
                         <Download className="h-4 w-4" />
                       </Button>
@@ -99,11 +99,75 @@ export default function UserGuides() {
                 <div className="inline-flex items-center justify-center p-3 bg-muted rounded-full mb-4">
                   <FileText className="h-6 w-6 text-muted-foreground" />
                 </div>
-                <h3 className="text-lg font-semibold mb-2">More Guides Coming Soon</h3>
+                <h3 className="text-lg font-semibold mb-2">Fleiri vegleiðingar koma skjótt</h3>
                 <p className="text-muted-foreground">
-                  We're continuously adding new guides and updating existing ones. 
-                  Check back regularly for new content.
+                  Vit leggja støðugt afturat nýggjum vegleiðingum og dagføra tær, ið eru.
+                  Vitja okkum aftur at síggja nýtt innihald.
                 </p>
+              </CardContent>
+            </Card>
+
+            {/* Teacher Guide Card */}
+            <Card className="mt-8">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <GraduationCap className="h-6 w-6" />
+                  Fyri lærarar
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Lær hvussu tú integrerar vitlíkisamboð í títt klassarúm og undirvísingararbeiði.
+                </p>
+                <Button className="w-full">Sí vegleiðing</Button>
+              </CardContent>
+            </Card>
+
+            {/* Business Professional Guide Card */}
+            <Card className="mt-8">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <Briefcase className="h-6 w-6" />
+                  Fyri handilsfólk
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Uppdag hvussu tú nýtir vitlíki til framleiðni, samskifti og avgerðartakan.
+                </p>
+                <Button className="w-full">Sí vegleiðing</Button>
+              </CardContent>
+            </Card>
+
+            {/* Developer Guide Card */}
+            <Card className="mt-8">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <Code className="h-6 w-6" />
+                  Fyri forritarar
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Kanna vitlíkisstýrd menningaramboð og koduviðgerðarteknikkar.
+                </p>
+                <Button className="w-full">Sí vegleiðing</Button>
+              </CardContent>
+            </Card>
+
+            {/* Creative Professional Guide Card */}
+            <Card className="mt-8">
+              <CardHeader>
+                <CardTitle className="flex items-center gap-3">
+                  <Palette className="h-6 w-6" />
+                  Fyri skapandi yrkisfólk
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-muted-foreground mb-4">
+                  Lær um vitlíkisamboð til design, innihaldsskaping og listaligar arbeiðsgongdir.
+                </p>
+                <Button className="w-full">Sí vegleiðing</Button>
               </CardContent>
             </Card>
           </div>

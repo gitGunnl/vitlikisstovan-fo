@@ -13,7 +13,7 @@ export default function BestPracticesGuide() {
 
   useEffect(() => {
     document.title = "Best Practices Guide - " + seoConfig.title;
-    
+
     const metaDescription = document.querySelector('meta[name="description"]');
     const content = "Learn industry best practices, optimization strategies, and proven techniques for success.";
     if (metaDescription) {
@@ -65,7 +65,7 @@ export default function BestPracticesGuide() {
         page-break-inside: avoid;
       }
     }
-    
+
     /* Custom theme for this guide - green/nature theme */
     .guide-accent { color: #059669; }
     .guide-bg-accent { background-color: #f0fdf4; }
@@ -74,7 +74,7 @@ export default function BestPracticesGuide() {
       background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
       border-bottom: 3px solid #059669;
     }
-    
+
     /* Practice boxes styling */
     .practice-box {
       border-radius: 8px;
@@ -83,7 +83,7 @@ export default function BestPracticesGuide() {
       margin: 1.5rem 0;
       background: linear-gradient(135deg, #f0fdf4 0%, #ffffff 100%);
     }
-    
+
     .warning-box {
       border-radius: 8px;
       border: 2px solid #f59e0b;
@@ -96,9 +96,9 @@ export default function BestPracticesGuide() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: customStyles }} />
-      
+
       {!isPrintMode && <Header />}
-      
+
       {/* Print-only header - hidden on screen, shown in print */}
       <div className="print-header hidden">
         <div className="flex justify-between items-center">
@@ -106,7 +106,7 @@ export default function BestPracticesGuide() {
           <span>Vitlíkisstovan</span>
         </div>
       </div>
-      
+
       {/* Print-only footer - hidden on screen, shown in print */}
       <div className="print-footer hidden">
         <div className="flex justify-between items-center text-xs">
@@ -114,7 +114,7 @@ export default function BestPracticesGuide() {
           <span className="print-page-number"></span>
         </div>
       </div>
-      
+
       <main className={`${!isPrintMode ? 'pt-16' : ''} bg-white`}>
         {/* Navigation - Hidden in print */}
         {!isPrintMode && (
@@ -195,7 +195,7 @@ export default function BestPracticesGuide() {
                   <li><strong>Role-Based Access Control:</strong> Implement granular permissions based on user roles</li>
                   <li><strong>Session Management:</strong> Implement secure session handling with proper timeout</li>
                 </ul>
-                
+
                 <div className="bg-green-50 p-3 mt-4 rounded border-l-4 guide-border-accent">
                   <p className="text-sm">
                     <strong>Pro Tip:</strong> Never store sensitive data in JWT tokens. They are encoded, not encrypted.
@@ -211,7 +211,7 @@ export default function BestPracticesGuide() {
                   <li><strong>Input Validation:</strong> Validate and sanitize all user inputs</li>
                   <li><strong>SQL Injection Prevention:</strong> Use parameterized queries exclusively</li>
                 </ul>
-                
+
                 <h4 className="font-semibold mt-4 mb-2">Example: Input Validation</h4>
                 <pre className="bg-gray-50 p-4 rounded-lg overflow-x-auto">
                   <code>{`// Good Practice
@@ -252,7 +252,7 @@ const processEmail = (email) => {
 
               <div className="practice-box">
                 <h3 className="text-xl font-semibold mb-3">⚡ Frontend Performance</h3>
-                
+
                 <h4 className="font-semibold mt-3 mb-2">Bundle Optimization</h4>
                 <ul className="space-y-2">
                   <li><strong>Code Splitting:</strong> Split code by routes and lazy load components</li>
@@ -272,7 +272,7 @@ const processEmail = (email) => {
 
               <div className="practice-box">
                 <h3 className="text-xl font-semibold mb-3">🚀 Backend Performance</h3>
-                
+
                 <h4 className="font-semibold mt-3 mb-2">Database Optimization</h4>
                 <ul className="space-y-2">
                   <li><strong>Indexing Strategy:</strong> Create appropriate indexes for frequent queries</li>
@@ -306,7 +306,7 @@ const processEmail = (email) => {
 
               <div className="practice-box">
                 <h3 className="text-xl font-semibold mb-3">📝 Coding Standards</h3>
-                
+
                 <h4 className="font-semibold mt-3 mb-2">Naming Conventions</h4>
                 <ul className="space-y-2">
                   <li><strong>Variables:</strong> Use camelCase for variables and functions</li>
@@ -361,7 +361,7 @@ const calc = (p, d, t) => {
 
               <div className="practice-box">
                 <h3 className="text-xl font-semibold mb-3">🏗️ Application Architecture</h3>
-                
+
                 <h4 className="font-semibold mt-3 mb-2">Microservices vs Monolith</h4>
                 <table className="w-full mt-3">
                   <thead>
@@ -429,7 +429,7 @@ const calc = (p, d, t) => {
                     <div className="bg-green-100 p-5 rounded-b text-center">Unit Tests (60%)</div>
                   </div>
                 </div>
-                
+
                 <ul className="space-y-2 mt-4">
                   <li><strong>Unit Tests:</strong> Test individual functions and components</li>
                   <li><strong>Integration Tests:</strong> Test component interactions</li>
@@ -457,10 +457,10 @@ describe('UserService', () => {
         email: 'test@example.com',
         name: 'Test User'
       };
-      
+
       // Act
       const user = await userService.createUser(userData);
-      
+
       // Assert
       expect(user).toHaveProperty('id');
       expect(user.email).toBe(userData.email);
@@ -481,7 +481,7 @@ describe('UserService', () => {
 
               <div className="practice-box">
                 <h3 className="text-xl font-semibold mb-3">🔄 CI/CD Pipeline</h3>
-                
+
                 <h4 className="font-semibold mt-3 mb-2">Pipeline Stages</h4>
                 <ol className="space-y-2">
                   <li><strong>1. Source Control:</strong> Git commit triggers pipeline</li>
@@ -533,7 +533,7 @@ CMD ["node", "server.js"]`}</code>
 
               <div className="practice-box">
                 <h3 className="text-xl font-semibold mb-3">📈 Key Metrics</h3>
-                
+
                 <h4 className="font-semibold mt-3 mb-2">The Four Golden Signals</h4>
                 <ul className="space-y-2">
                   <li><strong>Latency:</strong> Time to service a request</li>
@@ -577,7 +577,7 @@ CMD ["node", "server.js"]`}</code>
 
               <div className="practice-box">
                 <h3 className="text-xl font-semibold mb-3">👥 Development Workflow</h3>
-                
+
                 <h4 className="font-semibold mt-3 mb-2">Git Workflow</h4>
                 <ul className="space-y-2">
                   <li><strong>Branch Strategy:</strong> Use Git Flow or GitHub Flow</li>

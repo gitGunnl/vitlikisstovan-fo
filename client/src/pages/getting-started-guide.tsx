@@ -13,7 +13,7 @@ export default function GettingStartedGuide() {
 
   useEffect(() => {
     document.title = "Getting Started Guide - " + seoConfig.title;
-    
+
     const metaDescription = document.querySelector('meta[name="description"]');
     const content = "Complete guide to getting started with our platform. Learn setup, basic concepts, and essential features.";
     if (metaDescription) {
@@ -61,7 +61,7 @@ export default function GettingStartedGuide() {
         page-break-inside: avoid;
       }
     }
-    
+
     /* Custom theme for this guide - blue accent */
     .guide-accent { color: #2563eb; }
     .guide-bg-accent { background-color: #eff6ff; }
@@ -71,9 +71,9 @@ export default function GettingStartedGuide() {
   return (
     <>
       <style dangerouslySetInnerHTML={{ __html: customStyles }} />
-      
+
       {!isPrintMode && <Header />}
-      
+
       {/* Print-only header - hidden on screen, shown in print */}
       <div className="print-header hidden">
         <div className="flex justify-between items-center">
@@ -81,7 +81,7 @@ export default function GettingStartedGuide() {
           <span>Vitlíkisstovan</span>
         </div>
       </div>
-      
+
       {/* Print-only footer - hidden on screen, shown in print */}
       <div className="print-footer hidden">
         <div className="flex justify-between items-center text-xs">
@@ -89,7 +89,7 @@ export default function GettingStartedGuide() {
           <span className="print-page-number"></span>
         </div>
       </div>
-      
+
       <main className={`${!isPrintMode ? 'pt-16' : ''} bg-white`}>
         {/* Navigation - Hidden in print */}
         {!isPrintMode && (
@@ -153,7 +153,7 @@ export default function GettingStartedGuide() {
                 By the end of this guide, you'll have a solid understanding of how to use the platform effectively, 
                 including setting up your environment, understanding core concepts, and performing common tasks.
               </p>
-              
+
               <div className="bg-blue-50 border-l-4 guide-border-accent p-4 my-6">
                 <h3 className="font-semibold guide-accent">What You'll Learn</h3>
                 <ul className="mt-2 space-y-1">
@@ -171,7 +171,7 @@ export default function GettingStartedGuide() {
               <p>
                 Before you begin, ensure you have the following prerequisites in place:
               </p>
-              
+
               <h3 className="text-xl font-semibold mt-6 mb-3">System Requirements</h3>
               <ul className="space-y-2">
                 <li><strong>Operating System:</strong> Windows 10+, macOS 10.14+, or Ubuntu 18.04+</li>
@@ -213,7 +213,7 @@ export default function GettingStartedGuide() {
 
               <h3 className="text-xl font-semibold mt-6 mb-3">Step 2: Install Development Tools</h3>
               <p>Open your terminal and run the following commands:</p>
-              
+
               <pre className="bg-gray-50 p-4 rounded-lg overflow-x-auto">
                 <code>{`# Install the CLI tool
 npm install -g @platform/cli
@@ -320,7 +320,7 @@ npm run dev`}</code>
             {/* Common Tasks */}
             <section id="common-tasks" className="mb-12">
               <h2 className="text-3xl font-semibold mb-4 guide-accent">6. Common Tasks</h2>
-              
+
               <h3 className="text-xl font-semibold mt-6 mb-3">Updating Your Application</h3>
               <ol className="space-y-2">
                 <li>Make changes to your code locally</li>
