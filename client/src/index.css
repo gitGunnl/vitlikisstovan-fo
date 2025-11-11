@@ -456,3 +456,140 @@
     opacity: 1;
   }
 }
+
+/* Global Print Styles for Better PDF Generation */
+@media print {
+  /* Reset page margins and size for PDF */
+  @page {
+    margin: 0.75in;
+    size: A4;
+  }
+
+  /* Hide non-essential elements */
+  header,
+  footer,
+  nav,
+  .no-print,
+  button:not(.print-button),
+  .navigation,
+  .sidebar {
+    display: none !important;
+  }
+
+  /* Reset backgrounds for better printing */
+  body {
+    background: white !important;
+    color: black !important;
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Ensure content uses full width */
+  main,
+  article,
+  section {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  /* Typography adjustments */
+  h1 {
+    font-size: 24pt !important;
+    margin-top: 0 !important;
+    page-break-after: avoid;
+  }
+
+  h2 {
+    font-size: 18pt !important;
+    margin-top: 18pt !important;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    font-size: 14pt !important;
+    margin-top: 14pt !important;
+    page-break-after: avoid;
+  }
+
+  p {
+    font-size: 11pt !important;
+    margin-bottom: 10pt !important;
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Prevent elements from breaking across pages */
+  ul,
+  ol,
+  blockquote,
+  pre,
+  table {
+    page-break-inside: avoid;
+  }
+
+  /* Links should be black and show URL */
+  a {
+    color: black !important;
+    text-decoration: none !important;
+  }
+
+  /* Show link URLs for external links in print */
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 9pt;
+    color: #666;
+  }
+
+  /* Don't show URLs for internal links */
+  a[href^="#"]:after,
+  a[href^="/"]:after {
+    content: "";
+  }
+
+  /* Code blocks */
+  code,
+  pre {
+    background-color: #f5f5f5 !important;
+    border: 1px solid #ddd !important;
+    page-break-inside: avoid;
+  }
+
+  /* Tables */
+  table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+  }
+
+  th,
+  td {
+    border: 1px solid #ddd !important;
+    padding: 8pt !important;
+  }
+
+  /* Images */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid;
+  }
+
+  /* Ensure content is visible */
+  * {
+    color-adjust: exact !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* Page breaks */
+  .page-break-before {
+    page-break-before: always;
+  }
+
+  .page-break-after {
+    page-break-after: always;
+  }
+
+  .avoid-break {
+    page-break-inside: avoid;
+  }
+}
