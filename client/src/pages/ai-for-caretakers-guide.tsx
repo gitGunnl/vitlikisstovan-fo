@@ -40,10 +40,15 @@ export default function SampleGuide() {
   const customStyles = `
     @media print {
       .no-print { display: none !important; }
-      .guide-content { 
+      
+      /* Override article prose max-width in print */
+      article.guide-content.prose {
         max-width: 100% !important;
+      }
+      
+      /* Add data attribute for header */
+      .guide-content {
         padding: 0 !important;
-        font-size: 12pt !important;
       }
     }
 
@@ -98,7 +103,7 @@ export default function SampleGuide() {
 
         {/* Guide Content */}
         <Section className="py-8 sm:py-12">
-          <article className="guide-content mx-auto max-w-3xl prose prose-gray prose-lg">
+          <article className="guide-content mx-auto max-w-3xl prose prose-gray prose-lg" data-header="AI for Caretakers Guide - Vitlíkisstovan">
             <h1><strong>AI for caretakers: Less Paperwork, Safer Days, More Human Time</strong></h1>
             <p><strong>Copy‑paste AI prompts for caretakers — day‑books, handover, family messages, and activities (no personal data).</strong></p>
             <hr />

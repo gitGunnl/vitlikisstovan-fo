@@ -40,10 +40,15 @@ export default function StrongAIForCaretakersLessPaperworkSaferDaysMoreHumanTime
   const customStyles = `
     @media print {
       .no-print { display: none !important; }
-      .guide-content { 
+      
+      /* Override article prose max-width in print */
+      article.guide-content.prose {
         max-width: 100% !important;
+      }
+      
+      /* Add data attribute for header */
+      .guide-content {
         padding: 0 !important;
-        font-size: 12pt !important;
       }
     }
 

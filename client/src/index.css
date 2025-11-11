@@ -459,25 +459,25 @@
 
 /* Global Print Styles for Better PDF Generation */
 @media print {
-  /* Page setup with margins for headers/footers */
+  /* Page setup with properly balanced margins */
   @page {
-    margin: 1.2in 0.75in 1in 0.75in; /* top right bottom left - space for headers/footers */
+    margin: 1in 0.75in 1in 0.75in; /* top right bottom left - balanced margins for clean layout */
     size: A4;
     
     /* Counter for page numbers */
     counter-increment: page;
   }
   
-  /* Ensure main content has proper spacing for fixed headers/footers */
-  main {
-    margin-top: 1.8in !important;
-    margin-bottom: 1in !important;
-    padding: 0 !important;
+  /* First page specific margins - same as other pages for consistency */
+  @page :first {
+    margin: 1in 0.75in 1in 0.75in; /* Consistent margins throughout */
   }
   
-  /* First page specific margins (optional - can have different margins) */
-  @page :first {
-    margin-top: 0.75in; /* Less top margin on first page */
+  /* Ensure main content has proper spacing without overlapping headers/footers */
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+    /* Content will flow naturally within page margins */
   }
 
   /* Hide non-essential elements */
@@ -491,50 +491,75 @@
     display: none !important;
   }
   
-  /* Show print-only headers and footers */
+  /* Print headers and footers using running headers/footers for proper positioning */
   .print-header {
     display: block !important;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 0.75in;
-    padding: 0.25in 0.75in;
-    text-align: center;
+    position: running(header);
     font-size: 10pt;
     color: #666;
+    text-align: center;
     border-bottom: 1px solid #ddd;
-    background: white;
-    z-index: 1000;
+    padding-bottom: 0.25in;
+    margin-bottom: 0.25in;
   }
   
   .print-footer {
     display: block !important;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 0.5in;
-    padding: 0.15in 0.75in;
+    position: running(footer);
     font-size: 9pt;
     color: #666;
+    text-align: center;
     border-top: 1px solid #ddd;
-    background: white;
-    z-index: 1000;
+    padding-top: 0.15in;
+    margin-top: 0.25in;
   }
   
-  /* Page number styling */
-  .print-page-number {
-    position: fixed;
-    bottom: 0.3in;
-    right: 0.75in;
+  /* Page margins with header/footer areas */
+  @page {
+    @top-center {
+      content: element(header);
+      width: 100%;
+    }
+    
+    @bottom-center {
+      content: element(footer);
+      width: 100%;
+    }
+    
+    @bottom-right {
+      content: "Page " counter(page);
+      font-size: 9pt;
+      color: #666;
+    }
+  }
+  
+  /* Fallback for browsers that don't support running headers */
+  .print-header,
+  .print-footer {
+    display: none !important;
+  }
+  
+  /* Simple header/footer for better compatibility */
+  .guide-content::before {
+    content: attr(data-header);
+    display: block;
+    font-size: 10pt;
+    color: #666;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+  }
+  
+  .guide-content::after {
+    content: "© 2024 Vitlíkisstovan";
+    display: block;
     font-size: 9pt;
     color: #666;
-    z-index: 1001;
-  }
-  
-  .print-page-number::after {
-    content: "Page " counter(page);
+    text-align: center;
+    border-top: 1px solid #ddd;
+    padding-top: 0.5em;
+    margin-top: 2em;
   }
 
   /* Reset backgrounds for better printing */
@@ -545,13 +570,24 @@
     line-height: 1.5 !important;
   }
 
-  /* Ensure content uses full width */
+  /* Ensure content uses full width with proper padding */
   main,
-  article,
+  article {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0.5in 0 !important; /* Add vertical padding for better readability */
+  }
+  
   section {
     max-width: 100% !important;
     margin: 0 !important;
     padding: 0 !important;
+  }
+  
+  /* Guide content specific padding */
+  .guide-content {
+    padding: 0 0.25in !important; /* Small horizontal padding for content */
+    margin: 0 !important;
   }
 
   /* Typography adjustments */
