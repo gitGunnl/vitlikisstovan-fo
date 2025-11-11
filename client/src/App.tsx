@@ -15,6 +15,9 @@ import Tilarbeidis from "@/pages/tilarbeidis";
 import Verkstova from "@/pages/verkstova";
 import Podcast from "@/pages/Podcast";
 import AIGuide from "@/pages/ai-guide";
+import UserGuides from "@/pages/user-guides";
+import GettingStartedGuide from "@/pages/getting-started-guide";
+import BestPracticesGuide from "@/pages/best-practices-guide";
 
 function Router() {
   return (
@@ -30,6 +33,9 @@ function Router() {
       <Route path="/verkstova" component={Verkstova} />
       <Route path="/podcast" component={Podcast} />
       <Route path="/ai-guide" component={AIGuide} />
+      <Route path="/user-guides" component={UserGuides} />
+      <Route path="/user-guides/getting-started" component={GettingStartedGuide} />
+      <Route path="/user-guides/best-practices" component={BestPracticesGuide} />
       <Route component={NotFound} />
     </Switch>
   );
