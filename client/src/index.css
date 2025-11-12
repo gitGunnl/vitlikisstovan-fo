@@ -555,8 +555,20 @@
   .py-12,
   .sm\\:py-12,
   [class*="py-"] {
-    padding-top: 0.2in !important;
+    padding-top: 0.15in !important;
     padding-bottom: 0.1in !important;
+  }
+  
+  /* Target specific section elements that use py-* classes */
+  section[class*="py-"],
+  div[class*="py-"] {
+    padding-top: 0.15in !important;
+    padding-bottom: 0.1in !important;
+  }
+  
+  /* Ensure main content has proper top spacing */
+  main section:first-child {
+    padding-top: 0.3in !important;
   }
 
   /* Reset backgrounds for better printing */
