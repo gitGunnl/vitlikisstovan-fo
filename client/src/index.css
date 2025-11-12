@@ -486,7 +486,7 @@
   .print-header {
     display: block !important;
     position: fixed;
-    top: 0.5in; /* Respect page margin */
+    top: 0.3in; /* Reduced top margin for tighter spacing */
     left: 0.5in;
     right: 0.5in;
     height: 0.3in;
