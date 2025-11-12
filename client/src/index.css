@@ -457,21 +457,60 @@
   }
 }
 
-/* Global Print Styles for Better PDF Generation */
+/* ========================================
+   PRINT PAGE SETUP - Centralized Configuration
+   ========================================
+   All print-related measurements are defined here as CSS variables.
+   Adjust these values to change spacing throughout the print layout.
+   ======================================== */
+
 @media print {
-  /* Page setup */
-  @page {
-    size: letter;
-    margin: 0.5in; /* Smaller margins for more content space */
+  /* === Print Page Configuration Variables === */
+  :root {
+    /* Page margins - space from paper edge to content */
+    --print-page-margin: 0.5in;
+    
+    /* Header configuration */
+    --print-header-height: 0.25in;     /* Height of header box */
+    --print-header-padding: 0.05in;    /* Internal header padding */
+    --print-header-offset: 0.25in;     /* Distance from page top */
+    
+    /* Footer configuration */
+    --print-footer-height: 0.2in;      /* Height of footer box */
+    --print-footer-padding: 0.05in;    /* Internal footer padding */
+    --print-footer-offset: 0.25in;     /* Distance from page bottom */
+    
+    /* Content spacing */
+    --print-content-spacing: 0.15in;   /* Extra spacing between content and headers/footers */
+    
+    /* Calculated values - DO NOT MODIFY DIRECTLY */
+    --print-content-top: calc(
+      var(--print-header-offset) + 
+      var(--print-header-height) + 
+      var(--print-header-padding) + 
+      var(--print-content-spacing)
+    );
+    --print-content-bottom: calc(
+      var(--print-footer-offset) + 
+      var(--print-footer-height) + 
+      var(--print-footer-padding) + 
+      var(--print-content-spacing)
+    );
   }
   
-  /* Reset body for print */
+  /* === Page Setup === */
+  @page {
+    size: letter;
+    margin: var(--print-page-margin);
+  }
+  
+  /* === Document Reset === */
   body {
     margin: 0 !important;
     padding: 0 !important;
   }
 
-  /* Hide non-essential elements */
+  /* === Hide Non-Printable Elements === */
   header,
   footer,
   nav,
@@ -482,17 +521,17 @@
     display: none !important;
   }
   
-  /* Fixed position header - repeats on every page */
+  /* === Print Header Configuration === */
   .print-header {
     display: block !important;
     position: fixed;
-    top: 0.3in; /* Reduced top margin for tighter spacing */
-    left: 0.5in;
-    right: 0.5in;
-    height: 0.3in;
+    top: var(--print-header-offset);
+    left: var(--print-page-margin);
+    right: var(--print-page-margin);
+    height: var(--print-header-height);
+    padding: var(--print-header-padding) 0;
     background: white;
     z-index: 1000;
-    padding: 0.05in 0;
     border-bottom: 1px solid #ddd;
   }
   
@@ -515,17 +554,17 @@
     font-size: 9pt;
   }
   
-  /* Fixed position footer - repeats on every page */
+  /* === Print Footer Configuration === */
   .print-footer {
     display: block !important;
     position: fixed;
-    bottom: 0.5in; /* Respect page margin */
-    left: 0.5in;
-    right: 0.5in;
-    height: 0.25in;
+    bottom: var(--print-footer-offset);
+    left: var(--print-page-margin);
+    right: var(--print-page-margin);
+    height: var(--print-footer-height);
+    padding: var(--print-footer-padding) 0;
     background: white;
     z-index: 1000;
-    padding: 0.05in 0;
     border-top: 1px solid #ddd;
   }
   
@@ -543,35 +582,29 @@
     content: counter(page);
   }
   
-  /* Add padding to main content to avoid overlap with fixed header/footer */
-  main {
-    padding-top: 1.0in !important; /* Reduced top padding for tighter print spacing */
-    padding-bottom: 0.85in !important; /* 0.5in margin + 0.25in footer + 0.1in spacing */
+  /* === Content Area Configuration === */
+  /* Main content wrapper - ensures proper spacing from headers/footers */
+  .print-document {
+    padding-top: var(--print-content-top) !important;
+    padding-bottom: var(--print-content-bottom) !important;
     margin: 0 !important;
   }
   
-  /* Override Tailwind padding classes specifically in print */
-  .py-8,
-  .py-12,
-  .sm\\:py-12,
-  [class*="py-"] {
-    padding-top: 0.15in !important;
-    padding-bottom: 0.1in !important;
+  /* Legacy support for pages not yet using .print-document */
+  main {
+    padding-top: var(--print-content-top) !important;
+    padding-bottom: var(--print-content-bottom) !important;
+    margin: 0 !important;
   }
   
-  /* Target specific section elements that use py-* classes */
-  section[class*="py-"],
-  div[class*="py-"] {
-    padding-top: 0.15in !important;
-    padding-bottom: 0.1in !important;
-  }
-  
-  /* Ensure main content has proper top spacing */
-  main section:first-child {
-    padding-top: 0.3in !important;
+  /* Override Tailwind padding classes in print mode */
+  .print-document section,
+  .print-document div[class*="py-"] {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
   }
 
-  /* Reset backgrounds for better printing */
+  /* === Typography & Content Styles === */
   body {
     background: white !important;
     color: black !important;
@@ -579,24 +612,18 @@
     line-height: 1.5 !important;
   }
 
-  /* Ensure content uses full width with proper padding */
-  main,
-  article {
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0.5in 0 !important; /* Add vertical padding for better readability */
-  }
-  
+  /* Content width and spacing */
+  article,
   section {
     max-width: 100% !important;
     margin: 0 !important;
-    padding: 0 !important;
   }
   
-  /* Guide content specific padding */
+  /* Guide content - the actual article text */
   .guide-content {
-    padding: 0 0.25in !important; /* Small horizontal padding for content */
+    padding: 0 !important;
     margin: 0 !important;
+    max-width: 100% !important;
   }
 
   /* Typography adjustments */

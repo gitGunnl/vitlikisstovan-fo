@@ -37,22 +37,8 @@ export default function SampleGuide() {
     window.print();
   };
 
-  // Custom styles for this specific guide
+  // Custom styles for this specific guide (theme colors only)
   const customStyles = `
-    @media print {
-      .no-print { display: none !important; }
-      
-      /* Override article prose max-width in print */
-      article.guide-content.prose {
-        max-width: 100% !important;
-      }
-      
-      /* Add data attribute for header */
-      .guide-content {
-        padding: 0 !important;
-      }
-    }
-
     /* Custom theme colors for this guide */
     .guide-accent { color: #2563eb; }
     .guide-bg-accent { background-color: #eff6ff; }
@@ -71,7 +57,7 @@ export default function SampleGuide() {
         subtitle="Vitlíkisstovan"
       />
 
-      <main className={`${!isPrintMode ? 'pt-16' : ''} bg-white`}>
+      <main className={`${!isPrintMode ? 'pt-16' : ''} bg-white print-document`}>
         {/* Navigation - Hidden in print */}
         {!isPrintMode && (
           <div className="no-print border-b">
