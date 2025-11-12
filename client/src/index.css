@@ -545,7 +545,7 @@
   
   /* Add padding to main content to avoid overlap with fixed header/footer */
   main {
-    padding-top: 0.9in !important; /* 0.5in margin + 0.3in header + 0.1in spacing */
+    padding-top: 1.2in !important; /* Increased top padding for better print spacing */
     padding-bottom: 0.85in !important; /* 0.5in margin + 0.25in footer + 0.1in spacing */
     margin: 0 !important;
   }
