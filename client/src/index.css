@@ -469,7 +469,6 @@
   body {
     margin: 0 !important;
     padding: 0 !important;
-    padding-top: 1.2in !important; /* Force body-level top spacing */
   }
 
   /* Hide non-essential elements */
@@ -556,22 +555,8 @@
   .py-12,
   .sm\\:py-12,
   [class*="py-"] {
-    padding-top: 0.5in !important;
-    padding-bottom: 0.1in !important;
-  }
-  
-  /* Target container classes */
-  .container {
-    padding-top: 0.3in !important;
-    padding-bottom: 0.1in !important;
-  }
-  
-  /* Force top spacing on the first major content element */
-  main > *:first-child,
-  main article:first-child,
-  main section:first-child {
-    margin-top: 0.4in !important;
     padding-top: 0.2in !important;
+    padding-bottom: 0.1in !important;
   }
 
   /* Reset backgrounds for better printing */
