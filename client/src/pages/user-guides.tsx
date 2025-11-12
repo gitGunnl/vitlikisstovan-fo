@@ -29,19 +29,28 @@ export default function UserGuides() {
       id: "ai-for-caretakers",
       title: "AI fyri Umsorgarfólk",
       description: "Ein praktisk vegleiðing um hvussu vitlíki kann hjálpa við dagligu umsorgararbeiði, dokumentering og samskifti við familju.",
-      href: "/user-guides/ai-for-caretakers"
+      href: "/user-guides/ai-for-caretakers",
+      pdfPath: "/attached_assets/guides/ai-for-caretakers-guide.pdf",
+      pdfFilename: "AI_for_Caretakers_Guide.pdf"
     },
     {
       id: "ai-for-kindergarten",
       title: "AI til barnagarð",
       description: "Hvussu vitlíki kann hjálpa barnagarðslærarum við dagligu arbeiði, leskanarplaner og samskifti við foreldur.",
-      href: "/user-guides/ai-for-kindergarten"
+      href: "/user-guides/ai-for-kindergarten",
+      pdfPath: "/attached_assets/guides/ai-for-kindergarten-guide.pdf",
+      pdfFilename: "AI_for_Kindergarten_Guide.pdf"
     }
   ];
 
-  const handlePrintGuide = (guideHref: string) => {
-    // Open guide in new window for printing
-    window.open(guideHref + "?print=true", '_blank');
+  const handleDownloadPDF = (pdfPath: string, filename: string) => {
+    // Download the PDF file
+    const link = document.createElement('a');
+    link.href = pdfPath;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -82,7 +91,7 @@ export default function UserGuides() {
                       </Link>
                       <Button
                         variant="outline"
-                        onClick={() => handlePrintGuide(guide.href)}
+                        onClick={() => handleDownloadPDF(guide.pdfPath, guide.pdfFilename)}
                         title="Sæk niður sum PDF"
                       >
                         <Download className="h-4 w-4" />
