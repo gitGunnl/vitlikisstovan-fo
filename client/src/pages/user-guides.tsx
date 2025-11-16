@@ -27,7 +27,7 @@ export default function UserGuides() {
   const guides = [
     {
       id: "ai-for-caretakers",
-      title: "AI fyri Umsorgarfólk",
+      title: "Vitlíki til umsorganar fólk",
       description: "Ein praktisk vegleiðing um hvussu vitlíki kann hjálpa við dagligu umsorgararbeiði, dokumentering og samskifti við familju.",
       href: "/user-guides/ai-for-caretakers",
       pdfPath: "/attached_assets/guides/ai-for-caretakers-guide.pdf",
@@ -35,11 +35,27 @@ export default function UserGuides() {
     },
     {
       id: "ai-for-kindergarten",
-      title: "AI til barnagarð",
+      title: "Vitlíki í barnagarðinum",
       description: "Hvussu vitlíki kann hjálpa barnagarðslærarum við dagligu arbeiði, leskanarplaner og samskifti við foreldur.",
       href: "/user-guides/ai-for-kindergarten",
       pdfPath: "/attached_assets/guides/ai-for-kindergarten-guide.pdf",
       pdfFilename: "AI_for_Kindergarten_Guide.pdf"
+    },
+    {
+      id: "ai-for-politicians",
+      title: "Vitlíki til politikarir",
+      description: "Ein handalig vegleiðing fyri politikarar um hvussu vitlíki kann stuðla við politiskari virksemi og átaksgerð.",
+      pdfPath: "/Ein_handalig_vegleiding_til_politikarir.pdf",
+      pdfFilename: "Ein_handalig_vegleiding_til_politikarir.pdf",
+      pdfOnly: true
+    },
+    {
+      id: "ai-for-teachers",
+      title: "Vitlíki til lærarir",
+      description: "Vegleiðing fyri undirvísarar um hvussu vitlíki kann nýtast í skúlanum og í undirvísingararbeiðinum.",
+      pdfPath: "/vegleiding_undirvisarir.pdf",
+      pdfFilename: "vegleiding_undirvisarir.pdf",
+      pdfOnly: true
     }
   ];
 
@@ -82,20 +98,34 @@ export default function UserGuides() {
                   </CardHeader>
                   <CardContent>
                     <div className="flex gap-3">
-                      <Link href={guide.href} className="flex-1">
-                        <Button className="w-full" variant="default">
-                          <BookOpen className="h-4 w-4 mr-2" />
-                          Les vegleiðing
+                      {guide.pdfOnly ? (
+                        <Button
+                          className="w-full"
+                          variant="default"
+                          onClick={() => handleDownloadPDF(guide.pdfPath, guide.pdfFilename)}
+                        >
+                          <Download className="h-4 w-4 mr-2" />
+                          Sæk niður PDF
                           <ArrowRight className="h-4 w-4 ml-2" />
                         </Button>
-                      </Link>
-                      <Button
-                        variant="outline"
-                        onClick={() => handleDownloadPDF(guide.pdfPath, guide.pdfFilename)}
-                        title="Sæk niður sum PDF"
-                      >
-                        <Download className="h-4 w-4" />
-                      </Button>
+                      ) : (
+                        <>
+                          <Link href={guide.href} className="flex-1">
+                            <Button className="w-full" variant="default">
+                              <BookOpen className="h-4 w-4 mr-2" />
+                              Les vegleiðing
+                              <ArrowRight className="h-4 w-4 ml-2" />
+                            </Button>
+                          </Link>
+                          <Button
+                            variant="outline"
+                            onClick={() => handleDownloadPDF(guide.pdfPath, guide.pdfFilename)}
+                            title="Sæk niður sum PDF"
+                          >
+                            <Download className="h-4 w-4" />
+                          </Button>
+                        </>
+                      )}
                     </div>
                   </CardContent>
                 </Card>
