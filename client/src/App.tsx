@@ -20,6 +20,7 @@ import GettingStartedGuide from "@/pages/getting-started-guide";
 import BestPracticesGuide from "@/pages/best-practices-guide";
 import AIForCaretakersGuide from "@/pages/ai-for-caretakers-guide";
 import AIForKindergartenGuide from "@/pages/ai-for-kindergarten-guide";
+import AnnadFraVitlikisstovuni from "@/pages/annad-fra-vitlikisstovuni";
 
 function Router() {
   return (
@@ -40,6 +41,7 @@ function Router() {
       <Route path="/user-guides/best-practices" component={BestPracticesGuide} />
       <Route path="/user-guides/ai-for-caretakers" component={AIForCaretakersGuide} />
       <Route path="/user-guides/ai-for-kindergarten" component={AIForKindergartenGuide} />
+      <Route path="/annad-fra-vitlikisstovuni" component={AnnadFraVitlikisstovuni} />
       <Route component={NotFound} />
     </Switch>
   );
