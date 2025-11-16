@@ -26,22 +26,6 @@ export default function UserGuides() {
 
   const guides = [
     {
-      id: "ai-for-caretakers",
-      title: "Vitlíki til umsorganar fólk",
-      description: "Ein praktisk vegleiðing um hvussu vitlíki kann hjálpa við dagligu umsorgararbeiði, dokumentering og samskifti við familju.",
-      href: "/user-guides/ai-for-caretakers",
-      pdfPath: "/attached_assets/guides/ai-for-caretakers-guide.pdf",
-      pdfFilename: "AI_for_Caretakers_Guide.pdf"
-    },
-    {
-      id: "ai-for-kindergarten",
-      title: "Vitlíki í barnagarðinum",
-      description: "Hvussu vitlíki kann hjálpa barnagarðslærarum við dagligu arbeiði, leskanarplaner og samskifti við foreldur.",
-      href: "/user-guides/ai-for-kindergarten",
-      pdfPath: "/attached_assets/guides/ai-for-kindergarten-guide.pdf",
-      pdfFilename: "AI_for_Kindergarten_Guide.pdf"
-    },
-    {
       id: "ai-for-politicians",
       title: "Vitlíki til politikarir",
       description: "Ein handalig vegleiðing fyri politikarar um hvussu vitlíki kann stuðla við politiskari virksemi og átaksgerð.",
@@ -137,83 +121,7 @@ export default function UserGuides() {
               ))}
             </div>
 
-            {/* More Guides Coming Soon */}
-            <Card className="mt-8 border-dashed">
-              <CardContent className="py-12 text-center">
-                <div className="inline-flex items-center justify-center p-3 bg-muted rounded-full mb-4">
-                  <FileText className="h-6 w-6 text-muted-foreground" />
-                </div>
-                <h3 className="text-lg font-semibold mb-2">Fleiri vegleiðingar koma skjótt</h3>
-                <p className="text-muted-foreground">
-                  Vit leggja støðugt afturat nýggjum vegleiðingum og dagføra tær, ið eru.
-                  Vitja okkum aftur at síggja nýtt innihald.
-                </p>
-              </CardContent>
-            </Card>
-
-            {/* Teacher Guide Card */}
-            <Card className="mt-8">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <GraduationCap className="h-6 w-6" />
-                  Fyri lærarar
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Lær hvussu tú integrerar vitlíkisamboð í títt klassarúm og undirvísingararbeiði.
-                </p>
-                <Button className="w-full">Sí vegleiðing</Button>
-              </CardContent>
-            </Card>
-
-            {/* Business Professional Guide Card */}
-            <Card className="mt-8">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <Briefcase className="h-6 w-6" />
-                  Fyri handilsfólk
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Uppdag hvussu tú nýtir vitlíki til framleiðni, samskifti og avgerðartakan.
-                </p>
-                <Button className="w-full">Sí vegleiðing</Button>
-              </CardContent>
-            </Card>
-
-            {/* Developer Guide Card */}
-            <Card className="mt-8">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <Code className="h-6 w-6" />
-                  Fyri forritarar
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Kanna vitlíkisstýrd menningaramboð og koduviðgerðarteknikkar.
-                </p>
-                <Button className="w-full">Sí vegleiðing</Button>
-              </CardContent>
-            </Card>
-
-            {/* Creative Professional Guide Card */}
-            <Card className="mt-8">
-              <CardHeader>
-                <CardTitle className="flex items-center gap-3">
-                  <Palette className="h-6 w-6" />
-                  Fyri skapandi yrkisfólk
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground mb-4">
-                  Lær um vitlíkisamboð til design, innihaldsskaping og listaligar arbeiðsgongdir.
-                </p>
-                <Button className="w-full">Sí vegleiðing</Button>
-              </CardContent>
-            </Card>
+            
           </div>
         </Section>
       </main>
