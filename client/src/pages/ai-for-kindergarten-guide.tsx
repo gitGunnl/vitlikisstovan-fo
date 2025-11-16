@@ -455,7 +455,8 @@ Minst altíð til: **ongar persónligar dátur**, altíð **føroyskt fyrst (ÚT
  */
 const RenderInlineText = ({ text }: { text: string }) => {
   // Split by bold or italic, keeping the delimiters
-  const parts = text.split(/(\*\*.*?\*\*)|(\*.*?\*)/g).filter(Boolean);
+  // Process bold (**) before italic (*) to avoid conflicts
+  const parts = text.split(/(\*\*[^*]+?\*\*)|(\*[^*]+?\*)/g).filter(Boolean);
 
   return (
     <>
@@ -463,7 +464,7 @@ const RenderInlineText = ({ text }: { text: string }) => {
         if (part.startsWith("**") && part.endsWith("**")) {
           return <strong key={i}>{part.slice(2, -2)}</strong>;
         }
-        if (part.startsWith("*") && part.endsWith("*")) {
+        if (part.startsWith("*") && part.endsWith("*") && !part.startsWith("**")) {
           return <em key={i}>{part.slice(1, -1)}</em>;
         }
         return <span key={i}>{part}</span>;
