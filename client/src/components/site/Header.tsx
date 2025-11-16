@@ -35,6 +35,9 @@ export default function Header() {
           <a href="/okkara-taenastur" className="text-foreground/80 hover:text-foreground transition-colors">
             Tænastur
           </a>
+          <a href="/annad-fra-vitlikisstovuni" className="text-foreground/80 hover:text-foreground transition-colors">
+            Annað frá Vitlíkisstovuni
+          </a>
           {/* <a href="/blog" className="text-foreground/80 hover:text-foreground transition-colors">
             Blogg
           </a> */}
@@ -78,6 +81,13 @@ export default function Header() {
               className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary hover:bg-accent/50 rounded-md transition-all duration-200"
             >
               Tænastur
+            </a>
+            <a
+              href="/annad-fra-vitlikisstovuni"
+              onClick={closeMobileMenu}
+              className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary hover:bg-accent/50 rounded-md transition-all duration-200"
+            >
+              Annað frá Vitlíkisstovuni
             </a>
             {/* <a
               href="/blog"
