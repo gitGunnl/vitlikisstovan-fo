@@ -5,7 +5,7 @@ import { Link } from "wouter";
 // import Section from "@/components/site/Section"; // Removed failing import
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Download, Copy, Check } from "lucide-react";
-// import { seoConfig } from "@/content/seo"; // Removed failing import
+import { seoConfig } from "@/content/seo";
 
 // --- Blog Post Content ---
 // The full text content provided in the prompt.
@@ -828,7 +828,7 @@ const PromptBlock = ({ text }: { text: string }) => {
 export default function AiForCaretakersGuide() {
   // Set SEO tags on component mount
   useEffect(() => {
-    document.title = seoConfig.aiForCaretakers.title;
+    document.title = "AI for Caretakers Guide";
 
     // Find or create the meta description tag
     let metaDesc = document.querySelector('meta[name="description"]');
@@ -837,7 +837,7 @@ export default function AiForCaretakersGuide() {
       metaDesc.setAttribute("name", "description");
       document.head.appendChild(metaDesc);
     }
-    metaDesc.setAttribute("content", seoConfig.aiForCaretakers.description);
+    metaDesc.setAttribute("content", "AI guide for caretakers - practical prompts and examples for daily tasks");
 
     // Clean up on unmount
     return () => {
