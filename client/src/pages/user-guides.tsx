@@ -69,6 +69,11 @@ export default function UserGuides() {
     document.body.removeChild(link);
   };
 
+  const handleOpenPDF = (pdfPath: string) => {
+    // Open PDF in new tab
+    window.open(pdfPath, '_blank');
+  };
+
   return (
     <>
       <Header />
@@ -102,10 +107,10 @@ export default function UserGuides() {
                         <Button
                           className="w-full"
                           variant="default"
-                          onClick={() => handleDownloadPDF(guide.pdfPath, guide.pdfFilename)}
+                          onClick={() => handleOpenPDF(guide.pdfPath)}
                         >
-                          <Download className="h-4 w-4 mr-2" />
-                          Sæk niður PDF
+                          <BookOpen className="h-4 w-4 mr-2" />
+                          Les vegleiðing
                           <ArrowRight className="h-4 w-4 ml-2" />
                         </Button>
                       ) : (
