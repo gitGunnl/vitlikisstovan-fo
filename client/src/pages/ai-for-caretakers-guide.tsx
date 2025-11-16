@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
-// import Header from "@/components/site/Header"; // Removed failing import
-// import Footer from "@/components/site/Footer"; // Removed failing import
-// import Section from "@/components/site/Section"; // Removed failing import
+import Header from "@/components/site/Header";
+import Footer from "@/components/site/Footer";
+import Section from "@/components/site/Section";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Download, Copy, Check } from "lucide-react";
 import { seoConfig } from "@/content/seo";
