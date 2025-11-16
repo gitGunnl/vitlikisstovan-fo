@@ -10,652 +10,444 @@ import { seoConfig } from "@/content/seo";
 // --- Blog Post Content ---
 // The full text content provided in the prompt.
 const blogContent = `
-# AI for Pedagogues: Less Paperwork, More Play
+# **Vitlíki til námsfrøðingar: Minni skriviarbeiði, meira spæl.** 
 
-## *Easy, safe ways to cut daily admin so you spend more time with children*
-
----
-
-## **What This Guide Helps With (And What It Doesn’t)**
-
-As a pedagogue, your most important work happens face-to-face with children. You’re the one "making the day hang together", managing daily schedules, running activities, and being present for every small interaction.
-
-But we also know about the *other* work. The "invisible" work that often has to wait until the children are gone:
-
-* Writing **daily diaries** (*dagbók*) and observations, which can take 10-30 minutes *per child*.  
-* Completing formal **incident reports** (*hendingarfrágreiðingar*), which can take 30-45 minutes of careful wording.  
-* Gathering and rewriting notes to **prepare for parent meetings** (*foreldraviðtalur*).  
-* Sorting, captioning, and **printing photos**, which feels tedious and slow.  
-* Filling out **standard forms** for agencies like *Sernám* or *barnavernd*, which drains energy.  
-* Spending evenings **finding substitutes** (*vikarar*), pulling you away from pedagogical planning.
-
-You have to write it all down *today* before the details are forgotten, often long after your official day has ended.
+## ***Lættir og tryggir hættir at minka um dagligu umsitingina, so tú kanst nýta meira tíð saman við børnunum.*** 
 
 ---
 
-### **A Realistic Helper for Your Paperwork**
+**Hendan vegleiðing er til tín, um tú:**
 
-This guide is designed to help with **that second part of your job.**
+* ert námsfrøðingur ella starvsfólk á dagstovnaøkinum í Føroyum.   
+* hevur lítlar ella ongar royndir við vitlíki.   
+* mest brúkar telefonina ella einfalda tøkniliga útgerð.   
+* leitar eftir skjótum loysnum, tú kanst brúka í dag. 
 
-Let's be realistic: **AI cannot replace your care.** It cannot replace your professional judgment, manage a busy room, or comfort a child. That is, and always will be, your essential work.
+**Ikki ætlað til:** 
 
-What AI *can* do is act as a fast, helpful assistant for the repetitive administrative tasks that steal your time. This guide provides simple, safe, copy-paste examples to help you:
+* **At avloysa tína fakligu meting ella umsorgan.** Vitlíki kann gera útkøst og geva uppskot; tú tekur avgerðina og tillagar.  
+* **Djúpt ástøði ella uppseting av amboðum.** Her eru ongar tøkniligar lýsingar – bara einføld nýtsla av kjatti (ChatGPT, Gemini, Copilot, o.s.fr.).   
+* **Arbeiði, sum krevur persónligar ella viðkvæmar dátur.** Henda vegleiðingin nýtir bara navnleyst ella alment tilfar, uttan so, at tín arbeiðsgevari hevur útvegað eina góðkenda skipan, ið lýkur krøv til viðkvæma nýtslu.
 
-* **Turn quick bullet points** into a structured diary entry.  
-* **Draft a formal incident report** from your simple notes in seconds.  
-* **Summarize your observations** into clear talking points for a parent meeting.  
-* **Generate new activity ideas** with complete materials lists.  
-* **Write clear, short messages** for the parent app (*foreldragluggi*).
+# **Vís varsemi við, hvat tú letur inn (ongar persónligar dátur)**
 
-The goal is simple: to help you cut down on paperwork, reduce end-of-day stress, and give you more time and energy for the children.
+**Ein Einføld Regla: Gev ongantíð vitlíki persónligar dátur**
 
----
+Ímynda tær, at tú skrivar eitt bræv til eina fyritøku. Tá ið tú hevur lagt brævið í postkassan, er tað úti – øll, sum hava lykil til postkassan, kunnu lesa, hvat tú skrivar, og tú kanst ikki taka tað aftur. Vitlíkis kjattamboð rigga á sama hátt; tá ið tú deilir upplýsingar, missir tú tamarhald á, hvør kann fáa atgongd til tær. Og hvat, um onkur brýtur inn í postkassan? So kunnu øll brádliga síggja tað, sum annars átti at veri loyniligt.
 
-**Who it’s for**
+Tú kanst sjálvandi tosa frítt um teg sjálvan, títt lív kann tú gera við sum tú vil, men tú eigur at verja privatlívið hjá øðrum. Tað eru nógvir hjálpsamir hættir at brúka vitlíki – hugskot til undirvísing, frásøgur, ætlanir fyri virksemi – uttan at tað er neyðugt at hava persónligar upplýsingar við. Um tú ikki vildi skriva tað í eitt bræv, skalt tú ikki skriva tað inn í vitlíkis amboðini.
 
-* Frontline pedagogues and early-years staff in the Faroe Islands.  
-* Little or no AI experience.  
-* Phone-first, low-tech setups.  
-* Looking for quick wins you can use today.
+Summi arbeiðspláss útvega møguliga serlig, trygg vitlíkisamboð, sum eru góðkend til at handfara viðkvæmar upplýsingar. Men uttan so, at tú heilt víst veit, at tín skipan er góðkend til privatar dátur, skalt tú ongantíð deila persónligar upplýsingar um børn ella starvsfelagar – so sum nøvn, bústaðir, heilsutilfar ella aðrar trúnaðarupplýsingar.
 
-**How to read it**
+**Hvat er trygt at deila:**
 
-* Think “small, safe steps.”  
-* Copy, paste, try them, and keep what works.  
-* You stay in charge: always review AI’s output.
+* **Almennir upplýsingar**: Dømir, søgur ella spurningar, sum longu eru alment kend.  
+* **Alment tilfar**: Almenn vitan ella undirvísingartilfar, sum ikki kann knýtast av ávísum einstaklingum.  
+* **Navnleyst tilfar**: Lýsingar sum "Eg havi eitt barn, sum er smæðið" ella "Eg havi eitt ógvuliga gløgt barn" eru í lagi, tí tær avdúka ongan persónsamleika.  
+* **Íspunnin dømi**: At brúka uppspunnið ella almenna vitan kann eisini hjálpa til at varðveita trygdina.
 
-**Not for**
+**Hvat er ikki trygt:**
 
-* **Replacing your judgment or care.** AI can draft and suggest; you decide and adapt.  
-* **Deep theory or tool setup.** No model specs or vendor tutorials here—just simple chat use (ChatGPT, Gemini, Copilot, etc.).  
-* **Work that needs personal or sensitive data.** This guide uses anonymous or generic content only unless your employer provides a compliant, approved setup.  
-* **High-tech integrations.** We focus on chat prompts and basic copy-paste, not systems integration.
+* **Persónligar upplýsingar**: Nøvn, sambandsupplýsingar ella okkurt, sum beinleiðis kann eyðmerkja onkran.  
+* **Viðkvæmar dátur**: Heilsutilfar, p-tøl ella aðrar upplýsingar, sum krevja strangan trúnað.  
+* **Okkurt, ið kann sporast aftur**: Sjálvt um tú brúkar eitt dømi, er tað betri at lata tað vera, um tað er ov tætt at veruligum fólkum, ella kann sporast aftur til tey.
 
-# Be Careful with What You Put In (No PII)
+Við at fylgja hesum einføldu leiðbeiningum hjálpir tú til at verja privatlívið og tryggja, at tíni vitlíkis amboð verða nýtt trygt og ábyrgdarfult.
 
-## **A Simple Rule: Don't Feed AI Personal Data**
+# **4\) Soleðis kanst tú hugsa um vitlíki sum ein samstarvsfelagi**
 
-Imagine calling into a radio show. Once you say something, it's out there—anyone tuning in can hear it, and you can’t take it back. AI chat tools often work similarly; once you share information, you lose control over who can access it.
+Hugsa um vitlíki sum tín hjálpsama, kvika hjálpara, sum altíð er til reiðar at koma við eini hjálpandi hond og stuðla tær í tínum dagligu uppgávum. Eins og við øllum góðum starvsfeløgum: Jú greiðari tú lýsir, hvat tú hevur tørv á, tess betri hjálp fært tú. Vitlíki kann kennast sum ein eyka persónur í rúminum – altíð til reiðar við einum nýggjum hugskoti. Men tað er eisini heilt øðrvísi: tað møðist ikki, keðir seg ongantíð við endurtiknum spurningum, og skjýtur ofta upp ting, tú ongantíð hevði ímyndað tær. Men tað kann eisini bera seg óvæntað at: misskilja einføld boð, skjóta upp løgin ella óbrúkilig hugskot ella yvirsíggja ting, sum vit halda vera sjálvsøgd. Hugsa um tað sum ein kreativan, men eitt sindur serligan starvsfelaga – tú mást vegleiða hann greitt, eftirkanna uppskotini væl, og ongantíð líta fult á tað uttan tína egnu fakligu meting. Minst til, tú ert framvegis serfrøðingurin á tínari stovu, tá ið tað kemur til tíni børn og tínar dagligu rutinur – vitlíki hjálpir tær bara at umseta vitan tína og tínar tørvir til skjót, brúklig hugskot.
 
-Some workplaces might provide special, secure AI systems approved for handling sensitive information. But unless you're **100% sure** your setup is approved for private data, never share personal details about children or colleagues—like names, addresses, health info, or other confidential information.
+Tú tørvar onga tøkniliga serfrøði fyri at brúka vitlíki væl. Lýs bara tína støðu við einføldum gerandismáli, sum um tú greiddi einum starvsfelaga frá. Nevn týðiliga tínar treytir (aldur á børnunum, bólkastødd, stað, tøkt tilfar og avmarkingar sum veður ella tíð), og lat vitlíki geva tær tillagaðar, verkligar loysnir. Fyri at brúka hesa vegleiðingina skalt tú bara avrita dømini við byrtum yvir í títt vitlíkis kjattamboð (sum ChatGPT, Gemini ella Copilot), tillagað eftir tørvi og byrja at brúka uppskotini beinanvegin.
 
-You can talk freely about yourself, but protect others’ privacy. There are plenty of helpful ways to use AI—lesson ideas, storytelling, planning activities—without needing to include personal details. If you wouldn’t say it on the radio, don’t type it in.
+**Gott hugskot:** Goym eina nágreiniliga lýsing av tínari vanligu stovustøðu – so sum bólkastøddir, vanligt tilfar og føst tiltøk – í einum notati á telefonini ella telduni. Síðan kanst tú bara lima hesa lýsingina inn fremst í títt byrt, so skilir vitlíki beinanvegin serstøku støðu tína. Soleiðis sleppur tú undan at endurtaka teg hvørja ferð.
 
-**What’s Safe to Share:**
-
-* **Generic information**: Examples, stories, or questions that don’t reveal personal details.  
-* **Public information**: General knowledge or educational material that doesn’t link to specific individuals.  
-* **Anonymized information**: Descriptions like "I have a shy kid" or "I have a very energetic kid" are fine because they don’t give away any personal identifiers.  
-* **Fictional or hypothetical examples**: Using made-up scenarios or generic situations can also help keep things safe.
-
-**What’s Not Safe:**
-
-* **Personal information**: Names, contact details, or anything that could directly identify someone.  
-* **Sensitive data**: Health records, social security numbers, or any information requiring strict confidentiality.  
-* **Anything that can be traced back**: Even if you’re using an example, if it’s too close to real people or could be traced back to them, it’s better to leave it out.
-
-By following these simple guidelines, you help protect privacy and ensure your AI tools are used safely and responsibly.
-
-# 4\) How to Think About AI as a Partner
-
-Think of AI as your helpful, quick-thinking assistant who is always ready to jump in and support you with your daily tasks. Just like any good colleague, the clearer your instructions and context, the better the assistance you'll receive. AI can feel like another person in the room—always ready with a fresh idea—but it's also quite different: it doesn't tire, never gets bored with repetitive questions, and often suggests things you’d never imagine yourself. However, it can also behave unexpectedly: misunderstanding simple instructions, proposing odd or impractical ideas, or missing things we consider obvious. Think of it as a creative but quirky colleague—you'll need to guide it clearly, check its suggestions carefully, and never fully rely on it without your own professional judgment. Remember, you’re still the expert on your classroom, your children, and your daily routines—AI simply helps transform your knowledge and needs into quick, actionable ideas.
-
-You don't need technical expertise to use AI effectively. Just describe your situation in simple, everyday language as if you were explaining it to a colleague. Clearly state your conditions (children's ages, group size, location, available materials, and constraints like weather or time), and let AI provide tailored, realistic solutions. To use this guide, simply copy the provided prompts into your AI chat tool (like ChatGPT, Gemini, or Copilot), adapt as needed, and start using the suggestions right away.
-
-**Tip:** Save a detailed description of your typical classroom setup—like group sizes, common materials, and regular activities—in a note on your phone or computer. Then just paste this description into the beginning of your prompt, and AI will immediately understand your specific situation. This way, you don't have to repeat yourself each time.
+Tú kanst eisini goyma listar við støðum, tit kunnu vitja, ella ting, sum børnini elska at gera, ella mat, sum teimum dáma væl. Hesir listar kunna so lættiliga nýtast, tá ið man samskiftir við vitlíki.
 
 ---
 
-## Creative Sparring Partner
+## **Kreativur sparringspartnari**
 
-AI shines when your familiar routines start feeling stale or you suddenly need fresh, adaptable ideas. It’s like having a creative teammate who instantly provides a range of exciting, manageable activities tailored precisely to your needs. Whether your plans suddenly change or you just need new inspiration, simply give AI your scenario—theme, available resources, children's ages, and specific constraints—and let it offer vibrant, practical options.
+Vitlíki er í essinum, tá ið tínar føstu rutinur kenna stúran, ella tær knappuliga tørva nýggj tillagingarfør hugskot. Tað er sum at hava ein kreativan toymisfelaga, sum beinanvegin gevur tær ein hóp av spennandi, handafrá tiltøkum, ið eru neyvt tillagað tínum tørvi. Antin tínar ætlanir knappuliga broytast, ella tær bara tørvar nýggjan íblástur, so gevur tú bara vitlíki tína støðu – tema, tøkar ressursir, aldur á børnunum og serligar avmarkingar – og letur tað bjóða tær lívligar, praktiskar møguleikar.
 
-**Imagine this scenario:** Heavy rain hits Vestmanna. Your outdoor plans sink, leaving you indoors with twelve lively 3–4-year-olds. Your monthly theme is "Ocean Life," and you have limited space and basic materials like crayons, paper, building blocks, toilet-roll tubes, and soft toys.
+**Ímynda tær hesa støðuna:**
 
----
-
-**Good example prompt (copy/paste this):**
-<prompt>
-I’m a kindergarten pedagogue in Vestmanna, Faroe Islands. Due to rain, we're indoors today.
-
-\- Children: 12 kids aged 3–4, energetic but easily overstimulated
-
-\- Theme: Ocean Life
-
-\- Materials available: Crayons, paper, blocks, toilet-roll tubes, soft toys
-
-\- Space constraints: Small indoor area only
-
-Also, we're working with these Faroese words today: “alda” (wave), “hvalur” (whale), “fiskur” (fish), and “tara” (seaweed)—could you weave something fun around those as well?
-
-Please ask first if anything is unclear.
-</prompt>
-
-**Follow-up Prompts:** If there is anything you don’t like about the idea, just tell the AI exactly what you don’t like, Here are some ideas:
-
-* "Make these activities simpler and quicker to clean."  
-
-* "We loved the storytelling activity. Suggest three similar ocean-themed activities."
-
-**More Opportunities for Creative Sparring**
-
-This role doesn’t stop at activity planning—it can breathe new life into almost any part of your day. When the **room energy runs high**, ask it for calmer versions of what you already planned—threading instead of painting, sorting instead of building, or a short story corner to bring the noise down.
-
-If **materials suddenly go missing**, it can swap them instantly—“same idea, new tools”—turning a paint project into a crayon or tape version without breaking the flow.
-
-When **space or staff change**, it can rebuild the plan for a hallway-only setup, an outdoor mini-version, or a one-adult “light mode” schedule that still feels complete.
-
-It even fits into smaller moments—quick **snack-time conversations** that build language, or short **after-trip reflections** where children draw, tell, and remember what they noticed.
-
-The more you experiment, the more it becomes a genuine creative partner—one that keeps your work fresh, flexible, and full of small sparks of joy.
-
-You can see more prompt examples in section “5) Many more examples”.
+Tað er farið at oysregna í Vestmanna. Tínar útiætlanir detta í vaskið, og tú situr innandura við tólv lívligum 3-4 ára gomlum børnum. Títt mánaðartema er "Lív í sjónum", og tú hevur avmarkað pláss og vanligt tilfar sum faturkrit, pappír, kubbar, vesirullur og mjúk spøl.
 
 ---
 
-## Safety & Checklist Buddy
+**Gott dømi um byrt (avrita/lima hetta):**
 
-AI can serve as your extra set of eyes, quickly scanning your plans to spot anything you might have overlooked or forgotten, reducing the likelihood that important details get missed. It's like having a vigilant colleague who helps improve your solutions, identifies potential oversights, and suggests practical enhancements. Whenever you're facing a decision—whether it's planning an outing, addressing a tricky classroom situation, or responding to an unexpected event—you can briefly describe your approach or solution to AI. It can quickly suggest potential issues you might not have considered, offer ideas for improvement, or gently challenge your thinking to ensure you've covered essential details.
+\<prompt\>
 
-**Imagine this scenario:** You’re taking eighteen 5‑year‑olds to a crowded national running day with three adults. It will be busy and noisy, and you want AI to check a specific thing: your **adults’ “things to bring” list**—both for any **forgotten essentials** and **simple extras** that make the day easier.
+Eg eri námsfrøðingur í einum barnagarði í Vestmanna. Tað regnar, so vit eru innandura í dag.
 
----
+\- Børn: 12 børn, 3-4 ár, orkufull, men løtt at yvirstimulera
 
-**Good example prompt (copy/paste this):**
-<prompt>
-We’re taking 18 five‑year‑olds and 3 adults to a busy national running day. It will be crowded and loud, with changeable weather. **Here is our current adults’ “things to bring” list:**
+\- Tema: Lív í sjónum
 
-* 3 high‑vis vests for adults \+ 6 spare child vests  
-* Group identifiers: A/B/C lanyards \+ matching stickers  
-* Simple wristbands for children with **group letter** * Clipboard with route map, pre‑agreed meeting points, and event schedule  
-* Small first‑aid kit (plasters, sterile wipes, instant cold pack)  
-* Hand wipes \+ sanitizer  
-* Rain shells for adults  
-* 2 trash bags (for wet gear)  
-* Whistles for adults (1 each)  
-* Permanent marker \+ duct tape \+ zip‑bags  
-* Phone power bank (1–2)  
-  Please **review the list** and:  
-1. Flag any **crucial items** we may have forgotten,  
-2. Suggest a few **nice‑to-have extras** that reduce chaos, and  
-3. Offer **two simple simplification tactics** (e.g., line‑walking method, regroup signals).  
-   Keep it short and practical. Please ask first if anything is unclear.
-</prompt>
----
+\- Tøkt tilfar: Faturkrit, pappír, kubbar, vesirullur, mjúk spøl
 
-**Follow-up Prompts:** If the list feels overwhelming or needs adjusting, clearly specify what changes you’d prefer. Here are some examples:
+\- Avmarkingar (pláss): Bara eitt lítið øki innandura
 
-* "Make the checklist shorter—include only the absolute essentials."  
+Vit arbeiða eisini við hesum føroysku orðunum í dag: "alda", "hvalur", "fiskur" og "tara" – kundi tú spunnið okkurt stuttligt burtur úr tí eisini?
 
-* "Give me a simple indoor backup activity in case of unexpected heavy rain."
+Vinarliga spyr fyrst, um okkurt er ógreitt.
 
-**Other ways this "extra eyes" role can support you:**
+**Uppfylgjandi byrt:** Um tað er okkurt við hugskotinum, tær ikki dámar, so sig bara vitlíki neyvt, hvat tað er. Her eru nøkur hugskot:
 
-Think about all the moments when an extra pair of eyes could help:
+* "Ger hesi tiltøkini einfaldari og skjótari at rudda upp eftir."  
+* "Okkum dámdi væl søguløtuna. Skjót upp trý líknandi tiltøk við sjóvartema."
 
-* Quickly perform a **Plan pre-mortem:** ask for the top 5 things that could go wrong and simple ways to handle them.  
-* Test your decision-making with a quick **devil's advocate check:** briefly share your plan and get back 3 thoughtful challenges.  
-* Run a quick **inclusion & sensory check:** identify who might feel left out and receive easy adaptations to ensure everyone participates.  
-* Get an instant **risk snapshot:** have AI produce a clear Green/Amber/Red summary of key risks with concise reasons.
+\</prompt\>
 
-Integrating this supportive AI companion into your daily routine helps create safer, calmer, and more inclusive environments for everyone involved.
+**Fleiri møguleikar fyri kreativari sparring**
 
-You can see more prompt examples in section “5) Many more examples”.
+Hesin leikluturin steðgar ikki við at leggja tiltøk til rættis – hann kann blása nýtt lív í næstan allar partar av tínum degi. Tá ið **orkan á stovuni er høg**, kanst tú biðja tað um stillari útgávur av tí, tú longu hevði ætlað – at træða perlur í staðin fyri at mála, at bólka í staðin fyri at byggja, ella ein stuttan søgukrók fyri at lækka ljóðstøðið.
+
+Um **tilfar knappliga manglar**, kann vitlíki skifta tað út beinanvegin – "sama hugskot, nýggj amboð" – og broyta eina máliverkætlan til eina útgávu við faturkriti ella tape, uttan at tað steðgar gongdini.
+
+Tá ið **pláss ella starvsfólk broytast**, kann tað endurbyggja ætlanina til eina loysn, sum bara riggar á gongini, eina lítla úti-útgávu, ella eina "lætta skrá" til ein vaksnan, sum framvegis kennist heil.
+
+Tað hóskar enntá til smærri løtur – skjót **prát í fruktsteðginum**, sum menna málið, ella stuttar **eftirmetingar eftir ein túr**, har børnini tekna, siga frá og minnast, hvat tey løgdu til merkis.
+
+Jú meira tú roynir teg, tess meira gerst tað ein veruligur kreativur makkari – ein, sum heldur arbeiði títt frískt, smidligt og fult av smáum gleðisneistum.
+
+Tú kanst síggja fleiri dømi um byrt í parti "5) Nógv fleiri dømi".
+
+## **Trygdarhjálpari og eftirlitsfelagi**
+
+Vitlíki kann vera tíni eyka eygu, sum skjótt gjøgnumgongur tínar ætlanir fyri at síggja, um tú hevur gloymt ella sæð upp um okkurt. Hetta minkar um vandan fyri, at týðandi smálutir verða gloymdir. Tað er sum at hava ein árvaknan starvsfelaga, ið hjálpir tær at betra tínar loysnir, vísir á møgulig yvirsjón og skjýtur upp hentar ábøtur. Hvørja ferð, tú stendur fyri eini avgerð – antin tú leggur eina útferð til rættis, handfert eina torføra støðu á stovuni ella skalt taka støðu til eina óvæntaða hending – kanst tú stutt lýsa tilgongdina ella loysnina fyri vitlíki. Tað kann skjótt vísa á møguligar trupulleikar, sum tú kanska ikki hevur hugsað um, koma við hugskotum til bøtur ella spakuliga bjóða tínum hugsanarhátt av fyri at tryggja, at tú hevur fingið allar týðandi smálutir við.
+
+**Ímynda tær hesa støðuna:** Tú skalt við átjan 5 ára gomlum børnum og trimum vaksnum til ein væl vitjaðan, landsumfatandi rennidag. Har vera nógv fólk og nógvur larmur, og tú vilt hava vitlíki at eftirkanna okkurt ávíst: tín **"minnislista til tey vaksnu"** – bæði fyri at vita, um **týðandi lutir eru gloymdir**, og um **einfaldir eykalutir**, ið gera dagin lættari, mangla.
 
 ---
 
-## Parent-Comms Copilot
+**Gott dømi um byrt (avrita/líma hetta inn):**
 
-Being a pedagogue isn't only about keeping children safe, happy, and engaged—it's also about making sure parents feel comfortable, informed, and confident. But at the end of a busy day, finding exactly the right words to clearly explain changes, reassure worried parents, or prepare for sensitive conversations can feel exhausting.
+\<prompt\>
 
-AI can step in here as your calm, clear-headed helper—your trusted colleague who takes your quick notes and transforms them into warm, professional, and reassuring communications. It’s particularly helpful when finding the right tone matters most, whether that's friendly and comforting, clear and calm, or firm and professional. It’s also excellent when preparing for important parent meetings, helping you choose your words carefully, anticipate tricky questions, and practice clear and respectful responses.
+Vit fara við 18 fimm ára gomlum børnum og 3 vaksnum til ein væl vitjaðan, landsumfatandi rennidag. Har vera nógv fólk, nógvur larmur og skiftandi veður. **Her er okkara "minnislisti til tey vaksnu", sum hann sær út nú:**
 
-Your part in this teamwork is simple: you provide the facts, context, and intention—what happened, what’s changing, or what families need to know. The AI takes that and drafts the message or meeting outline for you. But you remain fully in control. You decide what goes in, what stays out, and how it finally sounds. Think of the AI as your writing assistant, not your voice.
+* 3 eyðsýndar vestar til vaksin \+ 6 eyka vestar til børn  
+* Bólkamerki: A/B/C band um hálsin \+ hóskandi klistrimerki  
+* Einføld armbond til børnini við **bólkastavi**  
+* Skrivipláta við rutukorti, avtalaðum møtistøðum og skrá fyri tiltakið  
+* Lítil fyrstahjálparútgerð (plástur, reinsilappar, ídnaðar kuldapakka)  
+* Vátlappar \+ hondspritt  
+* Regnskeljar til vaksin  
+* 2 ruskposar (til vát klæðir)  
+* Floytur til vaksin (1 í part)  
+* Vatnfasta túsj \+ gaffateyp \+ minigrip-posar  
+* Eyka battarí til telefonir (1–2)
 
-And because Faroese is still a developing language for most AI tools, always treat the Faroese text as a **first draft**, not a finished version. Read it aloud, adjust the phrasing, and make sure it sounds natural and kind. That final touch from you is what keeps the message personal, trustworthy, and true to your way of communicating with parents.
+Vinarliga **gjøgnumgang listan** og:
 
-**Imagine this scenario:** A strong gale warning pops up unexpectedly in Tórshavn, and you realize you’ll need to ask parents to pick up their kids earlier today if they can. You know this sudden change can make some parents anxious or stressed, and you want to quickly send out a reassuring, clear message. At the same time, you’d like to prepare yourself for a few sensitive phone calls and maybe even a quick parent meeting later.
+1. Ger vart við **týðandi lutir**, vit møguliga hava gloymt.  
+2. Skjót upp nakrar **hentar eykalutir**, ið minka um ólag, og  
+3. Kom við uppskoti um **tveir einfaldar hættir at halda skil á** (t.d. gonguháttur á rað, signal til at savnast).
 
----
+Svarið skal vera stutt og hent. Spyr vinaliga fyrst, um okkurt er ógreitt.
 
-**Good example prompt (copy/paste):**
-<prompt>
-*I’m a kindergarten pedagogue in Tórshavn (Faroe Islands).* A gale warning is expected this afternoon. We want to ask parents: If possible, please pick up by **14:30**. We remain open for families who cannot come early.
-
-**Plan B:** Calm indoor activity stations; normal staff-to-child ratios; safety first.
-
-**Facts to include:**
-
-* Date: \[DD MMM 2025\]  
-
-* Groups: A/B/C (no names)  
-
-* Pickup times: Early pickup request (14:30) if possible, otherwise normal closing  
-
-* Contact: \[phone number/email/Messenger channel\]  
-
-  **Please write clearly and simply:** 1. **Parent Note:** A warm, reassuring message (100–120 words) in **Faroese first, then English and Ukrainian**.  
-2. **Short SMS:** Two-line reminder in Faroese, English and Ukrainian.  
-3. **Tiny FAQ (3 questions):** * "What if we can’t come early?"  
-   * "Why is picking up early safer?"  
-   * "Do times change tomorrow?"  
-4. **Phone Phrasebook:** Six friendly yet clear sentences I can use for quick calls with worried parents.  
-   **Writing style:** Plain language, short sentences, calm, reassuring, and respectful.
-
-Ask me if anything feels unclear before you start writing.
-</prompt>
----
-
-**Easy follow-up prompts (if the AI’s first draft isn’t quite right):**
-
-Just copy/paste one of these follow-ups to quickly refine the message if you need changes:
-
-* “Make the parent note shorter (\~80 words), but keep the friendly tone.”  
-
-* “Change the tone slightly more professional for the SMS.”  
-
-* “Add one reassuring line to explain clearly why leaving early is safest.”  
-
-* “Make the phrasebook sentences shorter and simpler for phone use.”  
-
-* “Include a Danish translation too.”  
-
-* “Turn the FAQ into very short, friendly answers.”
+\</prompt\>
 
 ---
 
-**Other practical ways to use this role:**
+**Uppfylgjandi byrt:** Um listin kennist ov rúgvismikil ella skal lagast til, skalt tú greitt tilskila, hvørjar broytingar tú vilt hava. Her eru nøkur dømi:
 
-This friendly copilot isn't just for daily updates—it can help simplify and support you in many communication situations, such as:
+* "Ger minnislistan styttri – tak bara tað allar mest týðandi við."  
+* "Gev mær eitt einfalt uppskot til eitt innandura eyka ítriv, um tað skuldi farið at pissa niður."
 
-* Drafting **weekly newsletter updates** or short parent reminders.  
+**Aðrir hættir, hesin "eyka vaki" leikluturin kann stuðla tær:**
 
-* Creating quick, clear **FAQs** before outings or special events, anticipating questions like “What gear is needed?” or “What time is pick-up?”  
+Hugsa um allar løturnar, tá ið eyka eygu kundu hjálpt:
 
-* Preparing **welcome notes** for new families, clearly explaining routines and essentials.  
+* Ger skjótt eina **"hvat-kann-ganga-galtið" kanning av ætlanini:** bið um 5 ting, ið kunnu ganga galið, og einfaldar loysnir fyri tey.  
+* Royn tína avgerð við eini skjótari **"devulsins advokatur" kanning:** greið stutt frá ætlan tíni og fá 3 væl umhugsaðar avbjóðingar aftur.  
+* Ger eina skjóta **inkluderings- & sansakanning:** fá at vita, hvør kundi kent seg uttanfyri, og fá uppskot til lættar tillagingar, so øll eru við.  
+* Fá eina skjóta **váðamynd:** lat vitlíki gera eitt greitt Grønt/Gult/Reytt yvirlit yvir høvuðsváðarnar við stuttum grundgevingum.
 
-* **Tone check:** turning overly direct or rushed messages into calmer, warmer ones—or vice versa—depending on your need.  
+Við at innlima henda stuðlandi vitlíkis-hjálparan í gerandisdagin, ert tú við til at skapa eitt tryggari, friðarligari og meira inkluderandi umhvørvi fyri øll.
 
-* Preparing for sensitive or tricky **parent meetings**, by providing short phrase guides or even mini role-play conversations to practice clear, kind, and professional responses.  
+Tú kanst síggja fleiri dømi um byrt í parti "5) Nógv fleiri dømi".
 
-* Writing brief **after-meeting summaries**, clearly outlining “what we agreed” in a neutral and respectful manner.
+## **Hjálpari tín til foreldrasamskifti**
 
-You can see more prompt examples in section “5) Many more examples”.
+At vera námsfrøðingur snýr seg ikki bara um at ansa eftir, at børnini eru trygg, glað og í upptøkum (upptøkum \- skilji ikki?) \- tað snýr seg eisini um at tryggja, at foreldur kenna seg væl, kunnað og vís. Men tá ið ein strævin dagur er av, kann tað kennast troyttandi at finna júst tey røttu orðini at greiða greitt frá broytingum, ugga stúrin foreldur ella fyrireika seg til viðkvæmar samrøður.
 
----
+Her kann vitlíki vera tín róligi, klári hjálpari \- tín álítandi starvsfelagi, sum tekur tínar stuttu notur og umskapar tær til heitt, professionelt og uggandi samskifti. Tað er serliga hent, tá ið tað hevur mest at siga at raka rætta tónan, antin hann skal vera vinarligur og uggandi, greiður og róligur, ella avgjørdur og professionellur. Tað er eisini frálíkt at nýta til at fyrireika týðandi foreldrafundir, har tað hjálpir tær at velja orðini væl, vera til reiðar at svara torførum spurningum og venja greið og virðilig svar.
 
-## Story / Game / Image Maker
+Tín leiklutur í hesum toymisarbeiðinum er einfaldur: tú letur fakta, samanhang og endamál \- hvat hendi, hvat broytist, ella hvat familjurnar hava tørv á at vita. Vitlíki tekur ímóti tínum íkasti og skrivar útkastið til boðini ella fundaryvirlitið fyri teg. Men tú hevur framvegis fult tamarhald. Tú gert av, hvat skal við, hvat skal ikki við, og hvussu tað at enda skal ljóða. Hugsa um vitlíki sum tín skriviassistent, ikki tína rødd.
 
-When you need a quick way to capture children's attention or gently address everyday issues, this AI role becomes your instant creative helper. Imagine having a ready-made storyteller who can swiftly provide short, memorable narratives tailored precisely to your current themes, recent experiences, or behavioral challenges in the group. Whether it's reinforcing positive routines, helping children grasp tricky concepts, or managing classroom dynamics, AI helps you find just the right words or visuals—making the day more fun with no added burden on you.
+Av tí at føroyskt framvegis er eitt mál í menning fyri tey flestu vitlíkisamboðini, skalt tú altíð viðgera føroyska tekstin sum eitt **fyrsta útkast**, ikki eina lidna útgávu. Les tekstin hart, tillaga orðingarnar og tryggja tær, at hann ljóðar natúrligur og vinaligur. Hendan seinasta hondin frá tær er tað, sum ger boðini persónlig, álítandi og sonn mótvegis tínum hátti at samskifta við foreldur.
 
-**Imagine this scenario:** Your group of lively 4-year-olds in Klaksvík consistently forgets handwashing after outdoor play. You want a playful, easy-to-remember story that gently reminds them why clean hands matter, integrating local references to make the idea stick.
+**Ímynda tær hesa støðuna:**
 
-**Good example prompt (copy/paste this):**
-<prompt>
-Create a short, playful story (about 1 minute long when read aloud) for my 4-year-olds in Klaksvík to gently remind them why it's important to wash their hands after playing outside.
-
-Please include these Faroese words naturally in the story: “hendur” (hands), “reint” (clean), “bakteriur” (germs), and “spælipláss” (playground).
-
-Make it relatable and engaging by mentioning common outdoor play activities they love, like playing in the sand, climbing, or picking up stones.
-
-Output:
-
-1\) The story (clear and simple).
-
-2\) A short, repeatable phrase or gesture children can practice together at the end of the story.
-
-Please ask first if anything is unclear.
-
-**Follow-up prompts (quick refinements):**
-
-* **“Great now make an image of the characters from the story, create the image in a kids friendly watercolor style.”** * “Make the story shorter and simpler—about 30 seconds long.”  
-
-* “Include a funny talking animal character the children will remember.”  
-
-* “Suggest a small gesture we can do every time to reinforce handwashing.”
-</prompt>
----
-
-**Other Practical Ways to Use this Role**
-
-This role isn’t limited to short stories or quick reminders—it’s your versatile classroom assistant, always ready to brighten routines, tackle tricky situations, or enrich your current themes with creative, engaging content.
-
-**Storytelling Made Easy**
-
-Quickly create playful, engaging stories perfectly tailored to your group’s daily life or current themes. These stories help children learn and grow, turning everyday moments into memorable lessons. You might use AI to:
-
-* Welcome a **new child** gently, making them feel included and safe.  
-
-* Create playful **puppet-show scripts** that teach problem-solving or social skills.  
-
-* Reinforce visits or outings with **“Yesterday’s adventures,”** anchoring learning in familiar local spots like Viðarlundin or the harbor.  
-
-* Address tricky behaviors like **shyness, cursing, or small conflicts** through gentle animal or community stories.  
-
-* Clearly explain tricky concepts like **fire safety, germs, or weather** in friendly, child-sized language.
-
-**Games and Activities for Every Moment**
-
-AI helps you swiftly plan fun and inclusive activities, especially when the classroom mood or dynamics shift suddenly. You can use AI to:
-
-* Suggest instant **movement games**, like mimicking local animals ("fly like a puffin" or "jump like a lamb"), perfect for transitions or energy bursts.  
-
-* Generate **board games or group activities** on-the-spot, tailored to both shy and energetic kids, ensuring every child feels included.  
-
-* Invent quick, playful activities for smaller moments, such as language-building games during snack time or waiting periods.
-
-**Instant Visuals and Posters**
-
-AI can also serve as your classroom illustrator, instantly creating charming visuals to brighten your learning environment. Use AI to:
-
-* Create simple, child-friendly **watercolor illustrations** that perfectly match illustrate characters or places from your stories.  
-
-* Design quick and appealing **educational posters**, such as handwashing steps, tidy-up routines, or Faroese animal alphabets.  
-
-* Make visual **schedule cards or reminders** that help the day flow smoothly, gently guiding routines and transitions.
-
-The more you experiment, the more natural and helpful AI becomes in your daily work—adding variety, reducing your workload, and bringing small sparks of joy to your classroom.
-
-You can see more prompt examples in section “5) Many more examples”.
+Ein ávaring um nógvan vind kemur brádliga fyri í Tórshavn, og tað gongur upp fyri tær, at tú mást biðja foreldur heinta børnini tíðliga í dag, um tey hava møguleika. Tú veitst, at henda brádliga broytingin kann gera summi foreldur stúrin ella kløkk, og tú vilt skjótt senda út eini uggandi, greið boð. Samstundis vilt tú fyrireika teg upp á nakrar viðkvæmar telefonsamrøður og kanska enntá ein stuttan foreldrafund seinni.
 
 ---
 
-## Paperwork & Handover Scribe
+**Gott dømi um birt (avrita/líma inn):**
 
-Being a pedagogue means spending your days focused on children, but the required paperwork and documentation tasks—daily logs, incident reports, development portfolios, and staff handovers—often stretch into your personal time. You might find yourself rushing these tasks during nap times, squeezing them into short breaks, or doing them late in the evening, leaving you feeling that you're never quite done.
+\<prompt\>
 
-AI can step in here as your organized, always-ready assistant, transforming rough notes, voice memos, or bullet lists into clean, structured documents ready to paste directly into your existing forms or logs. It’s like having a precise and reliable colleague who turns quick observations into well-structured text, helping you stay compliant and organized without losing precious time from your day.
+*Eg eri námsfrøðingur á einum dagstovni í Tórshavn (Føroyum).* Nógvur vindur er væntandi seinnapartin. Vit vilja biðja foreldur: Um gjørligt, vinarliga heintið børnini í seinasta lagi kl. **14:30**. Vit hava opið fyri familjur, sum ikki kunnu koma tíðliga.
 
-Your part in this teamwork is simple: quickly jot down or dictate short notes throughout the day, capturing key details—without using personal identifiers or names. The AI then helps turn these notes into clear, neutral, and professional text for your documentation. You remain fully in control: reviewing each draft, adjusting the wording, and deciding exactly how the final version looks and sounds.
+**Eykaætlan:** Rólig innandura støð við virksemi; vanlig manning (starvsfólk mótvegis børnum); trygd fremst.
 
-And because Faroese is still developing in most AI tools, always treat AI-generated text as a **first draft**, never a finished product. Always read aloud, adjust phrasing to your style, and double-check key facts. This quick, final review ensures the documentation remains accurate, natural, and entirely in your voice.
+**Fakta, ið skulu við:**
 
-**Imagine this scenario:** It's been a particularly busy day with fewer staff than usual, and you're now facing several tasks at once: writing today's observations, completing an incident report, and preparing a short staff handover note. You only have a few minutes before parents start arriving, and you want clear, concise documentation without rushing or forgetting important details.
+* Dagur:  
+   $$DD MMM 2025$$  
+* Stovur: A/B/C (ongin nøvn)  
+* Heintitíðir: Umbiðin um tíðliga avheintan (14:30) um gjørligt, annars vanlig afturlatingartíð  
+* Samband:  
+   $$telefonnummar/teldupostur/Messenger-rás$$
 
----
+**Vinarliga skriva greitt og einfalt:**
 
-**Good example prompt (copy/paste):**
-<prompt>
-*I’m a kindergarten pedagogue in Runavík (Faroe Islands).* Today was busy with fewer staff. I quickly jotted down these notes (**no personal identifiers**):
+1. **Boð til foreldur:** Eini uggandi boð (100–120 orð) á **føroyskum fyrst, síðan enskum og ukrainskum**.  
+2. **Stutt SMS:** Tvær reglur við áminning á føroyskum, enskum og ukrainskum.  
+3. **Lítil SSY (3 spurningar):**  
+   * "Hvat, um vit ikki sleppa tíðliga?"  
+   * "Hví er tað tryggari at heinta tíðliga?"  
+   * "Broytast tíðirnar í morgin?"  
+4. **Orðingarsavn til telefon:** Seks vinarligir, men greiðir setningar, eg kann brúka til skjótar uppringingar til stúrin foreldur.
 
-* **Daily observations:** energetic outdoor play; calmer afternoon; snack went well; minor conflict resolved quickly.  
+**Skrivistílur:** Vanligt mál, stuttir setningar, róligt, uggandi og virðiligt.
 
-* **Incident:** Small bump at playground (time: 10:15), quick first-aid applied, child fine, parent informed by phone.  
+Spyr meg, um okkurt er ógreitt, áðrenn tú byrjar at skriva.
 
-* **Handover:** Tomorrow's focus—more structured indoor play; materials—check building blocks; one staff message sent reminding about wet weather gear.
-
-**Please write clearly and simply:**
-
-1. **Daily observation entry:** Two neutral, concise sentences for our daily log, plus one bullet for "What to watch tomorrow."  
-
-2. **Incident report:** Short structured text (2–3 lines per section: What happened, Immediate actions, Follow-up) ready to paste into our form, plus a checklist "Missing details to confirm."  
-
-3. **Handover note:** Clear end-of-day summary (max five short bullets) to give tomorrow’s team an instant overview.
-
-Use write in natural Faroese. Keep it neutral, factual, and **never include names or personal data**. Please ask first if anything feels unclear.
-</prompt>
----
-
-**Easy follow-up prompts (if the AI’s first draft isn’t quite right):**
-
-Copy/paste one of these to quickly refine your draft:
-
-* “Make the daily observations simpler and shorter (just one sentence).”  
-
-* “I want to expand the incident report slightly— ask me a few questions to gather more detail on immediate actions.”  
-
-* “Add a clear reminder to double-check materials in the handover note.”  
-
-* “Make the tone more neutral and less formal overall.”  
-
-* “Add a quick staff reminder about noise levels.”
+\</prompt\>
 
 ---
 
-This dependable scribe isn't limited to daily logs or incident reports—it can streamline and simplify numerous documentation tasks, helping you reduce after-hours work and stay organized even on busy days:
+**Løtt uppfylgjandi birt (um fyrsta útkastið hjá vitlíki ikki er heilt rætt):**
 
-* **Quickly shaping structured, form-ready incident reports** from just a few brief notes, ensuring you document clearly and consistently even when you're pressed for time.
+Bara avrita/líma inn eitt av hesum uppfylgjandi birtunum fyri skjótt at tillaga boðini, um tær tørvar broytingar:
 
-* **Turning weekly wrap-up notes into a short, manageable habit**, letting you capture highlights and gentle concerns in minutes rather than hours—giving you back your weekend evenings.
+* “Ger boðini til foreldrini styttri (\~80 orð), men varðveit vinaliga tónan.”  
+* “Broyt tónan, so hann er eitt sindur professionellari í SMS-boðunum.”  
+* “Legg ein uggandi setning aftrat, sum greitt lýsir, hví tað er tryggast at fara tíðliga.”  
+* “Ger setningarnar í orðingarsavninum styttri og einfaldari til nýtslu í telefon.”  
+* “Tak eisini danska týðing við.”  
+* “Ger SSY um til heilt stutt, vinalig svar.”
 
-* **Easily crafting meaningful portfolio summaries**, connecting your quick observations directly to developmental milestones and generating simple next-step ideas, so periodic assessments feel natural and doable.
+---
 
-* **Effortlessly preparing clear, one-page handover notes for substitutes or new staff**, making sure everyone stays on track during unexpected changes, without adding extra meetings or stress.
+**Aðrir hentir hættir at brúka henda leiklutin:**
+
+Hesin vinaligi hjálparin er ikki bara til dagligar dagføringar \- hann kann hjálpa tær at einfalda og stuðla tær í nógvum samskiftisstøðum, so sum:
+
+* At skriva útkast til **vikulig tíðindabrøv** ella stuttar áminningar til foreldur.  
+* At gera skjótan, greiðan **SSY** áðrenn útferðir ella serlig tiltøk, og vera tilreiðar at svara spurningum sum “Hvat fyri útgerð krevst?” ella “Nær skal heintast?”  
+* At fyrireika **vælkomuboð** til nýggjar familjur, sum greitt lýsa mannagongdir og týðandi viðurskifti.  
+* **Tónakanning:** at broyta ov beinrakin ella skundmikil boð til róligari, heitari boð \- ella øvugt \- alt eftir tínum tørvi.  
+* At fyrireika seg til viðkvæmar ella torførar **foreldrafundir** við at veita stuttar orðingavegleiðingar ella enntá smáar leiklutaspøl-samrøður fyri at venja greið, vinalig og professionell svar.  
+* At skriva stuttar **fundarfrágreiðingar**, sum greitt lýsa, “hvat vit samdust um” á ein óheftan og virðiligan hátt.
+
+Tú kanst síggja fleiri dømi um birt í parti “5) Nógv fleiri dømi”.
+
+## **Søgusmiður, spælskipari og myndamakari**
+
+Tá ið tær tørvar ein skjótan hátt at fanga áhugan hjá børnunum ella spakuliga viðgera gerandisavbjóðingar, gerst hesin vitlíkis-leikluturin tín beinrakni skapandi hjálpari. Ímynda tær at hava ein til reiðar søgusmið, sum kvikliga kann geva stuttar, minniligar frásøgur, ið eru nágreiniliga tillagaðar tínum evnum, nýligum upplivingum ella atferðaravbjóðingum í bólkinum. Antin tað snýr seg um at styrkja góðar vanar, hjálpa børnum at skilja torskild hugtøk, ella handfara samspælið á stovuni, so hjálpir vitlíki tær at finna júst røttu orðini ella myndirnar – og ger dagin stuttligari uttan at leggja eyka strongd á teg.
+
+Ímynda tær hesa støðu:
+
+Tín bólkur av lívligum 4-ára gomlum børnum í Klaksvík gloymir ferð eftir ferð at vaska sær um hendurnar eftir at hava spælt úti. Tær tørvar eina stuttliga søgu, ið er løtt at minnast, sum spakuliga minnir tey á, hví reinar hendur hava týdning, og sum brúkar lokal viðurskifti fyri at fáa boðskapin at festa seg.
+
+**Gott dømi um birt (avrita/líma hetta):**
+
+\<prompt\>
+
+Skriva eina stutta, stuttliga søgu (umleið 1 minutt langa at lesa hart) til míni 4-ára gomlu børn í Klaksvík, sum spakuliga minnir tey á, hví tað er umráðandi at vaska sær um hendurnar eftir at hava spælt úti.
+
+Vinarliga flætta hesi føroysku orðini natúrliga inn í söguna: “hendur”, “reint”, “bakteriur” og “spælipláss”.
+
+Ger hana viðkomandi og fangandi við at nevna vanlig úti-spøl, teimum dámar væl, so sum at spæla í sandinum, klatra ella taka steinar upp.
+
+Úrtøka:
+
+1\) Søgan (greið og einføld).
+
+2\) Ein stuttur, endurtakandi setningur ella rørslur, sum børnini kunnu venja saman at enda.
+
+Vinarliga spyr fyrst, um okkurt er ógreitt.
+
+**Uppfylgjandi birt (skjótar tillagingar):**
+
+* **“Flott, ger nú eina mynd av persónunum úr søguni. Ger myndina í einum barnavinarligum akvarel-stíli.”**  
+* “Ger söguna styttri og einfaldari – umleið 30 sekund long.”  
+* “Tak eitt stuttligt, talandi djór við, sum børnini fara at minnast.”  
+* “Gev eitt uppskot til eina lítla rørslu, vit kunnu gera hvørja ferð fyri at styrkja handvaskið.”
+
+\</prompt\>
 
 ---
 
-## **Quickfire Prompts: Realistic Examples to Sharpen Your AI Skills**
+**Aðrir hentir mátar at brúka henda leiklutin**
 
-Below you'll find a collection of example scenarios—fictional but closely reflecting real situations Faroese pedagogues face daily. Each example demonstrates how adding clear, specific context to your prompt helps the AI give better, more tailored answers. Read through the descriptions and see how detailed, realistic information improves the outcomes. Use these prompts as inspiration, modifying them with your own circumstances to quickly master practical AI prompting.
+Hesin leikluturin er ikki avmarkaður til stuttar søgur ella skjót áminningar – hann er tín fjølbroytti stovuhjálpari, altíð til reiðar at lívga gerandisdagin, handfara truplar støður ella ríka tíni evni við skapandi, fangandi tilfari.
 
-### **1\) Get ideas for calm activities**
+**Lættari søguskriving**
 
-**Role:** Creative Sparring Partner
+Skapa skjótt stuttligar, fangandi søgur, ið eru fullkomiliga lagaður til gerandisdagin hjá bólkinum ella tíni evni. Hesar sögurnar hjálpa børnunum at læra og mennast, og broyta gerandisløtur til minniligar lærdómar. Tú kanst brúka vitlíki til at:
 
-**Scenario:** You're with 11 energetic 3-4-year-olds in Runavík. Your small activity room is directly above the canteen, which gets noisy around 11:10 when kitchen staff start clanging pots. You avoid glitter due to a strict drain policy, chairs scraping loudly on the echoing floor is a common distraction, and your group uses a gentle two-finger-tap as a quiet signal instead of claps. By sharing these practical constraints, AI can suggest quieter and quicker-to-clean activities, reducing setup and cleanup stress.
+* Bjóða einum **nýggjum barni** varisliga vælkomnum, so tað kennir seg gott og trygt.  
+* Gera stuttlig **leikrit til dukku-leikhús**, sum læra um loysnir á trupulleikum ella sosialar førleikar.  
+* Styrkja vitjanir ella útferðir við **“Ævintýrunum í gjár,”** og soleiðis knýta lærdómin at kendum lokalum støðum sum Viðarlundini ella havnarlagnum.  
+* Viðgera trupla atferð sum **at vera smæðin, banna ella smáar ósemjur** gjøgnum spakligar søgur um djór ella samfelagið.  
+* Greiða týðiliga frá torskildum hugtøkum sum **eldtrygd, bakteriur ella veður** í einum vinarligum tóna, ið hóskar til børn.
 
-**Prompt:**
-<prompt>
-Hi, I need some quick ideas\! I’m in Runavík with 11 kids (ages 3–4). We only have about 35 minutes before the canteen gets super loud (\~11:10).
+**Spøl og virksemi til eina og hvørja løtu**
 
-* My room: It's small, upstairs, and has an echoey floor. We do have a great harbor view (they love pointing at waves).  
-* What I have: crayons, paper, masking tape, plastic lids, soft blocks.  
-* Rules: No glitter (strict drain policy\!) and our quiet signal is two-finger taps, not claps.  
-* Theme: Ocean Life.
+Vitlíki hjálpir tær skjótt at leggja stuttlig og inkluderandi virksemi til rættis, serliga tá ið lagið á stovuni ella samspælið brádliga broytist. Tú kanst brúka vitlíki til at:
 
-Can you suggest 3 quiet, low-mess activities that fit? I need them to be fast.
+* Geva uppskot til **rørsluspøl** beinanvegin, so sum at herma eftir lokalum djórum ("flúgva sum ein lundi" ella "leypa sum eitt lamb"), ið hóska væl til skifti ella tá ið orka skal brúkast.  
+* Menna **borðspøl ella bólkavirksemi** her og nú, sum eru tillagað bæði smædnum og lívligum børnum, og soleiðis tryggja, at øll børn kenna seg við.  
+* Finna upp á skjót, stuttlig spøl til smærri løtur, so sum málmennandi spøl í matsteðginum ella meðan bíðað verður.
 
-For each idea, please give me:
+**Skjótar myndir og plakatir**
 
-* setup in 1 min or less  
-* 3 child-friendly steps  
-* a quick cleanup note  
-* one Faroese ↔ English word pair to practice (e.g., *alda / wave*).
+Vitlíki kann eisini tæna sum tín stovumyndprýðari, sum beinanvegin skapar hugnaligar myndir at lívga upp á títt lærurúm. Brúka vitlíki til at:
+
+* Gera einfaldar, barnavinarligar **akvarel-myndir**, sum fullkomiliga lýsa persónar ella støð úr tínum søgum.  
+* Sniðgeva skjótar og dámligar **námsfrøðiligar plakatir**, t.d. um stigini í handvaski, ruddingarmanagongdir ella føroysk djóra-stavrøð.  
+* Gera sjónlig **skrá-kort ella áminningar**, sum hjálpa degnum at ganga lættliga, og varliga leiðbeina vanum og skiftum.
+
+Jú meira tú roynir teg fram, tess natúrligari og hjálpsamari gerst vitlíki í tínum dagliga arbeiði – tað gevur fjølbroytni, minkar um tína arbeiðsbyrði og tendrar smáar gleðisneistar á stovuni.
+
+Tú kanst síggja fleiri dømi um birt í parti “5) Nógv fleiri dømi”.
+
+## **Skrivari til skjalfesting og fráboðanir**
+
+Sum námsfrøðingur nýtir tú dagin við børnunum í miðdeplinum, men kravdu skjalfestingaruppgávurnar \- dagligar frásagnir, tilburðarfrágreiðingar, menningarlýsingar og fráboðanir til starvsfólk \- taka ofta tíð av tíni frítíð. Kanska mást tú skunda tær við hesum uppgávum, meðan børnini sova, kroysta tær inn í stuttum steðgum, ella gera tær seint um kvøldið, soleiðis at tú ongantíð kennir teg lidnan.
+
+Her kann vitlíki koma inn sum tín “skipaði og altíð til reiðar hjálpari”, ið umskapar óhølvaðar niðurskrivingar, ljóðupptøkur ella punktlistar til rein og væl skipað skjøl, klár at líma beinleiðis inn í tíni verandi oyðubløð ella frásagnir. Tað er sum at hava ein neyvan og álítandi starvsfelaga, ið ger skjótar eygleiðingar til væl skipaðan tekst, og sum hjálpir tær at halda teg til krøvini og hava skipan á uttan at missa dýrabara tíð av degnum.
+
+Tín leiklutur í hesum samstarvi er einfaldur: Skriva skjótt niður ella innles stuttar notur gjøgnum dagin, har tú fært týdningarmestu smálutirnar við \- uttan at nýta persónlig eyðkenni ella nøvn. Síðan hjálpir vitlíki tær at gera hesar notur til greiðan, óheftan og professionellan tekst til skjalfestingina. Tú hevur framvegis fult tamarhald: tú hyggur hvørt útkast ígjøgnum, tillagar orðingarnar og tekur avgerð um, akkurát hvussu endaliga útgávan skal síggja út og ljóða.
+
+Og av tí at føroyskt mál enn ikki er liðugt ment í flestu vitlíkisamboðum, skalt tú altíð viðgera tekst, sum vitlíki hevur gjørt, sum eitt **fyrsta útkast**—ongantíð sum eitt liðugt úrslit. Les altíð tekstin hart, laga orðingarnar til tín egna málstíl, og tvíkanna týdningarmiklar upplýsingar. Henda skjóta, endaliga gjøgnumgongdin tryggjar, at skjalfestingin er neyv, natúrlig, og at hon endamikið ljóðar sum tú.
+
+**Ímynda tær hesa støðu:**
+
+Tað hevur verið ein serliga strævin dagur við færri starvsfólkum enn vanligt, og tú stendur nú við fleiri uppgávum í senn: at skriva dagsins eygleiðingar, gera eina tilburðarfrágreiðing lidna og fyrireika eina stutta fráboðan til starvsfólkini. Tú hevur bara nakrar fáar minuttir, áðrenn foreldrini byrja at koma, og tær tørvar greiða og neyva skjalfesting uttan at skunda tær ov nógv ella gloyma týdningarmiklar smálutir.
 
 ---
-</prompt>
-### **2\) Swap missing materials fast**
 
-**Role:** Creative Sparring Partner
+**Gott dømi um birt:**
 
-**Scenario:** Today in Klaksvík, your art cupboard is unexpectedly locked, and the copier is out of toner. With just 2 pairs of child-safe scissors available, you're limited to crayons, paper plates, tape, yarn scraps, bottle caps, and cereal box cardboard. Lunch preparations start at 11:15, so cleanup must be extremely fast. Telling AI about these unexpected limitations helps it find creative yet practical substitutes instantly, so your activity can continue without disruption.
+\<prompt\>
 
-**Prompt:**
-<prompt>
-Help\! Today in Klaksvík our art cupboard is locked and the copier is out of toner.
+*Eg eri námsfrøðingur í einum barnagarði í Runavík (Føroyar).* Í dag var strævið við færri starvsfólkum. Eg skrivaði skjótt hesar notur niður:
 
-* My group: 9 children (4–5). My goal: fine-motor skills \+ colour words.  
-* Missing: All the good stuff... paint, glue, extra scissors, copier.  
-* What we *do* have: crayons, paper plates, masking tape, yarn scraps, bottle caps, cereal-box cardboard... but only 2 child-safe scissors for everyone.  
-* Timing: Lunch prep starts at 11:15, so I need cleanup to be very fast. Oh, and no balloons allowed.
+* **Dagligar eygleiðingar:** nógv orka í útileikinum; róligari seinnapartur; ábitin gekk væl; smá ósemja loyst skjótt.  
+* **Tilburður:** Lítið stoyt á spæliplássinum (kl. 10:15), skjót fyrstahjálp givin, barnið okay, foreldur kunnað við telefon.  
+* **Fráboðan:** Fokus í morgin \- meira skipaður innileikur; tilfar \- kanna byggiklossar; eini starvsfólkaboð send um at minna á regnklæðir.
 
-Can you give me 3 substitute activities \+ 1 zero-materials version?
+**Vinarliga skriva greitt og einfalt:**
 
-For each, please include:
+1. **Frásøgn til dagsbókina:** Tveir óheftir, neyvir setningar til okkara dagligu frásøgn, pluss eitt punkt undir "Hvat halda eyga við í morgin."  
+2. **Tilburðarfrágreiðing:** Stuttur, skipaður tekstur (2-3 reglur í hvørjum parti: Hvat hendi, Beinanvegin átøk, Uppfylging) klárur at líma inn í okkara oyðublað, pluss ein kekklisti "Smálutir ið mangla at vátta."  
+3. **Fráboðan:** Greið samanumtøka við dags enda (í mesta lagi fimm stutt punkt) at geva toyminum í morgin eitt skjótt yvirlit.
 
-* 3 short steps  
-* 1 cleanup/safety note  
-* a Faroese ↔ English word pair.
+Brúka natúrligt føroyskt mál. Halt tað óheft, sakligt, og **nýt ongantíð nøvn ella persónligar dátur**. Spyr meg bara, um okkurt er ógreitt.
 
-Needs to be really practical, thanks\!
-</prompt>
+\</prompt\>
+
 ---
 
-### **3\) Plan a micro-schedule for tight spaces**
+**Einføld uppfylgjandi birt (um fyrsta útkastið frá vitlíki ikki er heilt rætt):**
 
-**Role:** Creative Sparring Partner
+Kopi/peista eitt av hesum fyri skjótt at betra um títt útkast:
 
-**Scenario:** You're in Tvøroyri, supervising 12 children aged 3–5 alone, forced into a narrow hallway because the main classroom is being painted (fans running, paint smell noticeable). The hallway is narrow (1.4 m), lined with coat hooks, and has taped floor dots. Lights turn off without periodic movement, and a kitchen trolley needs to pass at 10:15. Providing these details lets AI plan a realistic rotation of activities adapted precisely to your challenging environment.
+* “Ger dagsins eygleiðingar einfaldari og styttri (bert ein setning).”  
+* “Eg vil hava eitt sindur meira í tilburðarfrágreiðingina — set mær nakrar spurningar fyri at fáa fleiri smálutir um beinleiðis átøkini.”  
+* “Set greiða áminning í fráboðanina um at tvíkanna tilfarið.”  
+* “Ger tónan óheftari og minni formellan yvirhøvur.”  
+* “Legg eina skjóta áminning afturat til starvsfólkini um ljóðstøðið.”
 
-**Prompt:**
-<prompt>
-I'm in a tough spot in Tvøroyri (Suðuroy). I’m alone with 12 children (3–5) and we're stuck in a 1.4 m hallway because our main room is being painted (fans on, paint smell).
-
-* The hallway: It's got coat hooks on one side and floor dots I've taped down. The motion-sensor lights keep going off without movement. Oh, and a kitchen trolley has to pass at 10:15.  
-* Theme: Weather words (*regn/rain, vindur/wind, kavi/snow*).
-
-Could you please build me a 45-minute micro-schedule? I need 3 rotating stations \+ a start/finish routine.
-
-For each station:
-
-* setup ≤1 min (I only have typical classroom items)  
-* 3 bullet steps  
-* 1 regroup signal (sound or gesture)  
-* 1 quieter variant for a sensitive child I have.
-
-Please make it realistic for one adult to manage\!
-</prompt>
 ---
 
-### **4\) Do a quick outing pre-mortem**
+Hesin álítandi skrivarin kann meira enn bara gera dagligar frásagnir ella tilburðarfrágreiðingar—hann kann laga til og einfalda eina rúgvu av skjalfestingaruppgávum, og hjálpa tær at minka um arbeiðið uttan fyri vanliga arbeiðstíð og hava yvirlit, sjálvt tá ið nógv er at gera:
 
-**Role:** Safety & Checklist Buddy
+* **Skjótt at skipa tilburðarfrágreiðingar, klárar til oyðubløð,** burturúr nøkrum fáum stuttum notum, so tú kanst skjalfesta greitt og miðvíst, sjálvt tá ið tíðin er knøpp.  
+* **At gera vikuligar samanumtøkur til ein stuttan og handføriligan vana,** so tú kanst festa hæddarpunkt og varligar ávaringar á blað upp á fáar minuttir heldur enn tímar—og fáa tíni vikuskiftiskvøld aftur.  
+* **Einfalt at gera innihaldsríkar samanumtøkur til menningarlýsingar,** við at binda tínar skjótu eygleiðingar beinleiðis at menningarmálum og koma við einføldum hugskotum til næstu stig, so regluligar eftirmetingar kennast natúrligar og yvirkomiligar.  
+* **Ómakaleyst at fyrireika greiðar fráboðanir á eina síðu til avloysarar ella nýggj starvsfólk,** so øll vita hvat tey skulu, tá ið brádligar broytingar henda, uttan at tað krevur eyka fundir ella strongd.
 
-**Scenario:** Tomorrow, you'll take 18 five-year-olds on a leaf hunt at Viðarlundin in Tórshavn. Your walking route passes noisy roadworks with narrow pavements, and slippery leaves make the park steps hazardous. There's a low barrier around a pond, and café toilets typically crowd around 10:30. Weather is predicted to be rainy and windy. With these specifics, AI can quickly highlight real risks and practical solutions to ensure a smooth outing.
+# **Tín samskiftishjálpari (Avvarðandi og starvsfelagar)**
 
-**Prompt:**
-<prompt>
-I'm planning an outing for tomorrow and want to check for risks. We’re taking 18 five-year-olds to Viðarlundin (a leaf hunt) with 3 adults.
+Vitlíki kann hjálpa tær at skriva stutt, vinalig og álitandi boð til bæði avvarðandi og starvsfelagar. Tað er sera týdningarmikið at minnast til, at tú ongantíð mást skriva persónligar upplýsingar (sum nøvn ella diagnosur).
 
-* Route hazards I'm worried about: noisy roadworks with narrow pavements; slippery leaf-covered steps in the park; there's a low pond barrier; and the café toilets get crowded around 10:30.  
-* Forecast: Not great. Rain, 12–15 m/s gusts, about 7°C.
+Tú mást altíð lesa tekstin ígjøgnum og góðkenna hann, áðrenn tú sendir hann. Í hesum dømunum vísir vitlíki altíð føroyska útkastið fyrst (merkt **ÚTKAST — FO**) og síðan tað enska.
 
-Can you give me a quick pre-mortem? I need:
-
-1. The Top 5 risks you see.  
-2. Simple mitigations for each.  
-3. What to cover in a 60-second staff brief before we go.
-
-Just need short, practical stuff, no personal data.
-</prompt>
 ---
 
-### **5\) Run an inclusion & sensory check**
+## **Høvuðsdømi: Stutt vaktaryvirlit (tá ið vaktir ikki ganga inn í hvørja aðra)**
 
-**Role:** Safety & Checklist Buddy
+Ímynda tær, at tú ert liðug/ur á vakt, og næsta vaktin kemur ikki, fyrr enn tú ert farin. Tíni notat eru kanska eitt sindur rótut.
 
-**Scenario:** You're organizing a collage activity for ten 3-4-year-olds in Sandavágur. The room has bare walls that echo loudly, causing one child to overstimulate easily. Two children are shy newcomers, and another is a Ukrainian speaker. There's an aquarium poster causing excitement over sharks, and you can borrow three carpet squares and a soft timer bell. Sharing these specifics with AI ensures it provides tailored strategies to manage sensory needs and include everyone comfortably.
+Tú hevur brúk fyri einum skjótum, greiðum yvirliti við 5 punktum til næstu vaktina. Hetta yvirlitið má ikki innihalda nøvn ella persónligar upplýsingar.
 
-**Prompt:**
-<prompt>
-Hi, I'm prepping for an activity in Sandavágur. We’re doing a fish collage from recyclables with 10 children (3–4).
+Sum ein eyka partur (bert til innanhýsis nýtslu) kanst tú biðja um eina "Støðu" (Grøn/Gul/Reyð) við eini stuttari, navnleysari grundgeving.
 
-* My group profile (no names): I have 1 child who is easily overstimulated, 2 shy newcomers, and 1 EAL speaker (Ukrainian).  
-* The room: It has echoey walls. There's also a big aquarium poster that gets them really excited about sharks.  
-* What I can use: I can borrow 3 carpet squares and a soft timer bell.
+### **Gott dømi um byrt (avrita/lima hetta):**
 
-Could you please make a Green / Amber / Red inclusion check for me?
+\<prompt\>
 
-I'm looking for:
+Umsmelta hesi grovu notat til eitt **stutt vaktaryvirlit** við 5 punktum.
 
-* likely barriers \+ concrete adaptations (materials, pacing, visuals)  
-* 2 picture-cue ideas  
-* 1 calm closing routine.
+**Uppseting:** 1\) Hæddarpunkt 2\) Ávaringar/Ansa eftir 3\) Lidnar uppgávur 4\) Næstu uppgávur 5\) Tíðindi.
 
-Needs to be short and doable, thanks\!
-</prompt>
+**Eyka regla (aftast):** Støða \= Grøn/Gul/Reyð \+ 1 stutt grundgeving.
+
+**Mál:** Føroyskt fyrst (**ÚTKAST — FO**), síðan enskt.
+
+**Stílur:** B1, neutralt, eingi nøvn ella diagnosur (brúka “Búfólk A/B”).
+
+Vinarliga spyr fyrst, um okkurt er ógreitt.
+
+*(Lima tíni navnleysu notat inn her – tíðarbil, virksemi, almennur hugstøði, uppgávur. Ongar persónligar dátur.)*
+
+### **Uppfylgjandi byrtir:**
+
+* "Ger eina styttri útgávu við 4 punktum til SMS."  
+* "Legg eitt jaligt hæddarpunkt frá kvøldinum afturat."  
+* "Být um raðfylgjuna: set ‘Næstu uppgávur’ ovast."  
+* "Broyt støðuna til Gul við eini neutralari grundgeving."  
+* "Umskriva við einfaldari B1-setningum."  
+* "Týð til enskt og danskt aftan á føroyskt."
+
+\</prompt\>
+
 ---
 
-### **6\) Draft a clear bilingual parent update**
+## **Fleiri hentir mátar at brúka henda leiklutin**
 
-**Role:** Parent-Comms Copilot
+**A) Neutral umorðing (“sig hetta betur”) — Innanhýsis ella til avvarðandi**
 
-**Scenario:** In Argir, a gale warning means you're requesting early child pickups at 14:30. Bus route \#1 delays and patchy mobile signals make parent communication tricky. Window blinds rattling scares some children, and snack time is moved earlier to ease stress. Giving AI these practical details helps produce clear, calm, reassuring communications, reducing parent anxiety and follow-up questions.
+* **Endamál:** Ger boðini greiðari og vinaligari; tekur dømandi orðingar burtur.  
+* **Byrt:** “Umskriva hesi navnleysu boð í einum neutralum, vinaligum og einføldum máli (B1). Halt teg bert til fakta, tak dóm burtur. **Føroyskt fyrst (ÚTKAST — FO), síðan enskt.** Ongar persónligar dátur. Vinarliga spyr fyrst, um okkurt er ógreitt.”
 
-**Prompt:**
-<prompt>
-I need to write a parent note for Argir Kindergarten. A gale is expected this afternoon (14 Nov 2025).
+**B) Áminning um avtalu/vitjan (við minnislista) — Til avvarðandi**
 
-* The plan: We’d like to ask for pickup at 14:30 if possible, but we’ll stay open for families who can’t make it.  
-* Other issues: Bus route \#1 will have delays, the mobile signal here is patchy, and the rattling blinds are unsettling some kids. We’ve also moved snack earlier to keep things calm.
+* **Endamál:** Minkar um mistøk; sigur nær/hvar og hvat skal takast við.  
+* **Byrt:** “Skriva eina stutta áminning til í morgin. **Nær:** á morgni/fyri døgurða. **Møtistað:** høvuðsinngongdin. **Tak við:** Samleikaprógv og heitan jakka. Brúka ‘Búfólk A’. **Føroyskt fyrst (ÚTKAST — FO), síðan enskt.** Ongar persónligar dátur. Vinarliga spyr fyrst, um okkurt er ógreitt.”
 
-Can you please draft two things for me?
+**C) Stytt, tillaga til miðil \+ týð — Innanhýsis/Til avvarðandi**
 
-1. A warm, clear parent note (100–120 words)  
-2. A short SMS reminder.
+* **Endamál:** Tillagar boðini til **SMS (≤160 tekn)** ella **Kjatt (≤300 tekn)**; varðveitir týdningin.  
+* **Byrt:** “Stytt hesi navnleysu notat niður til: a) SMS ≤160 tekn, b) Kjatt ≤300 tekn. Varðveit høvuðsinnihaldið. **Føroyskt fyrst, síðan enskt (og danskt um pláss er).** Ongar persónligar dátur. Vinarliga spyr fyrst, um okkurt er ógreitt.”
 
-Please answer in natural Faroese. I need a friendly tone, just plain words.
-</prompt>
+**D) Vinalig áminning (Kvittanir/Útløg) — Innanhýsis**
+
+* **Endamál:** Ein vinalig umsitingarlig áminning í 3 stigum.  
+* **Byrt:** “Skriva eina vinaliga áminning í 3 stigum um kvittanir/útløg. Stig: 1\) tak mynd → 2\) legg í brævbjálva → 3\) lat inn á skrivstovuni áðrenn kl. 18:00. **Føroyskt fyrst (ÚTKAST — FO), síðan enskt.** Ongar persónligar dátur. Vinarliga spyr fyrst, um okkurt er ógreitt.”
+
 ---
 
-### **7\) Create a mini trip FAQ for parents**
-
-**Role:** Parent-Comms Copilot
-
-**Scenario:** Your class will visit Fuglafjørður harbor’s lifeboat station. Low tide around 10:30 creates slippery conditions, the harbor siren may sound unexpectedly at 11:00, and only equipment (no child) photos are allowed. Clearly outlining these points lets AI produce a targeted, useful FAQ, answering parents' likely concerns upfront and saving your time.
-
-**Prompt:**
-<prompt>
-We’re taking the class to the Fuglafjørður harbor lifeboat station on 20 Nov, 09:45–11:15. I need to send a note home.
-
-* What they need: waterproofs, boots, snack.  
-* Key details for parents: It'll be slippery seaweed at low tide (\~10:30); the siren might sound at 11:00 (want to warn them\!); there's a lifejacket demo; and photos of equipment only (no child photos).
-
-Could you write a short, practical mini-FAQ for parents? It needs to cover timing, gear, snack, pickup, and contact info.
-
-Please answer in natural Faroese. Thanks\!
-</prompt>
----
-
-### **8\) Make a 30-second tidy-up story & gesture**
-
-**Role:** Story / Game / Image Maker
-
-**Scenario:** In Eiði, the wind howls ("giants singing") and tidy-up after play can be chaotic. Blocks go into a blue “boat box”, you use a soft bell to end the cleanup, and you want to introduce a tidy-up-loving puffin mascot. AI can quickly craft an engaging short story and gesture that make tidying fun and easy.
-
-**Prompt:**
-<prompt>
-I'm at Eiði preschool and I need a fun 30-second tidy-up story for my 4-year-olds. It’s really windy today (we say it’s “giants singing”).
-
-* Our routine details: The blocks go in a blue “boat box”, and we end the cleanup with a soft bell.  
-* Mascot: We're trying to introduce a tidy-up-loving puffin.  
-* Faroese words: Can you please include these words naturally: bíða (wait), røkt (care), and rudda upp (tidy up)?
-
-What I need: A tiny story, a repeatable motto, and a simple gesture we can all do together.
-
-Please answer in natural Faroese\!
-</prompt>
----
-
-### **9\) Turn bullet notes into daily logs**
-
-**Role:** Documentation Scribe
-
-**Scenario:** In Hoyvík, rainy weather kept you indoors; corridors smell of fresh paint, the kitchen radio is distracting, and you had to shift circle time earlier. Clearly detailing these realities helps AI quickly create precise, consistent daily logs that capture the day's atmosphere, saving your evening writing time.
-
-**Prompt:**
-<prompt>
-I'm trying to get my notes done for Hoyvík preschool. Today, rain kept us indoors. The corridors smelled of fresh paint, the kitchen radio was really distracting, and we had to move circle time earlier.
-
-* My rough notes:  
-  * Child A: stacked blocks; counted to five independently.  
-  * Child B: really interested in whales; drew a large tail.  
-  * Group: calm crayon sharing; got a noise spike after snack; but they settled with a quiet song. (Our quiet signal is two taps).
-
-Can you please turn these into 3 neutral daily log entries? I also need a one-line next step for each child/group.
-
-Please answer in natural Faroese.
-</prompt>
----
-
-### **10\) Draft a structured incident report**
-
-**Role:** Documentation Scribe
-
-**Scenario:** In Vestmanna, a child slipped due to a blocked drain at the water tray, bruising a knee. You've comforted the child, applied a cold pack, cleaned up, and contacted parents. Providing these specific details lets AI draft a clear, professional incident report instantly, reducing errors and stress.
-
-**Prompt:**
-<prompt>
-We just had an incident in Vestmanna and I need to write the report.
-
-* What happened: 13 Nov 2025, around 10:12. The water tray overflowed (drain was blocked), and Child A slipped.  
-* Injury: Minor knee bruise.  
-* Our response: We comforted them, used a cold pack, cleaned the area, and have already informed the parents.
-
-Can you please draft a clear, professional incident report for me? I need: what happened, immediate actions, child status, and follow-up recommendations (e.g., drain check, floor mat).
-
-Keep it concise. Please answer in natural Faroese.
-</prompt>
+Minst altíð til: **ongar persónligar dátur**, altíð **føroyskt fyrst (ÚTKAST)** og síðan enskt. Les altíð sjálv/ur ígjøgnum, áðrenn tú sendir, og **goym úrslitið í góðkendu skipanini** (t.d. í Word á felags drevinum). Royn teg fram við smáum tingum og goym góðar setningar, tú kanst brúka aftur.
 `;
 
 /**
