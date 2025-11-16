@@ -126,7 +126,7 @@ export default function Home() {
         {/* Hero Section */}
       <section
         id="hero"
-        className="relative min-h-[80vh] sm:min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden pt-20 sm:pt-0"
+        className="relative min-h-[80vh] sm:min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden pt-20 sm:pt-24 lg:pt-32"
       >
         {/* Video Background with Image Fallback */}
         <VideoBackground
