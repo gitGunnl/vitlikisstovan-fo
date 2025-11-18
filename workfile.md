@@ -2,3 +2,5 @@
 
 Blog links:
  user-guides/ai-for-kindergarten
+
+ user-guides/ai-for-caretakers-guide
