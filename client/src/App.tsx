@@ -37,10 +37,10 @@ function Router() {
       <Route path="/podcast" component={Podcast} />
       <Route path="/ai-guide" component={AIGuide} />
       <Route path="/user-guides" component={UserGuides} />
+      <Route path="/user-guides/ai-for-kindergarten-guide" component={AIForKindergartenGuide} />
+      <Route path="/user-guides/ai-for-caretakers-guide" component={AIForCaretakersGuide} />
       <Route path="/user-guides/getting-started" component={GettingStartedGuide} />
       <Route path="/user-guides/best-practices" component={BestPracticesGuide} />
-      <Route path="/user-guides/ai-for-caretakers" component={AIForCaretakersGuide} />
-      <Route path="/user-guides/ai-for-kindergarten" component={AIForKindergartenGuide} />
       <Route path="/annad-fra-vitlikisstovuni" component={AnnadFraVitlikisstovuni} />
       <Route component={NotFound} />
     </Switch>

@@ -26,6 +26,18 @@ export default function UserGuides() {
 
   const guides = [
     {
+      id: "ai-for-kindergarten",
+      title: "Vitlíki til barnagarðarbeiði: Minni skrivstovu arbeiði, meira spæl.",
+      description: "Vegleiðing til tey á gólvinum í barnagarðum um nýtslu av vitlíki í dagligum arbeiði.",
+      href: "/user-guides/ai-for-kindergarten-guide"
+    },
+    {
+      id: "ai-for-caretakers",
+      title: "Vitlíki til røktarfólk: Minni skriviarbeiði, meira spæl.",
+      description: "Vegleiðing til námsfrøðingar og røktarstarvsfólk um brúk av vitlíki í dagligum arbeiði.",
+      href: "/user-guides/ai-for-caretakers-guide"
+    },
+    {
       id: "ai-for-politicians",
       title: "Vitlíki til politikarir",
       description: "Ein handalig vegleiðing fyri politikarar um hvussu vitlíki kann stuðla við politiskari virksemi og átaksgerð.",
