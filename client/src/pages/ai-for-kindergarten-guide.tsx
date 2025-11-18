@@ -29,6 +29,102 @@ Eg vil fegin hava hjálp til at gera eina stutta vegleiðing til námsfrøðinga
 </prompt>
 
 Eftir prompt-dømi kemur ein vanligur tekstur aftur, við nøkrum *kursivari* og **feitari** tekstformatering.
+
+---
+
+## **Hvussu kann AI hjálpa í dagligi arbeiðinum?**
+
+AI kann vera ein ***stórur hjálpari*** í hvørjum degi í barnagarðinum. Her eru nøkur dømi um hvussu tú kanst brúka tað:
+
+* **Skriva dagbókar og skjøl** - AI kann hjálpa tær at skriva skjót og týdelig dagbókarskrá.
+* **Gera uppgávur** - Fáa hugskot til kreativari leikir og læriuppgávur.
+* **Samskipan við foreldur** - Hjálp til at skriva stuttligar og greið boð til mammu og pappu.
+
+<prompt>
+Eg eri barnagarðslærari í Tórshavn. Í dag høvdu vit eitt gott dagsforløp við malingarmynd og útivist. Børnini vóru virkin og fegin.
+
+Hjálp mær at skriva eina professionella dagbókarskrá (3-4 setningar) sum eg kann brúka í okkara kervi. Brúka føroyskt mál og neutralt tón.
+</prompt>
+
+### **Nýtslu viðmerkingar**
+
+Tað er mikilvægt at ***minnas*** um, at AI er eitt hjálpartól - ikki ein útskifting fyri tína fagligan dóm. Alla svar frá AI skulu altíð verða eftirkannað og tillagað til tínar serligu umstøður.
+
+## **Dømi um nýtislig prompt til barnagarðslærarar**
+
+Her eru fleiri dømi um hvussu tú kanst spyrja AI um hjálp:
+
+<prompt>
+Eg treng hjálp at skriva ein SMS til allar foreldur um veðurbroytingar í morgin.
+
+- Skriv á føroyskum
+- Stuttligt og greitt
+- Milda og vinarlig tón
+- Nevn at vit halda barnagarðin opinan, men foreldur kunnu koma fyrr um tey vilja
+</prompt>
+
+Henda prompt fer at geva tær eitt nýtisligt svar, sum tú kanst brúka beinleiðis ella broyta eftir tínum tørvi.
+
+### **Týdningin av greinum promptum**
+
+Ein góður prompt hevur fleiri deildirnar:
+
+1. **Kontekst** - Hvør ert tú og hvør er støðan?
+2. **Uppgáva** - Hvat vilt tú at AI skal gera?
+3. **Krav** - Hvussu skal úrslitið vera (mál, longd, stílur)?
+4. **Dømi** - Um møguligt, gev eitt dømi um hvat tú vilt.
+
+---
+
+## **Fleiri arbeiðsøki**
+
+AI kann eisini hjálpa við:
+
+* ***Fráboðanar til foreldur*** um serstøk tiltak ella broytingar
+* **Uppgávu- og virksemihugskot** til ymisk aldursbólk
+* **Íkornbeindir** tekstar til húsklokað ella heimasíður
+* ***Stuttar samantektir*** av langar reglugerðum ella leiðbeiningum
+
+<prompt>
+Vinarliga ger mær 5 stuttar hugskot til regnveðursvirksemi fyri børn í aldrinum 3-5 ár. 
+
+Øll virksemi skulu:
+- Vera inni í barnagarðinum
+- Brúka vanlig tilfar sum vit hava
+- Taka 15-30 minuttir
+- Vera spenandi og læruríkt
+
+Skriv á føroyskum við einføldum máli.
+</prompt>
+
+### **Viðvaring um persónligar upplýsingar**
+
+***Mikilvægt:*** Aldri set persónligar upplýsingar um børn, foreldur ella kollegur inn í AI-amboð. Brúka heldur almennar lýsingar sum "Búfólk A" ella "barn í 4 ára aldri".
+
+---
+
+## **Framhaldandi læring**
+
+Arbeiði við AI er ein dugnaður, sum batnar við roynd. Byrja við ***einføldum*** fyrispurningunum og smátt og smátt tak teg at fleiri flóknum uppgávum.
+
+Minst at AI er eitt tól, sum skal ***styrkja*** tínar evnir - ikki úbøta tín fagligan vit ella umsorgisgávu.
+
+<prompt>
+Kann tú hjálpa mær at planeggja eina vikuskipan fyri komandi viku?
+
+Tema: "Heyst og innhagging"
+
+Treng:
+- Mandag til fríggjadag
+- Hvønn dag ein høvuðsvirksemi (30-45 min)
+- Stuttar hugskot til frí leik
+- Tillagað tilfar
+
+Aldursbólkur: 3-5 ár
+Mál: Føroyskt
+</prompt>
+
+***Vinarliga royn!*** Meira tú brúkar AI, betri verður tú til at fáa tann rættu hjálp, sum tú tørvar í tínum dagligi arbeiði.
 `;
 
 // ---------------------------------------------------------------------------
