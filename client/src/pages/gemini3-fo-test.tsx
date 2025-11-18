@@ -5,13 +5,23 @@ import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import Section from "@/components/site/Section";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Printer, Copy, Check, PenTool } from "lucide-react";
+import { 
+  ArrowLeft, 
+  Printer, 
+  Copy, 
+  Check, 
+  PenTool, 
+  Sparkles, 
+  Bot, 
+  Info 
+} from "lucide-react";
 
 // --- Configuration & Content ---
 
 const BLOG_TITLE = "Test av eginleikunum hjá Gemini 3 at skriva føroyskt.";
-const BLOG_DESC = "Test av hvussu væl Gemini 3 dugur at skriva føroyskt.";
+const BLOG_DESC = "Ein demonstratión av hvussu væl Gemini 3 dugir at skriva føroyskt uttan hjálp.";
 
+// The content remains untouched to prove the point
 const blogContent = `
 # **Vitlíki á føroyskum: Hvussu lítla landið kann vinna stóra dystin**
 
@@ -134,10 +144,7 @@ const PromptCard = ({ text }: { text: string }) => {
 
   return (
     <div className="my-10 group">
-      {/* The Card Design */}
       <div className="relative bg-[#fcfcf9] dark:bg-stone-900 border-2 border-dashed border-stone-300 dark:border-stone-700 rounded-xl p-6 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-stone-400">
-
-        {/* Header / Label */}
         <div className="flex items-center justify-between mb-4 pb-4 border-b border-stone-200 dark:border-stone-800">
           <div className="flex items-center space-x-2 text-stone-500 dark:text-stone-400">
             <PenTool className="w-4 h-4" />
@@ -166,8 +173,6 @@ const PromptCard = ({ text }: { text: string }) => {
             )}
           </Button>
         </div>
-
-        {/* Content */}
         <pre className="whitespace-pre-wrap font-mono text-sm sm:text-base text-stone-700 dark:text-stone-300 leading-relaxed">
           {text.trim()}
         </pre>
@@ -181,7 +186,6 @@ const PromptCard = ({ text }: { text: string }) => {
 // ---------------------------------------------------------------------------
 
 const MarkdownBlock = ({ text }: { text: string }) => {
-  // Basic logic to separate lists from paragraphs for cleaner rendering
   const lines = useMemo(() => text.replace(/\r\n/g, "\n").split("\n"), [text]);
   const elements: JSX.Element[] = [];
   let listBuffer: string[] = [];
@@ -239,7 +243,6 @@ const MarkdownBlock = ({ text }: { text: string }) => {
       flushList();
     } else {
       flushList();
-      // Styling for standard paragraphs: Serif, larger size, relaxed leading
       elements.push(
         <p key={idx} className="mb-6 text-lg sm:text-xl leading-loose text-stone-700 dark:text-stone-300 font-serif">
           <RenderInlineText text={line} />
@@ -248,7 +251,7 @@ const MarkdownBlock = ({ text }: { text: string }) => {
     }
   });
 
-  flushList(); // Catch any trailing list
+  flushList();
 
   return <>{elements}</>;
 };
@@ -281,7 +284,7 @@ export default function AiForCaretakersGuide() {
         <div className="max-w-3xl mx-auto px-6 sm:px-8">
 
           {/* Navigation / Tools */}
-          <nav className="flex justify-between items-center mb-16 font-sans">
+          <nav className="flex justify-between items-center mb-10 font-sans">
             <Link href="/user-guides">
               <a className="inline-flex items-center text-sm font-medium text-stone-500 hover:text-stone-800 transition-colors group">
                 <ArrowLeft className="h-4 w-4 mr-2 transform group-hover:-translate-x-1 transition-transform" />
@@ -298,6 +301,47 @@ export default function AiForCaretakersGuide() {
             </Button>
           </nav>
 
+          {/* --- EDITOR'S NOTE / CONTEXT --- */}
+          <div className="bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-lg p-6 sm:p-8 mb-16 shadow-sm">
+            <div className="flex items-start gap-4">
+              <div className="p-2 bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-500 rounded-md mt-1 shrink-0">
+                <Info className="w-5 h-5" />
+              </div>
+              <div className="font-sans">
+                <h3 className="text-lg font-bold text-stone-900 dark:text-stone-50 mb-2">
+                  Um hesa greinina: Ein roynd við Gemini 3
+                </h3>
+                <p className="text-stone-600 dark:text-stone-300 leading-relaxed text-base mb-4">
+                   Teksturin, tú fert at lesa, er <strong>ikki</strong> skrivaður av einum menniskja, men av tí nýggja málmenninum <strong>Gemini 3</strong>.
+                </p>
+                <p className="text-stone-600 dark:text-stone-300 leading-relaxed text-base mb-4">
+                  Hettar var framferðarhátturin:
+                </p>
+                <ol className="list-decimal list-inside space-y-1 text-stone-600 dark:text-stone-300 bg-stone-50 dark:bg-stone-950/50 p-4 rounded-md mb-4 text-sm border border-stone-100 dark:border-stone-800">
+                  <li>Eg bað Gemini skriva eina grein um tøkniligt sjálvræði í Føroyum.</li>
+                  <li>Eg gav tí "Føroyskar Rættskrivingarreglur" sum PDF at styðja seg til.</li>
+                  <li>Síðani bað menni rættlesa sín egna tekst igjøgnum og rætta málsligar villur.</li>
+                </ol>
+                <p className="text-stone-600 dark:text-stone-300 leading-relaxed text-base font-medium">
+                  Úrslitið síggja tit niðanfyri. Eg havi <span className="underline decoration-amber-400/50 decoration-2 underline-offset-2">ikki broytt eitt komma</span>. Hetta er ráði teksturin fyri at vísa, á hvørjum stigi tøknin er á í dag.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* --- VISUAL SEPARATOR --- */}
+          <div className="relative flex py-8 items-center mb-8">
+            <div className="flex-grow border-t border-stone-300 dark:border-stone-700 border-dashed"></div>
+            <div className="flex-shrink-0 mx-4 flex items-center gap-2 text-stone-400 dark:text-stone-500">
+              <Bot className="w-4 h-4" />
+              <span className="bg-stone-100 dark:bg-stone-900 text-stone-500 dark:text-stone-400 px-3 py-1 rounded-full text-xs uppercase tracking-widest font-sans font-bold border border-stone-200 dark:border-stone-800">
+                Óviðgjørdur vitlíki tekstur
+              </span>
+              <Sparkles className="w-4 h-4" />
+            </div>
+            <div className="flex-grow border-t border-stone-300 dark:border-stone-700 border-dashed"></div>
+          </div>
+
           {/* Article Body */}
           <article className="selection:bg-stone-200 selection:text-stone-900 dark:selection:bg-stone-700 dark:selection:text-stone-50">
             {contentParts.map((part, index) => {
@@ -312,7 +356,7 @@ export default function AiForCaretakersGuide() {
           {/* Footer Note */}
           <div className="mt-20 pt-10 border-t border-stone-200 dark:border-stone-800 text-center">
             <p className="text-stone-400 italic text-sm">
-              Vitlíki hjálpir námsfrøðingum at fokusera uppá tað, sum skapar virði.
+              Vitlíki hjálpir okkum at fokusera uppá tað, sum skapar virði.
             </p>
           </div>
 
