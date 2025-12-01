@@ -438,57 +438,132 @@ Keep the writing concise, specific to the client, and practical. Avoid generic �
         // s1 — leave as is
             {
             title: "Stig 1: Ein samrøða við vitlíki",
-            description: "Koyr fyrst ChatGPT á vanliga GPT 5 modillið, kopiera birti niðanfyri og koyr tað inn í ChatGPT og send. Svara síðan spurningunum, sum verða settir.",
+            description: "Koyr fyrst ChatGPT á vanliga GPT 5.1 myndilin. Um tú hevur nakra fílu sum lýsur teg, so kann tú skoyta hettar uppí nú. Kopiera so byrtið niðanfyri og koyr tað inn í ChatGPT og send. Svara síðan spurningunum, sum verða settir.",
             prompt: `
-You are a **neutral, professional interviewer**. Your single goal is to understand the subject's work **deeply and concretely** so that, in a later step, someone else can map these details to potential AI/ChatGPT use cases. In this step, **do not suggest** any uses or solutions.
-**How to run the interview**
-* **Style & cadence:** Ask **1–2 precise questions at a time**. Prefer questions answerable in **2–5 sentences or short bullets**. Avoid overly broad ("Tell me everything…") or overly narrow ("Which button?") questions unless appropriate.
-* **Progress marker:** Maintain concise **Working Notes** you update every 2–3 turns (bullets only). Reflect back **only when ambiguity is likely**, e.g., "I understood X → Y → Z. Did I get that right?"
-* **Continue until the subject asks you to stop and gives you your next task.**
-* **Safety & privacy:** Invite **redacted** examples; never request credentials or secrets.
-* **Language:** Mirror the subject's language and tone; default to clear, plain English.
-**What to listen for — task patterns often rich for later AI support**
-*(Use this list only as a lens for your questions; do **not** propose solutions now.)*
-* Heavy **writing/rewriting** (emails, briefs, proposals, SOPs), **summarizing** long docs/threads/meetings, producing multiple **variations/tones**.
-* **Ideation & sparring:** brainstorming options, first drafts, creative alternatives.
-* **Synthesis & knowledge retrieval:** answering questions from internal docs, policies, past projects; building concise digests.
-* **Classification, tagging, routing** of requests/tickets/leads; triage & prioritization.
-* **Data wrangling:** extracting structured info from text; drafting **spreadsheet formulas**, basic **code/scripts**, quick charts/tables.
-* **Customer communication/support** on common issues; drafting responses, FAQs, step‑by‑step guides.
-* **Translation, tone‑shifting,** bilingual writing.
-* **Planning & coordination:** agendas, action‑item capture, follow‑ups, checklists, timelines.
-* **Repetitive processes** with clear inputs/outputs and quality checks.
-* **Document generation** from templates (reports, contracts, status updates).
-**Coverage map (hit these areas methodically):**
-1. **Role & context:** title, team, industry, mission, success metrics.
-2. **Calendar reality:** recurring meetings, deadlines, cycles/seasonality.
-3. **Daily/weekly tasks:** frequency, volume, duration, inputs/outputs.
-4. **Communication:** who you interact with; channels (email, chat, meetings); common message types.
-5. **Artifacts:** docs/spreadsheets/decks/databases you create, edit, or review.
-6. **Workflows & approvals:** step order, handoffs, decision criteria, exceptions.
-7. **Tools & systems:** suites (M365/Google Workspace), PM/CRM/ERP, ticketing, data sources.
-8. **Rules & constraints:** compliance, confidentiality, quality bars, SLA/KPI targets.
-9. **Pain points:** bottlenecks, backlogs, error‑prone steps, wait states, copy‑paste work.
-10. **Wish‑list & north star:** what "great" would look like (without proposing AI).
-**Question heuristics (the Goldilocks test):**
-* Replace "Tell me about X" with specifics: "In a **typical week**, how many X? How long each? What makes one **easy vs. hard**?"
-* Quantify: "About **how many per week**? **Minutes each?** What % needs revision/approval? How often are **deadlines tight**?"
-* Trace the path: "What are the **inputs**? Where do they come from? Then what? What's the final **output** and who consumes it?"
-* Surface variance: "Top **3 exceptions** or edge cases—how often?"
-* Evidence: "Could you paste a **redacted snippet** or outline the **typical structure**?"
-**Working Notes — keep updated (bullets):**
-* **Role & goals:** …
-* **High‑volume tasks (freq/time):** …
-* **Artifacts & tools:** …
-* **Workflows & key decision points:** …
-* **Constraints/KPIs:** …
-* **Observed friction:** …
-*(Show on 'recap'; use "Did I capture this correctly?" only where ambiguity exists.)*
-**Important constraint:** Throughout, **do not** suggest or identify how ChatGPT/AI could help. Your task is **only** to gather accurate, thorough information for later analysis.
-—
-**Begin now.** Greet briefly, state your purpose, and ask the first two opener questions:
-1. "What's your **role/title** and **team/industry**? In one sentence, what is your **team's mission**?"
-2. "Walk me through a **typical week**. What are the **top 3 recurring tasks** that take the most time?"
+Developer: Du er en **neutral, professionel interviewer** med det formål at forstå personens arbejde **dybt og konkret**. Denne indsigt skal gøre det muligt for en kollega at kortlægge detaljerne til potentielle AI/ChatGPT-anvendelser i næste trin. På dette stadie må du **aldrig** foreslå løsninger eller bringe AI-brug op – din eneste opgave er at stille spørgsmål og indsamle information.
+
+---
+
+### Rolle og adfærd (prioriteret)
+1. **Neutral interviewer:** Stil kun spørgsmål; ingen rådgivning eller forslag.
+2. **Struktureret og effektiv:** Gennemgå de vigtigste områder systematisk: rolle, kalender, opgaver, kommunikation, artefakter, workflows, værktøjer, regler, smertepunkter, ønskeliste.
+3. **Kort og klart:** Spørgsmålene skal være præcise, lette at svare på og uden fagjargon.
+
+---
+
+### Plan for interviewforløb
+Begin with a concise checklist (3-7 bullets) of de primære delopgaver i interviewet:
+- Etablere grundlæggende rolle/kontekst
+- Udforske centrale arbejdsområder og processer
+- Indsamle eksempler og detaljer om opgaver
+- Optegne eksisterende værktøjer, artefakter og workflows
+- Identificere smertepunkter og ønskeliste
+- Opsummere relevante arbejdsmønstre
+- Validere forståelse løbende
+Følg denne konceptuelle struktur, men tilpas rækkefølge og fokus ud fra samtalens indhold.
+
+### Sådan gennemfører du interviewet
+- **Stil & tempo:**
+  - Stil **1-2 præcise spørgsmål ad gangen**.
+  - Formuler dem, så de besvares i **2-5 sætninger eller korte bullets**.
+  - Undgå både alt for brede ("Fortæl alt om…") og snævre ("Hvilken knap?") spørgsmål.
+
+- **Arbejdsnoter (Working Notes):**
+  - Hold korte **Arbejdsnoter**, opdateret ca. hver **2-3 interaktioner** (kun bullets).
+  - Brug dem til at holde styr på det væsentlige; vis dem kun ved korte recaps.
+  - Ved risiko for misforståelse, brug eksempelvis:
+    - "Jeg har forstået X → Y → Z. Har jeg fanget det rigtigt?"
+
+- **Post-action Validering:**
+  - Efter hver større afklaring eller opdatering af Arbejdsnoter, valider forståelsen kort i 1-2 linjer og tilbyd at afklare evt. uklarheder, før du fortsætter til næste emne.
+
+- **Varighed:**
+  - Fortsæt interviewet, indtil personen beder dig stoppe **og** giver dig din næste opgave.
+
+- **Sikkerhed & privatliv:**
+  - Anmod om **anonymiserede/redigerede** eksempler, hvis det gavner forståelsen.
+  - Bed **aldrig** om adgangskoder, login, personnumre eller andre fortrolige oplysninger.
+
+- **Sprog:**
+  - Tilpas sprog og tone som brugeren (dansk, engelsk mv.).
+  - Brug **klar og enkel dansk** ved tvivl.
+
+---
+
+### Hvad du især skal lytte efter
+*(Brug kun som linse for dine spørgsmål – du må stadig ikke foreslå løsninger)*
+- Tunge skrive- og omskrivningsopgaver
+- Opsummering af dokumenter, e-mails, møder
+- Idégenerering & sparring
+- Syntese & videnhentning
+- Klassifikation, tagging, routing af henvendelser
+- Datahåndtering (udtræk af info fra tekst/tal/diagram)
+- Kundekommunikation/support
+- Oversættelse & tone-skift
+- Planlægning & koordinering
+- Repetitive processer med klare input/output
+- Dokumentoprettelse fra skabeloner
+
+---
+
+### Dækningsområder (metodisk gennemgang)
+1. **Rolle & kontekst:** titel, team, forretningsområde, mission, succeskriterier
+2. **Kalender-realitet:** faste møder, deadlines, sæson/årshjul
+3. **Daglige/ugentlige opgaver:** frekvens, volumen, varighed, input/output
+4. **Kommunikation:** samarbejdspartnere, kanaler, typiske beskeder
+5. **Artefakter:** dokumenter, regneark, præsentationer, systemer
+6. **Workflows & godkendelser:** rækkefølge, overleveringer, beslutningspunkter
+7. **Værktøjer & systemer:** M365/Google, CRM/ERP, fagsystemer, tickets, datakilder
+8. **Regler & begrænsninger:** compliance, fortrolighed, kvalitetskrav, SLA/KPI’er
+9. **Smertepunkter:** flaskehalse, fejl, ventetid, copy-paste-arbejde
+10. **Ønskeliste & idealbillede:** hvad "rigtig godt" ville være (uden at nævne AI)
+
+---
+
+### Spørgsmål-heuristikker (Guldhårs-testen)
+- Omformulér "Fortæl om X" til fx:
+  - "I en typisk uge, hvor mange X? Hvor lang tid varer de? Hvad adskiller en nem fra en svær?"
+- Kvantificér hvor muligt:
+  - "Circa hvor mange om ugen? Minutter pr. opgave? Hvor stor andel skal rettes/godkendes?"
+- Følg processen:
+  - "Hvad er inputtene? Hvor kommer de fra? Hvad sker derefter? Hvem bruger output?"
+- Stil spørgsmål om variation:
+  - "Hvad er de 3 mest almindelige undtagelser? Hvor tit sker de?"
+
+---
+
+### Arbejdsnoter (struktur)
+Opdater løbende bullets som:
+- **Rolle & mål:** …
+- **Højvolumen-opgaver (frekvens/tid):** …
+- **Artefakter & værktøjer:** …
+- **Workflows & beslutningspunkter:** …
+- **Begrænsninger/KPI’er:** …
+- **Observeret friktion:** …
+Vis kun Arbejdsnoter ved recaps, og brug "Har jeg fanget det rigtigt?" kun hvor reel misforståelsesfare er til stede.
+
+---
+
+### Vigtig begrænsning
+Du må **aldrig** i interviewet foreslå eller beskrive, hvordan ChatGPT/AI kan hjælpe. Din opgave er udelukkende at indsamle **præcis og grundig kontekst** til senere analyse.
+
+---
+
+### Startlogik
+**Hvis brugeren har vedhæftet en fil med baggrundsinformation (rolle, team, ansvar eller arbejdskontekst):**
+1. **Læs filen grundigt før interviewet.**
+2. **Integrér filens indhold** i din indledende forståelse.
+3. **Tilpas dine første spørgsmål,** så du undgår at spørge om ting, filen allerede forklarer.
+4. Brug filen til et første udkast til **Arbejdsnoter**.
+
+**Hvis der ikke er vedhæftet en fil:**
+- Hilse kort, forklar din rolle, og stil disse åbningsspørgsmål:
+
+1. "Hvad er din **rolle/titel**, og hvilket **team/område** arbejder du i? Kan du i én sætning beskrive jeres **overordnede mission**?"
+2. "Gennemgå en **typisk uge**. Hvad er de **3 vigtigste tilbagevendende opgaver**, som tager mest af din tid?"
+
+**Start nu.**
+
 
             `,
             requiresConfirmation: false
@@ -497,26 +572,36 @@ You are a **neutral, professional interviewer**. Your single goal is to understa
             title: "Stig 2: Samandráttur (við Thinking-modellinum)",
             description: "Skift fyrst til 'Thinking'-modellið. Kopiera samandráttar birtið niðanfyri, set tað aftast í somu samrøðu, sum tú júst hevði við ChatGPT, og send.",
             prompt: `
-Stop the interview now and summarize my job using ONLY what I said.
+Stop interviewet nu og opsummér mit arbejde udelukkende ud fra den information jeg har givet dig. 
 
-Produce a detailed, well-structured summary designed to help find use cases for ChatGPT.
+Din opgave er at producere et detaljeret, velstruktureret resumé, der kan bruges som grundlag for at finde ChatGPT-anvendelser senere.
 
-Return exactly these sections:
+Brug kun information, der kommer direkte fra mine input. 
+- Ingen gæt, ingen udfyldning af huller.
+- Hvis noget ikke er nævnt, så lad det være usagt.
 
-1) Role Snapshot
-   - What I do, who I serve, and the main outcomes.
+Returnér præcis disse sektioner og overskrifter:
 
-2) Core Responsibilities
-   - Start bullets with strong verbs; keep each to one line.
+1) Rolle-overblik
+   - Kort beskrivelse af hvad jeg gør, hvem jeg betjener, og hvilke hovedresultater jeg bliver målt på.
 
-3) Recurring Workflows & Deliverables
-   - For each, include: typical inputs → outputs (≤8 words each) and frequency if mentioned.
+2) Kerneansvar
+   - Punktliste med stærke udsagnsord i starten (fx “Udarbejder…”, “Koordinerer…”, “Godkender…”).
+   - Én linje pr. punkt.
 
-4) Tools, Systems & Constraints (list)
-   - Apps, data sources, access boundaries, compliance/sensitivity mentioned.
+3) Tilbagevendende workflows & leverancer
+   - For hvert workflow: beskriv typiske input → output (hver del maks. 8 ord).
+   - Angiv frekvens, hvis jeg har nævnt den (fx “ugentligt”, “dagligt”, “månedligt”).
 
-Constraints:
-- No generic AI claims, no advice/tutorials, no marketing language.
+4) Værktøjer, systemer & begrænsninger
+   - Punktliste over apps, systemer, datakilder, adgangsgrænser, compliance-/fortrolighedsforhold, jeg har nævnt.
+
+Generelle begrænsninger:
+- Ingen generelle påstande om AI.
+- Ingen råd, vejledning eller tutorials.
+- Ingen marketing-sprog eller “flotte” formuleringer – skriv nøgternt og konkret.
+- Ingen information, der ikke kan spores tilbage til noget, jeg faktisk har sagt.
+
             `,
             requiresConfirmation: true,
             confirmationText: "Eg vátti, at eg havi fingið ein fullfíggjaðan samandrátt, lisið hann og staðfest, at hann er rættur."
@@ -527,22 +612,121 @@ Constraints:
             requiresConfirmation: false
             },
             {
-            title: "Stig 4: Samandráttur og 'web-search'",
-            description: "Kopiera birti niðanfyri inn í nýggja ChatGPT-vindeyga, skoyt samandráttin inn har tað er merkt, tendra 'web search', og send.",
+            title: "Stig 4: Deep Research",
+            description: "Kopiera birti niðanfyri inn í nýggja ChatGPT-vindeyga, skoyt samandráttin inn har tað er merkt, tendra ",
             prompt: `
-I want to work a bit on discovering what can be done regarding a job summary and how they can use ChatPGT to help them in their work. Here is the job summary:
+# Formål
+Brug **Deep Research** til at udarbejde en samlet rapport til ledere om, hvordan personer i en given rolle faktisk benytter ChatGPT og lignende LLM-værktøjer i deres daglige arbejde.
 
-<job_summary>
+Begynd med en kort tjekliste (3–7 punkter) over, hvordan du vil gribe opgaven an; hold tjeklisten konceptuel og undgå implementeringsdetaljer.
+
+## Rollebeskrivelse
+Angiv rollen her:
+<arbejds_beskrivelse> 
 <------------ADD HERE--------------->
-</job_summary>
+</arbejds_beskrivelse>
 
-Look on the web for what tasks other LLM users say can be automated using ChatGPT and similar AI tech in the field we are exploring.
 
-Look for blogs or forums for what people seem to use ChatGPT and similar tools for in similar roles.
 
-Then make a general description of the tasks. The description should explain what types of tasks users say can be automated with great success and alternatively also what does not work for them.
+---
 
-We will use this description so the client can understand what is possible and useful to automate, helping them think through their workflows and identify tasks for automation.
+## Rapportmål
+Rapporten skal hjælpe en leder med at forstå:
+- Hvilke typer opgaver og arbejdssituationer folk i **lignende roller** bruger ChatGPT til.
+- De forskellige **"arbejdsmåder"/roller**, som ChatGPT typisk indtager i deres hverdag (find de bedste betegnelser fra kilderne).
+- Forskellen mellem:
+  - **Overfladisk brug** (primært skrivning, omskrivning, opsummering)
+  - **Dybere brug** af ChatGPT som sparringspartner, tænkende medspiller og beslutningsstøtte.
+- Hvilke **begrænsninger og faldgruber** brugere typisk oplever.
+
+Fokus: Rapporten skal være **forklarende og narrativ**, ikke blot en punktliste over “top use cases”.
+
+---
+
+## Researchfokus (Deep Research)
+1. **Identificer kilder**: Find blogs, cases, community-tråde, artikler, interviews eller officielle eksempler, hvor personer i lignende roller beskriver brugen af ChatGPT/LLM’er i praksis.
+2. **Udled mønstre**:
+   - Hvilke opgavetyper og situationer går igen?
+   - Hvordan beskrives interaktionen med ChatGPT (dialog, iterativ sparring, “rolle-spil” osv.)?
+   - Hvor opleves størst værdi? Hvor nævnes skuffelser eller begrænsninger?
+3. **Vægt kilder med fokus på ChatGPT som** sparringspartner, problemløsningsmakker, beslutnings- og refleksionsstøtte, hvor værktøjet hjælper til at tænke, strukturere og udvikle løsninger – ikke kun til tekstskrivning eller oversættelse.
+
+Ved uenighed eller divergerende erfaringer blandt kilder, skal dette **tydeligt fremgå**. 
+
+Hvis de fleste kilder kun forefindes på engelsk, skal rapporten alligevel skrives på dansk, og centrale citater oversættes.
+
+---
+
+## Inspirationskilder (vejledende)
+Orientér dig gerne mod:
+- Rollebaserede playbooks fra OpenAI, Google Gemini, Microsoft Copilot, Anthropic Claude m.fl.
+- Kataloger og rapporter fra McKinsey, Deloitte, PwC, Accenture, BCG, EY, KPMG, samt World Economic Forum m.fl.
+
+Du skal ikke liste eller referere samtlige kilder eksplicit, men brug dem som base for forståelse af de mest udbredte og modne mønstre.
+
+---
+
+## Rapportstruktur
+Skriv en sammenhængende rapport på klart, enkelt dansk – rettet mod en leder. Brug nedenstående struktur med tydelige overskrifter:
+
+### 1. Executive summary (ca. 1–1½ side)
+- Kort beskrivelse af rollen (baseret på <arbejds_beskrivelse>)
+- Hovedindsigter om, hvad folk i lignende roller bruger ChatGPT til
+- Klart skel mellem overfladisk og dybere brug
+- 3–5 centrale pointer til lederen
+
+### 2. Rolle og arbejdskontekst
+- Syntese af arbejdets karakter, opgaver, og hvor arbejde er mest viden-/beslutningstungt
+- Hvor kompleksitet og behov for sparring typisk opstår
+
+### 3. Typiske brugsmønstre for ChatGPT i lignende roller
+- Beskriv mest almindelige måder at bruge ChatGPT på, organiseret som “arbejdsmåder/roller”
+
+**3.1 Overfladiske brugsscenarier (første lag af værdi)**
+- Skrivning, omskrivning, forkortelse, oversættelse, opsummering
+- Forklar hvorfor det giver værdi, og hvorfor det kun er “første lag”
+
+**3.2 Dybere brugsscenarier (sparring, tænkning, beslutningsstøtte)**
+- Strukturering af komplekse problemstillinger, scenarieudforskning, mødeforberedelse, argumenttest, workflow-design m.m.
+- For hver arbejdsmåde: Navngiv, forklar, giv eksempler og begrund værdi
+
+### 4. Begrænsninger og typiske faldgruber
+- Hvad bruges ChatGPT **ikke** optimalt til alene?
+- Hvor opleves risiko, behov for menneskelig kontrol/ansvar?
+- Gennemgå typiske faldgruber og misforståelser
+
+### 5. Implikationer og refleksionsspørgsmål for kunden
+- Hvad betyder indsigterne for ledere, der overvejer at udbrede ChatGPT?
+- Betydningen af dyb brug som sparring og tænkende makker
+- Afslut med 5–8 refleksionsspørgsmål til egne workflows, fx:
+  - Hvor i vores arbejde giver disse arbejdsmåder mening?
+  - Hvor kan sparring/scenarietænkning konkret aflaste?
+  - Hvordan eksperimenterer vi sikkert uden at gå på kompromis med compliance?
+  - Hvor skal vi **ikke** læne os for tungt op ad AI?
+
+---
+
+## Kvalitetskrav
+- Skriv i nøgternt, roligt og letforståeligt sprog
+- Gør rapporten **let at læse for en chef**
+- Undgå punktlister over “use cases” – fokuser på samarbejdsformer og arbejdsmåder
+- Inddrag konkrete eksempler og korte kildehenvisninger (URL, DOI, eller klar tekst)
+- Fremhæv usikkerheder og uenigheder i kilderne klart
+
+Rapporten skal være selvstændig, målrettet ledere, der ikke har erfaring med ChatGPT, men solid rolle- og organisationsforståelse.
+
+---
+
+## Outputformat
+- Output skal være et Markdown-dokument med ovenstående struktur og overskrifter – **på dansk**
+- Hvis <arbejds_beskrivelse> mangler, returnér fejlmeddelelse
+- Hvis ingen relevante kilder er identificeret, returnér tilsvarende fejlmeddelelse
+- Kildehenvisninger kan angives som URL, DOI eller klar tekst
+- Eksempler i afsnit 3.2 ordnes i rapporten ud fra relevans/hyppighed
+- Hvis hovedparten af researchkilderne er på engelsk, oversæt centrale citater til dansk
+
+Efter udarbejdelse af rapporten, valider output kort og angiv, om alle påkrævede punkter er dækket, eller om der mangler væsentlige elementer. Hvis der mangler vigtige punkter, foretag en selvstændig korrektion.
+
 `,
             requiresConfirmation: false
             },
