@@ -21,7 +21,7 @@ export function WorkshopLandingPage({ workshop, onLabSelect }: WorkshopLandingPa
             Vælkomin til vitlíkisverkstovu
           </h1>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Vel verkstovuna niðanfyri.
+            Vel venjing niðanfyri.
           </p>
         </div>
 
@@ -47,7 +47,7 @@ export function WorkshopLandingPage({ workshop, onLabSelect }: WorkshopLandingPa
               <CardContent>
                 <div className="space-y-3">
                   <div className="text-sm text-muted-foreground">
-                    <p className="font-semibold mb-2">Innihaldar:</p>
+                    <p className="font-semibold mb-2">Inniheldur:</p>
                     <ul className="space-y-1">
                       {lab.steps.slice(0, 3).map((step, index) => (
                         <li key={index} className="flex items-start gap-2">
@@ -80,7 +80,7 @@ export function WorkshopLandingPage({ workshop, onLabSelect }: WorkshopLandingPa
 
         <div className="mt-12 text-center">
           <p className="text-sm text-muted-foreground">
-            Tú kanst altíð koma aftur til hesa síðuna fyri at velja eitt annað lab.
+            Tú kanst altíð koma aftur til hesa síðuna fyri at velja eina venjing.
           </p>
         </div>
       </div>
