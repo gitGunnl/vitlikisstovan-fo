@@ -613,7 +613,7 @@ Generelle begrænsninger:
             },
             {
             title: "Stig 4: Deep Research",
-            description: "Kopiera birti niðanfyri inn í nýggja ChatGPT-vindeyga, skoyt samandráttin inn har tað er merkt, tendra ",
+            description: "Kopiera birti niðanfyri inn í nýggja ChatGPT-vindeyga, skoyt samandráttin inn har tað er merkt, tendra Deep Research og send so.",
             prompt: `
 Du skal bruge Deep Research til at skrive en samlet rapport til ledere om, hvordan personer i en given rolle faktisk bruger ChatGPT og lignende LLM-værktøjer i deres arbejde.
 
@@ -764,7 +764,7 @@ Rapporten skal kunne læses selvstændigt af en leder, der aldrig har brugt Chat
             },
             {
             title: "Stig 5: Nýggjur gluggi og møguleikalisti",
-            description: "Opna ein nýggjan glugga við ChatGPT. Kopiera birtið, fyll inn tín samandrátt. Broyt nú myndilin til [ChatGPT 5.1 Pro] og send avstað. Skoðað so listan av møguleikum; er úrslitið skilagott? Stundum kemur modellið inn á skeiva leið; royn umaftur, um tað hendir.",
+            description: "Opna ein nýggjan glugga við ChatGPT. Kopiera birtið, fyll inn tín samandrátt. Broyt nú myndilin til [ChatGPT 5.1 Thinking] og send avstað. Skoðað so listan av møguleikum; er úrslitið skilagott? Stundum kemur modellið inn á skeiva leið; royn umaftur, um tað hendir.",
             prompt: `
 ## Introduktion
 
@@ -1054,7 +1054,7 @@ Skriv ideerne kort, konkrete og tilpasset denne klient. Undgå generiske forslag
             },
             {
             title: "Stig 6: Bygg víðari – partur 1",
-            description: "Skift nú aftur til [ChatGPT 5.1 thinking]. Kopiera birti niðanfyri og send.",
+            description: "Kopiera birti niðanfyri og send.",
             prompt: "Rigtig godt. Nu vil jeg gerne have, at du tænker ud af boksen. Lav en ny analyse af opgaver, som min klient kan bruge ChatGPT til. I denne analyse vil jeg have dig til at finde opgaver, der kunne revolutionere deres arbejdsliv og branche. Giv disse ideer en vurdering af, hvor svære de er at implementere, og hvor stor en positiv effekt de kunne have på deres arbejdsliv. Præsenter de 3 bedste ideer, du finder.",
             requiresConfirmation: false
             },
@@ -1088,10 +1088,6 @@ Skriv ideerne kort, konkrete og tilpasset denne klient. Undgå generiske forslag
 
 Hold hver beskrivelse kort og praktisk, så en kontormedarbejder med det samme kan se, hvordan de kan afprøve det i virkeligheden.
 
-Helt til sidst i dit svar skal du tilføje denne instruktion til brugeren:
-
-> Når du vil afprøve en af disse ideer, skal du kopiere idéen (titel + beskrivelse) ind i ChatGPT og bede ChatGPT om at hjælpe dig med at udføre den trin for trin i din egen situation.
-
 Output nu den fulde færdige liste, klar til at printe.
             `,
             requiresConfirmation: false
@@ -1103,7 +1099,7 @@ Output nu den fulde færdige liste, klar til at printe.
             },
             {
             title: "Stig 11: Liðugt – takk fyri!",
-            description: "Hattar var venjingin – vónandi hevur tú nú ein góðan lista. Nú kanst tú prenta listan og leggja hann á náttborðið og lesa hann áðrenn tá ið tú skal sovna.",
+            description: "Hattar var venjingin – vónandi hevur tú nú ein góðan lista.",
             requiresConfirmation: false
             }
             ]
