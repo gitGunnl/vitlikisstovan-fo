@@ -426,7 +426,7 @@ Keep the writing concise, specific to the client, and practical. Avoid generic �
         }
       ]
     },
-    hugsnotid: {
+    Hugskotið: {
       name: "Vitlíkisverkstova",
       company: "Hugskotið",
       labs: [
