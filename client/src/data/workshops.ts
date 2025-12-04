@@ -1073,7 +1073,7 @@ Skriv ideerne kort, konkrete og tilpasset denne klient. Undgå generiske forslag
             {
             title: "Stig 8: Ger listan",
             description: "Kopiera birtið inn í ChatGPT og send.",
-            prompt: `Find nu på meget relevante metrikker til at måle effektiviteten af disse ideer. Gennemgå derefter alle ideerne, og ranger dem ud fra dine metrikker. Præsenter til sidst en sorteret liste over alle ideerne.`,
+            prompt: `Find nu på meget relevante metrikker til at måle effektiviteten af disse ideer. Gennemgå derefter alle ideerne, og ranger dem ud fra dine metrikker. Præsenter til sidst en sorteret liste over alle 21 idéer.`,
             requiresConfirmation: false
             },
             {
