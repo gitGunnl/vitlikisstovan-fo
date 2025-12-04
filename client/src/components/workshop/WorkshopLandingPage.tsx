@@ -1,4 +1,4 @@
-import { Workshop, Lab } from "@/data/workshops";
+import { Workshop, Lab } from "@/data/workshops/index";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { ArrowRight, BookOpen, Users } from "lucide-react";

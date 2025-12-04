@@ -17,7 +17,7 @@ import {
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog";
 import { useToast } from "@/hooks/use-toast";
-import { getWorkshopByPassword, Workshop, WorkshopStep, Lab } from "@/data/workshops";
+import { getWorkshopByPassword, Workshop, WorkshopStep, Lab } from "@/data/workshops/index";
 import { Copy, ArrowRight, ArrowLeft, Lock, CheckCircle, FileDown, Download } from "lucide-react";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
@@ -249,7 +249,7 @@ export default function Verkstova() {
                         <Button
                           variant="outline"
                           size="sm"
-                          onClick={() => handleCopyPrompt(step.prompt)}
+                          onClick={() => step.prompt && handleCopyPrompt(step.prompt)}
                           aria-label={`Avrita birt ${index + 1}`}
                           data-testid={`button-copy-prompt-${index}`}
                         >
