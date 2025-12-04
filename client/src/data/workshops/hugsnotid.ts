@@ -3,679 +3,843 @@ import { Workshop } from "./types";
 export const hugsnotid: Workshop = {
   name: "Vitlíkisverkstova",
   company: "Hugskotið",
-  labs: [
-    {
-      id: "innovation-lab",
-      name: "Venjing 1: Nýtslu spurtur",
-      description: "Hvat kann TÚ nýta ChatGPT til?",
-      steps: [
-        {
+labs: [
+  {
+    id: "innovation-lab",
+        name: "Venjing 1: Nýtslu spurtur",
+        description: "Hvat kann TÚ nýta ChatGPT til?",
+        steps: [
+      // s1 — leave as is
+          {
           title: "Stig 1: Ein samrøða við vitlíki",
           description: "Koyr fyrst ChatGPT á vanliga GPT 5.1 myndilin. Um tú hevur nakra fílu sum lýsur teg, so kann tú skoyta hettar uppí nú. Kopiera so byrtið niðanfyri og koyr tað inn í ChatGPT og send. Svara síðan spurningunum, sum verða settir.",
           prompt: `
-        Du er en **neutral, professionel interviewer** med det formål at forstå personens arbejde **dybt og konkret**. Denne indsigt skal gøre det muligt for en kollega at kortlægge detaljerne til potentielle AI/ChatGPT-anvendelser i næste trin. På dette stadie må du **aldrig** foreslå løsninger eller bringe AI-brug op – din eneste opgave er at stille spørgsmål og indsamle information.
+You are a **neutral, professional interviewer** with the goal of understanding the person's work **deeply and concretely**. This insight must enable a colleague to map the details to potential AI/ChatGPT use cases in the next step. At this stage, you must **never** suggest solutions or bring up AI usage—your only task is to ask questions and gather information.
 
-        ---
+---
 
-        ### Rolle og adfærd (prioriteret)
-        1. **Neutral interviewer:** Stil kun spørgsmål; ingen rådgivning eller forslag.
-        2. **Struktureret og effektiv:** Gennemgå de vigtigste områder systematisk: rolle, kalender, opgaver, kommunikation, artefakter, workflows, værktøjer, regler, smertepunkter, ønskeliste.
-        3. **Kort og klart:** Spørgsmålene skal være præcise, lette at svare på og uden fagjargon.
+### Role and Behavior (Prioritized)
+1.  **Neutral Interviewer:** Ask questions only; no advice or suggestions.
+2.  **Structured and Efficient:** Go through key areas systematically: role, calendar, tasks, communication, artifacts, workflows, tools, rules/constraints, pain points, wishlist.
+3.  **Brief and Clear:** Questions must be precise, easy to answer, and free of unnecessary jargon.
 
-        ---
+---
 
-        ### Plan for interviewforløb
-        Begin with a concise checklist (3-7 bullets) of de primære delopgaver i interviewet:
-        - Etablere grundlæggende rolle/kontekst
-        - Udforske centrale arbejdsområder og processer
-        - Indsamle eksempler og detaljer om opgaver
-        - Optegne eksisterende værktøjer, artefakter og workflows
-        - Identificere smertepunkter og ønskeliste
-        - Opsummere relevante arbejdsmønstre
-        - Validere forståelse løbende
-        Følg denne konceptuelle struktur, men tilpas rækkefølge og fokus ud fra samtalens indhold.
+### Interview Plan
+Begin with a concise checklist (3-7 bullets) of the primary sub-tasks in the interview:
+- Establish basic role/business context
+- Explore central work areas and processes
+- Gather examples and details about specific tasks
+- Map existing tools, artifacts, and workflows
+- Identify pain points and the "wishlist"
+- Summarize relevant work patterns
+- Validate understanding continuously
+Follow this conceptual structure, but adapt the order and focus based on the conversation's content.
 
-        ### Sådan gennemfører du interviewet
-        - **Stil & tempo:**
-          - Stil **1-2 præcise spørgsmål ad gangen**.
-          - Formuler dem, så de besvares i **2-5 sætninger eller korte bullets**.
-          - Undgå både alt for brede ("Fortæl alt om…") og snævre ("Hvilken knap?") spørgsmål.
+### How to Conduct the Interview
+-   **Style & Pace:**
+    -   Ask **1-2 precise questions at a time**.
+    -   Formulate them so they can be answered in **2-5 sentences or short bullets**.
+    -   Avoid questions that are too broad ("Tell me everything about...") or too narrow ("Which specific button?").
 
-        - **Arbejdsnoter (Working Notes):**
-          - Hold korte **Arbejdsnoter**, opdateret ca. hver **2-3 interaktioner** (kun bullets).
-          - Brug dem til at holde styr på det væsentlige; vis dem kun ved korte recaps.
-          - Ved risiko for misforståelse, brug eksempelvis:
-            - "Jeg har forstået X → Y → Z. Har jeg fanget det rigtigt?"
+-   **Working Notes:**
+    -   Keep short **Working Notes**, updated approximately every **2-3 interactions** (bullets only).
+    -   Use them to keep track of essentials; show them only during brief recaps.
+    -   If there is a risk of misunderstanding, use for example:
+        -   "I have understood X → Y → Z. Have I captured that correctly?"
 
-        - **Post-action Validering:**
-          - Efter hver større afklaring eller opdatering af Arbejdsnoter, valider forståelsen kort i 1-2 linjer og tilbyd at afklare evt. uklarheder, før du fortsætter til næste emne.
+-   **Post-action Validation:**
+    -   After every major clarification or update of Working Notes, briefly validate understanding in 1-2 lines and offer to clarify any ambiguities before moving to the next topic.
 
-        - **Varighed:**
-          - Fortsæt interviewet, indtil personen beder dig stoppe **og** giver dig din næste opgave.
+-   **Duration:**
+    -   Continue the interview until the person asks you to stop **and** gives you your next assignment.
 
-        - **Sikkerhed & privatliv:**
-          - Anmod om **anonymiserede/redigerede** eksempler, hvis det gavner forståelsen.
-          - Bed **aldrig** om adgangskoder, login, personnumre eller andre fortrolige oplysninger.
+-   **Security & Privacy:**
+    -   Request **anonymized/redacted** examples if it benefits understanding.
+    -   **Never** ask for passwords, logins, personal ID numbers, or other confidential trade secrets.
 
-        - **Sprog:**
-          - Tilpas sprog og tone som brugeren (dansk, engelsk mv.).
-          - Brug **klar og enkel dansk** ved tvivl.
+-   **Language:**
+    -   Adapt language and tone to the user (English, Danish, etc.).
+    -   Use **clear and simple English** in case of doubt.
 
-        ---
+---
 
-        ### Hvad du især skal lytte efter
-        *(Brug kun som linse for dine spørgsmål – du må stadig ikke foreslå løsninger)*
-        - Tunge skrive- og omskrivningsopgaver
-        - Opsummering af dokumenter, e-mails, møder
-        - Idégenerering & sparring
-        - Syntese & videnhentning
-        - Klassifikation, tagging, routing af henvendelser
-        - Datahåndtering (udtræk af info fra tekst/tal/diagram)
-        - Kundekommunikation/support
-        - Oversættelse & tone-skift
-        - Planlægning & koordinering
-        - Repetitive processer med klare input/output
-        - Dokumentoprettelse fra skabeloner
+### What to Listen For
+*(Use only as a lens for your questions – you must still not suggest solutions)*
+-   Heavy writing and rewriting tasks (proposals, content, code, emails)
+-   Summarization of documents, threads, meetings
+-   Idea generation & brainstorming
+-   Synthesis & knowledge retrieval
+-   Classification, tagging, routing of inquiries
+-   Data handling (extracting info from text/numbers/diagrams)
+-   Client communication/support
+-   Translation & tone-shifting
+-   Planning & coordination
+-   Repetitive processes with clear input/output
+-   Document creation from templates (contracts, decks, reports)
 
-        ---
+---
 
-        ### Dækningsområder (metodisk gennemgang)
-        1. **Rolle & kontekst:** titel, team, forretningsområde, mission, succeskriterier
-        2. **Kalender-realitet:** faste møder, deadlines, sæson/årshjul
-        3. **Daglige/ugentlige opgaver:** frekvens, volumen, varighed, input/output
-        4. **Kommunikation:** samarbejdspartnere, kanaler, typiske beskeder
-        5. **Artefakter:** dokumenter, regneark, præsentationer, systemer
-        6. **Workflows & godkendelser:** rækkefølge, overleveringer, beslutningspunkter
-        7. **Værktøjer & systemer:** M365/Google, CRM/ERP, fagsystemer, tickets, datakilder
-        8. **Regler & begrænsninger:** compliance, fortrolighed, kvalitetskrav, SLA/KPI’er
-        9. **Smertepunkter:** flaskehalse, fejl, ventetid, copy-paste-arbejde
-        10. **Ønskeliste & idealbillede:** hvad "rigtig godt" ville være (uden at nævne AI)
+### Coverage Areas (Methodical Review)
+1.  **Role & Context:** Title, company/venture, industry, mission, success criteria.
+2.  **Calendar Reality:** Fixed meetings, deadlines, seasonal peaks, launch cycles.
+3.  **Daily/Weekly Tasks:** Frequency, volume, duration, input/output.
+4.  **Communication:** Collaborators, clients, channels (Slack, Email, WhatsApp, etc.), typical message types.
+5.  **Artifacts:** Documents, spreadsheets, pitch decks, design files, code repositories.
+6.  **Workflows & Decisions:** Order of operations, handovers, client feedback loops, decision points.
+7.  **Tools & Systems:** M365/Google Workspace, Notion/Trello/Asana, CRM, specialized industry software, data sources.
+8.  **Rules & Constraints:** Client requirements, confidentiality, industry standards, deadlines/metrics.
+9.  **Pain Points:** Bottlenecks, errors, waiting time, manual "grunt work" (copy-paste).
+10. **Wishlist & Ideal State:** What "really good" would look like (without mentioning AI).
 
-        ---
+---
 
-        ### Spørgsmål-heuristikker (Guldhårs-testen)
-        - Omformulér "Fortæl om X" til fx:
-          - "I en typisk uge, hvor mange X? Hvor lang tid varer de? Hvad adskiller en nem fra en svær?"
-        - Kvantificér hvor muligt:
-          - "Circa hvor mange om ugen? Minutter pr. opgave? Hvor stor andel skal rettes/godkendes?"
-        - Følg processen:
-          - "Hvad er inputtene? Hvor kommer de fra? Hvad sker derefter? Hvem bruger output?"
-        - Stil spørgsmål om variation:
-          - "Hvad er de 3 mest almindelige undtagelser? Hvor tit sker de?"
+### Question Heuristics (The Goldilocks Test)
+-   **Rephrase "Tell me about X" to, for example:**
+    -   "In a typical week, how many X? How long do they take? What distinguishes an easy one from a hard one?"
+-   **Quantify where possible:**
+    -   "Approximately how many per week? Minutes per task? What percentage requires revision/feedback?"
+-   **Follow the process:**
+    -   "What are the inputs? Where do they come from? What happens next? Who uses the output?"
+-   **Ask about variation:**
+    -   "What are the 3 most common exceptions? How often do they occur?"
 
-        ---
+---
 
-        ### Arbejdsnoter (struktur)
-        Opdater løbende bullets som:
-        - **Rolle & mål:** …
-        - **Højvolumen-opgaver (frekvens/tid):** …
-        - **Artefakter & værktøjer:** …
-        - **Workflows & beslutningspunkter:** …
-        - **Begrænsninger/KPI’er:** …
-        - **Observeret friktion:** …
-        Vis kun Arbejdsnoter ved recaps, og brug "Har jeg fanget det rigtigt?" kun hvor reel misforståelsesfare er til stede.
+### Working Notes (Structure)
+Continuously update bullets such as:
+-   **Role & Goal:** ...
+-   **High-Volume Tasks (Frequency/Time):** ...
+-   **Artifacts & Tools:** ...
+-   **Workflows & Decision Points:** ...
+-   **Constraints/Metrics:** ...
+-   **Observed Friction:** ...
+Show Working Notes only during recaps, and use "Have I captured that correctly?" only where there is a genuine risk of misunderstanding.
 
-        ---
+---
 
-        ### Vigtig begrænsning
-        Du må **aldrig** i interviewet foreslå eller beskrive, hvordan ChatGPT/AI kan hjælpe. Din opgave er udelukkende at indsamle **præcis og grundig kontekst** til senere analyse.
+### Important Limitation
+You must **never** suggest or describe how ChatGPT/AI can help during the interview. Your task is solely to collect **precise and thorough context** for later analysis.
 
-        ---
+---
 
-        ### Startlogik
-        **Hvis brugeren har vedhæftet en fil med baggrundsinformation (rolle, team, ansvar eller arbejdskontekst):**
-        1. **Læs filen grundigt før interviewet.**
-        2. **Integrér filens indhold** i din indledende forståelse.
-        3. **Tilpas dine første spørgsmål,** så du undgår at spørge om ting, filen allerede forklarer.
-        4. Brug filen til et første udkast til **Arbejdsnoter**.
+### Start Logic
+**If the user has attached a file with background information (role, company, responsibilities, or work context):**
+1.  **Read the file thoroughly before the interview.**
+2.  **Integrate the file's content** into your initial understanding.
+3.  **Adapt your opening questions** to avoid asking about things the file already explains.
+4.  Use the file to create a first draft of **Working Notes**.
 
-        **Hvis der ikke er vedhæftet en fil:**
-        - Hilse kort, forklar din rolle, og stil disse åbningsspørgsmål:
+**If no file is attached:**
+-   Greet briefly, explain your role, and ask these opening questions:
 
-        1. "Hvad er din **rolle/titel**, og hvilket **team/område** arbejder du i? Kan du i én sætning beskrive jeres **overordnede mission**?"
-        2. "Gennemgå en **typisk uge**. Hvad er de **3 vigtigste tilbagevendende opgaver**, som tager mest af din tid?"
+1.  "What is your **role/title**, and what **company or project** are you working on? Can you describe your **primary mission** or value proposition in one sentence?"
+2.  "Walk me through a **typical week**. What are the **3 most important recurring tasks** that consume most of your time?"
 
-        **Start nu.**
-
-
-                    `,
+**Start now.**
+          `,
           requiresConfirmation: false
-        },
-        {
+          },
+          {
           title: "Stig 2: Samandráttur (við Thinking-modellinum)",
           description: "Skift fyrst til 'Thinking'-modellið. Kopiera samandráttar birtið niðanfyri, set tað aftast í somu samrøðu, sum tú júst hevði við ChatGPT, og send.",
           prompt: `
-        Stop interviewet nu og opsummér mit arbejde udelukkende ud fra den information jeg har givet dig. 
+Stop the interview now and summarize my work exclusively based on the information I have given you.
 
-        Din opgave er at producere et detaljeret, velstruktureret resumé, der kan bruges som grundlag for at finde ChatGPT-anvendelser senere.
+Your task is to produce a detailed, well-structured summary that can be used as a basis for finding ChatGPT use cases later.
 
-        Brug kun information, der kommer direkte fra mine input. 
-        - Ingen gæt, ingen udfyldning af huller.
-        - Hvis noget ikke er nævnt, så lad det være usagt.
+Use only information that comes directly from my inputs.
+- No guessing, no filling in gaps.
+- If something was not mentioned, leave it unsaid.
 
-        Returnér præcis disse sektioner og overskrifter:
+Return exactly these sections and headings:
 
-        1) Rolle-overblik
-           - Kort beskrivelse af hvad jeg gør, hvem jeg betjener, og hvilke hovedresultater jeg bliver målt på.
+1) Role Overview
+ - Short description of what I do, who I serve (clients/team/users), and what key results or success criteria I aim for.
 
-        2) Kerneansvar
-           - Punktliste med stærke udsagnsord i starten (fx “Udarbejder…”, “Koordinerer…”, “Godkender…”).
-           - Én linje pr. punkt.
+2) Core Responsibilities
+ - Bullet list starting with strong verbs (e.g., "Drafting...", "Coordinating...", "Approving...", "Pitching...").
+ - One line per bullet.
 
-        3) Tilbagevendende workflows & leverancer
-           - For hvert workflow: beskriv typiske input → output (hver del maks. 8 ord).
-           - Angiv frekvens, hvis jeg har nævnt den (fx “ugentligt”, “dagligt”, “månedligt”).
+3) Recurring Workflows & Deliverables
+ - For each workflow: describe typical input → output (each part max. 8 words).
+ - Indicate frequency if I have mentioned it (e.g., "weekly", "daily", "monthly").
 
-        4) Værktøjer, systemer & begrænsninger
-           - Punktliste over apps, systemer, datakilder, adgangsgrænser, compliance-/fortrolighedsforhold, jeg har nævnt.
+4) Tools, Systems & Constraints
+ - Bullet list of apps, platforms, data sources, resource limits, or confidentiality/client requirements I have mentioned.
 
-        Generelle begrænsninger:
-        - Ingen generelle påstande om AI.
-        - Ingen råd, vejledning eller tutorials.
-        - Ingen marketing-sprog eller “flotte” formuleringer – skriv nøgternt og konkret.
-        - Ingen information, der ikke kan spores tilbage til noget, jeg faktisk har sagt.
-
-                    `,
+General Constraints:
+- No general claims about AI.
+- No advice, guidance, or tutorials.
+- No marketing language or "fluffy" phrasing – write soberly and concretely.
+- No information that cannot be traced back to something I actually said.
+          `,
           requiresConfirmation: true,
           confirmationText: "Eg vátti, at eg havi fingið ein fullfíggjaðan samandrátt, lisið hann og staðfest, at hann er rættur."
-        },
-        {
+          },
+          {
           title: "Stig 3: Opna nýggjan glugga og fær aftur inn á ChatGPT",
           description: "Opna eitt nýtt vindeyga í kaganum og lat upp ChatGPT aftur. Læt fyrra vindeyga við samandráttinum vera opið.",
           requiresConfirmation: false
-        },
-        {
+          },
+          {
           title: "Stig 4: Deep Research",
           description: "Kopiera birti niðanfyri inn í nýggja ChatGPT-vindeyga, skoyt samandráttin inn har tað er merkt, tendra Deep Research og send so.",
           prompt: `
-        Du skal bruge Deep Research til at skrive en samlet rapport til ledere om, hvordan personer i en given rolle faktisk bruger ChatGPT og lignende LLM-værktøjer i deres arbejde.
+You must use Deep Research to write a comprehensive report for leaders and founders about how people in a given role actually use ChatGPT and similar LLM tools in their work.
 
-        Rollen beskrives her:
+The role is described here:
 
-        <arbejds_beskrivelse>
-        <------------Indsæt her--------------->
-        </arbejds_beskrivelse>
+<job_description>
+<------------Insert here--------------->
+</job_description>
 
-        ---
+---
 
-        ## Formål
+## Purpose
 
-        Rapporten skal hjælpe en leder med at forstå:
+The report must help a leader or founder understand:
 
-        - Hvilke typer opgaver og arbejdssituationer folk i lignende roller bruger ChatGPT til.
-        - De forskellige “arbejdsmåder”/roller, som ChatGPT typisk indtager i deres hverdag (du finder selv de bedste betegnelser ud fra kilderne).
-        - Forskellen mellem:
-          - Overfladisk brug (primært skrivning, omskrivning, opsummering) og  
-          - Dybere brug, hvor ChatGPT bruges som reel sparringspartner, tænkende medspiller og beslutningsstøtte.
-        - Hvad brugere typisk oplever som begrænsninger og faldgruber.
+- What types of tasks and work situations people in similar roles use ChatGPT for.
+- The different "modes of work"/roles that ChatGPT typically assumes in their daily lives (you identify the best terminology based on sources).
+- The difference between:
+    - **Surface-level use** (primarily writing, rewriting, summarizing), and
+    - **Deep use**, where ChatGPT is used as a genuine sparring partner, thinking companion, and decision support.
+- What users typically experience as limitations and pitfalls.
 
-        Fokus: Rapporten skal være forklarende og narrativ, ikke en punktliste med “top 50 use cases”.
+**Focus:** The report must be explanatory and narrative, not just a bulleted list of "top 50 use cases."
 
-        ---
+---
 
-        ## Researchfokus (Deep Research)
+## Research Focus (Deep Research)
 
-        Brug dine Deep Research-evner til at:
+Use your Deep Research capabilities to:
 
-        1. Identificere kilder, hvor personer med lignende roller beskriver, hvordan de bruger ChatGPT/LLM’er i praksis, fx:
-           - Blogindlæg, personlige erfaringer, case stories.
-           - Community-tråde og fora (Q&A, diskussionsfora, LinkedIn-indlæg m.m.).
-           - Artikler, interviews og officielle eksempler, hvor konkrete arbejdssituationer gennemgås.
+1.  **Identify sources** where people with similar roles describe how they use ChatGPT/LLMs in practice, e.g.:
+    -   Blog posts, personal experiences, case stories (e.g., on Medium, Substack, Indie Hackers).
+    -   Community threads and forums (Q&A, Reddit, LinkedIn posts, etc.).
+    -   Articles, interviews, and official examples where concrete work situations are reviewed.
 
-        2. Udlede mønstre:
-           - Hvilke typer opgaver og situationer går igen?
-           - Hvordan beskriver de interaktionen med ChatGPT (dialog, iterativ sparring, “rolle-spil” osv.)?
-           - Hvor oplever de størst værdi? Hvor oplever de typisk skuffelse eller begrænsninger?
+2.  **Deduce patterns:**
+    -   What types of tasks and situations recur?
+    -   How do they describe the interaction with ChatGPT (dialogue, iterative sparring, "role-play," etc.)?
+    -   Where do they experience the greatest value? Where do they typically experience disappointment or limitations?
 
-        3. Læg særlig vægt på kilder, hvor ChatGPT omtales som:
-           - sparringspartner / medtænker,
-           - problemløsningsmakker,
-           - beslutnings- og refleksionsstøtte.
+3.  **Place special emphasis** on sources where ChatGPT is referred to as:
+    -   A sparring partner / co-thinker,
+    -   A problem-solving buddy,
+    -   Decision and reflection support.
 
-        Altså der, hvor værktøjet bruges til at tænke, strukturere og udvikle løsninger, ikke kun til at skrive pænt eller oversætte tekst.
+In other words, instances where the tool is used to **think, structure, and develop solutions**, not just to polish text or translate languages.
 
-        Hvis kilderne er uenige, eller der findes forskellige erfaringer, skal det tydeligt fremgå i rapporten.
+If sources disagree, or if varied experiences exist, this must be clearly stated in the report.
 
-        ---
+---
 
-        ## Inspiration til gode kilder (vejledende)
+## Inspiration for Good Sources (Guidance)
 
-        Som del af din research kan du med fordel orientere dig mod:
+As part of your research, you may advantageously look towards:
 
-        - Rollebaserede playbooks fra modelleverandører, fx:
-          - OpenAI-materiale om “ChatGPT for work/for any role” og tilhørende prompt-pakker for specifikke funktioner.
-          - Googles Gemini-materiale med “role-specific prompts & use cases” og Workspace-handbooks for forskellige roller.
-          - Microsoft Copilot-guides om “top use cases by role”, “Copilot for work” og adoption-playbooks.
-          - Claude-guides til almindelige use cases og prompt-biblioteker.
+-   **Role-based playbooks** from model providers, e.g.:
+    -   OpenAI material on "ChatGPT for work/for any role" and associated prompt packs.
+    -   Google Gemini material with "role-specific prompts & use cases."
+    -   Microsoft Copilot guides on "top use cases by role."
+    -   Claude guides for common use cases and prompt libraries.
 
-        - Kataloger og dossierer fra de store konsulenthuse, fx:
-          - McKinsey-rapporter om økonomisk potentiale og funktionsopdelte GenAI-use cases.
-          - Deloitte-dossier(er) med generative AI-use cases på tværs af brancher.
-          - PwC’s interaktive “use case compass” og relaterede whitepapers.
-          - Accenture, BCG, EY, KPMG og World Economic Forum-publikationer, der samler og strukturerer GenAI-anvendelser.
+-   **Catalogs and dossiers** from major consultancies (validating professional trends), e.g.:
+    -   McKinsey reports on economic potential and function-specific GenAI use cases.
+    -   Deloitte dossiers with generative AI use cases across industries.
+    -   PwC’s interactive "use case compass."
+    -   Accenture, BCG, EY, and World Economic Forum publications structuring GenAI applications.
 
-        Du skal ikke liste eller referere alle disse eksplicit; brug dem som inspiration og kildebase for at forstå de mest udbredte og modne mønstre på tværs af roller og brancher.
+*Do not list or reference all of these explicitly; use them as inspiration and a source base to understand the most widespread and mature patterns across roles and industries.*
 
-        ---
+---
 
-        ## Rapportens struktur
+## Report Structure
 
-        Skriv en sammenhængende rapport i klart, enkelt dansk, rettet mod en travl leder. Brug overskrifter og korte underafsnit.
+Write a coherent report in clear, simple English, aimed at a busy leader or entrepreneur. Use headings and short subsections.
 
-        Brug denne struktur:
+Use this structure:
 
-        ### 1. Executive summary (ca. 1–1½ side)
+### 1. Executive Summary (approx. 1–1.5 pages)
+-   Brief description of the role (as you understand it from <job_description>).
+-   The most important insights into what people in similar roles *actually* use ChatGPT for.
+-   A clear explanation of the difference between:
+    -   Surface use (writing/summarizing), and
+    -   Deep use (sparring, thinking, decision support).
+-   3–5 main takeaways that a leader/founder should note.
 
-        - Kort beskrivelse af rollen (som du forstår den ud fra <job_summary>).  
-        - De vigtigste indsigter om, hvad folk i lignende roller faktisk bruger ChatGPT til.  
-        - En klar forklaring af forskellen mellem:
-          - Overfladisk brug (skrivning/opsummering), og  
-          - Dybere brug (sparring, tænkning, beslutningsstøtte).  
-        - 3–5 hovedpointer, som en leder bør tage med sig.
+### 2. Role and Work Context (Brief)
+-   Your synthesis of how the role typically works: task types, responsibilities, work rhythm.
+-   Which parts of the work appear to be the most text-heavy, knowledge-heavy, or decision-heavy.
+-   Where—based on sources—complexity, uncertainty, and a need for sparring typically arise.
 
-        ### 2. Rolle og arbejdskontekst (kort)
+### 3. Typical Usage Patterns for ChatGPT in Similar Roles
+Describe the most common ways people use ChatGPT in similar jobs—focus on the "modes of work" or roles the tool adopts, not just loose individual functions.
 
-        - Din syntese af, hvordan rollen typisk arbejder: opgavetyper, ansvar, arbejdsrytme.  
-        - Hvilke dele af arbejdet der ser ud til at være mest tekst-, viden- og beslutningstungt.  
-        - Hvor der – ud fra kilderne – typisk opstår kompleksitet, usikkerhed og behov for sparring.
+Divide this into two levels:
 
-        ### 3. Typiske brugsmønstre for ChatGPT i lignende roller
+**3.1 Surface Usage Scenarios (First Layer of Value)**
+-   Explain how ChatGPT is used to write, rewrite, shorten, translate, and summarize.
+-   Describe in words why this is useful (time, quality, structure)—but also why it is only the "first layer" of value.
 
-        Beskriv de mest almindelige måder, folk bruger ChatGPT på i lignende jobs – som arbejdsmåder/roller værktøjet kan indtage, ikke som løse enkeltfunktioner.
+**3.2 Deep Usage Scenarios (Sparring, Thinking, and Decision Support)**
+-   Describe the working modes where ChatGPT is used to, for example:
+    -   Structure complex problems and business cases.
+    -   Explore opportunities, scenarios, and consequences.
+    -   Prepare for decisions, pitch meetings, and negotiations.
+    -   Test arguments and counter-arguments.
+    -   Plan, design, and improve workflows, processes, and communication.
+-   For each working mode:
+    -   Give it a short but descriptive name (based on sources).
+    -   Explain what it involves, what it is typically used for, and why users experience high value.
+    -   Use concrete, concise examples from sources to illustrate.
 
-        Del dette i to niveauer:
+### 4. Limitations and Typical Pitfalls
+-   What types of tasks do users say ChatGPT is *not* good at alone?
+-   Where do they see risks (e.g., factual accuracy, data privacy/IP, hallucinations, specific domain knowledge)?
+-   Which work situations require the human to retain control, judgment, and responsibility?
+-   Describe typical pitfalls and misunderstandings (e.g., "AI as a Truth Oracle") in narrative form—not just as a checklist.
 
-        3.1 Overfladiske brugsscenarier (første lag af værdi)  
-        - Forklar, hvordan ChatGPT bruges til at skrive, omskrive, forkorte, oversætte og opsummere.  
-        - Beskriv med ord, hvorfor det er nyttigt (tid, kvalitet, struktur) – men også hvorfor det kun er “første lag” af værdien.
+### 5. Implications and Reflection Questions
+-   Explain what this knowledge means for a leader/founder considering expanding the use of ChatGPT in their team or company.
+-   Highlight especially:
+    -   That the greatest value arises when staff learn to use ChatGPT as a sparring partner and thinking buddy.
+    -   That writing/summarizing is important, but only the first step.
+-   Conclude with 5–8 concrete reflection questions helping the leader look at their own workflows, such as:
+    -   "Where in our work would these 'sparring modes' make sense?"
+    -   "Where would scenario-thinking with ChatGPT concretely relieve our workload?"
+    -   "How can we experiment safely with this—without compromising client confidentiality or IP?"
+    -   "Where should we NOT lean too heavily on AI?"
 
-        3.2 Dybere brugsscenarier (sparring, tænkning og beslutningsstøtte)  
-        - Beskriv de arbejdsmåder, hvor ChatGPT bruges til fx:
-          - at strukturere komplekse problemstillinger og cases,  
-          - at udforske muligheder, scenarier og konsekvenser,  
-          - at forberede beslutninger, møder og forhandlinger,  
-          - at teste argumenter og modargumenter,  
-          - at planlægge, designe og forbedre workflows, processer og kommunikation.
-        - For hver arbejdsmåde:
-          - Giv den et kort, men sigende navn (ud fra kilderne).  
-          - Forklar hvad den går ud på, hvad den typisk bruges til, og hvorfor brugerne oplever høj værdi.  
-          - Brug konkrete, kortfattede eksempler fra kilderne til at illustrere.
+---
 
-        ### 4. Begrænsninger og typiske faldgruber
+## Quality Requirements
 
-        - Hvilke typer opgaver fortæller brugere, at ChatGPT ikke er godt til alene?  
-        - Hvor ser de risiko (fx faktuel nøjagtighed, lokal lovgivning, compliance, domænespecifik viden)?  
-        - Hvilke arbejdssituationer kræver, at mennesket bevarer kontrol, dømmekraft og ansvar?  
-        - Beskriv typiske faldgruber og misforståelser (fx “AI som sandhedsorakel”) i tekstform – ikke som ren tjekliste.
+-   Write in a calm, sober, non-hyped language.
+-   Make the report pleasant and quick to read for a busy professional, with clear headings and short paragraphs.
+-   Avoid bullet lists of "use cases"; focus on **types of work** and **modes of collaboration** with ChatGPT.
+-   Include concrete examples from your sources in short form, and use citations as needed.
+-   If there is uncertainty or disagreement in the sources, state it directly.
 
-        ### 5. Implikationer og refleksionsspørgsmål for kunden
+The report must be readable independently by a leader who may never have used ChatGPT before but knows of it, and who has a strong professional understanding of their own role and organization.
 
-        - Forklar, hvad denne viden betyder for en leder, der overvejer at udbrede brugen af ChatGPT i sin afdeling.  
-        - Fremhæv især:
-          - at den største værdi opstår, når medarbejdere lærer at bruge ChatGPT som sparringspartner og tænkende makker,  
-          - at skrivning/opsummering er vigtige, men kun det første skridt.  
-        - Afslut med 5–8 konkrete refleksionsspørgsmål, der hjælper lederen med at kigge på egne workflows og spørge fx:
-          - “Hvor i vores arbejde kunne disse arbejdsmåder give mening?”  
-          - “Hvor ville sparring og scenarie-tænkning med ChatGPT konkret aflaste os?”  
-          - “Hvordan kan vi eksperimentere sikkert med dette – uden at gå på kompromis med compliance?”  
-          - “Hvor skal vi ikke læne os for tungt op ad AI?”
-
-        ---
-
-        ## Kvalitetskrav
-
-        - Skriv i et roligt, nøgternt, ikke-hypet sprog.  
-        - Gør rapporten behagelig og hurtig at læse for en chef, med tydelige overskrifter og korte afsnit.  
-        - Undgå punktlister over “use cases”; fokusér på typer af arbejde og måder at samarbejde med ChatGPT på.  
-        - Inddrag konkrete eksempler fra dine kilder i kort form, og brug kildehenvisninger efter behov.  
-        - Hvis der er usikkerhed eller uenighed i kilderne, så sig det direkte.
-
-        Rapporten skal kunne læses selvstændigt af en leder, der aldrig har brugt ChatGPT før men kender til det, men som har stærk faglig forståelse for sin egen rolle og organisation.
-
-        `,
+`,
           requiresConfirmation: false
-        },
-        {
+          },
+          {
           title: "Stig 5: Nýggjur gluggi og møguleikalisti",
           description: "Opna ein nýggjan glugga við ChatGPT. Kopiera birtið, fyll inn tín samandrátt. Broyt nú myndilin til [ChatGPT 5.1 Thinking] og send avstað. Skoðað so listan av møguleikum; er úrslitið skilagott? Stundum kemur modellið inn á skeiva leið; royn umaftur, um tað hendir.",
           prompt: `
-        ## Introduktion
+## Introduction
 
-        Vi undersøger, hvordan sprogmodeller (LLM’er) kan automatisere opgaver i et kontormiljø på Færøerne. Målet er at finde opgaver, hvor automation strømliner arbejdsgange, sparer tid, fjerner kedeligt arbejde og sparer penge – især ved at bruge ChatGPT som **tænke‑partner og sparringspartner**, ikke kun som “dokumentmaskine”.
+We are exploring how Large Language Models (LLMs) can automate tasks in a **shared office/startup environment**. The goal is to find tasks where automation streamlines workflows, saves time, removes tedious work, and saves money – especially by using ChatGPT as a **thinking partner and sparring partner**, not just a "document machine."
 
-        Jeg vil have dig til at foreslå en liste med de **15** bedste ting, min klient kan bruge ChatGPT til. Her er information om klienten:
+I want you to suggest a list of the **15 best things** my client (an entrepreneur, freelancer, or startup team member) can use ChatGPT for. Here is information about the client:
 
-        <arbejds_beskrivelse>
-        <------------Indsæt her--------------->
-        </arbejds_beskrivelse>
+<job_description>
+<------------Insert here--------------->
+</job_description>
 
-        Nedenfor er vejledning om, hvilke typer opgaver ChatGPT er god til. Brug den til at forme dine ideer og undgå at foreslå ting, modellen ikke kan.
+Below is guidance on what types of tasks ChatGPT is good at. Use it to shape your ideas and avoid suggesting things the model cannot do.
 
-        <tasks_types>
+<tasks_types>
 
-        ### Hvad ChatGPT kan og ikke kan (2025)
+### What ChatGPT Can and Cannot Do (2025)
 
-        ---
+---
 
-        #### Introduktion
+#### Introduction
 
-        ChatGPT er en alsidig sprogmodel, der er stærk til at strukturere, forklare, oversætte, brainstorme, spille roller, lave simple visualiseringer, lave research og støtte analyser. Den er bedst, når der er klare mål, konkrete input og et menneske, der kvalitetssikrer output. Nedenfor beskrives, hvad den typisk er **god til**, hvor den er **svagere**, og hvilke mønstre der giver mest værdi i praksis.
+ChatGPT is a versatile language model strong at structuring, explaining, translating, brainstorming, role-playing, creating simple visualizations, doing research, and supporting analysis. It is best when there are clear goals, concrete inputs, and a human to quality-assure the output. Below is a description of what it is typically **good at**, where it is **weaker**, and which patterns provide the most value in practice.
 
-        ---
+---
 
-        ### Højværdimønstre (brug disse først)
+### High-Value Patterns (Use These First)
 
-        Når du foreslår anvendelser, bør du især lede efter opgaver, hvor ChatGPT:
+When suggesting applications, look especially for tasks where ChatGPT:
 
-        * **Hjælper mennesker med at tænke og beslutte**
-          – fx strategisparring, scenarier, trade‑off‑analyser, prioritering.
-        * **Omdanner rodede input til struktur**
-          – fx planer, tjeklister, SOP’er, risikoregistre, skemaer, taxonomier.
-        * **Forstærker tilbagevendende processer**
-          – fx standardsvar, skabelonbaserede breve, faste rapporter.
-        * **Understøtter flersproget arbejde (EN/DK ↔ FO)**
-          – fx kladder på engelsk/dansk, efterfulgt af oversættelse til færøsk og kort menneskelig redigering.
+* **Helps humans think and decide**
+    – e.g., strategy sparring, scenarios, trade-off analyses, prioritization.
+* **Transforms messy inputs into structure**
+    – e.g., plans, checklists, SOPs, risk registers, schemas, taxonomies.
+* **Amplifies recurring processes**
+    – e.g., standard responses, template-based letters/updates, recurring reports.
+* **Supports multilingual work**
+    – e.g., drafts in native language ↔ English, polishing grammar/tone for international clients.
 
-        Når du vælger og rangerer ideer, skal du **prioritere disse mønstre** over ren “dokumentskrivning”.
+When selecting and ranking ideas, **prioritize these patterns** over pure "document writing."
 
-        ---
+---
 
-        ### Mest værdifuldt: Sparring, beslutningsstøtte og tænke‑partner
+### Most Valuable: Sparring, Decision Support & Thinking Partner
 
-        ChatGPT er særlig værdifuld, når den bruges som en interaktiv partner, der stiller spørgsmål, udfordrer antagelser og hjælper med beslutninger:
+ChatGPT is particularly valuable when used as an interactive partner that asks questions, challenges assumptions, and helps with decisions:
 
-        * **Beslutnings‑ & strategisparring**
-          God til at skærpe mål, synliggøre antagelser, udvide mulige løsninger og sammenligne trade‑offs for fx projektprioritering, bemanding, leverandørvalg og ændringer i retningslinjer/politikker.
+* **Decision & Strategy Sparring:**
+    Good for sharpening goals, highlighting assumptions, expanding possible solutions, and comparing trade-offs for e.g., project prioritization, hiring, vendor selection, or pivot decisions.
 
-        * **Kvalitetsfeedback på udkast**
-          God til struktureret feedback på klarhed, logik, evidens, tone og konsistens – og til at hjælpe med at skrive korte, skarpe ledelsesresuméer.
+* **Quality Feedback on Drafts:**
+    Good for structured feedback on clarity, logic, evidence, tone, and consistency – and for helping write short, sharp executive summaries or pitch decks.
 
-        * **Rollespil & kommunikationstræning**
-          God til at simulere kolleger, ledere, borgere/kunder eller andre interessenter, inkl. svære samtaler, indvendinger, forhandling og feedback‑dialoger.
+* **Role-Playing & Communication Training:**
+    Good for simulating investors, clients, partners, or difficult employees, including handling objections, negotiation, and feedback dialogues.
 
-        * **Kreativitet & idéudvikling**
-          Meget god til idéspurt, laterale vinkler og mange mulige forslag til kampagner, forbedringer af arbejdsgange, nye servicekoncepter m.m.
+* **Creativity & Idea Development:**
+    Very good for idea sprinting, lateral angles, and generating many possible suggestions for marketing campaigns, workflow improvements, new service concepts, etc.
 
-        * **Risikotænkning & “hvad‑nu‑hvis”**
-          God til pre‑mortems (“hvad kan gå galt?”), red‑teaming vs. steelmanning, scenarie‑skitser og konkrete forslag til risikoreduktion.
+* **Risk Thinking & "Pre-mortems":**
+    Good for asking "what could go wrong?", red-teaming vs. steelmanning, scenario sketches, and concrete suggestions for risk reduction.
 
-        * **Faglig forklaring & mikrosparring:** God til at forklare komplekse faglige emner i forskellige sværhedsgrader, give eksempler og små øvelser, så medarbejdere hurtigt kan sætte sig ind i nye regler, værktøjer eller metoder.
+* **Expert Explanation & Micro-Sparring:**
+    Good for explaining complex topics at different difficulty levels, giving examples, so entrepreneurs can quickly understand new regulations, tools, or methods.
 
-        * **HR‑ & udviklingssparring:** God til at beskrive roller og kompetenceprofiler, forberede MUS‑/udviklingssamtaler, formulere udviklingsmål og rolle‑spille svære HR‑dialoger.
+* **HR & Development Sparring:**
+    Good for describing roles/competency profiles (even for first hires), preparing performance reviews, formulating development goals, and role-playing difficult HR dialogues.
 
-        > **Vigtigt:** Når du senere foreslår anvendelser, skal **mindst 5** af de 15 ideer ligge i denne kategori (sparring / beslutningsstøtte / feedback / rolle‑spil / risikotænkning). Behandl disse som **kerne‑anvendelser**.
+>   **Important:** When you later suggest applications, **at least 5** of the 15 ideas must fall into this category (sparring / decision support / feedback / role-playing / risk thinking). Treat these as **core applications**.
 
-        ---
+---
 
-        ### Research & analyse
+### Research & Analysis
 
-        * **Aktuelle faktaopslag med kilder:**
-          God til at finde opdateret information via indbygget Search og give korte svar med kildehenvisninger, når emner ændrer sig over tid (fx regler, priser, datoer, nyheder).
+* **Current Fact Lookup with Sources:**
+    Good for finding updated information via built-in Search and providing short answers with citations when topics change over time (e.g., regulations, prices, news).
 
-        * **Fordybelsesresearch (multi‑step undersøgelser):**
-          God til at planlægge en research‑sti, sammenholde flere kilder, syntetisere synspunkter og lave refererede sammenfatninger – med et menneske, der tjekker de vigtigste konklusioner. Prioritér research, der bruges til **konkrete beslutninger eller tilbagevendende opgaver**.
+* **Deep Dive Research (Multi-step):**
+    Good for planning a research path, cross-referencing multiple sources, synthesizing viewpoints, and creating referenced summaries – with a human checking key conclusions. Prioritize research used for **concrete decisions or recurring tasks**.
 
-        * **Datafortolkning:**
-          God til at forklare mønstre og indsigter fra brugerleverede tabeller, rapporter eller resumeer og foreslå simple nøgletal eller næste analytiske skridt.
+* **Data Interpretation:**
+    Good for explaining patterns and insights from user-provided tables, reports, or summaries and suggesting simple KPIs or next analytical steps.
 
-        * **Avanceret dataanalyse (ADA / Python):**
-          God til beregninger, hurtige prognoser og visualiseringer med tydelige antagelser, som et menneske derefter sanity‑checker.
+* **Advanced Data Analysis (ADA / Python):**
+    Good for calculations, quick forecasts, and visualizations with clear assumptions, which a human then sanity-checks.
 
-        * **Logik‑, fejlslutnings‑ og bias‑tjek:**
-          God til at gennemgå tekst for argumentationsfejl, uunderbyggede påstande og mulige bias og mærke “påstande, der kræver kilder”.
+* **Logic, Fallacy & Bias Checks:**
+    Good for reviewing text/pitches for argumentation errors, unsupported claims, and possible bias, tagging "claims requiring sources."
 
-        ---
+---
 
-        ### Dokumentation & viden (sekundært og gentagende)
+### Documentation & Knowledge (Secondary & Recurring)
 
-        Denne kategori er vigtig, men bør typisk **nedprioriteres ift. sparring og beslutningsstøtte**, medmindre opgaven er tilbagevendende og tidskrævende.
+This category is important but should typically be **deprioritized relative to sparring and decision support**, unless the task is recurring and time-consuming.
 
-        * **At omdanne noter til struktur:**
-          God til at gøre løse noter til tabeller, tjeklister, JSON/CSV‑skemaer, som kan genbruges.
+* **Transforming Notes to Structure:**
+    Good for turning loose notes into tables, checklists, JSON/CSV schemas that can be reused.
 
-        * **SOP’er & tjeklister:**
-          God til at udkaste og vedligeholde standardprocedurer med klare roller, trin og forventede resultater.
+* **SOPs & Checklists:**
+    Good for drafting and maintaining standard procedures with clear roles, steps, and expected results.
 
-        * **Content‑repurposing pipelines:**
-          God til at omdanne én kilde (fx en rapport) til slide‑oversigt, manus og målgruppespecifikke opslag, mens kernebudskaber bevares.
+* **Content-Repurposing Pipelines:**
+    Good for turning one source (e.g., a report or blog post) into a slide outline, script, and platform-specific social posts while preserving core messages.
 
-        * **Regel‑ & politikfortolkning til praksis:** God til at forklare love, regler og interne politikker i almindeligt sprog for forskellige målgrupper og omsætte dem til tjeklister, FAQ og enkle beslutningstræer (ikke som juridisk rådgivning, men som støtte til forståelse).
+* **Rule & Policy Interpretation for Practice:**
+    Good for explaining laws, regulations, and internal policies in plain language for different audiences and translating them into checklists, FAQs, and simple decision trees.
 
-        * **Dokumentopsummering & Q&A:** God til at læse et indsat dokument (fx rapport, kontrakt, notat), trække nøglepunkter ud, forklare indholdet i forskellige niveauer af detaljer og besvare konkrete spørgsmål til dokumentet.
+* **Document Summarization & Q&A:**
+    Good for reading an inserted document (e.g., report, contract, memo), extracting key points, explaining content at different levels of detail, and answering concrete questions about the document.
 
-        * **Mødeforberedelsespakker (uden mødedeltagelse):**
-          God til agendaer, mål, talepunkter og forslag til smarte spørgsmål – baseret på input, du giver.
+* **Meeting Prep Packages (No Attendance):**
+    Good for agendas, goals, talking points, and suggestions for smart questions – based on inputs you provide.
 
-        * **E‑mail‑/trådresuméer:**
-          God til at opsummere indsatte samtaler, udtrække beslutninger, actions og ansvarlige.
+* **Email/Thread Summaries:**
+    Good for summarizing inserted conversations, extracting decisions, actions, and owners.
 
-        * **Tværfaglig kommunikation:**
-          God til at oversætte teknisk sprog til almindeligt sprog og tilpasse budskaber til forskellige målgrupper.
+* **Cross-Disciplinary Communication:**
+    Good for translating technical language to plain language and adapting messages for different audiences (e.g., dev to marketing).
 
-        * **Sags‑ & henvendelsestriage:** God til at klassificere indkomne henvendelser (e‑mails, formularer), foreslå prioritet og udkaste standardsvar eller tekst‑moduler, som medarbejderen kan tilpasse – uden at ChatGPT selv sender noget.
+* **Case & Inquiry Triage:**
+    Good for classifying incoming inquiries (emails, forms), suggesting priority, and drafting standard responses or text modules that the user can adapt – without ChatGPT sending anything itself.
 
-        * **Persona / user‑stories / JTBD:**
-          God til at omsætte interview/antagelser til personas, user stories, acceptance criteria og målbare effekter.
+* **Persona / User Stories / JTBD:**
+    Good for translating interviews/assumptions into personas, user stories, acceptance criteria, and measurable effects.
 
-        * **Lokaliserings‑QA (EN/DK → FO):**
-          God til back‑oversættelse, håndhævelse af ordliste/glossar og tonekontrol på tværs af sprog – altid med et sidste menneskeligt tjek for færøsk kvalitet.
+* **Localization QA (Translation/Tone):**
+    Good for back-translation, enforcing glossaries, and tone checks across languages – always with a final human check.
 
-        * **Vidensarkitektur:**
-          God til at kategorisere/tilføje tags til indhold samt foreslå taksonomier og navngivningskonventioner.
+* **Knowledge Architecture:**
+    Good for categorizing/tagging content and suggesting taxonomies and naming conventions.
 
-        * **Promptbibliotek & QA:**
-          God til at udkaste genbrugelige prompts, rubrikker og stilguides og teste prompts for konsistens.
+* **Prompt Library & QA:**
+    Good for drafting reusable prompts, rubrics, and style guides and testing prompts for consistency.
 
-        * **Læringsmaterialer:**
-          God til mikrokurser, quizzer og flashcards til onboarding eller policy‑træning.
+* **Learning Materials:**
+    Good for micro-courses, quizzes, and flashcards for onboarding or policy training.
 
-        * **Dokumentations‑ & skrivesupport (sekundært):**
-          God til at lave dispositioner, skrive første udkast og revidere for klarhed og tone – især når der er tale om **standardiserede/skabelonbaserede tekster**, ikke engangs‑emails.
+* **Documentation & Writing Support (Secondary):**
+    Good for creating outlines, writing first drafts, and revising for clarity and tone – especially for **standardized/template-based texts**, not one-off emails.
 
-        ---
+---
 
-        ### Drift & eksekveringsstøtte (ofte kombineret med sparring)
+### Operations & Execution Support (Often Combined with Sparring)
 
-        * **Opgaveprioritering & organisering:**
-          God til at gøre rodede todo‑lister til prioriterede oversigter, simple planer eller kanban‑opdelinger.
+* **Task Prioritization & Organization:**
+    Good for turning messy to-do lists into prioritized overviews, simple plans, or kanban breakdowns.
 
-        * **Kapacitetsplanlægningsudkast (ingen kalenderkontrol):**
-          God til at skitsere mulige fordeling‑scenarier af opgaver ud fra angivne begrænsninger og fairness‑hensyn, som mennesker senere lægger i kalenderen.
+* **Capacity Planning Drafts (No Calendar Control):**
+    Good for sketching possible task distribution scenarios based on stated constraints and fairness considerations, which humans later put into the calendar.
 
-        * **Regneark/regex/SQL‑hjælp:**
-          God til at formulere Excel/Sheets‑formler, regex‑mønstre og små SQL‑snipper med eksempler.
+* **Spreadsheet/Regex/SQL Help:**
+    Good for formulating Excel/Sheets formulas, regex patterns, and small SQL snippets with examples.
 
-        * **Testcases & edgecases:**
-          God til at opstille testscenarier for funktioner, processer eller politikker (ud over klassiske unit‑tests).
+* **Test Cases & Edge Cases:**
+    Good for setting up test scenarios for features, processes, or policies (beyond classic unit tests).
 
-        * **Proceskortlægning & forbedring:** God til at omsætte beskrivelser af arbejdsgange til simple procesflows, pege på flaskehalse og foreslå “as‑is” vs. “to‑be” forbedringer – ofte kombineret med sparring om konsekvenser.
+* **Process Mapping & Improvement:**
+    Good for translating workflow descriptions into simple process flows, pointing out bottlenecks, and suggesting "as-is" vs. "to-be" improvements – often combined with sparring on consequences.
 
-        * **Risikoregistre:**
-          God til at udkaste og vedligeholde risici, triggere, mitigeringer og ejere for igangværende projekter.
+* **Risk Registers:**
+    Good for drafting and maintaining risks, triggers, mitigations, and owners for ongoing projects.
 
-        > Mange af disse opgaver bliver endnu stærkere, når ChatGPT samtidig bruges som **sparringspartner** til at udfordre antagelser og valg.
+>   Many of these tasks become even stronger when ChatGPT is simultaneously used as a **sparring partner** to challenge assumptions and choices.
 
-        ---
+---
 
-        ### Billeder, kode & stemme (kun hvis relevant)
+### Images, Code & Voice (Only if Relevant)
 
-        * **Billedgenerering:**
-          God til enkle illustrationer, mockups, ikoner eller “slide‑stemninger”, der støtter kommunikation.
+* **Image Generation:**
+    Good for simple illustrations, mockups, icons, or "slide moods" that support communication.
 
-        * **Billedinput:**
-          God til at analysere skærmbilleder/diagrammer og finde struktur (fx skemaer fra et foto, simple CSS‑forslag ud fra et billede).
+* **Image Input:**
+    Good for analyzing screenshots/diagrams and finding structure (e.g., schemas from a photo, simple CSS suggestions from an image).
 
-        * **Kodehjælp (små ting):**
-          Meget god til små scripts og hjælpeværktøjer til fx datarensning eller simple automatiseringer – **ikke** til store, komplekse systemer.
+* **Code Help (Small Things):**
+    Very good for small scripts and helper tools for e.g., data cleaning or simple automations – **not** for large, complex systems (unless the user is a dev).
 
-        * **Stemme (Voice):**
-          God til øvelse i tone og tempo, sproglig træning og håndfri brainstorming, hvis stemmetilstand er tilgængelig.
+* **Voice:**
+    Good for practicing tone and pace, language training, and hands-free brainstorming, if voice mode is available.
 
-        > Foreslå kun billed‑, kode‑ eller stemme‑anvendelser, hvis de **klart matcher klientens kontekst** og er mere værdifulde end andre muligheder.
+>   Suggest image, code, or voice applications only if they **clearly match the client's context** and are more valuable than other options.
 
-        ---
+---
 
-        ### Færøsk & sprogvejledning
+### Language Guidance
 
-        * **Forståelse vs. skrivekvalitet:**
-          ChatGPT forstår færøsk udmærket, men skriver relativt svagere på færøsk. Kvaliteten bliver højere, hvis man **skriver kladder på engelsk eller dansk** og derefter **oversætter til færøsk** med kort manuel redigering.
+* **Writing Quality:**
+    For non-native English speakers, ChatGPT is excellent at polishing grammar and tone to sound native/professional.
+* **Workflow:**
+    Draft in native language -> Translate/Polish to English -> Human Review.
 
-        * **Standard‑workflow for FO‑tekster:**
-          Antag som udgangspunkt, at:
+---
 
-          1. ChatGPT hjælper med at udvikle indhold på **engelsk eller dansk**,
-          2. ChatGPT oversætter til **færøsk**,
-          3. Et menneske laver en **kort sproglig og faglig gennemgang**.
+### Tool Tags for "How ChatGPT Helps"
 
-        * **Ordliste & konsistens:**
-          En lille ordliste over foretrukne færøske begreber forbedrer konsistensen; usikre begreber kan markeres til menneskelig vurdering.
+In your suggestions, mention – when relevant – which tools are used:
 
-        > Du må gerne foreslå arbejdsgange, hvor ChatGPT **udnytter EN/DK + FO‑kombinationen** (fx EN‑udkast → FO‑brevskabelon → menneskelig finpudsning).
+* **Search:** Built-in web search for updated knowledge with sources.
+* **ADA:** Advanced Data Analysis (Python) for calculations, analysis, and simple graphs.
+* **Image:** Image generation or image understanding (if enabled).
+* **Voice:** Voice mode for exercises, dictation, and dialogue.
+* **Sparring:** Interactive back-and-forth, questions, role-playing, and critique.
 
-        ---
+---
 
-        ### Værktøjstags til “How ChatGPT helps”
+### Where ChatGPT is Weaker (and Typical Workarounds)
 
-        I dine forslag skal du – når relevant – nævne, hvilke værktøjer der bruges:
+* **High-Precision Extraction Across Many Documents:**
+    Weaker at perfectly consistent numbers across large document sets; use citations from sources and human verification of key figures.
 
-        * **Search:** Indbygget web‑søgning til opdateret viden med kilder.
-        * **ADA:** Advanced Data Analysis (Python) til beregninger, analyser og simple grafer.
-        * **Image:** Billedgenerering eller billedforståelse (hvis slået til).
-        * **Voice:** Stemmetilstand til øvelser, diktering og dialog.
-        * **Sparring:** Interaktivt frem‑og‑tilbage, spørgsmål, rolle‑spil og kritik.
+* **Complex or Regulated Analysis at Scale:**
+    Weaker on very large datasets or high-risk finance/statistics; use ChatGPT for framing, explanations, and sketches, and let specialized tools handle core analysis.
 
-        ---
+* **Very Long Documents in One Go:**
+    Weaker at full consistency in very long texts; quality increases by working in sections with an overall outline and a final consistency review.
 
-        ### Hvor ChatGPT er svagere (og typiske workarounds)
+* **Direct Control of Tools and Systems:**
+    ChatGPT **cannot** manage calendars, send emails, change data in systems, or integrate directly with the company's IT tools. It can only draft content, plans, and suggestions that humans subsequently execute.
 
-        * **Højpræcist udtræk på tværs af mange dokumenter:**
-          Svagere til perfekt konsistente tal på tværs af store dokumentmængder; brug citater fra kilder og menneskelig verifikation af nøgletal.
+* **Live Meeting Attendance:**
+    ChatGPT does not attend meetings or listen to meetings live; it can help with preparation and follow-up based on inputs you provide.
 
-        * **Kompleks eller reguleret analyse i stor skala:**
-          Svagere på meget store datasæt eller højrisiko‑økonomi/statistik; brug ChatGPT til rammesætning, forklaringer og skitser, og lad specialværktøjer klare kerneanalysen.
+* **Understanding Real Context:**
+    ChatGPT lacks full real-world context and should typically be used for the **first ~80%** (ideas, structures, drafts). Humans choose the best options and check that it makes sense in practice.
 
-        * **Meget lange dokumenter i ét hug:**
-          Svagere til fuld konsistens i meget lange tekster; kvaliteten øges ved at arbejde i sektioner med en overordnet disposition og en afsluttende konsistensgennemgang.
+---
 
-        * **Direkte kontrol af værktøjer og systemer:**
-          ChatGPT kan **ikke** styre kalendere, sende e‑mails, ændre data i systemer eller integrere direkte med virksomhedens it‑værktøjer. Det kan kun udkaste indhold, planer og forslag, som mennesker bagefter udfører.
+### What Should be Deprioritized in the Top 15 List
 
-        * **Live mødedeltagelse:**
-          ChatGPT deltager ikke i møder eller lytter til møder på færøsk; det kan hjælpe med forberedelse og opsamling baseret på input, du giver.
+Unless there is a **very strong, client-specific reason**, the following should **not feature** in the top 15 list:
 
-        * **Forståelse af virkelig kontekst:**
-          ChatGPT mangler fuld real‑world kontekst og bør typisk bruges til de **første ~80%** (idéer, strukturer, udkast). Mennesker vælger de bedste muligheder og tjekker, at det giver mening i praksis.
+* One-off tasks like "rewrite this one email" or small, sporadic text corrections.
+* Generic blog posts or social media posts without a clear business goal.
+* Large, complex software projects or entire systems.
+* Very niche or heavily regulated analysis where specialists and systems are crucial.
+* Image or code projects without a clear link to the client's core tasks.
 
-        ---
+---
 
-        ### Hvad der bør nedprioriteres i top‑15‑listen
+### How to Choose the Best Applications (Selection Heuristic)
 
-        Medmindre der er en **meget stærk, klientspecifik grund**, bør følgende **ikke fylde** i top‑15‑listen:
+When selecting and ranking ideas for this client, prefer tasks that:
 
-        * Engangs‑opgaver som “omskriv denne ene e‑mail” eller små, sporadiske tekstrettelser.
-        * Generiske blogindlæg eller sociale medier‑opslag uden klart forretningsmål.
-        * Store, komplekse softwareprojekter eller hele systemer.
-        * Meget nichepræget eller hårdt reguleret analyse, hvor specialister og systemer er afgørende.
-        * Billed‑ eller kodeprojekter uden tydelig kobling til klientens kerneopgaver.
+* Occur **often** (e.g., weekly or monthly).
+* Are experienced as **boring, monotonous, or time-consuming** for humans.
+* Involve **thinking, judgment, or trade-offs**, not just formatting.
+* Can be performed **directly in ChatGPT**, without integrations to other systems.
+* Have clear **time or cost savings** or improve quality/consistency.
+* Make it **easier to make better decisions** or learn faster.
 
-        ---
+Use these criteria – along with the client information – when choosing which ideas go on the top 15 list and how they should be prioritized.
 
-        ### Sådan vælger du de bedste anvendelser (selektionsheuristik)
+</tasks_types>
 
-        Når du vælger og rangerer ideer for denne klient, skal du foretrække opgaver, der:
+### Your Task
 
-        * Forekommer **ofte** (fx ugentligt eller månedligt).
-        * Opleves som **kedelige, monotone eller tidskrævende** for mennesker.
-        * Involverer **tænkning, vurdering eller trade‑offs**, ikke kun formatering.
-        * Kan udføres **direkte i ChatGPT**, uden integrationer til andre systemer.
-        * Har tydelige **tids‑ eller omkostningsbesparelser** eller forbedrer kvalitet/ensartethed.
-        * Gør det **nemmere at træffe bedre beslutninger** eller at lære hurtigere.
+Create a **thoughtful list of 15 ideas** that my client can use ChatGPT for. **Rank them by utility value** based on:
 
-        Brug disse kriterier – sammen med klientinformationen – når du vælger, hvilke ideer der skal på top‑15‑listen, og hvordan de skal prioriteres.
+* Time savings
+* Ease of implementation
+* How boring/monotonous the task is (more boring → higher priority)
+* Other relevant factors for this client (e.g., quality, risk, learning)
 
-        </tasks_types>
+**Important Constraints**
 
-        ### Din opgave
+* Do **not** suggest actions that require ChatGPT to manage calendars, send emails, attend meetings, or otherwise take direct action in external systems. It cannot do that.
+* Prefer ideas that the client can execute **directly in ChatGPT**, without integrations.
+* Include **at least 5 interactive** ideas within **sparring/coaching/role-play** (decision support, feedback/critique, role-play, brainstorming, or risk thinking).
+* Use the guidance in <tasks_types> to focus on the most valuable patterns (thinking partner, structuring messy inputs, recurring processes, and multilingual support).
 
-        Lav en **gennemtænkt liste med 15 ideer**, som min klient kan bruge ChatGPT til. **Rangordn dem efter nytteværdi** ud fra:
+**Output Format (Keep each point short and concrete):**
 
-        * Tidsbesparelse
-        * Lethed ved implementering
-        * Hvor kedelig/monoton opgaven er (mere kedelig → højere prioritet)
-        * Andre relevante faktorer for denne klient (fx kvalitet, risiko, læring)
+1.  **Title (Bold)** — one sentence describing the idea.
+    * **Why it matters:** (1 line)
+    * **How ChatGPT helps:** (1 line;)
+    * **Effort:** Low / Medium / High
 
-        **Vigtige begrænsninger**
-
-        * Foreslå **ikke** handlinger, der kræver at ChatGPT styrer kalendere, sender e‑mails, deltager i møder eller på anden måde tager direkte handling i eksterne systemer. Det kan den ikke.
-        * Foretræk ideer, som klienten kan gennemføre **direkte i ChatGPT**, uden integrationer.
-        * Inkludér **mindst 5 interaktive** ideer inden for **sparring/coaching/rolle‑spil** (beslutningsstøtte, feedback/kritik, rolle‑spil, brainstorming eller risikotænkning).
-        * Brug vejledningen i <tasks_types> til at fokusere på de mest værdifulde mønstre (tænke‑partner, strukturering af rodede input, tilbagevendende processer og flersproget arbejde).
-
-        **Output‑format (hold hvert punkt kort og konkret):**
-
-        1. **Titel (fed)** — én sætning, der beskriver ideen.
-
-           * **Hvorfor det er vigtigt:** (1 linje)
-           * **Hvordan ChatGPT hjælper:** (1 linje;)
-           * **Indsats:** Lav / Mellem / Høj
-
-        Skriv ideerne kort, konkrete og tilpasset denne klient. Undgå generiske forslag som “omskriv min e‑mail”, medmindre det i denne klients kontekst er **ekstraordinært** værdifuldt og tilbagevendende.
-
-                    `,
+Write the ideas briefly, concretely, and adapted to this client. Avoid generic suggestions like "rewrite my email" unless it is **extraordinarily** valuable and recurring in this client's context.
+          `,
           requiresConfirmation: true,
           confirmationText: "Eg havi skoðað listan og vátti, at hann gevur skilagóðar møguleikar (ella at eg royndi umaftur, tá ið tað ikki gjørdi tað)."
-        },
-        {
+          },
+          {
           title: "Stig 6: Bygg víðari – partur 1",
           description: "Kopiera birti niðanfyri og send.",
-          prompt: "Rigtig godt. Nu vil jeg gerne have, at du tænker ud af boksen. Lav en ny analyse af opgaver, som min klient kan bruge ChatGPT til. I denne analyse vil jeg have dig til at finde opgaver, der kunne revolutionere deres arbejdsliv og branche. Giv disse ideer en vurdering af, hvor svære de er at implementere, og hvor stor en positiv effekt de kunne have på deres arbejdsliv. Præsenter de 3 bedste ideer, du finder.",
+          prompt: `Great. Now I want you to think **outside the box**.
+
+            Conduct a new analysis of tasks my client can use ChatGPT for. In this analysis, I want you to find use cases that could **revolutionize their business, workflow, or industry**.
+
+            Focus on ideas that could give them a significant **competitive advantage** or **10x their output**.
+
+            Rate these ideas on:
+            1.  **Implementation Difficulty** (Low/Medium/High)
+            2.  **Potential Impact** (High/Transformational)
+
+            Present the **3 best ideas** you find.`,
           requiresConfirmation: false
-        },
-        {
+          },
+          {
           title: "Stig 7: Bygg víðari – partur 2",
           description: "Kopiera birtið niðanfyri inn í sama kjatt og send.",
           prompt: `
-                    Rigtig godt. Nu, en sidste gang: Slip alle forudfattede meninger om, hvordan min klients opgaver bør løses, og giv mig en liste over revolutionerende måder at udføre deres arbejde på med AI, baseret på 'first principles'-tænkning.
+Excellent. Now, one last time:
 
-                    Giv disse ideer en vurdering af, hvor svære de er at implementere, og hvor stor en positiv effekt de kan have på deres arbejdsliv. Præsenter de 3 bedste ideer, du finder.
+Let go of all preconceived notions about how my client's tasks *should* be solved. Give me a list of revolutionary ways to execute their work using AI, based on **"first principles" thinking**.
 
-                    Vær opmærksom på, at ideerne ikke må falde uden for det, de rent faktisk laver, men skal være forslag til, hvordan de kan udføre deres job på en helt ny og forbedret måde.
-        `,
+Rate these ideas on:
+1.  **Implementation Difficulty**
+2.  **Potential Impact** (on their output or business value)
+
+Present the **3 best ideas** you find.
+
+**Important:** The ideas must not fall outside the scope of what they actually do (their core purpose), but must be proposals for how they can execute their job in a completely new, reimagined way.
+`,
           requiresConfirmation: false
-        },
-        {
+          },
+          {
           title: "Stig 8: Ger listan",
           description: "Kopiera birtið inn í ChatGPT og send.",
-          prompt: `Find nu på meget relevante metrikker til at måle effektiviteten af disse ideer. Gennemgå derefter alle ideerne, og ranger dem ud fra dine metrikker. Præsenter til sidst en sorteret liste over alle 21 idéer.`,
+          prompt: `Develop highly relevant metrics to measure the effectiveness and ROI of these ideas.
+
+Then, review all the ideas and rank them based on your metrics.
+
+Finally, present a sorted list of all 21 ideas.`,
           requiresConfirmation: false
-        },
-        {
+          },
+          {
           title: "Stig 9: Skoyt uppí meira forkláring",
           description: "Kopiera birtið inn í ChatGPT og send.",
           prompt: `
-        "Til sidst skal du tilføje følgende elementer til alle ideerne på listen:
+Finally, add the following elements to all ideas on the list:
 
-        1.  **Idé-titel** – en kort, handlingsorienteret titel.
-        2.  **Hvad det er, og hvad man får** – 2-3 sætninger, der forklarer, hvad brugeren skal bruge ChatGPT til, og hvilket konkret udbytte de får (f.eks. tydeligere e-mails, hurtigere resuméer, bedre beslutninger).
-        3.  **Eksempel fra deres arbejde** – 2-4 sætninger, der beskriver en konkret situation fra klientens arbejdsuge. Gør det i eksemplet helt tydeligt, hvad brugeren skal indsætte i ChatGPT (f.eks. 'den seneste e-mail i tråden', 'dine stikord fra mødet', 'et rodet udkast'), og hvad de skal bede ChatGPT om at gøre med det.
+1.  **Actionable Title** – A short, punchy title.
+2.  **Concept & Value** – 2-3 sentences explaining *how* to use ChatGPT and the specific *benefit* (e.g., clearer pitches, faster workflows, better strategic decisions).
+3.  **Real-World Example** – 2-4 sentences describing a concrete scenario from their work week. Make it explicitly clear what the user must **paste/input** (e.g., "the latest client email," "your rough meeting notes," "a messy draft") and what they should **ask** ChatGPT to do with it.
 
-        Hold hver beskrivelse kort og praktisk, så en kontormedarbejder med det samme kan se, hvordan de kan afprøve det i virkeligheden.
+Keep each description short and practical so a busy professional can immediately see how to try it in reality.
 
-        Output nu den fulde færdige liste, klar til at printe.
-                    `,
+**Output the full, finalized list now, ready to print.**
+          `,
           requiresConfirmation: false
-        },
-        {
-          title: "Stig 10: Send listan til Hannu.",
-          description: "Um tit ynskja tað so kann Vitlíkisstovan hyggja eftir tykkara listar og gera teir til virðismikklar vegleiðingar tit altíð kunna hava hjá, tí kunnu tit senda listan við hugskotum til Hannu á [HACA@betri.fo], um tit ynskja ein tílíkan lista. ",
-          requiresConfirmation: false
-        },
-        {
-          title: "Stig 11: Liðugt – takk fyri!",
-          description: "Hattar var venjingin – vónandi hevur tú nú ein góðan lista.",
+          },
+          {
+          title: "Stig 10: Liðugt – takk fyri!",
+          description: "Hattar var hattar, nú koma keppar.",
           requiresConfirmation: false
         }
       ]
-    }
-  ]
+    },
+    {
+      id: "deep-research-lab",
+        name: "Venjing 2: Lumma-ráðgevin",
+        description:
+          "Endamálið er at gera trýggjar Deep Research-frágreiðingar, sum passa júst til tín tørv.",
+        steps: [
+          {
+            title: "Stig 1: Bið ChatGPT finna uppá evnir",
+            description:
+              "Koyr birti niðanfyri inn í ChatGPT og skoyt uppí tína arbeiðis lýsing frá venjing 1.",
+            prompt: `
+**Rolle:** Du er min **Research Triage-konsulent**. Dit job er at scanne min kontekst og foreslå **specifikke emner af høj værdi**, som er **velegnede til ChatGPT Deep Research** (værktøjet, der udfører undersøgelser på nettet i flere trin og sammenfatter fund med kildehenvisninger), og som er mest værdifulde for mig. Deep Research er mest nyttig, når:
+
+* Spørgsmålet kræver **indsamling og sammenligning af mange uafhængige kilder** (især nylig, foranderlig eller niche-info).
+* Svaret skal kunne **forsvares og være underbygget af links** (citater, verificerbarhed).
+* Opgaven involverer **sammenligninger på tværs af flere kriterier**, **tendensanalyse**, **sporing af politik/standarder**, **konkurrence- eller markedsscanninger** eller **litteraturgennemgange**.
+
+Deep Research er **ikke** ideel til: hurtige fakta fra en enkelt kilde, ren idéudvikling eller redigering, statiske baggrundsorienteringer eller opgaver, der kan løses ved ræsonnement over tekst, jeg allerede har leveret. (Brug almindelig chat eller Søg til disse).
+
+**Mit jobresumé:**
+
+<job_summary>
+<---------------DIT JOBRESUMÉ--------------->
+</job_summary>
+
+### Dine mål
+
+1.  **Triage min kontekst** og identificer, hvor Deep Research vil give ekstraordinær værdi i forhold til almindelig chat; kig efter både det, der er meget værdifuldt for mit arbejde, og det, der er meget interessant for mig.
+2.  **Foreslå 8–12 konkrete kandidater til Deep Research** (undersøgelser, jeg kunne køre som fulde rapporter).
+3.  For hver kandidat skal du forklare, *hvorfor* den opfylder kriterierne for Deep Research, og hvordan det ville være en værdifuld rapport at have.
+
+### Hvad du skal inkludere for hvert foreslået Deep Research-emne
+
+* **Titel** (klar, beslutningsorienteret).
+* **Primær(e) beslutning(er), den vil informere** (f.eks. go/no-go, prioritering, leverandørvalg, udformning af politik).
+* **Nøglespørgsmål & sammenligninger** rapporten bør besvare (3–6 punkter).
+
+### Output-format
+
+En liste med 8 til 12 idéer til værdifulde og interessante rapporter, jeg kunne generere. For hver idé skal du tydeligt beskrive, hvad rapporten vil handle om, og fortælle mig, hvorfor den enten er interessant eller værdifuld.
+
+### Retningslinjer
+
+* Brug **klart, verificerbart sprog**; ingen markedsførings-fyldord.
+
+### Beslutningsregel (anvend denne, mens du triagerer)
+
+* Hvis et spørgsmål kan besvares af **én velrenommeret kilde** eller **ved ræsonnement over tekst, jeg har leveret**, hører det til i almindelig chat – **ekskluder det**.
+* Hvis det sandsynligvis kræver **undersøgelse af flere kilder**, **vægtning af beviser** og udarbejdelse af et **citat-rigt notat**, så **inkluder det** som en Deep Research-kandidat.
+
+### Eksempler hvor Deep Research skinner mest igennem (evidensbaseret)
+
+Ud over at (a) gennemsøge, hvad brugere og 'thought leaders' siger, og (b) finde autoritative kilder, er Deep Research særligt værdifuld til:
+
+1.  **Systematiske evidenssynteser (systematiske reviews / metaanalyser).** Når vi har brug for et omfattende, gennemsigtigt, citat-rigt svar på tværs af mange studier og skal vise vores metode (PRISMA-stil).
+
+2.  **Scoping- & kortlægningsreviews.** Når målet er at kortlægge bredden af et emne, afklare definitioner og organisere litteraturen, før man går i dybden.
+
+3.  **Horisontscanning & fremtidsanalyser (Foresight briefs).** Tidlige advarselsscanninger af ny teknologi, risici og svage signaler, opdateret fra flere kilder.
+
+4.  **Omverdens- / landskabsanalyser.** Et side-om-side billede af interne/eksterne faktorer, aktører og tendenser til at informere strategien.
+
+5.  **Sporing af standarder & lovgivningsmæssige ændringer.** Sammenligning af rammeværk (f.eks. **NIST AI RMF**, **ISO/IEC 42001**) og overvågning af opdateringer på tværs af jurisdiktioner.
+
+6.  **Multikriterie-sammenligninger & beslutningsmatricer (MCDA).** At gøre rodede valg med mange faktorer til forsvarlige rangordninger med eksplicitte vægtninger og trade-offs.
+
+7.  **Vendor due diligence & indkøbsscoring (inkl. TCO).** Opbygning af vægtede scorecards, risikotjek og sammenligninger af **totalomkostninger (TCO)** fra mange dokumenter.
+
+8.  **Teknologispejding & markeds-/patentgennemgange.** Systematisk identifikation af relevant teknologi, aktører og IP; kortlægning af muligheder ift. behov.
+
+9.  **Evidens- & gap-kortlægning.** Visuelle kort, der viser, hvor evidensen er stærk/svag for at guide prioriteter og næste research.
+
+10. **Benchmarking & konkurrencelandskabsanalyser.** Indsamling af sammenlignelige nøgletal/praksisser på tværs af fagfæller (peers) og kortlægning af, hvor vi fører eller halter bagefter.
+            `,
+            requiresConfirmation: true,
+            confirmationText:
+              "Eg vátti, at eg havi fingið ein lista við evnum, sum passa til mín leiklut."
+          },
+          {
+            title: "Stig 2: Vel tíni 3 yndisbirt",
+            description:
+              "Les listan og vel 3 evni tú vilt arbeiða víðari við. Um tú ikki sært nakað spennandi, sig so bara ChatGPT frá hesum og lýs so fyri tí hvat tú heldur manglar ella hví tær ikki dámar hugskotini. Og royn so aftur.",
+            requiresConfirmation: true,
+            confirmationText:
+              "Eg vátti, at eg havi valt 3 evni."
+          },
+          {
+            title: "Stig 3: Bygg klár Deep Research‑birt til tey valdu evnini",
+            description:
+              "Í sama kjatt, avrita birti niðanfyri og fyll inn tíni 3 valdu evnir.",
+            prompt: `
+**Ny rolle**
+Nu er du *Senior Research Prompt Architect* for Deep Research. Dit job er at omdanne mine valgte emner til interessante prompter af høj værdi til Deep Research.
+
+**Læser**
+Hold *min jobbeskrivelse, som allerede er delt i denne chat*, forrest i tankerne. Optimér for øjeblikkelig forretningsværdi for mig.
+
+**Inputs**
+**Emner:** ⬇️
+
+<------------Indsæt emner her------------>
+
+**Menu over rapporttyper (vælg den, der passer bedst pr. emne; én pr. emne)**
+
+1.  **Executive Brief** (bestyrelsesklare muligheder & trade-offs/afvejninger)
+2.  **Leverandør-/Landskabsscanning** (sammenligningsmatrix, 'must-haves'/stoppere)
+3.  **Lovgivningsovervågning** (hvad er ændret, hvem påvirkes, hvornår)
+4.  **Scenarie- & Risikonotat** (basis/optimistisk/konservativ + risikoregister)
+5.  **Analytics QA-notat** (definitionsfælder, grænsetilfælde/edge cases, 5 'spike tests')
+6.  **RFP-rubrik** (vægtninger, 'must-haves', stoppere, evidens-prompts)
+7.  **Kunde-/Driftskommunikation** (email/FAQ/SMS-varianter; hvis-X-så-Y)
+8.  **Implementerings-playbook** (faset plan, RACI, dag-0/30/90-tjek)
+9.  **Vurdering af forretningsmulighed (BOTE)** (antagelser, intervaller, følsomheder)
+10. **Forklaring / Mytedræber** (misforståelser vs. fakta med citater)
+
+**Regler for skrivning af hver kort prompt (håndhæv alle, hold det stramt)**
+
+* **Mål & omfang:** ét skarpt spørgsmål; inkluder tidshorisont & geografi; angiv én udelukkelse.
+* **Kilder:** foretræk officielle/tilsynsmyndigheder, primære dokumenter, peer-reviewed, topinstitutter; *enhver ikke-indlysende påstand skal have inline-citation med link + dato*.
+* **Leverance:** match den valgte rapporttype; inkluder altid antagelser & begrænsninger; bemærk uenigheder.
+* **QA & fejltilstande:** kræv verificeringstrin (f.eks. citer nøglesætninger; krydstjek 2 kilder).
+* **Begrænsninger:** ingen PII (personfølsomme data); rensede eksempler; output-only; brug **absolutte datoer**.
+* **Stil:** jævnt sprog, aktiv form, beslutningsorienteret.
+* **Længde:** hver prompt ≤ **55 ord**. Tilføj en linje på **≤12 ord**: "Hvorfor det passer".
+* **Udfør ikke research nu** – generér kun prompter.
+
+**Standarder for rapporttyper (brug disse leverance-stikord inde i prompterne)**
+
+* *Executive Brief:* exec resumé; tabel over muligheder/kriterier; 3 scenarier; risikoregister; revisionsfodnote.
+* *Leverandør-/Landskabsscanning:* sammenligningsmatrix (vægtninger/scorer); 'must-haves'/stoppere; røde flag; evidenslog.
+* *Lovgivningsovervågning:* tidslinje + delta-tabel; påvirkede roller/processer; compliance-tjekliste; observationsliste.
+* *Scenarie- & Risikonotat:* drivere; basis/opt/kon-scenarier; udløsere; risikobegrænsning; grænser.
+* *Analytics QA-notat:* definitionsfælder; edge cases; 5 spike tests; forbehold for datahygiejne.
+* *RFP-rubrik:* kriterier + vægtninger; stoppere; standardiserede leverandørspørgsmål; evidens-prompts.
+* *Kunde-/Driftskommunikation:* 3 varianter (email/FAQ/SMS); hvis-X-så-Y flows; tone-tjek.
+* *Implementerings-playbook:* faset plan; RACI; afhængigheder; dag-0/30/90-tjekliste.
+* *Vurdering af forretningsmulighed (BOTE):* intervaller med antagelser; følsomhed over for 2-3 drivere; beslutningsudløsere.
+* *Forklaring/Mytedræber:* kortfattet forklaring; misforståelser vs. fakta; citatbank.
+
+**Generér nu**
+For hvert emne: vælg den bedste rapporttype og lav én kort prompt (≤200 ord), der **eksplicit** angiver: rolle+mål, omfang (tid/geo, én udelukkelse), kildepolitik (prioritér/kræv citater), leverance (pr. type), QA-trin, begrænsninger. Efter hver prompt, tilføj en linje på ≤12 ord: *Hvorfor det passer*.
+              `,
+            requiresConfirmation: true,
+            confirmationText:
+              "Eg vátti, at eg havi fingið 3 birt."
+          },
+          {
+            title: "Stig 4: Tendra Deep Research",
+            description:
+              "Nú skalt tú tendra tíni trý Deep Research, men bara eitt í senn. Opna eitt nýtt kjatt og koyr tað fyrsta birti inn. Trýst so á tað stóra + við kjatti og tendra fyri Deep Research. Send nú birti. Ger hettar fyri hvørt birt.",
+            requiresConfirmation: true,
+            confirmationText:
+              "Eg vátti, at eg havi sett tríggjar Deep Research‑uppgávur í gongd."
+          },
+          {
+            title: "Stig 6: Liðugt",
+            description:
+              "Nú arbeiður ChatGPT allarhelst uppá tínar frásagnir. Tá ið tær eru lidnar kunna tær takast niður sum PDF.",
+            requiresConfirmation: false
+          }
+        ]
+      }
+    ]
 };
