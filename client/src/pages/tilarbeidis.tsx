@@ -22,6 +22,20 @@ type TimelineEvent = {
 
 const timelineData: TimelineEvent[] = [
   {
+    id: "evt-016",
+    date: "2024-12-01",
+    title: "Vegleiðingar eru farnar til rættlestur",
+    summary:
+      "Nú eru vegleiðingar skrivaðar og tær eru farnar til rættlestur. Um tú hevur áhuga í at rættlesa og royna tær, so kanst tú lesa tær her: Link 1 link 2.",
+  },
+  {
+    id: "evt-015",
+    date: "2024-11-20",
+    title: "Vegleiðingar deilt upp eftir bólkum",
+    summary:
+      "Eftir meitng í mun til hvussu man best rakar tann rætt bólkin, so havi eg valgt at ístaðin fyri at deil tær tvær fyrstu vegleiðingarnar upp millum námsfrøðingar og hjálparafólk, so er tað ístaðin deilt upp eftir \"Dagstovnar\" og so \"Røktarstarvsfólk\". Hettar var neyåugt fyri at vegleiðingarnar vóru so nýttuligar sum møguligt.",
+  },
+  {
     id: "evt-014",
     date: "2024-10-07",
     title: "Samrøður við námsfrøðingar og hjálparafólk eru komnar inn",
@@ -350,7 +364,7 @@ const Tilarbeidis = () => {
                     Núverandi uppgáva:
                   </h3>
                   <p className="text-foreground/90">
-                    Skriva vegleiðingar.
+                    Rættlestur
                   </p>
                 </div>
               </div>
@@ -363,7 +377,7 @@ const Tilarbeidis = () => {
                 <div>
                   <h4 className="font-semibold text-accent">Næst:</h4>
                   <p className="text-foreground/80 text-sm">
-                    Rættlestur
+                    Samrøður við lærarir og myndir til núvernadi vegleiðingar
                   </p>
                 </div>
               </div>
