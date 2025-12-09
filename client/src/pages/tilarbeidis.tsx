@@ -29,11 +29,11 @@ const timelineData: TimelineEvent[] = [
     summary: (
       <>
         Nú eru vegleiðingar skrivaðar og tær eru farnar til rættlestur. Um tú hevur áhuga í at rættlesa og royna tær, so kanst tú lesa tær her:{" "}
-        <Link href="/ai-for-kindergarten-guide" className="text-primary hover:text-primary/80 underline underline-offset-2 font-medium transition-colors" data-testid="link-kindergarten-guide">
+        <Link href="/user-guides/ai-for-kindergarten-guide" className="text-primary hover:text-primary/80 underline underline-offset-2 font-medium transition-colors" data-testid="link-kindergarten-guide">
           Vegleiðing fyri dagstovnar
         </Link>
         {" "}og{" "}
-        <Link href="/ai-for-caretakers-guide" className="text-primary hover:text-primary/80 underline underline-offset-2 font-medium transition-colors" data-testid="link-caretakers-guide">
+        <Link href="/user-guides/ai-for-caretakers-guide" className="text-primary hover:text-primary/80 underline underline-offset-2 font-medium transition-colors" data-testid="link-caretakers-guide">
           Vegleiðing fyri røktarstarvsfólk
         </Link>
         .
