@@ -12,8 +12,8 @@ labs: [
       // s1 — leave as is
           {
           title: "Stig 1: Ein samrøða við vitlíki",
-          description: "Koyr fyrst ChatGPT á vanliga GPT 5.1 myndilin. Um tú hevur nakra fílu sum lýsur teg, so kann tú skoyta hettar uppí nú. Kopiera so byrtið niðanfyri og koyr tað inn í ChatGPT og send. Svara síðan spurningunum, sum verða settir.",
-          window: "Nýggjur kjak",
+          description: "Koyr fyrst ChatGPT á vanliga GPT 5.1 myndilin (GPT 5.1 Auto). Um tú hevur nakra fílu sum lýsur teg, so kann tú skoyta hettar uppí nú. Kopiera so byrtið niðanfyri og koyr tað inn í ChatGPT og send. Svara síðan spurningunum, sum verða settir.",
+          window: "Nýtt kjatt",
           model: "GPT 5.1",
           prompt: `
 You are a **neutral, professional interviewer** with the goal of understanding the person's work **deeply and concretely**. This insight must enable a colleague to map the details to potential AI/ChatGPT use cases in the next step. At this stage, you must **never** suggest solutions or bring up AI usage—your only task is to ask questions and gather information.
@@ -145,6 +145,8 @@ You must **never** suggest or describe how ChatGPT/AI can help during the interv
           {
           title: "Stig 2: Samandráttur (við Thinking-modellinum)",
           description: "Skift fyrst til 'Thinking'-modellið. Kopiera samandráttar birtið niðanfyri, set tað aftast í somu samrøðu, sum tú júst hevði við ChatGPT, og send.",
+                window: "Sama kjatttráð",
+                model: "GPT 5.1 Thinking",
           prompt: `
 Stop the interview now and summarize my work exclusively based on the information I have given you.
 
@@ -187,6 +189,8 @@ General Constraints:
           {
           title: "Stig 4: Deep Research",
           description: "Kopiera birti niðanfyri inn í nýggja ChatGPT-vindeyga, skoyt samandráttin inn har tað er merkt, tendra Deep Research og send so.",
+              window: "Nýtt kjatt",
+              model: "GPT 5.1 + Deep Research",
           prompt: `
 You must use Deep Research to write a comprehensive report for leaders and founders about how people in a given role actually use ChatGPT and similar LLM tools in their work.
 
@@ -333,6 +337,8 @@ The report must be readable independently by a leader who may never have used Ch
           {
           title: "Stig 5: Nýggjur gluggi og møguleikalisti",
           description: "Opna ein nýggjan glugga við ChatGPT. Kopiera birtið, fyll inn tín samandrátt. Broyt nú myndilin til [ChatGPT 5.1 Thinking] og send avstað. Skoðað so listan av møguleikum; er úrslitið skilagott? Stundum kemur modellið inn á skeiva leið; royn umaftur, um tað hendir.",
+              window: "Nýtt kjatt",
+              model: "GPT 5.1 Thinking",
           prompt: `
 ## Introduction
 
@@ -617,6 +623,8 @@ Write the ideas briefly, concretely, and adapted to this client. Avoid generic s
           {
           title: "Stig 6: Bygg víðari – partur 1",
           description: "Kopiera birti niðanfyri og send.",
+                window: "Sama kjatttráð",
+                model: "GPT 5.1 Thinking",
           prompt: `Great. Now I want you to think **outside the box**.
 
             Conduct a new analysis of tasks my client can use ChatGPT for. In this analysis, I want you to find use cases that could **revolutionize their business, workflow, or industry**.
@@ -633,6 +641,8 @@ Write the ideas briefly, concretely, and adapted to this client. Avoid generic s
           {
           title: "Stig 7: Bygg víðari – partur 2",
           description: "Kopiera birtið niðanfyri inn í sama kjatt og send.",
+              window: "Sama kjatttráð",
+              model: "GPT 5.1 Thinking",
           prompt: `
 Excellent. Now, one last time:
 
@@ -651,7 +661,9 @@ Present the **3 best ideas** you find.
           {
           title: "Stig 8: Ger listan",
           description: "Kopiera birtið inn í ChatGPT og send.",
-          prompt: `Develop highly relevant metrics to measure the effectiveness and ROI of these ideas.
+              window: "Sama kjatttráð",
+              model: "GPT 5.1 Thinking",
+          prompt: `Develop highly relevant metrics to measure the effectiveness and ROI of all these 21 ideas.
 
 Then, review all the ideas and rank them based on your metrics.
 
@@ -661,6 +673,8 @@ Finally, present a sorted list of all 21 ideas.`,
           {
           title: "Stig 9: Skoyt uppí meira forkláring",
           description: "Kopiera birtið inn í ChatGPT og send.",
+              window: "Sama kjatttráð",
+              model: "GPT 5.1 Thinking",
           prompt: `
 Finally, add the following elements to all ideas on the list:
 
@@ -671,12 +685,12 @@ Finally, add the following elements to all ideas on the list:
 Keep each description short and practical so a busy professional can immediately see how to try it in reality.
 
 **Output the full, finalized list now, ready to print.**
-          `,
+`,
           requiresConfirmation: false
           },
           {
           title: "Stig 10: Liðugt – takk fyri!",
-          description: "Hattar var hattar, nú koma keppar.",
+          description: "Hattar var hattar, um tú nú er ágrýtin so fert tú at hyggja væl eftir listanum og royna tað tú hevur fingið viðmælt. Menn meira sannlíkt er at tú fert aftur til arbeiðis og gloymur alt um hendan listan og finnur hann aftur um eitt hálvt ár og so hevur tú gloymt alt um hvat hettar snúði seg um. Mítt viðmæli er tað fyrra.",
           requiresConfirmation: false
         }
       ]
@@ -691,6 +705,8 @@ Keep each description short and practical so a busy professional can immediately
             title: "Stig 1: Bið ChatGPT finna uppá evnir",
             description:
               "Koyr birti niðanfyri inn í ChatGPT og skoyt uppí tína arbeiðis lýsing frá venjing 1.",
+              window: "Nýtt kjatt",
+              model: "GPT 5.1 Thinking",
             prompt: `
 **Rolle:** Du er min **Research Triage-konsulent**. Dit job er at scanne min kontekst og foreslå **specifikke emner af høj værdi**, som er **velegnede til ChatGPT Deep Research** (værktøjet, der udfører undersøgelser på nettet i flere trin og sammenfatter fund med kildehenvisninger), og som er mest værdifulde for mig. Deep Research er mest nyttig, når:
 
@@ -771,6 +787,8 @@ Ud over at (a) gennemsøge, hvad brugere og 'thought leaders' siger, og (b) find
             title: "Stig 3: Bygg klár Deep Research‑birt til tey valdu evnini",
             description:
               "Í sama kjatt, avrita birti niðanfyri og fyll inn tíni 3 valdu evnir.",
+              window: "Sama kjatttráð",
+              model: "GPT 5.1 Thinking",
             prompt: `
 **Ny rolle**
 Nu er du *Senior Research Prompt Architect* for Deep Research. Dit job er at omdanne mine valgte emner til interessante prompter af høj værdi til Deep Research.
@@ -830,7 +848,9 @@ For hvert emne: vælg den bedste rapporttype og lav én kort prompt (≤200 ord)
           {
             title: "Stig 4: Tendra Deep Research",
             description:
-              "Nú skalt tú tendra tíni trý Deep Research, men bara eitt í senn. Opna eitt nýtt kjatt og koyr tað fyrsta birti inn. Trýst so á tað stóra + við kjatti og tendra fyri Deep Research. Send nú birti. Ger hettar fyri hvørt birt.",
+              "Nú skalt tú tendra tíni trý Deep Research, men bara eitt í senn. Opna eitt nýtt kjatt og koyr tað fyrsta birti inn. Trýst so á tað stóra + við kjatti og tendra fyri Deep Research. Send nú birti. Ger hettar fyri hvørt birt tú fekk frá myndlinum.",
+              window: "Nýtt kjatt",
+              model: "GPT 5.1 + Deep Research",
             requiresConfirmation: true,
             confirmationText:
               "Eg vátti, at eg havi sett tríggjar Deep Research‑uppgávur í gongd."

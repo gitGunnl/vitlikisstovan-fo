@@ -489,7 +489,7 @@ export default function Verkstova() {
 
               {currentStep === selectedLab.steps.length - 1 ? (
                 <Button
-                  onClick={handleExit}
+                  onClick={handleBackToLabSelection}
                   className="w-full sm:w-auto sm:ml-auto"
                   data-testid="button-complete"
                 >
