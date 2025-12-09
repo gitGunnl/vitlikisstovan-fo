@@ -661,7 +661,7 @@ const MarkdownBlock = ({ text }: { text: string }) => {
       elements.push(
         <ul key={`ul-${elements.length}`} className="my-6 space-y-3 ml-2">
           {listBuffer.map((item, i) => (
-            <li key={i} className="flex items-start text-lg text-stone-700 dark:text-stone-300 leading-8">
+            <li key={i} className="flex items-start text-lg text-stone-800 dark:text-stone-300 leading-8">
               <span className="mr-3 mt-2.5 block h-1.5 w-1.5 rounded-full bg-stone-400 flex-shrink-0" />
               <span><RenderInlineText text={item} /></span>
             </li>
@@ -692,7 +692,7 @@ const MarkdownBlock = ({ text }: { text: string }) => {
     } else if (cleanLine.startsWith("### ")) {
       flushList();
       elements.push(
-        <h3 key={idx} className="font-serif text-xl font-semibold text-stone-700 dark:text-stone-200 mt-8 mb-4 uppercase tracking-wide text-sm">
+        <h3 key={idx} className="font-serif text-xl font-semibold text-stone-800 dark:text-stone-200 mt-8 mb-4 uppercase tracking-wide text-sm">
           <RenderInlineText text={cleanLine.substring(4)} />
         </h3>
       );
@@ -711,7 +711,7 @@ const MarkdownBlock = ({ text }: { text: string }) => {
       flushList();
       // Styling for standard paragraphs: Serif, larger size, relaxed leading
       elements.push(
-        <p key={idx} className="mb-6 text-lg sm:text-xl leading-loose text-stone-700 dark:text-stone-300 font-serif">
+        <p key={idx} className="mb-6 text-lg sm:text-xl leading-loose text-stone-800 dark:text-stone-300 font-serif">
           <RenderInlineText text={line} />
         </p>
       );
