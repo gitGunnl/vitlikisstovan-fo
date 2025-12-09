@@ -904,7 +904,7 @@ export default function AiForCaretakersGuide() {
     }
   }, []);
 
-  const contentParts = blogContent.split(/(-- prompt --[\s\S]*?-- prompt --)/g);
+  const contentParts = blogContent.split(/(\\?-{2,3} prompt \\?-{2,3}[\s\S]*?\\?-{2,3} prompt \\?-{2,3})/g);
 
   return (
     <div className="flex flex-col min-h-screen bg-stone-50 dark:bg-stone-950 font-serif">
@@ -934,8 +934,8 @@ export default function AiForCaretakersGuide() {
           {/* Article Body */}
           <article className="selection:bg-stone-200 selection:text-stone-900 dark:selection:bg-stone-700 dark:selection:text-stone-50">
             {contentParts.map((part, index) => {
-              if (part.startsWith("-- prompt --")) {
-                const promptText = part.replace(/^-- prompt --/, "").replace(/-- prompt --$/, "").trim();
+              if (part.match(/^\\?-{2,3} prompt \\?-{2,3}/)) {
+                const promptText = part.replace(/^\\?-{2,3} prompt \\?-{2,3}/, "").replace(/\\?-{2,3} prompt \\?-{2,3}$/, "").trim();
                 return <PromptCard key={index} text={promptText} />;
               }
               return <MarkdownBlock key={index} text={part} />;
