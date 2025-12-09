@@ -1,6 +1,7 @@
 // client/src/pages/tilarbeidis.tsx
-import { useEffect, useState } from "react";
+import { useEffect, useState, ReactNode } from "react";
 import { Calendar, ChevronDown } from "lucide-react";
+import { Link } from "wouter";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import { seoConfig } from "@/content/seo";
@@ -11,7 +12,7 @@ type TimelineEvent = {
   id: string;
   date: string;
   title: string;
-  summary: string;
+  summary: string | ReactNode;
   mediaType?: "image" | "video" | "buttons";
   mediaSrc?: string;
   accordions?: Array<{
@@ -25,8 +26,19 @@ const timelineData: TimelineEvent[] = [
     id: "evt-016",
     date: "2024-12-01",
     title: "Vegleiðingar eru farnar til rættlestur",
-    summary:
-      "Nú eru vegleiðingar skrivaðar og tær eru farnar til rættlestur. Um tú hevur áhuga í at rættlesa og royna tær, so kanst tú lesa tær her: Link 1 link 2.",
+    summary: (
+      <>
+        Nú eru vegleiðingar skrivaðar og tær eru farnar til rættlestur. Um tú hevur áhuga í at rættlesa og royna tær, so kanst tú lesa tær her:{" "}
+        <Link href="/ai-for-kindergarten-guide" className="text-primary hover:text-primary/80 underline underline-offset-2 font-medium transition-colors" data-testid="link-kindergarten-guide">
+          Vegleiðing fyri dagstovnar
+        </Link>
+        {" "}og{" "}
+        <Link href="/ai-for-caretakers-guide" className="text-primary hover:text-primary/80 underline underline-offset-2 font-medium transition-colors" data-testid="link-caretakers-guide">
+          Vegleiðing fyri røktarstarvsfólk
+        </Link>
+        .
+      </>
+    ),
   },
   {
     id: "evt-015",
