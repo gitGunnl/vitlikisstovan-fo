@@ -292,7 +292,7 @@ export default function Verkstova() {
                 data-testid="button-back-to-labs"
               >
                 <ArrowLeft className="h-4 w-4 mr-1" aria-hidden="true" />
-                Aftur til lab val
+                Aftur til vanjingar val
               </Button>
               <AlertDialog open={showExitDialog} onOpenChange={setShowExitDialog}>
                 <AlertDialogTrigger asChild>
@@ -493,7 +493,7 @@ export default function Verkstova() {
                   className="w-full sm:w-auto sm:ml-auto"
                   data-testid="button-complete"
                 >
-                  Enda venjingina
+                  Enda venjing
                 </Button>
               ) : (
                 <Button
@@ -517,7 +517,7 @@ export default function Verkstova() {
               data-testid="button-back-to-labs"
             >
               <ArrowLeft className="h-4 w-4 mr-1" aria-hidden="true" />
-              Aftur til lab val
+              Aftur til venjingar val
             </Button>
             <AlertDialog open={showExitDialog} onOpenChange={setShowExitDialog}>
               <AlertDialogTrigger asChild>
