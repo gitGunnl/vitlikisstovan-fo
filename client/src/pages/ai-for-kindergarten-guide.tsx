@@ -81,7 +81,7 @@ Tað er farið at oysregna í Vestmanna. Tínar útiætlanir detta í vaskið, o
 
 **Gott dømi um byrt (avrita/lima hetta):**
 
-\<prompt\>
+-- prompt --
 
 Eg eri námsfrøðingur í einum barnagarði í Vestmanna. Tað regnar, so vit eru innandura í dag.
 
@@ -102,7 +102,7 @@ Vinarliga spyr fyrst, um okkurt er ógreitt.
 * "Ger hesi tiltøkini einfaldari og skjótari at rudda upp eftir."  
 * "Okkum dámdi væl søguløtuna. Skjót upp trý líknandi tiltøk við sjóvartema."
 
-\</prompt\>
+-- prompt --
 
 **Fleiri møguleikar fyri kreativari sparring**
 
@@ -128,7 +128,7 @@ Vitlíki kann vera tíni eyka eygu, sum skjótt gjøgnumgongur tínar ætlanir f
 
 **Gott dømi um byrt (avrita/líma hetta inn):**
 
-\<prompt\>
+-- prompt --
 
 Vit fara við 18 fimm ára gomlum børnum og 3 vaksnum til ein væl vitjaðan, landsumfatandi rennidag. Har vera nógv fólk, nógvur larmur og skiftandi veður. **Her er okkara "minnislisti til tey vaksnu", sum hann sær út nú:**
 
@@ -152,7 +152,7 @@ Vinarliga **gjøgnumgang listan** og:
 
 Svarið skal vera stutt og hent. Spyr vinaliga fyrst, um okkurt er ógreitt.
 
-\</prompt\>
+-- prompt --
 
 ---
 
@@ -192,7 +192,7 @@ Ein ávaring um nógvan vind kemur brádliga fyri í Tórshavn, og tað gongur u
 
 **Gott dømi um birt (avrita/líma inn):**
 
-\<prompt\>
+-- prompt --
 
 *Eg eri námsfrøðingur á einum dagstovni í Tórshavn (Føroyum).* Nógvur vindur er væntandi seinnapartin. Vit vilja biðja foreldur: Um gjørligt, vinarliga heintið børnini í seinasta lagi kl. **14:30**. Vit hava opið fyri familjur, sum ikki kunnu koma tíðliga.
 
@@ -221,7 +221,7 @@ Ein ávaring um nógvan vind kemur brádliga fyri í Tórshavn, og tað gongur u
 
 Spyr meg, um okkurt er ógreitt, áðrenn tú byrjar at skriva.
 
-\</prompt\>
+-- prompt --
 
 ---
 
@@ -261,7 +261,7 @@ Tín bólkur av lívligum 4-ára gomlum børnum í Klaksvík gloymir ferð eftir
 
 **Gott dømi um birt (avrita/líma hetta):**
 
-\<prompt\>
+-- prompt --
 
 Skriva eina stutta, stuttliga søgu (umleið 1 minutt langa at lesa hart) til míni 4-ára gomlu børn í Klaksvík, sum spakuliga minnir tey á, hví tað er umráðandi at vaska sær um hendurnar eftir at hava spælt úti.
 
@@ -284,7 +284,7 @@ Vinarliga spyr fyrst, um okkurt er ógreitt.
 * “Tak eitt stuttligt, talandi djór við, sum børnini fara at minnast.”  
 * “Gev eitt uppskot til eina lítla rørslu, vit kunnu gera hvørja ferð fyri at styrkja handvaskið.”
 
-\</prompt\>
+-- prompt --
 
 ---
 
@@ -340,7 +340,7 @@ Tað hevur verið ein serliga strævin dagur við færri starvsfólkum enn vanli
 
 **Gott dømi um birt:**
 
-\<prompt\>
+-- prompt --
 
 *Eg eri námsfrøðingur í einum barnagarði í Runavík (Føroyar).* Í dag var strævið við færri starvsfólkum. Eg skrivaði skjótt hesar notur niður:
 
@@ -356,7 +356,7 @@ Tað hevur verið ein serliga strævin dagur við færri starvsfólkum enn vanli
 
 Brúka natúrligt føroyskt mál. Halt tað óheft, sakligt, og **nýt ongantíð nøvn ella persónligar dátur**. Spyr meg bara, um okkurt er ógreitt.
 
-\</prompt\>
+-- prompt --
 
 ---
 
@@ -397,7 +397,7 @@ Sum ein eyka partur (bert til innanhýsis nýtslu) kanst tú biðja um eina "St�
 
 ### **Gott dømi um byrt (avrita/lima hetta):**
 
-\<prompt\>
+-- prompt --
 
 Umsmelta hesi grovu notat til eitt **stutt vaktaryvirlit** við 5 punktum.
 
@@ -422,7 +422,7 @@ Vinarliga spyr fyrst, um okkurt er ógreitt.
 * "Umskriva við einfaldari B1-setningum."  
 * "Týð til enskt og danskt aftan á føroyskt."
 
-\</prompt\>
+-- prompt --
 
 ---
 
@@ -901,7 +901,7 @@ export default function AiForCaretakersGuide() {
     }
   }, []);
 
-  const contentParts = blogContent.split(/(<prompt>[\s\S]*?<\/prompt>)/g);
+  const contentParts = blogContent.split(/(-- prompt --[\s\S]*?-- prompt --)/g);
 
   return (
     <div className="flex flex-col min-h-screen bg-stone-50 dark:bg-stone-950 font-serif">
@@ -931,8 +931,8 @@ export default function AiForCaretakersGuide() {
           {/* Article Body */}
           <article className="selection:bg-stone-200 selection:text-stone-900 dark:selection:bg-stone-700 dark:selection:text-stone-50">
             {contentParts.map((part, index) => {
-              if (part.startsWith("<prompt>")) {
-                const promptText = part.match(/<prompt>([\s\S]*?)<\/prompt>/)?.[1] || "";
+              if (part.startsWith("-- prompt --")) {
+                const promptText = part.replace(/^-- prompt --/, "").replace(/-- prompt --$/, "").trim();
                 return <PromptCard key={index} text={promptText} />;
               }
               return <MarkdownBlock key={index} text={part} />;

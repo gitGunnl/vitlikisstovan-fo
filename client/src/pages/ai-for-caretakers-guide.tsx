@@ -141,7 +141,7 @@ Sum hjálparfólk eru dagar tínir fyltir við røktaruppgávum – frá persón
 ---
 
 **Gott dømi um byrt (avrita/líma hetta):**
-<prompt>
+-- prompt --
 Eg eri hjálparfólk á einum bústovni í Føroyum. Okkara gongutúrur varð avlýstur vegna regn.
 
 * Luttakarar: 5 vaksin við ymiskum kognitivum og likamligum førleikum.  
@@ -150,7 +150,7 @@ Eg eri hjálparfólk á einum bústovni í Føroyum. Okkara gongutúrur varð av
 * Mál: At fáa búfólkini at gera okkurt, sum gevur meining næsta tíman, og at varðveita ein róligan og jaligan hýr.
 
 Kom við uppskotum um okkurt innandura virksemi, sum krevur lítla fyrireiking, fevnir um øll, eru rólig og hóska til blandaðar førleikar. Spyr meg fyrst, um okkurt krevur nærri frágreiðing.
-</prompt>
+-- prompt --
 
 **Uppfylgjandi byrt:** Um uppskotini ikki eru heilt, sum tú vilt hava tey, leiðbein so vitlíki greitt. Til dømis:
 
@@ -188,7 +188,7 @@ Hugsa um tað sum ein praktiskan hjálpara, ið ger júst tann minnislistan, tæ
 Fyri at tryggja, at einki verður gloymt, leggur tú nakrar avgerandi veruligar smálutir afturat: **eitt av búfólkunum, Frú P, hevur tørv á sínum samanleggjandi gongustativi, og Harra H, verður ógvuliga stúrin undir flutningi og er bundin av sínum serliga útvarps-headsetti.** Tú biður vitlíki hjálpa tær at fyrireika kvøldið fyri.
 
 #### **⭐ Gott dømi um byrt (avrita/líma hetta)**
-<prompt>
+-- prompt --
 Eg eri røktarstarvsfólk á einum bústovni. Vit skulu av stað í morgin árla.
 
 * **Fráferð:** 07:30 (áðrenn vanliga vaktin byrjar)  
@@ -199,7 +199,7 @@ Eg eri røktarstarvsfólk á einum bústovni. Vit skulu av stað í morgin árla
 * **Týðandi notat:** Tak smápening við, váttan fyri hýruvogn, ongar persónligar heilsudátur her.
 
 Vinarliga ger ein stuttan og praktiskan minnislista, sum vit kunnu fyrireika í kvøld, so morgunin í morgin verður róligari. Tryggja, at gongustativ og headsett eru við. Halt tað telefon-vinarligt (10–14 punkt). Tak eina einfalda Grøn/Gul/Reyð støðukanning við til síðst. Spyr fyrst, um okkurt krevur frágreiðing. Ongar persónligar dátur.
-</prompt>
+-- prompt --
 ---
 
 ### **Fá minnislistan heilt rættan**
@@ -236,7 +236,7 @@ Greitt og støðugt samskifti ger dagin lættari hjá øllum. Men at skriva stut
 Vaktin á bústovninum endar um fimm minuttir. Tað er eingin umskaran á næstu vaktini, so tíni notat mugu vera greið. Tú hevur grov notat um, hvat hendi í dag, men tær tørvar ein stuttan, skipaðan samandrátt fyri at tryggja eitt gott vaktarskifti.
 
 ### **Gott dømi um byrt (avrita/líma hetta):**
-<prompt>
+-- prompt --
 Umskapa hesi grovu notat til eitt vaktaryvirlit við 5 punktum:
 
 **Uppseting:**
@@ -251,7 +251,7 @@ Umskapa hesi grovu notat til eitt vaktaryvirlit við 5 punktum:
 
 *(Líma tíni almennu notat inn her – ongar persónligar smálutir.)*
 
-</prompt>
+-- prompt --
 
 ### **Uppfylgjandi byrt:**
 
@@ -305,18 +305,18 @@ Niðanfyri er allur kapittulin "Skjót byrt" (Quickfire Prompts), bygt á tey 10
 **Støða:** Í **Skálavík** hevur tú 30 minuttir áðrenn døgurða í einum lítlum rúmi uppi yvir køkinum. Grýtur byrja at skrambla umleið **kl. 11:05**, gólvið ljómar, tá ið stólar verða fluttir, og bólkurin brúkar eitt tvey-bank friðar-signal. Tú sleppur tær undan glimmeri vegna reglur um niðurrensl. Hesar smálutir hjálpa vitlíki at skjóta upp stillari virksemi, ið eru skjót at fyrireika, og sum veruliga hóska til rúmið. 
 
 **Byrt:**
-<prompt>
+-- prompt --
 Skálavík — 30 minuttir við 10 børnum (3–4 ár) í einum lítlum rúmi á loftinum. Køkslarmur byrjar \~11:05; ljómandi gólv; friðar-signal \= tvey sein fingrabank. Einki glimmur (reglur um niðurrensl). Tema: Lív í sjónum. Tilfar: feittlitir, A5 pappír, maskeringstape, plastlok, mjúkir kubbar. Skjót upp 3 friðarlig virksemi, sum dálka lítið. Fyri hvørt: uppseting ≤1 min, 3 barnavinarlig stig, eitt skjótt ruddingarnotat, og eitt føroyskt↔enskt orðapar (t.d. "alda / wave"). Svara á natúrligum føroyskum. Ongar persónligar dátur.
-</prompt>
+-- prompt --
 
 **2\) Heiti:** Kunningarskriv til foreldur um havnarvitjan **Støða:** Í **Fuglafirði** vitjar flokkurin bjargingarstøðina **09:45–11:15**. Fjøra (lágvatn) umleið **10:30** gevur hálan tara við rampuna, havnarfloytan kann ljóða **kl. 11:00**, og myndir av útgerð eru loyvdar, men ikki av børnum. Hesir smálutir lata vitlíki skriva eina stutta kunning, sum svarar teimum spurningum, foreldur sannlíkt hava, frammanundan. 
 
 **Byrt:**
-<prompt>
+-- prompt --
 Vitjan á bjargingarstøðini í Fuglafirði — Hós 20\. nov, 09:45–11:15. Útgerð: regnklæðir, gummistivlar, matarstegður. Fjøra \~10:30 (hált av tara); floytan kann ljóða kl. 11:00; sjálvboðin bjargingarvestaframvísing; myndir bert av útgerð (ongar barnamyndir). Skriva eina stutta, praktiska kunning til foreldur, sum fevnir um tíð, útgerð, matarsteðgir, heinting og samband. Svara á natúrligum føroyskum. Ongar persónligar dátur.
 
 Endurnýt hetta mynstrið: **heiti á uppgávuni**, **stutt støðulýsing við ítøkiligum avmarkingum**, **stramt byrt við krøvum til snið \+ mál/trygdarleiðbeiningar**. Skift uppspunnu smálutirnar út við tínar egnu.
-</prompt>
+-- prompt --
 ---
 
 ## **Skjót byrt: Realistisk dømi at hvessa tínar vitlíkisførleikar (røktarstarvsfólk)**
@@ -332,7 +332,7 @@ Niðanfyri finnur tú eitt savn av dømum um støð – íspunnin, men tætt at 
 **Støða:** Tú ert í **Klaksvík** í eini felagsstovu **14:00–14:30**, beint eftir at vaskimaskinan er liðug. Turkitrumlan hurrar harðast umleið **14:05**, og gongshurðin gevru eit hvin, tá ið hon verður latin upp. Tú hevur eitt lítið borð, mjúkar blýantar, A4 pappír og eitt kortspæl. Við at geva hesar smálutir kann vitlíki skjóta upp **rólig, løtt-at-rudda** virksemi, sum hóska til larm- og plássavmarkingarnar og minka um yvirstimulering.
 
 **Byrt:**
-<prompt>
+-- prompt --
 Eg eri í Klaksvík við 5 vaksnum búfólkum (blandaðir førleikar). Klokkan er 14:00–14:30, beint eftir at vaskimaskinan er liðug (turkitrumlan hurrar \~14:05, gongshurðin hvínur). Vit hava eitt lítið borð, mjúkar blýantar, A4 pappír og spælikort.
 
 Skjót upp 4 still, rólig virksemi, sum hóska til okkara rúm. Tak hetta við fyri hvørt:
@@ -343,7 +343,7 @@ Skjót upp 4 still, rólig virksemi, sum hóska til okkara rúm. Tak hetta við 
 * stutt notat, sum forklarar "hví hetta róar"
 
 Svara á natúrligum føroyskum. Ongar persónligar dátur – brúka "Búfólk A/B".
-</prompt>
+-- prompt --
 ---
 
 ### **2\) Tiltakshugskot uttan tilfar**
@@ -353,7 +353,7 @@ Svara á natúrligum føroyskum. Ongar persónligar dátur – brúka "Búfólk 
 **Støða:** Í **Tórshavn** (felagsrúm **10:15–10:40**) er goymsluskápið læst inntil **10:45**; eitt borð vaggar; stólar eru tungir at flyta. Tær tørvar fangandi møguleikar, sum bert brúka **stólar, hendur og røddir**. Við hesum avmarkingum kann vitlíki leypa um klipp-og-klistra hugskot og geva tær **møguleikar uttan tilfar**, sum tú kanst brúka beinanvegin.
 
 **Byrt:**
-<prompt>
+-- prompt --
 Í dag í Tórshavn er okkara goymsluskáp læst til klokkan 10:45. Nú er klokkan 10:15–10:40, og vit hava bara stólar tøkar (eitt borð er ov vaggut at brúka). Plássið er avmarkað, so virksemið má vera sitandi ella ógvuliga einfalt.
 
 Vinarliga gev okkum 5 fangandi hugskot til virksemi uttan tilfar, hóskandi til blandaðar førleikar. Tak hetta við fyri hvørt:
@@ -363,7 +363,7 @@ Vinarliga gev okkum 5 fangandi hugskot til virksemi uttan tilfar, hóskandi til 
 * uppskot til at falla til ró skjótt (30–60 sek)
 
 Svara á natúrligum føroyskum. Ongar persónligar dátur – brúka "Búfólk A/B".
-</prompt>
+-- prompt --
 ---
 
 ### **3\) Fá starvsfólk / lítið-pláss-ætlan (sitandi rørsla)**
@@ -373,7 +373,7 @@ Svara á natúrligum føroyskum. Ongar persónligar dátur – brúka "Búfólk 
 **Støða:** Í **Runavík**, **Stova 3N** er umleið **3,5 m × 4 m**; tú ert **einasta starvsfólk** til staðar. Vendiradius hjá koyristóli er knappur; fólk ganga framvið á gongini hvørjar **5 minuttir**; ein brandávaringar roynd er skrásett kl. **10:00** (stutt floyt). Við hesum detaljustigi kann vitlíki laga løtt rørsluspøl til tryggar **sitandi útgávur** við greiðum trygdarboðum.
 
 **Byrt:**
-<prompt>
+-- prompt --
 Eg eri einsamallur/einsamøll í Runavík (Stova 3N, ógvuliga lítið pláss, 3,5×4 m). Atgongd við koyristóli er avmarkað, fólk ganga framvið 5\. hvønn minutt, og tað er ein stutt brandávaringar-roynd (floyt) kl. 10:00. Okkum tørvar tvey varin sitandi rørsluvirksemis uppskot (8–10 min hvørt).
 
 Fyri hvørt virksemi, veit:
@@ -384,7 +384,7 @@ Fyri hvørt virksemi, veit:
 * greiða "steðgiorð" leiðbeining
 
 Svara á natúrligum føroyskum. Ongar persónligar dátur – brúka "Búfólk A/B".
-</prompt>
+-- prompt --
 ---
 
 ### **4\) Samrøðukort til matarsteðg**
@@ -394,13 +394,13 @@ Svara á natúrligum føroyskum. Ongar persónligar dátur – brúka "Búfólk 
 **Støða:** Í **Vestmanna**, **11:20–11:40,** er matar-/kaffisteðgur í einum sólríkum horni. Fyrsta kavafrost í hesi vikuni; ferju-floytan hoyrist umleið **12:15**; útvarpstíðindi kl. **12:00** (halt ljóðstyrkina lága). At biðja um **varin, ítøkilig** evni hjálpir vitlíki at sleppa undan minnis-krevjandi spurningum og heldur tónan lættan og fevnandi.
 
 **Byrt:**
-<prompt>
+-- prompt --
 Vit eru í Vestmanna og hava ein 20-minuttir matar-/kaffi-steðg (11:20–11:40) við sólríka vindeygað. Tað er fyrsta kavafrost í hesi vikuni; ferju-floytan ljóðar umleið 12:15. Vit vildu fegin havt einføld, varin samrøðu-upplegg um "Veður & Árstíðir."
 
 Vinarliga skjót upp 12 stutt, løtt-at-svara samrøðu-upplegg. Sniðgev hvørt sum: \[uppleggsspurningur\] \+ (valfríur uppfylgjandi spurningur)
 
 Halt tað uppbyggjandi og ítøkiligt – ongar persónligar faktaupplýsingar neyðugar. Svara á natúrligum føroyskum. Ongar persónligar dátur.
-</prompt>
+-- prompt --
 ---
 
 ### **5\) Minnislisti til útferð (veður \+ mobilitet \+ hýruvognur)**
@@ -410,7 +410,7 @@ Halt tað uppbyggjandi og ítøkiligt – ongar persónligar faktaupplýsingar n
 **Støða:** Í **Sandavági** verður ein stuttur túrur í bygdarparkina klokkan **13:10–14:20**. Veðurforsøgn: **vindur og eitt sindur av regni**; gøtur eru hálar nærhendis bonkunum. Bólkur upp á 4 (blandað flytføri/ mobilitetur), 2 starvsfólk. Hýruvognur heintar **13:05**; bilstjórin vil helst hava **kortgjalding**; afturkomu-vindeyga ±10 minuttir. At siga vitlíki hesar ítøkiligu smálutir gevur ein **telefon-vinarligan lista**, sum tú veruliga kanst fylgja.
 
 **Byrt:**
-<prompt>
+-- prompt --
 Í morgin fara vit í bygdarparkina í Sandavági (13:10–14:20). Forsøgnin sigur vind og eitt sindur av regni, og gøtur nærhendis bonkum kunnu vera hálar. Vit eru 4 búfólk (blandað flytføri) \+ 2 starvsfólk, brúka hýruvogn (heinting 13:05, kortgjalding er ynskilig).
 
 Vinarliga ger ein praktiskan útferðar-minnislista (10–14 punkt) bólkað eftir:
@@ -420,7 +420,7 @@ Vinarliga ger ein praktiskan útferðar-minnislista (10–14 punkt) bólkað eft
 * Í hýruvogninum
 
 Tak eina einfalda Grøna/Gula/Reyða støðukanning við eini grundgeving. Svara á natúrligum føroyskum. Ongar persónligar dátur – brúka "Búfólk A/B".
-</prompt>
+-- prompt --
 ---
 
 ### **6\) Umsitingarlig avgreiðsla eftir útferð**
@@ -430,7 +430,7 @@ Tak eina einfalda Grøna/Gula/Reyða støðukanning við eini grundgeving. Svara
 **Støða:** Aftur á **Tvøroyri** umleið **11:30** eftir tvey støð, tú hevur leysar kvittanir, ein posa at pakka út, og smálutir um hýruvogn at logga. Køliskápið er nærum fult og etikettir til leivdir mangla. Við hesum smálutum kann vitlíki skjóta upp eina **8–10 punkt avgreiðslu**, sum ruddar leysar endar skjótt og forðar fyri, at upplýsingar verða burtur.
 
 **Byrt:**
-<prompt>
+-- prompt --
 Vit eru júst komin aftur (\~11:30) frá einum innkeypstúri á Tvøroyri. Eg havi leysar kvittanir, ein posa, sum ikki er pakkaður út, hýruvogns-smálutir at logga, eitt næstan fult køliskáp, og ómerktar leivdir.
 
 Ger ein skjótan avgreiðslu-minnislista (8–10 punkt), sum fevnir um:
@@ -443,7 +443,7 @@ Ger ein skjótan avgreiðslu-minnislista (8–10 punkt), sum fevnir um:
 * stutt (2-min) eftirmetingar-notat
 
 Svara á natúrligum føroyskum. Ongar persónligar dátur – brúka "Búfólk A/B".
-</prompt>
+-- prompt --
 ---
 
 ### **7\) Vikuligur innkeyps-ráðleggjari (fíggjarætlan & goymsla)**
@@ -453,7 +453,7 @@ Svara á natúrligum føroyskum. Ongar persónligar dátur – brúka "Búfólk 
 **Støða:** Í **Norðragøtu**, vikuligt innkeyp er **Týs 10:15–11:15** við bussi. **Fíggjarætlan 700 kr**, lítið køliskáp/frystiboks, avmarkað turrgoymsla. Húsregla: hav **laktosufría mjólk** og **nøtufrítt snarl** tøkt (regla, ikki persóns-ítøkiligt). Hesar avmarkingar hjálpa vitlíki at halda listan veruligan og **fíggjarliga tilvitaðan**.
 
 **Byrt:**
-<prompt>
+-- prompt --
 Vit hava okkara vikuliga innkeypstúr í Norðragøtu (týsdag, 10:15–11:15 við bussi). Fíggjarkarmurin er 700 kr, og goymslupláss (køliskáp/frystiboks/turr) er lítið. Húsreglur: hav altíð laktosufría mjólk og nøtufrítt **(snarl) …hvat er hetta “SNARL”???** tøkt.
 
 Vinarliga skjót upp ein greiðan innkeypslista bólkaðan sum:
@@ -463,7 +463,7 @@ Vinarliga skjót upp ein greiðan innkeypslista bólkaðan sum:
 * Gott at hava (Maks 12 vørur íalt, við uml. nøgdum \+ 2 bíligum alternatium)
 
 Svara á natúrligum føroyskum. Ongar persónligar dátur.
-</prompt>
+-- prompt --
 ---
 
 ### **8\) Tilreiðar-listi til handverkaravitjan (elektrikari/hvs)**
@@ -473,7 +473,7 @@ Svara á natúrligum føroyskum. Ongar persónligar dátur.
 **Støða:** Í **Sørvági**, tíð til elektrikara **14:00–16:00** er bíløgd í felags-tekøkinum. Atgongd umvegis **bakhurð**; gólvið kann vera vátt, um tað regnar illa; **ketilsikringin slær** lættliga frá. Skíggjabretti til privatlív eru tøk; búfólk kunnu ganga ígjøgnum eftir te. Við hesum samanhangi kann vitlíki framleiða **ÁÐRENN / UNDIR / EFTIR** stig, sum verja trygd og privatlív.
 
 **Byrt:**
-<prompt>
+-- prompt --
 Vit fáa vitjan av elektrikara í tekøkinum í Sørvági í dag millum 14:00–16:00. Atgongd er gjøgnum bakhurðina (gólvið kann vera vátt, um tað regnar). Ketilsikringin slær lættliga frá. Búfólk kunnu ganga ígjøgnum eftir te.
 
 Fyrireika ein stuttan, praktiskan minnislista, bólkaður í:
@@ -483,7 +483,7 @@ Fyrireika ein stuttan, praktiskan minnislista, bólkaður í:
 * EFTIR (4–5 punkt)
 
 Tak við: greiðar gonguleiðir, privatlív hjá búfólkum, trygdarskelti, larm-tilvitan, og áminning um at nullstilla/kanna eftir vitjanina. Svara á natúrligum føroyskum. Ongar persónligar dátur – brúka "Búfólk A/B".
-</prompt>
+-- prompt --
 ---
 
 ### **9\) Áminningarboð um avtalu (starvsfólkakjatt/SMS)**
@@ -493,7 +493,7 @@ Tak við: greiðar gonguleiðir, privatlív hjá búfólkum, trygdarskelti, larm
 **Støða:** Í **Tórshavn**, ein vitjan á heilsumiðstøðini er **Mik 09:30–11:00**. Møtistaður: **forhøllin við teir bláu stólarnar**; hýruvognsbílegging váttað; knakar eru ofta fullir. At biðja vitlíki um **tvey snið** tryggjar, at bæði eitt SMS og eitt eitt sindur longri starvsfólkanotat eru klár uttan at skula skrivast umaftur.
 
 **Byrt:**
-<prompt>
+-- prompt --
 Vit hava eina vitjan á heilsumiðstøðini í Tórshavn hendan mikumorgunin (09:30–11:00). Møtistaður er forhøllin við teir bláu stólarnar; hýruvognsbílegging er váttað. Knakar har verða skjótt fullir.
 
 Skriva tvær vinaligar áminningar um avtaluna:
@@ -502,7 +502,7 @@ Skriva tvær vinaligar áminningar um avtaluna:
 2) Starvsfólkakjatt útgáva (maks 300 tekn)
 
 Tak greitt við: møtistað, tíðarbil, og ting at taka við (jakka, kort um neyðugt). Mál: Føroyskt fyrst (ÚTKAST–FO), síðan enskt. Brúka óheftan/nevtralan tóna, eingi nøvn – brúka "Búfólk A/B". Ongar persónligar dátur.
-</prompt>
+-- prompt --
 ---
 
 ### **10\) Almenn áminning til familjur (árstíðarklæðir)**
@@ -512,7 +512,7 @@ Tak greitt við: møtistað, tíðarbil, og ting at taka við (jakka, kort um ne
 **Støða:** Tú ert á einum bústovni í **Klaksvík**. Veðrið er vorðið nógv kaldari, og tú hevur lagt merki til, at mong búfólk høvdu havt gagn av heitari inniskóm ella troyggjum. Tær tørvar at seta eina almenna, vinarliga áminning á talvuna til vitjandi familjur, har tú varliga biður tær kanna, um teirra avvarðandi tørvar heitari innilutir. At biðja vitlíki skriva hetta sparir tær tíð og tryggjar, at tónin er hjálpsamur og ikki krevjandi.
 
 **Byrt:**
-<prompt>
+-- prompt --
 Tað er vorðið kaldari í Klaksvík. Vit vilja fegin seta eina almenna, vinarliga áminning á familjutalvuna.
 
 Vinarliga skriva eitt stutt, vinarligt boð (2-3 setningar). Tak við:
@@ -522,7 +522,7 @@ Vinarliga skriva eitt stutt, vinarligt boð (2-3 setningar). Tak við:
 3. Ein áminning um vinarliga at merkja allar nýggjar lutir.
 
 Halt tónan hjálpsaman og almennan. Svara á natúrligum føroyskum. Ongar persónligar dátur.
-</prompt>
+-- prompt --
 `;
 
 // ---------------------------------------------------------------------------
@@ -741,7 +741,7 @@ export default function AiForCaretakersGuide() {
     }
   }, []);
 
-  const contentParts = blogContent.split(/(<prompt>[\s\S]*?<\/prompt>)/g);
+  const contentParts = blogContent.split(/(-- prompt --[\s\S]*?-- prompt --)/g);
 
   return (
     <div className="flex flex-col min-h-screen bg-stone-50 dark:bg-stone-950 font-serif">
@@ -771,8 +771,8 @@ export default function AiForCaretakersGuide() {
           {/* Article Body */}
           <article className="selection:bg-stone-200 selection:text-stone-900 dark:selection:bg-stone-700 dark:selection:text-stone-50">
             {contentParts.map((part, index) => {
-              if (part.startsWith("<prompt>")) {
-                const promptText = part.match(/<prompt>([\s\S]*?)<\/prompt>/)?.[1] || "";
+              if (part.startsWith("-- prompt --")) {
+                const promptText = part.replace(/^-- prompt --/, "").replace(/-- prompt --$/, "").trim();
                 return <PromptCard key={index} text={promptText} />;
               }
               return <MarkdownBlock key={index} text={part} />;
