@@ -13,6 +13,8 @@ labs: [
           {
           title: "Stig 1: Ein samrøða við vitlíki",
           description: "Koyr fyrst ChatGPT á vanliga GPT 5.1 myndilin. Um tú hevur nakra fílu sum lýsur teg, so kann tú skoyta hettar uppí nú. Kopiera so byrtið niðanfyri og koyr tað inn í ChatGPT og send. Svara síðan spurningunum, sum verða settir.",
+          window: "Nýggjur kjak",
+          model: "GPT 5.1",
           prompt: `
 You are a **neutral, professional interviewer** with the goal of understanding the person's work **deeply and concretely**. This insight must enable a colleague to map the details to potential AI/ChatGPT use cases in the next step. At this stage, you must **never** suggest solutions or bring up AI usage—your only task is to ask questions and gather information.
 

@@ -26,6 +26,10 @@ externalPort = 3001
 localPort = 34153
 externalPort = 3000
 
+[[ports]]
+localPort = 34197
+externalPort = 3002
+
 [[deployment.rewrites]]
 from = "/*"
 to = "/index.html"

@@ -18,7 +18,7 @@ import {
 } from "@/components/ui/alert-dialog";
 import { useToast } from "@/hooks/use-toast";
 import { getWorkshopByPassword, Workshop, WorkshopStep, Lab } from "@/data/workshops/index";
-import { Copy, ArrowRight, ArrowLeft, Lock, CheckCircle, FileDown, Download } from "lucide-react";
+import { Copy, ArrowRight, ArrowLeft, Lock, CheckCircle, FileDown, Download, MessageSquare, Bot } from "lucide-react";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import { WorkshopLandingPage } from "@/components/workshop/WorkshopLandingPage";
@@ -241,6 +241,22 @@ export default function Verkstova() {
                     <CardDescription className="text-sm mt-1">
                       {step.description}
                     </CardDescription>
+                    {(step.window || step.model) && (
+                      <div className="flex flex-wrap gap-2 mt-2">
+                        {step.window && (
+                          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300" data-testid={`tag-window-${index}`}>
+                            <MessageSquare className="h-3 w-3" aria-hidden="true" />
+                            {step.window}
+                          </span>
+                        )}
+                        {step.model && (
+                          <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300" data-testid={`tag-model-${index}`}>
+                            <Bot className="h-3 w-3" aria-hidden="true" />
+                            {step.model}
+                          </span>
+                        )}
+                      </div>
+                    )}
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-3">
@@ -350,6 +366,22 @@ export default function Verkstova() {
               <CardDescription className="text-base mt-2">
                 {currentStepData.description}
               </CardDescription>
+              {(currentStepData.window || currentStepData.model) && (
+                <div className="flex flex-wrap gap-2 mt-3">
+                  {currentStepData.window && (
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/30 dark:text-blue-300" data-testid="tag-window">
+                      <MessageSquare className="h-4 w-4" aria-hidden="true" />
+                      {currentStepData.window}
+                    </span>
+                  )}
+                  {currentStepData.model && (
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-sm font-medium bg-purple-100 text-purple-800 dark:bg-purple-900/30 dark:text-purple-300" data-testid="tag-model">
+                      <Bot className="h-4 w-4" aria-hidden="true" />
+                      {currentStepData.model}
+                    </span>
+                  )}
+                </div>
+              )}
             </CardHeader>
             <CardContent className="space-y-6">
               {/* Prompt Section */}
