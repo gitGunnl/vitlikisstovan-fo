@@ -6,6 +6,7 @@ import Footer from "@/components/site/Footer";
 import Section from "@/components/site/Section";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Printer, Copy, Check, PenTool } from "lucide-react";
+import kindergartenHeroImg from "@assets/guides/kindergarten hero.jpg";
 
 // --- Configuration & Content ---
 
@@ -13,8 +14,6 @@ const BLOG_TITLE = "Vitlíki til barnagarðarbeiði: Minni skrivstovu arbeiði, 
 const BLOG_DESC = "Vegleiðing til tey á gólvinum í barnagarðum um nýtslu av vitlíki í dagligum arbeiði.";
 
 const blogContent = `
-# **Vitlíki til dagstovnar: Minni skriviarbeiði, meira spæl.**
-
 ## ***Lættir og tryggir hættir at minka um dagligu umsitingina, so tú kanst nýta meira tíð saman við børnunum.***
 
 ---
@@ -930,6 +929,26 @@ export default function AiForCaretakersGuide() {
               Prenta
             </Button>
           </nav>
+
+          {/* Hero Section with Image */}
+          <div className="mb-12 sm:mb-16">
+            <div className="relative overflow-hidden rounded-xl sm:rounded-2xl">
+              <img 
+                src={kindergartenHeroImg} 
+                alt="Børn í barnagarði" 
+                className="w-full h-48 sm:h-64 md:h-80 object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-stone-900/20 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8">
+                <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-medium text-white leading-tight tracking-tight drop-shadow-lg">
+                  Vitlíki til dagstovnar
+                </h1>
+                <p className="mt-2 text-sm sm:text-base text-stone-100/90 font-serif max-w-xl drop-shadow-md">
+                  Minni skriviarbeiði, meira spæl.
+                </p>
+              </div>
+            </div>
+          </div>
 
           {/* Article Body */}
           <article className="selection:bg-stone-200 selection:text-stone-900 dark:selection:bg-stone-700 dark:selection:text-stone-50">
