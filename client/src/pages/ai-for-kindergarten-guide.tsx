@@ -6,7 +6,7 @@ import Footer from "@/components/site/Footer";
 import Section from "@/components/site/Section";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft, Printer, Copy, Check, PenTool } from "lucide-react";
-import kindergartenHeroImg from "@assets/guides/kindergarten hero.jpg";
+import kindergartenHeroImg from "@assets/guides/kindergarten-hero.jpg";
 
 // --- Configuration & Content ---
 

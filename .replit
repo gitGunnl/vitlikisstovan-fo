@@ -27,7 +27,7 @@ localPort = 34153
 externalPort = 3000
 
 [[ports]]
-localPort = 46459
+localPort = 37731
 externalPort = 3002
 
 [[deployment.rewrites]]
