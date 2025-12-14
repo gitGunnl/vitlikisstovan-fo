@@ -1,49 +1,89 @@
-# **Frá vitlíkisótta til vitlíkisdirvi: Hví førleikamenning nú er ein avgerandi íløga**
+const post = {
+  title: "Frá vitlíkisótta til vitlíkisdirvi: Hví førleikamenning nú er ein avgerandi íløga",
+  slug: "fra-vitlikisottan-til-vitlikisdirvi",
+  excerpt: "Umrøðan av vitlíki hoyrist nú allastaðni, í øllum vinnugreinum. Tøknin er bert amboðið — tann varandi ávirkanin kemur frá fólkunum, ið brúka og stýra tøknini.",
+  readTime: "6 min",
+  author: "Vitlíkisstovan",
+  ogImage: "/images/blog/foroyskt-vitliki-2025/og-image.png",
+  content: `
+<h1 class="sr-only">Frá vitlíkisótta til vitlíkisdirvi: Hví førleikamenning nú er ein avgerandi íløga</h1>
 
-Umrøðan av vitlíki hoyrist nú allastaðni, í øllum vinnugreinum. Vitlíki er ikki longur ein nýggj ella spírandi hugsan; tøkniligu amboðini og málmyndlarnir, sum eru tøkir í dag, eru longu í ferð við at broyta mannagongdir, sjálvvirka tilgongdir og økja um úrtøkuna.
+<hr class="my-8 border-border/60" />
 
-Tað hevur týdning at gera íløgur í teir røttu pallarnar, men eftir áralangar royndir er ein størri sannleiki komin undan kavi: tøknin er bert amboðið.
+<section>
+  <p>Umrøðan av vitlíki hoyrist nú allastaðni, í øllum vinnugreinum. Vitlíki er ikki longur ein nýggj ella spírandi hugsan; tøkniligu amboðini og málmyndlarnir, sum eru tøkir í dag, eru longu í ferð við at broyta mannagongdir, sjálvvirka tilgongdir og økja um úrtøkuna.</p>
 
-Tann varandi ávirkanin kemur frá fólkunum, ið brúka og stýra tøknini – og nútímans vitlíkisamboð eru vorðin so framkomin, at brúkarar mugu menna sær serligar førleikar fyri at fáa sum mest burturúr teimum møguleikum, tøknin bjóðar.
+  <p>Tað hevur týdning at gera íløgur í teir røttu pallarnar, men eftir áralangar royndir er ein størri sannleiki komin undan kavi: tøknin er bert amboðið.</p>
 
-Kjakið snýr seg ikki longur um, *hvar* fyritøkur fara at brúka vitlíki, men *hvussu* tær fara at hjálpa sínum starvsfólkum at trívast í einum arbeiðsumhvørvi, har vitlíki fyllir nógv.
+  <p>Tann varandi ávirkanin kemur frá fólkunum, ið brúka og stýra tøknini – og nútímans vitlíkisamboð eru vorðin so framkomin, at brúkarar mugu menna sær serligar førleikar fyri at fáa sum mest burturúr teimum møguleikum, tøknin bjóðar.</p>
 
-### **Førleikagloppið innan vitlíki er dýpri, enn tú heldur**
+  <p>Kjakið snýr seg ikki longur um, <em>hvar</em> fyritøkur fara at brúka vitlíki, men <em>hvussu</em> tær fara at hjálpa sínum starvsfólkum at trívast í einum arbeiðsumhvørvi, har vitlíki fyllir nógv.</p>
 
-Teir førleikar, ið krevjast í vitlíkisøldini, fevna um nógv meira enn ta talgildu vitanina, vit hava hildið okkum til seinasta áratíggið. Dugnaskapur merkir nú at samstarva við vitugar skipanir, at skilja teirra evni og avmarkingar, og at nýta menniskjakent vit, har tað krevst, eitt nú innan:
+  <hr class="my-8 border-border/60" />
+</section>
 
-* **Byrtsmíð (Prompt Engineering)** – at orða spurningar soleiðis, at vitlíki veitir neyv og munagóð svar.  
-* **Markmeting** – at fáa eyga á skeivleikar, villur ella óviðkomandi upplýsingar í tí, maskinan framleiðir.  
-* **Etisk støðutakan** – at nýta vitlíki ábyrgdarfullt og skilja tær størri avleiðingarnar.
+<section>
+  <h3>Førleikagloppið innan vitlíki er dýpri, enn tú heldur</h3>
 
-So hvørt sum vitlíkisskipanir og algoritmur yvirtaka byrðuna av endurtakandi og dátutungum uppgávum, verður ljósið aftur varpað á tað, sum ger okkum serliga menniskjalig: skapanarevni, loysn av fløktum trupulleikum, strategiskt útsýni og kensluligt vit (EQ). Vitlíki kann styrkja hesar eginleikar, men tað kann ikki koma í staðin fyri teir – í øllum førum ikki í sínum núverandi líki.
+  <p>Teir førleikar, ið krevjast í vitlíkisøldini, fevna um nógv meira enn ta talgildu vitanina, vit hava hildið okkum til seinasta áratíggið. Dugnaskapur merkir nú at samstarva við vitugar skipanir, at skilja teirra evni og avmarkingar, og at nýta menniskjakent vit, har tað krevst, eitt nú innan:</p>
 
-### **Hvussu kunnu vit basa "vitlíkisótta"?**
+  <ul>
+    <li><strong>Byrtsmíð (Prompt Engineering)</strong> – at orða spurningar soleiðis, at vitlíki veitir neyv og munagóð svar.</li>
+    <li><strong>Markmeting</strong> – at fáa eyga á skeivleikar, villur ella óviðkomandi upplýsingar í tí, maskinan framleiðir.</li>
+    <li><strong>Etisk støðutakan</strong> – at nýta vitlíki ábyrgdarfullt og skilja tær størri avleiðingarnar.</li>
+  </ul>
 
-"Fer vitlíki at taka mítt starv?" er spurningurin, sum mong ganga við, og hetta er galdandi líka frá vanliga starvsfólkinum til stjóran. Sambært eini nýggjari kanning frá [Pew Research Center](https://www.pewresearch.org/social-trends/2025/02/25/u-s-workers-are-more-worried-than-hopeful-about-future-ai-use-in-the-workplace/) stúrir meira enn helmingurin av starvsfólkum fyri framtíðar ávirkanini av vitlíki á arbeiðsplássinum, og ein triðingur óttast, at økta nýtslan fer at føra til færri yrkisligar møguleikar fyri tey.
+  <p>So hvørt sum vitlíkisskipanir og algoritmur yvirtaka byrðuna av endurtakandi og dátutungum uppgávum, verður ljósið aftur varpað á tað, sum ger okkum serliga menniskjalig: skapanarevni, loysn av fløktum trupulleikum, strategiskt útsýni og kensluligt vit (EQ). Vitlíki kann styrkja hesar eginleikar, men tað kann ikki koma í staðin fyri teir – í øllum førum ikki í sínum núverandi líki.</p>
 
-Tað er átrokandi, at leiðarar ikki lata standa til, tí úrslitið – minni áhuga í arbeiðnum, miss av talentum og vánaligur arbeiðsmoralur – kann hava sera neiliga ávirkan á effektivitet og vøkstur.
+  <hr class="my-8 border-border/60" />
+</section>
 
-Í staðin eiga framsýndir leiðarar at taka fatur um hesa stúran tíðliga. Eftirútbúgving í vitlíki eigur ikki at verða løgd fram sum ein formlig skylda, men sum eitt fakligt førleikalyft: "Vit gera íløgur í teg. Vit geva tær nýggj amboð fyri at gera títt starv ríkari, meira skapandi og meira ávirkaríkt." Tann boðskapurin setur søguna í nýtt ljós, broytir hugburðin og byggir álit.
+<section>
+  <h3>Hvussu kunnu vit basa "vitlíkisótta"?</h3>
 
-### **At gagnnýta møguleikarnar í vitlíki: nýggir mátar at skapa virði**
+  <p>"Fer vitlíki at taka mítt starv?" er spurningurin, sum mong ganga við, og hetta er galdandi líka frá vanliga starvsfólkinum til stjóran. Sambært eini nýggjari kanning frá <a href="https://www.pewresearch.org/social-trends/2025/02/25/u-s-workers-are-more-worried-than-hopeful-about-future-ai-use-in-the-workplace/" target="_blank" rel="noopener noreferrer">Pew Research Center</a> stúrir meira enn helmingurin av starvsfólkum fyri framtíðar ávirkanini av vitlíki á arbeiðsplássinum, og ein triðingur óttast, at økta nýtslan fer at føra til færri yrkisligar møguleikar fyri tey.</p>
 
-Endamálið við at taka vitlíkisamboð til sín og – týdningarmest – at veita ta førleikamenning, sum loyvir tínum toymi at gagnnýta hesi amboð, er ikki bara at arbeiða skjótari; tað er at arbeiða klókari. Tað snýr seg um at styrkja, ikki bara sjálvvirkan. Tá starvsfólk kenna seg trygg við vitlíki, gera tey ikki bara verandi mannagongdir skjótari; tey fáa eyga á nýggjar mátar at skapa virði. Og vinningurin kann vera kollveltandi:
+  <p>Tað er átrokandi, at leiðarar ikki lata standa til, tí úrslitið – minni áhuga í arbeiðnum, miss av talentum og vánaligur arbeiðsmoralur – kann hava sera neiliga ávirkan á effektivitet og vøkstur.</p>
 
-* **Nýskapan frá starvsfólkunum** – toymislimir kunnu menna nýggjar hugsanir og effektivisera mannagongdir, sum leiðslan kanska aldri hevði varnast.  
-* **Dátudrivnar avgerðir** – fløkt og stór dátusett verða lætt atkomuligar keldur til greiða vitan, ið kann nýtast ítøkiliga tí starvsfólk nú sjálvi klára at gera tað.  
-* **Djúpri loysn av trupulleikum** – við at lata vitlíki taka sær av tí endurtakandi arbeiðinum, kunnu toymi savna seg um truplari og meira skapandi avbjóðingar.
+  <p>Í staðin eiga framsýndir leiðarar at taka fatur um hesa stúran tíðliga. Eftirútbúgving í vitlíki eigur ikki at verða løgd fram sum ein formlig skylda, men sum eitt fakligt førleikalyft: "Vit gera íløgur í teg. Vit geva tær nýggj amboð fyri at gera títt starv ríkari, meira skapandi og meira ávirkaríkt." Tann boðskapurin setur søguna í nýtt ljós, broytir hugburðin og byggir álit.</p>
 
-### **Ger læring til ein part av mentanini**
+  <hr class="my-8 border-border/60" />
+</section>
 
-Við tað at vitlíkistøknin mennist við metferð, kann ein einkult workshop ella eitt netskeið bert gera so nógv. Fyritøkur tørva eina mentan, har læring um teir støðugt mennandi førleikarnar hjá vitlíki aldri steðgar, og hendan hugburðsbroytingin má koma frá ovastu leiðslu.
+<section>
+  <h3>At gagnnýta møguleikarnar í vitlíki: nýggir mátar at skapa virði</h3>
 
-Leiðarar eiga at luttaka í somu upplæring sum teirra toymi fyri at vísa, hvussu týdningarmikil vitlíkisførleiki er fyri virksemið. Deildarleiðarar eiga at skapa trygg rúm, so sum innanhýsis verkstovur, "vitlíkis-sandkassar" ella vitanartorg, har royndir verða eggjaðar, og mistøk verða nýtt at læra av. Miðleiðarar eiga at viðurkenna og løna starvsfólk, sum brúka vitlíki til ítøkiligar vinnuligar trupulleikar og læra onnur, hvat tey hava funnið útav.
+  <p>Endamálið við at taka vitlíkisamboð til sín og – týdningarmest – at veita ta førleikamenning, sum loyvir tínum toymi at gagnnýta hesi amboð, er ikki bara at arbeiða skjótari; tað er at arbeiða klókari. Tað snýr seg um at styrkja, ikki bara sjálvvirkan. Tá starvsfólk kenna seg trygg við vitlíki, gera tey ikki bara verandi mannagongdir skjótari; tey fáa eyga á nýggjar mátar at skapa virði. Og vinningurin kann vera kollveltandi:</p>
 
-Boðskapurin á øllum stigum í felagsskapinum eigur at vera samsvarandi og greiður: forvitni og tillagingarevni verða virðismett.
+  <ul>
+    <li><strong>Nýskapan frá starvsfólkunum</strong> – toymislimir kunnu menna nýggjar hugsanir og effektivisera mannagongdir, sum leiðslan kanska aldri hevði varnast.</li>
+    <li><strong>Dátudrivnar avgerðir</strong> – fløkt og stór dátusett verða lætt atkomuligar keldur til greiða vitan, ið kann nýtast ítøkiliga tí starvsfólk nú sjálvi klára at gera tað.</li>
+    <li><strong>Djúpri loysn av trupulleikum</strong> – við at lata vitlíki taka sær av tí endurtakandi arbeiðinum, kunnu toymi savna seg um truplari og meira skapandi avbjóðingar.</li>
+  </ul>
 
-### **Brynja títt fólk til at kollvelta tykkara úrtøku**
+  <hr class="my-8 border-border/60" />
+</section>
 
-Málið er ikki at skifta fólk út við tøkni; tað er at brynja fólk við tøkni. Felagsskapir, sum gera íløgur í førleikamenning, megna at byggja toymi, sum eru meira mótstøðufør, meira uppfinningarsom og betri fyrireikaði upp á tað, sum kemur næst. Hjá Vitlíkisstovuni verur hendan styrking sæð sum tann størsti kappingarfyrimunurin. Og vit kunnu hjálpa felagsskapum av øllum støddum at røkka hesum, gjøgnum sergjørdar vitlíkisútbúgvingar og amboð, sum fella natúrliga inn í tykkara verandi arbeiðsgongdir.
+<section>
+  <h3>Ger læring til ein part av mentanini</h3>
 
-Um tú ert klár/ur at fara frá vitlíkisótta til vitlíkisdirvi, set teg so í samband við okkum í dag fyri at byrja at byggja eitt toymi, sum er djarvt, ført fyri og klárt at taka ímóti framtíðar avbjóðingum.
+  <p>Við tað at vitlíkistøknin mennist við metferð, kann ein einkult workshop ella eitt netskeið bert gera so nógv. Fyritøkur tørva eina mentan, har læring um teir støðugt mennandi førleikarnar hjá vitlíki aldri steðgar, og hendan hugburðsbroytingin má koma frá ovastu leiðslu.</p>
+
+  <p>Leiðarar eiga at luttaka í somu upplæring sum teirra toymi fyri at vísa, hvussu týdningarmikil vitlíkisførleiki er fyri virksemið. Deildarleiðarar eiga at skapa trygg rúm, so sum innanhýsis verkstovur, "vitlíkis-sandkassar" ella vitanartorg, har royndir verða eggjaðar, og mistøk verða nýtt at læra av. Miðleiðarar eiga at viðurkenna og løna starvsfólk, sum brúka vitlíki til ítøkiligar vinnuligar trupulleikar og læra onnur, hvat tey hava funnið útav.</p>
+
+  <p>Boðskapurin á øllum stigum í felagsskapinum eigur at vera samsvarandi og greiður: forvitni og tillagingarevni verða virðismett.</p>
+
+  <hr class="my-8 border-border/60" />
+</section>
+
+<section>
+  <h3>Brynja títt fólk til at kollvelta tykkara úrtøku</h3>
+
+  <p>Málið er ikki at skifta fólk út við tøkni; tað er at brynja fólk við tøkni. Felagsskapir, sum gera íløgur í førleikamenning, megna at byggja toymi, sum eru meira mótstøðufør, meira uppfinningarsom og betri fyrireikaði upp á tað, sum kemur næst. Hjá Vitlíkisstovuni verur hendan styrking sæð sum tann størsti kappingarfyrimunurin. Og vit kunnu hjálpa felagsskapum av øllum støddum at røkka hesum, gjøgnum sergjørdar vitlíkisútbúgvingar og amboð, sum fella natúrliga inn í tykkara verandi arbeiðsgongdir.</p>
+
+  <p>Um tú ert klár/ur at fara frá vitlíkisótta til vitlíkisdirvi, set teg so í samband við okkum í dag fyri at byrja at byggja eitt toymi, sum er djarvt, ført fyri og klárt at taka ímóti framtíðar avbjóðingum.</p>
+</section>
+  `,
+} as const;
+
+export default post;

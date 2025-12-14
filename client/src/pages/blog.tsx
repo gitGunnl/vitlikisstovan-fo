@@ -27,6 +27,13 @@ export default function Blog() {
   // This will eventually come from your content system
   const blogPosts = [
     {
+      slug: "fra-vitlikisottan-til-vitlikisdirvi",
+      title: "Frá vitlíkisótta til vitlíkisdirvi: Hví førleikamenning nú er ein avgerandi íløga",
+      excerpt: "Umrøðan av vitlíki hoyrist nú allastaðni, í øllum vinnugreinum. Tøknin er bert amboðið — tann varandi ávirkanin kemur frá fólkunum, ið brúka og stýra tøknini.",
+      date: "2025-01-10",
+      readTime: "6 min"
+    },
+    {
       slug: "vitliki-i-foroyum",
       title: "Vitlíki í Føroyum",
       excerpt: "Ein innleiðing til hvussu vitlíki kann broyta okkara samfelag og vinnulív.",
