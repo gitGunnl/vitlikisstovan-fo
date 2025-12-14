@@ -28,12 +28,12 @@ export const siteConfig = {
         }
       },
       {
-        title: "Nýggjur bloggur: Føroysk vitlíkisamboð",
+        title: "Nýggjur bloggur: Frá vitlíkisótta til vitlíkisdirvi",
         subtitle:
-          "Les nýggjasta bloggin um hvørji føroysk vitlíkismodell eru tøk, hvat tey kunnu brúkast til og hvussu góð tey eru.",
+          "Hví førleikamenning nú er ein avgerandi íløga. Tøknin er bert amboðið — tann varandi ávirkanin kemur frá fólkunum.",
         primaryCTA: {
           text: "Les bloggin",
-          href: "/blog/vitliki-i-foroyum"
+          href: "/blog/fra-vitlikisottan-til-vitlikisdirvi"
         }
       },
       {
