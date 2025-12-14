@@ -83,6 +83,23 @@ const post = {
 
   <p>Um tú ert klár/ur at fara frá vitlíkisótta til vitlíkisdirvi, set teg so í samband við okkum í dag fyri at byrja at byggja eitt toymi, sum er djarvt, ført fyri og klárt at taka ímóti framtíðar avbjóðingum.</p>
 </section>
+
+<hr class="my-8 border-border/60" />
+
+<section class="not-prose my-12">
+  <div class="rounded-xl border-2 border-primary/20 bg-primary/5 p-8 text-center">
+    <h3 class="text-2xl font-bold mb-4">Vilt tú vita meira?</h3>
+    <p class="text-muted-foreground mb-6 max-w-xl mx-auto">
+      Vit hjálpa felagsskapum av øllum støddum at byggja vitlíkisførleika. Set teg í samband við okkum fyri eina ókeypis samrøðu.
+    </p>
+    <a 
+      href="/contact" 
+      class="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90 transition-colors"
+    >
+      Sett teg í samband
+    </a>
+  </div>
+</section>
   `,
 } as const;
 
