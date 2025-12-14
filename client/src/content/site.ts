@@ -30,7 +30,7 @@ export const siteConfig = {
       {
         title: "Nýggjur bloggur: Frá vitlíkisótta til vitlíkisdirvi",
         subtitle:
-          "Hví førleikamenning nú er ein avgerandi íløga. Tøknin er bert amboðið — tann varandi ávirkanin kemur frá fólkunum.",
+          "Hví førleikamenning nú er ein avgerandi íløga. Tøknin er bert amboðið — tann varandi vinningurin kemur frá fólkunum.",
         primaryCTA: {
           text: "Les bloggin",
           href: "/blog/fra-vitlikisottan-til-vitlikisdirvi"

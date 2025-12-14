@@ -208,7 +208,7 @@ export default function Home() {
                           Nýggjur bloggur:
                         </span>
                         <span className="block">
-                          Føroysk vitlíkismodell
+                          Hví býrja við vitlíkisbúgving?
                         </span>
                       </>
                     ) : (

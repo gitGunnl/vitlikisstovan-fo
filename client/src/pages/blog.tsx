@@ -29,7 +29,7 @@ export default function Blog() {
     {
       slug: "fra-vitlikisottan-til-vitlikisdirvi",
       title: "Frá vitlíkisótta til vitlíkisdirvi: Hví førleikamenning nú er ein avgerandi íløga",
-      excerpt: "Umrøðan av vitlíki hoyrist nú allastaðni, í øllum vinnugreinum. Tøknin er bert amboðið — tann varandi ávirkanin kemur frá fólkunum, ið brúka og stýra tøknini.",
+      excerpt: "Umrøðan av vitlíki hoyrist nú allastaðni, í øllum vinnugreinum. Tøknin er bert amboðið — tann varandi vinningurin kemur frá fólkunum, ið brúka og stýra tøknini.",
       date: "2025-01-10",
       readTime: "6 min"
     },
