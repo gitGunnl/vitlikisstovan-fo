@@ -79,7 +79,7 @@ const post = {
 <section>
   <h3>Brynja títt fólk til at kollvelta tykkara úrtøku</h3>
 
-  <p>Málið er ikki at skifta fólk út við tøkni; tað er at brynja fólk við tøkni. Felagsskapir, sum gera íløgur í førleikamenning, megna at byggja toymi, sum eru meira mótstøðufør, meira uppfinningarsom og betri fyrireikaði upp á tað, sum kemur næst. Hjá Vitlíkisstovuni verur hendan styrking sæð sum tann størsti kappingarfyrimunurin. Og vit kunnu hjálpa felagsskapum av øllum støddum at røkka hesum, gjøgnum sergjørdar vitlíkisútbúgvingar og amboð, sum fella natúrliga inn í tykkara verandi arbeiðsgongdir.</p>
+  <p>Málið er ikki at skifta fólk út við tøkni; tað er at brynja fólk við tøkni. Felagsskapir, sum gera íløgur í førleikamenning, megna at byggja toymi, sum eru meira mótstøðufør, meira uppfinningarsom og betri fyrireikaði upp á tað, sum kemur næst. Hjá Vitlíkisstovuni verur hendan styrking sæð sum tann størsti kappingarfyrimunurin. Og vit kunnu hjálpa felagsskapum av øllum støddum at røkka hesum, gjøgnum sergjørda vitlíkisbúgving og amboð, sum fella natúrliga inn í tykkara verandi arbeiðsgongdir.</p>
 
   <p>Um tú ert klár/ur at fara frá vitlíkisótta til vitlíkisdirvi, set teg so í samband við okkum í dag fyri at byrja at byggja eitt toymi, sum er djarvt, ført fyri og klárt at taka ímóti framtíðar avbjóðingum.</p>
 </section>
