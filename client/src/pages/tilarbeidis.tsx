@@ -23,12 +23,19 @@ type TimelineEvent = {
 
 const timelineData: TimelineEvent[] = [
   {
+    id: "evt-015",
+    date: "2025-12-31",
+    title: "Vegleiðingar deilt upp eftir bólkum",
+    summary:
+      "Fyrstu vegleiðingar eru komnar út í einari royndar versión, snið og myndir mangla. Arbeiði við næstu vegleiðingunum er eisini býrja, her verur hugt uppá hvussu fólkaskúlalærarar og tænastustarvsfólk kunnu nýta vitlíki í sínum starvi.",
+  },
+  {
     id: "evt-016",
     date: "2024-12-01",
     title: "Vegleiðingar eru farnar til rættlestur",
     summary: (
       <>
-        Nú eru vegleiðingar skrivaðar og tær eru farnar til rættlestur. Um tú hevur áhuga í at rættlesa og royna tær, so kanst tú lesa tær her:{" "}
+        Nú eru vegleiðingar skrivaðar. Um tú hevur áhuga í at rættlesa og royna tær, so kanst tú lesa tær her:{" "}
         <Link href="/user-guides/ai-for-kindergarten-guide" className="text-primary hover:text-primary/80 underline underline-offset-2 font-medium transition-colors" data-testid="link-kindergarten-guide">
           Vegleiðing fyri dagstovnar
         </Link>
@@ -42,14 +49,14 @@ const timelineData: TimelineEvent[] = [
   },
   {
     id: "evt-015",
-    date: "2024-11-20",
+    date: "2025-11-20",
     title: "Vegleiðingar deilt upp eftir bólkum",
     summary:
-      "Eftir meitng í mun til hvussu man best rakar tann rætt bólkin, so havi eg valgt at ístaðin fyri at deil tær tvær fyrstu vegleiðingarnar upp millum námsfrøðingar og hjálparafólk, so er tað ístaðin deilt upp eftir \"Dagstovnar\" og so \"Røktarstarvsfólk\". Hettar var neyåugt fyri at vegleiðingarnar vóru so nýttuligar sum møguligt.",
+      "Eftir meiting í mun til hvussu man best rakar tann rætt bólkin, so havi eg valgt at ístaðin fyri at deil tær tvær fyrstu vegleiðingarnar upp millum námsfrøðingar og hjálparafólk, so er tað ístaðin deilt upp eftir \"Dagstovnar\" og so \"Røktarstarvsfólk\". Hettar var neyåugt fyri at vegleiðingarnar vóru so nýttuligar sum møguligt.",
   },
   {
     id: "evt-014",
-    date: "2024-10-07",
+    date: "2025-10-07",
     title: "Samrøður við námsfrøðingar og hjálparafólk eru komnar inn",
     summary:
       "Samrøður við námsfrøðingar og hjálparafólk eru komnar inn. Royndin við at nýta vitlíki til hettar eydnaðist betur enn vænta. Takk til øll sum svarðu.",
