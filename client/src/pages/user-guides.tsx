@@ -27,14 +27,14 @@ export default function UserGuides() {
   const guides = [
     {
       id: "ai-for-kindergarten",
-      title: "Vitlíki til barnagarðarbeiði: Minni skrivstovu arbeiði, meira spæl.",
-      description: "Vegleiðing til tey á gólvinum í barnagarðum um nýtslu av vitlíki í dagligum arbeiði.",
+      title: "Vitlíki til dagstovnar: Minni skriviarbeiði, meira spæl.",
+      description: "Lættir og tryggir hættir at minka um dagligu umsitingina, so tú kanst nýta meira tíð saman við børnunum.",
       href: "/user-guides/ai-for-kindergarten-guide"
     },
     {
       id: "ai-for-caretakers",
-      title: "Vitlíki til røktarfólk: Minni skriviarbeiði, meira spæl.",
-      description: "Vegleiðing til námsfrøðingar og røktarstarvsfólk um brúk av vitlíki í dagligum arbeiði.",
+      title: "Hvussu tú kann nýta vitlíki sum røktarstarvsfólk: Meira tíð til tær heitu hendurnar.",
+      description: "Ein handalig vegleiðing, sum ger røktarstarvsfólk før fyri at brúka vitlíki trygt til skjalfesting og tilrættislegging, so meira tíð verður til sjálva umsorganina.",
       href: "/user-guides/ai-for-caretakers-guide"
     },
     {

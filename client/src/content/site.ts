@@ -328,7 +328,7 @@ export const siteConfig = {
     sectionTitle: "Allir spurningar eru vælkomnir",
     description:
       "Antin tú hevur áhugað í 12-vikursskeiðnum til títt toymið, ráðgeving, íkast til eina kreativa verkætlan ella eitt fjórða - so svari eg tær áðrenn næsti gerandisdagur er lokin.",
-    email: "info@ritvit.fo",
+    email: "info@vitlikisstovan.fo",
     phone: "+298 919444",
     bookingUrl: ""
   },

@@ -60,7 +60,7 @@ export default function Verkstova() {
       setHasConfirmed(false);
       window.scrollTo({ top: 0, behavior: "smooth" });
     } else {
-      setError("Verkstovu kotan varð ikki funnin. Vinarliga set teg í samband við fyriskiparan á info@ritvit.fo ella tlf. 919444.");
+      setError("Verkstovu kotan varð ikki funnin. Vinarliga set teg í samband við fyriskiparan á info@vitlikisstovan.fo ella tlf. 919444.");
     }
   };
 
@@ -186,7 +186,7 @@ export default function Verkstova() {
               </form>
             </CardContent>
             <CardFooter className="text-center text-sm text-muted-foreground">
-              Hevur tú ikki eina verkstovu kotu, vinarliga set teg í samband við fyriskiparan á info@ritvit.fo ella tlf. 919444.
+              Hevur tú ikki eina verkstovu kotu, vinarliga set teg í samband við fyriskiparan á info@vitlikisstovan.fo ella tlf. 919444.
             </CardFooter>
           </Card>
         </main>
