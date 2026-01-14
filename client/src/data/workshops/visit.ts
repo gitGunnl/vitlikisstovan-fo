@@ -12,9 +12,9 @@ labs: [
       // s1 — leave as is
           {
           title: "Stig 1: Ein samrøða við vitlíki",
-          description: "Koyr fyrst ChatGPT á vanliga GPT 5.1 myndilin (GPT 5.1 Auto). Um tú hevur nakra fílu sum lýsur teg, so kann tú skoyta hettar uppí nú. Kopiera so byrtið niðanfyri og koyr tað inn í ChatGPT og send. Svara síðan spurningunum, sum verða settir.",
+          description: "Koyr fyrst ChatGPT á vanliga GPT 5.2 myndilin (GPT 5.2 Auto). Um tú hevur nakra fílu sum lýsur teg, so kann tú skoyta hettar uppí nú. Kopiera so byrtið niðanfyri og koyr tað inn í ChatGPT og send. Svara síðan spurningunum, sum verða settir.",
           window: "Nýtt kjatt",
-          model: "GPT 5.1",
+          model: "GPT 5.2",
           prompt: `
 You are a **neutral, professional interviewer** with the goal of understanding the person's work **deeply and concretely**. This insight must enable a colleague to map the details to potential AI/ChatGPT use cases in the next step. At this stage, you must **never** suggest solutions or bring up AI usage—your only task is to ask questions and gather information.
 
@@ -29,7 +29,7 @@ You are a **neutral, professional interviewer** with the goal of understanding t
 
 ### Interview Plan
 Begin with a concise checklist (3-7 bullets) of the primary sub-tasks in the interview:
-- Establish basic role/business context
+- Establish basic role/business context (When they mention their company, do a quick internet reseach on the company to gather information quickly)
 - Explore central work areas and processes
 - Gather examples and details about specific tasks
 - Map existing tools, artifacts, and workflows
@@ -56,10 +56,6 @@ Follow this conceptual structure, but adapt the order and focus based on the con
 -   **Duration:**
     -   Continue the interview until the person asks you to stop **and** gives you your next assignment.
 
--   **Security & Privacy:**
-    -   Request **anonymized/redacted** examples if it benefits understanding.
-    -   **Never** ask for passwords, logins, personal ID numbers, or other confidential trade secrets.
-
 -   **Language:**
     -   Adapt language and tone to the user (English, Danish, etc.).
     -   Use **clear and simple English** in case of doubt.
@@ -80,19 +76,7 @@ Follow this conceptual structure, but adapt the order and focus based on the con
 -   Repetitive processes with clear input/output
 -   Document creation from templates (contracts, decks, reports)
 
----
-
-### Coverage Areas (Methodical Review)
-1.  **Role & Context:** Title, company/venture, industry, mission, success criteria.
-2.  **Calendar Reality:** Fixed meetings, deadlines, seasonal peaks, launch cycles.
-3.  **Daily/Weekly Tasks:** Frequency, volume, duration, input/output.
-4.  **Communication:** Collaborators, clients, channels (Slack, Email, WhatsApp, etc.), typical message types.
-5.  **Artifacts:** Documents, spreadsheets, pitch decks, design files, code repositories.
-6.  **Workflows & Decisions:** Order of operations, handovers, client feedback loops, decision points.
-7.  **Tools & Systems:** M365/Google Workspace, Notion/Trello/Asana, CRM, specialized industry software, data sources.
-8.  **Rules & Constraints:** Client requirements, confidentiality, industry standards, deadlines/metrics.
-9.  **Pain Points:** Bottlenecks, errors, waiting time, manual "grunt work" (copy-paste).
-10. **Wishlist & Ideal State:** What "really good" would look like (without mentioning AI).
+* These are typically places where AI tools are very valuable.
 
 ---
 
@@ -144,13 +128,13 @@ You must **never** suggest or describe how ChatGPT/AI can help during the interv
           },
           {
           title: "Stig 2: Samandráttur (við Thinking-modellinum)",
-          description: "Skift fyrst til 'Thinking'-modellið. Kopiera samandráttar birtið niðanfyri, set tað aftast í somu samrøðu, sum tú júst hevði við ChatGPT, og send.",
+          description: "Skift fyrst til 'Thinking'-modellið. Kopiera samandráttar byrtið niðanfyri, set tað aftast í somu samrøðu, sum tú júst hevði við ChatGPT, og send.",
                 window: "Sama kjatttráð",
-                model: "GPT 5.1 Thinking",
+                model: "GPT 5.2 Thinking",
           prompt: `
-Stop the interview now and summarize my work exclusively based on the information I have given you.
+Stop the interview now and create a role profile of my work exclusively based on the information I have given you.
 
-Your task is to produce a detailed, well-structured summary that can be used as a basis for finding ChatGPT use cases later.
+Your task is to produce a detailed, well-structured role profile that can be used as a basis for finding ChatGPT use cases later.
 
 Use only information that comes directly from my inputs.
 - No guessing, no filling in gaps.
@@ -159,7 +143,7 @@ Use only information that comes directly from my inputs.
 Return exactly these sections and headings:
 
 1) Role Overview
- - Short description of what I do, who I serve (clients/team/users), and what key results or success criteria I aim for.
+ - Description of what I do, who I serve (clients/team/users), and what key results or success criteria I aim for.
 
 2) Core Responsibilities
  - Bullet list starting with strong verbs (e.g., "Drafting...", "Coordinating...", "Approving...", "Pitching...").
@@ -178,19 +162,20 @@ General Constraints:
 - No marketing language or "fluffy" phrasing – write soberly and concretely.
 - No information that cannot be traced back to something I actually said.
           `,
-          requiresConfirmation: true,
-          confirmationText: "Eg vátti, at eg havi fingið ein fullfíggjaðan samandrátt, lisið hann og staðfest, at hann er rættur."
-          },
-          {
-          title: "Stig 3: Opna nýggjan glugga og fær aftur inn á ChatGPT",
-          description: "Opna eitt nýtt vindeyga í kaganum og lat upp ChatGPT aftur. Læt fyrra vindeyga við samandráttinum vera opið.",
           requiresConfirmation: false
           },
           {
+          title: "Stig 3: Rættles samandráttin.",
+          description: "Koyr samandráttin inn í okkurt skriviamboð (word, notes, docs) og rættles nú samandráttin.",
+
+            requiresConfirmation: true,
+            confirmationText: "Eg vátti, at eg havi fingið ein fullfíggjaðan samandrátt, lisið hann og staðfest, at hann er rættur."
+          },
+          {
           title: "Stig 4: Deep Research",
-          description: "Kopiera birti niðanfyri inn í nýggja ChatGPT-vindeyga, skoyt samandráttin inn har tað er merkt, tendra Deep Research og send so.",
+          description: "Kopiera byrti niðanfyri inn í nýggja ChatGPT-vindeyga, skoyt samandráttin inn har tað er merkt, tendra Deep Research og send so.",
               window: "Nýtt kjatt",
-              model: "GPT 5.1 + Deep Research",
+              model: "GPT 5.2 + Deep Research",
           prompt: `
 You must use Deep Research to write a comprehensive report for leaders and founders about how people in a given role actually use ChatGPT and similar LLM tools in their work.
 
@@ -336,21 +321,21 @@ The report must be readable independently by a leader who may never have used Ch
           },
           {
           title: "Stig 5: Nýggjur gluggi og møguleikalisti",
-          description: "Opna ein nýggjan glugga við ChatGPT. Kopiera birtið, fyll inn tín samandrátt. Broyt nú myndilin til [ChatGPT 5.1 Thinking] og send avstað. Skoðað so listan av møguleikum; er úrslitið skilagott? Stundum kemur modellið inn á skeiva leið; royn umaftur, um tað hendir.",
+          description: "Opna ein nýggjan glugga við ChatGPT. Kopiera byrtið, fyll inn tín samandrátt. Broyt nú myndilin til [ChatGPT 5.2 Thinking] og send avstað. Skoðað so listan av møguleikum; er úrslitið skilagott? Stundum kemur modellið inn á skeiva leið; royn umaftur, um tað hendir.",
               window: "Nýtt kjatt",
-              model: "GPT 5.1 Thinking",
+              model: "GPT 5.2 Thinking",
           prompt: `
 ## Introduction
 
-We are exploring how Large Language Models (LLMs) can automate tasks in a **shared office/startup environment**. The goal is to find tasks where automation streamlines workflows, saves time, removes tedious work, and saves money – especially by using ChatGPT as a **thinking partner and sparring partner**, not just a "document machine."
+We are exploring how AI chat tools can help in an office work setting. The goal is to find tasks where these AI chat tools can streamline workflows, save time, remove tedious work, improve quality and save money – especially by using ChatGPT as a **thinking partner and sparring partner**, not just a "document machine."
 
-I want you to suggest a list of the **15 best things** my client (an entrepreneur, freelancer, or startup team member) can use ChatGPT for. Here is information about the client:
+I want you to suggest a list of the **15 best things** my client can use ChatGPT for. Here is the role profile of the client:
 
 <job_description>
 <------------Insert here--------------->
 </job_description>
 
-Below is guidance on what types of tasks ChatGPT is good at. Use it to shape your ideas and avoid suggesting things the model cannot do.
+Below is guidance on what types of tasks ChatGPT is good at. Use it to shape your ideas and to avoid suggesting things the model cannot do.
 
 <tasks_types>
 
@@ -360,7 +345,7 @@ Below is guidance on what types of tasks ChatGPT is good at. Use it to shape you
 
 #### Introduction
 
-ChatGPT is a versatile language model strong at structuring, explaining, translating, brainstorming, role-playing, creating simple visualizations, doing research, and supporting analysis. It is best when there are clear goals, concrete inputs, and a human to quality-assure the output. Below is a description of what it is typically **good at**, where it is **weaker**, and which patterns provide the most value in practice.
+ChatGPT is a versatile language model strong at structuring text and ideas, explaining, translating, brainstorming, role-playing, creating visualizations, doing research, decision making and supporting analysis. It is best when it is given enough context, concrete goals, and a human to quality-assure the output. Below is a description of what it is typically **good at**, where it is **weaker**, and which patterns provide the most value in practice.
 
 ---
 
@@ -552,16 +537,16 @@ Create a **thoughtful list of 15 ideas** that my client can use ChatGPT for. **R
 Write the ideas briefly, concretely, and adapted to this client. Avoid generic suggestions like "rewrite my email" unless it is **extraordinarily** valuable and recurring in this client's context.
           `,
           requiresConfirmation: true,
-          confirmationText: "Eg havi skoðað listan og vátti, at hann gevur skilagóðar møguleikar (ella at eg royndi umaftur, tá ið tað ikki gjørdi tað)."
+          confirmationText: "Eg havi skoðað listan og vátti, at har eru 15 skilagóðir møguleikar (ella at eg royndi umaftur, tá ið tað ikki gjørdi tað)."
           },
           {
           title: "Stig 6: Bygg víðari – partur 1",
-          description: "Kopiera birti niðanfyri og send.",
+          description: "Kopiera byrti niðanfyri og send.",
                 window: "Sama kjatttráð",
-                model: "GPT 5.1 Thinking",
+                model: "GPT 5.2 Thinking",
           prompt: `Great. Now I want you to think **outside the box**.
 
-            Conduct a new analysis of tasks my client can use ChatGPT for. In this analysis, I want you to find use cases that could **revolutionize their business, workflow, or industry**.
+            Conduct a new analysis of tasks my client can use ChatGPT for. In this analysis, I want you to find use cases that could **reevaluates how they do their job, workflow, or industry**.
 
             Focus on ideas that could give them a significant **competitive advantage** or **10x their output**.
 
@@ -574,9 +559,9 @@ Write the ideas briefly, concretely, and adapted to this client. Avoid generic s
           },
           {
           title: "Stig 7: Bygg víðari – partur 2",
-          description: "Kopiera birtið niðanfyri inn í sama kjatt og send.",
+          description: "Kopiera byrtið niðanfyri inn í sama kjatt og send.",
               window: "Sama kjatttráð",
-              model: "GPT 5.1 Thinking",
+              model: "GPT 5.2 Thinking",
           prompt: `
 Excellent. Now, one last time:
 
@@ -594,26 +579,26 @@ Present the **3 best ideas** you find.
           },
           {
           title: "Stig 8: Ger listan",
-          description: "Kopiera birtið inn í ChatGPT og send.",
+          description: "Kopiera byrtið inn í ChatGPT og send.",
               window: "Sama kjatttráð",
-              model: "GPT 5.1 Thinking",
+              model: "GPT 5.2 Thinking",
           prompt: `Develop highly relevant metrics to measure the effectiveness and ROI of all these 21 ideas.
 
 Then, review all the ideas and rank them based on your metrics.
 
-Finally, present a sorted list of all 21 ideas.`,
+Finally, present a sorted list of the 15 best ideas.`,
           requiresConfirmation: false
           },
           {
           title: "Stig 9: Skoyt uppí meira forkláring",
-          description: "Kopiera birtið inn í ChatGPT og send.",
+          description: "Kopiera byrtið inn í ChatGPT og send.",
               window: "Sama kjatttráð",
-              model: "GPT 5.1 Thinking",
+              model: "GPT 5.2 Thinking",
           prompt: `
-Finally, add the following elements to all ideas on the list:
+Finally, rewrite the list as a practical use-case overview, use this structure:
 
 1.  **Actionable Title** – A short, punchy title.
-2.  **Concept & Value** – 2-3 sentences explaining *how* to use ChatGPT and the specific *benefit* (e.g., clearer pitches, faster workflows, better strategic decisions).
+2.  **Concept & Value** – 2-3 sentences explaining *how* to use ChatGPT for this the given use-case and the specific *benefit* (e.g., clearer pitches, faster workflows, better strategic decisions).
 3.  **Real-World Example** – 2-4 sentences describing a concrete scenario from their work week. Make it explicitly clear what the user must **paste/input** (e.g., "the latest client email," "your rough meeting notes," "a messy draft") and what they should **ask** ChatGPT to do with it.
 
 Keep each description short and practical so a busy professional can immediately see how to try it in reality.
@@ -624,7 +609,7 @@ Keep each description short and practical so a busy professional can immediately
           },
           {
           title: "Stig 10: Liðugt – takk fyri!",
-          description: "Hattar var hattar, um tú nú er ágrýtin so fert tú at hyggja væl eftir listanum og royna tað tú hevur fingið viðmælt. Menn meira sannlíkt er at tú fert aftur til arbeiðis og gloymur alt um hendan listan og finnur hann aftur um eitt hálvt ár og so hevur tú gloymt alt um hvat hettar snúði seg um. Mítt viðmæli er tað fyrra.",
+          description: "Hattar var hattar, um tú nú er ágrýtin so fert tú at hyggja væl eftir listanum og royna tað tú hevur fingið viðmælt. Menn meira sannlíkt er at tú fert aftur til arbeiðis og gloymur alt um hendan listan og finnur hann aftur um eitt hálvt ár og so hevur tú gloymt alt um hvat hettar snúði seg um. Mítt viðmæli er at gera tað fyrra.",
           requiresConfirmation: false
         }
       ]
@@ -633,14 +618,14 @@ Keep each description short and practical so a busy professional can immediately
       id: "deep-research-lab",
         name: "Venjing 2: Lumma-ráðgevin",
         description:
-          "Endamálið er at gera trýggjar Deep Research-frágreiðingar, sum passa júst til tín tørv.",
+          "Endamálið er at gera trýggjar Deep Research-frágreiðingar, sniðgjørdar til júst tín.",
         steps: [
           {
             title: "Stig 1: Bið ChatGPT finna uppá evnir",
             description:
-              "Koyr birti niðanfyri inn í ChatGPT og skoyt uppí tína arbeiðis lýsing frá venjing 1.",
+              "Koyr byrti niðanfyri inn í ChatGPT og skoyt uppí tína arbeiðis lýsing frá venjing 1.",
               window: "Nýtt kjatt",
-              model: "GPT 5.1 Thinking",
+              model: "GPT 5.2 Thinking",
             prompt: `
 **Rolle:** Du er min **Research Triage-konsulent**. Dit job er at scanne min kontekst og foreslå **specifikke emner af høj værdi**, som er **velegnede til ChatGPT Deep Research** (værktøjet, der udfører undersøgelser på nettet i flere trin og sammenfatter fund med kildehenvisninger), og som er mest værdifulde for mig. Deep Research er mest nyttig, når:
 
@@ -710,7 +695,7 @@ Ud over at (a) gennemsøge, hvad brugere og 'thought leaders' siger, og (b) find
               "Eg vátti, at eg havi fingið ein lista við evnum, sum passa til mín leiklut."
           },
           {
-            title: "Stig 2: Vel tíni 3 yndisbirt",
+            title: "Stig 2: Vel tíni 3 yndisbyrt",
             description:
               "Les listan og vel 3 evni tú vilt arbeiða víðari við. Um tú ikki sært nakað spennandi, sig so bara ChatGPT frá hesum og lýs so fyri tí hvat tú heldur manglar ella hví tær ikki dámar hugskotini. Og royn so aftur.",
             requiresConfirmation: true,
@@ -718,11 +703,11 @@ Ud over at (a) gennemsøge, hvad brugere og 'thought leaders' siger, og (b) find
               "Eg vátti, at eg havi valt 3 evni."
           },
           {
-            title: "Stig 3: Bygg klár Deep Research‑birt til tey valdu evnini",
+            title: "Stig 3: Bygg klár Deep Research‑byrt til tey valdu evnini",
             description:
-              "Í sama kjatt, avrita birti niðanfyri og fyll inn tíni 3 valdu evnir.",
+              "Í sama kjatt, avrita byrti niðanfyri og fyll inn tíni 3 valdu evnir.",
               window: "Sama kjatttráð",
-              model: "GPT 5.1 Thinking",
+              model: "GPT 5.2 Thinking",
             prompt: `
 **Ny rolle**
 Nu er du *Senior Research Prompt Architect* for Deep Research. Dit job er at omdanne mine valgte emner til interessante prompter af høj værdi til Deep Research.
@@ -777,14 +762,14 @@ For hvert emne: vælg den bedste rapporttype og lav én kort prompt (≤200 ord)
               `,
             requiresConfirmation: true,
             confirmationText:
-              "Eg vátti, at eg havi fingið 3 birt."
+              "Eg vátti, at eg havi fingið 3 byrt."
           },
           {
             title: "Stig 4: Tendra Deep Research",
             description:
-              "Nú skalt tú tendra tíni trý Deep Research, men bara eitt í senn. Opna eitt nýtt kjatt og koyr tað fyrsta birti inn. Trýst so á tað stóra + við kjatti og tendra fyri Deep Research. Send nú birti. Ger hettar fyri hvørt birt tú fekk frá myndlinum.",
+              "Nú skalt tú tendra tíni trý Deep Research, men bara eitt í senn. Opna eitt nýtt kjatt og koyr tað fyrsta byrti inn. Trýst so á tað stóra + við kjatti og tendra fyri Deep Research. Send nú byrti. Ger hettar fyri hvørt byrt tú fekk frá myndlinum.",
               window: "Nýtt kjatt",
-              model: "GPT 5.1 + Deep Research",
+              model: "GPT 5.2 + Deep Research",
             requiresConfirmation: true,
             confirmationText:
               "Eg vátti, at eg havi sett tríggjar Deep Research‑uppgávur í gongd."
@@ -792,7 +777,7 @@ For hvert emne: vælg den bedste rapporttype og lav én kort prompt (≤200 ord)
           {
             title: "Stig 6: Liðugt",
             description:
-              "Nú arbeiður ChatGPT allarhelst uppá tínar frásagnir. Tá ið tær eru lidnar kunna tær takast niður sum PDF.",
+              "Nú arbeiður ChatGPT allarhelst uppá tínar frásagnir. Tá ið tær eru lidnar kunnu tær takast niður sum PDF.",
             requiresConfirmation: false
           }
         ]

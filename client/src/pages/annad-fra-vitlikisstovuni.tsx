@@ -54,7 +54,7 @@ export default function AnnadFraVitlikisstovuni() {
       id: "verkstova",
       icon: <Wrench className="w-6 h-6" />,
       title: "Verkstovur",
-      description: "Luttakarar atgongd til okkara verkstovur.",
+      description: "Luttakara atgongd til okkara verkstovur.",
       href: "/verkstova",
       color: "from-orange-500 to-orange-600"
     }
