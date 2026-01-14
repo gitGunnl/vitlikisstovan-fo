@@ -14,7 +14,7 @@ export default function AnnadFraVitlikisstovuni() {
     document.title = "Annað frá Vitlíkisstovuni - " + seoConfig.title;
 
     const metaDescription = document.querySelector('meta[name="description"]');
-    const content = "Yvirlit yvir allt tilfarið og tilfeingi frá Vitlíkisstovuni - vegleiðingar, verkætlanir, poddvarp og verkstovur.";
+    const content = "Yvirlit yvir alt tilfar og tilfeingi frá Vitlíkisstovuni - vegleiðingar, verkætlanir, poddvarp og verkstovur.";
     if (metaDescription) {
       metaDescription.setAttribute('content', content);
     } else {
@@ -38,7 +38,7 @@ export default function AnnadFraVitlikisstovuni() {
       id: "vitliki-til-arbeidis",
       icon: <Briefcase className="w-6 h-6" />,
       title: "Vitlíki til arbeiðis",
-      description: "Fylg okkara verkætlan, sum mennar vitlíkivegleiðingar til føroyska vinnulívið.",
+      description: "Fylg okkara verkætlan, ið mennir vitlíkivegleiðingar til føroyska vinnulívið.",
       href: "/tilarbeidis",
       color: "from-green-500 to-green-600"
     },
@@ -46,15 +46,15 @@ export default function AnnadFraVitlikisstovuni() {
       id: "poddvarp",
       icon: <Headphones className="w-6 h-6" />,
       title: "Vitlíki poddvarp um Føroyar",
-      description: "Hoyra spennandi sagnir frá Føroyum, fortald av vitlíki. Frá forntiðarsøgum til nútíðar.",
+      description: "Hoyr spennandi sagnir úr Føroyum, frásagdar av vitlíki. Frá forntíð til nútíð.",
       href: "/podcast",
       color: "from-purple-500 to-purple-600"
     },
     {
       id: "verkstova",
       icon: <Wrench className="w-6 h-6" />,
-      title: "Verkstova",
-      description: "Atgongd til okkara verkstovur og venjingartilfarið fyri fyriskipanir og luttakarar.",
+      title: "Verkstovur",
+      description: "Luttakarar atgongd til okkara verkstovur.",
       href: "/verkstova",
       color: "from-orange-500 to-orange-600"
     }
@@ -73,7 +73,7 @@ export default function AnnadFraVitlikisstovuni() {
                 Annað frá Vitlíkisstovuni
               </h1>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Yvirlit yvir allt okkara tilfarið og tilfeingi - vegleiðingar, verkætlanir, poddvarp og verkstovur.
+                Yvirlit yvir allt okkara tilfar og tilfeingi - vegleiðingar, verkætlanir, poddvarp og verkstovur.
               </p>
             </div>
 
@@ -123,10 +123,10 @@ export default function AnnadFraVitlikisstovuni() {
             <div className="mt-12 text-center">
               <div className="bg-muted/30 rounded-xl p-8">
                 <h2 className="text-xl font-semibold mb-4">
-                  Hevur tú spurninar?
+                  Hevur tú spurningar?
                 </h2>
                 <p className="text-muted-foreground mb-6">
-                  Um tú hevur spurninar um okkara tilboð ella vilt vita meira, so set teg í samband við okkum.
+                  Um tú hevur spurningar ella ynskir at vita meira - skriva enduliga.
                 </p>
                 <Link href="/contact">
                   <Button size="lg">
