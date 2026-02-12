@@ -137,8 +137,9 @@ const pages = [
     description: 'Handalig vitlíkisverkstova. Lær at brúka ChatGPT og onnur vitlíki-amboð í veruligum arbeiðsuppgávum.',
     content: `
       <h1>Verkstova</h1>
-      <p>Handalig vitlíkisverkstova. Lær at brúka ChatGPT og onnur vitlíki-amboð í veruligum arbeiðsuppgávum.</p>
+      <p>Hetta innihald er loyndarorðsverndað og er einans fyri skrásettar brúkarar.</p>
     `,
+    noindex: true,
   },
   {
     path: '/podcast',
@@ -218,6 +219,28 @@ function readTemplate() {
 }
 
 // ---------------------------------------------------------------------------
+// Shared navigation and footer for sub-pages (same as homepage seo-fallback)
+// ---------------------------------------------------------------------------
+const NAV_HTML = `
+      <header>
+        <nav>
+          <a href="/">Heim</a>
+          <a href="/um-okkum">Um okkum</a>
+          <a href="/okkara-taenastur">Okkara tænastur</a>
+          <a href="/contact">Samband</a>
+          <a href="/blog">Bloggur</a>
+          <a href="/podcast">Podkast</a>
+        </nav>
+      </header>`;
+
+const FOOTER_HTML = `
+      <footer>
+        <p>&copy; Vitlíkisstovan. Øll rættindi umsitin.</p>
+        <a href="https://facebook.com/vitlikisstovan">Facebook</a>
+        <a href="https://linkedin.com/company/vitlikisstovan">LinkedIn</a>
+      </footer>`;
+
+// ---------------------------------------------------------------------------
 // Generate a page-specific HTML file
 // ---------------------------------------------------------------------------
 function generatePage(template, page) {
@@ -265,11 +288,20 @@ function generatePage(template, page) {
     `<meta name="twitter:description" content="${page.description}"`
   );
 
+  // Add noindex for private pages (e.g. /verkstova)
+  if (page.noindex) {
+    html = html.replace(
+      '</head>',
+      `  <meta name="robots" content="noindex, nofollow" />\n  </head>`
+    );
+  }
+
   // Inject page-specific content into seo-fallback (replace existing content)
   if (page.content && !page.skipContent) {
+    const fallbackContent = `${NAV_HTML}\n      <main>${page.content}</main>${FOOTER_HTML}`;
     html = html.replace(
       /(<div id="seo-fallback">)([\s\S]*?)(<\/div>\s*<script>document\.getElementById\('seo-fallback'\))/,
-      `$1\n      <main>${page.content}</main>\n    $3`
+      `$1${fallbackContent}\n    $3`
     );
   }
 
@@ -294,7 +326,7 @@ function generatePage(template, page) {
 // ---------------------------------------------------------------------------
 function generateSitemap() {
   const now = new Date().toISOString().split('T')[0];
-  const urls = pages.map(p => {
+  const urls = pages.filter(p => !p.noindex).map(p => {
     const loc = p.path === '/' ? DOMAIN + '/' : DOMAIN + p.path;
     const priority = p.path === '/' ? '1.0' : p.path.includes('/blog/') ? '0.7' : '0.8';
     const changefreq = p.path.includes('/blog/') ? 'monthly' : 'weekly';

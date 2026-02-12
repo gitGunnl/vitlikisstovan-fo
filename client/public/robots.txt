@@ -7,3 +7,4 @@ Sitemap: https://vitlikisstovan.fo/sitemap.xml
 
 # Disallow admin/internal paths
 Disallow: /gemini3-fo-test
+Disallow: /verkstova
