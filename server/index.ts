@@ -1,37 +1,85 @@
 #!/usr/bin/env node
-// This file exists only to allow the workflow to start properly
-// The app is now a static site using Vite for development
+/**
+ * Server entry point.
+ *
+ * Development  → spawns the Vite dev server (SPA mode).
+ * Production   → serves the pre-rendered static files from dist/public/
+ *                so every route returns its own page-specific HTML.
+ */
 
-import { spawn } from 'child_process';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const rootDir = join(__dirname, '..');
 
-console.log('Starting Vite development server for static site...');
+if (process.env.NODE_ENV === 'production') {
+  // ---------- Production: static file server with SPA fallback ----------
+  const express = (await import('express')).default;
+  const { existsSync } = await import('fs');
 
-// Start Vite development server with custom configuration for Replit
-// Using a custom config file that allows all hosts to work around Replit's dynamic host names
-const vite = spawn('npx', ['vite', '--config', 'vite.config.custom.js', '--host', '--port', '5000'], {
-  cwd: rootDir,
-  stdio: 'inherit',
-  shell: true,
-  env: {
-    ...process.env,
-    // Force Vite to accept all hosts for Replit development
-    VITE_CJS_IGNORE_WARNING: 'true'
-  }
-});
+  const app = express();
+  const DIST = join(__dirname, 'public'); // dist/public when running from dist/
 
-vite.on('error', (err) => {
-  console.error('Failed to start Vite:', err);
-  process.exit(1);
-});
+  // For clean URLs like /contact, serve the prerendered index.html
+  // BEFORE express.static (which would redirect /contact → /contact/)
+  app.get('*', (req, res, next) => {
+    // Skip requests for actual files (have extensions like .js, .css, .png)
+    if (req.path.includes('.')) return next();
+    // Skip root — let it fall through to express.static
+    const cleanPath = req.path.replace(/\/+$/, '') || '/';
+    if (cleanPath === '/') return next();
 
-vite.on('exit', (code) => {
-  if (code !== 0) {
-    console.error(`Vite exited with code ${code}`);
-    process.exit(code || 1);
-  }
-});
+    const prerendered = join(DIST, cleanPath.slice(1), 'index.html');
+    if (existsSync(prerendered)) {
+      return res.sendFile(prerendered);
+    }
+    next();
+  });
+
+  // Serve static assets (JS, CSS, images, etc.) with caching
+  app.use(
+    express.static(DIST, {
+      maxAge: '7d',
+      index: 'index.html', // serve directory index.html (homepage) automatically
+    }),
+  );
+
+  // SPA fallback: for any remaining GET request, serve root index.html
+  app.get('*', (_req, res) => {
+    res.sendFile(join(DIST, 'index.html'));
+  });
+
+  const PORT = parseInt(process.env.PORT || '5000', 10);
+  app.listen(PORT, '0.0.0.0', () => {
+    console.log(`Production server listening on http://0.0.0.0:${PORT}`);
+  });
+} else {
+  // ---------- Development: Vite dev server ----------
+  const { spawn } = await import('child_process');
+
+  console.log('Starting Vite development server...');
+
+  const vite = spawn(
+    'npx',
+    ['vite', '--config', 'vite.config.custom.js', '--host', '--port', '5000'],
+    {
+      cwd: rootDir,
+      stdio: 'inherit',
+      shell: true,
+      env: { ...process.env, VITE_CJS_IGNORE_WARNING: 'true' },
+    },
+  );
+
+  vite.on('error', (err) => {
+    console.error('Failed to start Vite:', err);
+    process.exit(1);
+  });
+
+  vite.on('exit', (code) => {
+    if (code !== 0) {
+      console.error(`Vite exited with code ${code}`);
+      process.exit(code || 1);
+    }
+  });
+}
