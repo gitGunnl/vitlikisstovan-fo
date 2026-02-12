@@ -89,7 +89,7 @@ dist
 
 # Gatsby files
 .cache/
-public
+# Note: 'public' pattern removed — client/public/ must be tracked for SEO files
 
 # Vuepress build output
 .vuepress/dist
