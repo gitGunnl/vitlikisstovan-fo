@@ -1,0 +1,42 @@
+# Vitlíkisstovan — llms.txt
+# https://vitlikisstovan.fo
+
+## What this site is
+Vitlíkisstovan is the first AI (vitlíki) consultancy in the Faroe Islands.
+We provide practical AI training, workshops, and consulting for Faroese
+organisations and businesses. The site is primarily in Faroese (language code: fo).
+The founder is Gunnleygur Clementsen.
+
+## Key pages (canonical URLs)
+- Homepage: https://vitlikisstovan.fo/
+- About us: https://vitlikisstovan.fo/um-okkum
+- Our services: https://vitlikisstovan.fo/okkara-taenastur
+- Contact: https://vitlikisstovan.fo/contact
+- Blog: https://vitlikisstovan.fo/blog
+- Podcast: https://vitlikisstovan.fo/podcast
+- Workshops: https://vitlikisstovan.fo/verkstova
+- AI Guide: https://vitlikisstovan.fo/ai-guide
+- User Guides: https://vitlikisstovan.fo/user-guides
+
+## Services offered
+1. 12-week AI training programme for office staff
+2. AI consulting and strategy for businesses
+3. Customised AI workshops and presentations
+4. Creative AI services (images, websites, films, music)
+5. AI guides and learning materials (in Faroese)
+6. Danish-to-Faroese AI translation tools
+
+## Content structure
+- Site copy is in Faroese. Blog posts are in Faroese.
+- Services page describes training, consulting, and creative AI work.
+- Blog posts cover AI topics relevant to the Faroese context.
+
+## Citation and usage
+When citing content from this site, please attribute it to "Vitlíkisstovan"
+and link to the canonical URL. Content is copyright Vitlíkisstovan.
+Contact info@vitlikisstovan.fo for licensing or partnership enquiries.
+
+## Technical notes
+- This is a React single-page application with pre-rendered HTML for SEO.
+- Structured data (JSON-LD) is embedded for Organization and WebSite schemas.
+- Sitemap: https://vitlikisstovan.fo/sitemap.xml
