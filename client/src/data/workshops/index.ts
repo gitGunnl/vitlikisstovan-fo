@@ -3,6 +3,7 @@ import { bakkafrost } from "./bakkafrost";
 import { hugsnotid } from "./hugsnotid";
 import { betri } from "./betri";
 import { visit } from "./visit";
+import { kontrast } from "./kontrast";
 
 export type { Workshop, Lab, WorkshopStep };
 
@@ -10,7 +11,8 @@ export const workshops: Record<string, Workshop> = {
   bakkafrost,
   "hugskotið": hugsnotid,
   betri,
-  visit
+  visit,
+  kontrast
 };
 
 export function normalizePassword(input: string): string {
