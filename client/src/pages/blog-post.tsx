@@ -1,98 +1,94 @@
-import React, { useEffect, useState } from "react";
-import { useRoute, useParams } from "wouter";
+import React, { useEffect } from "react";
+import { useParams } from "wouter";
 import { createRoot } from "react-dom/client";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import Section from "@/components/site/Section";
 import AudioPlayer from "@/components/site/AudioPlayer";
-import { Badge } from "@/components/ui/badge";
-import { Clock, Calendar, User } from "lucide-react";
+import { Clock } from "lucide-react";
 import { seoConfig } from "@/content/seo";
 import { updateMetaTags } from "@/lib/meta";
-import { Link } from "wouter";
-
+import { getBlogPostBySlug } from "@/content/blog";
 
 export default function BlogPost() {
   const params = useParams();
   const slug = params.slug;
-  const [post, setPost] = useState<any>(null);
-  const [loading, setLoading] = useState(true);
+  const post = slug ? getBlogPostBySlug(slug) : null;
 
   useEffect(() => {
-    // This will eventually load the actual blog post content
-    // For now, we'll use dummy data
-    const loadPost = async () => {
-      try {
-        // Import the blog post content dynamically
-        const postModule = await import(`@/content/blog/${slug}.ts`);
-        setPost(postModule.default);
-
-        // Set page metadata with Open Graph support
-        const fullTitle = `${postModule.default.title} - ${seoConfig.title}`;
-        const postUrl = `${window.location.origin}/blog/${slug}`;
-        const postImage = postModule.default.ogImage || `/images/blog/${slug}/og-image.jpg`;
-        
-        updateMetaTags({
-          title: fullTitle,
-          description: postModule.default.excerpt,
-          image: postImage,
-          url: postUrl,
-          type: 'article',
-          publishedTime: postModule.default.date,
-          author: postModule.default.author || seoConfig.author,
-          siteName: seoConfig.siteName
-        });
-      } catch (error) {
-        console.error("Failed to load blog post:", error);
-        setPost(null);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    if (slug) {
-      loadPost();
+    if (!post) {
+      return;
     }
-  }, [slug]);
 
-  useEffect(() => {
-    if (post) {
-      // Wait a bit for the content to render to the DOM
-      setTimeout(() => {
-        // Find and replace audio player placeholders with React components
-        const placeholders = document.querySelectorAll('[data-audio-player]');
-        placeholders.forEach((placeholder) => {
-          const audioSrc = placeholder.getAttribute('data-audio-player');
-          const title = placeholder.getAttribute('data-title');
+    const fullTitle = `${post.title} - ${seoConfig.title}`;
+    const postUrl = `${window.location.origin}/blog/${post.slug}`;
+    const postImage = post.ogImage || `/images/blog/${slug}/og-image.jpg`;
 
-          if (audioSrc && title) {
-            // Clear the placeholder content
-            placeholder.innerHTML = '';
+    updateMetaTags({
+      title: fullTitle,
+      description: post.description || post.excerpt,
+      image: postImage,
+      url: postUrl,
+      type: "article",
+      publishedTime: post.date,
+      author: post.author || seoConfig.author,
+      siteName: seoConfig.siteName,
+    });
 
-            // Create and render the React component
-            const root = createRoot(placeholder);
-            root.render(<AudioPlayer audioSrc={audioSrc} title={title} />);
-          }
-        });
-      }, 100);
-    }
-  }, [post]);
-
-  if (loading) {
-    return (
-      <>
-        <Header />
-        <main className="pt-16">
-          <Section className="py-16">
-            <div className="mx-auto max-w-3xl text-center">
-              <p>Lesar...</p>
-            </div>
-          </Section>
-        </main>
-        <Footer />
-      </>
+    const existingScript = document.querySelector(
+      'script[data-blog-posting-jsonld="true"]'
     );
-  }
+    if (existingScript) {
+      existingScript.remove();
+    }
+
+    const script = document.createElement("script");
+    script.type = "application/ld+json";
+    script.setAttribute("data-blog-posting-jsonld", "true");
+    script.text = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.description || post.excerpt,
+      author: {
+        "@type": "Person",
+        name: post.author || seoConfig.author,
+      },
+      publisher: {
+        "@type": "Organization",
+        name: seoConfig.siteName,
+      },
+      mainEntityOfPage: postUrl,
+      url: postUrl,
+      datePublished: post.date,
+      inLanguage: "fo",
+    });
+    document.head.appendChild(script);
+
+    return () => {
+      script.remove();
+    };
+  }, [post, slug]);
+
+  useEffect(() => {
+    if (!post) {
+      return;
+    }
+
+    setTimeout(() => {
+      const placeholders = document.querySelectorAll("[data-audio-player]");
+      placeholders.forEach((placeholder) => {
+        const audioSrc = placeholder.getAttribute("data-audio-player");
+        const title = placeholder.getAttribute("data-title");
+
+        if (audioSrc && title) {
+          placeholder.innerHTML = "";
+          const root = createRoot(placeholder);
+          root.render(<AudioPlayer audioSrc={audioSrc} title={title} />);
+        }
+      });
+    }, 100);
+  }, [post]);
 
   if (!post) {
     return (
@@ -128,9 +124,7 @@ export default function BlogPost() {
                 {post.title}
               </h1>
 
-              <p className="text-lg text-muted-foreground">
-                {post.excerpt}
-              </p>
+              <p className="text-lg text-muted-foreground">{post.excerpt}</p>
             </div>
 
             <div

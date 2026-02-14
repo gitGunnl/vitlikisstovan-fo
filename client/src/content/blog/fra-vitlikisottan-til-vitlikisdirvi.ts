@@ -2,6 +2,9 @@ const post = {
   title: "Frá vitlíkisótta til vitlíkisdirvi: Hví førleikamenning nú er ein avgerandi íløga",
   slug: "fra-vitlikisottan-til-vitlikisdirvi",
   excerpt: "Umrøðan av vitlíki hoyrist nú allastaðni, í øllum vinnugreinum. Tøknin er bert amboðið — tann varandi ávirkanin kemur frá fólkunum, ið brúka og stýra tøknini.",
+  date: "2025-01-10",
+  description:
+    "Tøknin er bert amboðið — tann varandi vinningurin kemur frá fólkunum. Hví førleikamenning nú er ein avgerandi íløga.",
   readTime: "6 min",
   author: "Vitlíkisstovan",
   ogImage: "/images/blog/foroyskt-vitliki-2025/og-image.png",
