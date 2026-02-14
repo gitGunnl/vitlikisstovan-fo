@@ -3,7 +3,10 @@
 const post = {
   title:
     "Føroysk vitlíkismodell 2025: Hvørji eru tøk, hvussu væl rigga tey – og hvat kunnu tey brúkast til?",
-  slug: "foroyskt-vitliki-2025-hvat-riggar-nu",
+  slug: "vitliki-i-foroyum",
+  date: "2024-01-15",
+  description:
+    "Eitt skjótt yvirlit yvir føroysku modellini, meting av avrikum og ein hugleiðing um hvat eigur at mennast næst.",
   excerpt:
     "Eitt skjótt yvirlit yvir føroysku modellini, meting av avrikum og ein hugleiðing um hvat eigur at mennast næst — við greiðum stigum fyri fyritøkur og gransking.",
   readTime: "12 min",

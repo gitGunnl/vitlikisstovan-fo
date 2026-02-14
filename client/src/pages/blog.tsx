@@ -8,6 +8,7 @@ import { seoConfig } from "@/content/seo";
 import { updateMetaTags } from "@/lib/meta";
 import { Link } from "wouter";
 import { CalendarDays } from "lucide-react";
+import { blogPosts } from "@/content/blog";
 
 export default function Blog() {
   useEffect(() => {
@@ -24,23 +25,7 @@ export default function Blog() {
     });
   }, []);
 
-  // This will eventually come from your content system
-  const blogPosts = [
-    {
-      slug: "fra-vitlikisottan-til-vitlikisdirvi",
-      title: "Frá vitlíkisótta til vitlíkisdirvi: Hví førleikamenning nú er ein avgerandi íløga",
-      excerpt: "Umrøðan av vitlíki hoyrist nú allastaðni, í øllum vinnugreinum. Tøknin er bert amboðið — tann varandi vinningurin kemur frá fólkunum, ið brúka og stýra tøknini.",
-      date: "2025-01-10",
-      readTime: "6 min"
-    },
-    {
-      slug: "vitliki-i-foroyum",
-      title: "Vitlíki í Føroyum",
-      excerpt: "Ein innleiðing til hvussu vitlíki kann broyta okkara samfelag og vinnulív.",
-      date: "2024-01-15",
-      readTime: "5 min"
-    }
-  ];
+  const sortedPosts = [...blogPosts].sort((a, b) => b.date.localeCompare(a.date));
 
   return (
     <>
@@ -58,7 +43,7 @@ export default function Blog() {
             </div>
 
             <div className="grid gap-6 md:gap-8">
-              {blogPosts.map((post) => (
+              {sortedPosts.map((post) => (
                 <Card key={post.slug} className="hover:shadow-lg transition-shadow">
                   <CardHeader>
                     <div className="flex items-center gap-4 text-sm text-muted-foreground mb-2">
