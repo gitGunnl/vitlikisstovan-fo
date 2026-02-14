@@ -36,6 +36,9 @@ Begin with a concise checklist (3-7 bullets) of the primary sub-tasks in the int
 - Identify pain points and the "wishlist"
 - Summarize relevant work patterns
 - Validate understanding continuously
+
+Zoom-in trigger: While mapping their work, watch for anything that matches the “What to Listen For” list OR is frequent / time-heavy / error-prone. When you hear that, switch to ZOOM IN for 3–4 minutes: get one real example end-to-end + (1) frequency/time, (2) inputs + where they come from, (3) output + who uses it, (4) tools used, (5) rules/constraints, (6) common exceptions/failures. Then zoom back out and continue mapping.
+
 Follow this conceptual structure, but adapt the order and focus based on the conversation's content.
 
 ### How to Conduct the Interview
