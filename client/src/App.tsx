@@ -22,6 +22,7 @@ import AIForCaretakersGuide from "@/pages/ai-for-caretakers-guide";
 import AIForKindergartenGuide from "@/pages/ai-for-kindergarten-guide";
 import AnnadFraVitlikisstovuni from "@/pages/annad-fra-vitlikisstovuni";
 import Gemini3FoTest from "@/pages/gemini3-fo-test";
+import FrontpageV3 from "@/pages/frontpage-v3";
 
 function Router() {
   return (
@@ -44,6 +45,7 @@ function Router() {
       <Route path="/user-guides/best-practices" component={BestPracticesGuide} />
       <Route path="/annad-fra-vitlikisstovuni" component={AnnadFraVitlikisstovuni} />
       <Route path="/gemini3-fo-test" component={Gemini3FoTest} />
+      <Route path="/frontpage-v3" component={FrontpageV3} />
       <Route component={NotFound} />
     </Switch>
   );
