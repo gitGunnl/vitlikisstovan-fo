@@ -18,9 +18,77 @@ PORT = "5000"
 localPort = 5000
 externalPort = 80
 
+# Per-route rewrites for pre-rendered pages (clean URLs → flat .html files).
+# Static files (robots.txt, llms.txt, llm.md, sitemap.xml, etc.) are served
+# directly from the publicDir without any rewrite.
+
 [[deployment.rewrites]]
-from = "/*"
-to = "/index.html"
+from = "/um-okkum"
+to = "/um-okkum.html"
+
+[[deployment.rewrites]]
+from = "/okkara-taenastur"
+to = "/okkara-taenastur.html"
+
+[[deployment.rewrites]]
+from = "/contact"
+to = "/contact.html"
+
+[[deployment.rewrites]]
+from = "/blog"
+to = "/blog.html"
+
+[[deployment.rewrites]]
+from = "/blog/vitliki-i-foroyum"
+to = "/blog/vitliki-i-foroyum.html"
+
+[[deployment.rewrites]]
+from = "/blog/fra-vitlikisottan-til-vitlikisdirvi"
+to = "/blog/fra-vitlikisottan-til-vitlikisdirvi.html"
+
+[[deployment.rewrites]]
+from = "/tilarbeidis"
+to = "/tilarbeidis.html"
+
+[[deployment.rewrites]]
+from = "/verkstova"
+to = "/verkstova.html"
+
+[[deployment.rewrites]]
+from = "/podcast"
+to = "/podcast.html"
+
+[[deployment.rewrites]]
+from = "/ai-guide"
+to = "/ai-guide.html"
+
+[[deployment.rewrites]]
+from = "/user-guides"
+to = "/user-guides.html"
+
+[[deployment.rewrites]]
+from = "/user-guides/getting-started"
+to = "/user-guides/getting-started.html"
+
+[[deployment.rewrites]]
+from = "/user-guides/best-practices"
+to = "/user-guides/best-practices.html"
+
+[[deployment.rewrites]]
+from = "/user-guides/ai-for-kindergarten-guide"
+to = "/user-guides/ai-for-kindergarten-guide.html"
+
+[[deployment.rewrites]]
+from = "/user-guides/ai-for-caretakers-guide"
+to = "/user-guides/ai-for-caretakers-guide.html"
+
+[[deployment.rewrites]]
+from = "/annad-fra-vitlikisstovuni"
+to = "/annad-fra-vitlikisstovuni.html"
+
+[[deployment.rewrites]]
+from = "/course-details"
+to = "/course-details.html"
 
 [workflows]
 runButton = "Project"
