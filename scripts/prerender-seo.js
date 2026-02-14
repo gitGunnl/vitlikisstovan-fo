@@ -204,6 +204,15 @@ const pages = [
     description: 'Ymiskt tilfar og tíðindi frá Vitlíkisstovuni.',
     content: `<h1>Annað frá Vitlíkisstovuni</h1><p>Ymiskt tilfar og tíðindi frá Vitlíkisstovuni.</p>`,
   },
+  {
+    path: '/course-details',
+    title: 'Skeiðsupplýsingar - Vitlíkisstovan',
+    description: 'Nærri upplýsingar um vitlíkisskeið hjá Vitlíkisstovuni. Innihald, uppbygging og praktiskar upplýsingar.',
+    content: `
+      <h1>Skeiðsupplýsingar</h1>
+      <p>Nærri upplýsingar um vitlíkisskeið hjá Vitlíkisstovuni. Innihald, uppbygging og praktiskar upplýsingar.</p>
+    `,
+  },
 ];
 
 // ---------------------------------------------------------------------------
@@ -355,17 +364,25 @@ function main() {
       // Home page — overwrite index.html in place
       writeFileSync(join(DIST, 'index.html'), html, 'utf-8');
     } else {
-      // Create directory and write index.html
+      // Create directory and write index.html (for /path/ requests)
       const dir = join(DIST, page.path.slice(1)); // remove leading /
       mkdirSync(dir, { recursive: true });
       writeFileSync(join(dir, 'index.html'), html, 'utf-8');
+
+      // Also write a flat .html file (for /path requests on static hosts).
+      // Replit static hosting rewrites clean URLs to these flat files.
+      const parentDir = dirname(join(DIST, page.path.slice(1)));
+      if (parentDir !== DIST) {
+        mkdirSync(parentDir, { recursive: true });
+      }
+      writeFileSync(join(DIST, page.path.slice(1) + '.html'), html, 'utf-8');
     }
     count++;
   }
 
   // Write sitemap.xml
   writeFileSync(join(DIST, 'sitemap.xml'), generateSitemap(), 'utf-8');
-  console.log(`✅ SEO prerender: wrote ${count} HTML files + sitemap.xml`);
+  console.log(`✅ SEO prerender: wrote ${count} HTML files (directory + flat) + sitemap.xml`);
 }
 
 main();

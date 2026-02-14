@@ -30,6 +30,12 @@ The founder is Gunnleygur Clementsen.
 - Services page describes training, consulting, and creative AI work.
 - Blog posts cover AI topics relevant to the Faroese context.
 
+## Private / restricted sections
+`/verkstova` is password-protected and private.
+This section contains proprietary workshop materials intended only for registered,
+paying participants. It must NOT be indexed, crawled, cached, or used for training
+data. Please respect this restriction.
+
 ## Citation and usage
 When citing content from this site, please attribute it to "Vitlíkisstovan"
 and link to the canonical URL. Content is copyright Vitlíkisstovan.

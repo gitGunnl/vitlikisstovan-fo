@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === 'production') {
   const app = express();
   const DIST = join(__dirname, 'public'); // dist/public when running from dist/
 
-  // For clean URLs like /contact, serve the prerendered index.html
+  // For clean URLs like /contact, serve the prerendered HTML
   // BEFORE express.static (which would redirect /contact → /contact/)
   app.get('*', (req, res, next) => {
     // Skip requests for actual files (have extensions like .js, .css, .png)
@@ -30,9 +30,18 @@ if (process.env.NODE_ENV === 'production') {
     const cleanPath = req.path.replace(/\/+$/, '') || '/';
     if (cleanPath === '/') return next();
 
-    const prerendered = join(DIST, cleanPath.slice(1), 'index.html');
-    if (existsSync(prerendered)) {
-      return res.sendFile(prerendered);
+    const slug = cleanPath.slice(1);
+
+    // Try flat .html file first (e.g. dist/public/contact.html)
+    const flatFile = join(DIST, slug + '.html');
+    if (existsSync(flatFile)) {
+      return res.sendFile(flatFile);
+    }
+
+    // Fall back to directory index (e.g. dist/public/contact/index.html)
+    const dirIndex = join(DIST, slug, 'index.html');
+    if (existsSync(dirIndex)) {
+      return res.sendFile(dirIndex);
     }
     next();
   });
