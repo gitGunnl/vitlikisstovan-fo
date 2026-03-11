@@ -75,7 +75,7 @@ if (process.env.NODE_ENV === 'production') {
     {
       cwd: rootDir,
       stdio: 'inherit',
-      shell: true,
+      shell: false,
       env: { ...process.env, VITE_CJS_IGNORE_WARNING: 'true' },
     },
   );
