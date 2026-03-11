@@ -34,6 +34,7 @@ export interface PageStep {
   title: string;
   description: string;
   prompts: PromptBlock[];
+  video?: string;
 }
 
 export interface SinglePageContent {

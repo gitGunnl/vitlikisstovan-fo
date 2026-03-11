@@ -615,29 +615,9 @@ OUTPUT:
         id: "step-4",
         label: "Næsta stig",
         title: "Frá mynd til video",
-        description: "Tá tú hevur eina mynd, sum tú er nøgd/ur við, kanst tú brúka hana sum útgangsstøði fyri eina stutta vøruvideo. Legg myndina inn í ChatGPT ella títt video-amboð og brúka hetta birtið til at fáa eina reina, professionella produktvideo.",
-        prompts: [
-          {
-            title: "Birt til stutta vøruvideo",
-            video: productVideo,
-            text: `Use the uploaded image as the main reference and starting frame.
-
-Create a short premium product video, around 5 to 8 seconds long.
-
-Keep the product design, packaging, colors, and visible label details as accurate as possible.
-Make the product the clear hero at all times.
-Use a clean, commercially believable setting.
-Add subtle cinematic camera movement, such as a slow push-in or a gentle orbit.
-Use soft, premium lighting and natural reflections.
-Keep the motion elegant and minimal.
-
-Do not change the product.
-Do not distort the packaging.
-Do not add chaotic motion or too many elements.
-
-Make it feel like a polished product ad for a premium food brand.`,
-          },
-        ],
+        description: "Nú hevur tú góðar vørumyndir. Men visti tú, at tú eisini kanst skapa stuttar vøruvideoar út frá teimum? Legg einfaldliga tína bestu mynd inn í ChatGPT, Runway, Kling ella eitt annað AI-video-amboð — og bið um eina stutta, reina produktvideo. Úrslitini kunnu vera uppáhaldandi.",
+        video: productVideo,
+        prompts: [],
       },
     ],
   },

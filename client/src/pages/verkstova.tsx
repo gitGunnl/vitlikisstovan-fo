@@ -199,18 +199,33 @@ function SinglePageWorkshop({ workshop, onExit }: { workshop: Workshop; onExit: 
                     </p>
                   </div>
 
-                  <div className={isExploration ? "space-y-4" : "space-y-4"}>
-                    {step.prompts.map((prompt, i) => (
-                      <PromptCard
-                        key={i}
-                        title={prompt.title}
-                        subtitle={prompt.subtitle}
-                        text={prompt.text}
-                        image={prompt.image}
-                        video={prompt.video}
+                  {step.video && (
+                    <div className="rounded-xl border bg-card overflow-hidden mb-4">
+                      <video
+                        src={step.video}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full rounded-t-xl"
                       />
-                    ))}
-                  </div>
+                    </div>
+                  )}
+
+                  {step.prompts.length > 0 && (
+                    <div className="space-y-4">
+                      {step.prompts.map((prompt, i) => (
+                        <PromptCard
+                          key={i}
+                          title={prompt.title}
+                          subtitle={prompt.subtitle}
+                          text={prompt.text}
+                          image={prompt.image}
+                          video={prompt.video}
+                        />
+                      ))}
+                    </div>
+                  )}
                 </section>
               );
             })}
