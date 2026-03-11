@@ -18,8 +18,8 @@ export const matur: Workshop = {
   singlePage: true,
   pageContent: {
     heroTitle: "Vitlíkisvørumyndir",
-    heroSubtitle: "Hvussu tú kann gera myndir av matvørum við vitlíki.",
-    heroNote: "Til óroynd.",
+    heroSubtitle: "Hvussu tú kanst gera myndir av matvørum við vitlíki.",
+    heroNote: "Fyri óroynd.",
     image: "/images/verkstovur.jpeg",
     imageAlt: "Verkstova",
     description: "",
@@ -55,7 +55,7 @@ You should learn:
 - whether I already have a real product image or not
 - whether I want the images to feel more clean studio, lifestyle, rustic, bright, dark, premium, minimal, or bold
 
-Your first question should be: "Do you have a good product description you can hand over now? (You can copy the text, or add a pdf to this chat)"
+Your first question should be: "What is the name of the product and do you have a good product description you can hand over now? (You can copy the text, or add a pdf to this chat)."
 
 Do not turn this into a brand workshop.
 Keep it practical and focused on making good product images.
@@ -116,7 +116,9 @@ Overall look:
 - Premium commercial product photography
 - Tasteful, modern, restrained
 - Not too creative yet
-- This should feel like a professional first product shot that could actually be used`,
+- This should feel like a professional first product shot that could actually be used
+
+Now create the image.`,
           },
         ],
       },
@@ -170,7 +172,9 @@ Materials and realism:
 Overall look:
 - Simple, fitting, professional product photo
 - Not too creative yet
-- Strong enough to use as the base for later variations`,
+- Strong enough to use as the base for later variations
+
+Now create the image.`,
           },
         ],
       },
@@ -615,7 +619,7 @@ OUTPUT:
         id: "step-4",
         label: "Næsta stig",
         title: "Frá mynd til video",
-        description: "Nú hevur tú góðar vørumyndir. Men visti tú, at tú eisini kanst skapa stutt vøruvideo út frá teimum? Tað krevur tó at tú hevur atgongd til eitt gott vitlíki video amboð. Um tú hevur áhuga í hesum, so kann tú keypa tær atgong til RunwayML ella okkurt annað í ein mána, og so nýta hettar til at gera títt video. Brúka ChatGPT til at hjálpa tær at skriva byrt.",
+        description: "Nú hevur tú góðar vørumyndir. Men visti tú, at tú eisini kanst skapa stutt vøruvideo út frá teimum? Tað krevur tó, at tú hevur atgongd til eitt gott vitlíkis-videoamboð. Um tú hevur áhuga í hesum, so kanst tú keypa tær atgong til RunwayML ella okkurt annað í ein mánað, og so nýta hetta til at gera títt video. Brúka ChatGPT til at hjálpa tær at skriva birt.",
         video: productVideo,
         prompts: [],
       },
