@@ -193,7 +193,6 @@ Now create the image.`,
 Use this product context:
 [PASTE PRODUCT CONTEXT]
 
-[If needed: Use the uploaded product image as the reference.]
 
 Goal:
 A polished sales-ready product image for ecommerce, catalog, or product listing use.
@@ -239,7 +238,6 @@ Now create the image.`,
 Use this product context:
 [PASTE PRODUCT CONTEXT]
 
-[If needed: Use the uploaded product image as the reference.]
 
 Goal:
 Make the product feel real, desirable, and naturally part of a believable moment.
@@ -286,7 +284,6 @@ Now create the image.`,
 Use this product context:
 [PASTE PRODUCT CONTEXT]
 
-[If needed: Use the uploaded product image as the reference.]
 
 Goal:
 Visually explain the product through a clean and appetizing ingredient composition.
@@ -335,7 +332,6 @@ Now create the image.`,
 Use this product context:
 [PASTE PRODUCT CONTEXT]
 
-[If needed: Use the uploaded product image as the reference.]
 
 Goal:
 Create a visually striking composition that feels elegant, modern, appetizing, and high-end.
@@ -386,7 +382,6 @@ Now create the image.`,
 Use this product context:
 [PASTE PRODUCT CONTEXT]
 
-[If needed: Use the uploaded product image as the reference.]
 
 Goal:
 Show a clear, attractive brand family with strong visual consistency.
@@ -431,7 +426,6 @@ Now create the image.`,
 Use this product context:
 [PASTE PRODUCT CONTEXT]
 
-[If needed: Use the uploaded product image as the reference.]
 
 Goal:
 Show the product being used in a natural, appetizing, and believable way while keeping it clearly visible.
@@ -477,7 +471,6 @@ Now create the image.`,
 Use this product context:
 [PASTE PRODUCT CONTEXT]
 
-[If needed: Use the uploaded product image as the reference.]
 
 Goal:
 Create a professional product overview that makes the form, packaging, and details easy to understand.
@@ -522,7 +515,6 @@ Now create the image.`,
 Use this product context:
 [PASTE PRODUCT CONTEXT]
 
-[If needed: Use the uploaded product image as the reference.]
 
 Goal:
 Create a more distinctive, eye-catching campaign-style image while keeping the product clear and desirable.
