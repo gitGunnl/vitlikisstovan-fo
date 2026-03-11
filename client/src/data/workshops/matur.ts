@@ -51,6 +51,8 @@ You should learn:
 - packaging type, if it has packaging
 - whether I already have a real product image or not
 
+You first question should be: ""
+
 Do not turn this into a brand workshop.
 Keep it practical and focused on making good product images.
 

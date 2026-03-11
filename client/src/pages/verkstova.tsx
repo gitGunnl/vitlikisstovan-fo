@@ -45,16 +45,30 @@ function PromptCard({ title, subtitle, text, image }: { title: string; subtitle?
 
   return (
     <div className="rounded-xl border bg-card overflow-hidden">
-      <div className="flex items-center justify-between px-4 py-3 border-b bg-muted/30">
-        <div className="min-w-0">
-          <p className="font-semibold text-sm truncate">{title}</p>
-          {subtitle && (
-            <p className="text-xs text-muted-foreground mt-0.5">{subtitle}</p>
-          )}
+      <div className="px-4 py-3 border-b bg-muted/30">
+        <p className="font-semibold text-sm">{title}</p>
+        {subtitle && (
+          <p className="text-xs text-muted-foreground mt-0.5">{subtitle}</p>
+        )}
+      </div>
+      {image && (
+        <div className="px-4 pt-4">
+          <img
+            src={image}
+            alt={`Example: ${title}`}
+            className="w-full rounded-lg object-cover aspect-[4/3]"
+          />
         </div>
+      )}
+      <div className="p-4 max-h-60 overflow-y-auto">
+        <pre className="text-[13px] leading-relaxed whitespace-pre-wrap break-words font-mono text-foreground/80">
+          {text}
+        </pre>
+      </div>
+      <div className="px-4 pb-4 pt-1 flex justify-end">
         <button
           onClick={handleCopy}
-          className={`flex-shrink-0 ml-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 ${
+          className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 ${
             copied
               ? "bg-[hsl(165,35%,42%)] text-white"
               : "bg-background border hover:bg-muted"
@@ -72,20 +86,6 @@ function PromptCard({ title, subtitle, text, image }: { title: string; subtitle?
             </>
           )}
         </button>
-      </div>
-      {image && (
-        <div className="px-4 pt-4">
-          <img
-            src={image}
-            alt={`Example: ${title}`}
-            className="w-full rounded-lg object-cover aspect-[4/3]"
-          />
-        </div>
-      )}
-      <div className="p-4 max-h-60 overflow-y-auto">
-        <pre className="text-[13px] leading-relaxed whitespace-pre-wrap break-words font-mono text-foreground/80">
-          {text}
-        </pre>
       </div>
     </div>
   );
