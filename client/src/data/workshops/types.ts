@@ -24,6 +24,7 @@ export interface PromptBlock {
   title: string;
   subtitle?: string;
   text: string;
+  image?: string;
 }
 
 export interface PageStep {

@@ -1,4 +1,9 @@
 import { Workshop } from "./types";
+import webshopImg from "@assets/generated_images/example_webshop.png";
+import lifestyleImg from "@assets/generated_images/example_lifestyle.png";
+import ingredientsImg from "@assets/generated_images/example_ingredients.png";
+import explodedImg from "@assets/generated_images/example_exploded.png";
+import blueprintImg from "@assets/generated_images/example_blueprint.png";
 
 export const matur: Workshop = {
   name: "AI Product Shots",
@@ -114,6 +119,7 @@ This should feel like a simple, fitting, professional product photo.`,
           {
             title: "Clean webshop shot",
             subtitle: "You want a simple sales image for a webshop or catalog.",
+            image: webshopImg,
             text: `Create a clean ecommerce product shot of this product.
 
 Use this product context:
@@ -129,6 +135,7 @@ Make the product the only hero.`,
           {
             title: "Lifestyle scene",
             subtitle: "You want the product to feel more alive and real.",
+            image: lifestyleImg,
             text: `Create a lifestyle product shot for this food product.
 
 Use this product context:
@@ -144,6 +151,7 @@ Use natural light and make it feel warm, believable, and commercial.`,
           {
             title: "Ingredients around the product",
             subtitle: "You want to show what is inside or what flavors it has.",
+            image: ingredientsImg,
             text: `Create a product shot where the product is shown together with its key ingredients.
 
 Use this product context:
@@ -159,6 +167,7 @@ Use realistic food styling and soft light.`,
           {
             title: "Exploded ingredients / composition shot",
             subtitle: "You want a more eye-catching visual that explains the product.",
+            image: explodedImg,
             text: `Create a stylized product shot that shows the product together with its ingredients in an exploded composition.
 
 Use this product context:
@@ -173,6 +182,7 @@ Do not make it chaotic.`,
           {
             title: "Blueprint / concept style",
             subtitle: "You want a more creative, design-like version for marketing or idea work.",
+            image: blueprintImg,
             text: `Create a blueprint-style concept image of this food product.
 
 Use this product context:

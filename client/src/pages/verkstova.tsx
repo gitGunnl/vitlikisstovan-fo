@@ -23,7 +23,7 @@ import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import { WorkshopLandingPage } from "@/components/workshop/WorkshopLandingPage";
 
-function PromptCard({ title, subtitle, text }: { title: string; subtitle?: string; text: string }) {
+function PromptCard({ title, subtitle, text, image }: { title: string; subtitle?: string; text: string; image?: string }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -73,6 +73,15 @@ function PromptCard({ title, subtitle, text }: { title: string; subtitle?: strin
           )}
         </button>
       </div>
+      {image && (
+        <div className="px-4 pt-4">
+          <img
+            src={image}
+            alt={`Example: ${title}`}
+            className="w-full rounded-lg object-cover aspect-[4/3]"
+          />
+        </div>
+      )}
       <div className="p-4 max-h-60 overflow-y-auto">
         <pre className="text-[13px] leading-relaxed whitespace-pre-wrap break-words font-mono text-foreground/80">
           {text}
@@ -185,6 +194,7 @@ function SinglePageWorkshop({ workshop, onExit }: { workshop: Workshop; onExit: 
                         title={prompt.title}
                         subtitle={prompt.subtitle}
                         text={prompt.text}
+                        image={prompt.image}
                       />
                     ))}
                   </div>
