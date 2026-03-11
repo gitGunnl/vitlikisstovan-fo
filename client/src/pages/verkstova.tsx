@@ -18,171 +18,213 @@ import {
 } from "@/components/ui/alert-dialog";
 import { useToast } from "@/hooks/use-toast";
 import { getWorkshopByPassword, Workshop, WorkshopStep, Lab } from "@/data/workshops/index";
-import { Copy, ArrowRight, ArrowLeft, Lock, CheckCircle, FileDown, Download, MessageSquare, Bot, Clock, Mail, Phone, LogOut } from "lucide-react";
+import { Copy, ArrowRight, ArrowLeft, Lock, CheckCircle, FileDown, Download, MessageSquare, Bot, LogOut } from "lucide-react";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import { WorkshopLandingPage } from "@/components/workshop/WorkshopLandingPage";
 
-const SERIF = "'Instrument Serif', Georgia, serif";
+function PromptCard({ title, subtitle, text }: { title: string; subtitle?: string; text: string }) {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    } catch {
+      const textarea = document.createElement("textarea");
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 1500);
+    }
+  };
+
+  return (
+    <div className="rounded-xl border bg-card overflow-hidden">
+      <div className="flex items-center justify-between px-4 py-3 border-b bg-muted/30">
+        <div className="min-w-0">
+          <p className="font-semibold text-sm truncate">{title}</p>
+          {subtitle && (
+            <p className="text-xs text-muted-foreground mt-0.5">{subtitle}</p>
+          )}
+        </div>
+        <button
+          onClick={handleCopy}
+          className={`flex-shrink-0 ml-3 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 ${
+            copied
+              ? "bg-[hsl(165,35%,42%)] text-white"
+              : "bg-background border hover:bg-muted"
+          }`}
+        >
+          {copied ? (
+            <>
+              <CheckCircle className="w-3.5 h-3.5" />
+              Copied
+            </>
+          ) : (
+            <>
+              <Copy className="w-3.5 h-3.5" />
+              Copy prompt
+            </>
+          )}
+        </button>
+      </div>
+      <div className="p-4 max-h-60 overflow-y-auto">
+        <pre className="text-[13px] leading-relaxed whitespace-pre-wrap break-words font-mono text-foreground/80">
+          {text}
+        </pre>
+      </div>
+    </div>
+  );
+}
 
 function SinglePageWorkshop({ workshop, onExit }: { workshop: Workshop; onExit: () => void }) {
   const content = workshop.pageContent!;
-  const observerRef = useRef<IntersectionObserver | null>(null);
+  const steps = content.steps || [];
+  const [activeNav, setActiveNav] = useState(steps[0]?.id || "");
 
   useEffect(() => {
-    observerRef.current = new IntersectionObserver(
+    const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("fp2-visible");
+          if (entry.isIntersecting && entry.target.id) {
+            setActiveNav(entry.target.id);
           }
         });
       },
-      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.3, rootMargin: "-80px 0px -50% 0px" }
     );
-    const els = document.querySelectorAll(".fp2-reveal");
-    els.forEach((el) => observerRef.current?.observe(el));
-    return () => observerRef.current?.disconnect();
-  }, []);
+    steps.forEach((step) => {
+      const el = document.getElementById(step.id);
+      if (el) observer.observe(el);
+    });
+    return () => observer.disconnect();
+  }, [steps]);
+
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      const offset = 100;
+      const y = el.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }
+  };
 
   return (
     <>
       <Header />
-      <main className="min-h-screen">
-        {/* Hero */}
-        <section className="relative bg-foreground text-background overflow-hidden">
-          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(165,30%,20%)] via-foreground to-foreground opacity-80" />
-          <div className="relative z-10 container mx-auto px-5 sm:px-8 py-20 sm:py-28">
-            <div className="max-w-3xl mx-auto text-center">
-              <p className="fp2-hero-text fp2-hero-text-d1 uppercase tracking-[0.25em] text-white/40 text-xs sm:text-sm font-medium mb-5">
-                {workshop.company}
+      <main className="min-h-screen bg-background">
+        {/* Hero — compact */}
+        <section className="bg-foreground text-white pt-24 pb-14 sm:pt-28 sm:pb-16">
+          <div className="container mx-auto px-5 sm:px-8 max-w-2xl text-center">
+            <h1 className="text-2xl sm:text-3xl font-bold mb-3 tracking-tight">
+              {content.heroTitle}
+            </h1>
+            <p className="text-white/60 text-base sm:text-lg leading-relaxed mb-3">
+              {content.heroSubtitle}
+            </p>
+            {content.heroNote && (
+              <p className="text-white/35 text-sm">
+                {content.heroNote}
               </p>
-              <h1
-                className="fp2-hero-text fp2-hero-text-d2 text-white leading-[1.12] mb-5"
-                style={{ fontFamily: SERIF, fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
-              >
-                {content.heroTitle}
-              </h1>
-              <p className="fp2-hero-text fp2-hero-text-d3 text-white/65 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
-                {content.heroSubtitle}
-              </p>
-            </div>
+            )}
           </div>
         </section>
 
-        {/* Image + Description */}
-        <section className="py-16 sm:py-24 bg-[hsl(40,18%,96%)]">
-          <div className="container mx-auto px-5 sm:px-8">
-            <div className="max-w-4xl mx-auto">
-              <div className="fp2-reveal rounded-2xl overflow-hidden mb-10 shadow-lg">
-                <img
-                  src={content.image}
-                  alt={content.imageAlt}
-                  className="w-full h-64 sm:h-80 lg:h-96 object-cover"
-                />
-              </div>
-
-              <div className="fp2-reveal max-w-3xl mx-auto">
-                <h2
-                  className="text-2xl sm:text-3xl mb-4"
-                  style={{ fontFamily: SERIF }}
-                >
-                  Um verkstovuna
-                </h2>
-                <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8">
-                  {content.description}
-                </p>
-
-                <h3 className="font-semibold text-lg mb-4">Hvat tit læra:</h3>
-                <ul className="space-y-3 mb-0">
-                  {content.bullets.map((bullet, i) => (
-                    <li key={i} className={`fp2-reveal fp2-reveal-delay-${i + 1} flex items-start gap-3`}>
-                      <CheckCircle className="w-5 h-5 text-[hsl(165,35%,42%)] mt-0.5 flex-shrink-0" />
-                      <span className="text-base">{bullet}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Agenda */}
-        <section className="py-16 sm:py-24 bg-background">
-          <div className="container mx-auto px-5 sm:px-8">
-            <div className="max-w-3xl mx-auto">
-              <div className="fp2-reveal text-center mb-12">
-                <h2
-                  className="text-2xl sm:text-3xl mb-3"
-                  style={{ fontFamily: SERIF }}
-                >
-                  Dagsskipan
-                </h2>
-                <p className="text-muted-foreground">
-                  Soleiðis er skipanin fyri verkstovuna.
-                </p>
-              </div>
-
-              <div className="space-y-4">
-                {content.agenda.map((item, i) => (
-                  <div
-                    key={i}
-                    className={`fp2-reveal fp2-reveal-delay-${Math.min(i + 1, 6)} flex gap-5 p-5 rounded-xl bg-card border hover:shadow-md transition-shadow duration-300`}
+        {/* Sticky step nav */}
+        {steps.length > 0 && (
+          <nav className="sticky top-16 z-40 bg-background/95 backdrop-blur-sm border-b">
+            <div className="container mx-auto px-5 sm:px-8">
+              <div className="flex items-center gap-1 py-2.5 overflow-x-auto no-scrollbar max-w-2xl mx-auto">
+                {steps.map((step) => (
+                  <button
+                    key={step.id}
+                    onClick={() => scrollTo(step.id)}
+                    className={`flex-shrink-0 px-3 py-1.5 rounded-lg text-xs font-medium transition-all duration-200 ${
+                      activeNav === step.id
+                        ? "bg-foreground text-background"
+                        : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
+                    }`}
                   >
-                    <div className="flex items-center gap-2 text-sm font-semibold text-[hsl(165,35%,42%)] whitespace-nowrap min-w-[110px]">
-                      <Clock className="w-4 h-4 flex-shrink-0" />
-                      {item.time}
-                    </div>
-                    <div>
-                      <h4 className="font-semibold mb-0.5">{item.title}</h4>
-                      <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
-                    </div>
-                  </div>
+                    {step.label}
+                  </button>
                 ))}
               </div>
             </div>
-          </div>
-        </section>
+          </nav>
+        )}
 
-        {/* CTA + Exit */}
-        <section className="py-16 sm:py-20 bg-[hsl(40,18%,96%)]">
-          <div className="container mx-auto px-5 sm:px-8">
-            <div className="fp2-reveal max-w-2xl mx-auto text-center">
-              <h2
-                className="text-2xl sm:text-3xl mb-4"
-                style={{ fontFamily: SERIF }}
-              >
-                {content.ctaText}
-              </h2>
-              <p className="text-muted-foreground text-base sm:text-lg mb-8">
-                {content.ctaDescription}
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
-                <a
-                  href="mailto:info@vitlikisstovan.fo"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-[hsl(165,35%,42%)] text-white font-semibold rounded-xl hover:bg-[hsl(165,35%,36%)] transition-colors"
-                >
-                  <Mail className="w-4 h-4" />
-                  Send teldupost
-                </a>
-                <a
-                  href="tel:+298919444"
-                  className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-xl font-medium hover:bg-white transition-colors"
-                >
-                  <Phone className="w-4 h-4" />
-                  Ring 919444
-                </a>
-              </div>
+        {/* Step sections */}
+        <div className="container mx-auto px-5 sm:px-8">
+          <div className="max-w-2xl mx-auto py-10 sm:py-14 space-y-16 sm:space-y-20">
+            {steps.map((step, stepIndex) => {
+              const isExploration = step.prompts.length > 1;
+
+              return (
+                <section key={step.id} id={step.id}>
+                  <div className="mb-6">
+                    <p className="text-xs font-semibold uppercase tracking-wider text-[hsl(165,35%,42%)] mb-1.5">
+                      {step.label}
+                    </p>
+                    <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-2">
+                      {step.title}
+                    </h2>
+                    <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+                      {step.description}
+                    </p>
+                  </div>
+
+                  <div className={isExploration ? "space-y-4" : "space-y-4"}>
+                    {step.prompts.map((prompt, i) => (
+                      <PromptCard
+                        key={i}
+                        title={prompt.title}
+                        subtitle={prompt.subtitle}
+                        text={prompt.text}
+                      />
+                    ))}
+                  </div>
+                </section>
+              );
+            })}
+
+            {/* Bottom tip */}
+            {content.bottomTip && (
+              <section className="pt-6 border-t">
+                <div className="mb-6">
+                  <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-1.5">
+                    Tip
+                  </p>
+                  <h2 className="text-xl sm:text-2xl font-bold tracking-tight mb-2">
+                    {content.bottomTip.title}
+                  </h2>
+                  <p className="text-muted-foreground text-sm sm:text-base leading-relaxed">
+                    {content.bottomTip.description}
+                  </p>
+                </div>
+                <PromptCard
+                  title={content.bottomTip.prompt.title}
+                  text={content.bottomTip.prompt.text}
+                />
+              </section>
+            )}
+
+            {/* Exit */}
+            <div className="text-center pt-4">
               <button
                 onClick={onExit}
                 className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
               >
                 <LogOut className="w-4 h-4" />
-                Far úr verkstovuni
+                Exit workshop
               </button>
             </div>
           </div>
-        </section>
+        </div>
       </main>
       <Footer />
     </>

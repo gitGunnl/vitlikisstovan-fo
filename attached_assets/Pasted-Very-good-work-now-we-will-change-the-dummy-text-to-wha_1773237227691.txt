@@ -1,0 +1,344 @@
+Very good work, now we will change the dummy text, to what we actually wanted. We need a simple, clean workshop helper page for a 3-hour hands-on workshop about using AI to create food product shots. 
+
+The purpose of the page is not to be a full course or a polished long-form guide.
+It should be a practical step-by-step helper that attendees can use during the workshop and revisit afterwards.
+
+The page should feel:
+- very easy to follow
+- low friction
+- clear and structured
+- mobile-friendly
+- visually calm
+- practical rather than flashy
+
+## Core idea
+
+The page should guide users through a simple workflow:
+
+1. Build product context
+2. Create a basic product shot
+3. Explore a few creative directions
+
+This page is meant to reduce confusion and keep people moving.
+Do not overcomplicate it.
+
+## Main UX goals
+
+- The structure must be obvious at a glance
+- The user should always know what step they are on
+- Prompt examples should be visually styled like prompts
+- Every prompt block must have a clear "Copy prompt" button
+- The page should be easy to scan on both desktop and mobile
+- It should feel usable even for non-technical users
+
+## What to build
+
+Create a single webpage with the following sections:
+
+### 1. Hero / intro section
+Very short intro.
+Just enough to explain that this page helps attendees create AI product shots.
+
+Example structure:
+- Title
+- One short sentence explaining the workflow
+- Optional tiny note that prompts can be used in ChatGPT and Nano Banana
+
+Do not make this section large.
+
+### 2. Step-by-step workflow section
+This is the main part of the page.
+
+Create 4 main sections:
+
+#### Step 1 — Build product context
+Short explanation text.
+Then show one prompt block:
+- "Interview prompt"
+
+#### Step 2A — Basic shot from context only
+Short explanation text.
+Then show one prompt block:
+- "Basic shot prompt (no product)"
+
+#### Step 2B — Basic shot from real product image
+Short explanation text.
+Then show one prompt block:
+- "Basic shot prompt (with product image)"
+
+#### Step 3 — Explore different directions
+Short explanation text.
+Then show a small collection of idea cards / prompt cards.
+We currently want around 5 creative directions.
+
+For now use these 5:
+- Clean webshop shot
+- Lifestyle scene
+- Ingredients around the product
+- Exploded ingredients / composition shot
+- Blueprint / concept style
+
+Each of these should have:
+- a short title
+- a very short one-line explanation
+- a prompt block
+- copy button
+
+### 3. Optional helper tip section
+At the bottom, add a small extra tip section:
+"Let ChatGPT improve your prompt"
+
+This should contain one extra prompt block with copy button.
+
+## Prompt block design requirements
+
+This is important.
+
+Each prompt example should look visually like a prompt:
+- distinct card/container
+- monospace font for prompt text
+- nice spacing/padding
+- subtle background contrast
+- easy to read
+- clear separation from normal page text
+
+Each prompt block must have:
+- title
+- prompt text
+- "Copy prompt" button
+- optional small copied-state feedback like "Copied"
+
+The copy interaction should feel smooth and simple.
+
+## Design direction
+
+Keep the design clean and modern.
+Do not make it look like a blog article.
+It should feel like a workshop tool / helper page.
+
+Suggested visual approach:
+- clean single-column reading flow
+- step sections clearly separated
+- soft cards
+- clear headings
+- restrained colors
+- strong readability
+- good whitespace
+- mobile-first thinking
+
+A small sticky mini-navigation or step overview at the top could be useful, but only if it stays simple.
+
+## Important implementation note
+
+Do not hardcode everything into one giant component.
+
+The prompts and section content should be easy to edit later.
+Please structure the content as data where possible, for example:
+- array of step objects
+- array of exploration prompt cards
+
+That way we can easily change copy later without rewriting the layout.
+
+## Content note
+
+Do not worry about perfect final wording yet.
+Use the current working copy and prompts as placeholders.
+What matters most right now is:
+- structure
+- layout
+- usability
+- copyable prompt blocks
+- clear workflow
+
+## Technical expectations
+
+- Use the existing project stack and styling patterns
+- Keep implementation simple and maintainable
+- No unnecessary complexity
+- No backend needed unless the existing project structure strongly suggests otherwise
+- This can be a static page/component
+- Make sure it works well on mobile
+
+## Deliverable
+
+Build the first usable version of the page with:
+- all sections in place
+- prompt cards with copy buttons
+- clear structure
+- decent styling
+- responsive layout
+
+The page does not need final polished copy yet.
+The main goal is to get the structure and UX right first.
+
+## Current content to include
+
+Use these working sections and prompts for now:
+
+STEP 1
+Title: Build product context
+Description: Start here. Paste this into ChatGPT and let it interview you about your product. The goal is to create a short product context block that you can reuse in the next steps.
+
+Prompt:
+You are helping me create AI product shots for a food product.
+
+Your job is to interview me, one question at a time, so you can build a short and useful product context block for image generation.
+
+Ask short, practical questions only.
+
+You should learn:
+- what the product is
+- who it is for
+- what makes it special
+- the mood or feeling it should give
+- whether it should feel premium, homemade, healthy, playful, rustic, modern, indulgent, or something else
+- key ingredients or flavor cues
+- packaging type, if it has packaging
+- whether I already have a real product image or not
+
+Do not turn this into a brand workshop.
+Keep it practical and focused on making good product images.
+
+When you have enough information, stop asking questions and output:
+
+PRODUCT CONTEXT:
+[a short clear block I can copy into the next prompts]
+
+STEP 2A
+Title: Create a basic product image from context
+Description: Use this if you do not already have a real product image. Paste in your product context and let the AI create a simple, fitting first shot.
+
+Prompt:
+Create a photorealistic product shot for this food product.
+
+Use this product context:
+[PASTE PRODUCT CONTEXT]
+
+Create a simple, fitting first product image.
+Keep it commercially believable and easy to understand.
+
+The product should be the clear hero.
+Use realistic packaging if packaging makes sense.
+Keep the scene clean and not too busy.
+Use soft natural or studio lighting.
+Make it look like a real food product photo.
+
+Do not make it too creative yet.
+This is a strong basic shot that fits the product.
+
+STEP 2B
+Title: Create a basic product shot from your real product
+Description: Use this if you already have a product image. Upload your product image, then paste this prompt with your product context.
+
+Prompt:
+Use the uploaded product image as the main reference.
+
+Use this product context:
+[PASTE PRODUCT CONTEXT]
+
+Create a strong basic product shot that fits the product.
+
+Keep the product shape, packaging, colors, and visible label details as accurate as possible.
+Make the product the clear hero.
+Use a clean and believable setting.
+Use soft natural or studio lighting.
+Keep the image commercially realistic and not too busy.
+
+Do not make it too creative yet.
+This should feel like a simple, fitting, professional product photo.
+
+STEP 3
+Add 5 exploration cards with these titles and prompt texts:
+
+1. Clean webshop shot
+Use when: You want a simple sales image for a webshop or catalog.
+
+Prompt:
+Create a clean ecommerce product shot of this product.
+
+Use this product context:
+[PASTE PRODUCT CONTEXT]
+
+[If needed: Use the uploaded product image as the reference.]
+
+Show the product clearly on a clean simple background.
+Use soft studio lighting and a subtle natural shadow.
+Keep the composition simple and professional.
+Make the product the only hero.
+
+2. Lifestyle scene
+Use when: You want the product to feel more alive and real.
+
+Prompt:
+Create a lifestyle product shot for this food product.
+
+Use this product context:
+[PASTE PRODUCT CONTEXT]
+
+[If needed: Use the uploaded product image as the reference.]
+
+Place the product in a fitting real-life setting.
+Use a few simple props that match the product.
+Keep the product as the main focus.
+Use natural light and make it feel warm, believable, and commercial.
+
+3. Ingredients around the product
+Use when: You want to show what is inside or what flavors it has.
+
+Prompt:
+Create a product shot where the product is shown together with its key ingredients.
+
+Use this product context:
+[PASTE PRODUCT CONTEXT]
+
+[If needed: Use the uploaded product image as the reference.]
+
+Place the product in the center and arrange a few key ingredients around it.
+Keep the layout clean and attractive.
+Make the ingredients clearly support the product story.
+Use realistic food styling and soft light.
+
+4. Exploded ingredients / composition shot
+Use when: You want a more eye-catching visual that explains the product.
+
+Prompt:
+Create a stylized product shot that shows the product together with its ingredients in an exploded composition.
+
+Use this product context:
+[PASTE PRODUCT CONTEXT]
+
+[If needed: Use the uploaded product image as the reference.]
+
+Show the product as the hero, with its main ingredients floating or arranged around it in a clean, elegant way.
+Keep it realistic, appetizing, and visually clear.
+Do not make it chaotic.
+
+5. Blueprint / concept style
+Use when: You want a more creative, design-like version for marketing or idea work.
+
+Prompt:
+Create a blueprint-style concept image of this food product.
+
+Use this product context:
+[PASTE PRODUCT CONTEXT]
+
+Show the product clearly in a technical or concept-sketch style.
+Keep the product easy to understand.
+Use a clean layout and make it feel like a design concept presentation.
+Do not overcomplicate it.
+
+BOTTOM TIP SECTION
+Title: Let ChatGPT improve your prompt
+
+Prompt:
+Take the product context below and the shot type I want, and write a short, strong image prompt for ChatGPT or Nano Banana.
+
+Product context:
+[PASTE PRODUCT CONTEXT]
+
+Shot type:
+[PASTE SHOT TYPE]
+
+Keep the prompt simple, clear, and commercially useful.
+
+Please build the page now with strong structure and UX first. We can refine copy afterwards.

@@ -4,12 +4,12 @@ export interface WorkshopStep {
   prompt?: string;
   requiresConfirmation?: boolean;
   confirmationText?: string;
-  window?: string;       // Indicates if this is a new chat or adding to current chat
-  model?: string;        // Indicates which AI model to use for this step
+  window?: string;
+  model?: string;
   files?: {
-    name: string;        // Display name for the file
-    filename: string;    // Actual filename in attached_assets
-    description?: string; // Optional description of the file
+    name: string;
+    filename: string;
+    description?: string;
   }[];
 }
 
@@ -20,9 +20,24 @@ export interface Lab {
   steps: WorkshopStep[];
 }
 
+export interface PromptBlock {
+  title: string;
+  subtitle?: string;
+  text: string;
+}
+
+export interface PageStep {
+  id: string;
+  label: string;
+  title: string;
+  description: string;
+  prompts: PromptBlock[];
+}
+
 export interface SinglePageContent {
   heroTitle: string;
   heroSubtitle: string;
+  heroNote?: string;
   image: string;
   imageAlt: string;
   description: string;
@@ -30,6 +45,12 @@ export interface SinglePageContent {
   agenda: { time: string; title: string; description: string }[];
   ctaText: string;
   ctaDescription: string;
+  steps?: PageStep[];
+  bottomTip?: {
+    title: string;
+    description: string;
+    prompt: PromptBlock;
+  };
 }
 
 export interface Workshop {
