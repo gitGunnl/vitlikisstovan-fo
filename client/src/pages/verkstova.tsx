@@ -23,7 +23,7 @@ import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import { WorkshopLandingPage } from "@/components/workshop/WorkshopLandingPage";
 
-function PromptCard({ title, subtitle, text, image }: { title: string; subtitle?: string; text: string; image?: string }) {
+function PromptCard({ title, subtitle, text, image, video }: { title: string; subtitle?: string; text: string; image?: string; video?: string }) {
   const [copied, setCopied] = useState(false);
 
   const handleCopy = async () => {
@@ -56,6 +56,18 @@ function PromptCard({ title, subtitle, text, image }: { title: string; subtitle?
           <img
             src={image}
             alt={`Example: ${title}`}
+            className="w-full rounded-lg"
+          />
+        </div>
+      )}
+      {video && (
+        <div className="px-4 pt-4">
+          <video
+            src={video}
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full rounded-lg"
           />
         </div>
@@ -195,6 +207,7 @@ function SinglePageWorkshop({ workshop, onExit }: { workshop: Workshop; onExit: 
                         subtitle={prompt.subtitle}
                         text={prompt.text}
                         image={prompt.image}
+                        video={prompt.video}
                       />
                     ))}
                   </div>

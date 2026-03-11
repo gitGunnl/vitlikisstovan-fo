@@ -25,6 +25,7 @@ export interface PromptBlock {
   subtitle?: string;
   text: string;
   image?: string;
+  video?: string;
 }
 
 export interface PageStep {
