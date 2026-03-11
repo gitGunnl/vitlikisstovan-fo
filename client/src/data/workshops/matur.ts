@@ -615,7 +615,7 @@ OUTPUT:
         id: "step-4",
         label: "Næsta stig",
         title: "Frá mynd til video",
-        description: "Nú hevur tú góðar vørumyndir. Men visti tú, at tú eisini kanst skapa stuttar vøruvideoar út frá teimum? Legg einfaldliga tína bestu mynd inn í ChatGPT, Runway, Kling ella eitt annað AI-video-amboð — og bið um eina stutta, reina produktvideo. Úrslitini kunnu vera uppáhaldandi.",
+        description: "Nú hevur tú góðar vørumyndir. Men visti tú, at tú eisini kanst skapa stutt vøruvideo út frá teimum? Tað krevur tó at tú hevur atgongd til eitt gott vitlíki video amboð. Um tú hevur áhuga í hesum, so kann tú keypa tær atgong til RunwayML ella okkurt annað í ein mána, og so nýta hettar til at gera títt video. Brúka ChatGPT til at hjálpa tær at skriva byrt.",
         video: productVideo,
         prompts: [],
       },
