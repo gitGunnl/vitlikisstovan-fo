@@ -77,12 +77,12 @@ function PromptCard({ title, subtitle, text, image }: { title: string; subtitle?
           {copied ? (
             <>
               <CheckCircle className="w-3.5 h-3.5" />
-              Copied
+              Avrita
             </>
           ) : (
             <>
               <Copy className="w-3.5 h-3.5" />
-              Copy prompt
+              Avrita byrt
             </>
           )}
         </button>
