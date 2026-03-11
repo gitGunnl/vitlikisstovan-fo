@@ -295,6 +295,33 @@ A clean 3×3 grid with no borders, no text, no captions and no watermarks.`,
           },
         ],
       },
+      {
+        id: "step-4",
+        label: "Síðsta stig",
+        title: "Skalt tú taka tað næsta stigi: Vitlíki vøru video",
+        description: "Tá tú hevur eina góða mynd, kanst tú royna at gera eina stutta vøruvideo burtur úr henni. Brúka hetta birtið saman við tíni bestu mynd fyri at fáa eina reina og professionella vøruvideo.",
+        prompts: [
+          {
+            title: "Birt til stutta vøruvideo",
+            text: `Use the uploaded image as the main reference and starting frame.
+
+Create a short premium product video, around 5 to 8 seconds long.
+
+Keep the product design, packaging, colors, and visible label details as accurate as possible.
+Make the product the clear hero at all times.
+Use a clean, commercially believable setting.
+Add subtle cinematic camera movement, such as a slow push-in or a gentle orbit.
+Use soft, premium lighting and natural reflections.
+Keep the motion elegant and minimal.
+
+Do not change the product.
+Do not distort the packaging.
+Do not add chaotic motion or too many elements.
+
+Make it feel like a polished product ad for a premium food brand.`,
+          },
+        ],
+      },
     ],
 
   },
