@@ -18,8 +18,8 @@ export const matur: Workshop = {
   singlePage: true,
   pageContent: {
     heroTitle: "Vitlíkisvørumyndir",
-    heroSubtitle: "Ein hent hjálp til at gera myndir av matvørum við vitlíki.",
-    heroNote: "Øll birtini virka við ChatGPT og Nano Banana.",
+    heroSubtitle: "Hvussu tú kann gera myndir av matvørum við vitlíki.",
+    heroNote: "Til óroynd.",
     image: "/images/verkstovur.jpeg",
     imageAlt: "Verkstova",
     description: "",
@@ -124,7 +124,7 @@ Overall look:
         id: "step-2b",
         label: "Stig 2B",
         title: "Ger eina grundleggjandi vørumynd út frá veruligu vøruni",
-        description: "Brúk hetta, um tú longu hevur eina vørumynd. Legg myndina av vøruni inn, og lím síðani hetta birtið inn saman við vørukontekstinum.",
+        description: "Brúka hetta, um tú longu hevur eina vørumynd. Legg myndina av vøruni inn, og lím síðani hetta birtið inn saman við vørukontekstinum.",
         prompts: [
           {
             title: "Birt til grundleggjandi mynd (við vørumynd)",
