@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,10 +18,176 @@ import {
 } from "@/components/ui/alert-dialog";
 import { useToast } from "@/hooks/use-toast";
 import { getWorkshopByPassword, Workshop, WorkshopStep, Lab } from "@/data/workshops/index";
-import { Copy, ArrowRight, ArrowLeft, Lock, CheckCircle, FileDown, Download, MessageSquare, Bot } from "lucide-react";
+import { Copy, ArrowRight, ArrowLeft, Lock, CheckCircle, FileDown, Download, MessageSquare, Bot, Clock, Mail, Phone, LogOut } from "lucide-react";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import { WorkshopLandingPage } from "@/components/workshop/WorkshopLandingPage";
+
+const SERIF = "'Instrument Serif', Georgia, serif";
+
+function SinglePageWorkshop({ workshop, onExit }: { workshop: Workshop; onExit: () => void }) {
+  const content = workshop.pageContent!;
+  const observerRef = useRef<IntersectionObserver | null>(null);
+
+  useEffect(() => {
+    observerRef.current = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("fp2-visible");
+          }
+        });
+      },
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
+    );
+    const els = document.querySelectorAll(".fp2-reveal");
+    els.forEach((el) => observerRef.current?.observe(el));
+    return () => observerRef.current?.disconnect();
+  }, []);
+
+  return (
+    <>
+      <Header />
+      <main className="min-h-screen">
+        {/* Hero */}
+        <section className="relative bg-foreground text-background overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-[hsl(165,30%,20%)] via-foreground to-foreground opacity-80" />
+          <div className="relative z-10 container mx-auto px-5 sm:px-8 py-20 sm:py-28">
+            <div className="max-w-3xl mx-auto text-center">
+              <p className="fp2-hero-text fp2-hero-text-d1 uppercase tracking-[0.25em] text-white/40 text-xs sm:text-sm font-medium mb-5">
+                {workshop.company}
+              </p>
+              <h1
+                className="fp2-hero-text fp2-hero-text-d2 text-white leading-[1.12] mb-5"
+                style={{ fontFamily: SERIF, fontSize: "clamp(2rem, 5vw, 3.5rem)" }}
+              >
+                {content.heroTitle}
+              </h1>
+              <p className="fp2-hero-text fp2-hero-text-d3 text-white/65 text-base sm:text-lg max-w-2xl mx-auto leading-relaxed">
+                {content.heroSubtitle}
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Image + Description */}
+        <section className="py-16 sm:py-24 bg-[hsl(40,18%,96%)]">
+          <div className="container mx-auto px-5 sm:px-8">
+            <div className="max-w-4xl mx-auto">
+              <div className="fp2-reveal rounded-2xl overflow-hidden mb-10 shadow-lg">
+                <img
+                  src={content.image}
+                  alt={content.imageAlt}
+                  className="w-full h-64 sm:h-80 lg:h-96 object-cover"
+                />
+              </div>
+
+              <div className="fp2-reveal max-w-3xl mx-auto">
+                <h2
+                  className="text-2xl sm:text-3xl mb-4"
+                  style={{ fontFamily: SERIF }}
+                >
+                  Um verkstovuna
+                </h2>
+                <p className="text-muted-foreground text-base sm:text-lg leading-relaxed mb-8">
+                  {content.description}
+                </p>
+
+                <h3 className="font-semibold text-lg mb-4">Hvat tit læra:</h3>
+                <ul className="space-y-3 mb-0">
+                  {content.bullets.map((bullet, i) => (
+                    <li key={i} className={`fp2-reveal fp2-reveal-delay-${i + 1} flex items-start gap-3`}>
+                      <CheckCircle className="w-5 h-5 text-[hsl(165,35%,42%)] mt-0.5 flex-shrink-0" />
+                      <span className="text-base">{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Agenda */}
+        <section className="py-16 sm:py-24 bg-background">
+          <div className="container mx-auto px-5 sm:px-8">
+            <div className="max-w-3xl mx-auto">
+              <div className="fp2-reveal text-center mb-12">
+                <h2
+                  className="text-2xl sm:text-3xl mb-3"
+                  style={{ fontFamily: SERIF }}
+                >
+                  Dagsskipan
+                </h2>
+                <p className="text-muted-foreground">
+                  Soleiðis er skipanin fyri verkstovuna.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                {content.agenda.map((item, i) => (
+                  <div
+                    key={i}
+                    className={`fp2-reveal fp2-reveal-delay-${Math.min(i + 1, 6)} flex gap-5 p-5 rounded-xl bg-card border hover:shadow-md transition-shadow duration-300`}
+                  >
+                    <div className="flex items-center gap-2 text-sm font-semibold text-[hsl(165,35%,42%)] whitespace-nowrap min-w-[110px]">
+                      <Clock className="w-4 h-4 flex-shrink-0" />
+                      {item.time}
+                    </div>
+                    <div>
+                      <h4 className="font-semibold mb-0.5">{item.title}</h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA + Exit */}
+        <section className="py-16 sm:py-20 bg-[hsl(40,18%,96%)]">
+          <div className="container mx-auto px-5 sm:px-8">
+            <div className="fp2-reveal max-w-2xl mx-auto text-center">
+              <h2
+                className="text-2xl sm:text-3xl mb-4"
+                style={{ fontFamily: SERIF }}
+              >
+                {content.ctaText}
+              </h2>
+              <p className="text-muted-foreground text-base sm:text-lg mb-8">
+                {content.ctaDescription}
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
+                <a
+                  href="mailto:info@vitlikisstovan.fo"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[hsl(165,35%,42%)] text-white font-semibold rounded-xl hover:bg-[hsl(165,35%,36%)] transition-colors"
+                >
+                  <Mail className="w-4 h-4" />
+                  Send teldupost
+                </a>
+                <a
+                  href="tel:+298919444"
+                  className="inline-flex items-center gap-2 px-6 py-3 border border-border rounded-xl font-medium hover:bg-white transition-colors"
+                >
+                  <Phone className="w-4 h-4" />
+                  Ring 919444
+                </a>
+              </div>
+              <button
+                onClick={onExit}
+                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors"
+              >
+                <LogOut className="w-4 h-4" />
+                Far úr verkstovuni
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+      <Footer />
+    </>
+  );
+}
 
 export default function Verkstova() {
   const [password, setPassword] = useState("");
@@ -126,9 +292,11 @@ export default function Verkstova() {
 
   const progressPercentage = selectedLab ? ((currentStep + 1) / selectedLab.steps.length) * 100 : 0;
 
-  // Password Entry Screen
+  if (workshop?.singlePage && workshop.pageContent) {
+    return <SinglePageWorkshop workshop={workshop} onExit={handleExit} />;
+  }
+
   if (!workshop) {
-    // Password Entry Screen
     return (
       <>
         <Header />

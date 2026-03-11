@@ -20,8 +20,22 @@ export interface Lab {
   steps: WorkshopStep[];
 }
 
+export interface SinglePageContent {
+  heroTitle: string;
+  heroSubtitle: string;
+  image: string;
+  imageAlt: string;
+  description: string;
+  bullets: string[];
+  agenda: { time: string; title: string; description: string }[];
+  ctaText: string;
+  ctaDescription: string;
+}
+
 export interface Workshop {
   name: string;
   company: string;
   labs: Lab[];
+  singlePage?: boolean;
+  pageContent?: SinglePageContent;
 }

@@ -1,18 +1,20 @@
-import { Workshop, Lab, WorkshopStep } from "./types";
+import { Workshop, Lab, WorkshopStep, SinglePageContent } from "./types";
 import { bakkafrost } from "./bakkafrost";
 import { hugsnotid } from "./hugsnotid";
 import { betri } from "./betri";
 import { visit } from "./visit";
 import { kontrast } from "./kontrast";
+import { matur } from "./matur";
 
-export type { Workshop, Lab, WorkshopStep };
+export type { Workshop, Lab, WorkshopStep, SinglePageContent };
 
 export const workshops: Record<string, Workshop> = {
   bakkafrost,
   "hugskotið": hugsnotid,
   betri,
   visit,
-  kontrast
+  kontrast,
+  matur
 };
 
 export function normalizePassword(input: string): string {
