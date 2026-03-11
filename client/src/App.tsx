@@ -24,6 +24,12 @@ import AnnadFraVitlikisstovuni from "@/pages/annad-fra-vitlikisstovuni";
 import Gemini3FoTest from "@/pages/gemini3-fo-test";
 import FrontpageV2 from "@/pages/frontpage-v2";
 import FrontpageV3 from "@/pages/frontpage-v3";
+import Byrjunarskeidi from "@/pages/okkara-taenastur/byrjunarskeidi";
+import FimmtanHaettir from "@/pages/okkara-taenastur/15-haettir";
+import Fyrilestur from "@/pages/okkara-taenastur/fyrilestur";
+import Vitlikisupplaering from "@/pages/okkara-taenastur/vitlikisupplaering";
+import Serloysnir from "@/pages/okkara-taenastur/serloysnir";
+import SkapandiVitliki from "@/pages/okkara-taenastur/skapandi-vitliki";
 
 function Router() {
   return (
@@ -32,6 +38,12 @@ function Router() {
       <Route path="/course-details" component={CourseDetails} />
       <Route path="/um-okkum" component={UmOkkum} />
       <Route path="/okkara-taenastur" component={OkkaraTaenastur} />
+      <Route path="/okkara-taenastur/byrjunarskeidi" component={Byrjunarskeidi} />
+      <Route path="/okkara-taenastur/15-haettir" component={FimmtanHaettir} />
+      <Route path="/okkara-taenastur/fyrilestur" component={Fyrilestur} />
+      <Route path="/okkara-taenastur/vitlikisupplaering" component={Vitlikisupplaering} />
+      <Route path="/okkara-taenastur/serloysnir" component={Serloysnir} />
+      <Route path="/okkara-taenastur/skapandi-vitliki" component={SkapandiVitliki} />
       <Route path="/contact" component={Contact} />
       <Route path="/tilarbeidis" component={Tilarbeidis} />
       <Route path="/blog" component={Blog} />

@@ -1,4 +1,30 @@
 
+declare global {
+  interface Window {
+    fbq?: (...args: unknown[]) => void;
+  }
+}
+
+export interface ViewContentParams {
+  content_name: string;
+  content_ids: string[];
+  content_type?: string;
+  value?: number;
+  currency?: string;
+}
+
+export function trackViewContent(params: ViewContentParams) {
+  if (typeof window !== 'undefined' && window.fbq) {
+    window.fbq('track', 'ViewContent', {
+      content_name: params.content_name,
+      content_ids: params.content_ids,
+      content_type: params.content_type || 'service',
+      ...(params.value !== undefined && { value: params.value }),
+      ...(params.currency && { currency: params.currency }),
+    });
+  }
+}
+
 export interface MetaConfig {
   title: string;
   description: string;

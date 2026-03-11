@@ -94,6 +94,13 @@ export default function Taenastur() {
                     effektivt í gerandisarbeiði. Hóskar væl til bæði nýbyrjarar og yrkisfólk. Flestu av okkara kundum byrja sína vitlíkisferð
                     her.
                   </p>
+                  <a
+                    href="/okkara-taenastur/byrjunarskeidi"
+                    className="inline-flex items-center gap-2 text-primary font-medium hover:underline transition"
+                  >
+                    Les meira
+                    <ArrowRight className="h-4 w-4" />
+                  </a>
                 </div>
               </div>
             </div>
@@ -143,6 +150,13 @@ export default function Taenastur() {
                     <p className="italic text-muted-foreground mt-4">
                       Hendan tænastan hjálpir tær at finna út av akkurát hvørja uppgávu TÚ kanst nýta vitlíki til.
                     </p>
+                    <a
+                      href="/okkara-taenastur/15-haettir"
+                      className="inline-flex items-center gap-2 text-primary font-medium hover:underline transition mt-4"
+                    >
+                      Les meira
+                      <ArrowRight className="h-4 w-4" />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -197,6 +211,13 @@ export default function Taenastur() {
                       Hóskar væl til fyritøkur, ið vilja vera á odda við vitlíki –
                       og ynskja starvsfólk uttan óneyðugan ótta ella óvissu.
                     </p>
+                    <a
+                      href="/okkara-taenastur/fyrilestur"
+                      className="inline-flex items-center gap-2 text-primary font-medium hover:underline transition mt-4"
+                    >
+                      Les meira
+                      <ArrowRight className="h-4 w-4" />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -229,6 +250,13 @@ export default function Taenastur() {
                       toymi at innleiða vitlíkisamboð inn í teirra dagliga
                       arbeiði.
                     </p>
+                    <a
+                      href="/okkara-taenastur/vitlikisupplaering"
+                      className="inline-flex items-center gap-2 text-primary font-medium hover:underline transition mt-4"
+                    >
+                      Les meira
+                      <ArrowRight className="h-4 w-4" />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -262,6 +290,13 @@ export default function Taenastur() {
                       hvussu tín vinna kann nýta vitlíki á ein nýggjan hátt?
                       Eg kann hjálpa við at gera tínar visjónir til veruleika.
                     </p>
+                    <a
+                      href="/okkara-taenastur/serloysnir"
+                      className="inline-flex items-center gap-2 text-primary font-medium hover:underline transition mt-4"
+                    >
+                      Les meira
+                      <ArrowRight className="h-4 w-4" />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -380,6 +415,16 @@ export default function Taenastur() {
                     </div>
                   </div>
                 </div>
+              </div>
+
+              <div className="mt-6 text-center">
+                <a
+                  href="/okkara-taenastur/skapandi-vitliki"
+                  className="inline-flex items-center gap-2 text-purple-700 font-medium hover:underline transition"
+                >
+                  Les meira um skapandi vitlíki
+                  <ArrowRight className="h-4 w-4" />
+                </a>
               </div>
             </div>
           </div>
