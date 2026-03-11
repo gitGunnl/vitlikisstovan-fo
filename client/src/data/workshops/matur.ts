@@ -226,7 +226,9 @@ Rendering quality:
 Overall feel:
 - Professional ecommerce image
 - Minimal, premium, commercially useful
-- Clean enough to fit a serious webshop or product catalog`,
+- Clean enough to fit a serious webshop or product catalog
+
+Now create the image.`,
           },
           {
             title: "Lívsstílsmynd",
@@ -271,7 +273,9 @@ Styling and realism:
 Overall feel:
 - Warm, believable, commercial
 - Premium lifestyle advertising image
-- The product should still dominate the frame`,
+- The product should still dominate the frame
+
+Now create the image.`,
           },
           {
             title: "Rávørur uttan um vøruna",
@@ -318,7 +322,9 @@ Materials and realism:
 
 Overall feel:
 - Clean, attractive, premium
-- Ingredient storytelling without losing product clarity`,
+- Ingredient storytelling without losing product clarity
+
+Now create the image.`,
           },
           {
             title: "Sundursett tilfar / samansetingarmynd",
@@ -367,7 +373,9 @@ Reference fidelity:
 Overall feel:
 - Clear, stylish, premium, editorial-commercial
 - Stronger and more eye-catching than a standard product shot
-- Still believable and well controlled`,
+- Still believable and well controlled
+
+Now create the image.`,
           },
           {
             title: "Bólkamynd / vørupakki",
@@ -410,7 +418,9 @@ Reference fidelity:
 Overall feel:
 - Simple, premium, commercially realistic
 - Professional brand lineup image
-- Cohesive, tidy, confident, and useful for presentation or sales`,
+- Cohesive, tidy, confident, and useful for presentation or sales
+
+Now create the image.`,
           },
           {
             title: "Í brúki",
@@ -454,7 +464,9 @@ Styling and realism:
 Overall feel:
 - Warm, useful, real, appetizing
 - Premium brand image showing actual use
-- Polished but not overstyled`,
+- Polished but not overstyled
+
+Now create the image.`,
           },
           {
             title: "Fleiri vinklar",
@@ -497,7 +509,9 @@ Reference fidelity:
 Overall feel:
 - Professional product overview
 - Clean, tidy, premium, and easy to understand
-- Useful for brand presentation, internal review, or ecommerce planning`,
+- Useful for brand presentation, internal review, or ecommerce planning
+
+Now create the image.`,
           },
           {
             title: "Skapandi bakgrund",
@@ -542,7 +556,9 @@ Overall feel:
 - Premium, modern, memorable
 - Brand-campaign energy
 - Visually striking but still tasteful and commercially usable
-- The background must elevate the product, not overpower it`,
+- The background must elevate the product, not overpower it
+
+Now create the image.`,
           },
           {
             title: "Storyboard / 3×3 grid",
@@ -611,7 +627,9 @@ OUTPUT:
 - No captions
 - No watermarks
 - No inconsistent product redesign between frames
-- The final result should feel like a luxury branding portfolio board shot by a top product photographer`,
+- The final result should feel like a luxury branding portfolio board shot by a top product photographer
+
+Now create the image.`,
           },
         ],
       },
