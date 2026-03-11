@@ -8,7 +8,7 @@ import bundleImg from "@assets/generated_images/example_bundle.png";
 import inUseImg from "@assets/generated_images/example_in_use.png";
 import anglesImg from "@assets/generated_images/example_angles.png";
 import creativeBgImg from "@assets/generated_images/example_creative_bg.png";
-import storyboardImg from "@assets/generated_images/example_storyboard.png";
+import storyboardImg from "@assets/generated_images/example_storyboard.jpg";
 
 export const matur: Workshop = {
   name: "Vitlíkisvørumyndir",

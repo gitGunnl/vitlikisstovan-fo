@@ -56,7 +56,7 @@ function PromptCard({ title, subtitle, text, image }: { title: string; subtitle?
           <img
             src={image}
             alt={`Example: ${title}`}
-            className="w-full rounded-lg object-cover aspect-[4/3]"
+            className="w-full rounded-lg"
           />
         </div>
       )}
