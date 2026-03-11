@@ -554,7 +554,7 @@ Now create the image.`,
           },
           {
             title: "Storyboard / 3×3 grid",
-            subtitle: "Tú vilt hava eitt heildaryvurlit av vøruni í níggju myndum — sum eitt sniðgivið portfolio-upplag.",
+            subtitle: "Eitt heildaryvurlit av vøruni í níggju myndum.",
             image: storyboardImg,
             text: `A clean 3×3 storyboard grid with nine equal sized panels on 4:5 ratio.
 
