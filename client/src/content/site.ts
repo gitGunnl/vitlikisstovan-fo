@@ -352,5 +352,73 @@ export const siteConfig = {
   freeDownloads: {
     teachersPdfUrl: "#",
     politiciansPdfUrl: "#"
+  },
+
+  seoPages: {
+    "/": {
+      title: "Vitlíkisstovan - Vitlíki til arbeiði í Føroyum",
+      description: "Vitlíki upplæring til øll á skrivstovuni og uttanfyri. Vitlíki ráðgeving og menning av vitlíki amboðum. Fyrsta vitlíkisfyritøkan í Føroyum."
+    },
+    "/um-okkum": {
+      title: "Um okkum - Vitlíkisstovan",
+      description: "Lær meira um Vitlíkisstovuna og okkara uppgávu at vegleiða føroyskar fyritøkur í vitlíki."
+    },
+    "/okkara-taenastur": {
+      title: "Tænastur - Vitlíkisstovan",
+      description: "Skeið, fyrilestrar, ráðgeving og serloysnir í vitlíki – alt bygt til føroyskar fyritøkur og stovnar."
+    },
+    "/contact": {
+      title: "Samband - Vitlíkisstovan",
+      description: "Set teg í samband við Vitlíkisstovuna. Teldupostur: info@vitlikisstovan.fo. Telefon: +298 919444."
+    },
+    "/blog": {
+      title: "Bloggur - Vitlíkisstovan",
+      description: "Les greinir um vitlíki (AI) í Føroyum. Vitlíkistíðindi, ráð og gransking."
+    },
+    "/tilarbeidis": {
+      title: "Vitlíki til arbeiðis - Vitlíkisstovan",
+      description: "Verkætlanin \"Vitlíki til arbeiðis\" - vegleiðingar og tilfar til at hjálpa bólkum at koma gott ígongd við vitlíki."
+    },
+    "/verkstova": {
+      title: "Verkstova - Vitlíkisstovan",
+      description: "Handalig vitlíkisverkstova. Lær at brúka ChatGPT og onnur vitlíki-amboð í veruligum arbeiðsuppgávum.",
+      noindex: true
+    },
+    "/podcast": {
+      title: "Podkast - Vitlíkisstovan",
+      description: "Hoyr podkast um vitlíki í Føroyum."
+    },
+    "/ai-guide": {
+      title: "Vitlíki vegleiðing - Vitlíkisstovan",
+      description: "Vegleiðing í vitlíki."
+    },
+    "/user-guides": {
+      title: "Brúkaravegleiðingar - Vitlíkisstovan",
+      description: "Vegleiðingar og tilfar."
+    },
+    "/user-guides/getting-started": {
+      title: "At koma ígongd við vitlíki - Vitlíkisstovan",
+      description: "Vegleiðing til at koma ígongd."
+    },
+    "/user-guides/best-practices": {
+      title: "Bestu mannagongdir við vitlíki - Vitlíkisstovan",
+      description: "Bestu mannagongdir fyri at brúka vitlíki."
+    },
+    "/user-guides/ai-for-kindergarten-guide": {
+      title: "Vitlíki fyri barnagrunnar - Vitlíkisstovan",
+      description: "Vegleiðing til barnagrunnsfólk."
+    },
+    "/user-guides/ai-for-caretakers-guide": {
+      title: "Vitlíki fyri umsorgarfólk - Vitlíkisstovan",
+      description: "Vegleiðing til umsorgarfólk."
+    },
+    "/annad-fra-vitlikisstovuni": {
+      title: "Annað frá Vitlíkisstovuni",
+      description: "Ymiskt tilfar og tíðindi."
+    },
+    "/course-details": {
+      title: "Skeiðsupplýsingar - Vitlíkisstovan",
+      description: "Nærri upplýsingar um vitlíkisskeið."
+    }
   }
 };

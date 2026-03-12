@@ -159,66 +159,36 @@ const blogPosts = loadBlogPosts();
 const NAV_HTML = `<header><nav>${buildNavLinks()}</nav></header>`;
 const FOOTER_HTML = `<footer><p>&copy; ${siteConfig.siteName}. Øll rættindi umsitin.</p>${siteConfig.social.facebook ? `<a href="${siteConfig.social.facebook}">Facebook</a>` : ''}${siteConfig.social.linkedin ? `<a href="${siteConfig.social.linkedin}">LinkedIn</a>` : ''}</footer>`;
 
-const staticPages = [
-  {
-    path: '/',
-    title: `${siteConfig.siteName} - Vitlíki til arbeiði í Føroyum`,
-    description: `Vitlíki upplæring til øll á skrivstovuni og uttanfyri. Vitlíki ráðgeving og menning av vitlíki amboðum. Fyrsta vitlíkisfyritøkan í Føroyum.`,
-    content: buildHomepageFallback(),
-  },
-  {
-    path: '/um-okkum',
-    title: `Um okkum - ${siteConfig.siteName}`,
-    description: `Lær meira um ${siteConfig.siteName} og okkara uppgávu at vegleiða føroyskar fyritøkur í vitlíki.`,
-    content: `<h1>Um ${siteConfig.siteName}</h1><p>${siteConfig.why.subtitle}</p>`,
-  },
-  {
-    path: '/okkara-taenastur',
-    title: `Tænastur - ${siteConfig.siteName}`,
-    description: `Skeið, fyrilestrar, ráðgeving og serloysnir í vitlíki – alt bygt til føroyskar fyritøkur og stovnar.`,
-    content: `<h1>Okkara tænastur</h1><p>${siteConfig.consulting.subtitle}</p>`,
-  },
-  {
-    path: '/contact',
-    title: `Samband - ${siteConfig.siteName}`,
-    description: `Set teg í samband við ${siteConfig.siteName}. Teldupostur: ${siteConfig.contact.email}. Telefon: ${siteConfig.contact.phone}.`,
-    content: `<h1>Samband</h1><p>${siteConfig.contact.subtitle}</p><p>Teldupostur: <a href="mailto:${siteConfig.contact.email}">${siteConfig.contact.email}</a></p><p>Telefon: <a href="tel:${siteConfig.contact.phone.replace(/\s/g, '')}">${siteConfig.contact.phone}</a></p>`,
-  },
-  {
-    path: '/blog',
-    title: `Bloggur - ${siteConfig.siteName}`,
-    description: 'Les greinir um vitlíki (AI) í Føroyum. Vitlíkistíðindi, ráð og gransking.',
-    content: `
-      <h1>Bloggur</h1>
-      <p>Les greinir um vitlíki (AI) í Føroyum.</p>
-      <ul>
-        ${blogPosts.map((post) => `<li><a href="/blog/${post.slug}">${post.title}</a><p>${post.excerpt}</p></li>`).join('')}
-      </ul>
-    `,
-  },
-  {
-    path: '/tilarbeidis',
-    title: `Vitlíki til arbeiðis - ${siteConfig.siteName}`,
-    description: 'Verkætlanin "Vitlíki til arbeiðis" - vegleiðingar og tilfar til at hjálpa bólkum at koma gott ígongd við vitlíki.',
-    content: '<h1>Vitlíki til arbeiðis</h1>',
-  },
-  {
-    path: '/verkstova',
-    title: `Verkstova - ${siteConfig.siteName}`,
-    description: 'Handalig vitlíkisverkstova. Lær at brúka ChatGPT og onnur vitlíki-amboð í veruligum arbeiðsuppgávum.',
-    content: '<h1>Verkstova</h1><p>Hetta innihald er loyndarorðsverndað og er einans fyri skrásettar brúkarar.</p>',
-    noindex: true,
-  },
-  { path: '/podcast', title: `Podkast - ${siteConfig.siteName}`, description: 'Hoyr podkast um vitlíki í Føroyum.', content: '<h1>Podkast</h1>' },
-  { path: '/ai-guide', title: `Vitlíki vegleiðing - ${siteConfig.siteName}`, description: 'Vegleiðing í vitlíki.', content: '<h1>Vitlíki vegleiðing</h1>' },
-  { path: '/user-guides', title: `Brúkaravegleiðingar - ${siteConfig.siteName}`, description: 'Vegleiðingar og tilfar.', content: '<h1>Brúkaravegleiðingar</h1>' },
-  { path: '/user-guides/getting-started', title: `At koma ígongd við vitlíki - ${siteConfig.siteName}`, description: 'Vegleiðing til at koma ígongd.', content: '<h1>At koma ígongd við vitlíki</h1>' },
-  { path: '/user-guides/best-practices', title: `Bestu mannagongdir við vitlíki - ${siteConfig.siteName}`, description: 'Bestu mannagongdir fyri at brúka vitlíki.', content: '<h1>Bestu mannagongdir</h1>' },
-  { path: '/user-guides/ai-for-kindergarten-guide', title: `Vitlíki fyri barnagrunnar - ${siteConfig.siteName}`, description: 'Vegleiðing til barnagrunnsfólk.', content: '<h1>Vitlíki fyri barnagrunnar</h1>' },
-  { path: '/user-guides/ai-for-caretakers-guide', title: `Vitlíki fyri umsorgarfólk - ${siteConfig.siteName}`, description: 'Vegleiðing til umsorgarfólk.', content: '<h1>Vitlíki fyri umsorgarfólk</h1>' },
-  { path: '/annad-fra-vitlikisstovuni', title: `Annað frá ${siteConfig.siteName}`, description: 'Ymiskt tilfar og tíðindi.', content: `<h1>Annað frá ${siteConfig.siteName}</h1>` },
-  { path: '/course-details', title: `Skeiðsupplýsingar - ${siteConfig.siteName}`, description: 'Nærri upplýsingar um vitlíkisskeið.', content: '<h1>Skeiðsupplýsingar</h1>' },
-];
+function buildPageContent(path) {
+  const c = siteConfig;
+  const seo = c.seoPages[path];
+  if (!seo) return `<h1>${path}</h1>`;
+
+  switch (path) {
+    case '/':
+      return buildHomepageFallback();
+    case '/um-okkum':
+      return `<h1>${seo.title}</h1><p>${c.why.subtitle}</p>`;
+    case '/okkara-taenastur':
+      return `<h1>${seo.title}</h1><p>${c.consulting.subtitle}</p>`;
+    case '/contact':
+      return `<h1>${seo.title}</h1><p>${c.contact.subtitle}</p><p>Teldupostur: <a href="mailto:${c.contact.email}">${c.contact.email}</a></p><p>Telefon: <a href="tel:${c.contact.phone.replace(/\s/g, '')}">${c.contact.phone}</a></p>`;
+    case '/blog':
+      return `<h1>${seo.title}</h1><p>${seo.description}</p><ul>${blogPosts.map((post) => `<li><a href="/blog/${post.slug}">${post.title}</a><p>${post.excerpt}</p></li>`).join('')}</ul>`;
+    case '/verkstova':
+      return '<h1>Verkstova</h1><p>Hetta innihald er loyndarorðsverndað og er einans fyri skrásettar brúkarar.</p>';
+    default:
+      return `<h1>${seo.title}</h1>`;
+  }
+}
+
+const staticPages = Object.entries(siteConfig.seoPages).map(([path, seo]) => ({
+  path,
+  title: seo.title,
+  description: seo.description,
+  content: buildPageContent(path),
+  ...(seo.noindex ? { noindex: true } : {}),
+}));
 
 const blogPages = blogPosts.map((post) => ({
   path: post.path,
