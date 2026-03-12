@@ -74,7 +74,7 @@ export default function UmOkkum() {
                       <span className="font-bold text-xl">Vitlíkisstovan</span> varð stovnað av einføldum orsøkum:
                     </p>
                     <blockquote className="border-l-4 border-black pl-6 my-6 text-xl font-serif italic">
-                      "At hjálpa føroyskum fyritøkum at brúka vitlíki."
+                      "At fáa vitlíki trygt og munagott til Føroyar."
                     </blockquote>
                     <p className="text-gray-700">
                       Mín niðurstøða er, at hetta skal gerast í trimum stigum og eg kann hjálpa allan vegin.
