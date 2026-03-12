@@ -176,7 +176,7 @@ function buildPageContent(path) {
     case '/blog':
       return `<h1>${seo.title}</h1><p>${seo.description}</p><ul>${blogPosts.map((post) => `<li><a href="/blog/${post.slug}">${post.title}</a><p>${post.excerpt}</p></li>`).join('')}</ul>`;
     case '/verkstova':
-      return '<h1>Verkstova</h1><p>Hetta innihald er loyndarorðsverndað og er einans fyri skrásettar brúkarar.</p>';
+      return `<h1>${seo.title}</h1><p>${seo.description}</p>`;
     default:
       return `<h1>${seo.title}</h1>`;
   }
