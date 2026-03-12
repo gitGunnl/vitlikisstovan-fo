@@ -37,6 +37,7 @@ Preferred communication style: Simple, everyday language.
 
 ## Build System
 - **Frontend Build**: Vite with React plugin for fast development and optimized production builds
+- **SEO Prerender**: Post-build script (`scripts/prerender-seo.js`) reads content from `client/src/content/site.ts` and generates static HTML for each route. The `<!-- SEO_CONTENT_PLACEHOLDER -->` marker in `client/index.html` is replaced with full page content during build. Meta tags are HTML-escaped to prevent attribute breakage.
 - **TypeScript**: Strict mode enabled with path mapping for clean imports
 - **Development**: Vite development server with hot module replacement
 - **Production**: Static build output deployed to Replit Static Deployments
