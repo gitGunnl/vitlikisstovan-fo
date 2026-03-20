@@ -1,44 +1,31 @@
 #!/usr/bin/env node
-/**
- * Server entry point.
- *
- * Development  → spawns the Vite dev server (SPA mode).
- * Production   → serves the pre-rendered static files from dist/public/
- *                so every route returns its own page-specific HTML.
- */
-
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
+import express from 'express';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const rootDir = join(__dirname, '..');
 
+const apiApp = express();
+
+const { createElectionRouter } = await import('./election-api.js');
+apiApp.use(createElectionRouter());
+
 if (process.env.NODE_ENV === 'production') {
-  // ---------- Production: static file server with SPA fallback ----------
-  const express = (await import('express')).default;
   const { existsSync } = await import('fs');
+  const DIST = join(__dirname, 'public');
 
-  const app = express();
-  const DIST = join(__dirname, 'public'); // dist/public when running from dist/
-
-  // For clean URLs like /contact, serve the prerendered HTML
-  // BEFORE express.static (which would redirect /contact → /contact/)
-  app.get('*', (req, res, next) => {
-    // Skip requests for actual files (have extensions like .js, .css, .png)
+  apiApp.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api/')) return next();
     if (req.path.includes('.')) return next();
-    // Skip root — let it fall through to express.static
     const cleanPath = req.path.replace(/\/+$/, '') || '/';
     if (cleanPath === '/') return next();
 
     const slug = cleanPath.slice(1);
-
-    // Try flat .html file first (e.g. dist/public/contact.html)
     const flatFile = join(DIST, slug + '.html');
     if (existsSync(flatFile)) {
       return res.sendFile(flatFile);
     }
-
-    // Fall back to directory index (e.g. dist/public/contact/index.html)
     const dirIndex = join(DIST, slug, 'index.html');
     if (existsSync(dirIndex)) {
       return res.sendFile(dirIndex);
@@ -46,27 +33,28 @@ if (process.env.NODE_ENV === 'production') {
     next();
   });
 
-  // Serve static assets (JS, CSS, images, etc.) with caching
-  app.use(
+  apiApp.use(
     express.static(DIST, {
       maxAge: '7d',
-      index: 'index.html', // serve directory index.html (homepage) automatically
+      index: 'index.html',
     }),
   );
 
-  // SPA fallback: for any remaining GET request, serve root index.html
-  app.get('*', (_req, res) => {
+  apiApp.get('*', (_req, res) => {
     res.sendFile(join(DIST, 'index.html'));
   });
 
   const PORT = parseInt(process.env.PORT || '5000', 10);
-  app.listen(PORT, '0.0.0.0', () => {
+  apiApp.listen(PORT, '0.0.0.0', () => {
     console.log(`Production server listening on http://0.0.0.0:${PORT}`);
   });
 } else {
-  // ---------- Development: Vite dev server ----------
-  const { spawn } = await import('child_process');
+  const API_PORT = 5001;
+  apiApp.listen(API_PORT, '0.0.0.0', () => {
+    console.log(`API server listening on http://0.0.0.0:${API_PORT}`);
+  });
 
+  const { spawn } = await import('child_process');
   console.log('Starting Vite development server...');
 
   const vite = spawn(

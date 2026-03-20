@@ -1,0 +1,63 @@
+{
+  "parties": [
+    {
+      "id": "sambandsflokkurin",
+      "name": "Sambandsflokkurin",
+      "shortName": "B",
+      "color": "#1e40af",
+      "status": "invited",
+      "invitedAt": "2026-03-20T12:00:00Z"
+    },
+    {
+      "id": "javnadarflokkurin",
+      "name": "Javnaðarflokkurin",
+      "shortName": "A",
+      "color": "#dc2626",
+      "status": "invited",
+      "invitedAt": "2026-03-20T12:00:00Z"
+    },
+    {
+      "id": "tjodveldi",
+      "name": "Tjóðveldi",
+      "shortName": "T",
+      "color": "#16a34a",
+      "status": "invited",
+      "invitedAt": "2026-03-20T12:00:00Z"
+    },
+    {
+      "id": "folkaflokkurin",
+      "name": "Fólkaflokkurin",
+      "shortName": "E",
+      "color": "#9333ea",
+      "status": "invited",
+      "invitedAt": "2026-03-20T12:00:00Z"
+    },
+    {
+      "id": "framsokn",
+      "name": "Framsókn",
+      "shortName": "F",
+      "color": "#ea580c",
+      "status": "invited",
+      "invitedAt": "2026-03-20T12:00:00Z"
+    },
+    {
+      "id": "midflokkurin",
+      "name": "Miðflokkurin",
+      "shortName": "M",
+      "color": "#0891b2",
+      "status": "invited",
+      "invitedAt": "2026-03-20T12:00:00Z"
+    },
+    {
+      "id": "sjalvstyri",
+      "name": "Sjálvstýrisflokkurin",
+      "shortName": "D",
+      "color": "#ca8a04",
+      "status": "invited",
+      "invitedAt": "2026-03-20T12:00:00Z"
+    }
+  ],
+  "submissions": [],
+  "deadline": "2026-04-15T23:59:00Z",
+  "lastUpdated": "2026-03-20T21:23:46.883Z"
+}

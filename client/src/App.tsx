@@ -30,6 +30,9 @@ import Fyrilestur from "@/pages/okkara-taenastur/fyrilestur";
 import Vitlikisupplaering from "@/pages/okkara-taenastur/vitlikisupplaering";
 import Serloysnir from "@/pages/okkara-taenastur/serloysnir";
 import SkapandiVitliki from "@/pages/okkara-taenastur/skapandi-vitliki";
+import Val from "@/pages/val";
+import ValSvara from "@/pages/val-svara";
+import ValAdmin from "@/pages/val-admin";
 
 function Router() {
   return (
@@ -60,6 +63,9 @@ function Router() {
       <Route path="/gemini3-fo-test" component={Gemini3FoTest} />
       <Route path="/frontpage-v2" component={FrontpageV2} />
       <Route path="/frontpage-v3" component={FrontpageV3} />
+      <Route path="/val" component={Val} />
+      <Route path="/val/svara" component={ValSvara} />
+      <Route path="/val/admin" component={ValAdmin} />
       <Route component={NotFound} />
     </Switch>
   );
