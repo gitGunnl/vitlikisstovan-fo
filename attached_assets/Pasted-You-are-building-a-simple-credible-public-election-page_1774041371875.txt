@@ -1,0 +1,78 @@
+You are building a simple, credible public election page for my website.
+
+The purpose of the page is to start a serious public discussion about vitlíki in the Faroe Islands election by making it easy for political parties to answer 5 questions, and easy for voters and journalists to compare those answers side by side.
+
+This is not a party-political campaign page. It must feel neutral, civic, trustworthy, and structured. The tone should be calm, fair, and public-interest oriented. The goal is to raise the chance that parties actually respond, while also making non-response visible in a clean and non-aggressive way.
+
+Very important language requirement
+Everything shown to the public user must be in Faroese. This includes all visible UI text, labels, buttons, headings, helper text, status labels, form text, validation messages, empty states, confirmation messages, admin-facing preview text if shown in the interface, and any default content shown on the page.
+
+Internal code, database fields, internal variable names, and developer-facing structure can be in English if convenient, but nothing user-facing should appear in English.
+
+What we need
+We need a public-facing webpage on my website with:
+1. A clear headline and short introduction explaining that vitlíki will affect work, schools, public services, business, language, and trust, and that this page asks Faroese political parties where they stand.
+2. A short “why this matters” section, grounded in Faroese realities such as labor shortages, public-sector efficiency, Faroese language in digital life, and the need for responsible AI use.
+3. A section showing 5 fixed questions to the parties.
+4. A clear explanation of how parties were invited, how they can respond, what the deadline is, what answer length is recommended, and how answers will be published.
+5. A visible status overview of invited parties, for example statuses like invited / response received / partial response / no response yet.
+6. A clean comparison section where published answers can be shown party by party in a consistent format.
+7. A submission flow for parties to send in answers.
+8. A simple admin-friendly way for me to update party status, publish answers, edit formatting, and manage the page without friction.
+
+What the submission flow must contain
+The party response flow must collect:
+- Party name
+- Name of respondent
+- Role/title
+- Email
+- Optional phone number
+- Whether the response is an official party response or an individual candidate response
+- One response field for each of the 5 questions
+- Optional extra comment
+- Explicit consent that the response may be published publicly
+- Submission timestamp
+
+Important: the experience should support both structured submission and manual publishing. I may receive answers by email, message, phone, or document, so I need an easy way to add those answers myself and mark them as official.
+
+Imperatives
+This project must be designed around reply rate and public credibility.
+
+That means:
+- It must feel serious, neutral, and fair
+- It must not feel like a trap or attack page
+- It must make it very easy for politicians or staffers to respond quickly
+- It must be mobile friendly because many responses may be done on phones
+- It must look clean enough that I can confidently share it with parties, journalists, and the public
+- It must make comparison easy
+- It must make silence visible, but without hostile framing
+- It must allow answers in Faroese and English, but the public-facing interface itself must still be Faroese
+- It must make it easy for me to update statuses and publish new answers quickly during an active campaign period
+
+Content and design principles
+- Keep the page simple and high trust
+- Avoid clutter
+- Avoid a “campaign” or “activist petition” feel
+- The tone should signal: fair public service, not attack
+- Make the questions easy to read and easy to answer
+- Clearly state recommended answer length, such as 3–5 sentences per question
+- Clearly state that answers may be lightly edited only for spelling/formatting, not meaning
+- Clearly state that non-responses will also be shown
+- Display timestamps where relevant so the page feels alive and current
+- The structure should make sense even if only some parties answer at first
+
+Language and copy expectations
+- Default all visible copy to Faroese
+- Use natural, clear Faroese, not stiff bureaucratic wording
+- Use “vitlíki” rather than “AI” as the main word in user-facing text, though “AI” can appear secondarily where useful
+- Make the UI sound credible, respectful, and easy to understand
+- Think carefully about status labels, instructions, confirmation text, and submission wording so the whole experience feels trustworthy
+
+What matters most
+The most important thing is not technical cleverness. The most important thing is that this becomes a credible public comparison page that:
+- increases the chance that parties respond
+- gives me a clean link to send around
+- creates a useful election reference for voters and journalists
+- makes vitlíki politically harder to ignore
+
+Please make sensible product and UX decisions in line with this goal. Focus on trust, clarity, speed, maintainability, and excellent Faroese user-facing language.
