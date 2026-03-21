@@ -34,6 +34,30 @@ from = "/okkara-taenastur"
 to = "/okkara-taenastur.html"
 
 [[deployment.rewrites]]
+from = "/okkara-taenastur/byrjunarskeidi"
+to = "/okkara-taenastur/byrjunarskeidi.html"
+
+[[deployment.rewrites]]
+from = "/okkara-taenastur/15-haettir"
+to = "/okkara-taenastur/15-haettir.html"
+
+[[deployment.rewrites]]
+from = "/okkara-taenastur/fyrilestur"
+to = "/okkara-taenastur/fyrilestur.html"
+
+[[deployment.rewrites]]
+from = "/okkara-taenastur/vitlikisupplaering"
+to = "/okkara-taenastur/vitlikisupplaering.html"
+
+[[deployment.rewrites]]
+from = "/okkara-taenastur/serloysnir"
+to = "/okkara-taenastur/serloysnir.html"
+
+[[deployment.rewrites]]
+from = "/okkara-taenastur/skapandi-vitliki"
+to = "/okkara-taenastur/skapandi-vitliki.html"
+
+[[deployment.rewrites]]
 from = "/contact"
 to = "/contact.html"
 
