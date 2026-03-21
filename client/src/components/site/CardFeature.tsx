@@ -13,7 +13,7 @@ export default function CardFeature({ icon, title, description, className }: Car
     <Card className={`group hover:bg-accent/5 ${className || ''}`}>
       <CardContent className="p-4">
         {icon && (
-          <div className="w-12 h-12 bg-gradient-to-br from-primary/20 to-primary/10 rounded-xl flex items-center justify-center mb-6 text-primary group-hover:scale-110 transition-transform duration-300 shadow-sm">
+          <div className="w-12 h-12 bg-gradient-to-br from-emerald-100 to-emerald-50 rounded-xl flex items-center justify-center mb-6 text-emerald-700 group-hover:scale-110 transition-transform duration-300 shadow-sm">
             {icon}
           </div>
         )}

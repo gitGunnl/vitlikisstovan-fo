@@ -114,7 +114,7 @@ export default function FrontpageV3() {
         {/* Hero Section */}
         <section
           id="hero"
-          className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden pt-24 sm:pt-32 pb-16"
+          className="relative min-h-[80vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 overflow-hidden pt-24 sm:pt-32 pb-16"
         >
           {/* Video Background with Image Fallback */}
           <VideoBackground
@@ -123,7 +123,7 @@ export default function FrontpageV3() {
           />
 
           {/* Background overlay for readability */}
-          <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-background/90 hero-overlay pointer-events-none"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/65 to-background/95 hero-overlay pointer-events-none"></div>
 
           <div className="relative z-10 w-full max-w-7xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
@@ -132,7 +132,7 @@ export default function FrontpageV3() {
               <div className="space-y-8 animate-slide-up">
                 <div>
                   <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                    <span className="text-emerald-400">Vitlíki</span> <br />
+                    <span className="text-emerald-300">Vitlíki</span> <br />
                     á tíni skrivstovu
                   </h1>
                   <p className="text-xl text-white/90 leading-relaxed max-w-xl">
@@ -147,7 +147,7 @@ export default function FrontpageV3() {
                     <div className="flex justify-between items-start mb-4">
                       <div>
                         <h3 className="text-2xl font-bold text-foreground">3 tíma verkstova</h3>
-                        <p className="text-emerald-600 font-medium">Besta byrjanin fyri flestu toymi</p>
+                        <p className="text-emerald-800 font-medium">Besta byrjanin fyri flestu toymi</p>
                       </div>
                       <div className="text-right">
                         <span className="text-3xl font-bold text-foreground">25.000 kr.</span>
@@ -196,15 +196,15 @@ export default function FrontpageV3() {
               </div>
 
               {/* Right Column: Full Day Option & Secondary Actions */}
-              <div className="space-y-6 lg:mt-24 animate-slide-up" style={{ animationDelay: '150ms' }}>
+              <div className="space-y-6 lg:mt-8 animate-slide-up" style={{ animationDelay: '150ms' }}>
                 {/* Full Day Card */}
-                <Card className="bg-white/10 backdrop-blur-md border-white/20 text-white hover:bg-white/15 transition-colors">
+                <Card className="bg-gray-900 border-white/20 text-white hover:bg-gray-800 transition-colors">
                   <CardContent className="p-6">
                     <div className="flex justify-between items-center mb-4">
                       <h3 className="text-xl font-bold">Heilur dagur</h3>
                       <span className="text-2xl font-bold">45.000 kr.</span>
                     </div>
-                    <p className="text-white/80 text-sm mb-4">
+                    <p className="text-white text-sm mb-4">
                       Fyri størri toymi ella tá tit vilja fara djúpri. Inniheldur alt frá 3-tíma verkstovuni, pluss meira tíð til venjing og 2 uppfylgingar.
                     </p>
                     <Button
@@ -231,7 +231,7 @@ export default function FrontpageV3() {
                         element.scrollIntoView({ behavior: 'smooth' });
                       }
                     }}
-                    className="inline-flex items-center gap-2 text-white/80 hover:text-white transition-colors group"
+                    className="inline-flex items-center gap-2 text-white hover:text-emerald-300 transition-colors group"
                   >
                     <HelpCircle className="w-5 h-5" />
                     <span className="underline decoration-white/30 underline-offset-4 group-hover:decoration-white">
@@ -246,7 +246,7 @@ export default function FrontpageV3() {
         </section>
 
         {/* Collapsible Program Section */}
-        <section className="py-12 bg-muted/30 border-b">
+        <section className="py-20 bg-muted/30 border-b">
           <div className="max-w-4xl mx-auto px-4">
             <Collapsible open={programOpen} onOpenChange={setProgramOpen}>
               <div className="flex flex-col items-center gap-4">
@@ -266,11 +266,11 @@ export default function FrontpageV3() {
                 </CollapsibleTrigger>
               </div>
 
-              <CollapsibleContent className="mt-8 space-y-16 animate-slide-down overflow-hidden data-[state=closed]:animate-slide-up">
+              <CollapsibleContent className="mt-8 animate-slide-down overflow-hidden data-[state=closed]:animate-slide-up">
 
                 {/* The Flagship Program */}
-                <Section id="program" className="py-24 sm:py-32 bg-gradient-to-b from-muted to-background">
-                  <div className="mx-auto max-w-4xl text-center mb-16 animate-slide-up">
+                <div id="program" className="space-y-12">
+                  <div className="mx-auto max-w-4xl text-center mb-12 animate-slide-up">
                     <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">
                       {siteConfig.program.title}
                     </h2>
@@ -281,7 +281,7 @@ export default function FrontpageV3() {
 
                   {/* What We Deliver Section */}
                   {siteConfig.program.whatWeDeliver && (
-                    <div className="mb-16">
+                    <div className="mb-12">
                       <div className="mx-auto max-w-4xl text-center mb-8">
                         <h3 className="text-2xl font-bold tracking-tight mb-4">
                           {siteConfig.program.whatWeDeliver.title}
@@ -293,10 +293,10 @@ export default function FrontpageV3() {
                           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                             {siteConfig.program.whatWeDeliver.items?.map((item, index) => {
                               const icons = [
-                                <FileText key={index} className="w-6 h-6 text-primary" />,
-                                <Building2 key={index} className="w-6 h-6 text-primary" />,
-                                <GraduationCap key={index} className="w-6 h-6 text-primary" />,
-                                <CheckCircle key={index} className="w-6 h-6 text-primary" />
+                                <FileText key={index} className="w-6 h-6 text-emerald-700" />,
+                                <Building2 key={index} className="w-6 h-6 text-emerald-700" />,
+                                <GraduationCap key={index} className="w-6 h-6 text-emerald-700" />,
+                                <CheckCircle key={index} className="w-6 h-6 text-emerald-700" />
                               ];
 
                               return (
@@ -319,7 +319,7 @@ export default function FrontpageV3() {
 
                   {/* How It Works Process */}
                   {siteConfig.program.howItWorks && (
-                    <div className="mb-24">
+                    <div className="mb-12">
                       <div className="mx-auto max-w-4xl text-center mb-12">
                         <h3 className="text-2xl font-bold tracking-tight mb-4">
                           {siteConfig.program.howItWorks.title}
@@ -332,8 +332,8 @@ export default function FrontpageV3() {
                             {siteConfig.program.howItWorks.steps?.map((step, index) => (
                               <React.Fragment key={index}>
                                 <div className="flex-1 text-center">
-                                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                                    <span className="text-primary-foreground font-bold text-xl">{step.number}</span>
+                                  <div className="w-16 h-16 bg-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <span className="text-white font-bold text-xl">{step.number}</span>
                                   </div>
                                   <h4 className="font-semibold mb-2">{step.title}</h4>
                                   <p className="text-sm text-muted-foreground">{step.description}</p>
@@ -356,7 +356,7 @@ export default function FrontpageV3() {
 
                   {/* Delivery Section */}
                   {siteConfig.program.delivery && (
-                    <div className="mb-16">
+                    <div className="mb-12">
                       <div className="mx-auto max-w-4xl text-center mb-8">
                         <h3 className="text-2xl font-bold tracking-tight mb-4">
                           {siteConfig.program.delivery.title}
@@ -369,16 +369,16 @@ export default function FrontpageV3() {
                             <div className="space-y-4">
                               {siteConfig.program.delivery.items?.slice(0, Math.ceil(siteConfig.program.delivery.items.length / 2)).map((item, index) => {
                                 const icons = [
-                                  <FileText className="w-5 h-5 text-primary" />,
-                                  <Building2 className="w-5 h-5 text-primary" />,
-                                  <GraduationCap className="w-5 h-5 text-primary" />,
-                                  <Users className="w-5 h-5 text-primary" />
+                                  <FileText className="w-5 h-5 text-emerald-700" />,
+                                  <Building2 className="w-5 h-5 text-emerald-700" />,
+                                  <GraduationCap className="w-5 h-5 text-emerald-700" />,
+                                  <Users className="w-5 h-5 text-emerald-700" />
                                 ];
 
                                 return (
                                   <div key={index} className="flex items-start space-x-4">
-                                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                                      {icons[index] || <CheckCircle className="w-5 h-5 text-primary" />}
+                                    <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                      {icons[index] || <CheckCircle className="w-5 h-5 text-emerald-700" />}
                                     </div>
                                     <div>
                                       <h4 className="font-semibold mb-2">{item.title}</h4>
@@ -392,15 +392,15 @@ export default function FrontpageV3() {
                             <div className="space-y-4">
                               {siteConfig.program.delivery.items?.slice(Math.ceil(siteConfig.program.delivery.items.length / 2)).map((item, index) => {
                                 const icons = [
-                                  <CheckCircle className="w-5 h-5 text-primary" />,
-                                  <Lightbulb className="w-5 h-5 text-primary" />,
-                                  <MessageCircle className="w-5 h-5 text-primary" />
+                                  <CheckCircle className="w-5 h-5 text-emerald-700" />,
+                                  <Lightbulb className="w-5 h-5 text-emerald-700" />,
+                                  <MessageCircle className="w-5 h-5 text-emerald-700" />
                                 ];
 
                                 return (
                                   <div key={index} className="flex items-start space-x-4">
-                                    <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
-                                      {icons[index] || <CheckCircle className="w-5 h-5 text-primary" />}
+                                    <div className="w-10 h-10 bg-emerald-100 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+                                      {icons[index] || <CheckCircle className="w-5 h-5 text-emerald-700" />}
                                     </div>
                                     <div>
                                       <h4 className="font-semibold mb-2">{item.title}</h4>
@@ -424,7 +424,7 @@ export default function FrontpageV3() {
                     </div>
                   )}
 
-                </Section>
+                </div>
               </CollapsibleContent>
             </Collapsible>
           </div>
@@ -432,8 +432,8 @@ export default function FrontpageV3() {
 
         {/* Consulting & Projects */}
         {siteConfig.consulting && (
-          <Section id="consulting" className="py-24">
-            <div className="mx-auto max-w-4xl text-center mb-16">
+          <Section id="consulting" className="py-20">
+            <div className="mx-auto max-w-4xl text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
                 {siteConfig.consulting.title}
               </h2>
@@ -465,8 +465,8 @@ export default function FrontpageV3() {
 
         {/* Why Vitlíkisstovan */}
         {siteConfig.why && (
-          <Section id="why" className="py-24 bg-muted/30">
-            <div className="mx-auto max-w-4xl text-center mb-16">
+          <Section id="why" className="py-20 bg-muted/30">
+            <div className="mx-auto max-w-4xl text-center mb-12">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
                 {siteConfig.why.title}
               </h2>
@@ -476,7 +476,7 @@ export default function FrontpageV3() {
             </div>
 
             {siteConfig.why.features && (
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
                 {siteConfig.why.features.map((feature, index) => {
                   const icons = [
                     <Globe key={index} className="w-6 h-6" />,
@@ -507,7 +507,7 @@ export default function FrontpageV3() {
                   <CardContent className="p-8">
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
                       <div className="lg:col-span-1 text-center lg:text-left">
-                        <div className="w-32 h-32 mx-auto lg:mx-0 mb-4 overflow-hidden rounded-full border-4 border-primary/20">
+                        <div className="w-32 h-32 mx-auto lg:mx-0 mb-4 overflow-hidden rounded-full border-4 border-emerald-200">
                           <img
                             src="/me.jpg"
                             alt="Portrait of Gunnleygur Clementsen"
@@ -515,7 +515,7 @@ export default function FrontpageV3() {
                           />
                         </div>
                         <h4 className="text-xl font-bold mb-2">{siteConfig.why.founder.name}</h4>
-                        <p className="text-sm text-primary font-medium mb-4">{siteConfig.why.founder.role}</p>
+                        <p className="text-sm text-emerald-800 font-medium mb-4">{siteConfig.why.founder.role}</p>
                       </div>
 
                       <div className="lg:col-span-2">
@@ -525,7 +525,7 @@ export default function FrontpageV3() {
                           <ul className="space-y-3 mb-6">
                             {siteConfig.why.founder.bullets.map((bullet, index) => (
                               <li key={index} className="flex items-start">
-                                <CheckCircle className="h-5 w-5 text-primary mt-0.5 mr-3 flex-shrink-0" />
+                                <CheckCircle className="h-5 w-5 text-emerald-700 mt-0.5 mr-3 flex-shrink-0" />
                                 <span className="text-sm leading-relaxed">{bullet}</span>
                               </li>
                             ))}
@@ -533,7 +533,7 @@ export default function FrontpageV3() {
                         )}
 
                         {siteConfig.why.founder.quote && (
-                          <blockquote className="border-l-4 border-primary pl-6 py-4 italic text-muted-foreground bg-muted/30 rounded-r-lg">
+                          <blockquote className="border-l-4 border-emerald-700 pl-6 py-4 italic text-muted-foreground bg-muted/30 rounded-r-lg">
                             "{siteConfig.why.founder.quote}"
                           </blockquote>
                         )}
@@ -547,8 +547,8 @@ export default function FrontpageV3() {
         )}
 
         {/* Case Highlights */}
-        <Section id="cases" className="py-28">
-          <div className="mx-auto max-w-4xl text-center mb-20">
+        <Section id="cases" className="py-20">
+          <div className="mx-auto max-w-4xl text-center mb-12">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
               {siteConfig.cases.title}
             </h2>
@@ -557,7 +557,7 @@ export default function FrontpageV3() {
             </p>
           </div>
 
-          <div className="space-y-16">
+          <div className="space-y-12">
             {siteConfig.cases.highlights?.map((highlight, index) => {
               const isEven = index % 2 === 0;
               return (
@@ -743,23 +743,23 @@ export default function FrontpageV3() {
                     <h4 className="text-lg font-semibold mb-2">Hvat luttakararnir læra</h4>
                     <ul className="space-y-3 text-muted-foreground">
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-emerald-700 mt-0.5 flex-shrink-0" />
                         <span>At skilja møguleikar og avmarkingar við vitlíki.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-emerald-700 mt-0.5 flex-shrink-0" />
                         <span>At brúka KjattGPT og onnur viðkomandi amboð í verki.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-emerald-700 mt-0.5 flex-shrink-0" />
                         <span>At skapa munagóð birt, ið eru lagað til teirra egnu arbeiðsuppgávur.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-emerald-700 mt-0.5 flex-shrink-0" />
                         <span>Høvuðsdentur verður lagdur á felags venjingar við dømum úr gerandisdegnum.</span>
                       </li>
                       <li className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-primary mt-0.5 flex-shrink-0" />
+                        <CheckCircle className="w-5 h-5 text-emerald-700 mt-0.5 flex-shrink-0" />
                         <span>Vit gjøgnumganga góðar mannagongdir fyri trygd og etikki innan vitlíki.</span>
                       </li>
                     </ul>
@@ -838,7 +838,7 @@ export default function FrontpageV3() {
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                     <div className="flex items-start gap-4 p-4 rounded-lg bg-background/60 border border-border/50 hover:shadow-md transition-shadow">
                       <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center flex-shrink-0">
-                        <FileText className="w-5 h-5 text-primary" />
+                        <FileText className="w-5 h-5 text-emerald-700" />
                       </div>
                       <div className="flex-1">
                         <h5 className="font-semibold text-base mb-2">Innlesing av skjølum</h5>
@@ -848,7 +848,7 @@ export default function FrontpageV3() {
 
                     <div className="flex items-start gap-4 p-4 rounded-lg bg-background/60 border border-border/50 hover:shadow-md transition-shadow">
                       <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center flex-shrink-0">
-                        <Globe className="w-5 h-5 text-primary" />
+                        <Globe className="w-5 h-5 text-emerald-700" />
                       </div>
                       <div className="flex-1">
                         <h5 className="font-semibold text-base mb-2">Vitlíki‑týðing</h5>
@@ -858,7 +858,7 @@ export default function FrontpageV3() {
 
                     <div className="flex items-start gap-4 p-4 rounded-lg bg-background/60 border border-border/50 hover:shadow-md transition-shadow">
                       <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center flex-shrink-0">
-                        <MessageCircle className="w-5 h-5 text-primary" />
+                        <MessageCircle className="w-5 h-5 text-emerald-700" />
                       </div>
                       <div className="flex-1">
                         <h5 className="font-semibold text-base mb-2">Yvirlit yvir allar setningar</h5>
@@ -870,7 +870,7 @@ export default function FrontpageV3() {
 
                     <div className="flex items-start gap-4 p-4 rounded-lg bg-background/60 border border-border/50 hover:shadow-md transition-shadow">
                       <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center flex-shrink-0">
-                        <CheckCircle className="w-5 h-5 text-primary" />
+                        <CheckCircle className="w-5 h-5 text-emerald-700" />
                       </div>
                       <div className="flex-1">
                         <h5 className="font-semibold text-base mb-2">Góðkenning</h5>
@@ -882,7 +882,7 @@ export default function FrontpageV3() {
 
                     <div className="flex items-start gap-4 p-4 rounded-lg bg-background/60 border border-border/50 hover:shadow-md transition-shadow lg:col-span-2">
                       <div className="w-12 h-12 rounded-xl bg-primary/15 flex items-center justify-center flex-shrink-0">
-                        <FileText className="w-5 h-5 text-primary" />
+                        <FileText className="w-5 h-5 text-emerald-700" />
                       </div>
                       <div className="flex-1">
                         <h5 className="font-semibold text-base mb-2">Útflutningur til Word</h5>
@@ -894,7 +894,7 @@ export default function FrontpageV3() {
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-primary/5 to-primary/10 p-8 rounded-xl border-l-4 border-primary mt-6">
+                <div className="bg-gradient-to-r from-emerald-50 to-emerald-100 p-8 rounded-xl border-l-4 border-emerald-700 mt-6">
                   <blockquote className="text-lg italic text-foreground leading-[1.7] font-medium">
                     Stutt sagt: ein sera væl eydnað vitlíkisverkætlan, sum riggaði væl – og gav skjót, dygdargóð úrslit.
                   </blockquote>
