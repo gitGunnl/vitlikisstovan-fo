@@ -367,6 +367,30 @@ export const siteConfig = {
       title: "Tænastur - Vitlíkisstovan",
       description: "Skeið, fyrilestrar, ráðgeving og serloysnir í vitlíki – alt bygt til føroyskar fyritøkur og stovnar."
     },
+    "/okkara-taenastur/byrjunarskeidi": {
+      title: "Byrjunarskeið í ChatGPT - Vitlíkisstovan",
+      description: "Lær at brúka ChatGPT effektivt í gerandisarbeiði. Hóskar til bæði nýbyrjarar og yrkisfólk."
+    },
+    "/okkara-taenastur/15-haettir": {
+      title: "15 hættir at brúka KjattGPT - Vitlíkisstovan",
+      description: "Fá 15 tillagaðar mátar at brúka KjattGPT í tínum arbeiði. Spar vikur av leitan og feilum."
+    },
+    "/okkara-taenastur/fyrilestur": {
+      title: "Fyrilestur: Vitlíki - Frá Óvissu til Møguleikar - Vitlíkisstovan",
+      description: "Ein fyrilestur, sum gevur títt toymi greiða fatan av vitlíki – uttan torskilt tekniskt mál."
+    },
+    "/okkara-taenastur/vitlikisupplaering": {
+      title: "Vitlíkisupplæring - Vitlíkisstovan",
+      description: "Handalig hjálp til at innarbeiða KjattGPT ella Copilot í tykkara arbeiðsgongd."
+    },
+    "/okkara-taenastur/serloysnir": {
+      title: "Serloysnir til sjálvirkan - Vitlíkisstovan",
+      description: "Sniðgjørdar vitlíkisloysnir, ið hóska til tín tørv. Sjálvvirking, integratión og ráðgeving."
+    },
+    "/okkara-taenastur/skapandi-vitliki": {
+      title: "Skapandi vitlíki - Vitlíkisstovan",
+      description: "Eg skapi tilfar við vitlíki og haldi kreativar verkstovur. Video, myndir, grafikkur og meira."
+    },
     "/contact": {
       title: "Samband - Vitlíkisstovan",
       description: "Set teg í samband við Vitlíkisstovuna. Teldupostur: info@vitlikisstovan.fo. Telefon: +298 919444."

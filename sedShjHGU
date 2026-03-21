@@ -1,0 +1,143 @@
+modules = ["nodejs-20", "web", "postgresql-16"]
+run = "npm run dev"
+hidden = [".config", ".git", "generated-icon.png", "node_modules", "dist"]
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+deploymentTarget = "static"
+build = ["sh", "-c", "npm run build && node scripts/fix-deployment.js"]
+publicDir = "dist"
+
+[env]
+PORT = "5000"
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[[ports]]
+localPort = 5001
+externalPort = 3000
+
+# Per-route rewrites for pre-rendered pages (clean URLs → flat .html files).
+# Static files (robots.txt, llms.txt, llm.md, sitemap.xml, etc.) are served
+# directly from the publicDir without any rewrite.
+
+[[deployment.rewrites]]
+from = "/um-okkum"
+to = "/um-okkum.html"
+
+[[deployment.rewrites]]
+from = "/okkara-taenastur"
+to = "/okkara-taenastur.html"
+
+[[deployment.rewrites]]
+from = "/okkara-taenastur/byrjunarskeidi"
+to = "/okkara-taenastur/byrjunarskeidi.html"
+
+[[deployment.rewrites]]
+from = "/okkara-taenastur/15-haettir"
+to = "/okkara-taenastur/15-haettir.html"
+
+[[deployment.rewrites]]
+from = "/okkara-taenastur/fyrilestur"
+to = "/okkara-taenastur/fyrilestur.html"
+
+[[deployment.rewrites]]
+from = "/okkara-taenastur/vitlikisupplaering"
+to = "/okkara-taenastur/vitlikisupplaering.html"
+
+[[deployment.rewrites]]
+from = "/okkara-taenastur/serloysnir"
+to = "/okkara-taenastur/serloysnir.html"
+
+[[deployment.rewrites]]
+from = "/okkara-taenastur/skapandi-vitliki"
+to = "/okkara-taenastur/skapandi-vitliki.html"
+
+[[deployment.rewrites]]
+from = "/contact"
+to = "/contact.html"
+
+[[deployment.rewrites]]
+from = "/blog"
+to = "/blog.html"
+
+[[deployment.rewrites]]
+from = "/blog/vitliki-i-foroyum"
+to = "/blog/vitliki-i-foroyum.html"
+
+[[deployment.rewrites]]
+from = "/blog/fra-vitlikisottan-til-vitlikisdirvi"
+to = "/blog/fra-vitlikisottan-til-vitlikisdirvi.html"
+
+[[deployment.rewrites]]
+from = "/tilarbeidis"
+to = "/tilarbeidis.html"
+
+[[deployment.rewrites]]
+from = "/verkstova"
+to = "/verkstova.html"
+
+[[deployment.rewrites]]
+from = "/podcast"
+to = "/podcast.html"
+
+[[deployment.rewrites]]
+from = "/ai-guide"
+to = "/ai-guide.html"
+
+[[deployment.rewrites]]
+from = "/user-guides"
+to = "/user-guides.html"
+
+[[deployment.rewrites]]
+from = "/user-guides/getting-started"
+to = "/user-guides/getting-started.html"
+
+[[deployment.rewrites]]
+from = "/user-guides/best-practices"
+to = "/user-guides/best-practices.html"
+
+[[deployment.rewrites]]
+from = "/user-guides/ai-for-kindergarten-guide"
+to = "/user-guides/ai-for-kindergarten-guide.html"
+
+[[deployment.rewrites]]
+from = "/user-guides/ai-for-caretakers-guide"
+to = "/user-guides/ai-for-caretakers-guide.html"
+
+[[deployment.rewrites]]
+from = "/annad-fra-vitlikisstovuni"
+to = "/annad-fra-vitlikisstovuni.html"
+
+[[deployment.rewrites]]
+from = "/course-details"
+to = "/course-details.html"
+
+[workflows]
+runButton = "Project"
+
+[[workflows.workflow]]
+name = "Project"
+mode = "parallel"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Start application"
+
+[[workflows.workflow]]
+name = "Start application"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "npm run dev"
+waitForPort = 5000
+
+[postMerge]
+path = "scripts/post-merge.sh"
+timeoutMs = 20000
