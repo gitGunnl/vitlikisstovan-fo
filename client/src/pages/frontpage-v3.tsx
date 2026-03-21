@@ -135,19 +135,19 @@ export default function FrontpageV3() {
                     <span className="text-emerald-300">Vitlíki</span> <br />
                     á tíni skrivstovu
                   </h1>
-                  <p className="text-xl text-white/90 leading-relaxed max-w-xl">
+                  <p className="text-xl text-white leading-relaxed max-w-xl">
                     {siteConfig.hero.slides[0].subtitle}
                   </p>
                 </div>
 
                 {/* 3-Hour Workshop Card (Primary) */}
-                <Card className="bg-background/95 backdrop-blur border-emerald-500/50 shadow-2xl overflow-hidden transform hover:scale-[1.01] transition-all duration-300">
+                <Card className="bg-background/95 backdrop-blur border-emerald-700/40 shadow-2xl overflow-hidden transform hover:scale-[1.01] transition-all duration-300">
                   <div className="h-2 bg-gradient-to-r from-emerald-500 to-teal-500"></div>
                   <CardContent className="p-6 sm:p-8">
                     <div className="flex justify-between items-start mb-4">
                       <div>
                         <h3 className="text-2xl font-bold text-foreground">3 tíma verkstova</h3>
-                        <p className="text-emerald-800 font-medium">Besta byrjanin fyri flestu toymi</p>
+                        <p className="text-emerald-900 font-medium">Besta byrjanin fyri flestu toymi</p>
                       </div>
                       <div className="text-right">
                         <span className="text-3xl font-bold text-foreground">25.000 kr.</span>
@@ -161,19 +161,19 @@ export default function FrontpageV3() {
 
                     <ul className="space-y-3 mb-8">
                       <li className="flex items-center gap-3 text-sm">
-                        <Phone className="w-5 h-5 text-emerald-500 shrink-0" />
+                        <Phone className="w-5 h-5 text-emerald-700 shrink-0" />
                         <span>Fyrireikingarsamrøða áðrenn vit møtast</span>
                       </li>
                       <li className="flex items-center gap-3 text-sm">
-                        <Package className="w-5 h-5 text-emerald-500 shrink-0" />
+                        <Package className="w-5 h-5 text-emerald-700 shrink-0" />
                         <span>Startpakki við skabelónum og dømum</span>
                       </li>
                       <li className="flex items-center gap-3 text-sm">
-                        <FileText className="w-5 h-5 text-emerald-500 shrink-0" />
+                        <FileText className="w-5 h-5 text-emerald-700 shrink-0" />
                         <span>One-pager og 30-daga ætlan til leiðsluna</span>
                       </li>
                       <li className="flex items-center gap-3 text-sm">
-                        <Calendar className="w-5 h-5 text-emerald-500 shrink-0" />
+                        <Calendar className="w-5 h-5 text-emerald-700 shrink-0" />
                         <span>45 min uppfylging 2-3 vikur seinni</span>
                       </li>
                     </ul>
@@ -198,18 +198,18 @@ export default function FrontpageV3() {
               {/* Right Column: Full Day Option & Secondary Actions */}
               <div className="space-y-6 lg:mt-8 animate-slide-up" style={{ animationDelay: '150ms' }}>
                 {/* Full Day Card */}
-                <Card className="bg-gray-900 border-white/20 text-white hover:bg-gray-800 transition-colors">
+                <Card className="bg-gray-900 border-white/30 text-white hover:bg-gray-800 transition-colors">
                   <CardContent className="p-6">
                     <div className="flex justify-between items-center mb-4">
                       <h3 className="text-xl font-bold">Heilur dagur</h3>
                       <span className="text-2xl font-bold">45.000 kr.</span>
                     </div>
-                    <p className="text-white text-sm mb-4">
+                    <p className="text-white/90 text-sm mb-4 leading-relaxed">
                       Fyri størri toymi ella tá tit vilja fara djúpri. Inniheldur alt frá 3-tíma verkstovuni, pluss meira tíð til venjing og 2 uppfylgingar.
                     </p>
                     <Button
                       variant="outline"
-                      className="w-full border-white/40 text-white hover:bg-white hover:text-emerald-900"
+                      className="w-full border-white/50 text-white hover:bg-white hover:text-emerald-900"
                       onClick={() => {
                         const element = document.querySelector('#contact');
                         if (element) {
@@ -234,7 +234,7 @@ export default function FrontpageV3() {
                     className="inline-flex items-center gap-2 text-white hover:text-emerald-300 transition-colors group"
                   >
                     <HelpCircle className="w-5 h-5" />
-                    <span className="underline decoration-white/30 underline-offset-4 group-hover:decoration-white">
+                    <span className="underline decoration-white/60 underline-offset-4 group-hover:decoration-white">
                       Er tú ivasam/ur? Spyr meg her
                     </span>
                   </button>
