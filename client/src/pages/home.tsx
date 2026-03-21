@@ -135,7 +135,7 @@ export default function Home() {
         />
 
         {/* Background overlay for readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60 hero-overlay pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70 hero-overlay pointer-events-none"></div>
 
         {/* Animated gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10 animate-pulse pointer-events-none"></div>
@@ -151,7 +151,7 @@ export default function Home() {
         {/* Navigation Arrows */}
         <button
           onClick={handlePrevSlide}
-          className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 p-3 text-white/40 hover:text-white/80 transition-all duration-300 hover:scale-110"
+          className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 p-3 text-white/75 hover:text-white transition-all duration-300 hover:scale-110"
           data-testid="button-carousel-prev"
           aria-label="Previous slide"
         >
@@ -161,7 +161,7 @@ export default function Home() {
         </button>
         <button
           onClick={handleNextSlide}
-          className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 p-3 text-white/40 hover:text-white/80 transition-all duration-300 hover:scale-110"
+          className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 p-3 text-white/75 hover:text-white transition-all duration-300 hover:scale-110"
           data-testid="button-carousel-next"
           aria-label="Next slide"
         >
@@ -315,7 +315,7 @@ export default function Home() {
               className={`rounded-full transition-all ${
                 currentSlide === index
                   ? 'w-8 h-2 bg-white'
-                  : 'w-2 h-2 bg-white/40 hover:bg-white/60'
+                  : 'w-2 h-2 bg-white/75 hover:bg-white/90'
               }`}
               style={{
                 transition: 'all 400ms cubic-bezier(0.34, 1.56, 0.64, 1)'
@@ -342,7 +342,7 @@ export default function Home() {
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                     <div className="text-sm font-medium">
-                      <div className="text-xs opacity-80">NÝGGJUR BLOGGUR</div>
+                      <div className="text-xs font-semibold">NÝGGJUR BLOGGUR</div>
                       <div>Føroysk vitlíkiamboð</div>
                     </div>
                     <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
