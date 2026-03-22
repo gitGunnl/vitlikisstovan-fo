@@ -1,0 +1,264 @@
+Yes. For your kind of business, the page should not feel like “AI consultant for everything.” It should feel like: “We come in, make AI practical for your staff, and leave them actually able to use it on Monday.” The strongest landing pages keep the message clear, make the next step obvious, and build trust with proof instead of vague claims. Clear value proposition, minimal clutter, visible CTA, and social proof are still the core pattern.  ￼
+
+I would build your page around one main truth: your workshop is not about “the future of AI.” It is about helping normal staff use these tools safely and usefully in daily work. That is much more concrete, and it is easier to buy.
+
+Here is the direction I would take.
+
+Positioning
+
+The homepage should sell one main thing: practical AI workshops for Faroese workplaces. Not advisory. Not software builds. Not “transformation.” Those can sit lower on the page as follow-on help. The hero should speak to a manager or decision-maker who is curious, slightly behind, and worried that staff either are not using AI at all or are using it randomly without guidance. That kind of clarity tends to convert better than trying to explain every possible service at once.  ￼
+
+What the hero should say
+
+You need a headline that answers three things very fast: what you do, who it is for, and why it matters.
+
+I think the safest version is:
+
+Practical AI workshops for Faroese workplaces
+Teach your staff how to use AI tools safely, usefully, and in their real day-to-day work.
+Book a workshop
+
+That is the simple version.
+
+A stronger, slightly more sales-focused version could be:
+
+Help your staff actually use AI in their daily work
+A practical 3-hour workshop for Faroese companies and organisations that want less confusion, better habits, and clear real-world use cases.
+Book a workshop
+
+And a more outcome-driven version:
+
+From AI curiosity to everyday use
+We help Faroese teams learn where AI is useful, how to use it well, and how to avoid the most common mistakes.
+Book a workshop
+
+My instinct is that version two is closest to what you actually sell.
+
+Subheadline direction
+
+Your subheadline should do the job that people often try to make the headline do. It should add the specifics.
+
+For example:
+
+In one focused session, your team gets concrete use cases, hands-on examples, prompt habits that work, and clear guidance on what not to share with AI tools.
+
+That is good because it turns the workshop into something tangible.
+
+Another good version:
+
+Built for office staff, managers, and teams who want practical AI use, not hype, jargon, or vague inspiration.
+
+That one is nice because it separates you from fluffy talks.
+
+CTA
+
+You should probably not use a weak button like “Learn more.” Use something direct. The best practice here is to make the next step obvious and repeat it across the page.  ￼
+
+Best options:
+
+Book a workshop
+Request a workshop
+Talk about a workshop
+
+My favorite is Book a workshop if you are comfortable being direct. If not, Talk about a workshop feels softer and may suit B2B better in a small market.
+
+Supporting line under the CTA
+
+A tiny line under the button can reduce friction. Something like:
+
+3-hour workshop · For companies and organisations · Delivered in Faroese or English
+
+Or:
+
+For teams that want practical AI use right away
+
+The first section after the hero
+
+Right after the hero, I would not go into your life story. I would answer: why do this now?
+
+Headline:
+
+Many staff are already testing AI. Few have been shown how to use it well.
+
+Body:
+
+Some employees are trying AI tools on their own. Others are unsure where to begin. That often leads to two problems: missed opportunities and messy usage. This workshop helps your team understand where AI is genuinely useful, how to use it better in daily work, and where the boundaries should be.
+
+That is strong because it names the real pain without being dramatic.
+
+“What they get” section
+
+This is important. Buyers need to picture the outcome. Service pages work better when the offer is concrete and easy to imagine.  ￼
+
+Headline:
+
+What your team gets from the workshop
+
+Then short blocks like:
+
+Practical examples
+Relevant ways to use AI in writing, planning, summarising, brainstorming, analysis, and routine office work.
+
+Better prompt habits
+Simple ways to ask better, guide the tool, and get more useful output.
+
+Safer usage
+Clear understanding of what should not be shared and where staff need to be careful.
+
+A realistic view
+What AI is good at, where it still fails, and how to use human judgment well.
+
+“Who it is for” section
+
+This helps people self-identify quickly.
+
+Headline:
+
+A good fit for teams that…
+
+Then copy like:
+
+Want practical AI use rather than abstract theory.
+Have staff doing writing, planning, communication, admin, analysis, or knowledge work.
+Need a shared baseline before deciding what to do next.
+Want more confidence and less random experimentation.
+
+“Why choose us” section
+
+This is where you make the Faroese angle do real work. Not as decoration, but as positioning.
+
+Headline:
+
+Why Vitlíkisstovan
+
+Body copy:
+
+We do not start with big promises about “AI transformation.” We start with what people can actually use in their work. Our focus is practical adoption in a Faroese context: real staff, real workflows, real constraints, and clear language people understand.
+
+You can add another paragraph:
+
+That means examples that fit daily office life, discussion of privacy and good judgment, and a teaching style built for people who are curious but not technical.
+
+This is probably your strongest differentiator.
+
+Trust / proof section
+
+Trust signals matter a lot on service pages. Strangers believe proof more than self-praise.  ￼
+
+If you have logos, use them. If you have testimonials, even better. If you do not yet have many, use softer proof like:
+
+Workshops delivered for Faroese companies and organisations
+Used by teams in banking, administration, and knowledge work
+Focused on practical, day-to-day use
+
+If you have specific names you are allowed to use, do it. A small-market buyer wants reassurance that others like them have trusted you.
+
+A testimonial block could say:
+
+“This made AI much more concrete for our team. It stopped feeling abstract and started feeling useful.”
+
+Even two or three lines like that can help a lot.
+
+Section on the workshop itself
+
+People will want to know what the actual session looks like.
+
+Headline:
+
+What happens in the workshop
+
+Body:
+
+The workshop lasts around 3 hours and is designed to be practical from start to finish. We introduce the key ideas simply, show concrete examples, and work through how AI tools can be used in everyday tasks. The session also covers common mistakes, limitations, and how to think sensibly about safe use.
+
+Then a small line:
+
+Can be adapted to managers, office staff, specific departments, or mixed teams.
+
+Follow-on offer, lower on the page
+
+You asked what else you should expand into. On the page, I would not make that equal to the main offer. But I would mention the next steps after the workshop.
+
+Headline:
+
+Need help after the workshop?
+
+Body:
+
+For organisations that want to go further, we also help with follow-on work such as identifying the best AI use cases for a team, creating simple internal guidelines for safe use, and advising on the next practical steps.
+
+That opens the door without making the page messy.
+
+Final CTA section
+
+The page should end with a clean invitation.
+
+Headline:
+
+Want to see whether this is a fit for your team?
+
+Body:
+
+The easiest place to start is a workshop. It gives your team a practical foundation and makes the next steps much clearer.
+
+Button:
+
+Book a workshop
+
+Or:
+
+Get in touch
+
+My recommended full homepage draft
+
+Here is a clean version you could almost use as-is.
+
+Hero
+Practical AI workshops for Faroese workplaces
+Teach your staff how to use AI tools safely, usefully, and in their real day-to-day work.
+In one focused 3-hour session, your team gets concrete use cases, better prompt habits, and a clearer sense of where AI helps — and where it does not.
+Book a workshop
+
+Section 2
+Many staff are already testing AI. Few have been shown how to use it well.
+Some employees are experimenting on their own. Others are unsure where to begin. That often leads to missed opportunities, uneven quality, and uncertainty about what is safe to share. This workshop helps your team build a practical, shared foundation.
+
+Section 3
+What your team gets
+Practical examples for real work tasks.
+Simple ways to get better results from AI tools.
+A clearer sense of what AI is useful for — and what it is not.
+Guidance on safer use and better judgment.
+
+Section 4
+Built for real day-to-day work
+This is not a talk about futuristic AI. It is a practical workshop for people who write, plan, communicate, analyse, organise, and solve problems in everyday work.
+
+Section 5
+Why Vitlíkisstovan
+We focus on practical AI adoption in a Faroese context. That means clear language, relevant examples, and a grounded approach that helps ordinary staff actually use the tools — not just hear about them.
+
+Section 6
+What happens in the workshop
+The workshop typically runs for 3 hours and can be tailored to your team. We cover the basics clearly, show useful examples, discuss common mistakes, and make AI feel concrete and usable.
+
+Section 7
+Need help after the workshop?
+We also help organisations identify useful next steps, shape simple internal guidance, and find practical ways to build on what the workshop starts.
+
+Final CTA
+Want to explore whether this is a fit for your team?
+Start with a workshop.
+Book a workshop
+
+One important copy choice
+
+Do not overuse the word “AI.” The page should be about outcomes, not the topic itself. People are not buying AI. They are buying staff who understand how to use new tools well, save time, and avoid mistakes. Pages that stay focused on the visitor’s goal tend to work better than pages that mainly talk about the provider.  ￼
+
+My blunt advice
+
+Your homepage should probably not lead with “agency,” “consulting,” or “advisory.” It should lead with the workshop, because that is the proven offer. Then the rest of the page should quietly show that you can help them with the next step too.
+
+That keeps the message sharp and credible.
+
+I can also write you a complete homepage in either English or Faroese, section by section.
