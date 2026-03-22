@@ -24,6 +24,7 @@ import AnnadFraVitlikisstovuni from "@/pages/annad-fra-vitlikisstovuni";
 import Gemini3FoTest from "@/pages/gemini3-fo-test";
 import FrontpageV2 from "@/pages/frontpage-v2";
 import FrontpageV3 from "@/pages/frontpage-v3";
+import FrontpageV4 from "@/pages/frontpage-v4";
 import Byrjunarskeidi from "@/pages/okkara-taenastur/byrjunarskeidi";
 import FimmtanHaettir from "@/pages/okkara-taenastur/15-haettir";
 import Fyrilestur from "@/pages/okkara-taenastur/fyrilestur";
@@ -63,6 +64,7 @@ function Router() {
       <Route path="/gemini3-fo-test" component={Gemini3FoTest} />
       <Route path="/frontpage-v2" component={FrontpageV2} />
       <Route path="/frontpage-v3" component={FrontpageV3} />
+      <Route path="/frontpage-v4" component={FrontpageV4} />
       <Route path="/val" component={Val} />
       <Route path="/val/svara" component={ValSvara} />
       <Route path="/val/admin" component={ValAdmin} />
