@@ -1,0 +1,154 @@
+Yes — this is a real risk, and the fix is **not** to make the homepage say “we do everything.”
+
+That usually makes things worse.
+
+The better move is to make the page say, very quickly: **“We help organisations turn AI ideas into something practical.”** Then, underneath that, show the main ways you help. The homepage should reassure visitors that they are in the right place, while still making one path feel primary. Clear value proposition and clear navigation are what help buyers feel oriented rather than lost. ([CXL][1])
+
+Right now, your page sounds like it may be too narrowly framed around the workshop. That is good for focus, but it can accidentally tell someone with a different need, “this is not for me.” So the answer is to shift the framing upward one level.
+
+Instead of leading with:
+
+**We do AI workshops**
+
+lead with something more like:
+
+**We help Faroese organisations make practical use of AI**
+
+or:
+
+**From AI ideas to practical solutions for Faroese workplaces**
+
+That way, someone who needs a workshop, a presentation, an app prototype, an AI-generated campaign asset, or advice on what to do next can all still think: “Okay, this might be relevant.” Buyers respond better to problem-solving language than vague brand-first language. ([HubSpot Blog][2])
+
+Then, right below the hero, do something very explicit. Add a short “How we help” section with 4–6 cards. Not fluffy cards. Very concrete ones.
+
+For example:
+
+**Workshops**
+Practical AI training for teams and organisations
+
+**Presentations**
+Clear and engaging talks for leaders, staff, and events
+
+**Advice**
+Help choosing tools, use cases, and next steps
+
+**Prototypes**
+Quick first versions of AI tools, apps, or internal helpers
+
+**Creative production**
+AI-generated images, video concepts, and campaign material
+
+This works because it lets visitors self-sort fast. It tells them they are in the right place without forcing them through the workshop framing first. It also reduces the chance that someone bounces just because they came in with a different starting need. Too many navigation choices can create friction, but a simple, well-labeled set of paths helps people understand where to go. ([HubSpot Blog][3])
+
+The important nuance is this: your homepage should still have a **primary** offer. It just should not pretend that is the only thing you do.
+
+So the structure should be:
+
+Hero = broad practical AI positioning
+Below hero = main ways you help
+Then = spotlight the workshop as the easiest starting point
+Then = explain follow-on services
+
+That way, the workshop still benefits from being the clearest entry product, but the rest of your business is visible enough that nobody feels misplaced.
+
+A good homepage message for you might be:
+
+**Practical AI help for Faroese organisations**
+Workshops, presentations, advice, prototypes, and creative AI production — tailored to real needs, not hype.
+**Book a workshop**
+**See how we help**
+
+That second button matters. One CTA can still point to your main commercial offer, while the other catches people who are not ready for that exact step. Giving people a logical next step helps them stay oriented. ([CXL][4])
+
+You can also add one small line under the hero that is surprisingly powerful:
+
+**Need a workshop, presentation, app idea, AI visuals, or just help figuring out what is possible? You’re in the right place.**
+
+That is blunt, but that is exactly why it works. It removes doubt immediately.
+
+Another good tactic is to organize your services around **jobs to be done**, not service categories. People often do not know whether they need consulting, a workshop, or a prototype. They just know the situation they are in.
+
+So instead of only saying:
+
+* Workshops
+* Consulting
+* Prototypes
+* Presentations
+
+you can also say:
+
+**We can help if you need to…**
+
+* get your team started with AI
+* explain AI clearly to a group
+* turn an idea into a first prototype
+* create AI-generated visuals or concepts
+* decide which tools and use cases make sense
+
+This style often works better because it meets the visitor where they are emotionally and practically. ([CXL][5])
+
+I also think you should have a **“Not sure what you need?”** block somewhere fairly high on the page.
+
+Something like:
+
+**Not sure whether you need a workshop, a talk, a prototype, or advice?**
+That is normal. Many clients start with a rough idea. We help clarify the right first step based on your situation.
+**Tell me what you have in mind**
+
+This is especially good for a one-person agency, because a lot of your value is actually helping clients define the problem, not just delivering a pre-boxed service.
+
+My blunt recommendation is this:
+
+Do **not** try to solve this by making the homepage a long list of everything you can do.
+Do it by making the homepage communicate three things fast:
+
+You work with AI in practical ways.
+You help with several common kinds of needs.
+There is a simple path forward even if the visitor is unsure.
+
+That is how people feel they are in the right place.
+
+If I were sketching your homepage messaging, I would do it like this:
+
+**Hero headline**
+Practical AI help for Faroese organisations
+
+**Subheadline**
+Workshops, talks, advice, prototypes, and creative AI production — built around real needs, real workflows, and clear next steps.
+
+**Primary CTA**
+Book a workshop
+
+**Secondary CTA**
+See how we help
+
+**Quick reassurance line**
+Need a presentation, app idea, AI-generated visuals, or guidance on what to do next? You’re in the right place.
+
+**Service path cards**
+Workshops
+Presentations
+Advice
+Prototypes
+Creative AI production
+
+**Then later**
+The workshop is often the best place to start
+
+That last point is important. You do not have to pretend every visitor should buy the workshop immediately. You can frame it as the most common starting point for many organisations. That keeps your strongest current product central without excluding everyone else.
+
+The ideal effect is:
+“Ah, these people do practical AI work.”
+“Okay, they do the kind of thing I might need.”
+“Good, there’s an easy next step.”
+
+That is the feeling you want.
+
+I can write you the exact homepage copy for this structure next.
+
+[1]: https://cxl.com/blog/10-best-practices-for-better-b2b-website-experience/?utm_source=chatgpt.com "B2B Websites: 10 Best Practices for UX and Design"
+[2]: https://blog.hubspot.com/marketing/write-value-proposition?utm_source=chatgpt.com "How to Write a Great Value Proposition [7 Top Examples + ..."
+[3]: https://blog.hubspot.com/blog/tabid/6307/bid/30557/6-guidelines-for-exceptional-website-design-and-usability.aspx?utm_source=chatgpt.com "12 web design best practices & guidelines for usability ..."
+[4]: https://cxl.com/blog/landing-page-optimization/?utm_source=chatgpt.com "Landing Page Optimization Process for High Conversion ..."
+[5]: https://cxl.com/blog/b2b-buying-journey/?utm_source=chatgpt.com "The B2B buying journey: What marketing leaders need to ..."
