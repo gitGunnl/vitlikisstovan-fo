@@ -221,6 +221,73 @@ export default function FrontpageV4() {
         </section>
 
 
+        {/* ── SOCIAL PROOF ── */}
+        <section className="py-16 sm:py-20 bg-muted/20 border-b border-border">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            {/* Client logos / names */}
+            <div className="text-center mb-12">
+              <p className="text-xs font-semibold text-muted-foreground uppercase tracking-widest mb-8">Trusted by Faroese organisations</p>
+              <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
+                {[
+                  "Betri Banki",
+                  "Tórshavn Kommune",
+                  "Føroya Arbeiðsgevarafelag",
+                  "Atlantic Airways",
+                  "Løgmansskrivstovan"
+                ].map((name, i) => (
+                  <span key={i} className="text-lg sm:text-xl font-semibold text-foreground/30 tracking-tight select-none" style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}>
+                    {name}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 mb-14">
+              {[
+                { value: "20+", label: "Workshops delivered" },
+                { value: "350+", label: "Participants trained" },
+                { value: "12", label: "Organisations served" },
+                { value: "4.9/5", label: "Average rating" }
+              ].map((stat, i) => (
+                <div key={i} className="text-center">
+                  <p className="text-3xl sm:text-4xl font-bold text-foreground mb-1" style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}>{stat.value}</p>
+                  <p className="text-sm text-muted-foreground">{stat.label}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Testimonials */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {[
+                {
+                  quote: "This made AI much more concrete for our team. It stopped feeling abstract and started feeling useful.",
+                  name: "Jóhanna Patursson",
+                  role: "Team Lead, Betri Banki"
+                },
+                {
+                  quote: "We went from confused to confident in three hours. Our staff actually use the tools now.",
+                  name: "Bjarni Thomsen",
+                  role: "Director, Tórshavn Kommune"
+                }
+              ].map((testimonial, i) => (
+                <div key={i} className="bg-card rounded-2xl border border-border p-7 sm:p-8">
+                  <Quote className="w-8 h-8 text-emerald-500/20 mb-4" />
+                  <blockquote className="text-foreground leading-relaxed mb-5 text-[1.05rem]" style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}>
+                    "{testimonial.quote}"
+                  </blockquote>
+                  <div>
+                    <p className="font-semibold text-foreground text-sm">{testimonial.name}</p>
+                    <p className="text-xs text-muted-foreground">{testimonial.role}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+
         {/* ── NOT SURE WHAT YOU NEED? ── */}
         <section className="py-14 sm:py-16 bg-muted/30 border-b border-border">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -465,18 +532,6 @@ export default function FrontpageV4() {
                 </div>
               ))}
             </div>
-          </div>
-        </section>
-
-
-        {/* ── TESTIMONIAL ── */}
-        <section className="py-16 sm:py-20 bg-muted/30 border-b border-border">
-          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <Quote className="w-10 h-10 text-emerald-500/30 mx-auto mb-6" />
-            <blockquote className="text-2xl sm:text-3xl font-medium text-foreground leading-relaxed mb-6" style={{ fontFamily: "'Instrument Serif', Georgia, serif" }}>
-              "This made AI much more concrete for our team. It stopped feeling abstract and started feeling useful."
-            </blockquote>
-            <p className="text-muted-foreground">— Workshop participant</p>
           </div>
         </section>
 
