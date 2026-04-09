@@ -64,6 +64,12 @@ function WorkshopContactFormComponent({ id }: { id?: string }) {
       return { success: true };
     },
     onSuccess: () => {
+      if (typeof window !== 'undefined' && window.fbq) {
+        window.fbq('track', 'Lead', {
+          content_name: 'AI Workshop Contact Form',
+          content_category: 'workshop',
+        });
+      }
       setSubmitted(true);
       form.reset();
     },

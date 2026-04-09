@@ -1,22 +1,22 @@
 export const workshopStrings = {
   meta: {
-    pageTitle: "Verkstova í vitlíki fyri fyritøkur og stovnar | Vitlíkisstovan",
+    pageTitle: "Verkstova um vitlíki fyri fyritøkur og stovnar | Vitlíkisstovan",
     description:
-      "Fáið eina praktiska byrjan við vitlíki. Ein 3 tíma verkstova, sum hjálpir starvsfólkum at skilja, hvat vitlíki er gott til í arbeiðinum, hvar tað ikki eigur at verða brúkt, og hvat er trygt at deila.",
-    ogTitle: "Praktisk verkstova í vitlíki fyri fyritøkur og stovnar | Vitlíkisstovan",
+      "Fáið eina flúgvandi byrjan við vitlíki. Ein 3 tíma verkstova, sum hjálpir starvsfólkum at skilja, hvat vitlíki er gott til í arbeiðinum, hvar tað ikki eigur at verða brúkt, og hvussu man ber seg trygt at.",
+    ogTitle: "Til øll starvsfólk sum vilja læra at nýta vitlíki til sítt arbeiði, trygt og munagott. Passar til allar fyritøkur og stovnar | Vitlíkisstovan",
     ogDescription:
       "Ein handalig verkstova fyri arbeiðspláss, sum vilja geva starvsfólkunum eina greiðari byrjan við vitlíki, betri fatan av, nær tað hjálpir, og tryggari nýtslu í gerandisdegnum.",
   },
 
   form: {
-    nameLabel: "Navn *",
-    namePlaceholder: "Skriva títt navn",
+    nameLabel: "Títt navn *",
+    namePlaceholder: "t.d. Jákup Joensen",
     organizationLabel: "Fyritøka ella stovnur *",
     organizationPlaceholder: "Navnið á tykkara arbeiðsplássi",
     workEmailLabel: "Arbeiðsteldupostur *",
     workEmailPlaceholder: "navn@fyritoka.fo",
     phoneLabel: "Telefon",
-    phonePlaceholder: "+298 ...",
+    phonePlaceholder: "t.d. 919444",
     messageLabel: "Viðmerking",
     messagePlaceholder:
       "Greið stutt frá tykkara toymi, og hvat tit vilja hava burtur úr verkstovuni.",
@@ -32,7 +32,7 @@ export const workshopStrings = {
     heading: "Takk fyri — tíni boð eru send",
     body:
       "Eg svari tær so skjótt sum til ber, so vit kunnu finna út av, um verkstovan hóskar tykkara arbeiðsplássi.",
-    urgentPrefix: "Skundar tað, ert tú altíð vælkomin at ringja ella skriva til mín á",
+    urgentPrefix: "Hevur tú skund, ert tú altíð vælkomin at ringja ella skriva til mín á",
     phone: "telefon",
     or: "ella",
     email: "teldupost",
@@ -40,11 +40,11 @@ export const workshopStrings = {
 
   hero: {
     eyebrow: "Verkstova í vitlíki fyri føroysk arbeiðspláss",
-    heading: "Gev starvsfólkunum eina praktiska byrjan við vitlíki",
+    heading: "Til øll starvsfólk sum vilja læra at nýta vitlíki til sítt arbeiði, trygt og munagott. Passar til allar fyritøkur og stovnar",
     subheading:
-      "Ein 3 tíma handalig verkstova, sum hjálpir hvørjum luttakara at skilja, hvat vitlíki er gott til í egnum arbeiði, hvar tað ikki eigur at verða brúkt, og hvat er trygt at deila.",
+      "Ein 3 tíma handalig verkstova, sum hjálpir hvørjum luttakara at skilja, hvat vitlíki er gott til í teirra egna arbeiði, hvar tað ikki eigur at verða brúkt, og hvussu man ber seg trygt at.",
     bullets: [
-      "Greiðari mynd av, hvat vitlíki kann hjálpa við í gerandisdegnum",
+      "Greiðari fatan um, hvat vitlíki kann hjálpa við í gerandisdegnum",
       "Betri fatan av, nær tað gevur meining at brúka tað — og nær tað ikki ger",
       "Tryggari og meira skynsom nýtsla í toyminum",
     ],
