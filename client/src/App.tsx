@@ -34,6 +34,7 @@ import SkapandiVitliki from "@/pages/okkara-taenastur/skapandi-vitliki";
 import Val from "@/pages/val";
 import ValSvara from "@/pages/val-svara";
 import ValAdmin from "@/pages/val-admin";
+import AIWorkshop from "@/pages/ai-workshop";
 
 function Router() {
   return (
@@ -68,6 +69,7 @@ function Router() {
       <Route path="/val" component={Val} />
       <Route path="/val/svara" component={ValSvara} />
       <Route path="/val/admin" component={ValAdmin} />
+      <Route path="/ai-workshop" component={AIWorkshop} />
       <Route component={NotFound} />
     </Switch>
   );

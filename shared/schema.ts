@@ -112,3 +112,13 @@ export const adminUpdateSubmissionSchema = z.object({
   answers: z.record(z.string(), z.string()).optional(),
   extraComment: z.string().optional()
 });
+
+export const workshopContactFormSchema = z.object({
+  name: z.string().min(1, "Name is required").max(100),
+  organization: z.string().min(1, "Organization is required").max(200),
+  workEmail: z.string().email("Please enter a valid work email"),
+  phone: z.string().optional(),
+  message: z.string().max(1000).optional(),
+});
+
+export type WorkshopContactForm = z.infer<typeof workshopContactFormSchema>;
