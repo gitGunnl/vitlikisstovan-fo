@@ -64,10 +64,10 @@ export default function Taenastur() {
         <Section id="skeid" className="py-12 sm:py-16">
           <div className="mx-auto max-w-4xl">
             <h2 className="text-3xl sm:text-4xl font-semibold mb-2">
-              Byrja her: Útbúgving til skrivstovufólk
+              Byrja her:
             </h2>
             <p className="italic text-muted-foreground mb-8">
-              Eitt fullkomið innlit í vitlíki til tína fyritøku
+              
             </p>
 
             <div className="rounded-3xl border bg-card text-card-foreground shadow-sm p-6 sm:p-8">
@@ -77,7 +77,7 @@ export default function Taenastur() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-2xl font-semibold mb-2">
-                    Byrjunarskeið í ChatGPT til føroysk skrivstovufólk
+                    Verkstova: Lær at nýta vitlíki í tínum arbeiði. Til føroysk skrivstovufólk
                   </h3>
 
                   <div className="flex gap-2 mb-4">
@@ -85,12 +85,12 @@ export default function Taenastur() {
                       Besta fyrsta stigið
                     </Badge>
                     <Badge variant="outline" className="border-blue-200 text-blue-700">
-                      Netskeið
+                      Verkstova
                     </Badge>
                   </div>
 
                   <p className="leading-relaxed mb-4">
-                    Okkara umfatandi skeið lærir teg at brúka KjattGPT
+                    Hendan verkstovan lærir teg at brúka KjattGPT
                     effektivt í gerandisarbeiði. Hóskar væl til bæði nýbyrjarar og yrkisfólk. Flestu av okkara kundum byrja sína vitlíkisferð
                     her.
                   </p>
@@ -115,53 +115,8 @@ export default function Taenastur() {
             </h2>
 
             <div className="grid grid-cols-1 gap-6">
-              {/* 1. 15 hættir */}
-              <div className="rounded-3xl border bg-card text-card-foreground shadow-sm p-6 sm:p-8">
-                <div className="flex items-start gap-4">
-                  <div className="hidden sm:flex h-12 w-12 items-center justify-center rounded-2xl bg-chart-1/10">
-                    <Lightbulb className="h-6 w-6" />
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-semibold mb-2">
-                      1. 15 hættir at brúka KjattGPT
-                    </h3>
-                    <div className="mb-4">
-                      <Badge variant="secondary" className="bg-orange-100 text-orange-800 border-orange-200">
-                        Mælt til sum næsta stigið
-                      </Badge>
-                    </div>
-                    <p className="leading-relaxed mb-4">
-                      Spar tær vikur av feilum og skeivum royndum – vit geva tær
-                      15 tillagaðar mátar at brúka KjattGPT í tínum arbeiði.
-                      Hendan tænastan hjálpir tær at finna beinraktar uppgávur, sum tú kanst brúka KjattGPT til í júst tínum arbeiði - í dag.
-                    </p>
-                    <p className="leading-relaxed mb-4">
-                      Hetta gera vit við at taka ein fund, so fortelur tú mær akkurát, hvat tú gert, og so sigi eg tær akkurát, hvat tú kanst brúka ChatGPT til.
-                    </p>
-                    <p className="leading-relaxed mb-4">
-                      Tað tekur 1 til 2 tímar og sparir fleiri vikur av leitan
-                      og feilum.
-                    </p>
 
-                    <p className="font-semibold mb-4">Prísur: 1.500 DKK</p>
-
-
-
-                    <p className="italic text-muted-foreground mt-4">
-                      Hendan tænastan hjálpir tær at finna út av akkurát hvørja uppgávu TÚ kanst nýta vitlíki til.
-                    </p>
-                    <a
-                      href="/okkara-taenastur/15-haettir"
-                      className="inline-flex items-center gap-2 text-primary font-medium hover:underline transition mt-4"
-                    >
-                      Les meira
-                      <ArrowRight className="h-4 w-4" />
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              {/* 2. Fyrilestur */}
+              {/* Fyrilestur */}
               <div className="rounded-3xl border bg-card text-card-foreground shadow-sm p-6 sm:p-8">
                 <div className="flex items-start gap-4">
                   <div className="hidden sm:flex h-12 w-12 items-center justify-center rounded-2xl bg-chart-2/10">
@@ -169,7 +124,7 @@ export default function Taenastur() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-semibold mb-2">
-                      2. Fyrilestur: Vitlíki - Frá Óvissu til Møguleikar
+                      Fyrilestur: Vitlíki - Frá Óvissu til Møguleikar
                     </h3>
                     <div className="mb-4">
                       <Badge variant="secondary" className="bg-purple-100 text-purple-800 border-purple-200">
@@ -185,15 +140,15 @@ export default function Taenastur() {
                     </p>
                     <ul className="list-disc pl-6 space-y-2 mb-4">
                       <li>
-                        🔹 <strong>Minni ivi, meira greiði</strong> – Skil
+                        <strong>Minni ivi, meira greiði</strong> – Skil
                         vitlíki uttan torskilt tekniskt mál.
                       </li>
                       <li>
-                        🔹 <strong>Frá ræðslu til spenning</strong> – Síggj,
+                        <strong>Frá ræðslu til spenning</strong> – Síggj,
                         hvussu vitlíki kann vera ein hjálp, ikki ein hóttan.
                       </li>
                       <li>
-                        🔹 <strong>Ítøkiligur íblástur</strong> – Uppliv, hvussu
+                        <strong>Ítøkiligur íblástur</strong> – Uppliv, hvussu
                         vitlíki kann gera arbeiðið lættari og meira munagott.
                       </li>
                     </ul>
@@ -230,7 +185,7 @@ export default function Taenastur() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-semibold mb-2">
-                      3. Vitlíkisupplæring
+                      Vitlíkisupplæring
                     </h3>
                     <div className="mb-4">
                       <Badge variant="secondary" className="bg-cyan-100 text-cyan-800 border-cyan-200">
@@ -269,7 +224,7 @@ export default function Taenastur() {
                   </div>
                   <div className="flex-1">
                     <h3 className="text-2xl font-semibold mb-2">
-                      4. Serloysnir til sjálvirkan
+                      Menning av serloysnum
                     </h3>
                     <div className="mb-4">
                       <Badge variant="secondary" className="bg-pink-100 text-pink-800 border-pink-200">
