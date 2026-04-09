@@ -69,12 +69,12 @@ export const workshopStrings = {
   relevance: {
     heading: "Er hetta viðkomandi fyri tykkara arbeiðspláss?",
     body:
-      "Nógv arbeiðspláss vita, at vitlíki kann vera gagnligt, men nýtslan er framvegis ógreið. Summi hava roynt amboð sum ChatGPT. Onnur eru ikki veruliga komin í gongd. Og nógv ivast í, hvat er trygt at deila. Hetta er ein verkstova fyri tykkum, sum vilja geva starvsfólkunum eina praktiska og felags byrjan, so tey fáa eina greiðari fatan av, nær vitlíki hjálpir, og nær tað ikki ger tað.",
+      "Nógv arbeiðspláss vita, at vitlíki kann vera gagnligt, men nýtslan er framvegis ógreið. Summi hava roynt amboð sum ChatGPT. Onnur brúka tað hvønn dag, men hava ikki fingið nakra venjing í rætta nýtslu og onnur eru ikki komin í gongd. Og nógv ivast í, hvat er trygt at deila. Hetta er ein verkstova fyri tykkum, sum vilja geva starvsfólkunum eina praktiska og munagóða byrjan, so tey fáa eina greiðari fatan av, nær vitlíki hjálpir, og nær tað ikki ger tað.",
     points: [
-      "Starvsfólkini eru forvitin, men nýtslan er framvegis tilvildarlig",
-      "Tit hava roynt amboðini, men úrslitini eru ofta óstøðug",
+      "Starvsfólk eru forvitin, men nýtslan er framvegis tilvildarlig",
+      "Tit hava roynt amboðini, men eru ongantíð blivin vegleidd um bestu nýtslu",
       "Ivi valdar um, hvat er trygt at deila",
-      "Tit vilja hava eina felags og praktiska byrjan uttan fløkta tøknirøðu",
+      "Tit vilja hava eina felags og praktiska fatan uttan fløktar tøkniligar frágreiðingar",
     ],
   },
 
@@ -82,14 +82,14 @@ export const workshopStrings = {
     heading: "Hetta fáa fólk burtur úr verkstovuni",
     items: [
       {
-        title: "Ein greið byrjan",
+        title: "Eina greiða byrjan",
         text:
-          "Luttakararnir fáa eina einfalda og brúksrættaða innleiðslu til vitlíki í vanligum skrivstovuarbeiði.",
+          "Luttakarar fáa eina einfalda og brúksrættaða innleiðslu til vitlíki í teirra arbeiði.",
       },
       {
         title: "Betri fatan av, hvar tað hjálpir",
         text:
-          "Hvør einstakur fær eina greiðari mynd av, hvørjar uppgávur vitlíki er gott til, og hvat er betri at gera sjálvur.",
+          "Øll fáa eina greiðari fatan av, hvørjar uppgávur vitlíki er gott til fyri tey, og hvat er betri at gera sjálvi.",
       },
       {
         title: "Tryggari nýtsla",
@@ -99,17 +99,17 @@ export const workshopStrings = {
       {
         title: "Meira brúkilig úrslit",
         text:
-          "Vit vísa, hvussu ein kann fáa betri svar og betri hjálp frá amboðum sum ChatGPT við at geva greiðari boð og betri samanhang.",
+          "Vit vísa ymiskar snildir til hvussu ein kann fáa betri svar og betri hjálp frá amboðum sum ChatGPT.",
       },
       {
         title: "Dømi úr vanligum arbeiði",
         text:
-          "Dentur verður lagdur á uppgávur sum at skriva, leggja ætlanir, gera samandráttir, kanna, greina og skipa tilfar.",
+          "Dentur verður lagdur á vitlíkis nýtslu til tað veruliga arbeiði fólk gera til dagligt.",
       },
       {
-        title: "Felags grundstøði",
+        title: "Ítøkilig nýtslu dømir",
         text:
-          "Arbeiðsplássið fær eina meira felags fatan av, hvussu góð og skynsom nýtsla sær út í verki.",
+          "Hvør einstakur fer frá verkstovuni við einum lista av tingum tey kunnu nýta vitlíki til í sínum arbeiði.",
       },
     ],
   },
@@ -122,17 +122,17 @@ export const workshopStrings = {
       {
         title: "Hvat vitlíki er gott til í vanligum skrivstovuarbeiði",
         text:
-          "Vit hyggja at ítøkiligum uppgávum, har vitlíki veruliga kann hjálpa, og hvar tað oftast er minni hent.",
+          "Vit hyggja at ítøkiligum uppgávum, har vitlíki veruliga kann hjálpa, og hvar man ikki skal nýta vitlíki.",
       },
       {
         title: "Hvussu ein fær betri úrslit",
         text:
-          "Luttakararnir læra at geva greiðari boð, geva røttan samanhang og brúka amboðini meira munagott.",
+          "Luttakarar læra at geva greiðari boð, geva rættan samanhang og brúka amboðini meira munagott.",
       },
       {
         title: "Hvat ikki eigur at verða latið til vitlíki",
         text:
-          "Ein týðandi partur av verkstovuni er dømingarmáttur. Ikki allar uppgávur hóska til vitlíki, og fólk fáa eina greiðari fatan av mørkunum.",
+          "Ein týðandi partur av verkstovuni er hvussu man metur um hvat man kann siga við hesi amboð. Ikki allar uppgávur hóska til vitlíki, og fólk fáa eina greiðari fatan av mørkunum.",
       },
       {
         title: "Trygg nýtsla og einfalt dátuvernd",
@@ -142,12 +142,12 @@ export const workshopStrings = {
       {
         title: "Venjingar knýttar at veruligum arbeiði",
         text:
-          "Luttakararnir royna seg við uppgávum, sum minna um tær, tey sita við í gerandisdegnum.",
+          "Luttakarar finna finna verulig dømir um hvussu tey kunnu nýta vitlíki til sítt arbeiði.",
       },
       {
         title: "Ein greiðari leið víðari",
         text:
-          "Fólk fara frá verkstovuni við betri mynd av, hvussu tey kunnu brúka vitlíki meira gagnligt í egnum leikluti.",
+          "Fólk fara frá verkstovuni við einari betri mynd av, hvussu tey kunnu brúka vitlíki meira gagnligt í egnum leikluti.",
       },
     ],
     facts: [
@@ -159,7 +159,7 @@ export const workshopStrings = {
   },
 
   socialProof: {
-    heading: "Hetta siga luttakararnir",
+    heading: "Hetta siga luttakarar",
     featured: {
       quote:
         "Verkstovan var sera ítøkilig og løtt at fara til. Vit fingu amboð, sum kundu takast í nýtslu beinanvegin, og trygdin er nú nógv betur skipað hjá okkum.",
@@ -204,15 +204,15 @@ export const workshopStrings = {
     items: [
       {
         q: "Er verkstovan bara fyri tey, ið longu eru stinn í vitlíki?",
-        a: "Nei. Verkstovan er serliga viðkomandi fyri fólk, sum eru tíðliga í gongdini og vilja hava eina trygga og skiljandi byrjan.",
+        a: "Nei. Verkstovan er viðkomandi fyri fólk, sum eru tíðliga í gongdini og til tey sum eru stinn, men ikki hava fingið nakra veruliga upplæring.",
       },
       {
         q: "Er hetta ov tøkniligt?",
         a: "Nei. Dentur verður lagdur á veruliga nýtslu í arbeiðsdegnum, ikki á forritan ella fløkt tøkniligt ástøði.",
       },
       {
-        q: "Vit hava longu roynt ChatGPT eitt sindur. Er hetta framvegis viðkomandi?",
-        a: "Ja. Nógv hava roynt slík amboð í einføldum høpi uttan at fáa serliga nógv virði burturúr. Verkstovan hjálpir fólki at brúka tey meira munagott og gjøgnumhugsað.",
+        q: "Vit hava longu roynt ChatGPT. Er hetta framvegis viðkomandi?",
+        a: "Ja. Vit gjøgnumgenga nógv ting, sum næstan eingin ger av sínum eintøkum tá ið tey býrja við vitlíki sjálvi. Verkstovan hjálpir fólki at brúka vitlíki meira munagott og gjøgnumhugsað, líka mikið hvat støði tey eru á.",
       },
       {
         q: "Viðgera tit trygd og persónsupplýsingar?",
