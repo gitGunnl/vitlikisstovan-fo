@@ -1,212 +1,241 @@
 export const workshopStrings = {
   meta: {
-    pageTitle: "Practical AI Workshop for Faroese Organizations | Vitlíkisstovan",
-    description: "A hands-on 3-hour AI workshop for Faroese office staff. Practical starting point, safer use, and clearer judgment about what AI is actually useful for at work.",
-    ogTitle: "Practical AI Workshop for Faroese Organizations | Vitlíkisstovan",
-    ogDescription: "A hands-on 3-hour AI workshop that helps your team understand what AI is useful for, where it is not, and what is safe to share.",
+    pageTitle: "Verkstova í vitlíki fyri fyritøkur og stovnar | Vitlíkisstovan",
+    description:
+      "Fáið eina praktiska byrjan við vitlíki. Ein 3 tíma verkstova, sum hjálpir starvsfólkum at skilja, hvat vitlíki er gott til í arbeiðinum, hvar tað ikki eigur at verða brúkt, og hvat er trygt at deila.",
+    ogTitle: "Praktisk verkstova í vitlíki fyri fyritøkur og stovnar | Vitlíkisstovan",
+    ogDescription:
+      "Ein handalig verkstova fyri arbeiðspláss, sum vilja geva starvsfólkunum eina greiðari byrjan við vitlíki, betri fatan av, nær tað hjálpir, og tryggari nýtslu í gerandisdegnum.",
   },
 
   form: {
-    nameLabel: "Name *",
-    namePlaceholder: "Your name",
-    organizationLabel: "Organization *",
-    organizationPlaceholder: "Your organization",
-    workEmailLabel: "Work email *",
-    workEmailPlaceholder: "you@organization.fo",
-    phoneLabel: "Phone",
-    phonePlaceholder: "+298...",
-    messageLabel: "Message",
-    messagePlaceholder: "Tell me a little about your team or what you want help with",
-    submitButton: "Ask about a workshop",
-    submitting: "Sending...",
-    reassurance: "No pressure. Just a simple first conversation.",
-    errorMessage: "Something went wrong. Please try again or email me directly.",
+    nameLabel: "Navn *",
+    namePlaceholder: "Skriva títt navn",
+    organizationLabel: "Fyritøka ella stovnur *",
+    organizationPlaceholder: "Navnið á tykkara arbeiðsplássi",
+    workEmailLabel: "Arbeiðsteldupostur *",
+    workEmailPlaceholder: "navn@fyritoka.fo",
+    phoneLabel: "Telefon",
+    phonePlaceholder: "+298 ...",
+    messageLabel: "Viðmerking",
+    messagePlaceholder:
+      "Greið stutt frá tykkara toymi, og hvat tit vilja hava burtur úr verkstovuni.",
+    submitButton: "Spyr um verkstovu",
+    submitting: "Sendir...",
+    reassurance:
+      "Fyrispurningurin er óbindandi. Vit taka eitt stutt og óformligt prát fyrst.",
+    errorMessage:
+      "Okkurt gekk galið. Royn vinarliga aftur, ella send mær ein teldupost beinleiðis.",
   },
 
   formSuccess: {
-    heading: "Thanks — your message has been sent",
-    body: "I'll get back to you as soon as I can. We can then quickly see whether this workshop is a good fit for your team.",
-    urgentPrefix: "If your question is urgent, feel free to contact me directly by",
-    phone: "phone",
-    or: "or",
-    email: "email",
+    heading: "Takk fyri — tíni boð eru send",
+    body:
+      "Eg svari tær so skjótt sum til ber, so vit kunnu finna út av, um verkstovan hóskar tykkara arbeiðsplássi.",
+    urgentPrefix: "Skundar tað, ert tú altíð vælkomin at ringja ella skriva til mín á",
+    phone: "telefon",
+    or: "ella",
+    email: "teldupost",
   },
 
   hero: {
-    eyebrow: "Practical AI workshop for Faroese organizations",
-    heading: "Give your office staff a practical starting point with AI",
-    subheading: "A hands-on 3-hour workshop that helps people understand what AI is actually useful for in their work, where it is not, and what is safe to share.",
+    eyebrow: "Verkstova í vitlíki fyri føroysk arbeiðspláss",
+    heading: "Gev starvsfólkunum eina praktiska byrjan við vitlíki",
+    subheading:
+      "Ein 3 tíma handalig verkstova, sum hjálpir hvørjum luttakara at skilja, hvat vitlíki er gott til í egnum arbeiði, hvar tað ikki eigur at verða brúkt, og hvat er trygt at deila.",
     bullets: [
-      "Clearer ideas for what to use AI for in daily work",
-      "Better judgment about where AI helps and where it does not",
-      "Safer and more sensible use across the team",
+      "Greiðari mynd av, hvat vitlíki kann hjálpa við í gerandisdegnum",
+      "Betri fatan av, nær tað gevur meining at brúka tað — og nær tað ikki ger",
+      "Tryggari og meira skynsom nýtsla í toyminum",
     ],
-    ctaButton: "Ask about a workshop",
-    directContact: "Or contact me directly by email or phone",
-    replyNote: "I'll reply personally and we can quickly see if this fits your team.",
+    ctaButton: "Spyr um verkstovu",
+    directContact: "Tú ert eisini vælkomin at ringja ella skriva",
+    replyNote:
+      "Eg svari sjálvur, og vit kunnu skjótt finna út av, um hetta hóskar tykkara toymi.",
   },
 
   trustStrip: {
-    heading: "Trusted by teams and organizations in the Faroe Islands",
+    heading: "Viðkomandi fyri fyritøkur og stovnar í Føroyum",
     placeholders: [
-      "Organization 1",
-      "Organization 2",
-      "Organization 3",
-      "Organization 4",
-      "Organization 5",
+      "Pláss fyri búmerki",
+      "Pláss fyri búmerki",
+      "Pláss fyri búmerki",
+      "Pláss fyri búmerki",
+      "Pláss fyri búmerki",
     ],
-    footnote: "Comments from previous workshop participants will appear here.",
+    footnote: "Ummæli frá luttakarum og arbeiðsplássum koma her skjótt.",
   },
 
   relevance: {
-    heading: "This is for organizations that want a clearer and more useful start with AI",
-    body: "Many teams know AI matters, but day-to-day use is still unclear. Some people have tested tools like ChatGPT. Some are barely using them. Some are unsure what is safe. Most organizations do not need more hype. They need a practical starting point that helps normal staff use these tools better.",
+    heading: "Er hetta viðkomandi fyri tykkara arbeiðspláss?",
+    body:
+      "Nógv arbeiðspláss vita, at vitlíki kann vera gagnligt, men nýtslan er framvegis ógreið. Summi hava roynt amboð sum ChatGPT. Onnur eru ikki veruliga komin í gongd. Og nógv ivast í, hvat er trygt at deila. Hetta er ein verkstova fyri tykkum, sum vilja geva starvsfólkunum eina praktiska og felags byrjan, so tey fáa eina greiðari fatan av, nær vitlíki hjálpir, og nær tað ikki ger tað.",
     points: [
-      "Your staff are curious about AI, but use is still scattered",
-      "People have tried it, but results are often weak or inconsistent",
-      "There is uncertainty about what it is safe to share",
-      "You want a shared starting point that feels practical, not technical",
+      "Starvsfólkini eru forvitin, men nýtslan er framvegis tilvildarlig",
+      "Tit hava roynt amboðini, men úrslitini eru ofta óstøðug",
+      "Ivi valdar um, hvat er trygt at deila",
+      "Tit vilja hava eina felags og praktiska byrjan uttan fløkta tøknirøðu",
     ],
   },
 
   outcomes: {
-    heading: "What your people get from the workshop",
+    heading: "Hetta fáa fólk burtur úr verkstovuni",
     items: [
       {
-        title: "A practical starting point",
-        text: "People get a clear and useful introduction to AI in everyday office work, without technical overload.",
+        title: "Ein greið byrjan",
+        text:
+          "Luttakararnir fáa eina einfalda og brúksrættaða innleiðslu til vitlíki í vanligum skrivstovuarbeiði.",
       },
       {
-        title: "Better judgment about where AI helps",
-        text: "Each person gets a clearer feel for which tasks AI can help with, and which tasks are better handled without it.",
+        title: "Betri fatan av, hvar tað hjálpir",
+        text:
+          "Hvør einstakur fær eina greiðari mynd av, hvørjar uppgávur vitlíki er gott til, og hvat er betri at gera sjálvur.",
       },
       {
-        title: "Safer use",
-        text: "People learn simple rules for thinking about what is safe to share and what should stay out of these tools.",
+        title: "Tryggari nýtsla",
+        text:
+          "Fólk læra einfaldar reglur fyri, hvat er trygt at deila, og hvat eigur at haldast uttan fyri slík amboð.",
       },
       {
-        title: "More useful results",
-        text: "The workshop shows people how to get better output from tools like ChatGPT by giving clearer instructions and using them more thoughtfully.",
+        title: "Meira brúkilig úrslit",
+        text:
+          "Vit vísa, hvussu ein kann fáa betri svar og betri hjálp frá amboðum sum ChatGPT við at geva greiðari boð og betri samanhang.",
       },
       {
-        title: "Real examples from normal work",
-        text: "The focus is on the kinds of tasks office staff already do: writing, planning, summarising, researching, analysing, structuring, and preparing material.",
+        title: "Dømi úr vanligum arbeiði",
+        text:
+          "Dentur verður lagdur á uppgávur sum at skriva, leggja ætlanir, gera samandráttir, kanna, greina og skipa tilfar.",
       },
       {
-        title: "A shared baseline across the team",
-        text: "Instead of random individual testing, the organization gets a more shared understanding of what good use looks like.",
+        title: "Felags grundstøði",
+        text:
+          "Arbeiðsplássið fær eina meira felags fatan av, hvussu góð og skynsom nýtsla sær út í verki.",
       },
     ],
   },
 
   content: {
-    heading: "What the workshop covers",
-    subheading: "The workshop is practical and hands-on. It is built to help people use AI more sensibly in their real work, not just understand the topic in theory.",
+    heading: "Hvat verkstovan fevnir um",
+    subheading:
+      "Verkstovan er handalig og tekur støði í veruleikanum. Málið er at hjálpa fólki at brúka vitlíki meira skilagott í egnum arbeiði — ikki at kava niður í tøkniligt ástøði.",
     blocks: [
       {
-        title: "What AI is useful for in normal office work",
-        text: "We look at common tasks where AI can genuinely help, and where it tends to be less useful.",
+        title: "Hvat vitlíki er gott til í vanligum skrivstovuarbeiði",
+        text:
+          "Vit hyggja at ítøkiligum uppgávum, har vitlíki veruliga kann hjálpa, og hvar tað oftast er minni hent.",
       },
       {
-        title: "How to get better results",
-        text: "People learn how to ask for better output, give better context, and work with AI in a more effective way.",
+        title: "Hvussu ein fær betri úrslit",
+        text:
+          "Luttakararnir læra at geva greiðari boð, geva røttan samanhang og brúka amboðini meira munagott.",
       },
       {
-        title: "What not to use it for",
-        text: "A key part of the workshop is judgment. Not every task should be handed to AI, and people need a clearer sense of where the limits are.",
+        title: "Hvat ikki eigur at verða latið til vitlíki",
+        text:
+          "Ein týðandi partur av verkstovuni er dømingarmáttur. Ikki allar uppgávur hóska til vitlíki, og fólk fáa eina greiðari fatan av mørkunum.",
       },
       {
-        title: "Safe use and simple data judgment",
-        text: "We cover practical thinking about what is safe to share, what is not, and how to use these tools more responsibly.",
+        title: "Trygg nýtsla og einfalt dátuvernd",
+        text:
+          "Vit fara ígjøgnum, hvat kann deilast, hvat eigur at haldast aftur, og hvussu ein brúkar hesi amboðini meira ábyrgdarfult.",
       },
       {
-        title: "Hands-on practice tied to real work",
-        text: "Participants work with examples and exercises that feel relevant to the kinds of tasks they already do.",
+        title: "Venjingar knýttar at veruligum arbeiði",
+        text:
+          "Luttakararnir royna seg við uppgávum, sum minna um tær, tey sita við í gerandisdegnum.",
       },
       {
-        title: "A clearer next step after the workshop",
-        text: "People leave with a better idea of how they can start using AI more usefully in their own role.",
+        title: "Ein greiðari leið víðari",
+        text:
+          "Fólk fara frá verkstovuni við betri mynd av, hvussu tey kunnu brúka vitlíki meira gagnligt í egnum leikluti.",
       },
     ],
     facts: [
-      "3 hours",
-      "Hands-on",
-      "For office staff and knowledge work teams",
-      "Can be adapted to your organization",
+      "3 tímar",
+      "Handaligt og í verki",
+      "Fyri skrivstovufólk og toymi",
+      "Lagað til tykkara arbeiðspláss",
     ],
   },
 
   socialProof: {
-    heading: "What previous participants said",
+    heading: "Hetta siga luttakararnir",
     featured: {
-      quote: "[Main testimonial placeholder. Ideally something about the workshop being practical, clear, and immediately useful.]",
-      name: "Name",
-      role: "Role",
-      org: "Organization",
+      quote:
+        "Verkstovan var sera ítøkilig og løtt at fara til. Vit fingu amboð, sum kundu takast í nýtslu beinanvegin, og trygdin er nú nógv betur skipað hjá okkum.",
+      name: "Navn",
+      role: "Starv",
+      org: "Fyritøka ella stovnur",
     },
     smaller: [
       {
-        quote: "[Short testimonial placeholder about the practical approach.]",
-        name: "Name",
-        role: "Role",
-        org: "Organization",
+        quote:
+          "Endiliga ein verkstova, sum ikki var ov tøknilig, men tók støði í okkara arbeiðsdegi.",
+        name: "Navn",
+        role: "Starv",
+        org: "Fyritøka",
       },
       {
-        quote: "[Short testimonial placeholder about clearer AI understanding.]",
-        name: "Name",
-        role: "Role",
-        org: "Organization",
+        quote:
+          "Tað gav okkum eina felags fatan av, hvat vitlíki er gott til, og hvat vit heldur ikki eiga at brúka tað til.",
+        name: "Navn",
+        role: "Starv",
+        org: "Stovnur",
       },
       {
-        quote: "[Short testimonial placeholder about safer use of AI tools.]",
-        name: "Name",
-        role: "Role",
-        org: "Organization",
+        quote:
+          "Greiðu reglurnar um dátutrygd gjørdu, at vit kenna okkum tryggari at royna nýggj amboð.",
+        name: "Navn",
+        role: "Starv",
+        org: "Fyritøka",
       },
       {
-        quote: "[Short testimonial placeholder about useful exercises.]",
-        name: "Name",
-        role: "Role",
-        org: "Organization",
+        quote:
+          "Venjingarnar vóru góðar, tí vit arbeiddu við uppgávum, sum líkjast teimum, vit sita við dagliga.",
+        name: "Navn",
+        role: "Starv",
+        org: "Fyritøka",
       },
     ],
   },
 
   faq: {
-    heading: "Questions people often have",
+    heading: "Ofta settir spurningar",
     items: [
       {
-        q: "Is this only for people who are already good at AI?",
-        a: "No. This workshop is especially relevant for people who are still early in their journey and want a practical, understandable starting point.",
+        q: "Er verkstovan bara fyri tey, ið longu eru stinn í vitlíki?",
+        a: "Nei. Verkstovan er serliga viðkomandi fyri fólk, sum eru tíðliga í gongdini og vilja hava eina trygga og skiljandi byrjan.",
       },
       {
-        q: "Is this a technical workshop?",
-        a: "No. The focus is on real use in normal work, not on how the technology works under the hood.",
+        q: "Er hetta ov tøkniligt?",
+        a: "Nei. Dentur verður lagdur á veruliga nýtslu í arbeiðsdegnum, ikki á forritan ella fløkt tøkniligt ástøði.",
       },
       {
-        q: "We have already tried ChatGPT a little. Is this still relevant?",
-        a: "Yes. Many teams have tried these tools in a shallow way without getting much value. The workshop helps people use them in a more useful and thoughtful way.",
+        q: "Vit hava longu roynt ChatGPT eitt sindur. Er hetta framvegis viðkomandi?",
+        a: "Ja. Nógv hava roynt slík amboð í einføldum høpi uttan at fáa serliga nógv virði burturúr. Verkstovan hjálpir fólki at brúka tey meira munagott og gjøgnumhugsað.",
       },
       {
-        q: "Does the workshop cover safe use?",
-        a: "Yes. A core part of the workshop is helping people think more clearly about what is safe to share and how to use these tools more sensibly.",
+        q: "Viðgera tit trygd og persónsupplýsingar?",
+        a: "Ja. Ein týðandi partur av verkstovuni snýr seg um, hvat er trygt at deila, og hvussu ein brúkar slík amboð meira skynsamt og ábyrgdarfult.",
       },
       {
-        q: "Who is this most relevant for?",
-        a: "It is most relevant for office staff, managers, specialists, and teams doing writing, planning, analysis, communication, reporting, research, documentation, and other knowledge work.",
+        q: "Hvørjum hóskar verkstovan best til?",
+        a: "Hon hóskar væl til skrivstovufólk, leiðarar, serfrøðingar og toymi, sum arbeiða við skriving, samskifti, greining, skjalfesting, ætlanargerð, frágreiðingum og líknandi vitanararbeiði.",
       },
       {
-        q: "What happens if we get in touch?",
-        a: "We have a simple first conversation about your team, your needs, and whether the workshop is the right fit.",
+        q: "Hvat hendir, tá ið eg seti meg í samband við tykkum?",
+        a: "Vit taka eitt stutt og óformligt prát um tykkara tørv og finna síðani út av, um verkstovan er rætta loysnin fyri tykkum.",
       },
     ],
   },
 
   finalCta: {
-    heading: "Want to give your staff a clearer and more useful start with AI?",
-    body: "Get in touch and we can quickly see whether this workshop fits your team.",
-    ctaButton: "Ask about a workshop",
-    directContact: "Or contact me directly by email or phone",
-    reassurance: "Simple first conversation. No obligation.",
+    heading: "Vilja tit geva starvsfólkunum eina greiðari byrjan við vitlíki?",
+    body:
+      "Set teg í samband, so vit kunnu skjótt finna út av, um verkstovan hóskar tykkara toymi.",
+    ctaButton: "Spyr um verkstovu",
+    directContact:
+      "Ella set teg í samband við meg beinleiðis umvegis teldupost ella telefon",
+    reassurance: "Prátið er óformligt og óbindandi.",
   },
 };
