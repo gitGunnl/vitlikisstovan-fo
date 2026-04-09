@@ -443,6 +443,10 @@ export const siteConfig = {
     "/course-details": {
       title: "Skeiðsupplýsingar - Vitlíkisstovan",
       description: "Nærri upplýsingar um vitlíkisskeið."
+    },
+    "/ai-workshop": {
+      title: "Verkstova um vitlíki fyri fyritøkur og stovnar | Vitlíkisstovan",
+      description: "Fáið eina flúgvandi byrjan við vitlíki. Ein 3 tíma verkstova, sum hjálpir starvsfólkum at skilja, hvat vitlíki er gott til í arbeiðinum, hvar tað ikki eigur at verða brúkt, og hvussu man ber seg trygt at."
     }
   }
 };
