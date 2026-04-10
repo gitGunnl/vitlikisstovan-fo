@@ -117,10 +117,10 @@ function WorkshopContactFormComponent({ id }: { id?: string }) {
               <a
                 key={link.href}
                 href={link.href}
-                className="flex items-center justify-between px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-teal-50 hover:border-teal-200 transition-colors group"
+                className="flex items-center justify-between px-4 py-3.5 rounded-lg border border-teal-200 bg-teal-50 hover:bg-teal-100 hover:border-teal-300 transition-colors group"
               >
-                <span className="text-sm font-medium text-slate-800 group-hover:text-teal-800">{link.label}</span>
-                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-teal-600 transition-colors" />
+                <span className="text-sm font-semibold text-teal-800">{link.label}</span>
+                <ArrowRight className="w-4 h-4 text-teal-500 group-hover:text-teal-700 group-hover:translate-x-0.5 transition-all" />
               </a>
             ))}
           </div>

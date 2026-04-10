@@ -34,7 +34,7 @@ export const workshopStrings = {
       "Eg svari tær so skjótt sum til ber, so vit kunnu finna út av, um verkstovan hóskar tykkara arbeiðsplássi.",
     whatHappensNext: "Hvat hendir nú?",
     steps: [
-      "Eg les tíni boð og svari innan 1 virkin dag",
+      "Eg lesi tíni boð og vendi aftur sum skjótast.",
       "Vit taka eitt stutt og óformligt prát um tykkara tørv",
       "Saman finna vit út av, um verkstovan er rætta loysnin",
     ],
