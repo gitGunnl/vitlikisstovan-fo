@@ -3,7 +3,7 @@ export const workshopStrings = {
     pageTitle: "Verkstova um vitlíki fyri fyritøkur og stovnar | Vitlíkisstovan",
     description:
       "Fáið eina flúgvandi byrjan við vitlíki. Ein 3 tíma verkstova, sum hjálpir starvsfólkum at skilja, hvat vitlíki er gott til í arbeiðinum, hvar tað ikki eigur at verða brúkt, og hvussu man ber seg trygt at.",
-    ogTitle: "Til øll starvsfólk sum vilja læra at nýta vitlíki til sítt arbeiði, trygt og munagott. Passar til allar fyritøkur og stovnar | Vitlíkisstovan",
+    ogTitle: "Til fyritøkur og stovnar ið vilja læra starvfólk at nýta vitlíki til sítt arbeiði, trygt og munagott. Passar til alt slag arbeiði. | Vitlíkisstovan",
     ogDescription:
       "Ein handalig verkstova fyri arbeiðspláss, sum vilja geva starvsfólkunum eina greiðari byrjan við vitlíki, betri fatan av, nær tað hjálpir, og tryggari nýtslu í gerandisdegnum.",
   },
@@ -40,7 +40,7 @@ export const workshopStrings = {
 
   hero: {
     eyebrow: "Verkstova í vitlíki fyri føroysk arbeiðspláss",
-    heading: "Til øll starvsfólk sum vilja læra at nýta vitlíki til sítt arbeiði, trygt og munagott. Passar til allar fyritøkur og stovnar",
+    heading: "Til fyritøkur og stovnar ið vilja læra starvfólk at nýta vitlíki til sítt arbeiði, trygt og munagott. Passar til alt slag arbeiði.",
     subheading:
       "Ein 3 tíma handalig verkstova, sum hjálpir hvørjum luttakara at skilja, hvat vitlíki er gott til í teirra egna arbeiði, hvar tað ikki eigur at verða brúkt, og hvussu man ber seg trygt at.",
     bullets: [
