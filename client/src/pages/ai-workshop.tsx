@@ -110,16 +110,17 @@ function WorkshopContactFormComponent({ id }: { id?: string }) {
           </p>
         </div>
 
-        <div className="border-t border-slate-100 pt-5">
-          <p className="text-xs text-slate-400 text-center mb-3">{t.formSuccess.exploreHeading}</p>
-          <div className="flex flex-wrap items-center justify-center gap-3">
+        <div className="border-t border-slate-100 pt-6">
+          <p className="text-sm font-medium text-slate-700 text-center mb-4">{t.formSuccess.exploreHeading}</p>
+          <div className="flex flex-col gap-2.5">
             {t.formSuccess.exploreLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
-                className="inline-flex items-center gap-1.5 text-sm text-teal-700 hover:text-teal-800 hover:underline"
+                className="flex items-center justify-between px-4 py-3 rounded-lg border border-slate-200 bg-slate-50 hover:bg-teal-50 hover:border-teal-200 transition-colors group"
               >
-                {link.label} <ArrowRight className="w-3 h-3" />
+                <span className="text-sm font-medium text-slate-800 group-hover:text-teal-800">{link.label}</span>
+                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-teal-600 transition-colors" />
               </a>
             ))}
           </div>
