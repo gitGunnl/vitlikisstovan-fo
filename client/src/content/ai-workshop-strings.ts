@@ -32,10 +32,22 @@ export const workshopStrings = {
     heading: "Takk fyri — tíni boð eru send",
     body:
       "Eg svari tær so skjótt sum til ber, so vit kunnu finna út av, um verkstovan hóskar tykkara arbeiðsplássi.",
+    whatHappensNext: "Hvat hendir nú?",
+    steps: [
+      "Eg les tíni boð og svari innan 1 virkin dag",
+      "Vit taka eitt stutt og óformligt prát um tykkara tørv",
+      "Saman finna vit út av, um verkstovan er rætta loysnin",
+    ],
     urgentPrefix: "Hevur tú skund, ert tú altíð vælkomin at ringja ella skriva til mín á",
     phone: "telefon",
     or: "ella",
     email: "teldupost",
+    exploreHeading: "Kanska hevur tú áhuga fyri at vita meira um okkum",
+    exploreLinks: [
+      { label: "Okkara tænastur", href: "/okkara-taenastur" },
+      { label: "Um okkum", href: "/um-okkum" },
+      { label: "Bloggurin", href: "/blog" },
+    ],
   },
 
   hero: {

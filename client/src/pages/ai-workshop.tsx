@@ -77,19 +77,53 @@ function WorkshopContactFormComponent({ id }: { id?: string }) {
 
   if (submitted) {
     return (
-      <div className="text-center py-10 px-4">
-        <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-50 border border-green-200 mb-5">
-          <CheckCircle2 className="w-7 h-7 text-green-600" />
+      <div className="py-8 px-4">
+        <div className="text-center mb-6">
+          <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-50 border border-green-200 mb-5">
+            <CheckCircle2 className="w-7 h-7 text-green-600" />
+          </div>
+          <h3 className="text-xl font-semibold text-slate-900 mb-3">{t.formSuccess.heading}</h3>
+          <p className="text-slate-600 leading-relaxed max-w-sm mx-auto">
+            {t.formSuccess.body}
+          </p>
         </div>
-        <h3 className="text-xl font-semibold text-slate-900 mb-3">{t.formSuccess.heading}</h3>
-        <p className="text-slate-600 leading-relaxed max-w-sm mx-auto">
-          {t.formSuccess.body}
-        </p>
-        <p className="text-sm text-slate-500 mt-6">
-          {t.formSuccess.urgentPrefix}{" "}
-          <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`} className="text-teal-700 hover:underline">{t.formSuccess.phone}</a> {t.formSuccess.or}{" "}
-          <a href={`mailto:${siteConfig.contact.email}`} className="text-teal-700 hover:underline">{t.formSuccess.email}</a>.
-        </p>
+
+        <div className="bg-slate-50 rounded-lg p-5 mb-6">
+          <h4 className="text-sm font-semibold text-slate-800 mb-3">{t.formSuccess.whatHappensNext}</h4>
+          <ol className="space-y-2.5">
+            {t.formSuccess.steps.map((step, i) => (
+              <li key={i} className="flex items-start gap-3">
+                <span className="flex-shrink-0 w-5 h-5 rounded-full bg-teal-100 text-teal-700 text-xs font-semibold flex items-center justify-center mt-0.5">
+                  {i + 1}
+                </span>
+                <span className="text-sm text-slate-600">{step}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+
+        <div className="text-center mb-6">
+          <p className="text-sm text-slate-500">
+            {t.formSuccess.urgentPrefix}{" "}
+            <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`} className="text-teal-700 hover:underline">{t.formSuccess.phone}</a> {t.formSuccess.or}{" "}
+            <a href={`mailto:${siteConfig.contact.email}`} className="text-teal-700 hover:underline">{t.formSuccess.email}</a>.
+          </p>
+        </div>
+
+        <div className="border-t border-slate-100 pt-5">
+          <p className="text-xs text-slate-400 text-center mb-3">{t.formSuccess.exploreHeading}</p>
+          <div className="flex flex-wrap items-center justify-center gap-3">
+            {t.formSuccess.exploreLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="inline-flex items-center gap-1.5 text-sm text-teal-700 hover:text-teal-800 hover:underline"
+              >
+                {link.label} <ArrowRight className="w-3 h-3" />
+              </a>
+            ))}
+          </div>
+        </div>
       </div>
     );
   }
@@ -414,6 +448,23 @@ function FinalCTASection() {
   );
 }
 
+function MinimalHeader() {
+  return (
+    <header className="w-full border-b border-slate-100 bg-white">
+      <div className="max-w-5xl mx-auto flex items-center h-14 px-4 sm:px-6">
+        <a href="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <img
+            src="/logo-header.png"
+            alt={siteConfig.siteName}
+            className="h-7 w-7 object-contain"
+          />
+          <span className="font-semibold text-slate-900">{siteConfig.siteName}</span>
+        </a>
+      </div>
+    </header>
+  );
+}
+
 export default function AIWorkshopLanding() {
   useEffect(() => {
     document.title = t.meta.pageTitle;
@@ -467,6 +518,7 @@ export default function AIWorkshopLanding() {
 
   return (
     <div className="min-h-screen bg-white text-slate-900 antialiased">
+      <MinimalHeader />
       <HeroSection />
       <TrustStrip />
       <RelevanceSection />
