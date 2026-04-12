@@ -95,7 +95,7 @@ export default function Taenastur() {
                     her.
                   </p>
                   <a
-                    href="/okkara-taenastur/byrjunarskeidi"
+                    href="/ai-workshop"
                     className="inline-flex items-center gap-2 text-primary font-medium hover:underline transition"
                   >
                     Les meira
