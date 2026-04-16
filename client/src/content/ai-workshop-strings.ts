@@ -72,21 +72,25 @@ export const workshopStrings = {
       {
         quote: "Sera væl nøgd – tillagað til júst tað, vit høvdu tørv á.",
         name: "Hildur Durhuus",
+        role: "Nýskapan í ferðavinnuni 2026",
         org: "Samskipar",
       },
       {
         quote: "Bæði hugvekjandi og læruríkt – viðkomandi fyri leiðarar og starvsfólk.",
         name: "Reidar Luid",
+        role: "Forritan og menning",
         org: "Betri Banki",
       },
       {
         quote: "Greið, viðkomandi og beinanvegin gagnlig í praksis.",
         name: "Elin Brimnes",
+        role: "Arkitekt",
         org: "Kontrast",
       },
       {
         quote: "Gav okkum betri fatan og fleiri góð hugskot at taka víðari.",
         name: "Sigrið Zachariasen",
+        role: "Dagligur leiðari",
         org: "Reyði Krossur Føroya",
       },
     ],

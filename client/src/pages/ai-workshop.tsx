@@ -280,7 +280,7 @@ function TrustStrip() {
                 "{item.quote}"
               </p>
               <p className="text-xs font-medium text-slate-800">{item.name}</p>
-              <p className="text-xs text-slate-400">{item.org}</p>
+              <p className="text-xs text-slate-400">{item.role} · {item.org}</p>
             </div>
           ))}
         </div>
