@@ -271,24 +271,24 @@ function HeroSection() {
 
 function TrustStrip() {
   return (
-    <section className="bg-white py-12 px-4 sm:px-6">
+    <section className="bg-white py-8 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
-        <p className="text-sm text-slate-400 mb-8 text-center tracking-wide uppercase">
+        <p className="text-xs text-slate-400 mb-5 text-center tracking-wide uppercase">
           {t.trustStrip.heading}
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
           {t.trustStrip.quotes.map((item, i) => (
             <div
               key={i}
-              className="bg-slate-50 border border-slate-200 rounded-xl p-5 flex flex-col"
+              className="bg-slate-50 border border-slate-200 rounded-lg p-4 flex flex-col"
             >
-              <Quote className="w-5 h-5 text-teal-500/40 mb-3 rotate-180" />
-              <p className="text-sm text-slate-700 leading-relaxed flex-1 mb-4">
+              <Quote className="w-4 h-4 text-teal-500/40 mb-2 rotate-180" />
+              <p className="text-[13px] text-slate-700 leading-relaxed flex-1 mb-3">
                 {item.quote}
               </p>
-              <div className="border-t border-slate-200 pt-3">
-                <p className="text-sm font-semibold text-slate-800">{item.name}</p>
-                <p className="text-xs text-slate-400">
+              <div className="border-t border-slate-200 pt-2">
+                <p className="text-xs font-semibold text-slate-800">{item.name}</p>
+                <p className="text-[11px] text-slate-400">
                   {item.role} · {item.org}
                 </p>
               </div>
@@ -565,8 +565,8 @@ export default function AIWorkshopLanding() {
   return (
     <div className="min-h-screen bg-white text-slate-900 antialiased">
       <MinimalHeader />
-      <HeroSection />
       <TrustStrip />
+      <HeroSection />
       <RelevanceSection />
       <OutcomesSection />
       <ContentSection />
