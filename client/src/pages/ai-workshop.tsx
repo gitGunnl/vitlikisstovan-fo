@@ -247,6 +247,7 @@ function HeroSection() {
                 {t.hero.ctaButton} <ArrowRight className="w-4 h-4 ml-2" />
               </a>
             </div>
+            <TrustStripInline />
           </div>
           <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 sm:p-7">
             <WorkshopContactFormComponent id="contact-form" />
@@ -269,34 +270,32 @@ function HeroSection() {
   );
 }
 
-function TrustStrip() {
+function TrustStripInline() {
   return (
-    <section className="bg-white py-8 px-4 sm:px-6">
-      <div className="max-w-5xl mx-auto">
-        <p className="text-xs text-slate-400 mb-5 text-center tracking-wide uppercase">
-          {t.trustStrip.heading}
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
-          {t.trustStrip.quotes.map((item, i) => (
-            <div
-              key={i}
-              className="bg-slate-50 border border-slate-200 rounded-lg p-4 flex flex-col"
-            >
-              <Quote className="w-4 h-4 text-teal-500/40 mb-2 rotate-180" />
-              <p className="text-[13px] text-slate-700 leading-relaxed flex-1 mb-3">
-                {item.quote}
+    <div className="pt-6 mt-2">
+      <p className="text-[11px] text-slate-400 mb-3 tracking-wide uppercase">
+        {t.trustStrip.heading}
+      </p>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+        {t.trustStrip.quotes.map((item, i) => (
+          <div
+            key={i}
+            className="bg-white border border-slate-200 rounded-lg p-3 flex flex-col"
+          >
+            <Quote className="w-3.5 h-3.5 text-teal-500/40 mb-1.5 rotate-180" />
+            <p className="text-[12px] text-slate-600 leading-relaxed flex-1 mb-2">
+              {item.quote}
+            </p>
+            <div className="border-t border-slate-100 pt-1.5">
+              <p className="text-[11px] font-semibold text-slate-700">{item.name}</p>
+              <p className="text-[10px] text-slate-400">
+                {item.role} · {item.org}
               </p>
-              <div className="border-t border-slate-200 pt-2">
-                <p className="text-xs font-semibold text-slate-800">{item.name}</p>
-                <p className="text-[11px] text-slate-400">
-                  {item.role} · {item.org}
-                </p>
-              </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
-    </section>
+    </div>
   );
 }
 
@@ -565,7 +564,6 @@ export default function AIWorkshopLanding() {
   return (
     <div className="min-h-screen bg-white text-slate-900 antialiased">
       <MinimalHeader />
-      <TrustStrip />
       <HeroSection />
       <RelevanceSection />
       <OutcomesSection />
