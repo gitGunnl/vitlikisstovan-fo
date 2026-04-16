@@ -20,7 +20,7 @@ const navDropdowns: NavDropdown[] = [
     label: "Tænastur",
     href: "/okkara-taenastur",
     items: [
-      { title: "Verkstovur", href: "/verkstova", icon: Wrench },
+      { title: "Verkstovur", href: "/ai-workshop", icon: Wrench },
       { title: "Fyrilestrar", href: "/okkara-taenastur/fyrilestur", icon: Presentation },
       { title: "Ráðgeving", href: "/okkara-taenastur/vitlikisupplaering", icon: Settings },
       { title: "Menning av serloysnum", href: "/okkara-taenastur/serloysnir", icon: Monitor },
