@@ -166,14 +166,23 @@ export default function Header() {
             </a>
 
             <div>
-              <button
-                onClick={() => setIsMobileSubMenuOpen(!isMobileSubMenuOpen)}
-                aria-expanded={isMobileSubMenuOpen}
-                className="flex items-center justify-between w-full px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary hover:bg-accent/50 rounded-md transition-all duration-200"
-              >
-                Annað frá Vitlíkisstovuni
-                <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isMobileSubMenuOpen ? 'rotate-180' : ''}`} />
-              </button>
+              <div className="flex items-center">
+                <a
+                  href="/annad-fra-vitlikisstovuni"
+                  onClick={closeMobileMenu}
+                  className="flex-1 px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary hover:bg-accent/50 rounded-l-md transition-all duration-200"
+                >
+                  Annað frá Vitlíkisstovuni
+                </a>
+                <button
+                  onClick={() => setIsMobileSubMenuOpen(!isMobileSubMenuOpen)}
+                  aria-expanded={isMobileSubMenuOpen}
+                  aria-label="Víðka undirflokkar"
+                  className="px-3 py-2 text-gray-700 hover:text-primary hover:bg-accent/50 rounded-r-md transition-all duration-200"
+                >
+                  <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isMobileSubMenuOpen ? 'rotate-180' : ''}`} />
+                </button>
+              </div>
               <div className={`overflow-hidden transition-all duration-200 ease-in-out ${isMobileSubMenuOpen ? 'max-h-60' : 'max-h-0'}`}>
                 <div className="pl-4 space-y-1 mt-1">
                   {dropdownItems.map((item) => {
