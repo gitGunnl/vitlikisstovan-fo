@@ -68,14 +68,28 @@ export const workshopStrings = {
 
   trustStrip: {
     heading: "Viðkomandi fyri fyritøkur og stovnar í Føroyum",
-    placeholders: [
-      "Pláss fyri búmerki",
-      "Pláss fyri búmerki",
-      "Pláss fyri búmerki",
-      "Pláss fyri búmerki",
-      "Pláss fyri búmerki",
+    quotes: [
+      {
+        quote: "Sera væl nøgd – tillagað til júst tað, vit høvdu tørv á.",
+        name: "Hildur Durhuus",
+        org: "Samskipar",
+      },
+      {
+        quote: "Bæði hugvekjandi og læruríkt – viðkomandi fyri leiðarar og starvsfólk.",
+        name: "Reidar Luid",
+        org: "Betri Banki",
+      },
+      {
+        quote: "Greið, viðkomandi og beinanvegin gagnlig í praksis.",
+        name: "Elin Brimnes",
+        org: "Kontrast",
+      },
+      {
+        quote: "Gav okkum betri fatan og fleiri góð hugskot at taka víðari.",
+        name: "Sigrið Zachariasen",
+        org: "Reyði Krossur Føroya",
+      },
     ],
-    footnote: "Ummæli frá luttakarum og arbeiðsplássum koma her skjótt.",
   },
 
   relevance: {

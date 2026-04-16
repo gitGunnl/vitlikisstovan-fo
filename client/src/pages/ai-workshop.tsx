@@ -270,17 +270,20 @@ function HeroSection() {
 
 function TrustStrip() {
   return (
-    <section className="border-y border-slate-100 py-8 px-4 sm:px-6 bg-white">
-      <div className="max-w-4xl mx-auto text-center">
-        <p className="text-sm text-slate-400 mb-6">{t.trustStrip.heading}</p>
-        <div className="flex flex-wrap items-center justify-center gap-6">
-          {t.trustStrip.placeholders.map((name, i) => (
-            <div key={i} className="h-9 px-5 bg-slate-50 rounded border border-slate-100 flex items-center justify-center">
-              <span className="text-xs text-slate-400">{name}</span>
+    <section className="border-y border-slate-100 py-10 px-4 sm:px-6 bg-slate-50/50">
+      <div className="max-w-5xl mx-auto">
+        <p className="text-sm text-slate-400 mb-8 text-center">{t.trustStrip.heading}</p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          {t.trustStrip.quotes.map((item, i) => (
+            <div key={i} className="text-center px-4">
+              <p className="text-sm text-slate-600 italic leading-relaxed mb-3">
+                "{item.quote}"
+              </p>
+              <p className="text-xs font-medium text-slate-800">{item.name}</p>
+              <p className="text-xs text-slate-400">{item.org}</p>
             </div>
           ))}
         </div>
-        <p className="text-xs text-slate-300 mt-5 italic">{t.trustStrip.footnote}</p>
       </div>
     </section>
   );
