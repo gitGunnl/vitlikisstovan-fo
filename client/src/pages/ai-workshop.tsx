@@ -367,24 +367,55 @@ function ContentSection() {
 }
 
 function SocialProofSection() {
+  const getInitials = (name: string) => name.split(" ").map(n => n[0]).join("");
+  const accentColors = [
+    "bg-teal-600 text-white",
+    "bg-slate-700 text-white",
+    "bg-teal-500 text-white",
+  ];
+
   return (
-    <section className="py-14 md:py-18 px-4 sm:px-6 bg-white">
+    <section className="py-14 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-slate-50 to-white">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-10 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-12 text-center">
           {t.socialProof.heading}
         </h2>
-        <Card className="border-slate-200 mb-6">
-          <CardContent className="p-6 sm:p-8">
-            <p className="text-lg text-slate-600 leading-relaxed mb-5 italic">"{t.socialProof.featured.quote}"</p>
-            <p className="text-sm text-slate-500">— {t.socialProof.featured.name}, {t.socialProof.featured.role}, {t.socialProof.featured.org}</p>
+        <Card className="border-teal-100 bg-white shadow-md mb-8 relative overflow-hidden">
+          <div className="absolute top-0 left-0 w-1 h-full bg-teal-500" />
+          <CardContent className="p-6 sm:p-10">
+            <span className="text-5xl leading-none text-teal-300 font-serif select-none" aria-hidden="true">"</span>
+            <p className="text-lg sm:text-xl text-slate-700 leading-relaxed mb-6 italic -mt-4 pl-2">
+              {t.socialProof.featured.quote}
+            </p>
+            <div className="flex items-center gap-3 pl-2">
+              <div className="w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center font-semibold text-sm shrink-0">
+                {getInitials(t.socialProof.featured.name)}
+              </div>
+              <div>
+                <p className="text-sm font-semibold text-slate-800">{t.socialProof.featured.name}</p>
+                <p className="text-xs text-slate-500">{t.socialProof.featured.role} · {t.socialProof.featured.org}</p>
+              </div>
+            </div>
           </CardContent>
         </Card>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
           {t.socialProof.smaller.map((item, i) => (
-            <Card key={i} className="border-slate-200">
-              <CardContent className="p-4">
-                <p className="text-sm text-slate-600 leading-relaxed mb-3 italic">"{item.quote}"</p>
-                <p className="text-xs text-slate-400">— {item.name}, {item.role}, {item.org}</p>
+            <Card key={i} className="border-slate-200 bg-white shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+              <div className="absolute top-0 left-0 w-1 h-full bg-slate-200" />
+              <CardContent className="p-5">
+                <span className="text-3xl leading-none text-slate-200 font-serif select-none" aria-hidden="true">"</span>
+                <p className="text-sm text-slate-600 leading-relaxed mb-4 italic -mt-2">
+                  {item.quote}
+                </p>
+                <div className="flex items-center gap-2.5">
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center font-semibold text-xs shrink-0 ${accentColors[i % accentColors.length]}`}>
+                    {getInitials(item.name)}
+                  </div>
+                  <div>
+                    <p className="text-sm font-semibold text-slate-800">{item.name}</p>
+                    <p className="text-xs text-slate-500">{item.role} · {item.org}</p>
+                  </div>
+                </div>
               </CardContent>
             </Card>
           ))}

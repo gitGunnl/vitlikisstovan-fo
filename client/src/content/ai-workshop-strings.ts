@@ -174,39 +174,32 @@ export const workshopStrings = {
     heading: "Hetta siga luttakarar",
     featured: {
       quote:
-        "Verkstovan var sera ítøkilig og løtt at fara til. Vit fingu amboð, sum kundu takast í nýtslu beinanvegin, og trygdin er nú nógv betur skipað hjá okkum.",
-      name: "Navn",
-      role: "Starv",
-      org: "Fyritøka ella stovnur",
+        "Vit vóru sera væl nøgd við verkstovuna hjá Gunnleygi. Hon var tillagað til júst tað, vit høvdu tørv á, og tað var hugtakandi, hvussu nógv vit fingu burturúr, hóast hon varð skipað við stuttari freist.",
+      name: "Hildur Durhuus",
+      role: "Nýskapan í ferðavinnuni 2026",
+      org: "Samskipar",
     },
     smaller: [
       {
         quote:
-          "Endiliga ein verkstova, sum ikki var ov tøknilig, men tók støði í okkara arbeiðsdegi.",
-        name: "Navn",
-        role: "Starv",
-        org: "Fyritøka",
+          "Verkstovurnar hjá Gunnleygi vóru bæði hugvekjandi og læruríkar. Tær vóru viðkomandi fyri bæði leiðarar og starvsfólk, og fólk á ymiskum støði fingu nógv burturúr.",
+        name: "Reidar Luid",
+        role: "Forritan og menning",
+        org: "Betri Banki",
       },
       {
         quote:
-          "Tað gav okkum eina felags fatan av, hvat vitlíki er gott til, og hvat vit heldur ikki eiga at brúka tað til.",
-        name: "Navn",
-        role: "Starv",
-        org: "Stovnur",
+          "Verkstovan var sera viðkomandi og góð hjá okkum øllum. Hóast vit øll brúktu ChatGPT frammanundan, lærdu vit nógv um funkur, vit ikki kendu so væl til frammanundan, eitt nú GPT'ir. Vit fingu eisini betri innlit í trygd, og hvussu ein samskiftir við ChatGPT á ein hátt, sum gevur mest møguligt burturúr. Verkstovan var greið, viðkomandi og beinanvegin gagnlig í praksis",
+        name: "Elin Brimnes",
+        role: "Arkitekt",
+        org: "Kontrast",
       },
       {
         quote:
-          "Greiðu reglurnar um dátutrygd gjørdu, at vit kenna okkum tryggari at royna nýggj amboð.",
-        name: "Navn",
-        role: "Starv",
-        org: "Fyritøka",
-      },
-      {
-        quote:
-          "Venjingarnar vóru góðar, tí vit arbeiddu við uppgávum, sum líkjast teimum, vit sita við dagliga.",
-        name: "Navn",
-        role: "Starv",
-        org: "Fyritøka",
+          "Verkstovan var áhugaverd og viðkomandi. Hon gav okkum eina betri fatan av, hvussu ChatGPT kann brúkast í okkara arbeiði, og fleiri góð hugskot, sum vit kundu taka við okkum víðari.",
+        name: "Sigrið Zachariasen",
+        role: "Dagligur leiðari",
+        org: "Reyði Krossur Føroya",
       },
     ],
   },
