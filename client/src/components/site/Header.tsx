@@ -17,7 +17,11 @@ export default function Header() {
   const closeTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+    const newState = !isMobileMenuOpen;
+    setIsMobileMenuOpen(newState);
+    if (!newState) {
+      setIsMobileSubMenuOpen(false);
+    }
   };
 
   const closeMobileMenu = () => {
