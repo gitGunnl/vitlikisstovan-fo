@@ -23,9 +23,44 @@ type TimelineEvent = {
 
 const timelineData: TimelineEvent[] = [
   {
-    id: "evt-015",
+    id: "evt-022",
+    date: "2026-03-24",
+    title: "Skriving av frágreiðingum 5 og 6",
+    summary:
+      "Við støði í kanningararbeiðinum er farið undir at skriva málrættaðar vegleiðingar til lærarar og fólk í tænastuvinnuni.",
+  },
+  {
+    id: "evt-021",
+    date: "2026-03-01",
+    title: "Kanning og greining av vitlíkisnýtslu til frágreiðing 5 og 6",
+    summary:
+      "Kanning er gjørd av, hvussu man best kann nýta vitlíki í sum venjari og sum hondverkari.",
+  },
+  {
+    id: "evt-020",
+    date: "2026-02-23",
+    title: "Rættlestur av frágreiðingum 3 og 4",
+    summary:
+      "Vegleiðingarnar til lærarar og tænastuvinnufólk eru liðugt skrivaðar og hava verið til rættlestrar fyri at tryggja eitt høgt fakligt støði.",
+  },
+  {
+    id: "evt-019",
+    date: "2026-01-26",
+    title: "Skriving av frágreiðingum 3 og 4",
+    summary:
+      "Við støði í kanningararbeiðinum er farið undir at skriva málrættaðar vegleiðingar til lærarar og fólk í tænastuvinnuni.",
+  },
+  {
+    id: "evt-018",
+    date: "2026-01-07",
+    title: "Kanning og greining av vitlíkisnýtslu",
+    summary:
+      "Kanning er gjørd av, hvussu man best kann nýta vitlíki í tænastu vinnuni og sum lærari.",
+  },
+  {
+    id: "evt-017",
     date: "2025-12-31",
-    title: "Vegleiðingar deilt upp eftir bólkum",
+    title: "Fyrstu vegleiðingar útkomnar",
     summary:
       "Fyrstu vegleiðingar eru komnar út í einari royndar versión, snið og myndir mangla. Arbeiði við næstu vegleiðingunum er eisini býrja, her verur hugt uppá hvussu fólkaskúlalærarar og tænastustarvsfólk kunnu nýta vitlíki í sínum starvi.",
   },
