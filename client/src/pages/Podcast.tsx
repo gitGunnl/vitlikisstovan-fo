@@ -117,20 +117,20 @@ export default function Podcast() {
           <div className="parallax-container">
             <div className="parallax-layer layer-bg" data-speed="0.2">
               {/* Background Layer - Far mountains */}
-              <img src="/images/podcast/background.png" alt="Faroe Islands landscape background" />
+              <img src="/images/podcast/background.webp" alt="Faroe Islands landscape background" />
             </div>
             <div className="parallax-layer layer-mid" data-speed="0.5">
               {/* Middle Layer - Mid-distance hills */}
-              <img src="/images/podcast/middle layer.png" alt="Faroe Islands landscape middle" />
+              <img src="/images/podcast/middle-layer.webp" alt="Faroe Islands landscape middle" />
             </div>
             <div className="parallax-layer layer-front" data-speed="0.8">
               {/* Front Layer - Close up elements */}
-              <img src="/images/podcast/troll and sheep.png" alt="Faroe Islands landscape foreground" className="troll-sheep" />
-              <img src="/images/podcast/grass.png" alt="Grass foreground" className="grass" />
+              <img src="/images/podcast/troll-and-sheep.webp" alt="Faroe Islands landscape foreground" className="troll-sheep" />
+              <img src="/images/podcast/grass.webp" alt="Grass foreground" className="grass" />
             </div>
             <div className="parallax-layer layer-clouds" data-speed="0.3">
               {/* Cloud Layer */}
-              <img src="/images/podcast/cloud.png" alt="Clouds" />
+              <img src="/images/podcast/cloud.webp" alt="Clouds" />
             </div>
             <div className="hero-content">
               <div className="container">
