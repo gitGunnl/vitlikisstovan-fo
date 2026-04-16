@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback, useEffect } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, ChevronDown, BookOpen, Briefcase, Headphones, Wrench, Presentation, Settings, Palette } from "lucide-react";
+import { Menu, X, ChevronDown, BookOpen, Briefcase, Headphones, Wrench, Presentation, Settings, Palette, Monitor } from "lucide-react";
 import { siteConfig } from "@/content/site";
 
 interface DropdownItem {
@@ -23,7 +23,7 @@ const navDropdowns: NavDropdown[] = [
       { title: "Verkstovur", href: "/verkstova", icon: Wrench },
       { title: "Fyrilestrar", href: "/okkara-taenastur/fyrilestur", icon: Presentation },
       { title: "Ráðgeving", href: "/okkara-taenastur/vitlikisupplaering", icon: Settings },
-      { title: "Menning av serloysnum", href: "/okkara-taenastur/serloysnir", icon: Briefcase },
+      { title: "Menning av serloysnum", href: "/okkara-taenastur/serloysnir", icon: Monitor },
       { title: "Skapandi vitlíki", href: "/okkara-taenastur/skapandi-vitliki", icon: Palette },
     ],
   },
