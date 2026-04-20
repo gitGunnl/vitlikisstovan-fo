@@ -67,7 +67,7 @@ export const workshopStrings = {
   },
 
   trustStrip: {
-    heading: "Viðkomandi fyri fyritøkur og stovnar í Føroyum",
+    heading: "Hetta siga okkara kundar",
     quotes: [
       {
         quote: "Sera væl nøgd – tillagað til júst tað, vit høvdu tørv á.",

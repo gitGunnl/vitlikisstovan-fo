@@ -273,9 +273,9 @@ function HeroSection() {
 function TrustStripInline() {
   return (
     <div className="pt-6 mt-2">
-      <p className="text-[11px] text-slate-400 mb-3 tracking-wide uppercase">
+      <h2 className="text-lg font-bold text-slate-900 mb-3">
         {t.trustStrip.heading}
-      </p>
+      </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
         {t.trustStrip.quotes.map((item, i) => (
           <div
