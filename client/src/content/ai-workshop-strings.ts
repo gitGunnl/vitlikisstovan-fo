@@ -23,26 +23,26 @@ export const workshopStrings = {
     submitButton: "Spyr um verkstovu",
     submitting: "Sendir...",
     reassurance:
-      "Fyrispurningurin er óbindandi. Vit taka eitt stutt og óformligt prát fyrst.",
+      "Fyrispurningurin er óbindandi.",
     errorMessage:
-      "Okkurt gekk galið. Royn vinarliga aftur, ella send mær ein teldupost beinleiðis.",
+      "Okkurt gekk galið. Royn vinarliga aftur, ella send mær ein teldupost beinleiðis á info@vitlikisstovan.fo.",
   },
 
   formSuccess: {
     heading: "Takk fyri — tíni boð eru send",
     body:
-      "Eg svari tær so skjótt sum til ber, so vit kunnu finna út av, um verkstovan hóskar tykkara arbeiðsplássi.",
+      "Eg svari tær sum skjótast, so kunnu vit snikka eina verkstovu sum passar júst til tykkara tørv.",
     whatHappensNext: "Hvat hendir nú?",
     steps: [
       "Eg lesi tíni boð og vendi aftur sum skjótast.",
       "Vit taka eitt stutt og óformligt prát um tykkara tørv",
-      "Saman finna vit út av, um verkstovan er rætta loysnin",
+      "Saman finna vit út av tykkara tørv.",
     ],
     urgentPrefix: "Hevur tú skund, ert tú altíð vælkomin at ringja ella skriva til mín á",
     phone: "telefon",
     or: "ella",
     email: "teldupost",
-    exploreHeading: "Kanska hevur tú áhuga fyri at vita meira um okkum",
+    exploreHeading: "Um tú hevur áhuga í at vita meira um okkum",
     exploreLinks: [
       { label: "Okkara tænastur", href: "/okkara-taenastur" },
       { label: "Um okkum", href: "/um-okkum" },
@@ -54,17 +54,17 @@ export const workshopStrings = {
     eyebrow: "Verkstova í vitlíki fyri føroysk arbeiðspláss",
     heading: "Lær starvsfólk at nýta vitlíki trygt og munagott í arbeiðinum.",
     subheading:
-      "Ein 3 tíma handalig verkstova, sum hjálpir hvørjum luttakara at skilja, hvat vitlíki er gott til í teirra egna arbeiði, hvar tað ikki eigur at verða brúkt, og hvussu man ber seg trygt at.",
+      "Ein 3 tíma handalig verkstova, sum hjálpir hvørjum luttakara at skilja, hvat vitlíki er gott til í teirra egna arbeiði, hvar tað ikki eigur at verða nýtt, og hvussu man ber seg trygt at.",
     bullets: [
       "Greiðari fatan um, hvat vitlíki kann hjálpa við í gerandisdegnum",
-      "Betri fatan av, nær tað gevur meining at brúka tað — og nær tað ikki ger",
+      "Ítøkilig nýtsluhugskot til hvønn einstakling",
       "Tryggari og meira skynsom nýtsla í toyminum",
       "Passar til allar vinnur",
     ],
     ctaButton: "Spyr um verkstovu",
     directContact: "Tú ert eisini vælkomin at ringja ella skriva",
     replyNote:
-      "Eg svari sjálvur, og vit kunnu skjótt finna út av, um hetta hóskar tykkara toymi.",
+      "Tú kann spýrja um verkstovur og annað..",
   },
 
   trustStrip: {
@@ -73,7 +73,7 @@ export const workshopStrings = {
       {
         quote: "Sera væl nøgd – tillagað til júst tað, vit høvdu tørv á.",
         name: "Hildur Durhuus",
-        role: "Samskipar",
+        role: "Samskipari",
         org: "Nýskapan í ferðavinnuni 2026",
       },
       {

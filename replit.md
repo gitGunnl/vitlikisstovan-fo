@@ -37,7 +37,9 @@ Preferred communication style: Simple, everyday language.
 
 ## Build System
 - **Frontend Build**: Vite with React plugin for fast development and optimized production builds
-- **SEO Prerender**: Post-build script (`scripts/prerender-seo.js`) reads content from `client/src/content/site.ts` and generates static HTML for each route. The `<!-- SEO_CONTENT_PLACEHOLDER -->` marker in `client/index.html` is replaced with full page content during build. Meta tags are HTML-escaped to prevent attribute breakage.
+- **SEO Prerender**: Post-build step (`scripts/prerender-seo.js` shim → `scripts/prerender-seo.ts` impl, run via `tsx`) auto-discovers every file matching `client/src/content/seo/**/*.seo.ts`. Each module exports a default `PageSeo` (or array of them) with `{ path, title, description, content?, jsonLd?, noindex?, sitemap? }`. The `<!-- SEO_CONTENT_PLACEHOLDER -->` marker in `client/index.html` is replaced per-route with semantic HTML so crawlers/LLMs see real text. Meta tags are HTML-escaped, JSON-LD blocks are injected before `</head>`, and `sitemap.xml` is generated from the same list.
+
+  **Adding a new page**: drop a `<name>.seo.ts` file in `client/src/content/seo/` (or add an entry to `registry.seo.ts` for simple title+description pages). The build fails with a coverage error if any `<Route path="...">` in `App.tsx` has no matching SEO entry, so you literally cannot ship a page without prerendered content. Rich pages (`home.seo.ts`, `ai-workshop.seo.ts`, `blog-posts.seo.ts`) import data directly from their content modules — no regex parsing of TS source.
 - **TypeScript**: Strict mode enabled with path mapping for clean imports
 - **Development**: Vite development server with hot module replacement
 - **Production**: Static build output deployed to Replit Static Deployments

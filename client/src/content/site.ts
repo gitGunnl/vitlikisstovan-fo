@@ -354,7 +354,9 @@ export const siteConfig = {
     politiciansPdfUrl: "#"
   },
 
-  seoPages: {
+  // NOTE: SEO data has moved to client/src/content/seo/*.seo.ts (auto-discovered
+  // by scripts/prerender-seo.ts). Adding entries here has no effect.
+  _seoPages_DEPRECATED: {
     "/": {
       title: "Vitlíkisstovan - Vitlíki til arbeiði í Føroyum",
       description: "Vitlíki upplæring til øll á skrivstovuni og uttanfyri. Vitlíki ráðgeving og menning av vitlíki amboðum. Fyrsta vitlíkisfyritøkan í Føroyum."
