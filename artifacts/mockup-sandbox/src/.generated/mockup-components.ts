@@ -10,5 +10,9 @@ export const modules: ModuleMap = {
   "./components/mockups/trust-strip/InlineDark.tsx": () => import("../components/mockups/trust-strip/InlineDark.tsx"),
   "./components/mockups/trust-strip/InlineStack.tsx": () => import("../components/mockups/trust-strip/InlineStack.tsx"),
   "./components/mockups/trust-strip/Minimal.tsx": () => import("../components/mockups/trust-strip/Minimal.tsx"),
-  "./components/mockups/trust-strip/PullQuote.tsx": () => import("../components/mockups/trust-strip/PullQuote.tsx")
+  "./components/mockups/trust-strip/PullQuote.tsx": () => import("../components/mockups/trust-strip/PullQuote.tsx"),
+  "./components/mockups/trust-strip/SectionAvatars.tsx": () => import("../components/mockups/trust-strip/SectionAvatars.tsx"),
+  "./components/mockups/trust-strip/SectionBadge.tsx": () => import("../components/mockups/trust-strip/SectionBadge.tsx"),
+  "./components/mockups/trust-strip/SectionBigQuote.tsx": () => import("../components/mockups/trust-strip/SectionBigQuote.tsx"),
+  "./components/mockups/trust-strip/SectionBordered.tsx": () => import("../components/mockups/trust-strip/SectionBordered.tsx")
 };
