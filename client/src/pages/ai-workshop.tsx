@@ -276,7 +276,7 @@ function TrustStripInline() {
     <div className="pt-6 mt-2">
       <div className="text-center mb-5">
         <span className="inline-block bg-teal-100 text-teal-800 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider mb-3">
-          Kundaroynsla
+          Kunda viðmerkingar
         </span>
         <h2 className="text-xl font-bold text-slate-900 leading-tight mb-3">
           {t.trustStrip.heading}

@@ -72,8 +72,8 @@ export const workshopStrings = {
       {
         quote: "Sera væl nøgd – tillagað til júst tað, vit høvdu tørv á.",
         name: "Hildur Durhuus",
-        role: "Nýskapan í ferðavinnuni 2026",
-        org: "Samskipar",
+        role: "Samskipar",
+        org: "Nýskapan í ferðavinnuni 2026",
       },
       {
         quote: "Bæði hugvekjandi og læruríkt – viðkomandi fyri leiðarar og starvsfólk.",
