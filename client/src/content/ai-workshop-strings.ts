@@ -93,6 +93,12 @@ export const workshopStrings = {
         role: "Dagligur leiðari",
         org: "Reyði Krossur Føroya",
       },
+      {
+        quote: "Áhugaverd og løtt at skilja – gav greiðari fatan av, hvussu eg brúki ChatGPT í mínum arbeiði.",
+        name: "Sóley Hammer",
+        role: "Leiðari",
+        org: "Hugskotið",
+      },
     ],
   },
 
@@ -218,6 +224,13 @@ export const workshopStrings = {
         name: "Sigrið Zachariasen",
         role: "Dagligur leiðari",
         org: "Reyði Krossur Føroya",
+      },
+      {
+        quote:
+          "Verkstovan hjá Gunnleygi var bæði áhugaverd og løtt at skilja. Hon gav mær eina greiðari fatan av, hvussu eg kann brúka ChatGPT í mínum arbeiði, og eg fekk ein hentan lista við nýtsluhugskotum.",
+        name: "Sóley Hammer",
+        role: "Leiðari",
+        org: "Hugskotið",
       },
     ],
   },
