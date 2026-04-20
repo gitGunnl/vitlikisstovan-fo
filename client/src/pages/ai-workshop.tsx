@@ -29,6 +29,7 @@ import {
   CheckCircle2,
   ArrowRight,
   Quote,
+  Star,
 } from "lucide-react";
 
 function WorkshopContactFormComponent({ id }: { id?: string }) {
@@ -273,25 +274,33 @@ function HeroSection() {
 function TrustStripInline() {
   return (
     <div className="pt-6 mt-2">
-      <h2 className="text-lg font-bold text-slate-900 mb-3">
-        {t.trustStrip.heading}
-      </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+      <div className="text-center mb-5">
+        <span className="inline-block bg-teal-100 text-teal-800 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider mb-3">
+          Kundaroynsla
+        </span>
+        <h2 className="text-xl font-bold text-slate-900 leading-tight mb-3">
+          {t.trustStrip.heading}
+        </h2>
+        <div className="flex items-center justify-center gap-2">
+          <div className="h-px bg-slate-300 w-10" />
+          {Array.from({ length: 5 }).map((_, i) => (
+            <Star key={i} className="w-3 h-3 text-amber-400" strokeWidth={1.5} fill="none" />
+          ))}
+          <div className="h-px bg-slate-300 w-10" />
+        </div>
+      </div>
+      <div className="space-y-2">
         {t.trustStrip.quotes.map((item, i) => (
           <div
             key={i}
-            className="bg-white border border-slate-200 rounded-lg p-3 flex flex-col"
+            className="bg-white border border-slate-200 rounded-lg p-3"
           >
-            <Quote className="w-3.5 h-3.5 text-teal-500/40 mb-1.5 rotate-180" />
-            <p className="text-[12px] text-slate-600 leading-relaxed flex-1 mb-2">
-              {item.quote}
+            <p className="text-[13px] text-slate-700 leading-snug mb-1.5">
+              "{item.quote}"
             </p>
-            <div className="border-t border-slate-100 pt-1.5">
-              <p className="text-[11px] font-semibold text-slate-700">{item.name}</p>
-              <p className="text-[10px] text-slate-400">
-                {item.role} · {item.org}
-              </p>
-            </div>
+            <p className="text-[11px] text-slate-500">
+              <span className="font-semibold text-slate-800">{item.name}</span>, {item.role} · {item.org}
+            </p>
           </div>
         ))}
       </div>
