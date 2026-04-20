@@ -251,6 +251,14 @@ function HeroSection() {
             <TrustStripInline />
           </div>
           <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 sm:p-7">
+            <div className="mb-5">
+              <h3 className="text-lg font-bold text-slate-900 leading-tight">
+                Skriva til mín her
+              </h3>
+              <p className="text-sm text-slate-500 mt-1">
+                Eg svari sjálvur, oftast samma dag.
+              </p>
+            </div>
             <WorkshopContactFormComponent id="contact-form" />
             <div className="mt-5 pt-4 border-t border-slate-100 text-center">
               <p className="text-sm text-slate-500 mb-1.5">{t.hero.directContact}</p>

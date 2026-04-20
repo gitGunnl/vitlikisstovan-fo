@@ -52,13 +52,14 @@ export const workshopStrings = {
 
   hero: {
     eyebrow: "Verkstova í vitlíki fyri føroysk arbeiðspláss",
-    heading: "Til fyritøkur og stovnar ið vilja læra starvfólk at nýta vitlíki til sítt arbeiði, trygt og munagott. Passar til alt slag arbeiði.",
+    heading: "Lær starvsfólk at nýta vitlíki trygt og munagott í arbeiðinum.",
     subheading:
       "Ein 3 tíma handalig verkstova, sum hjálpir hvørjum luttakara at skilja, hvat vitlíki er gott til í teirra egna arbeiði, hvar tað ikki eigur at verða brúkt, og hvussu man ber seg trygt at.",
     bullets: [
       "Greiðari fatan um, hvat vitlíki kann hjálpa við í gerandisdegnum",
       "Betri fatan av, nær tað gevur meining at brúka tað — og nær tað ikki ger",
       "Tryggari og meira skynsom nýtsla í toyminum",
+      "Passar til allar vinnur",
     ],
     ctaButton: "Spyr um verkstovu",
     directContact: "Tú ert eisini vælkomin at ringja ella skriva",
