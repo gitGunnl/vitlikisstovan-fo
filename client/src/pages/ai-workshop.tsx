@@ -584,8 +584,8 @@ export default function AIWorkshopLanding() {
       <HeroSection />
       <RelevanceSection />
       <OutcomesSection />
-      <ContentSection />
       <SocialProofSection />
+      <ContentSection />
       <FAQSection />
       <FinalCTASection />
     </div>

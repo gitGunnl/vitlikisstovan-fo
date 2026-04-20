@@ -151,6 +151,47 @@ export const workshopStrings = {
     ],
   },
 
+  socialProof: {
+    heading: "Hetta siga luttakarar",
+    featured: {
+      quote:
+        "Vit vóru sera væl nøgd við verkstovuna hjá Gunnleygi. Hon var tillagað til júst tað, vit høvdu tørv á, og tað var hugtakandi, hvussu nógv vit fingu burturúr, hóast hon varð skipað við stuttari freist.",
+      name: "Hildur Durhuus",
+      role: "Nýskapan í ferðavinnuni 2026",
+      org: "Samskipar",
+    },
+    smaller: [
+      {
+        quote:
+          "Verkstovurnar hjá Gunnleygi vóru bæði hugvekjandi og læruríkar. Tær vóru viðkomandi fyri bæði leiðarar og starvsfólk, og fólk á ymiskum støði fingu nógv burturúr.",
+        name: "Reidar Luid",
+        role: "Forritan og menning",
+        org: "Betri Banki",
+      },
+      {
+        quote:
+          "Verkstovan var sera viðkomandi og góð hjá okkum øllum. Hóast vit øll brúktu ChatGPT frammanundan, lærdu vit nógv um funkur, vit ikki kendu so væl til frammanundan, eitt nú GPT'ir. Vit fingu eisini betri innlit í trygd, og hvussu ein samskiftir við ChatGPT á ein hátt, sum gevur mest møguligt burturúr. Verkstovan var greið, viðkomandi og beinanvegin gagnlig í praksis",
+        name: "Elin Brimnes",
+        role: "Arkitekt",
+        org: "Kontrast",
+      },
+      {
+        quote:
+          "Verkstovan var áhugaverd og viðkomandi. Hon gav okkum eina betri fatan av, hvussu ChatGPT kann brúkast í okkara arbeiði, og fleiri góð hugskot, sum vit kundu taka við okkum víðari.",
+        name: "Sigrið Zachariasen",
+        role: "Dagligur leiðari",
+        org: "Reyði Krossur Føroya",
+      },
+      {
+        quote:
+          "Verkstovan hjá Gunnleygi var bæði áhugaverd og løtt at skilja. Hon gav mær eina greiðari fatan av, hvussu eg kann brúka ChatGPT í mínum arbeiði, og eg fekk ein hentan lista við nýtsluhugskotum.",
+        name: "Sóley Hammer",
+        role: "Leiðari",
+        org: "Hugskotið",
+      },
+    ],
+  },
+
   content: {
     heading: "Hvat verkstovan fevnir um",
     subheading:
@@ -192,47 +233,6 @@ export const workshopStrings = {
       "Handaligt og í verki",
       "Fyri skrivstovufólk og toymi",
       "Lagað til tykkara arbeiðspláss",
-    ],
-  },
-
-  socialProof: {
-    heading: "Hetta siga luttakarar",
-    featured: {
-      quote:
-        "Vit vóru sera væl nøgd við verkstovuna hjá Gunnleygi. Hon var tillagað til júst tað, vit høvdu tørv á, og tað var hugtakandi, hvussu nógv vit fingu burturúr, hóast hon varð skipað við stuttari freist.",
-      name: "Hildur Durhuus",
-      role: "Nýskapan í ferðavinnuni 2026",
-      org: "Samskipar",
-    },
-    smaller: [
-      {
-        quote:
-          "Verkstovurnar hjá Gunnleygi vóru bæði hugvekjandi og læruríkar. Tær vóru viðkomandi fyri bæði leiðarar og starvsfólk, og fólk á ymiskum støði fingu nógv burturúr.",
-        name: "Reidar Luid",
-        role: "Forritan og menning",
-        org: "Betri Banki",
-      },
-      {
-        quote:
-          "Verkstovan var sera viðkomandi og góð hjá okkum øllum. Hóast vit øll brúktu ChatGPT frammanundan, lærdu vit nógv um funkur, vit ikki kendu so væl til frammanundan, eitt nú GPT'ir. Vit fingu eisini betri innlit í trygd, og hvussu ein samskiftir við ChatGPT á ein hátt, sum gevur mest møguligt burturúr. Verkstovan var greið, viðkomandi og beinanvegin gagnlig í praksis",
-        name: "Elin Brimnes",
-        role: "Arkitekt",
-        org: "Kontrast",
-      },
-      {
-        quote:
-          "Verkstovan var áhugaverd og viðkomandi. Hon gav okkum eina betri fatan av, hvussu ChatGPT kann brúkast í okkara arbeiði, og fleiri góð hugskot, sum vit kundu taka við okkum víðari.",
-        name: "Sigrið Zachariasen",
-        role: "Dagligur leiðari",
-        org: "Reyði Krossur Føroya",
-      },
-      {
-        quote:
-          "Verkstovan hjá Gunnleygi var bæði áhugaverd og løtt at skilja. Hon gav mær eina greiðari fatan av, hvussu eg kann brúka ChatGPT í mínum arbeiði, og eg fekk ein hentan lista við nýtsluhugskotum.",
-        name: "Sóley Hammer",
-        role: "Leiðari",
-        org: "Hugskotið",
-      },
     ],
   },
 
