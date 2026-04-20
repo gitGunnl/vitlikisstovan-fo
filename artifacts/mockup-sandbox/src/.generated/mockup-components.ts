@@ -3,8 +3,12 @@ type ModuleMap = Record<string, () => Promise<Record<string, unknown>>>;
 export const modules: ModuleMap = {
   "./components/mockups/trust-strip/AccentBar.tsx": () => import("../components/mockups/trust-strip/AccentBar.tsx"),
   "./components/mockups/trust-strip/Cards.tsx": () => import("../components/mockups/trust-strip/Cards.tsx"),
+  "./components/mockups/trust-strip/CheckBadge.tsx": () => import("../components/mockups/trust-strip/CheckBadge.tsx"),
+  "./components/mockups/trust-strip/Editorial.tsx": () => import("../components/mockups/trust-strip/Editorial.tsx"),
+  "./components/mockups/trust-strip/Featured.tsx": () => import("../components/mockups/trust-strip/Featured.tsx"),
   "./components/mockups/trust-strip/InlineAttribution.tsx": () => import("../components/mockups/trust-strip/InlineAttribution.tsx"),
   "./components/mockups/trust-strip/InlineDark.tsx": () => import("../components/mockups/trust-strip/InlineDark.tsx"),
   "./components/mockups/trust-strip/InlineStack.tsx": () => import("../components/mockups/trust-strip/InlineStack.tsx"),
-  "./components/mockups/trust-strip/Minimal.tsx": () => import("../components/mockups/trust-strip/Minimal.tsx")
+  "./components/mockups/trust-strip/Minimal.tsx": () => import("../components/mockups/trust-strip/Minimal.tsx"),
+  "./components/mockups/trust-strip/PullQuote.tsx": () => import("../components/mockups/trust-strip/PullQuote.tsx")
 };
