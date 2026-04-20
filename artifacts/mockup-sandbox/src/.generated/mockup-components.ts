@@ -14,5 +14,8 @@ export const modules: ModuleMap = {
   "./components/mockups/trust-strip/SectionAvatars.tsx": () => import("../components/mockups/trust-strip/SectionAvatars.tsx"),
   "./components/mockups/trust-strip/SectionBadge.tsx": () => import("../components/mockups/trust-strip/SectionBadge.tsx"),
   "./components/mockups/trust-strip/SectionBigQuote.tsx": () => import("../components/mockups/trust-strip/SectionBigQuote.tsx"),
-  "./components/mockups/trust-strip/SectionBordered.tsx": () => import("../components/mockups/trust-strip/SectionBordered.tsx")
+  "./components/mockups/trust-strip/SectionBordered.tsx": () => import("../components/mockups/trust-strip/SectionBordered.tsx"),
+  "./components/mockups/trust-strip/StarsDivider.tsx": () => import("../components/mockups/trust-strip/StarsDivider.tsx"),
+  "./components/mockups/trust-strip/StarsFlanking.tsx": () => import("../components/mockups/trust-strip/StarsFlanking.tsx"),
+  "./components/mockups/trust-strip/StarsIcon.tsx": () => import("../components/mockups/trust-strip/StarsIcon.tsx")
 };
