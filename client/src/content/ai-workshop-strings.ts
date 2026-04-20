@@ -152,7 +152,7 @@ export const workshopStrings = {
   },
 
   socialProof: {
-    heading: "Hetta siga luttakarar",
+    heading: "Hoyra hvat okkara kundar halda",
     featured: {
       quote:
         "Vit vóru sera væl nøgd við verkstovuna hjá Gunnleygi. Hon var tillagað til júst tað, vit høvdu tørv á, og tað var hugtakandi, hvussu nógv vit fingu burturúr, hóast hon varð skipað við stuttari freist.",

@@ -583,8 +583,8 @@ export default function AIWorkshopLanding() {
       <MinimalHeader />
       <HeroSection />
       <RelevanceSection />
-      <OutcomesSection />
       <SocialProofSection />
+      <OutcomesSection />
       <ContentSection />
       <FAQSection />
       <FinalCTASection />
