@@ -23,6 +23,12 @@ export interface MonitoredForm {
   clientSources: ClientFormSource[];
 }
 
+// NOTE: The contact form, the inline contact form, and the AI workshop
+// landing form all post to the SAME underlying Google Form (same
+// formActionUrl + same entry IDs in the client code), so they are
+// monitored as a single MonitoredForm with three associated
+// clientSources. If a future form starts posting to a different Google
+// Form, add a second MonitoredForm entry here.
 export const MONITORED_FORMS: MonitoredForm[] = [
   {
     id: "vts-contact-google-form",

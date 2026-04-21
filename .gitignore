@@ -153,3 +153,6 @@ Thumbs.db
 # Replit specific
 server/public
 vite.config.ts.*
+
+# Monitoring runtime state (regenerated at runtime, must not ship test data)
+data/monitoring.json
