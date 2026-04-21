@@ -4,11 +4,16 @@ import { recordClientFailure } from "./monitoring-storage.js";
 import { MONITORED_FORMS, CLIENT_FORM_SOURCES } from "./monitoring-config.js";
 import { getMailerStatus, sendTestEmail } from "./monitoring-mailer.js";
 
-const ADMIN_KEY = process.env.ELECTION_ADMIN_KEY || "vitliki-admin-2026";
-
 function requireAdmin(req: any, res: any, next: any) {
-  const key = req.headers["x-admin-key"];
-  if (key !== ADMIN_KEY) return res.status(401).json({ error: "Unauthorized" });
+  const adminKey = process.env.ELECTION_ADMIN_KEY;
+  if (!adminKey) {
+    console.error(
+      "[monitoring] ELECTION_ADMIN_KEY env var is not set — admin endpoints are disabled."
+    );
+    return res.status(503).json({ error: "Admin key not configured on server" });
+  }
+  const provided = req.headers["x-admin-key"];
+  if (provided !== adminKey) return res.status(401).json({ error: "Unauthorized" });
   next();
 }
 
@@ -16,8 +21,38 @@ export function createMonitoringRouter(): Router {
   const router = Router();
   router.use(json({ limit: "10kb" }));
 
-  // Public-ish: accepts client failure beacons. Rate-limit-light: capped storage.
+  // Public-ish: accepts client failure beacons. Token-bucket rate limit per IP.
+  const buckets = new Map<string, { tokens: number; refilledAt: number }>();
+  const MAX_TOKENS = 10;
+  const REFILL_PER_MS = 10 / 60_000; // 10 reports / minute
+  function rateLimit(ip: string): boolean {
+    const now = Date.now();
+    const b = buckets.get(ip) ?? { tokens: MAX_TOKENS, refilledAt: now };
+    b.tokens = Math.min(MAX_TOKENS, b.tokens + (now - b.refilledAt) * REFILL_PER_MS);
+    b.refilledAt = now;
+    if (b.tokens < 1) {
+      buckets.set(ip, b);
+      return false;
+    }
+    b.tokens -= 1;
+    buckets.set(ip, b);
+    if (buckets.size > 5000) {
+      // Light cleanup to prevent unbounded growth.
+      for (const [k, v] of buckets) {
+        if (now - v.refilledAt > 10 * 60_000) buckets.delete(k);
+      }
+    }
+    return true;
+  }
+
   router.post("/api/monitoring/client-failure", (req, res) => {
+    const ip =
+      (req.headers["x-forwarded-for"] as string | undefined)?.split(",")[0]?.trim() ||
+      req.socket.remoteAddress ||
+      "unknown";
+    if (!rateLimit(ip)) {
+      return res.status(429).json({ error: "Too many reports" });
+    }
     const { source, errorName, errorMessage } = req.body || {};
     if (typeof source !== "string" || !CLIENT_FORM_SOURCES.includes(source as any)) {
       return res.status(400).json({ error: "Invalid source" });

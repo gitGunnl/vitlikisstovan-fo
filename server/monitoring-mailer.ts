@@ -99,7 +99,7 @@ function formatResult(r: HealthCheckResult): string {
 export async function sendAlertEmail(
   form: MonitoredForm,
   recent: HealthCheckResult[]
-): Promise<void> {
+): Promise<{ ok: boolean; error?: string }> {
   const subject = `[ALERT] Form broken: ${form.label}`;
   const html = `
     <h2>Form submission failure detected</h2>
@@ -111,7 +111,7 @@ export async function sendAlertEmail(
     ${recent[1] ? `<h3>Previous check</h3>${formatResult(recent[1])}` : ""}
     <p style="color:#666;font-size:12px">You will receive a recovery email when checks pass again.</p>
   `;
-  await sendEmail(subject, html);
+  return await sendEmail(subject, html);
 }
 
 export async function sendRecoveryEmail(

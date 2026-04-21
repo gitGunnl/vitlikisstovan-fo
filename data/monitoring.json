@@ -6,6 +6,28 @@
       "history": [
         {
           "formId": "vts-contact-google-form",
+          "checkedAt": "2026-04-21T11:39:28.956Z",
+          "ok": true,
+          "postOk": true,
+          "postStatus": 200,
+          "schemaOk": true,
+          "missingEntryIds": [],
+          "durationMs": 601,
+          "trigger": "startup"
+        },
+        {
+          "formId": "vts-contact-google-form",
+          "checkedAt": "2026-04-21T11:37:48.523Z",
+          "ok": true,
+          "postOk": true,
+          "postStatus": 200,
+          "schemaOk": true,
+          "missingEntryIds": [],
+          "durationMs": 459,
+          "trigger": "startup"
+        },
+        {
+          "formId": "vts-contact-google-form",
           "checkedAt": "2026-04-21T11:31:52.931Z",
           "ok": true,
           "postOk": true,
@@ -60,10 +82,17 @@
           "trigger": "startup"
         }
       ],
-      "lastOkAt": "2026-04-21T11:31:52.931Z"
+      "lastOkAt": "2026-04-21T11:39:28.956Z"
     }
   },
   "clientFailures": [
+    {
+      "source": "contact-section",
+      "reportedAt": "2026-04-21T11:39:49.130Z",
+      "errorName": "X",
+      "errorMessage": "y",
+      "userAgent": "curl/8.14.1"
+    },
     {
       "source": "contact-section",
       "reportedAt": "2026-04-21T10:34:20.758Z",

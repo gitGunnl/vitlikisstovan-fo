@@ -17,8 +17,9 @@ export function reportFormFailure(
     const url = "/api/monitoring/client-failure";
     if (typeof navigator !== "undefined" && navigator.sendBeacon) {
       const blob = new Blob([payload], { type: "application/json" });
-      navigator.sendBeacon(url, blob);
-      return;
+      const accepted = navigator.sendBeacon(url, blob);
+      if (accepted) return;
+      // Beacon refused (queue full / oversize) — fall through to fetch.
     }
     fetch(url, {
       method: "POST",

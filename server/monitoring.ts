@@ -100,10 +100,20 @@ export async function runCheck(
 
   const state = recordCheckResult(result);
 
+  // Only mark alertActive=true AFTER a successful email send, otherwise
+  // a transient mailer failure would silence all subsequent alerts.
   if (!result.ok && state.consecutiveFailures >= FAILURE_THRESHOLD && !state.alertActive) {
-    setAlertActive(form.id, true);
-    await sendAlertEmail(form, state.history);
+    const sendResult = await sendAlertEmail(form, state.history);
+    if (sendResult.ok) {
+      setAlertActive(form.id, true);
+    } else {
+      console.warn(
+        `[monitoring] Alert email send failed for ${form.id}; will retry on next failed check.`
+      );
+    }
   } else if (result.ok && state.alertActive) {
+    // Recovery email best-effort; clear the alert regardless so the next
+    // failure cycle can fire fresh.
     setAlertActive(form.id, false);
     await sendRecoveryEmail(form, result);
   }
