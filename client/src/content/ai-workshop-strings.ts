@@ -109,8 +109,8 @@ export const workshopStrings = {
       "Nógv arbeiðspláss vita, at vitlíki kann vera gagnligt, men flesta staðni er nýtslan framvegis óskipa. Summi brúka tað hvønn dag, men hava ikki fingið nakra venjing í rætta nýtslu og onnur eru ikki komin í gongd. Og nógv ivast í, hvat er trygt at deila. Hetta er ein verkstova fyri tykkum, sum vilja geva starvsfólkunum eina praktiska og skipaða innleiðslu, so tey fáa eina greiðari fatan av, nær vitlíki hjálpir, og nær tað ikki ger tað.",
     points: [
       "Starvsfólk eru forvitin, men nýtslan er framvegis óskipa",
-      "Tit hava roynt amboðini, men eru ongantíð blivin vegleidd um rætta nýtslu",
-      "Ivi valdar um, hvat er trygt at deila",
+      "Tit hava roynt amboðini, men mangla vegleiðing um rætta nýtslu",
+      "Ivi valdar um, hvat er trygt at koyra inn í vitlíki",
       "Tit vilja hava eina felags og praktiska fatan uttan fløktar tøkniligar frágreiðingar",
     ],
   },
@@ -141,10 +141,10 @@ export const workshopStrings = {
       {
         title: "Dømi úr vanligum arbeiði",
         text:
-          "Dentur verður lagdur á vitlíkis nýtslu til tað veruliga arbeiði fólk gera til dagligt.",
+          "Dentur verður lagdur á vitlíkisnýtslu til tað veruliga arbeiði fólk gera til dagligt.",
       },
       {
-        title: "Ítøkilig nýtslu dømir",
+        title: "Ítøkilig nýtsludømir",
         text:
           "Hvør einstakur fer frá verkstovuni við einum lista av tingum tey kunnu nýta vitlíki til í sínum arbeiði.",
       },
@@ -152,13 +152,13 @@ export const workshopStrings = {
   },
 
   socialProof: {
-    heading: "Hoyra hvat okkara kundar halda",
+    heading: "Hvat halda okkara kundar?",
     featured: {
       quote:
         "Vit vóru sera væl nøgd við verkstovuna hjá Gunnleygi. Hon var tillagað til júst tað, vit høvdu tørv á, og tað var hugtakandi, hvussu nógv vit fingu burturúr, hóast hon varð skipað við stuttari freist.",
       name: "Hildur Durhuus",
-      role: "Nýskapan í ferðavinnuni 2026",
-      org: "Samskipar",
+      role: "Samskipari",
+      org: "Nýskapan í ferðavinnuni 2026",
     },
     smaller: [
       {
@@ -195,7 +195,7 @@ export const workshopStrings = {
   content: {
     heading: "Hvat verkstovan fevnir um",
     subheading:
-      "Verkstovan er handalig og tekur støði í veruleikanum. Málið er at hjálpa fólki at brúka vitlíki meira skilagott í egnum arbeiði — ikki at kava niður í tøkniligt ástøði.",
+      "Verkstovan er handalig og tekur støði í tykkara veruleika. Málið er at hjálpa fólki at brúka vitlíki meira skilagott í egnum arbeiði — ikki at kava niður í tøkniligt ástøði.",
     blocks: [
       {
         title: "Hvat vitlíki er gott til í vanligum skrivstovuarbeiði",
@@ -244,12 +244,12 @@ export const workshopStrings = {
         a: "Nei. Verkstovan er viðkomandi fyri fólk, sum eru tíðliga í gongdini og til tey sum eru stinn, men ikki hava fingið nakra veruliga upplæring.",
       },
       {
-        q: "Er hetta ov tøkniligt?",
+        q: "Er hetta tøkniliga torskilt?",
         a: "Nei. Dentur verður lagdur á veruliga nýtslu í arbeiðsdegnum, ikki á forritan ella fløkt tøkniligt ástøði.",
       },
       {
         q: "Vit hava longu roynt ChatGPT. Er hetta framvegis viðkomandi?",
-        a: "Ja. Vit gjøgnumgenga nógv ting, sum næstan eingin ger av sínum eintøkum tá ið tey býrja við vitlíki sjálvi. Verkstovan hjálpir fólki at brúka vitlíki meira munagott og gjøgnumhugsað, líka mikið hvat støði tey eru á.",
+        a: "Ja. Vit gjøgnumgenga nógv ting, sum næstan eingin ger av sínum eintøkum tá ið tey býrja við vitlíki sjálvi. Verkstovan hjálpir fólki at brúka vitlíki meira skipa og gjøgnumhugsað, líka mikið hvat støði tey eru á.",
       },
       {
         q: "Viðgera tit trygd og persónsupplýsingar?",
@@ -261,7 +261,7 @@ export const workshopStrings = {
       },
       {
         q: "Hvat hendir, tá ið eg seti meg í samband við tykkum?",
-        a: "Vit taka eitt stutt og óformligt prát um tykkara tørv og finna síðani út av, um verkstovan er rætta loysnin fyri tykkum.",
+        a: "Vit taka eitt stutt og óformligt prát um tykkara tørv og finna síðani út av, hvør verkstova er rætta loysnin fyri tykkum.",
       },
     ],
   },
@@ -269,10 +269,9 @@ export const workshopStrings = {
   finalCta: {
     heading: "Vilja tit geva starvsfólkunum eina greiðari byrjan við vitlíki?",
     body:
-      "Set teg í samband, so vit kunnu skjótt finna út av, um verkstovan hóskar tykkara toymi.",
+      "Set teg í samband, so finna vit verkstovuna sum best hóskar tykkara toymi.",
     ctaButton: "Spyr um verkstovu",
     directContact:
       "Ella set teg í samband við meg beinleiðis umvegis teldupost ella telefon",
-    reassurance: "Prátið er óformligt og óbindandi.",
   },
 };
