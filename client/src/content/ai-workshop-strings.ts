@@ -2,8 +2,8 @@ export const workshopStrings = {
   meta: {
     pageTitle: "Verkstova um vitlíki fyri fyritøkur og stovnar | Vitlíkisstovan",
     description:
-      "Fáið eina flúgvandi byrjan við vitlíki. Ein 3 tíma verkstova, sum hjálpir starvsfólkum at skilja, hvat vitlíki er gott til í arbeiðinum, hvar tað ikki eigur at verða brúkt, og hvussu man ber seg trygt at.",
-    ogTitle: "Til fyritøkur og stovnar ið vilja læra starvfólk at nýta vitlíki til sítt arbeiði, trygt og munagott. Passar til alt slag arbeiði. | Vitlíkisstovan",
+      "Fáið eina flúgvandi byrjan við vitlíki. Ein 3 tíma verkstova, sum hjálpir starvsfólkum at skilja, hvat vitlíki er gott til í arbeiðinum, hvar tað ikki eigur at verða brúkt, og hvussu ein ber seg trygt at.",
+    ogTitle: "Til fyritøkur og stovnar ið vilja læra starvsfólk at nýta vitlíki til sítt arbeiði, trygt og munagott. Passar til alt slag arbeiði. | Vitlíkisstovan",
     ogDescription:
       "Ein handalig verkstova fyri arbeiðspláss, sum vilja geva starvsfólkunum eina greiðari byrjan við vitlíki, betri fatan av, nær tað hjálpir, og tryggari nýtslu í gerandisdegnum.",
   },
@@ -31,12 +31,12 @@ export const workshopStrings = {
   formSuccess: {
     heading: "Takk fyri — tíni boð eru send",
     body:
-      "Eg svari tær sum skjótast, so kunnu vit snikka eina verkstovu sum passar júst til tykkara tørv.",
+      "Eg svari tær sum skjótast, so kunnu vit snikka eina verkstovu, sum passar júst til tykkara tørv.",
     whatHappensNext: "Hvat hendir nú?",
     steps: [
       "Eg lesi tíni boð og vendi aftur sum skjótast.",
-      "Vit taka eitt stutt og óformligt prát um tykkara tørv",
-      "Saman finna vit út av tykkara tørv.",
+      "Vit taka eitt stutt og óformligt prát um tykkara tørv.",
+      "Saman greina vit tykkara tørv.",
     ],
     urgentPrefix: "Hevur tú skund, ert tú altíð vælkomin at ringja ella skriva til mín á",
     phone: "telefon",
@@ -54,7 +54,7 @@ export const workshopStrings = {
     eyebrow: "Verkstova í vitlíki fyri føroysk arbeiðspláss",
     heading: "Lær starvsfólk at nýta vitlíki trygt og munagott í arbeiðinum.",
     subheading:
-      "Ein 3 tíma handalig verkstova, sum hjálpir hvørjum luttakara at skilja, hvat vitlíki er gott til í teirra egna arbeiði, hvar tað ikki eigur at verða nýtt, og hvussu man ber seg trygt at.",
+      "Ein 3 tíma handalig verkstova, sum hjálpir hvørjum luttakara at skilja, hvat vitlíki er gott til í teirra egna arbeiði, hvar tað ikki eigur at verða nýtt, og hvussu ein ber seg trygt at.",
     bullets: [
       "Greiðari fatan um, hvat vitlíki kann hjálpa við í gerandisdegnum",
       "Ítøkilig nýtsluhugskot til hvønn einstakling",
@@ -64,7 +64,7 @@ export const workshopStrings = {
     ctaButton: "Spyr um verkstovu",
     directContact: "Tú ert eisini vælkomin at ringja ella skriva",
     replyNote:
-      "Tú kann spýrja um verkstovur og annað..",
+      "Tú kanst spyrja um verkstovur og annað.",
   },
 
   trustStrip: {
@@ -106,9 +106,9 @@ export const workshopStrings = {
   relevance: {
     heading: "Er hetta viðkomandi fyri tykkara arbeiðspláss?",
     body:
-      "Nógv arbeiðspláss vita, at vitlíki kann vera gagnligt, men flesta staðni er nýtslan framvegis óskipa. Summi brúka tað hvønn dag, men hava ikki fingið nakra venjing í rætta nýtslu og onnur eru ikki komin í gongd. Og nógv ivast í, hvat er trygt at deila. Hetta er ein verkstova fyri tykkum, sum vilja geva starvsfólkunum eina praktiska og skipaða innleiðslu, so tey fáa eina greiðari fatan av, nær vitlíki hjálpir, og nær tað ikki ger tað.",
+      "Nógv arbeiðspláss vita, at vitlíki kann vera gagnligt, men flesta staðni er nýtslan framvegis óskipað. Summi brúka tað hvønn dag, men hava ikki fingið nakra venjing í rættari nýtslu og onnur eru ikki komin í gongd. Og nógv ivast í, hvat er trygt at deila. Hetta er ein verkstova fyri tykkum, sum vilja geva starvsfólkunum eina praktiska og skipaða innleiðslu, so tey fáa eina greiðari fatan av, nær vitlíki hjálpir, og nær tað ikki ger tað.",
     points: [
-      "Starvsfólk eru forvitin, men nýtslan er framvegis óskipa",
+      "Starvsfólk eru forvitin, men nýtslan er framvegis óskipað",
       "Tit hava roynt amboðini, men mangla vegleiðing um rætta nýtslu",
       "Ivi valdar um, hvat er trygt at koyra inn í vitlíki",
       "Tit vilja hava eina felags og praktiska fatan uttan fløktar tøkniligar frágreiðingar",
@@ -141,12 +141,12 @@ export const workshopStrings = {
       {
         title: "Dømi úr vanligum arbeiði",
         text:
-          "Dentur verður lagdur á vitlíkisnýtslu til tað veruliga arbeiði fólk gera til dagligt.",
+          "Dentur verður lagdur á vitlíkisnýtslu til tað veruliga arbeiði fólk, gera til dagligt.",
       },
       {
-        title: "Ítøkilig nýtsludømir",
+        title: "Ítøkilig nýtsludømi",
         text:
-          "Hvør einstakur fer frá verkstovuni við einum lista av tingum tey kunnu nýta vitlíki til í sínum arbeiði.",
+          "Hvør einstakur fer frá verkstovuni við einum lista av tingum, tey kunnu nýta vitlíki til í sínum arbeiði.",
       },
     ],
   },
@@ -170,7 +170,7 @@ export const workshopStrings = {
       },
       {
         quote:
-          "Verkstovan var sera viðkomandi og góð hjá okkum øllum. Hóast vit øll brúktu ChatGPT frammanundan, lærdu vit nógv um funkur, vit ikki kendu so væl til frammanundan, eitt nú GPT'ir. Vit fingu eisini betri innlit í trygd, og hvussu ein samskiftir við ChatGPT á ein hátt, sum gevur mest møguligt burturúr. Verkstovan var greið, viðkomandi og beinanvegin gagnlig í praksis",
+          "Verkstovan var sera viðkomandi og góð hjá okkum øllum. Hóast vit øll brúktu ChatGPT frammanundan, lærdu vit nógv um funkur, vit ikki kendu so væl til frammanundan, eitt nú GPT'ir. Vit fingu eisini betri innlit í trygd, og hvussu ein samskiftir við ChatGPT á ein hátt, sum gevur mest møguligt burturúr. Verkstovan var greið, viðkomandi og beinanvegin gagnlig í praksis.",
         name: "Elin Brimnes",
         role: "Arkitekt",
         org: "Kontrast",
@@ -200,7 +200,7 @@ export const workshopStrings = {
       {
         title: "Hvat vitlíki er gott til í vanligum skrivstovuarbeiði",
         text:
-          "Vit hyggja at ítøkiligum uppgávum, har vitlíki veruliga kann hjálpa, og hvar man ikki skal nýta vitlíki.",
+          "Vit hyggja at ítøkiligum uppgávum, har vitlíki veruliga kann hjálpa, og hvar ein ikki skal nýta vitlíki.",
       },
       {
         title: "Hvussu ein fær betri úrslit",
@@ -210,17 +210,17 @@ export const workshopStrings = {
       {
         title: "Hvat ikki eigur at verða latið til vitlíki",
         text:
-          "Ein týðandi partur av verkstovuni er hvussu man metur um hvat man kann siga við hesi amboð. Ikki allar uppgávur hóska til vitlíki, og fólk fáa eina greiðari fatan av mørkunum.",
+          "Ein týðandi partur av verkstovuni er hvussu ein metur um, hvat ein kann siga við hesi amboð. Ikki allar uppgávur hóska til vitlíki, og fólk fáa eina greiðari fatan av mørkunum.",
       },
       {
-        title: "Trygg nýtsla og einfalt dátuvernd",
+        title: "Trygg nýtsla og einføld dátuvernd",
         text:
           "Vit fara ígjøgnum, hvat kann deilast, hvat eigur at haldast aftur, og hvussu ein brúkar hesi amboðini meira ábyrgdarfult.",
       },
       {
         title: "Venjingar knýttar at veruligum arbeiði",
         text:
-          "Luttakarar finna finna verulig dømir um hvussu tey kunnu nýta vitlíki til sítt arbeiði.",
+          "Luttakarar finna verulig dømi um, hvussu tey kunnu nýta vitlíki til sítt arbeiði.",
       },
       {
         title: "Ein greiðari leið víðari",
@@ -249,7 +249,7 @@ export const workshopStrings = {
       },
       {
         q: "Vit hava longu roynt ChatGPT. Er hetta framvegis viðkomandi?",
-        a: "Ja. Vit gjøgnumgenga nógv ting, sum næstan eingin ger av sínum eintøkum tá ið tey býrja við vitlíki sjálvi. Verkstovan hjálpir fólki at brúka vitlíki meira skipa og gjøgnumhugsað, líka mikið hvat støði tey eru á.",
+        a: "Ja. Vit gjøgnumganga nógv ting, sum næstan eingin ger av sínum eintøkum tá ið tey byrja við vitlíki sjálvi. Verkstovan hjálpir fólki at brúka vitlíki meira skipað og gjøgnumhugsað, líka mikið hvat støði tey eru á.",
       },
       {
         q: "Viðgera tit trygd og persónsupplýsingar?",
