@@ -1,3 +1,18 @@
+export const CLIENT_FORM_SOURCES = [
+  "contact-section",
+  "inline-contact",
+  "workshop-landing",
+] as const;
+
+export type ClientFormSource = (typeof CLIENT_FORM_SOURCES)[number];
+
+export function isClientFormSource(value: unknown): value is ClientFormSource {
+  return (
+    typeof value === "string" &&
+    (CLIENT_FORM_SOURCES as readonly string[]).includes(value)
+  );
+}
+
 export interface MonitoredForm {
   id: string;
   label: string;
@@ -5,6 +20,7 @@ export interface MonitoredForm {
   formViewUrl: string;
   expectedEntryIds: string[];
   healthcheckPayload: Record<string, string>;
+  clientSources: ClientFormSource[];
 }
 
 export const MONITORED_FORMS: MonitoredForm[] = [
@@ -22,26 +38,32 @@ export const MONITORED_FORMS: MonitoredForm[] = [
       "entry.240567695":
         "[__healthcheck__] Automated monitoring ping from vitlikisstovan.fo. Safe to ignore or delete.",
     },
+    clientSources: ["contact-section", "inline-contact", "workshop-landing"],
   },
 ];
-
-export const CLIENT_FORM_SOURCES = [
-  "contact-section",
-  "inline-contact",
-  "workshop-landing",
-] as const;
-
-export type ClientFormSource = (typeof CLIENT_FORM_SOURCES)[number];
 
 export function getMonitoredForm(id: string): MonitoredForm | undefined {
   return MONITORED_FORMS.find((f) => f.id === id);
 }
 
+export function getFormForClientSource(
+  source: ClientFormSource
+): MonitoredForm | undefined {
+  return MONITORED_FORMS.find((f) => f.clientSources.includes(source));
+}
+
 export const CHECK_INTERVAL_MS = (() => {
-  const minutes = parseInt(process.env.FORM_MONITOR_INTERVAL_MIN || "60", 10);
-  return Math.max(5, isNaN(minutes) ? 60 : minutes) * 60 * 1000;
+  const minutes = parseInt(process.env.FORM_MONITOR_INTERVAL_MIN || "30", 10);
+  return Math.max(5, isNaN(minutes) ? 30 : minutes) * 60 * 1000;
 })();
 
 export const FAILURE_THRESHOLD = 2;
 export const MAX_HISTORY_PER_FORM = 50;
 export const MAX_CLIENT_FAILURES = 100;
+
+// Client beacon → alert pipeline thresholds:
+// If we receive >= CLIENT_FAILURE_ALERT_THRESHOLD beacons for the same form
+// within CLIENT_FAILURE_WINDOW_MS, raise an alert immediately (don't wait
+// for the next scheduled health check).
+export const CLIENT_FAILURE_ALERT_THRESHOLD = 3;
+export const CLIENT_FAILURE_WINDOW_MS = 30 * 60 * 1000;

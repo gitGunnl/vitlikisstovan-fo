@@ -2,8 +2,30 @@
   "forms": {
     "vts-contact-google-form": {
       "consecutiveFailures": 0,
-      "alertActive": false,
+      "alertActive": true,
       "history": [
+        {
+          "formId": "vts-contact-google-form",
+          "checkedAt": "2026-04-21T11:54:31.793Z",
+          "ok": true,
+          "postOk": true,
+          "postStatus": 200,
+          "schemaOk": true,
+          "missingEntryIds": [],
+          "durationMs": 439,
+          "trigger": "startup"
+        },
+        {
+          "formId": "vts-contact-google-form",
+          "checkedAt": "2026-04-21T11:49:39.099Z",
+          "ok": true,
+          "postOk": true,
+          "postStatus": 200,
+          "schemaOk": true,
+          "missingEntryIds": [],
+          "durationMs": 627,
+          "trigger": "startup"
+        },
         {
           "formId": "vts-contact-google-form",
           "checkedAt": "2026-04-21T11:48:09.642Z",
@@ -104,10 +126,32 @@
           "trigger": "startup"
         }
       ],
-      "lastOkAt": "2026-04-21T11:48:09.642Z"
+      "lastOkAt": "2026-04-21T11:54:31.793Z",
+      "lastAlertAt": "2026-04-21T11:54:34.987Z"
     }
   },
   "clientFailures": [
+    {
+      "source": "contact-section",
+      "reportedAt": "2026-04-21T11:54:34.399Z",
+      "errorName": "NetTest3",
+      "errorMessage": "forced test 3",
+      "userAgent": "curl/8.14.1"
+    },
+    {
+      "source": "contact-section",
+      "reportedAt": "2026-04-21T11:54:34.354Z",
+      "errorName": "NetTest2",
+      "errorMessage": "forced test 2",
+      "userAgent": "curl/8.14.1"
+    },
+    {
+      "source": "contact-section",
+      "reportedAt": "2026-04-21T11:54:34.306Z",
+      "errorName": "NetTest1",
+      "errorMessage": "forced test 1",
+      "userAgent": "curl/8.14.1"
+    },
     {
       "source": "contact-section",
       "reportedAt": "2026-04-21T11:47:48.893Z",

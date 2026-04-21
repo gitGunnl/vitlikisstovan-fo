@@ -2,15 +2,21 @@ import {
   MONITORED_FORMS,
   CHECK_INTERVAL_MS,
   FAILURE_THRESHOLD,
+  CLIENT_FAILURE_ALERT_THRESHOLD,
+  CLIENT_FAILURE_WINDOW_MS,
+  getFormForClientSource,
   type MonitoredForm,
+  type ClientFormSource,
 } from "./monitoring-config.js";
 import {
   recordCheckResult,
   setAlertActive,
   loadMonitoring,
+  recordClientFailure as storeClientFailure,
   type HealthCheckResult,
+  type ClientFailureEvent,
 } from "./monitoring-storage.js";
-import { sendAlertEmail, sendRecoveryEmail } from "./monitoring-mailer.js";
+import { sendAlertEmail, sendRecoveryEmail, sendClientBeaconAlertEmail } from "./monitoring-mailer.js";
 
 const FETCH_TIMEOUT_MS = 15000;
 
@@ -119,6 +125,49 @@ export async function runCheck(
   }
 
   return result;
+}
+
+/**
+ * Receive a client-side beacon (real form submission failed in the browser).
+ * Persists the event and, if recent client beacons for the same form cross
+ * the threshold within the rolling window, raises an alert through the same
+ * pipeline used by synthetic checks.
+ */
+export async function processClientFailure(
+  source: ClientFormSource,
+  payload: Omit<ClientFailureEvent, "source" | "reportedAt">
+): Promise<void> {
+  const event: ClientFailureEvent = {
+    source,
+    reportedAt: new Date().toISOString(),
+    ...payload,
+  };
+  storeClientFailure(event);
+
+  const form = getFormForClientSource(source);
+  if (!form) return;
+
+  const data = loadMonitoring();
+  const state = data.forms[form.id];
+  if (!state || state.alertActive) return;
+
+  const cutoff = Date.now() - CLIENT_FAILURE_WINDOW_MS;
+  const recentForForm = data.clientFailures.filter((ev) => {
+    if (!(form.clientSources as readonly string[]).includes(ev.source)) return false;
+    const ts = Date.parse(ev.reportedAt);
+    return Number.isFinite(ts) && ts >= cutoff;
+  });
+
+  if (recentForForm.length >= CLIENT_FAILURE_ALERT_THRESHOLD) {
+    const sendResult = await sendClientBeaconAlertEmail(form, recentForForm);
+    if (sendResult.ok) {
+      setAlertActive(form.id, true);
+    } else {
+      console.warn(
+        `[monitoring] Client-beacon alert email failed for ${form.id}; will retry on next beacon.`
+      );
+    }
+  }
 }
 
 export async function runAllChecks(

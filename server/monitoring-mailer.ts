@@ -1,5 +1,5 @@
 import { ReplitConnectors } from "@replit/connectors-sdk";
-import type { HealthCheckResult } from "./monitoring-storage.js";
+import type { HealthCheckResult, ClientFailureEvent } from "./monitoring-storage.js";
 import type { MonitoredForm } from "./monitoring-config.js";
 
 // Uses the Replit Gmail integration (connector id: google-mail).
@@ -67,7 +67,7 @@ async function sendEmail(subject: string, html: string): Promise<{ ok: boolean; 
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ raw }),
-      } as any
+      }
     );
     if (!res.ok) {
       const body = await res.text();
@@ -108,6 +108,35 @@ export async function sendAlertEmail(
     ${recent[0] ? formatResult(recent[0]) : "<p>(no recent check)</p>"}
     ${recent[1] ? `<h3>Previous check</h3>${formatResult(recent[1])}` : ""}
     <p style="color:#666;font-size:12px">You will receive a recovery email when checks pass again.</p>
+  `;
+  return await sendEmail(subject, html);
+}
+
+export async function sendClientBeaconAlertEmail(
+  form: MonitoredForm,
+  recentBeacons: ClientFailureEvent[]
+): Promise<{ ok: boolean; error?: string }> {
+  const subject = `[ALERT] Real customers are hitting form errors: ${form.label}`;
+  const items = recentBeacons
+    .slice(0, 10)
+    .map(
+      (ev) => `
+        <li>
+          <strong>${ev.reportedAt}</strong> — source: ${ev.source}<br/>
+          ${ev.errorName ? `<code>${ev.errorName}</code>: ` : ""}${ev.errorMessage ?? ""}<br/>
+          <span style="color:#666;font-size:11px">${ev.userAgent ?? ""}</span>
+        </li>`
+    )
+    .join("");
+  const html = `
+    <h2>Real users are reporting form failures</h2>
+    <p>${recentBeacons.length} client-side failure beacons have been received for
+    <strong>${form.label}</strong> within the alert window. This means real
+    visitors tried to submit and the request threw an error in the browser.</p>
+    <p><a href="${form.formViewUrl}">Open the Google Form</a></p>
+    <h3>Recent reports</h3>
+    <ul>${items}</ul>
+    <p style="color:#666;font-size:12px">Recovery is detected when the next scheduled health check passes.</p>
   `;
   return await sendEmail(subject, html);
 }
