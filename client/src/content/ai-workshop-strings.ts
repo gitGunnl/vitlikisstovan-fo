@@ -106,10 +106,10 @@ export const workshopStrings = {
   relevance: {
     heading: "Er hetta viðkomandi fyri tykkara arbeiðspláss?",
     body:
-      "Nógv arbeiðspláss vita, at vitlíki kann vera gagnligt, men nýtslan er framvegis ógreið. Summi hava roynt amboð sum ChatGPT. Onnur brúka tað hvønn dag, men hava ikki fingið nakra venjing í rætta nýtslu og onnur eru ikki komin í gongd. Og nógv ivast í, hvat er trygt at deila. Hetta er ein verkstova fyri tykkum, sum vilja geva starvsfólkunum eina praktiska og munagóða byrjan, so tey fáa eina greiðari fatan av, nær vitlíki hjálpir, og nær tað ikki ger tað.",
+      "Nógv arbeiðspláss vita, at vitlíki kann vera gagnligt, men flesta staðni er nýtslan framvegis óskipa. Summi brúka tað hvønn dag, men hava ikki fingið nakra venjing í rætta nýtslu og onnur eru ikki komin í gongd. Og nógv ivast í, hvat er trygt at deila. Hetta er ein verkstova fyri tykkum, sum vilja geva starvsfólkunum eina praktiska og skipaða innleiðslu, so tey fáa eina greiðari fatan av, nær vitlíki hjálpir, og nær tað ikki ger tað.",
     points: [
-      "Starvsfólk eru forvitin, men nýtslan er framvegis tilvildarlig",
-      "Tit hava roynt amboðini, men eru ongantíð blivin vegleidd um bestu nýtslu",
+      "Starvsfólk eru forvitin, men nýtslan er framvegis óskipa",
+      "Tit hava roynt amboðini, men eru ongantíð blivin vegleidd um rætta nýtslu",
       "Ivi valdar um, hvat er trygt at deila",
       "Tit vilja hava eina felags og praktiska fatan uttan fløktar tøkniligar frágreiðingar",
     ],
