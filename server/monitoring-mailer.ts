@@ -6,21 +6,19 @@ import type { MonitoredForm } from "./monitoring-config.js";
 // Calls https://gmail.googleapis.com/gmail/v1/users/me/messages/send via the proxy,
 // which handles OAuth token refresh automatically.
 
-export interface MailerStatus {
+interface MailerStatus {
   configured: boolean;
   missing: string[];
   to?: string;
-  from: string;
 }
 
-export function getMailerStatus(): MailerStatus {
+function getMailerStatus(): MailerStatus {
   const missing: string[] = [];
   if (!process.env.ALERT_EMAIL_TO) missing.push("ALERT_EMAIL_TO");
   return {
     configured: missing.length === 0,
     missing,
     to: process.env.ALERT_EMAIL_TO,
-    from: "your connected Gmail account",
   };
 }
 
@@ -127,12 +125,3 @@ export async function sendRecoveryEmail(
   await sendEmail(subject, html);
 }
 
-export async function sendTestEmail(): Promise<MailerStatus & { sent: boolean; error?: string }> {
-  const status = getMailerStatus();
-  if (!status.configured) return { ...status, sent: false };
-  const result = await sendEmail(
-    "[TEST] Form monitoring email is working",
-    `<p>This is a test email from the form monitoring system on vitlikisstovan.fo. If you received this, alerts will work.</p>`
-  );
-  return { ...status, sent: result.ok, error: result.error };
-}

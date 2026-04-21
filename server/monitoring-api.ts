@@ -1,30 +1,15 @@
 import { Router, json } from "express";
-import { runAllChecks, runCheck, getMonitoringSnapshot } from "./monitoring.js";
 import { recordClientFailure } from "./monitoring-storage.js";
-import { MONITORED_FORMS, CLIENT_FORM_SOURCES } from "./monitoring-config.js";
-import { getMailerStatus, sendTestEmail } from "./monitoring-mailer.js";
-
-function requireAdmin(req: any, res: any, next: any) {
-  const adminKey = process.env.ELECTION_ADMIN_KEY;
-  if (!adminKey) {
-    console.error(
-      "[monitoring] ELECTION_ADMIN_KEY env var is not set — admin endpoints are disabled."
-    );
-    return res.status(503).json({ error: "Admin key not configured on server" });
-  }
-  const provided = req.headers["x-admin-key"];
-  if (provided !== adminKey) return res.status(401).json({ error: "Unauthorized" });
-  next();
-}
+import { CLIENT_FORM_SOURCES } from "./monitoring-config.js";
 
 export function createMonitoringRouter(): Router {
   const router = Router();
   router.use(json({ limit: "10kb" }));
 
-  // Public-ish: accepts client failure beacons. Token-bucket rate limit per IP.
+  // Token-bucket rate limit per IP (10 reports / minute / IP).
   const buckets = new Map<string, { tokens: number; refilledAt: number }>();
   const MAX_TOKENS = 10;
-  const REFILL_PER_MS = 10 / 60_000; // 10 reports / minute
+  const REFILL_PER_MS = 10 / 60_000;
   function rateLimit(ip: string): boolean {
     const now = Date.now();
     const b = buckets.get(ip) ?? { tokens: MAX_TOKENS, refilledAt: now };
@@ -37,7 +22,6 @@ export function createMonitoringRouter(): Router {
     b.tokens -= 1;
     buckets.set(ip, b);
     if (buckets.size > 5000) {
-      // Light cleanup to prevent unbounded growth.
       for (const [k, v] of buckets) {
         if (now - v.refilledAt > 10 * 60_000) buckets.delete(k);
       }
@@ -45,6 +29,7 @@ export function createMonitoringRouter(): Router {
     return true;
   }
 
+  // Public endpoint: receives client-side beacons when a real form submission throws.
   router.post("/api/monitoring/client-failure", (req, res) => {
     const ip =
       (req.headers["x-forwarded-for"] as string | undefined)?.split(",")[0]?.trim() ||
@@ -67,45 +52,6 @@ export function createMonitoringRouter(): Router {
         : undefined,
     });
     res.json({ ok: true });
-  });
-
-  // Admin: snapshot of monitoring state.
-  router.get("/api/monitoring/status", requireAdmin, (_req, res) => {
-    const data = getMonitoringSnapshot();
-    res.json({
-      forms: MONITORED_FORMS.map((f) => ({
-        id: f.id,
-        label: f.label,
-        formViewUrl: f.formViewUrl,
-        expectedEntryIds: f.expectedEntryIds,
-        state: data.forms[f.id],
-      })),
-      clientFailures: data.clientFailures,
-      mailer: getMailerStatus(),
-    });
-  });
-
-  // Admin: trigger checks on demand.
-  router.post("/api/monitoring/run", requireAdmin, async (req, res) => {
-    try {
-      const formId = typeof req.body?.formId === "string" ? req.body.formId : undefined;
-      if (formId) {
-        const r = await runCheck(formId, "manual");
-        if (!r) return res.status(404).json({ error: "Unknown formId" });
-        return res.json({ results: [r] });
-      }
-      const results = await runAllChecks("manual");
-      res.json({ results });
-    } catch (err: any) {
-      console.error("[monitoring] run error:", err);
-      res.status(500).json({ error: err?.message || "Internal error" });
-    }
-  });
-
-  // Admin: send a test email.
-  router.post("/api/monitoring/test-email", requireAdmin, async (_req, res) => {
-    const result = await sendTestEmail();
-    res.json(result);
   });
 
   return router;
