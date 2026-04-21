@@ -211,7 +211,6 @@ function WorkshopContactFormComponent({ id }: { id?: string }) {
         >
           {mutation.isPending ? t.form.submitting : t.form.submitButton}
         </Button>
-        <p className="text-xs text-slate-400 text-center pt-1">{t.form.reassurance}</p>
         {mutation.isError && (
           <p className="text-sm text-red-600 text-center">{t.form.errorMessage}</p>
         )}
@@ -270,7 +269,6 @@ function HeroSection() {
                   <Phone className="w-3.5 h-3.5" /> {siteConfig.contact.phone}
                 </a>
               </div>
-              <p className="text-xs text-slate-400 mt-3">{t.hero.replyNote}</p>
             </div>
           </div>
         </div>
