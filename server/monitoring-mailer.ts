@@ -1,58 +1,86 @@
+import { ReplitConnectors } from "@replit/connectors-sdk";
 import type { HealthCheckResult } from "./monitoring-storage.js";
 import type { MonitoredForm } from "./monitoring-config.js";
 
-const RESEND_API_URL = "https://api.resend.com/emails";
+// Uses the Replit Gmail integration (connector id: google-mail).
+// Calls https://gmail.googleapis.com/gmail/v1/users/me/messages/send via the proxy,
+// which handles OAuth token refresh automatically.
 
 export interface MailerStatus {
   configured: boolean;
   missing: string[];
   to?: string;
-  from?: string;
+  from: string;
 }
 
 export function getMailerStatus(): MailerStatus {
   const missing: string[] = [];
-  if (!process.env.RESEND_API_KEY) missing.push("RESEND_API_KEY");
   if (!process.env.ALERT_EMAIL_TO) missing.push("ALERT_EMAIL_TO");
-  if (!process.env.ALERT_EMAIL_FROM) missing.push("ALERT_EMAIL_FROM");
   return {
     configured: missing.length === 0,
     missing,
     to: process.env.ALERT_EMAIL_TO,
-    from: process.env.ALERT_EMAIL_FROM,
+    from: "your connected Gmail account",
   };
 }
 
-async function sendEmail(subject: string, html: string): Promise<void> {
+function encodeRfc2822(opts: {
+  to: string;
+  subject: string;
+  html: string;
+}): string {
+  const lines = [
+    `To: ${opts.to}`,
+    `Subject: ${opts.subject}`,
+    "MIME-Version: 1.0",
+    'Content-Type: text/html; charset="UTF-8"',
+    "Content-Transfer-Encoding: 7bit",
+    "",
+    opts.html,
+  ];
+  return lines.join("\r\n");
+}
+
+function base64UrlEncode(input: string): string {
+  return Buffer.from(input, "utf-8")
+    .toString("base64")
+    .replace(/\+/g, "-")
+    .replace(/\//g, "_")
+    .replace(/=+$/, "");
+}
+
+async function sendEmail(subject: string, html: string): Promise<{ ok: boolean; error?: string }> {
   const status = getMailerStatus();
   if (!status.configured) {
     console.warn(
       `[monitoring] Email not sent (missing: ${status.missing.join(", ")}). Subject: ${subject}`
     );
-    return;
+    return { ok: false, error: `missing: ${status.missing.join(", ")}` };
   }
   try {
-    const res = await fetch(RESEND_API_URL, {
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        from: status.from,
-        to: [status.to],
-        subject,
-        html,
-      }),
-    });
+    const connectors = new ReplitConnectors();
+    const raw = base64UrlEncode(
+      encodeRfc2822({ to: status.to!, subject, html })
+    );
+    const res = await connectors.proxy(
+      "google-mail",
+      "/gmail/v1/users/me/messages/send",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ raw }),
+      } as any
+    );
     if (!res.ok) {
       const body = await res.text();
-      console.error(`[monitoring] Resend send failed: ${res.status} ${body}`);
-    } else {
-      console.log(`[monitoring] Alert email sent: ${subject}`);
+      console.error(`[monitoring] Gmail send failed: ${res.status} ${body}`);
+      return { ok: false, error: `${res.status}: ${body.slice(0, 300)}` };
     }
-  } catch (err) {
-    console.error(`[monitoring] Resend send error:`, err);
+    console.log(`[monitoring] Alert email sent: ${subject}`);
+    return { ok: true };
+  } catch (err: any) {
+    console.error(`[monitoring] Gmail send error:`, err);
+    return { ok: false, error: err?.message || String(err) };
   }
 }
 
@@ -99,12 +127,12 @@ export async function sendRecoveryEmail(
   await sendEmail(subject, html);
 }
 
-export async function sendTestEmail(): Promise<MailerStatus & { sent: boolean }> {
+export async function sendTestEmail(): Promise<MailerStatus & { sent: boolean; error?: string }> {
   const status = getMailerStatus();
   if (!status.configured) return { ...status, sent: false };
-  await sendEmail(
+  const result = await sendEmail(
     "[TEST] Form monitoring email is working",
-    `<p>This is a test email from the form monitoring system. If you received this, alerts will work.</p>`
+    `<p>This is a test email from the form monitoring system on vitlikisstovan.fo. If you received this, alerts will work.</p>`
   );
-  return { ...status, sent: true };
+  return { ...status, sent: result.ok, error: result.error };
 }
