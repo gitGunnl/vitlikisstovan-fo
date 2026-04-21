@@ -31,9 +31,6 @@ import Fyrilestur from "@/pages/okkara-taenastur/fyrilestur";
 import Vitlikisupplaering from "@/pages/okkara-taenastur/vitlikisupplaering";
 import Serloysnir from "@/pages/okkara-taenastur/serloysnir";
 import SkapandiVitliki from "@/pages/okkara-taenastur/skapandi-vitliki";
-import Val from "@/pages/val";
-import ValSvara from "@/pages/val-svara";
-import ValAdmin from "@/pages/val-admin";
 import AIWorkshop from "@/pages/ai-workshop";
 
 function Router() {
@@ -66,9 +63,6 @@ function Router() {
       <Route path="/frontpage-v2" component={FrontpageV2} />
       <Route path="/frontpage-v3" component={FrontpageV3} />
       <Route path="/frontpage-v4" component={FrontpageV4} />
-      <Route path="/val" component={Val} />
-      <Route path="/val/svara" component={ValSvara} />
-      <Route path="/val/admin" component={ValAdmin} />
       <Route path="/ai-workshop" component={AIWorkshop} />
       <Route component={NotFound} />
     </Switch>

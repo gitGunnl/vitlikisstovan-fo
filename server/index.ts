@@ -8,9 +8,6 @@ const rootDir = join(__dirname, '..');
 
 const apiApp = express();
 
-const { createElectionRouter } = await import('./election-api.js');
-apiApp.use(createElectionRouter());
-
 const { createMonitoringRouter } = await import('./monitoring-api.js');
 apiApp.use(createMonitoringRouter());
 

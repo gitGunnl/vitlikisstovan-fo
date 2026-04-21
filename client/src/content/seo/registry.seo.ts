@@ -146,24 +146,6 @@ const pages: PageSeo[] = [
     description: "Internal frontpage variant.",
     noindex: true,
   },
-  {
-    path: "/val",
-    title: "Val",
-    description: "Internal page.",
-    noindex: true,
-  },
-  {
-    path: "/val/svara",
-    title: "Val - Svara",
-    description: "Internal page.",
-    noindex: true,
-  },
-  {
-    path: "/val/admin",
-    title: "Val - Admin",
-    description: "Internal page.",
-    noindex: true,
-  },
 ];
 
 export default pages;
