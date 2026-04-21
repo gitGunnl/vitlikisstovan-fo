@@ -49,9 +49,9 @@ export const siteConfig = {
   },
 
   program: {
-    title: "Frá forvitin til framkomin: Eitt 12-vikuskeið til skrivstovufólk",
+    title: "Frá forvitin til framkomin: Eg veiti hjálp til skrivstovufólk",
     subtitle:
-      "Hetta er eitt skeið sniðgivi til at læra øllum á tykkara skrivstovu akkurát hvussu tey kunnu fáa nýttu av vitlíki. Eg komi út til tykkara, seti alt upp og læri toymið alt, sum tað skal duga. Tit skula bara samlast nakrar ferðir og læra at arbeiða trygt og munagott við vitlíki, eg takið mær av restini",
+      "Hetta er ein tænasta sniðgivin til at læra øllum á tykkara skrivstovu akkurát hvussu tey kunnu fáa nýttu av vitlíki. Eg komi út til tykkara og læri toymið alt, sum tað skal duga.",
 
     whatWeDeliver: {
       title: "Vit fáa stýr upp á",
