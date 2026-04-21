@@ -267,11 +267,6 @@
     transition: all 0.2s ease-in-out;
   }
 
-  /* Selection styles */
-  ::selection {
-    background-color: hsl(var(--primary) / 0.2);
-    color: hsl(var(--foreground));
-  }
 }
 
 @layer components {
