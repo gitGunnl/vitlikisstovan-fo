@@ -1,0 +1,53 @@
+{
+  "forms": {
+    "vts-contact-google-form": {
+      "consecutiveFailures": 0,
+      "alertActive": false,
+      "history": [
+        {
+          "formId": "vts-contact-google-form",
+          "checkedAt": "2026-04-21T10:34:34.033Z",
+          "ok": true,
+          "postOk": true,
+          "postStatus": 200,
+          "schemaOk": true,
+          "missingEntryIds": [],
+          "durationMs": 322,
+          "trigger": "startup"
+        },
+        {
+          "formId": "vts-contact-google-form",
+          "checkedAt": "2026-04-21T10:34:14.856Z",
+          "ok": true,
+          "postOk": true,
+          "postStatus": 200,
+          "schemaOk": true,
+          "missingEntryIds": [],
+          "durationMs": 607,
+          "trigger": "manual"
+        },
+        {
+          "formId": "vts-contact-google-form",
+          "checkedAt": "2026-04-21T10:33:10.687Z",
+          "ok": true,
+          "postOk": true,
+          "postStatus": 200,
+          "schemaOk": true,
+          "missingEntryIds": [],
+          "durationMs": 631,
+          "trigger": "startup"
+        }
+      ],
+      "lastOkAt": "2026-04-21T10:34:34.033Z"
+    }
+  },
+  "clientFailures": [
+    {
+      "source": "contact-section",
+      "reportedAt": "2026-04-21T10:34:20.758Z",
+      "errorName": "TypeError",
+      "errorMessage": "Failed to fetch",
+      "userAgent": "curl/8.14.1"
+    }
+  ]
+}

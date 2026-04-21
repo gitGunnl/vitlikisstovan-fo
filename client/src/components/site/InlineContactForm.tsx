@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/form";
 import { contactFormSchema, type ContactForm } from "@shared/schema";
 import { useToast } from "@/hooks/use-toast";
+import { reportFormFailure } from "@/lib/reportFormFailure";
 import { MessageSquare } from "lucide-react";
 
 interface InlineContactFormProps {
@@ -39,15 +40,20 @@ export default function InlineContactForm({ serviceName }: InlineContactFormProp
       formData.append("entry.263197538", data.email);
       formData.append("entry.240567695", `[${serviceName}] ${data.message}`);
 
-      await fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLSf8FFci-J91suIjxY2xh4GD-DQ-UfZftUNxq3dUdXkgJAjB1Q/formResponse",
-        {
-          method: "POST",
-          body: formData,
-          mode: "no-cors",
-          signal: AbortSignal.timeout(10000),
-        }
-      );
+      try {
+        await fetch(
+          "https://docs.google.com/forms/d/e/1FAIpQLSf8FFci-J91suIjxY2xh4GD-DQ-UfZftUNxq3dUdXkgJAjB1Q/formResponse",
+          {
+            method: "POST",
+            body: formData,
+            mode: "no-cors",
+            signal: AbortSignal.timeout(10000),
+          }
+        );
+      } catch (err) {
+        reportFormFailure("inline-contact", err);
+        throw err;
+      }
 
       return { success: true };
     },

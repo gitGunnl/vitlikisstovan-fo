@@ -21,6 +21,7 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 import { workshopContactFormSchema, type WorkshopContactForm } from "@shared/schema";
+import { reportFormFailure } from "@/lib/reportFormFailure";
 import { siteConfig } from "@/content/site";
 import { workshopStrings as t } from "@/content/ai-workshop-strings";
 import {
@@ -53,15 +54,20 @@ function WorkshopContactFormComponent({ id }: { id?: string }) {
       formData.append("entry.263197538", data.workEmail);
       formData.append("entry.240567695", `[Workshop LP] Org: ${data.organization} | Phone: ${data.phone || "N/A"} | ${data.message || ""}`);
 
-      await fetch(
-        "https://docs.google.com/forms/d/e/1FAIpQLSf8FFci-J91suIjxY2xh4GD-DQ-UfZftUNxq3dUdXkgJAjB1Q/formResponse",
-        {
-          method: "POST",
-          body: formData,
-          mode: "no-cors",
-          signal: AbortSignal.timeout(10000),
-        }
-      );
+      try {
+        await fetch(
+          "https://docs.google.com/forms/d/e/1FAIpQLSf8FFci-J91suIjxY2xh4GD-DQ-UfZftUNxq3dUdXkgJAjB1Q/formResponse",
+          {
+            method: "POST",
+            body: formData,
+            mode: "no-cors",
+            signal: AbortSignal.timeout(10000),
+          }
+        );
+      } catch (err) {
+        reportFormFailure("workshop-landing", err);
+        throw err;
+      }
 
       return { success: true };
     },

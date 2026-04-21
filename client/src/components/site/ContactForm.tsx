@@ -14,6 +14,7 @@ import {
 } from "@/components/ui/form";
 import { contactFormSchema, type ContactForm } from "@shared/schema";
 import { useToast } from "@/hooks/use-toast";
+import { reportFormFailure } from "@/lib/reportFormFailure";
 import { MessageSquare, Mail, Phone, Facebook, Linkedin } from "lucide-react";
 import { siteConfig } from "@/content/site";
 
@@ -37,13 +38,17 @@ export default function ContactSection() {
       formData.append('entry.263197538', data.email);
       formData.append('entry.240567695', data.message);
       
-      await fetch('https://docs.google.com/forms/d/e/1FAIpQLSf8FFci-J91suIjxY2xh4GD-DQ-UfZftUNxq3dUdXkgJAjB1Q/formResponse', {
-        method: 'POST',
-        body: formData,
-        mode: 'no-cors',
-        signal: AbortSignal.timeout(10000) // 10 second timeout
-      });
-      
+      try {
+        await fetch('https://docs.google.com/forms/d/e/1FAIpQLSf8FFci-J91suIjxY2xh4GD-DQ-UfZftUNxq3dUdXkgJAjB1Q/formResponse', {
+          method: 'POST',
+          body: formData,
+          mode: 'no-cors',
+          signal: AbortSignal.timeout(10000)
+        });
+      } catch (err) {
+        reportFormFailure("contact-section", err);
+        throw err;
+      }
       // Return success since Google Forms doesn't provide response in no-cors mode
       return { success: true, message: "Boðið er sent!" };
     },

@@ -11,6 +11,12 @@ const apiApp = express();
 const { createElectionRouter } = await import('./election-api.js');
 apiApp.use(createElectionRouter());
 
+const { createMonitoringRouter } = await import('./monitoring-api.js');
+apiApp.use(createMonitoringRouter());
+
+const { startScheduler } = await import('./monitoring.js');
+startScheduler();
+
 if (process.env.NODE_ENV === 'production') {
   const { existsSync } = await import('fs');
   const DIST = join(__dirname, 'public');

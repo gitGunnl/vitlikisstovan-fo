@@ -35,6 +35,7 @@ import Val from "@/pages/val";
 import ValSvara from "@/pages/val-svara";
 import ValAdmin from "@/pages/val-admin";
 import AIWorkshop from "@/pages/ai-workshop";
+import AdminHealth from "@/pages/admin-health";
 
 function Router() {
   return (
@@ -70,6 +71,7 @@ function Router() {
       <Route path="/val/svara" component={ValSvara} />
       <Route path="/val/admin" component={ValAdmin} />
       <Route path="/ai-workshop" component={AIWorkshop} />
+      <Route path="/admin/health" component={AdminHealth} />
       <Route component={NotFound} />
     </Switch>
   );
