@@ -43,7 +43,8 @@ async function checkPost(form: MonitoredForm): Promise<{
       body,
       redirect: "follow",
     });
-    return { ok: res.status >= 200 && res.status < 400, status: res.status };
+    // Google Forms returns 200 on success; treat anything else as a failure.
+    return { ok: res.status === 200, status: res.status };
   } catch (err: any) {
     return { ok: false, status: null, error: err?.message || String(err) };
   }

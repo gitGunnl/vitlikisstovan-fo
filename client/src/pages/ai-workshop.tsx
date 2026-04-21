@@ -260,9 +260,6 @@ function HeroSection() {
               <h3 className="text-lg font-bold text-slate-900 leading-tight">
                 Skriva til mín her
               </h3>
-              <p className="text-sm text-slate-500 mt-1">
-                Eg svari sjálvur, oftast samma dag.
-              </p>
             </div>
             <WorkshopContactFormComponent id="contact-form" />
             <div className="mt-5 pt-4 border-t border-slate-100 text-center">
