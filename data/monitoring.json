@@ -6,6 +6,28 @@
       "history": [
         {
           "formId": "vts-contact-google-form",
+          "checkedAt": "2026-04-21T11:31:52.931Z",
+          "ok": true,
+          "postOk": true,
+          "postStatus": 200,
+          "schemaOk": true,
+          "missingEntryIds": [],
+          "durationMs": 619,
+          "trigger": "startup"
+        },
+        {
+          "formId": "vts-contact-google-form",
+          "checkedAt": "2026-04-21T11:22:27.924Z",
+          "ok": true,
+          "postOk": true,
+          "postStatus": 200,
+          "schemaOk": true,
+          "missingEntryIds": [],
+          "durationMs": 637,
+          "trigger": "startup"
+        },
+        {
+          "formId": "vts-contact-google-form",
           "checkedAt": "2026-04-21T10:34:34.033Z",
           "ok": true,
           "postOk": true,
@@ -38,7 +60,7 @@
           "trigger": "startup"
         }
       ],
-      "lastOkAt": "2026-04-21T10:34:34.033Z"
+      "lastOkAt": "2026-04-21T11:31:52.931Z"
     }
   },
   "clientFailures": [
