@@ -1,5 +1,5 @@
 export const seoConfig = {
-  title: "Vitlíkisstovan - Vitlíki til arbeiði í Føroyum",
+  title: "Vitlíkisstovan - Vitlíki til alt slag arbeiði í Føroyum",
   description: "Vitlíki upplæring til øll á skrivstovuni og uttanfyri. Vitlíki ráðgeving og menning av vitlíki amboðum.",
   keywords: [
     "Vitlíki",
