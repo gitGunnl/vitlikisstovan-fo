@@ -11,6 +11,9 @@ const apiApp = express();
 const { createMonitoringRouter } = await import('./monitoring-api.js');
 apiApp.use(createMonitoringRouter());
 
+const { createBookingRouter } = await import('./booking-api.js');
+apiApp.use(createBookingRouter());
+
 const { startScheduler } = await import('./monitoring.js');
 startScheduler();
 

@@ -17,3 +17,11 @@ export const workshopContactFormSchema = z.object({
 });
 
 export type WorkshopContactForm = z.infer<typeof workshopContactFormSchema>;
+
+export const bookingRequestSchema = z.object({
+  email: z.string().email("Vinarliga skriva ein gildigan teldupost"),
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/, "Ógildig dato"),
+  time: z.string().regex(/^([01]\d|2[0-3]):[0-5]\d$/, "Ógildigur tími"),
+});
+
+export type BookingRequest = z.infer<typeof bookingRequestSchema>;

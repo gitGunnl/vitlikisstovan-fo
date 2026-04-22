@@ -266,6 +266,43 @@ export const workshopStrings = {
     ],
   },
 
+  header: {
+    callNow: "Ring nú",
+  },
+
+  featureCards: [
+    { title: "3 tímar", subtitle: "Kompakt og effektivt" },
+    { title: "Lagað til tykkum", subtitle: "Títt vinnuøki og gerandisdagur" },
+    { title: "Trygd fyrst", subtitle: "Ábyrgd, dátuvernd og etikkur" },
+  ],
+
+  ctaButtons: {
+    primary: "Spyr um verkstovu",
+    secondary: "Bóka eitt prát",
+  },
+
+  booking: {
+    title: "Bóka eitt stutt prát",
+    subtitle: "Vel ein dag og eitt tíðspunkt — vit ringja tær á tí valda tíðspunktinum.",
+    dateLabel: "Vel dag",
+    timeLabel: "Tøk tíðspunkt",
+    taken: "Upptikið",
+    emailLabel: "Tín teldupostur *",
+    emailPlaceholder: "navn@fyritoka.fo",
+    submit: "Bóka",
+    submitting: "Sendir...",
+    selectSlotFirst: "Vinarliga vel eitt tíðspunkt fyrst",
+    error: "Okkurt gekk galið. Royn vinarliga aftur.",
+    successTitle: "Takk fyri — bókingin er móttikin",
+    successBody: "Vit hava sent tær eina váttan og venda aftur sum skjótast.",
+    close: "Lat aftur",
+    weekdays: ["Sun", "Mán", "Týs", "Mik", "Hós", "Frí", "Ley"],
+    months: [
+      "januar", "februar", "mars", "apríl", "mai", "juni",
+      "juli", "august", "september", "oktober", "november", "desember",
+    ],
+  },
+
   finalCta: {
     heading: "Vilja tit geva starvsfólkunum eina greiðari byrjan við vitlíki?",
     body:
