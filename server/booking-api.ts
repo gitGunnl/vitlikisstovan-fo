@@ -14,7 +14,7 @@ function isAllowedDate(iso: string): boolean {
   const today = new Date();
   today.setUTCHours(0, 0, 0, 0);
   const diffDays = (date.getTime() - today.getTime()) / 86_400_000;
-  if (diffDays < 1 || diffDays > 30) return false;
+  if (diffDays < 1 || diffDays > 28) return false;
   const dow = date.getUTCDay();
   return dow !== 0 && dow !== 6;
 }
