@@ -100,6 +100,12 @@ export const workshopStrings = {
         role: "Leiðari",
         org: "Hugskotið",
       },
+      {
+        quote: "Greið og viðkomandi – gav okkum nógv nýggj hugskot til ChatGPT-nýtslu.",
+        name: "Guðrið Højgaard",
+        role: "Stjóri",
+        org: "Visit Faroe Islands",
+      },
     ],
   },
 
@@ -188,6 +194,13 @@ export const workshopStrings = {
         name: "Sóley Hammer",
         role: "Leiðari",
         org: "Hugskotið",
+      },
+      {
+        quote:
+          "Gunnleygur hevði eina góða verkstovu. Hon var bæði greið og viðkomandi, og hon gav okkum nógv nýggj hugskot til, hvussu vit kunnu nýta ChatGPT til okkara arbeiði.",
+        name: "Guðrið Højgaard",
+        role: "Stjóri",
+        org: "Visit Faroe Islands",
       },
     ],
   },
