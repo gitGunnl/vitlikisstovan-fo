@@ -270,6 +270,14 @@ export const workshopStrings = {
     callNow: "Ring nú",
   },
 
+  stickyBanner: {
+    title: "Klari at geva starvsfólkunum eitt framstig?",
+    subtitle: "Lat okkum hjálpa tykkum at brúka vitliki trygt, skilagott og við ítøkiligari nyttu.",
+    bookButton: "Bóka eitt prát",
+    callButton: "Ring",
+    dismiss: "Lat aftur",
+  },
+
   featureCards: [
     { title: "3 tímar", subtitle: "Kompakt og effektivt" },
     { title: "Lagað til tykkum", subtitle: "Títt vinnuøki og gerandisdagur" },

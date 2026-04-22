@@ -35,6 +35,7 @@ import {
   Users,
   ShieldCheck,
   Calendar as CalendarIcon,
+  X,
 } from "lucide-react";
 import {
   Dialog,
@@ -796,6 +797,90 @@ function FinalCTASection() {
   );
 }
 
+function StickyBanner({ onOpenBooking }: { onOpenBooking: () => void }) {
+  const [visible, setVisible] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
+  const tel = siteConfig.contact.phone.replace(/\s+/g, "");
+
+  useEffect(() => {
+    const onScroll = () => {
+      const scrolled = window.scrollY;
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      if (max <= 0) return;
+      setVisible(scrolled / max >= 0.4);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, []);
+
+  if (dismissed) return null;
+
+  return (
+    <div
+      className={`fixed inset-x-0 bottom-0 z-50 px-3 pb-3 sm:px-6 sm:pb-6 pointer-events-none transition-all duration-300 ${
+        visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+      }`}
+      aria-hidden={!visible}
+    >
+      <div
+        className="pointer-events-auto relative mx-auto max-w-5xl rounded-2xl bg-teal-700 text-white shadow-2xl ring-1 ring-black/5"
+        data-testid="sticky-banner"
+        role="region"
+        aria-label={t.stickyBanner.title}
+      >
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 p-4 sm:p-5">
+          <div className="flex items-start sm:items-center gap-3 flex-1 min-w-0">
+            <div className="hidden sm:flex flex-shrink-0 w-12 h-12 rounded-full bg-white/15 items-center justify-center">
+              <CalendarIcon className="w-6 h-6 text-white" />
+            </div>
+            <div className="min-w-0 flex-1">
+              <p className="font-semibold text-base sm:text-lg leading-tight">
+                {t.stickyBanner.title}
+              </p>
+              <p className="hidden sm:block text-sm text-white/85 mt-0.5">
+                {t.stickyBanner.subtitle}
+              </p>
+            </div>
+          </div>
+          <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 sm:flex-shrink-0">
+            <button
+              type="button"
+              onClick={onOpenBooking}
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-white text-teal-800 hover:bg-teal-50 font-medium text-sm transition-colors"
+              data-testid="button-banner-book"
+            >
+              {t.stickyBanner.bookButton}
+              <CalendarIcon className="w-4 h-4" />
+            </button>
+            <a
+              href={`tel:${tel}`}
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-white/70 text-white hover:bg-white/10 font-medium text-sm transition-colors"
+              data-testid="link-banner-call"
+            >
+              <Phone className="w-4 h-4" />
+              {t.stickyBanner.callButton} {siteConfig.contact.phone}
+            </a>
+          </div>
+          <button
+            type="button"
+            onClick={() => setDismissed(true)}
+            className="absolute top-2 right-2 sm:static sm:ml-1 flex-shrink-0 p-1.5 rounded-full text-white/70 hover:text-white hover:bg-white/10 transition-colors"
+            aria-label={t.stickyBanner.dismiss}
+            data-testid="button-banner-dismiss"
+          >
+            <X className="w-4 h-4" />
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function MinimalHeader() {
   const tel = siteConfig.contact.phone.replace(/\s+/g, "");
   return (
@@ -886,6 +971,7 @@ export default function AIWorkshopLanding() {
       <ContentSection />
       <FAQSection />
       <FinalCTASection />
+      <StickyBanner onOpenBooking={() => setBookingOpen(true)} />
     </div>
   );
 }
