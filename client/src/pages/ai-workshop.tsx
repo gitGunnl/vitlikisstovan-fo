@@ -45,6 +45,7 @@ import {
   DialogDescription,
 } from "@/components/ui/dialog";
 import { bookingRequestSchema, type BookingRequest } from "@shared/schema";
+import { useToast } from "@/hooks/use-toast";
 
 function WorkshopContactFormComponent({ id }: { id?: string }) {
   const [submitted, setSubmitted] = useState(false);
@@ -882,7 +883,27 @@ function StickyBanner({ onOpenBooking }: { onOpenBooking: () => void }) {
 }
 
 function MinimalHeader() {
-  const tel = siteConfig.contact.phone.replace(/\s+/g, "");
+  const { toast } = useToast();
+  const digits = siteConfig.contact.phone.replace(/\D+/g, "").replace(/^298/, "");
+  const handleCopy = async () => {
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(digits);
+      } else {
+        const ta = document.createElement("textarea");
+        ta.value = digits;
+        ta.style.position = "fixed";
+        ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand("copy");
+        document.body.removeChild(ta);
+      }
+      toast({ title: t.header.numberCopied });
+    } catch {
+      toast({ title: t.header.numberCopied });
+    }
+  };
   return (
     <header className="w-full border-b border-slate-100 bg-white">
       <div className="max-w-5xl mx-auto flex items-center justify-between h-14 px-4 sm:px-6">
@@ -894,15 +915,16 @@ function MinimalHeader() {
           />
           <span className="font-semibold text-slate-900">{siteConfig.siteName}</span>
         </a>
-        <a
-          href={`tel:${tel}`}
+        <button
+          type="button"
+          onClick={handleCopy}
           className="inline-flex items-center gap-2 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-teal-600 text-teal-700 hover:bg-teal-50 text-sm font-medium transition-colors"
-          data-testid="link-call-now"
+          data-testid="button-copy-number"
         >
           <Phone className="w-3.5 h-3.5" />
           <span className="hidden sm:inline">{t.header.callNow} </span>
           <span>{siteConfig.contact.phone}</span>
-        </a>
+        </button>
       </div>
     </header>
   );

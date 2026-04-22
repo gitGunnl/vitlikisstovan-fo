@@ -281,6 +281,7 @@ export const workshopStrings = {
 
   header: {
     callNow: "Ring nú",
+    numberCopied: "Nummar klippt",
   },
 
   stickyBanner: {
