@@ -294,7 +294,7 @@ export const workshopStrings = {
     selectSlotFirst: "Vinarliga vel eitt tíðspunkt fyrst",
     error: "Okkurt gekk galið. Royn vinarliga aftur.",
     successTitle: "Takk fyri — bókingin er móttikin",
-    successBody: "Vit hava sent tær eina váttan og venda aftur sum skjótast.",
+    successBody: "Vit hava fingið tíni boð og venda aftur sum skjótast við einari váttan.",
     close: "Lat aftur",
     weekdays: ["Sun", "Mán", "Týs", "Mik", "Hós", "Frí", "Ley"],
     months: [

@@ -86,9 +86,10 @@ async function sendBookingEmail(args: {
       return { ok: false, error: `${res.status}` };
     }
     return { ok: true };
-  } catch (err: any) {
+  } catch (err: unknown) {
     console.error("[booking] send error:", err);
-    return { ok: false, error: err?.message || String(err) };
+    const message = err instanceof Error ? err.message : String(err);
+    return { ok: false, error: message };
   }
 }
 
