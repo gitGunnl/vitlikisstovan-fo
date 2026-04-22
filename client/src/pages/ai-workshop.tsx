@@ -547,6 +547,7 @@ function HeroSection({ onOpenBooking }: { onOpenBooking: () => void }) {
               <h3 className="text-lg font-bold text-slate-900 leading-tight">
                 Skriva til mín her
               </h3>
+              <p>ella skriva til: info@vitlikisstovan.fo</p>
             </div>
             <WorkshopContactFormComponent id="contact-form" />
             <div className="mt-5 pt-4 border-t border-slate-100 text-center">
@@ -798,7 +799,7 @@ function FinalCTASection() {
   );
 }
 
-function StickyBanner({ onOpenBooking }: { onOpenBooking: () => void }) {
+function StickyBanner({ onOpenBooking, onWrite }: { onOpenBooking: () => void; onWrite: () => void }) {
   const [visible, setVisible] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const tel = siteConfig.contact.phone.replace(/\s+/g, "");
@@ -857,6 +858,15 @@ function StickyBanner({ onOpenBooking }: { onOpenBooking: () => void }) {
             >
               {t.stickyBanner.bookButton}
               <CalendarIcon className="w-4 h-4" />
+            </button>
+            <button
+              type="button"
+              onClick={onWrite}
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg border border-white/70 text-white hover:bg-white/10 font-medium text-sm transition-colors"
+              data-testid="button-banner-write"
+            >
+              <Mail className="w-4 h-4" />
+              {t.stickyBanner.writeButton}
             </button>
             <a
               href={`tel:${tel}`}
@@ -993,7 +1003,21 @@ export default function AIWorkshopLanding() {
       <ContentSection />
       <FAQSection />
       <FinalCTASection />
-      <StickyBanner onOpenBooking={() => setBookingOpen(true)} />
+      <StickyBanner
+        onOpenBooking={() => setBookingOpen(true)}
+        onWrite={() => {
+          const form = document.getElementById("contact-form");
+          if (form) {
+            form.scrollIntoView({ behavior: "smooth", block: "start" });
+            window.setTimeout(() => {
+              const input = form.querySelector<HTMLInputElement>('input[name="name"]');
+              if (input) {
+                input.focus({ preventScroll: true });
+              }
+            }, 600);
+          }
+        }}
+      />
     </div>
   );
 }

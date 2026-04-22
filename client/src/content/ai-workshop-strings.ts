@@ -285,16 +285,17 @@ export const workshopStrings = {
   },
 
   stickyBanner: {
-    title: "Klari at geva starvsfólkunum eitt framstig?",
-    subtitle: "Lat okkum hjálpa tykkum at brúka vitliki trygt, skilagott og við ítøkiligari nyttu.",
+    title: "Klár at læra vitlíki á ein skipaðan hátt?",
+    subtitle: "Ring elle skriva, so finna vit tað bestu loysnina til tykkum.",
     bookButton: "Bóka eitt prát",
+    writeButton: "Skriva til okkum",
     callButton: "Ring",
     dismiss: "Lat aftur",
   },
 
   featureCards: [
-    { title: "3 tímar", subtitle: "Kompakt og effektivt" },
-    { title: "Lagað til tykkum", subtitle: "Títt vinnuøki og gerandisdagur" },
+    { title: "3 tímar", subtitle: "Stutt og greitt" },
+    { title: "Lagað til tykkum", subtitle: "Tykkara vinnuøki og gerandisdag" },
     { title: "Trygd fyrst", subtitle: "Ábyrgd, dátuvernd og etikkur" },
   ],
 
