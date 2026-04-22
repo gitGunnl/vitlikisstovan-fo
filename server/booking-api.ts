@@ -48,29 +48,26 @@ function base64Url(input: string): string {
     .replace(/=+$/, "");
 }
 
-async function sendBookingEmail(args: {
-  email: string;
-  date: string;
-  time: string;
+const FAROESE_MONTHS = [
+  "januar", "februar", "mars", "apríl", "mai", "juni",
+  "juli", "august", "september", "oktober", "november", "desember",
+];
+
+function formatFaroeseDate(iso: string): string {
+  const [y, m, d] = iso.split("-").map(Number);
+  if (!y || !m || !d) return iso;
+  const month = FAROESE_MONTHS[m - 1] ?? "";
+  return `${d}. ${month} ${y}`;
+}
+
+async function sendGmail(opts: {
+  to: string;
+  subject: string;
+  html: string;
 }): Promise<{ ok: boolean; error?: string }> {
-  const to = process.env.ALERT_EMAIL_TO || process.env.BOOKING_EMAIL_TO;
-  if (!to) {
-    console.warn("[booking] No ALERT_EMAIL_TO/BOOKING_EMAIL_TO configured");
-    return { ok: false, error: "missing recipient" };
-  }
-  const subject = `New workshop booking — ${args.date} ${args.time}`;
-  const html = `
-    <h2>New workshop booking</h2>
-    <ul>
-      <li><strong>Email:</strong> ${escapeHtml(args.email)}</li>
-      <li><strong>Date:</strong> ${escapeHtml(args.date)}</li>
-      <li><strong>Time:</strong> ${escapeHtml(args.time)}</li>
-    </ul>
-    <p style="color:#666;font-size:12px">Sent from /ai-workshop booking dialog.</p>
-  `;
   try {
     const connectors = new ReplitConnectors();
-    const raw = base64Url(encodeRfc2822({ to, subject, html }));
+    const raw = base64Url(encodeRfc2822(opts));
     const res = await connectors.proxy(
       "google-mail",
       "/gmail/v1/users/me/messages/send",
@@ -91,6 +88,57 @@ async function sendBookingEmail(args: {
     const message = err instanceof Error ? err.message : String(err);
     return { ok: false, error: message };
   }
+}
+
+async function sendBookingEmail(args: {
+  email: string;
+  date: string;
+  time: string;
+}): Promise<{ ok: boolean; error?: string }> {
+  const to = process.env.ALERT_EMAIL_TO || process.env.BOOKING_EMAIL_TO;
+  if (!to) {
+    console.warn("[booking] No ALERT_EMAIL_TO/BOOKING_EMAIL_TO configured");
+    return { ok: false, error: "missing recipient" };
+  }
+  const subject = `New workshop booking — ${args.date} ${args.time}`;
+  const html = `
+    <h2>New workshop booking</h2>
+    <ul>
+      <li><strong>Email:</strong> ${escapeHtml(args.email)}</li>
+      <li><strong>Date:</strong> ${escapeHtml(args.date)}</li>
+      <li><strong>Time:</strong> ${escapeHtml(args.time)}</li>
+    </ul>
+    <p style="color:#666;font-size:12px">Sent from /ai-workshop booking dialog.</p>
+  `;
+  return sendGmail({ to, subject, html });
+}
+
+async function sendVisitorConfirmationEmail(args: {
+  email: string;
+  date: string;
+  time: string;
+}): Promise<{ ok: boolean; error?: string }> {
+  const prettyDate = formatFaroeseDate(args.date);
+  const subject = `Váttan á bóking — ${prettyDate} kl. ${args.time}`;
+  const html = `
+    <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; color:#1a1a1a; line-height:1.55; max-width:560px;">
+      <h2 style="margin:0 0 16px 0;">Takk fyri bókingina</h2>
+      <p>Hey,</p>
+      <p>Takk fyri at tú hevur bókað eitt stutt prát. Eg ringi tær á tí valda tíðspunktinum:</p>
+      <p style="background:#f5f5f3;padding:12px 16px;border-radius:8px;margin:16px 0;">
+        <strong>Dagur:</strong> ${escapeHtml(prettyDate)}<br>
+        <strong>Tíðspunkt:</strong> kl. ${escapeHtml(args.time)}
+      </p>
+      <p>Tørvar tú at flyta ella avlýsa tíðspunktið, ert tú vælkomin at svara hesum telduposti ella ringja mær beinleiðis.</p>
+      <p>Vit síggjast!</p>
+      <p style="margin-top:24px;">
+        Vinarliga,<br>
+        Gunnleygur<br>
+        <a href="https://vitlikisstovan.fo" style="color:#1a1a1a;">Vitlíkisstovan</a>
+      </p>
+    </div>
+  `;
+  return sendGmail({ to: args.email, subject, html });
 }
 
 export function createBookingRouter(): Router {
@@ -135,6 +183,12 @@ export function createBookingRouter(): Router {
     const result = await sendBookingEmail(parsed.data);
     if (!result.ok) {
       return res.status(502).json({ error: "Email send failed" });
+    }
+    const visitorResult = await sendVisitorConfirmationEmail(parsed.data);
+    if (!visitorResult.ok) {
+      console.warn(
+        `[booking] Visitor confirmation email failed for ${parsed.data.email}: ${visitorResult.error}`,
+      );
     }
     res.json({ ok: true });
   });
