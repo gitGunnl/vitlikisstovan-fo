@@ -809,7 +809,7 @@ function StickyBanner({ onOpenBooking, onWrite }: { onOpenBooking: () => void; o
       const scrolled = window.scrollY;
       const max = document.documentElement.scrollHeight - window.innerHeight;
       if (max <= 0) return;
-      setVisible(scrolled / max >= 0.4);
+      setVisible(scrolled / max >= 0.3);
     };
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
