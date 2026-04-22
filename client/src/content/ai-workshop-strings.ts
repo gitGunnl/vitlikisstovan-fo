@@ -107,7 +107,7 @@ export const workshopStrings = {
         org: "Visit Faroe Islands",
       },
       {
-        quote: "Verkstovan var spennandi og lærurík. Hon gav eina greiðari fatan av trygga nýtslu, og fleiri góð hugskot til, hvussu vit kunnu brúka vitlíki í okkara egna arbeiði.",
+        quote: "Spennandi og lærurík - gav eina greiðari fatan av trygga nýtslu.",
         name: "Fríði Jensen",
         role: "HR Data Specialist",
         org: "Bakkafrost",
