@@ -59,8 +59,8 @@ export function getFormForClientSource(
 }
 
 export const CHECK_INTERVAL_MS = (() => {
-  const minutes = parseInt(process.env.FORM_MONITOR_INTERVAL_MIN || "30", 10);
-  return Math.max(5, isNaN(minutes) ? 30 : minutes) * 60 * 1000;
+  const minutes = parseInt(process.env.FORM_MONITOR_INTERVAL_MIN || "1440", 10);
+  return Math.max(5, isNaN(minutes) ? 1440 : minutes) * 60 * 1000;
 })();
 
 export const FAILURE_THRESHOLD = 2;
