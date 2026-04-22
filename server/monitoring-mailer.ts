@@ -2,6 +2,15 @@ import { ReplitConnectors } from "@replit/connectors-sdk";
 import type { HealthCheckResult, ClientFailureEvent } from "./monitoring-storage.js";
 import type { MonitoredForm } from "./monitoring-config.js";
 
+function escapeHtml(s: string): string {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#39;");
+}
+
 // Uses the Replit Gmail integration (connector id: google-mail).
 // Calls https://gmail.googleapis.com/gmail/v1/users/me/messages/send via the proxy,
 // which handles OAuth token refresh automatically.
@@ -122,9 +131,9 @@ export async function sendClientBeaconAlertEmail(
     .map(
       (ev) => `
         <li>
-          <strong>${ev.reportedAt}</strong> — source: ${ev.source}<br/>
-          ${ev.errorName ? `<code>${ev.errorName}</code>: ` : ""}${ev.errorMessage ?? ""}<br/>
-          <span style="color:#666;font-size:11px">${ev.userAgent ?? ""}</span>
+          <strong>${escapeHtml(ev.reportedAt)}</strong> — source: ${escapeHtml(ev.source)}<br/>
+          ${ev.errorName ? `<code>${escapeHtml(ev.errorName)}</code>: ` : ""}${ev.errorMessage ? escapeHtml(ev.errorMessage) : ""}<br/>
+          <span style="color:#666;font-size:11px">${ev.userAgent ? escapeHtml(ev.userAgent) : ""}</span>
         </li>`
     )
     .join("");

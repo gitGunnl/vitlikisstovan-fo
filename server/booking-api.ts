@@ -159,14 +159,16 @@ export function createBookingRouter(): Router {
     }
     b.tokens -= 1;
     buckets.set(ip, b);
+    if (buckets.size > 5000) {
+      for (const [k, v] of buckets) {
+        if (now - v.refilledAt > 10 * 60_000) buckets.delete(k);
+      }
+    }
     return true;
   }
 
   router.post("/api/booking", async (req, res) => {
-    const ip =
-      (req.headers["x-forwarded-for"] as string | undefined)?.split(",")[0]?.trim() ||
-      req.socket.remoteAddress ||
-      "unknown";
+    const ip = req.socket.remoteAddress || "unknown";
     if (!rateLimit(ip)) {
       return res.status(429).json({ error: "Too many requests" });
     }

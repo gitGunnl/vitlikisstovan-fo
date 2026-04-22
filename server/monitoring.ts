@@ -160,6 +160,23 @@ export async function processClientFailure(
   });
 
   if (recentForForm.length >= CLIENT_FAILURE_ALERT_THRESHOLD) {
+    // Require corroboration from server-side health checks before sending an alert.
+    // Client beacons alone cannot trigger alerts — an attacker submitting beacons
+    // via the public endpoint cannot forge a server-side health check failure, so
+    // this prevents unauthenticated internet clients from poisoning monitoring.
+    const serverCorroborationWindowMs = CLIENT_FAILURE_WINDOW_MS * 4; // 2 hours
+    const serverCutoff = Date.now() - serverCorroborationWindowMs;
+    const hasRecentServerFailure = state.history.some((r) => {
+      if (r.ok) return false;
+      const ts = Date.parse(r.checkedAt);
+      return Number.isFinite(ts) && ts >= serverCutoff;
+    });
+    if (!hasRecentServerFailure) {
+      console.log(
+        `[monitoring] Client beacon threshold reached for ${form.id} but no corroborating server-side failure in window; suppressing alert.`
+      );
+      return;
+    }
     const sendResult = await sendClientBeaconAlertEmail(form, recentForForm);
     if (sendResult.ok) {
       setAlertActive(form.id, true);
