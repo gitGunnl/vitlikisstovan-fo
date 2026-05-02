@@ -586,11 +586,35 @@ function TrustStripInline() {
           <div className="h-px bg-slate-300 w-10" />
         </div>
       </div>
-      <div className="flex md:grid md:grid-cols-2 gap-3 md:gap-2 overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none -mx-4 sm:-mx-6 md:mx-0 px-4 sm:px-6 md:px-0 pb-2 md:pb-0 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
+      <div
+        className="md:hidden overflow-hidden -mx-4 sm:-mx-6 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]"
+        aria-label={t.trustStrip.heading}
+      >
+        <div className="flex w-max animate-marquee hover:[animation-play-state:paused] motion-reduce:animate-none">
+          {[0, 1].map((copy) => (
+            <div key={copy} className="flex gap-3 pr-3 shrink-0" aria-hidden={copy === 1 ? true : undefined}>
+              {t.trustStrip.quotes.map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-white border border-slate-200 rounded-lg p-3 w-[80vw] sm:w-[55vw] shrink-0"
+                >
+                  <p className="text-[13px] text-slate-700 leading-snug mb-1.5">
+                    "{item.quote}"
+                  </p>
+                  <p className="text-[11px] text-slate-500">
+                    <span className="font-semibold text-slate-800">{item.name}</span>, {item.role} · {item.org}
+                  </p>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+      <div className="hidden md:grid md:grid-cols-2 gap-2">
         {t.trustStrip.quotes.map((item, i) => (
           <div
             key={i}
-            className="bg-white border border-slate-200 rounded-lg p-3 min-w-[85%] sm:min-w-[60%] md:min-w-0 shrink-0 md:shrink snap-start"
+            className="bg-white border border-slate-200 rounded-lg p-3"
           >
             <p className="text-[13px] text-slate-700 leading-snug mb-1.5">
               "{item.quote}"
