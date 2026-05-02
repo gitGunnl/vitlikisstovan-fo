@@ -110,6 +110,7 @@ export default function FrontpageV3() {
           {/* Video Background with Image Fallback */}
           <VideoBackground
             videoSrc="/hero section video.webm"
+            videoSrcMp4="/hero-section-video.mp4"
             posterSrc="/images/hero-background.webp"
           />
 

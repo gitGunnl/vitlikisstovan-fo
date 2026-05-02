@@ -3,6 +3,8 @@ import { useState, useRef, useEffect } from 'react';
 interface VideoBackgroundProps {
   videoSrc: string;
   posterSrc: string;
+  /** Optional MP4 fallback for browsers without WebM support (e.g. Safari < 16). */
+  videoSrcMp4?: string;
   className?: string;
 }
 
@@ -16,7 +18,7 @@ interface VideoBackgroundProps {
  *   - On desktop the video element gets `preload="metadata"` (not "auto")
  *     so the browser doesn't pre-buffer the whole file before LCP.
  */
-export default function VideoBackground({ videoSrc, posterSrc, className = '' }: VideoBackgroundProps) {
+export default function VideoBackground({ videoSrc, posterSrc, videoSrcMp4, className = '' }: VideoBackgroundProps) {
   const [videoError, setVideoError] = useState(false);
   const [shouldLoadVideo, setShouldLoadVideo] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -88,6 +90,7 @@ export default function VideoBackground({ videoSrc, posterSrc, className = '' }:
         data-testid="video-background"
       >
         <source src={videoSrc} type="video/webm" />
+        {videoSrcMp4 && <source src={videoSrcMp4} type="video/mp4" />}
         {/* Browser doesn't support video, show image instead */}
         Your browser does not support the video tag.
       </video>

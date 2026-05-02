@@ -95,6 +95,7 @@ export default function FrontpageV2() {
         >
           <VideoBackground
             videoSrc="/hero section video.webm"
+            videoSrcMp4="/hero-section-video.mp4"
             posterSrc="/images/hero-background.webp"
           />
 
