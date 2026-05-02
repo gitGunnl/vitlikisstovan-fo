@@ -76,13 +76,19 @@ const pages: PageSeo[] = [
       <h2>Set teg í samband</h2>
       <p>Teldupostur: <a href="mailto:info@vitlikisstovan.fo">info@vitlikisstovan.fo</a> · Telefon: <a href="tel:+298919444">+298 919444</a></p>
     `),
-    jsonLd: {
-      "@type": "AboutPage",
-      name: "Um Vitlíkisstovuna",
-      url: `${SITE_URL}/um-okkum`,
-      inLanguage: "fo",
-      mainEntity: { "@id": ORG_REF },
-    },
+    jsonLd: [
+      {
+        "@type": "AboutPage",
+        name: "Um Vitlíkisstovuna",
+        url: `${SITE_URL}/um-okkum`,
+        inLanguage: "fo",
+        mainEntity: { "@id": ORG_REF },
+      },
+      breadcrumbs([
+        ["Heim", "/"],
+        ["Um okkum", "/um-okkum"],
+      ]),
+    ],
   },
 
   // ---------------------------------------------------------------------
@@ -111,23 +117,29 @@ const pages: PageSeo[] = [
       </ul>
       <p>Ert tú ivasamur um, hvar tit eiga at byrja? <a href="/contact">Bíleg eina ókeypis samrøðu</a>, so finna vit røttu fyrstu stigini saman.</p>
     `),
-    jsonLd: {
-      "@type": "ItemList",
-      name: "Tænastur — Vitlíkisstovan",
-      itemListElement: [
-        ["Byrjunarskeið í ChatGPT", "/okkara-taenastur/byrjunarskeidi"],
-        ["15 hættir at brúka KjattGPT", "/okkara-taenastur/15-haettir"],
-        ["Vitlíkisupplæring", "/okkara-taenastur/vitlikisupplaering"],
-        ["Fyrilestur um vitlíki", "/okkara-taenastur/fyrilestur"],
-        ["Serloysnir til sjálvirkan", "/okkara-taenastur/serloysnir"],
-        ["Skapandi vitlíki", "/okkara-taenastur/skapandi-vitliki"],
-      ].map(([name, url], i) => ({
-        "@type": "ListItem",
-        position: i + 1,
-        name,
-        url: `${SITE_URL}${url}`,
-      })),
-    },
+    jsonLd: [
+      {
+        "@type": "ItemList",
+        name: "Tænastur — Vitlíkisstovan",
+        itemListElement: [
+          ["Byrjunarskeið í ChatGPT", "/okkara-taenastur/byrjunarskeidi"],
+          ["15 hættir at brúka KjattGPT", "/okkara-taenastur/15-haettir"],
+          ["Vitlíkisupplæring", "/okkara-taenastur/vitlikisupplaering"],
+          ["Fyrilestur um vitlíki", "/okkara-taenastur/fyrilestur"],
+          ["Serloysnir til sjálvirkan", "/okkara-taenastur/serloysnir"],
+          ["Skapandi vitlíki", "/okkara-taenastur/skapandi-vitliki"],
+        ].map(([name, url], i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          name,
+          url: `${SITE_URL}${url}`,
+        })),
+      },
+      breadcrumbs([
+        ["Heim", "/"],
+        ["Tænastur", "/okkara-taenastur"],
+      ]),
+    ],
   },
 
   // ---------------------------------------------------------------------
@@ -354,13 +366,19 @@ const pages: PageSeo[] = [
       </ul>
       <p>Vit svara altíð áðrenn næsti gerandisdagur er lokin.</p>
     `),
-    jsonLd: {
-      "@type": "ContactPage",
-      name: "Samband — Vitlíkisstovan",
-      url: `${SITE_URL}/contact`,
-      inLanguage: "fo",
-      mainEntity: { "@id": ORG_REF },
-    },
+    jsonLd: [
+      {
+        "@type": "ContactPage",
+        name: "Samband — Vitlíkisstovan",
+        url: `${SITE_URL}/contact`,
+        inLanguage: "fo",
+        mainEntity: { "@id": ORG_REF },
+      },
+      breadcrumbs([
+        ["Heim", "/"],
+        ["Samband", "/contact"],
+      ]),
+    ],
   },
 
   // ---------------------------------------------------------------------
@@ -376,6 +394,20 @@ const pages: PageSeo[] = [
       <p>Verkætlanin <em>Vitlíki til arbeiðis</em> samlar vegleiðingar, frágreiðingar og praktiskt tilfar, ið hjálpa føroyskum bólkum og fyritøkum at koma gott ígongd við vitlíki á arbeiðsplássinum.</p>
       <p>Tilfarið er gjørt soleiðis, at tað kann brúkast bæði til sjálvlestur og sum grundarlag fyri verkstovur og innanhýsis upplæring.</p>
     `),
+    jsonLd: [
+      {
+        "@type": "CollectionPage",
+        name: "Vitlíki til arbeiðis",
+        url: `${SITE_URL}/tilarbeidis`,
+        inLanguage: "fo",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        about: { "@id": ORG_REF },
+      },
+      breadcrumbs([
+        ["Heim", "/"],
+        ["Vitlíki til arbeiðis", "/tilarbeidis"],
+      ]),
+    ],
   },
 
   // ---------------------------------------------------------------------
@@ -402,14 +434,20 @@ const pages: PageSeo[] = [
       <p>Vitlíkisstovan ger podkastir, sum kanna søguligar persónar, hendingar og evni úr Føroyum — framleiddar saman við vitlíkisamboðum til ljóð, talu og tilfar.</p>
       <p>Nýggjar útgávur koma reglulukt. Lurta gjøgnum tann innbygda spælaran ella á tínari vanligu podkast-tænastu.</p>
     `),
-    jsonLd: {
-      "@type": "PodcastSeries",
-      name: "Vitlíkisstovan Podkast",
-      url: `${SITE_URL}/podcast`,
-      inLanguage: ["fo", "en"],
-      author: { "@id": ORG_REF },
-      publisher: { "@id": ORG_REF },
-    },
+    jsonLd: [
+      {
+        "@type": "PodcastSeries",
+        name: "Vitlíkisstovan Podkast",
+        url: `${SITE_URL}/podcast`,
+        inLanguage: ["fo", "en"],
+        author: { "@id": ORG_REF },
+        publisher: { "@id": ORG_REF },
+      },
+      breadcrumbs([
+        ["Heim", "/"],
+        ["Podkast", "/podcast"],
+      ]),
+    ],
   },
 
   // ---------------------------------------------------------------------
@@ -417,14 +455,32 @@ const pages: PageSeo[] = [
   // ---------------------------------------------------------------------
   {
     path: "/ai-guide",
-    title: "AI for Pedagogues — practical AI guide | Vitlíkisstovan",
+    title: "Vitlíki til pedagogar — handalig vegleiðing | Vitlíkisstovan",
     description:
-      "A practical guide for teachers and pedagogues on using AI safely to cut daily admin work, plan activities and communicate with parents — so you spend more time with the children.",
+      "Handalig vegleiðing til lærarar og pedagogar um, hvussu vitlíki trygt kann minka um dagliga umsiting, fyrireiking og samskifti — so meiri tíð verður til børnini.",
     content: block(`
-      <h1>AI for Pedagogues</h1>
-      <p>A practical guide for teachers and pedagogues on safely using AI to reduce daily administrative work — planning activities, drafting parent communication and summarising notes — so you can spend more time with the children.</p>
-      <p>Includes safe-use tips, prompt examples and concrete classroom scenarios.</p>
+      <h1>Vitlíki til pedagogar</h1>
+      <p>Handalig vegleiðing til lærarar og pedagogar um, hvussu vitlíki trygt kann minka um dagliga umsiting — fyrireiking av virksemi, kunning til foreldur og samanumtøkur av notatum — so meiri tíð verður til børnini.</p>
+      <p>Vegleiðingin inniheldur trygdar-ráð, dømi um prompt og handaligar støður úr gerandisdegnum á dagstovni og í skúla.</p>
+      <p><em>Atløg: Hetta tilfarið er birt á enskum á sjálvari síðuni; samanfataður á føroyskum hjá <a href="/user-guides/ai-for-kindergarten-guide">Vitlíki til dagstovnar</a>.</em></p>
     `),
+    jsonLd: [
+      {
+        "@type": "Article",
+        headline: "Vitlíki til pedagogar — handalig vegleiðing",
+        description:
+          "Handalig vegleiðing til pedagogar um, hvussu vitlíki trygt kann minka um dagliga umsiting og samskifti.",
+        inLanguage: "fo",
+        author: { "@id": ORG_REF },
+        publisher: { "@id": ORG_REF },
+        url: `${SITE_URL}/ai-guide`,
+        mainEntityOfPage: `${SITE_URL}/ai-guide`,
+      },
+      breadcrumbs([
+        ["Heim", "/"],
+        ["Vitlíki til pedagogar", "/ai-guide"],
+      ]),
+    ],
   },
   {
     path: "/user-guides",
@@ -441,6 +497,29 @@ const pages: PageSeo[] = [
         <li><a href="/user-guides/ai-for-caretakers-guide">Vitlíki til umsorgarfólk</a></li>
       </ul>
     `),
+    jsonLd: [
+      {
+        "@type": "CollectionPage",
+        name: "Brúkaravegleiðingar í vitlíki",
+        url: `${SITE_URL}/user-guides`,
+        inLanguage: "fo",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+        hasPart: [
+          ["At koma ígongd við vitlíki", "/user-guides/getting-started"],
+          ["Bestu mannagongdir við vitlíki", "/user-guides/best-practices"],
+          ["Vitlíki til dagstovnar", "/user-guides/ai-for-kindergarten-guide"],
+          ["Vitlíki til umsorgarfólk", "/user-guides/ai-for-caretakers-guide"],
+        ].map(([name, path]) => ({
+          "@type": "Article",
+          name,
+          url: `${SITE_URL}${path}`,
+        })),
+      },
+      breadcrumbs([
+        ["Heim", "/"],
+        ["Brúkaravegleiðingar", "/user-guides"],
+      ]),
+    ],
   },
   {
     path: "/user-guides/getting-started",
@@ -451,12 +530,22 @@ const pages: PageSeo[] = [
       <h1>At koma ígongd við vitlíki</h1>
       <p>Ein einfald vegleiðing fyri tey, sum eru ný innan vitlíki. Vit fara ígjøgnum hvat amboð tú kanst velja, hvussu tú skrivar fyrstu prompt og hvussu tú trygt kanst royna nýggj amboð uttan at vága upplýsingar tínar.</p>
     `),
-    jsonLd: {
-      "@type": "HowTo",
-      name: "At koma ígongd við vitlíki",
-      inLanguage: "fo",
-      author: { "@id": ORG_REF },
-    },
+    jsonLd: [
+      {
+        "@type": "HowTo",
+        name: "At koma ígongd við vitlíki",
+        description:
+          "Fyrstu stigini í vitlíki: vel amboð, skriva tína fyrstu prompt og royn trygt nýggj amboð.",
+        inLanguage: "fo",
+        author: { "@id": ORG_REF },
+        url: `${SITE_URL}/user-guides/getting-started`,
+      },
+      breadcrumbs([
+        ["Heim", "/"],
+        ["Brúkaravegleiðingar", "/user-guides"],
+        ["At koma ígongd við vitlíki", "/user-guides/getting-started"],
+      ]),
+    ],
   },
   {
     path: "/user-guides/best-practices",
@@ -467,6 +556,24 @@ const pages: PageSeo[] = [
       <h1>Bestu mannagongdir við vitlíki</h1>
       <p>Eitt yvirlit av reglum og mannagongdum, ið hjálpa teg at brúka vitlíki effektivt og trygt: hvussu tú metir um svar, hvat tú ikki eigur at lata vitlíki síggja, og hvussu tú heldur kvalitetinum høgum.</p>
     `),
+    jsonLd: [
+      {
+        "@type": "Article",
+        headline: "Bestu mannagongdir við vitlíki",
+        description:
+          "Reglur og mannagongdir til at brúka vitlíki trygt og effektivt í arbeiðinum.",
+        inLanguage: "fo",
+        author: { "@id": ORG_REF },
+        publisher: { "@id": ORG_REF },
+        url: `${SITE_URL}/user-guides/best-practices`,
+        mainEntityOfPage: `${SITE_URL}/user-guides/best-practices`,
+      },
+      breadcrumbs([
+        ["Heim", "/"],
+        ["Brúkaravegleiðingar", "/user-guides"],
+        ["Bestu mannagongdir", "/user-guides/best-practices"],
+      ]),
+    ],
   },
   {
     path: "/user-guides/ai-for-kindergarten-guide",
@@ -477,6 +584,24 @@ const pages: PageSeo[] = [
       <h1>Vitlíki til dagstovnar</h1>
       <p>Eitt skjótt yvirlit av lættum og tryggum hættum at brúka vitlíki á dagstovninum: roknskaparyvirlit, fundarreferat, kunning til foreldur og fyrireiking av virksemi — alt sniðgivið til dagliga arbeiðið.</p>
     `),
+    jsonLd: [
+      {
+        "@type": "Article",
+        headline: "Vitlíki til dagstovnar",
+        description:
+          "Lættir og tryggir hættir at brúka vitlíki á dagstovninum — minni skriviarbeiði, meira tíð til børnini.",
+        inLanguage: "fo",
+        author: { "@id": ORG_REF },
+        publisher: { "@id": ORG_REF },
+        url: `${SITE_URL}/user-guides/ai-for-kindergarten-guide`,
+        mainEntityOfPage: `${SITE_URL}/user-guides/ai-for-kindergarten-guide`,
+      },
+      breadcrumbs([
+        ["Heim", "/"],
+        ["Brúkaravegleiðingar", "/user-guides"],
+        ["Vitlíki til dagstovnar", "/user-guides/ai-for-kindergarten-guide"],
+      ]),
+    ],
   },
   {
     path: "/user-guides/ai-for-caretakers-guide",
@@ -487,6 +612,24 @@ const pages: PageSeo[] = [
       <h1>Vitlíki til umsorgarfólk</h1>
       <p>Praktisk vegleiðing til umsorgarfólk um, hvussu vitlíki kann hjálpa í gerandisdegnum — samanumtøkur, kunning til avvarðandi, fyrireiking — og hvar mørkini ganga, tá tað kemur til persónsupplýsingar og trygd.</p>
     `),
+    jsonLd: [
+      {
+        "@type": "Article",
+        headline: "Vitlíki til umsorgarfólk",
+        description:
+          "Hvussu umsorgarfólk trygt kunnu brúka vitlíki til skriviarbeiði, samskifti og fyrireiking.",
+        inLanguage: "fo",
+        author: { "@id": ORG_REF },
+        publisher: { "@id": ORG_REF },
+        url: `${SITE_URL}/user-guides/ai-for-caretakers-guide`,
+        mainEntityOfPage: `${SITE_URL}/user-guides/ai-for-caretakers-guide`,
+      },
+      breadcrumbs([
+        ["Heim", "/"],
+        ["Brúkaravegleiðingar", "/user-guides"],
+        ["Vitlíki til umsorgarfólk", "/user-guides/ai-for-caretakers-guide"],
+      ]),
+    ],
   },
 
   // ---------------------------------------------------------------------
@@ -501,6 +644,19 @@ const pages: PageSeo[] = [
       <h1>Annað frá Vitlíkisstovuni</h1>
       <p>Hetta er savnstaður fyri tilfar, frágreiðingar og tíðindi frá Vitlíkisstovuni, ið ikki passa undir okkara fastu tænastusíður.</p>
     `),
+    jsonLd: [
+      {
+        "@type": "CollectionPage",
+        name: "Annað frá Vitlíkisstovuni",
+        url: `${SITE_URL}/annad-fra-vitlikisstovuni`,
+        inLanguage: "fo",
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+      },
+      breadcrumbs([
+        ["Heim", "/"],
+        ["Annað frá Vitlíkisstovuni", "/annad-fra-vitlikisstovuni"],
+      ]),
+    ],
   },
   {
     path: "/vitliki-i-verki",
@@ -511,13 +667,19 @@ const pages: PageSeo[] = [
       <h1>Vitlíki í verki</h1>
       <p>Útvalt vitlíkis-genererað arbeiði frá Vitlíkisstovuni: myndir, filmar, ljóð, eksperiment og verkætlanir. Hvør tabban vísir hvussu vitlíki verður brúkt í einum ávísum samanhangi — frá marknaðarføring til kreativ eksperiment.</p>
     `),
-    jsonLd: {
-      "@type": "CollectionPage",
-      name: "Vitlíki í verki",
-      inLanguage: "fo",
-      url: `${SITE_URL}/vitliki-i-verki`,
-      isPartOf: { "@id": `${SITE_URL}/#website` },
-    },
+    jsonLd: [
+      {
+        "@type": "CollectionPage",
+        name: "Vitlíki í verki",
+        inLanguage: "fo",
+        url: `${SITE_URL}/vitliki-i-verki`,
+        isPartOf: { "@id": `${SITE_URL}/#website` },
+      },
+      breadcrumbs([
+        ["Heim", "/"],
+        ["Vitlíki í verki", "/vitliki-i-verki"],
+      ]),
+    ],
   },
   {
     path: "/course-details",
@@ -528,6 +690,23 @@ const pages: PageSeo[] = [
       <h1>Skeiðsupplýsingar</h1>
       <p>Nærri upplýsingar um okkara vitlíkisskeið — hvat innihaldið er, hvussu skeiðini eru lagd til rættis og hvussu tú fært stuðul til at útbúgva tín starvsfólk.</p>
     `),
+    jsonLd: [
+      {
+        "@type": "Article",
+        headline: "Skeiðsupplýsingar",
+        description:
+          "Nærri upplýsingar um vitlíkisskeið hjá Vitlíkisstovuni: innihald, tíðarætlan og stuðul.",
+        inLanguage: "fo",
+        author: { "@id": ORG_REF },
+        publisher: { "@id": ORG_REF },
+        url: `${SITE_URL}/course-details`,
+        mainEntityOfPage: `${SITE_URL}/course-details`,
+      },
+      breadcrumbs([
+        ["Heim", "/"],
+        ["Skeiðsupplýsingar", "/course-details"],
+      ]),
+    ],
   },
 
   // ---------------------------------------------------------------------

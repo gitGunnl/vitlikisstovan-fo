@@ -68,6 +68,7 @@ function PromptCard({ title, subtitle, text, image, video }: { title: string; su
             loop
             muted
             playsInline
+            preload="metadata"
             className="w-full rounded-lg"
           />
         </div>
@@ -207,6 +208,7 @@ function SinglePageWorkshop({ workshop, onExit }: { workshop: Workshop; onExit: 
                         loop
                         muted
                         playsInline
+                        preload="metadata"
                         className="w-full rounded-t-xl"
                       />
                     </div>
