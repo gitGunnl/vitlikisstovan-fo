@@ -1,13 +1,13 @@
 import { Workshop } from "./types";
-import webshopImg from "@assets/generated_images/example_webshop.png";
-import lifestyleImg from "@assets/generated_images/example_lifestyle.png";
-import ingredientsImg from "@assets/generated_images/example_ingredients.png";
-import explodedImg from "@assets/generated_images/example_exploded.png";
-import blueprintImg from "@assets/generated_images/example_blueprint.png";
-import bundleImg from "@assets/generated_images/example_bundle.png";
-import inUseImg from "@assets/generated_images/example_in_use.png";
-import anglesImg from "@assets/generated_images/example_angles.png";
-import creativeBgImg from "@assets/generated_images/example_creative_bg.png";
+import webshopImg from "@assets/generated_images/example_webshop.webp";
+import lifestyleImg from "@assets/generated_images/example_lifestyle.webp";
+import ingredientsImg from "@assets/generated_images/example_ingredients.webp";
+import explodedImg from "@assets/generated_images/example_exploded.webp";
+import blueprintImg from "@assets/generated_images/example_blueprint.webp";
+import bundleImg from "@assets/generated_images/example_bundle.webp";
+import inUseImg from "@assets/generated_images/example_in_use.webp";
+import anglesImg from "@assets/generated_images/example_angles.webp";
+import creativeBgImg from "@assets/generated_images/example_creative_bg.webp";
 import storyboardImg from "@assets/generated_images/example_storyboard.jpg";
 import productVideo from "@assets/generated_images/product-video.mp4";
 
