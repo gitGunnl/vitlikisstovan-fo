@@ -32,6 +32,7 @@ import Vitlikisupplaering from "@/pages/okkara-taenastur/vitlikisupplaering";
 import Serloysnir from "@/pages/okkara-taenastur/serloysnir";
 import SkapandiVitliki from "@/pages/okkara-taenastur/skapandi-vitliki";
 import AIWorkshop from "@/pages/ai-workshop";
+import VitlikiIVerki from "@/pages/vitliki-i-verki";
 
 function Router() {
   return (
@@ -64,6 +65,7 @@ function Router() {
       <Route path="/frontpage-v3" component={FrontpageV3} />
       <Route path="/frontpage-v4" component={FrontpageV4} />
       <Route path="/ai-workshop" component={AIWorkshop} />
+      <Route path="/vitliki-i-verki" component={VitlikiIVerki} />
       <Route component={NotFound} />
     </Switch>
   );

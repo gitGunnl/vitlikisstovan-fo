@@ -117,6 +117,12 @@ const pages: PageSeo[] = [
     description: "Ymiskt tilfar og tíðindi.",
   },
   {
+    path: "/vitliki-i-verki",
+    title: "Vitlíki í verki - Vitlíkisstovan",
+    description:
+      "Útvalt vitlíkis-genererað arbeiði frá Vitlíkisstovuni — myndir, filmar, ljóð, eksperiment og verkætlanir.",
+  },
+  {
     path: "/course-details",
     title: "Skeiðsupplýsingar - Vitlíkisstovan",
     description: "Nærri upplýsingar um vitlíkisskeið.",
