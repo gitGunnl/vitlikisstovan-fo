@@ -532,6 +532,17 @@ const pages: PageSeo[] = [
     `),
     jsonLd: [
       {
+        "@type": "Article",
+        headline: "At koma ígongd við vitlíki — fyrstu stigini",
+        description:
+          "Fyrstu stigini í vitlíki: vel amboð, skriva tína fyrstu prompt og royn trygt nýggj amboð.",
+        inLanguage: "fo",
+        author: { "@id": ORG_REF },
+        publisher: { "@id": ORG_REF },
+        url: `${SITE_URL}/user-guides/getting-started`,
+        mainEntityOfPage: `${SITE_URL}/user-guides/getting-started`,
+      },
+      {
         "@type": "HowTo",
         name: "At koma ígongd við vitlíki",
         description:
