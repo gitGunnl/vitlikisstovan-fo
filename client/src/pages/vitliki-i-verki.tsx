@@ -29,22 +29,8 @@ const themes = [
 export default function VitlikiIVerki() {
   const [activeTab, setActiveTab] = useState(themes[0].value);
 
-  useEffect(() => {
-    document.title = "Vitlíki í verki - " + seoConfig.siteName;
-
-    const description =
-      "Útvalt vitlíkis-genererað arbeiði frá Vitlíkisstovuni — myndir, filmar, ljóð, eksperiment og verkætlanir.";
-
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", description);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = description;
-      document.head.appendChild(meta);
-    }
-  }, []);
+  // Title and meta description are owned by the prerender step
+  // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
   const activeIndex = themes.findIndex((t) => t.value === activeTab);
 

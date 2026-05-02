@@ -14,13 +14,8 @@ export default function FimmtanHaettir() {
   useEffect(() => {
     setIsMounted(true);
 
-    updateMetaTags({
-      title: "15 hættir at brúka KjattGPT - " + seoConfig.title,
-      description:
-        "Fá 15 tillagaðar mátar at brúka KjattGPT í tínum arbeiði. Spar vikur av leitan og feilum.",
-      url: window.location.href,
-      siteName: seoConfig.siteName,
-    });
+    // Title and meta description are owned by the prerender step
+    // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
     trackViewContent({
       content_name: "15 hættir at brúka KjattGPT",

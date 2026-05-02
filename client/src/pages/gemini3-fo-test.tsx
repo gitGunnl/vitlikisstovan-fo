@@ -261,18 +261,8 @@ const MarkdownBlock = ({ text }: { text: string }) => {
 // ---------------------------------------------------------------------------
 
 export default function AiForCaretakersGuide() {
-  useEffect(() => {
-    document.title = BLOG_TITLE;
-    const existingMeta = document.querySelector('meta[name="description"]');
-    if (existingMeta) {
-      existingMeta.setAttribute("content", BLOG_DESC);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = BLOG_DESC;
-      document.head.appendChild(meta);
-    }
-  }, []);
+  // Title and meta description are owned by the prerender step
+  // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
   const contentParts = blogContent.split(/(<prompt>[\s\S]*?<\/prompt>)/g);
 

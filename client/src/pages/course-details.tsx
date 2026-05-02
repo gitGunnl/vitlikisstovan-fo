@@ -9,19 +9,9 @@ export default function CourseDetails() {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    // Title and meta description are owned by the prerender step
+    // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
     setIsMounted(true);
-    // Set page metadata
-    document.title = "Lær meira um skeiðis - " + seoConfig.title;
-
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', "Lær alt um okkara AI skeið og hvusso tú kanst fáa stuðul til at útbúgva tína starvsfólk.");
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = "Lær alt um okkara AI skeið og hvusso tú kanst fáa stuðul til at útbúgva tína starvsfólk.";
-      document.head.appendChild(meta);
-    }
   }, []);
 
   if (!isMounted) {

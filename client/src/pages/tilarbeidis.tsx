@@ -291,21 +291,8 @@ const Tilarbeidis = () => {
     }
   };
 
-  useEffect(() => {
-    // Set page metadata
-    document.title = "Til arbeiðis - " + seoConfig.title;
-
-    const metaDescription = document.querySelector('meta[name="description"]');
-    const content = "Fylg okkara verkætlan og arbeiðisætlan, meðan vit menna vitlíkivegleiðingar til føroyska vinnulívið.";
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
+  // Title and meta description are owned by the prerender step
+  // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
   useEffect(() => {
     const handleScroll = () => {

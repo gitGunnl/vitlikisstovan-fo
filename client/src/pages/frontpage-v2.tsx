@@ -74,8 +74,9 @@ export default function FrontpageV2() {
   useScrollReveal();
 
   useEffect(() => {
+    // Title and meta description are owned by the prerender step
+    // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
     setIsMounted(true);
-    document.title = `${siteConfig.siteName} — ${siteConfig.tagline}`;
   }, []);
 
   if (!isMounted) return null;

@@ -279,21 +279,9 @@ export default function Verkstova() {
   const [showExitDialog, setShowExitDialog] = useState(false);
   const { toast } = useToast();
 
-  useEffect(() => {
-    // Set page metadata (Faroese)
-    document.title = "Atgongd til verkstovu | Verkstova venjingarskipan";
-
-    const content = "Fá atgongd til verkstovuna.";
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
+  // Title and meta description are owned by the prerender step
+  // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
+  // (verkstova is noindex'd anyway — kept for consistency.)
 
   const handlePasswordSubmit = (e: React.FormEvent) => {
     e.preventDefault();

@@ -12,18 +12,8 @@ export default function GettingStartedGuide() {
   const isPrintMode = search === "?print=true";
 
   useEffect(() => {
-    document.title = "Getting Started Guide - " + seoConfig.title;
-
-    const metaDescription = document.querySelector('meta[name="description"]');
-    const content = "Complete guide to getting started with our platform. Learn setup, basic concepts, and essential features.";
-    if (metaDescription) {
-      metaDescription.setAttribute('content', content);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
+    // Title and meta description are owned by the prerender step
+    // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
     // Auto-print if print mode
     if (isPrintMode) {

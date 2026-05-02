@@ -11,7 +11,6 @@ import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { siteConfig } from "@/content/site";
-import { seoConfig } from "@/content/seo";
 import {
   GraduationCap,
   Building2,
@@ -29,39 +28,10 @@ import {
   Download
 } from "lucide-react";
 
-// Utility function to update meta tags
-function updateMetaTags({ title, description, image, url, type, siteName }) {
-  const updateTag = (name, content) => {
-    let tag = document.querySelector(`meta[name="${name}"]`) || document.querySelector(`meta[property="${name}"]`);
-    if (!tag) {
-      tag = document.createElement('meta');
-      if (name.startsWith('og:')) {
-        tag.setAttribute('property', name);
-      } else {
-        tag.setAttribute('name', name);
-      }
-      document.head.appendChild(tag);
-    }
-    tag.setAttribute('content', content);
-  };
-
-  document.title = title;
-  updateTag('description', description);
-  updateTag('og:title', title);
-  updateTag('og:description', description);
-  updateTag('og:image', image);
-  updateTag('og:url', url);
-  updateTag('og:type', type);
-  if (siteName) {
-    updateTag('og:site_name', siteName);
-  }
-
-  // Add Twitter card specific tags
-  updateTag('twitter:card', 'summary_large_image');
-  updateTag('twitter:title', title);
-  updateTag('twitter:description', description);
-  updateTag('twitter:image', image);
-}
+// Note: title / description / OG / Twitter meta tags are owned by the
+// pre-render step (scripts/prerender-seo.ts) so the HTML shipped to crawlers
+// already has the correct values. We deliberately do NOT mutate them at runtime
+// here — doing so was overwriting the prerendered tags with stale content.
 
 export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
@@ -71,17 +41,6 @@ export default function Home() {
 
   useEffect(() => {
     setIsMounted(true);
-    // Set page metadata with Open Graph support
-    const fullTitle = `${siteConfig.siteName} - ${siteConfig.tagline}`;
-
-    updateMetaTags({
-      title: fullTitle,
-      description: seoConfig.description,
-      image: seoConfig.ogImage,
-      url: window.location.origin,
-      type: 'website',
-      siteName: seoConfig.siteName
-    });
 
     // Handle hash navigation (e.g., #contact)
     const hash = window.location.hash;

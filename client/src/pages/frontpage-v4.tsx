@@ -74,14 +74,8 @@ function scrollToSection(id: string) {
 
 export default function FrontpageV4() {
   useEffect(() => {
-    updateMetaTags({
-      title: 'Vitlíkisstovan – Practical AI Help for Faroese Organisations',
-      description: 'Workshops, talks, advice, prototypes, and creative AI production — built around real needs, real workflows, and clear next steps for Faroese organisations.',
-      image: seoConfig.ogImage,
-      url: window.location.origin + '/frontpage-v4',
-      type: 'website',
-      siteName: 'Vitlíkisstovan'
-    });
+    // Title and meta description are owned by the prerender step
+    // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
     const hash = window.location.hash;
     if (hash) {

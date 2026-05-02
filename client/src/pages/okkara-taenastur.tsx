@@ -19,21 +19,9 @@ export default function Taenastur() {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    // Title and meta description are owned by the prerender step
+    // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
     setIsMounted(true);
-    // SEO
-    document.title = "Tænastur - " + seoConfig.title;
-
-    const metaDescription = document.querySelector('meta[name="description"]');
-    const content =
-      "Eg hjálpi við øllum, sum snýr seg um vitlíki. Les um skeið, fyrilestrar, ráðgeving og serloysnir – alt bygt til føroyskar fyritøkur og stovnar.";
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
   }, []);
 
   if (!isMounted) return null;

@@ -14,13 +14,8 @@ export default function Fyrilestur() {
   useEffect(() => {
     setIsMounted(true);
 
-    updateMetaTags({
-      title: "Fyrilestur: Vitlíki - Frá Óvissu til Møguleikar - " + seoConfig.title,
-      description:
-        "Ein fyrilestur, sum gevur títt toymi greiða fatan av vitlíki – uttan torskilt tekniskt mál.",
-      url: window.location.href,
-      siteName: seoConfig.siteName,
-    });
+    // Title and meta description are owned by the prerender step
+    // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
     trackViewContent({
       content_name: "Fyrilestur: Vitlíki - Frá Óvissu til Møguleikar",

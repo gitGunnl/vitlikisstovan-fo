@@ -11,19 +11,8 @@ import { CalendarDays } from "lucide-react";
 import { blogPosts } from "@/content/blog";
 
 export default function Blog() {
-  useEffect(() => {
-    const fullTitle = `Blogg - ${seoConfig.title}`;
-    const description = "Les okkara nýggjastu greinar um vitlíki, koding og tøkni í Føroyum.";
-    
-    updateMetaTags({
-      title: fullTitle,
-      description: description,
-      image: seoConfig.ogImage,
-      url: `${window.location.origin}/blog`,
-      type: 'website',
-      siteName: seoConfig.siteName
-    });
-  }, []);
+  // Title and meta description are owned by the prerender step
+  // (scripts/prerender-seo.ts via client/src/content/seo/blog-posts.seo.ts).
 
   const sortedPosts = [...blogPosts].sort((a, b) => b.date.localeCompare(a.date));
 

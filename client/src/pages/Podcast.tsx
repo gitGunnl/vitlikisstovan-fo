@@ -8,18 +8,23 @@ import "@/styles/podcast.css";
 
 export default function Podcast() {
   useEffect(() => {
-    // Set document title and meta description
-    document.title = `Podcast – ${siteConfig.siteName}`;
-    
-    // Set meta description
-    const metaDescription = document.querySelector('meta[name="description"]');
-    if (metaDescription) {
-      metaDescription.setAttribute('content', 'Listen to our podcast episodes and discover insights from industry experts.');
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = 'Listen to our podcast episodes and discover insights from industry experts.';
-      document.head.appendChild(meta);
+    // Note: <title> / meta description are owned by the pre-render step.
+    // We don't overwrite them here anymore — the prerendered Faroese values
+    // were being clobbered with English placeholders.
+
+    // Lazy-load Font Awesome only on this page (the icons are unused
+    // elsewhere). Previously a global stylesheet was render-blocking on
+    // every page just for a handful of icons here.
+    const FA_ID = "font-awesome-cdn";
+    if (!document.getElementById(FA_ID)) {
+      const link = document.createElement("link");
+      link.id = FA_ID;
+      link.rel = "stylesheet";
+      link.href =
+        "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css";
+      link.crossOrigin = "anonymous";
+      link.referrerPolicy = "no-referrer";
+      document.head.appendChild(link);
     }
 
     // Add podcast-page class to body

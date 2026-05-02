@@ -1,73 +1,83 @@
 import { Switch, Route } from "wouter";
+import { lazy, Suspense } from "react";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import NotFound from "@/pages/not-found";
 import Home from "@/pages/home";
-import CourseDetails from "@/pages/course-details";
-import UmOkkum from "@/pages/um-okkum";
-import OkkaraTaenastur from "@/pages/okkara-taenastur";
-import Contact from "@/pages/contact";
-import Blog from "@/pages/blog";
-import BlogPost from "@/pages/blog-post";
-import Tilarbeidis from "@/pages/tilarbeidis";
-import Verkstova from "@/pages/verkstova";
-import Podcast from "@/pages/Podcast";
-import AIGuide from "@/pages/ai-guide";
-import UserGuides from "@/pages/user-guides";
-import GettingStartedGuide from "@/pages/getting-started-guide";
-import BestPracticesGuide from "@/pages/best-practices-guide";
-import AIForCaretakersGuide from "@/pages/ai-for-caretakers-guide";
-import AIForKindergartenGuide from "@/pages/ai-for-kindergarten-guide";
-import AnnadFraVitlikisstovuni from "@/pages/annad-fra-vitlikisstovuni";
-import Gemini3FoTest from "@/pages/gemini3-fo-test";
-import FrontpageV2 from "@/pages/frontpage-v2";
-import FrontpageV3 from "@/pages/frontpage-v3";
-import FrontpageV4 from "@/pages/frontpage-v4";
-import Byrjunarskeidi from "@/pages/okkara-taenastur/byrjunarskeidi";
-import FimmtanHaettir from "@/pages/okkara-taenastur/15-haettir";
-import Fyrilestur from "@/pages/okkara-taenastur/fyrilestur";
-import Vitlikisupplaering from "@/pages/okkara-taenastur/vitlikisupplaering";
-import Serloysnir from "@/pages/okkara-taenastur/serloysnir";
-import SkapandiVitliki from "@/pages/okkara-taenastur/skapandi-vitliki";
-import AIWorkshop from "@/pages/ai-workshop";
-import VitlikiIVerki from "@/pages/vitliki-i-verki";
+import NotFound from "@/pages/not-found";
+
+const CourseDetails = lazy(() => import("@/pages/course-details"));
+const UmOkkum = lazy(() => import("@/pages/um-okkum"));
+const OkkaraTaenastur = lazy(() => import("@/pages/okkara-taenastur"));
+const Contact = lazy(() => import("@/pages/contact"));
+const Blog = lazy(() => import("@/pages/blog"));
+const BlogPost = lazy(() => import("@/pages/blog-post"));
+const Tilarbeidis = lazy(() => import("@/pages/tilarbeidis"));
+const Verkstova = lazy(() => import("@/pages/verkstova"));
+const Podcast = lazy(() => import("@/pages/Podcast"));
+const AIGuide = lazy(() => import("@/pages/ai-guide"));
+const UserGuides = lazy(() => import("@/pages/user-guides"));
+const GettingStartedGuide = lazy(() => import("@/pages/getting-started-guide"));
+const BestPracticesGuide = lazy(() => import("@/pages/best-practices-guide"));
+const AIForCaretakersGuide = lazy(() => import("@/pages/ai-for-caretakers-guide"));
+const AIForKindergartenGuide = lazy(() => import("@/pages/ai-for-kindergarten-guide"));
+const AnnadFraVitlikisstovuni = lazy(() => import("@/pages/annad-fra-vitlikisstovuni"));
+const Gemini3FoTest = lazy(() => import("@/pages/gemini3-fo-test"));
+const FrontpageV2 = lazy(() => import("@/pages/frontpage-v2"));
+const FrontpageV3 = lazy(() => import("@/pages/frontpage-v3"));
+const FrontpageV4 = lazy(() => import("@/pages/frontpage-v4"));
+const Byrjunarskeidi = lazy(() => import("@/pages/okkara-taenastur/byrjunarskeidi"));
+const FimmtanHaettir = lazy(() => import("@/pages/okkara-taenastur/15-haettir"));
+const Fyrilestur = lazy(() => import("@/pages/okkara-taenastur/fyrilestur"));
+const Vitlikisupplaering = lazy(() => import("@/pages/okkara-taenastur/vitlikisupplaering"));
+const Serloysnir = lazy(() => import("@/pages/okkara-taenastur/serloysnir"));
+const SkapandiVitliki = lazy(() => import("@/pages/okkara-taenastur/skapandi-vitliki"));
+const AIWorkshop = lazy(() => import("@/pages/ai-workshop"));
+const VitlikiIVerki = lazy(() => import("@/pages/vitliki-i-verki"));
+
+function RouteFallback() {
+  return (
+    <div className="min-h-screen" aria-busy="true" aria-live="polite" />
+  );
+}
 
 function Router() {
   return (
-    <Switch>
-      <Route path="/" component={Home} />
-      <Route path="/course-details" component={CourseDetails} />
-      <Route path="/um-okkum" component={UmOkkum} />
-      <Route path="/okkara-taenastur" component={OkkaraTaenastur} />
-      <Route path="/okkara-taenastur/byrjunarskeidi" component={Byrjunarskeidi} />
-      <Route path="/okkara-taenastur/15-haettir" component={FimmtanHaettir} />
-      <Route path="/okkara-taenastur/fyrilestur" component={Fyrilestur} />
-      <Route path="/okkara-taenastur/vitlikisupplaering" component={Vitlikisupplaering} />
-      <Route path="/okkara-taenastur/serloysnir" component={Serloysnir} />
-      <Route path="/okkara-taenastur/skapandi-vitliki" component={SkapandiVitliki} />
-      <Route path="/contact" component={Contact} />
-      <Route path="/tilarbeidis" component={Tilarbeidis} />
-      <Route path="/blog" component={Blog} />
-      <Route path="/blog/:slug" component={BlogPost} />
-      <Route path="/verkstova" component={Verkstova} />
-      <Route path="/podcast" component={Podcast} />
-      <Route path="/ai-guide" component={AIGuide} />
-      <Route path="/user-guides" component={UserGuides} />
-      <Route path="/user-guides/ai-for-kindergarten-guide" component={AIForKindergartenGuide} />
-      <Route path="/user-guides/ai-for-caretakers-guide" component={AIForCaretakersGuide} />
-      <Route path="/user-guides/getting-started" component={GettingStartedGuide} />
-      <Route path="/user-guides/best-practices" component={BestPracticesGuide} />
-      <Route path="/annad-fra-vitlikisstovuni" component={AnnadFraVitlikisstovuni} />
-      <Route path="/gemini3-fo-test" component={Gemini3FoTest} />
-      <Route path="/frontpage-v2" component={FrontpageV2} />
-      <Route path="/frontpage-v3" component={FrontpageV3} />
-      <Route path="/frontpage-v4" component={FrontpageV4} />
-      <Route path="/ai-workshop" component={AIWorkshop} />
-      <Route path="/vitliki-i-verki" component={VitlikiIVerki} />
-      <Route component={NotFound} />
-    </Switch>
+    <Suspense fallback={<RouteFallback />}>
+      <Switch>
+        <Route path="/" component={Home} />
+        <Route path="/course-details" component={CourseDetails} />
+        <Route path="/um-okkum" component={UmOkkum} />
+        <Route path="/okkara-taenastur" component={OkkaraTaenastur} />
+        <Route path="/okkara-taenastur/byrjunarskeidi" component={Byrjunarskeidi} />
+        <Route path="/okkara-taenastur/15-haettir" component={FimmtanHaettir} />
+        <Route path="/okkara-taenastur/fyrilestur" component={Fyrilestur} />
+        <Route path="/okkara-taenastur/vitlikisupplaering" component={Vitlikisupplaering} />
+        <Route path="/okkara-taenastur/serloysnir" component={Serloysnir} />
+        <Route path="/okkara-taenastur/skapandi-vitliki" component={SkapandiVitliki} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/tilarbeidis" component={Tilarbeidis} />
+        <Route path="/blog" component={Blog} />
+        <Route path="/blog/:slug" component={BlogPost} />
+        <Route path="/verkstova" component={Verkstova} />
+        <Route path="/podcast" component={Podcast} />
+        <Route path="/ai-guide" component={AIGuide} />
+        <Route path="/user-guides" component={UserGuides} />
+        <Route path="/user-guides/ai-for-kindergarten-guide" component={AIForKindergartenGuide} />
+        <Route path="/user-guides/ai-for-caretakers-guide" component={AIForCaretakersGuide} />
+        <Route path="/user-guides/getting-started" component={GettingStartedGuide} />
+        <Route path="/user-guides/best-practices" component={BestPracticesGuide} />
+        <Route path="/annad-fra-vitlikisstovuni" component={AnnadFraVitlikisstovuni} />
+        <Route path="/gemini3-fo-test" component={Gemini3FoTest} />
+        <Route path="/frontpage-v2" component={FrontpageV2} />
+        <Route path="/frontpage-v3" component={FrontpageV3} />
+        <Route path="/frontpage-v4" component={FrontpageV4} />
+        <Route path="/ai-workshop" component={AIWorkshop} />
+        <Route path="/vitliki-i-verki" component={VitlikiIVerki} />
+        <Route component={NotFound} />
+      </Switch>
+    </Suspense>
   );
 }
 

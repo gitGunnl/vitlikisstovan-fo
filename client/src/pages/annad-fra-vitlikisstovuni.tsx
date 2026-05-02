@@ -10,20 +10,8 @@ import { BookOpen, Briefcase, Headphones, Wrench, ArrowRight } from "lucide-reac
 import { seoConfig } from "@/content/seo";
 
 export default function AnnadFraVitlikisstovuni() {
-  useEffect(() => {
-    document.title = "Annað frá Vitlíkisstovuni - " + seoConfig.title;
-
-    const metaDescription = document.querySelector('meta[name="description"]');
-    const content = "Yvirlit yvir alt tilfar og tilfeingi frá Vitlíkisstovuni - vegleiðingar, verkætlanir, poddvarp og verkstovur.";
-    if (metaDescription) {
-      metaDescription.setAttribute('content', content);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
+  // Title and meta description are owned by the prerender step
+  // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
   const items = [
     {

@@ -1121,55 +1121,8 @@ function MinimalHeader() {
 
 export default function AIWorkshopLanding() {
   const [bookingOpen, setBookingOpen] = useState(false);
-  useEffect(() => {
-    document.title = t.meta.pageTitle;
-
-    const metaEntries: [string, string][] = [
-      ["description", t.meta.description],
-      ["og:title", t.meta.ogTitle],
-      ["og:description", t.meta.ogDescription],
-      ["og:type", "website"],
-      ["og:site_name", "Vitlíkisstovan"],
-      ["og:url", "https://vitlikisstovan.fo/ai-workshop"],
-    ];
-
-    const previousValues: [string, string | null][] = [];
-
-    metaEntries.forEach(([name, content]) => {
-      const selector = name.startsWith("og:")
-        ? `meta[property="${name}"]`
-        : `meta[name="${name}"]`;
-      let el = document.querySelector(selector);
-      previousValues.push([name, el ? el.getAttribute("content") : null]);
-      if (!el) {
-        el = document.createElement("meta");
-        if (name.startsWith("og:")) {
-          el.setAttribute("property", name);
-        } else {
-          el.setAttribute("name", name);
-        }
-        document.head.appendChild(el);
-      }
-      el.setAttribute("content", content);
-    });
-
-    return () => {
-      document.title = "Vitlíkisstovan";
-      previousValues.forEach(([name, prev]) => {
-        const selector = name.startsWith("og:")
-          ? `meta[property="${name}"]`
-          : `meta[name="${name}"]`;
-        const el = document.querySelector(selector);
-        if (el) {
-          if (prev !== null) {
-            el.setAttribute("content", prev);
-          } else {
-            el.remove();
-          }
-        }
-      });
-    };
-  }, []);
+  // Title and meta description are owned by the prerender step
+  // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
   return (
     <div className="min-h-screen bg-white text-slate-900 antialiased">

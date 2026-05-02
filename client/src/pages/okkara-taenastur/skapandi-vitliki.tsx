@@ -14,13 +14,8 @@ export default function SkapandiVitliki() {
   useEffect(() => {
     setIsMounted(true);
 
-    updateMetaTags({
-      title: "Skapandi vitlíki - " + seoConfig.title,
-      description:
-        "Eg skapi tilfar við vitlíki og haldi kreativar verkstovur. Video, myndir, grafikkur og meira.",
-      url: window.location.href,
-      siteName: seoConfig.siteName,
-    });
+    // Title and meta description are owned by the prerender step
+    // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
     trackViewContent({
       content_name: "Skapandi vitlíki",

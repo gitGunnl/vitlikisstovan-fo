@@ -14,13 +14,8 @@ export default function Byrjunarskeidi() {
   useEffect(() => {
     setIsMounted(true);
 
-    updateMetaTags({
-      title: "Byrjunarskeið í ChatGPT - " + seoConfig.title,
-      description:
-        "Lær at brúka ChatGPT effektivt í gerandisarbeiði. Hóskar til bæði nýbyrjarar og yrkisfólk.",
-      url: window.location.href,
-      siteName: seoConfig.siteName,
-    });
+    // Title and meta description are owned by the prerender step
+    // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
     trackViewContent({
       content_name: "Byrjunarskeið í ChatGPT",

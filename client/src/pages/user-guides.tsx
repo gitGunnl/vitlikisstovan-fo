@@ -9,20 +9,8 @@ import { BookOpen, Download, FileText, ArrowRight, GraduationCap, Briefcase, Cod
 import { seoConfig } from "@/content/seo";
 
 export default function UserGuides() {
-  useEffect(() => {
-    document.title = "Brúkaravegleiðingar - " + seoConfig.title;
-
-    const metaDescription = document.querySelector('meta[name="description"]');
-    const content = "Fá atgongd til umfatandi brúkaravegleiðingar og tilhoyrandi skjøl. Lær meira um okkara skipan.";
-    if (metaDescription) {
-      metaDescription.setAttribute('content', content);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
-  }, []);
+  // Title and meta description are owned by the prerender step
+  // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
   const guides = [
     {

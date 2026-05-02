@@ -14,13 +14,8 @@ export default function Serloysnir() {
   useEffect(() => {
     setIsMounted(true);
 
-    updateMetaTags({
-      title: "Serloysnir til sjálvirkan - " + seoConfig.title,
-      description:
-        "Sniðgjørdar vitlíkisloysnir, ið hóska til tín tørv. Sjálvvirking, integratión og ráðgeving.",
-      url: window.location.href,
-      siteName: seoConfig.siteName,
-    });
+    // Title and meta description are owned by the prerender step
+    // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
     trackViewContent({
       content_name: "Serloysnir til sjálvirkan",

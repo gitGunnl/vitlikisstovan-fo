@@ -14,17 +14,9 @@ export default function AIGuide() {
     link.id = 'ai-guide-fonts';
     document.head.appendChild(link);
     
-    const fullTitle = `AI for Pedagogues - ${seoConfig.title}`;
-    const description = "Easy, safe ways to cut daily admin so you spend more time with children";
-    
-    updateMetaTags({
-      title: fullTitle,
-      description: description,
-      image: seoConfig.ogImage,
-      url: `${window.location.origin}/ai-guide`,
-      type: 'article',
-      siteName: seoConfig.siteName
-    });
+    // Title and meta description are owned by the prerender step
+    // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
+
     
     // Cleanup: Remove font link when component unmounts
     return () => {

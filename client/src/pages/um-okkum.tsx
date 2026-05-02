@@ -10,20 +10,9 @@ export default function UmOkkum() {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    // Title and meta description are owned by the prerender step
+    // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
     setIsMounted(true);
-    document.title = "Um okkum - " + seoConfig.title;
-
-    const metaDescription = document.querySelector('meta[name="description"]');
-    const content =
-      "Lær meira um Vitlíkisstovuna og okkara uppgávu at vegleiða føroyskar fyritøkur í vitlíki.";
-    if (metaDescription) {
-      metaDescription.setAttribute("content", content);
-    } else {
-      const meta = document.createElement("meta");
-      meta.name = "description";
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
   }, []);
 
   if (!isMounted) {

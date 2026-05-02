@@ -76,17 +76,8 @@ export default function FrontpageV3() {
 
   useEffect(() => {
     setIsMounted(true);
-    // Set page metadata with Open Graph support
-    const fullTitle = `${siteConfig.siteName} - ${siteConfig.tagline}`;
-
-    updateMetaTags({
-      title: fullTitle,
-      description: seoConfig.description,
-      image: seoConfig.ogImage,
-      url: window.location.origin,
-      type: 'website',
-      siteName: seoConfig.siteName
-    });
+    // Title and meta description are owned by the prerender step
+    // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
     // Handle hash navigation (e.g., #contact)
     const hash = window.location.hash;

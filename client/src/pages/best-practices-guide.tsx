@@ -12,18 +12,8 @@ export default function BestPracticesGuide() {
   const isPrintMode = search === "?print=true";
 
   useEffect(() => {
-    document.title = "Best Practices Guide - " + seoConfig.title;
-
-    const metaDescription = document.querySelector('meta[name="description"]');
-    const content = "Learn industry best practices, optimization strategies, and proven techniques for success.";
-    if (metaDescription) {
-      metaDescription.setAttribute('content', content);
-    } else {
-      const meta = document.createElement('meta');
-      meta.name = 'description';
-      meta.content = content;
-      document.head.appendChild(meta);
-    }
+    // Title and meta description are owned by the prerender step
+    // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
     // Auto-print if print mode
     if (isPrintMode) {

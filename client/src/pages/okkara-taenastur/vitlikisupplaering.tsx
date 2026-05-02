@@ -14,13 +14,8 @@ export default function Vitlikisupplaering() {
   useEffect(() => {
     setIsMounted(true);
 
-    updateMetaTags({
-      title: "Vitlíkisupplæring - " + seoConfig.title,
-      description:
-        "Handalig hjálp til at innarbeiða KjattGPT ella Copilot í tykkara arbeiðsgongd.",
-      url: window.location.href,
-      siteName: seoConfig.siteName,
-    });
+    // Title and meta description are owned by the prerender step
+    // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
     trackViewContent({
       content_name: "Vitlíkisupplæring",
