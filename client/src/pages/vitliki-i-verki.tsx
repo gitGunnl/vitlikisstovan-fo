@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
+import { Tabs, TabsContent } from "@/components/ui/tabs";
 import { seoConfig } from "@/content/seo";
 import Verkaetlanir from "@/components/vitliki-i-verki/themes/Verkaetlanir";
 import Arkitekturur from "@/components/vitliki-i-verki/themes/Arkitekturur";
@@ -10,20 +10,12 @@ import Marknadarforing from "@/components/vitliki-i-verki/themes/Marknadarforing
 import Eksperiment from "@/components/vitliki-i-verki/themes/Eksperiment";
 
 /**
- * Vitlíki í verki
- *
- * Showcase page for AI-generated work from Vitlíkisstovan.
+ * Vitlíki í verki — gallery-style showcase.
  *
  * Structure:
- *  - Hero (shared)
- *  - Tab navigation (shared, theme-based — NOT media-type based, NO nested tabs)
+ *  - Editorial hero (shared)
+ *  - Underline tab navigation (shared, theme-based — no nested tabs)
  *  - One free-form theme component per tab (each is its own custom canvas)
- *
- * To add a new theme tab:
- *   1. Create a new component in client/src/components/vitliki-i-verki/themes/
- *   2. Import it below
- *   3. Add a new entry to the `themes` array
- * The outer frame stays the same; the content inside is fully custom per theme.
  */
 
 const themes = [
@@ -54,54 +46,95 @@ export default function VitlikiIVerki() {
     }
   }, []);
 
+  const activeIndex = themes.findIndex((t) => t.value === activeTab);
+
   return (
     <>
       <Header />
 
-      <main>
-        {/* Hero — kept simple and minimal */}
-        <section className="relative pt-24 sm:pt-32 pb-12 sm:pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-muted/40 to-background">
-          <div className="max-w-4xl mx-auto text-center">
-            <span className="inline-block text-xs sm:text-sm font-semibold uppercase tracking-wider text-primary mb-4">
-              Frá Vitlíkisstovuni
-            </span>
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-bold mb-5 leading-tight">
-              Vitlíki í verki
-            </h1>
-            <p className="text-base sm:text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Útvalt arbeiði gjørt við vitlíki — myndir, filmar, ljóð, eksperiment
-              og verkætlanir. Hetta er ein opin samling, sum vaksur við tíðini.
-            </p>
+      <main className="bg-background">
+        {/* Editorial hero */}
+        <section className="pt-28 sm:pt-36 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 border-b border-foreground/10">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-12 gap-6 md:gap-10 items-end">
+              <div className="md:col-span-2">
+                <span className="block text-[11px] font-mono uppercase tracking-[0.2em] text-foreground/60">
+                  №&nbsp;001
+                </span>
+                <span className="block text-[11px] font-mono uppercase tracking-[0.2em] text-foreground/60 mt-1">
+                  Samling
+                </span>
+              </div>
+              <div className="md:col-span-7">
+                <h1 className="text-4xl sm:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.02]">
+                  Vitlíki<br />
+                  <span className="italic font-normal text-foreground/70">í verki.</span>
+                </h1>
+              </div>
+              <div className="md:col-span-3">
+                <p className="text-sm sm:text-base text-foreground/70 leading-relaxed">
+                  Útvalt arbeiði gjørt við vitlíki — myndir, filmar, ljóð,
+                  eksperiment og verkætlanir. Ein opin samling, sum vaksur við
+                  tíðini.
+                </p>
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Theme tabs — single level, no nested tabs */}
-        <section className="px-4 sm:px-6 lg:px-8 pb-20 sm:pb-28">
-          <div className="max-w-6xl mx-auto">
-            <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-              {/* Scrollable tab bar so it stays usable on mobile */}
-              <div className="flex justify-center mb-10 sm:mb-12">
-                <div className="overflow-x-auto -mx-4 px-4 max-w-full">
-                  <TabsList className="h-auto p-1 bg-muted/60 inline-flex">
-                    {themes.map((theme) => (
-                      <TabsTrigger
+        {/* Theme tabs — underline / editorial style */}
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+          <div className="sticky top-16 z-30 bg-background/95 backdrop-blur border-b border-foreground/10">
+            <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="overflow-x-auto -mx-4 px-4">
+                <div role="tablist" className="flex gap-6 sm:gap-10 min-w-max">
+                  {themes.map((theme, i) => {
+                    const isActive = theme.value === activeTab;
+                    return (
+                      <button
                         key={theme.value}
-                        value={theme.value}
-                        className="px-3 sm:px-5 py-2 text-sm sm:text-base whitespace-nowrap"
+                        role="tab"
+                        aria-selected={isActive}
+                        onClick={() => setActiveTab(theme.value)}
                         data-testid={`tab-${theme.value}`}
+                        className={`relative py-5 text-sm sm:text-[15px] whitespace-nowrap transition-colors ${
+                          isActive
+                            ? "text-foreground"
+                            : "text-foreground/50 hover:text-foreground/80"
+                        }`}
                       >
+                        <span className="font-mono text-[10px] tracking-widest mr-2 text-foreground/40">
+                          {String(i + 1).padStart(2, "0")}
+                        </span>
                         {theme.label}
-                      </TabsTrigger>
-                    ))}
-                  </TabsList>
+                        <span
+                          className={`absolute left-0 right-0 -bottom-px h-px transition-opacity ${
+                            isActive ? "bg-foreground opacity-100" : "opacity-0"
+                          }`}
+                        />
+                      </button>
+                    );
+                  })}
                 </div>
               </div>
+            </div>
+          </div>
 
-              {/*
-                Each TabsContent renders its own theme component. Replace the
-                content of any theme component with whatever custom layout
-                you want — they are fully independent canvases.
-              */}
+          {/* Section meta strip */}
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 sm:pt-14">
+            <div className="flex items-baseline justify-between border-b border-foreground/10 pb-3">
+              <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/60">
+                {String(activeIndex + 1).padStart(2, "0")} / {String(themes.length).padStart(2, "0")}
+              </span>
+              <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/60">
+                {themes[activeIndex]?.label}
+              </span>
+            </div>
+          </div>
+
+          {/* Theme content */}
+          <section className="px-4 sm:px-6 lg:px-8 pb-24 sm:pb-32 pt-10 sm:pt-14">
+            <div className="max-w-6xl mx-auto">
               {themes.map(({ value, Component }) => (
                 <TabsContent
                   key={value}
@@ -111,9 +144,9 @@ export default function VitlikiIVerki() {
                   <Component />
                 </TabsContent>
               ))}
-            </Tabs>
-          </div>
-        </section>
+            </div>
+          </section>
+        </Tabs>
       </main>
 
       <Footer />

@@ -1,57 +1,84 @@
 /**
- * Theme: Marknaðarføring
- *
- * Free-form canvas. This placeholder uses a video-embed + before/after layout
- * since marketing work tends to live in those formats. Replace with whatever
- * fits the campaigns / ads / brand work being shown.
+ * Theme: Marknaðarføring — campaigns / video / before-after.
+ * Free-form canvas. Replace placeholders with real embeds and stills.
  */
 export default function Marknadarforing() {
+  const films = [
+    { n: "01", title: "Kampanja — Heystur 2025", client: "Kundi A", length: "0:30" },
+    { n: "02", title: "Brand-filmur",            client: "Kundi B", length: "1:15" },
+  ];
+
   return (
-    <div className="space-y-12">
-      <div className="max-w-3xl">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-3">Marknaðarføring</h2>
-        <p className="text-muted-foreground leading-relaxed">
-          Vitlíki nýtt til marknaðarføring — myndir, filmar, tekstir og kampanjur.
-        </p>
-      </div>
+    <div className="space-y-20 sm:space-y-28">
+      {/* Films */}
+      <section>
+        <header className="flex items-baseline justify-between border-b border-foreground/10 pb-3 mb-8">
+          <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/60">
+            Filmar · útvalt
+          </h3>
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/40">
+            {String(films.length).padStart(2, "0")} liðir
+          </span>
+        </header>
 
-      {/* Video embed strip */}
-      <div className="grid md:grid-cols-2 gap-6">
-        {[1, 2].map((i) => (
-          <div key={i}>
-            <div className="aspect-video rounded-xl bg-black flex items-center justify-center text-sm text-white/60">
-              [ Filmur {i} — embed kemur her ]
-            </div>
-            <p className="text-sm font-medium mt-3">Kampanja {i}</p>
-            <p className="text-xs text-muted-foreground">
-              Stutt lýsing av filmunum og endamáli.
-            </p>
-          </div>
-        ))}
-      </div>
-
-      {/* Before / after example */}
-      <div>
-        <h3 className="text-xl font-bold mb-4">Áður / Nú</h3>
-        <div className="grid sm:grid-cols-2 gap-4">
-          <div>
-            <div className="aspect-[4/3] rounded-xl bg-slate-200 flex items-center justify-center text-sm text-slate-600">
-              [ Áður ]
-            </div>
-            <p className="text-xs text-muted-foreground mt-2 text-center">
-              Upprunaligi tekstur / mynd
-            </p>
-          </div>
-          <div>
-            <div className="aspect-[4/3] rounded-xl bg-gradient-to-br from-emerald-200 to-teal-300 flex items-center justify-center text-sm text-emerald-900">
-              [ Nú — við vitlíki ]
-            </div>
-            <p className="text-xs text-muted-foreground mt-2 text-center">
-              Eftir vitlíkis-arbeiði
-            </p>
-          </div>
+        <div className="grid md:grid-cols-2 gap-x-6 gap-y-12">
+          {films.map((f) => (
+            <figure key={f.n}>
+              <div className="aspect-video bg-foreground border border-foreground/10 flex items-center justify-center relative">
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-background/50 absolute top-3 left-3">
+                  {f.n}
+                </span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-background/50 absolute top-3 right-3">
+                  {f.length}
+                </span>
+                {/* Play glyph */}
+                <span className="block w-0 h-0 border-l-[14px] border-l-background border-y-[10px] border-y-transparent ml-1" />
+              </div>
+              <figcaption className="border-t border-foreground/10 mt-4 pt-3 flex items-baseline justify-between gap-3">
+                <span className="text-sm font-medium tracking-tight">{f.title}</span>
+                <span className="font-mono text-[10px] uppercase tracking-widest text-foreground/50 shrink-0">
+                  {f.client}
+                </span>
+              </figcaption>
+            </figure>
+          ))}
         </div>
-      </div>
+      </section>
+
+      {/* Before / After diptych */}
+      <section>
+        <header className="flex items-baseline justify-between border-b border-foreground/10 pb-3 mb-8">
+          <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/60">
+            Áður / Nú · diptychur
+          </h3>
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/40">
+            01
+          </span>
+        </header>
+
+        <div className="grid sm:grid-cols-2 gap-px bg-foreground/10 border border-foreground/10">
+          <figure className="bg-background p-4 sm:p-6">
+            <div className="aspect-[4/3] bg-foreground/[0.04] flex items-center justify-center">
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-foreground/30">
+                Áður
+              </span>
+            </div>
+            <figcaption className="font-mono text-[10px] uppercase tracking-widest text-foreground/50 mt-3 border-t border-foreground/10 pt-3">
+              Upprunaligi tekstur / mynd
+            </figcaption>
+          </figure>
+          <figure className="bg-background p-4 sm:p-6">
+            <div className="aspect-[4/3] bg-foreground/[0.04] flex items-center justify-center">
+              <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-foreground/30">
+                Nú
+              </span>
+            </div>
+            <figcaption className="font-mono text-[10px] uppercase tracking-widest text-foreground/50 mt-3 border-t border-foreground/10 pt-3">
+              Eftir vitlíkis-arbeiði
+            </figcaption>
+          </figure>
+        </div>
+      </section>
     </div>
   );
 }

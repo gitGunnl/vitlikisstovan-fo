@@ -1,50 +1,75 @@
 /**
- * Theme: Eksperiment
- *
- * Free-form canvas. Experiments are by nature messy, so this placeholder
- * uses a deliberately mixed-media layout (notes + small previews + quick
- * captions). Replace freely.
+ * Theme: Eksperiment — lab notes / contact-sheet style.
+ * Free-form canvas. Mix tile sizes; replace placeholders with real work.
  */
 export default function Eksperiment() {
+  const cells = [
+    { n: "01", label: "Stór royn",   span: "col-span-2 row-span-2", aspect: "aspect-square" },
+    { n: "02", label: "Smá royn",    span: "",                       aspect: "aspect-square" },
+    { n: "03", label: "Hugskot",     span: "",                       aspect: "aspect-square" },
+    { n: "04", label: "Filmsroynd",  span: "col-span-2",             aspect: "aspect-video" },
+    { n: "05", label: "Próva",       span: "",                       aspect: "aspect-square" },
+    { n: "06", label: "Skiss",       span: "",                       aspect: "aspect-square" },
+  ];
+
+  const notes = [
+    { n: "A", text: "Hetta er staður fyri stutt sniðir um royndirnar." },
+    { n: "B", text: "Hvat virkaði? Hvat virkaði ikki?" },
+    { n: "C", text: "Tilvísingar til amboð, prompt, ella kelduskjøl." },
+  ];
+
   return (
-    <div className="space-y-10">
-      <div className="max-w-3xl">
-        <h2 className="text-2xl sm:text-3xl font-bold mb-3">Eksperiment</h2>
-        <p className="text-muted-foreground leading-relaxed">
-          Smá royndir og hugskot — ting, ið byrjaðu sum forvitni og bóru
-          okkurt í lag. Ikki alt er fullført; tað er meiningin.
-        </p>
-      </div>
+    <div className="space-y-16 sm:space-y-20">
+      {/* Contact-sheet grid */}
+      <section>
+        <header className="flex items-baseline justify-between border-b border-foreground/10 pb-3 mb-8">
+          <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/60">
+            Royndar-blað · 01
+          </h3>
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/40">
+            {String(cells.length).padStart(2, "0")} liðir
+          </span>
+        </header>
 
-      {/* Lab notes — mixed sizes */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {[
-          { span: "col-span-2 row-span-2", label: "Stór royn", aspect: "aspect-square" },
-          { span: "", label: "Smá royn", aspect: "aspect-square" },
-          { span: "", label: "Hugskot", aspect: "aspect-square" },
-          { span: "col-span-2", label: "Filmsroynd", aspect: "aspect-video" },
-          { span: "", label: "Próva", aspect: "aspect-square" },
-          { span: "", label: "Skiss", aspect: "aspect-square" },
-        ].map((item, i) => (
-          <div key={i} className={item.span}>
-            <div
-              className={`${item.aspect} rounded-xl bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center text-xs text-muted-foreground`}
-            >
-              [ {item.label} ]
-            </div>
-          </div>
-        ))}
-      </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-foreground/10 border border-foreground/10">
+          {cells.map((c) => (
+            <figure key={c.n} className={`${c.span} bg-background p-3 sm:p-4`}>
+              <div className={`${c.aspect} bg-foreground/[0.04] flex items-center justify-center relative`}>
+                <span className="absolute top-2 left-2 font-mono text-[10px] uppercase tracking-[0.2em] text-foreground/40">
+                  {c.n}
+                </span>
+                <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-foreground/30">
+                  {c.label}
+                </span>
+              </div>
+            </figure>
+          ))}
+        </div>
+      </section>
 
-      {/* Quick notes block */}
-      <div className="rounded-2xl border border-dashed bg-muted/20 p-6">
-        <h3 className="font-semibold mb-3">Sniðir / viðmerkingar</h3>
-        <ul className="text-sm text-muted-foreground space-y-2">
-          <li>• Hetta er staður fyri stutt sniðir um royndirnar.</li>
-          <li>• Hvat virkaði? Hvat virkaði ikki?</li>
-          <li>• Tilvísingar til amboð, prompt, ella kelduskjøl.</li>
+      {/* Notes */}
+      <section className="grid md:grid-cols-12 gap-6 md:gap-10 border-t border-foreground/10 pt-10">
+        <div className="md:col-span-3">
+          <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/60">
+            Sniðir
+          </span>
+          <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-foreground/40 mt-1">
+            Viðmerkingar
+          </p>
+        </div>
+        <ul className="md:col-span-9 divide-y divide-foreground/10 border-t border-b border-foreground/10">
+          {notes.map((note) => (
+            <li key={note.n} className="grid grid-cols-12 gap-4 py-4 items-baseline">
+              <span className="col-span-2 sm:col-span-1 font-mono text-[10px] uppercase tracking-widest text-foreground/40">
+                {note.n}
+              </span>
+              <p className="col-span-10 sm:col-span-11 text-sm text-foreground/75 leading-relaxed">
+                {note.text}
+              </p>
+            </li>
+          ))}
         </ul>
-      </div>
+      </section>
     </div>
   );
 }
