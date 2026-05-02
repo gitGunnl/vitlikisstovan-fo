@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
@@ -568,6 +568,139 @@ function HeroSection({ onOpenBooking }: { onOpenBooking: () => void }) {
   );
 }
 
+type TestimonialQuote = {
+  quote: string;
+  name: string;
+  role: string;
+  org: string;
+};
+
+function TestimonialMarquee({ quotes }: { quotes: readonly TestimonialQuote[] }) {
+  const scrollerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const el = scrollerRef.current;
+    if (!el) return;
+
+    const setInitial = () => {
+      el.scrollLeft = el.scrollWidth / 3;
+    };
+    setInitial();
+
+    let isAdjusting = false;
+    const onScroll = () => {
+      if (isAdjusting) {
+        isAdjusting = false;
+        return;
+      }
+      const third = el.scrollWidth / 3;
+      if (third <= 0) return;
+      if (el.scrollLeft >= third * 2) {
+        isAdjusting = true;
+        el.scrollLeft -= third;
+      } else if (el.scrollLeft <= 0) {
+        isAdjusting = true;
+        el.scrollLeft += third;
+      }
+    };
+    el.addEventListener("scroll", onScroll, { passive: true });
+
+    const ro = new ResizeObserver(() => setInitial());
+    ro.observe(el);
+
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduceMotion) {
+      return () => {
+        el.removeEventListener("scroll", onScroll);
+        ro.disconnect();
+      };
+    }
+
+    const speed = 14;
+    const pauseAfterInteraction = 3500;
+    let pausedUntil = 0;
+    let lastTime = performance.now();
+    let scrollAccum = 0;
+    let raf = 0;
+
+    const tick = (now: number) => {
+      const dt = Math.min((now - lastTime) / 1000, 0.1);
+      lastTime = now;
+      if (now >= pausedUntil) {
+        scrollAccum += speed * dt;
+        if (scrollAccum >= 1) {
+          const intDelta = Math.floor(scrollAccum);
+          scrollAccum -= intDelta;
+          el.scrollLeft += intDelta;
+        }
+      } else {
+        scrollAccum = 0;
+      }
+      raf = requestAnimationFrame(tick);
+    };
+
+    const pause = () => {
+      pausedUntil = performance.now() + pauseAfterInteraction;
+    };
+
+    el.addEventListener("pointerdown", pause);
+    el.addEventListener("wheel", pause, { passive: true });
+    el.addEventListener("touchstart", pause, { passive: true });
+
+    const onVisibilityChange = () => {
+      lastTime = performance.now();
+    };
+    document.addEventListener("visibilitychange", onVisibilityChange);
+
+    raf = requestAnimationFrame(tick);
+
+    return () => {
+      cancelAnimationFrame(raf);
+      el.removeEventListener("scroll", onScroll);
+      el.removeEventListener("pointerdown", pause);
+      el.removeEventListener("wheel", pause);
+      el.removeEventListener("touchstart", pause);
+      document.removeEventListener("visibilitychange", onVisibilityChange);
+      ro.disconnect();
+    };
+  }, [quotes]);
+
+  return (
+    <div
+      className="md:hidden -mx-4 sm:-mx-6 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]"
+    >
+      <div
+        ref={scrollerRef}
+        className="overflow-x-auto overscroll-x-contain [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+      >
+        <div className="flex w-max">
+          {[0, 1, 2].map((copy) => (
+            <div
+              key={copy}
+              className="flex gap-3 pr-3 shrink-0"
+              aria-hidden={copy !== 0 ? true : undefined}
+            >
+              {quotes.map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-white border border-slate-200 rounded-lg p-3 w-[80vw] sm:w-[55vw] shrink-0"
+                >
+                  <p className="text-[13px] text-slate-700 leading-snug mb-1.5">
+                    "{item.quote}"
+                  </p>
+                  <p className="text-[11px] text-slate-500">
+                    <span className="font-semibold text-slate-800">{item.name}</span>, {item.role} · {item.org}
+                  </p>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function TrustStripInline() {
   return (
     <div className="lg:col-span-2 lg:row-start-2">
@@ -586,30 +719,7 @@ function TrustStripInline() {
           <div className="h-px bg-slate-300 w-10" />
         </div>
       </div>
-      <div
-        className="md:hidden overflow-hidden -mx-4 sm:-mx-6 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]"
-        aria-label={t.trustStrip.heading}
-      >
-        <div className="flex w-max animate-marquee hover:[animation-play-state:paused] motion-reduce:animate-none">
-          {[0, 1].map((copy) => (
-            <div key={copy} className="flex gap-3 pr-3 shrink-0" aria-hidden={copy === 1 ? true : undefined}>
-              {t.trustStrip.quotes.map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-white border border-slate-200 rounded-lg p-3 w-[80vw] sm:w-[55vw] shrink-0"
-                >
-                  <p className="text-[13px] text-slate-700 leading-snug mb-1.5">
-                    "{item.quote}"
-                  </p>
-                  <p className="text-[11px] text-slate-500">
-                    <span className="font-semibold text-slate-800">{item.name}</span>, {item.role} · {item.org}
-                  </p>
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
+      <TestimonialMarquee quotes={t.trustStrip.quotes} />
       <div className="hidden md:grid md:grid-cols-2 gap-2">
         {t.trustStrip.quotes.map((item, i) => (
           <div
