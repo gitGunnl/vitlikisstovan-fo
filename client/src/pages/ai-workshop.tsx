@@ -540,7 +540,6 @@ function HeroSection({ onOpenBooking }: { onOpenBooking: () => void }) {
                 {t.ctaButtons.secondary} <CalendarIcon className="w-4 h-4 ml-2" />
               </button>
             </div>
-            <TrustStripInline />
           </div>
           <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 sm:p-7">
             <div className="mb-5">
@@ -563,6 +562,7 @@ function HeroSection({ onOpenBooking }: { onOpenBooking: () => void }) {
             </div>
           </div>
         </div>
+        <TrustStripInline />
       </div>
     </section>
   );
@@ -570,8 +570,8 @@ function HeroSection({ onOpenBooking }: { onOpenBooking: () => void }) {
 
 function TrustStripInline() {
   return (
-    <div className="pt-6 mt-2">
-      <div className="text-center mb-5">
+    <div className="pt-12 mt-6 md:pt-16 md:mt-8">
+      <div className="text-center mb-6 md:mb-8">
         <span className="inline-block bg-teal-100 text-teal-800 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider mb-3">
           Kunda viðmerkingar
         </span>
@@ -586,7 +586,7 @@ function TrustStripInline() {
           <div className="h-px bg-slate-300 w-10" />
         </div>
       </div>
-      <div className="space-y-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
         {t.trustStrip.quotes.map((item, i) => (
           <div
             key={i}
