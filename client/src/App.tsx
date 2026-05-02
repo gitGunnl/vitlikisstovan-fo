@@ -6,6 +6,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
+import { useSeo } from "@/lib/use-seo";
 
 const CourseDetails = lazy(() => import("@/pages/course-details"));
 const UmOkkum = lazy(() => import("@/pages/um-okkum"));
@@ -43,6 +44,7 @@ function RouteFallback() {
 }
 
 function Router() {
+  useSeo();
   return (
     <Suspense fallback={<RouteFallback />}>
       <Switch>
