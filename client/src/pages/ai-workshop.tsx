@@ -576,104 +576,149 @@ type TestimonialQuote = {
 };
 
 function TestimonialMarquee({ quotes }: { quotes: readonly TestimonialQuote[] }) {
-  const scrollerRef = useRef<HTMLDivElement>(null);
+  const wrapRef = useRef<HTMLDivElement>(null);
+  const trackRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const el = scrollerRef.current;
-    if (!el) return;
+    const wrap = wrapRef.current;
+    const track = trackRef.current;
+    if (!wrap || !track) return;
 
-    const setInitial = () => {
-      el.scrollLeft = el.scrollWidth / 3;
+    let third = 0;
+    let offset = 0;
+
+    const apply = () => {
+      track.style.transform = `translate3d(${-offset}px, 0, 0)`;
     };
-    setInitial();
 
-    let isAdjusting = false;
-    const onScroll = () => {
-      if (isAdjusting) {
-        isAdjusting = false;
-        return;
+    const measure = () => {
+      const newThird = track.scrollWidth / 3;
+      if (newThird <= 0) return;
+      if (third === 0) {
+        offset = newThird;
+      } else {
+        const ratio = newThird / third;
+        offset *= ratio;
+        if (isDragging) dragStartOffset *= ratio;
       }
-      const third = el.scrollWidth / 3;
-      if (third <= 0) return;
-      if (el.scrollLeft >= third * 2) {
-        isAdjusting = true;
-        el.scrollLeft -= third;
-      } else if (el.scrollLeft <= 0) {
-        isAdjusting = true;
-        el.scrollLeft += third;
-      }
+      third = newThird;
+      apply();
     };
-    el.addEventListener("scroll", onScroll, { passive: true });
 
-    const ro = new ResizeObserver(() => setInitial());
-    ro.observe(el);
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(track);
 
     const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduceMotion) {
-      return () => {
-        el.removeEventListener("scroll", onScroll);
-        ro.disconnect();
-      };
-    }
 
     const speed = 14;
     const pauseAfterInteraction = 3500;
     let pausedUntil = 0;
     let lastTime = performance.now();
-    let scrollAccum = 0;
     let raf = 0;
+    let isDragging = false;
+    let dragStartX = 0;
+    let dragStartOffset = 0;
+    let activePointerId: number | null = null;
+
+    const wrapOffset = () => {
+      if (third <= 0) return;
+      if (offset >= third * 2) offset -= third;
+      else if (offset < 0) offset += third;
+    };
 
     const tick = (now: number) => {
       const dt = Math.min((now - lastTime) / 1000, 0.1);
       lastTime = now;
-      if (now >= pausedUntil) {
-        scrollAccum += speed * dt;
-        if (scrollAccum >= 1) {
-          const intDelta = Math.floor(scrollAccum);
-          scrollAccum -= intDelta;
-          el.scrollLeft += intDelta;
-        }
-      } else {
-        scrollAccum = 0;
+      if (!reduceMotion && !isDragging && now >= pausedUntil && third > 0) {
+        offset += speed * dt;
+        wrapOffset();
+        apply();
       }
       raf = requestAnimationFrame(tick);
     };
 
-    const pause = () => {
+    const onPointerDown = (e: PointerEvent) => {
+      if (e.pointerType === "mouse" && e.button !== 0) return;
+      isDragging = true;
+      activePointerId = e.pointerId;
+      dragStartX = e.clientX;
+      dragStartOffset = offset;
+      pausedUntil = performance.now() + pauseAfterInteraction;
+      try { wrap.setPointerCapture(e.pointerId); } catch {}
+    };
+
+    const onPointerMove = (e: PointerEvent) => {
+      if (!isDragging || e.pointerId !== activePointerId) return;
+      const dx = e.clientX - dragStartX;
+      offset = dragStartOffset - dx;
+      if (third > 0) {
+        if (offset >= third * 2) {
+          offset -= third;
+          dragStartOffset -= third;
+        } else if (offset < 0) {
+          offset += third;
+          dragStartOffset += third;
+        }
+      }
+      apply();
+    };
+
+    const endDrag = (e: PointerEvent) => {
+      if (e.pointerId !== activePointerId) return;
+      isDragging = false;
+      activePointerId = null;
+      pausedUntil = performance.now() + pauseAfterInteraction;
+      try { wrap.releasePointerCapture(e.pointerId); } catch {}
+    };
+
+    const onWheel = (e: WheelEvent) => {
+      if (isDragging) return;
+      const dx = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : 0;
+      if (dx === 0) return;
+      e.preventDefault();
+      offset += dx;
+      wrapOffset();
+      apply();
       pausedUntil = performance.now() + pauseAfterInteraction;
     };
 
-    el.addEventListener("pointerdown", pause);
-    el.addEventListener("wheel", pause, { passive: true });
-    el.addEventListener("touchstart", pause, { passive: true });
-
-    const onVisibilityChange = () => {
+    const onVisibility = () => {
       lastTime = performance.now();
     };
-    document.addEventListener("visibilitychange", onVisibilityChange);
+
+    wrap.addEventListener("pointerdown", onPointerDown);
+    wrap.addEventListener("pointermove", onPointerMove);
+    wrap.addEventListener("pointerup", endDrag);
+    wrap.addEventListener("pointercancel", endDrag);
+    window.addEventListener("pointerup", endDrag);
+    window.addEventListener("pointercancel", endDrag);
+    wrap.addEventListener("wheel", onWheel, { passive: false });
+    document.addEventListener("visibilitychange", onVisibility);
 
     raf = requestAnimationFrame(tick);
 
     return () => {
       cancelAnimationFrame(raf);
-      el.removeEventListener("scroll", onScroll);
-      el.removeEventListener("pointerdown", pause);
-      el.removeEventListener("wheel", pause);
-      el.removeEventListener("touchstart", pause);
-      document.removeEventListener("visibilitychange", onVisibilityChange);
+      wrap.removeEventListener("pointerdown", onPointerDown);
+      wrap.removeEventListener("pointermove", onPointerMove);
+      wrap.removeEventListener("pointerup", endDrag);
+      wrap.removeEventListener("pointercancel", endDrag);
+      window.removeEventListener("pointerup", endDrag);
+      window.removeEventListener("pointercancel", endDrag);
+      wrap.removeEventListener("wheel", onWheel);
+      document.removeEventListener("visibilitychange", onVisibility);
       ro.disconnect();
     };
   }, [quotes]);
 
   return (
-    <div
-      className="md:hidden -mx-4 sm:-mx-6 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]"
-    >
+    <div className="md:hidden -mx-4 sm:-mx-6 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
       <div
-        ref={scrollerRef}
-        className="overflow-x-auto overscroll-x-contain [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        ref={wrapRef}
+        className="overflow-hidden touch-pan-y select-none cursor-grab active:cursor-grabbing"
       >
-        <div className="flex w-max">
+        <div ref={trackRef} className="flex w-max will-change-transform">
           {[0, 1, 2].map((copy) => (
             <div
               key={copy}
