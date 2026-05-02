@@ -25,6 +25,10 @@ externalPort = 3000
 localPort = 23636
 externalPort = 3002
 
+[[ports]]
+localPort = 23637
+externalPort = 3001
+
 # Per-route rewrites for pre-rendered pages (clean URLs → flat .html files).
 # Static files (robots.txt, llms.txt, llm.md, sitemap.xml, etc.) are served
 # directly from the publicDir without any rewrite.
