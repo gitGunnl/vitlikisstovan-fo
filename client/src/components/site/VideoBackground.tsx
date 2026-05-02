@@ -55,16 +55,17 @@ export default function VideoBackground({ videoSrc, posterSrc, className = '' }:
   };
 
   if (videoError || !shouldLoadVideo) {
-    // Fallback to background image
+    // Fallback to background image. Alignment must mirror the <video>
+    // element below (object-cover + object-bottom) so swapping between
+    // poster and video doesn't visibly shift the framing.
     return (
       <div
         className={`absolute inset-0 ${className}`}
         style={{
           backgroundImage: `linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 50%, rgba(0, 0, 0, 0.7) 100%), url('${posterSrc}')`,
           backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundPosition: 'center bottom',
           backgroundRepeat: 'no-repeat',
-          backgroundAttachment: 'fixed'
         }}
         data-testid="video-background-fallback"
       />
