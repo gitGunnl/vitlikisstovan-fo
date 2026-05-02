@@ -480,8 +480,8 @@ function HeroSection({ onOpenBooking }: { onOpenBooking: () => void }) {
   return (
     <section className="bg-slate-50 pt-10 pb-14 md:pt-16 md:pb-20 px-4 sm:px-6">
       <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14 items-start">
-          <div className="space-y-5">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-x-14 lg:gap-y-12 items-start">
+          <div className="space-y-5 lg:col-start-1 lg:row-start-1">
             <p className="text-sm font-medium text-teal-700 tracking-wide">
               {t.hero.eyebrow}
             </p>
@@ -541,7 +541,8 @@ function HeroSection({ onOpenBooking }: { onOpenBooking: () => void }) {
               </button>
             </div>
           </div>
-          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 sm:p-7">
+          <TrustStripInline />
+          <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 sm:p-7 lg:col-start-2 lg:row-start-1">
             <div className="mb-5">
               <h3 className="text-lg font-bold text-slate-900 leading-tight">
                 Skriva til mín her
@@ -562,7 +563,6 @@ function HeroSection({ onOpenBooking }: { onOpenBooking: () => void }) {
             </div>
           </div>
         </div>
-        <TrustStripInline />
       </div>
     </section>
   );
@@ -570,8 +570,8 @@ function HeroSection({ onOpenBooking }: { onOpenBooking: () => void }) {
 
 function TrustStripInline() {
   return (
-    <div className="pt-12 mt-6 md:pt-16 md:mt-8">
-      <div className="text-center mb-6 md:mb-8">
+    <div className="lg:col-span-2 lg:row-start-2">
+      <div className="text-center mb-5">
         <span className="inline-block bg-teal-100 text-teal-800 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider mb-3">
           Kunda viðmerkingar
         </span>
@@ -586,11 +586,11 @@ function TrustStripInline() {
           <div className="h-px bg-slate-300 w-10" />
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+      <div className="flex md:grid md:grid-cols-2 gap-3 md:gap-2 overflow-x-auto md:overflow-visible snap-x snap-mandatory md:snap-none -mx-4 sm:-mx-6 md:mx-0 px-4 sm:px-6 md:px-0 pb-2 md:pb-0 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden">
         {t.trustStrip.quotes.map((item, i) => (
           <div
             key={i}
-            className="bg-white border border-slate-200 rounded-lg p-3"
+            className="bg-white border border-slate-200 rounded-lg p-3 min-w-[85%] sm:min-w-[60%] md:min-w-0 shrink-0 md:shrink snap-start"
           >
             <p className="text-[13px] text-slate-700 leading-snug mb-1.5">
               "{item.quote}"
