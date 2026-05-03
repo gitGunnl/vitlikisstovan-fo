@@ -28,10 +28,6 @@ if (process.env.NODE_ENV === 'production') {
     if (cleanPath === '/') return next();
 
     const slug = cleanPath.slice(1);
-    const flatFile = join(DIST, slug + '.html');
-    if (existsSync(flatFile)) {
-      return res.sendFile(flatFile);
-    }
     const dirIndex = join(DIST, slug, 'index.html');
     if (existsSync(dirIndex)) {
       return res.sendFile(dirIndex);

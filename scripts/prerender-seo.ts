@@ -7,7 +7,6 @@
  * Outputs:
  *   - dist/public/<route>/index.html   (with title/description/canonical/OG/Twitter
  *     meta tags rewritten and a body fallback for crawlers/LLMs)
- *   - dist/public/<route>.html         (flat sibling for hosts that prefer it)
  *   - dist/public/sitemap.xml
  *
  * Coverage check: every <Route path="..."> in client/src/App.tsx must have a
@@ -182,6 +181,26 @@ function generatePage(template: string, page: PageSeo, domain: string): string {
     `<meta name="twitter:description" content="${safeDesc}"`,
   );
 
+  if (page.ogType) {
+    const safeOgType = escapeAttr(page.ogType);
+    html = html.replace(
+      /<meta property="og:type" content="[^"]*"/,
+      `<meta property="og:type" content="${safeOgType}"`,
+    );
+  }
+
+  if (page.ogImage) {
+    const safeOgImage = escapeAttr(page.ogImage);
+    html = html.replace(
+      /<meta property="og:image" content="[^"]*"/,
+      `<meta property="og:image" content="${safeOgImage}"`,
+    );
+    html = html.replace(
+      /<meta name="twitter:image" content="[^"]*"/,
+      `<meta name="twitter:image" content="${safeOgImage}"`,
+    );
+  }
+
   if (page.noindex) {
     html = html.replace(
       "</head>",
@@ -297,10 +316,6 @@ async function main() {
     const dir = join(DIST, slug);
     mkdirSync(dir, { recursive: true });
     writeFileSync(join(dir, "index.html"), html, "utf-8");
-
-    const flatPath = join(DIST, `${slug}.html`);
-    mkdirSync(dirname(flatPath), { recursive: true });
-    writeFileSync(flatPath, html, "utf-8");
   }
 
   writeFileSync(

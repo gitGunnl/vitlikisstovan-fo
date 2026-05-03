@@ -64,6 +64,8 @@ for (const post of blogPosts) {
     path: `/blog/${post.slug}`,
     title: `${post.title} - ${SITE_NAME}`,
     description: post.description ?? post.excerpt,
+    ogType: "article",
+    ogImage: post.ogImage,
     content: `<h1>${post.title}</h1>${post.content}`,
     jsonLd: [
       {

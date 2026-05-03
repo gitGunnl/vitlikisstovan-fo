@@ -458,6 +458,7 @@ const pages: PageSeo[] = [
     title: "Vitlíki til pedagogar — handalig vegleiðing | Vitlíkisstovan",
     description:
       "Handalig vegleiðing til lærarar og pedagogar um, hvussu vitlíki trygt kann minka um dagliga umsiting, fyrireiking og samskifti — so meiri tíð verður til børnini.",
+    ogType: "article",
     content: block(`
       <h1>Vitlíki til pedagogar</h1>
       <p>Handalig vegleiðing til lærarar og pedagogar um, hvussu vitlíki trygt kann minka um dagliga umsiting — fyrireiking av virksemi, kunning til foreldur og samanumtøkur av notatum — so meiri tíð verður til børnini.</p>
@@ -526,6 +527,7 @@ const pages: PageSeo[] = [
     title: "At koma ígongd við vitlíki — fyrstu stigini | Vitlíkisstovan",
     description:
       "Stig-fyri-stig vegleiðing til at koma ígongd við vitlíki: hvat tú skalt velja, hvussu tú skrivar fyrstu prompt og hvussu tú trygt kanst royna nýggj amboð.",
+    ogType: "article",
     content: block(`
       <h1>At koma ígongd við vitlíki</h1>
       <p>Ein einfald vegleiðing fyri tey, sum eru ný innan vitlíki. Vit fara ígjøgnum hvat amboð tú kanst velja, hvussu tú skrivar fyrstu prompt og hvussu tú trygt kanst royna nýggj amboð uttan at vága upplýsingar tínar.</p>
@@ -563,6 +565,7 @@ const pages: PageSeo[] = [
     title: "Bestu mannagongdir við vitlíki | Vitlíkisstovan",
     description:
       "Bestu mannagongdir fyri at brúka vitlíki á einum trygt og munagóðum hátti — góðar prompt, trygd, persónsupplýsingar og hvussu tú metir um svar frá vitlíki.",
+    ogType: "article",
     content: block(`
       <h1>Bestu mannagongdir við vitlíki</h1>
       <p>Eitt yvirlit av reglum og mannagongdum, ið hjálpa teg at brúka vitlíki effektivt og trygt: hvussu tú metir um svar, hvat tú ikki eigur at lata vitlíki síggja, og hvussu tú heldur kvalitetinum høgum.</p>
@@ -591,6 +594,7 @@ const pages: PageSeo[] = [
     title: "Vitlíki til dagstovnar — minni skriviarbeiði, meira spæl | Vitlíkisstovan",
     description:
       "Lættir og tryggir hættir at minka um dagligu umsitingina við vitlíki, so tú kanst nýta meira tíð saman við børnunum á dagstovninum.",
+    ogType: "article",
     content: block(`
       <h1>Vitlíki til dagstovnar</h1>
       <p>Eitt skjótt yvirlit av lættum og tryggum hættum at brúka vitlíki á dagstovninum: roknskaparyvirlit, fundarreferat, kunning til foreldur og fyrireiking av virksemi — alt sniðgivið til dagliga arbeiðið.</p>
@@ -619,6 +623,7 @@ const pages: PageSeo[] = [
     title: "Vitlíki til umsorgarfólk | Vitlíkisstovan",
     description:
       "Vegleiðing til umsorgarfólk um, hvussu vitlíki trygt kann hjálpa við skriviarbeiði, samskifti og fyrireiking — uttan at koma uppí vandi við persónsupplýsingar.",
+    ogType: "article",
     content: block(`
       <h1>Vitlíki til umsorgarfólk</h1>
       <p>Praktisk vegleiðing til umsorgarfólk um, hvussu vitlíki kann hjálpa í gerandisdegnum — samanumtøkur, kunning til avvarðandi, fyrireiking — og hvar mørkini ganga, tá tað kemur til persónsupplýsingar og trygd.</p>
@@ -697,6 +702,7 @@ const pages: PageSeo[] = [
     title: "Skeiðsupplýsingar — vitlíkisskeið hjá Vitlíkisstovuni",
     description:
       "Nærri upplýsingar um vitlíkisskeið hjá Vitlíkisstovuni — innihald, tíðarætlan og hvussu tú fært stuðul til at útbúgva tín starvsfólk.",
+    ogType: "article",
     content: block(`
       <h1>Skeiðsupplýsingar</h1>
       <p>Nærri upplýsingar um okkara vitlíkisskeið — hvat innihaldið er, hvussu skeiðini eru lagd til rættis og hvussu tú fært stuðul til at útbúgva tín starvsfólk.</p>

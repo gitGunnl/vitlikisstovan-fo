@@ -5,6 +5,8 @@ export interface PageSeo {
   content?: string;
   jsonLd?: object | object[];
   noindex?: boolean;
+  ogType?: string;
+  ogImage?: string;
   sitemap?: {
     priority?: string;
     changefreq?: string;
