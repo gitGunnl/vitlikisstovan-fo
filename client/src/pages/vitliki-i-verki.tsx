@@ -38,7 +38,29 @@ export default function VitlikiIVerki() {
     <>
       <Header />
 
-      <main className="bg-background">
+      <main className="bg-background relative">
+        {/* Under-construction stamp — overlaid across the whole gallery */}
+        <div
+          className="pointer-events-none fixed inset-0 z-40 flex items-center justify-center"
+          aria-hidden="true"
+        >
+          <div className="rotate-[-8deg] select-none">
+            <div className="border-[6px] sm:border-[10px] border-red-600/80 px-6 sm:px-12 py-3 sm:py-6 bg-red-600/5 backdrop-blur-[1px] shadow-[0_0_0_2px_rgba(220,38,38,0.15)]">
+              <div className="text-red-600/90 font-bold tracking-[0.15em] uppercase text-4xl sm:text-7xl lg:text-8xl leading-none">
+                Verður umvælt
+              </div>
+              <div className="mt-2 sm:mt-4 font-mono text-[10px] sm:text-sm uppercase tracking-[0.3em] text-red-600/80 text-center">
+                · arbeitt verður á · {new Date().getFullYear()} ·
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Accessible note for screen readers */}
+        <p className="sr-only" role="status">
+          Hetta økið verður umvælt. Innihaldið er ikki liðugt.
+        </p>
+
         {/* Editorial hero */}
         <section className="pt-28 sm:pt-36 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 border-b border-foreground/10">
           <div className="max-w-6xl mx-auto">
