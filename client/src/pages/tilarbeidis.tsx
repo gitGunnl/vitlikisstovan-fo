@@ -376,7 +376,7 @@ const Tilarbeidis = () => {
                     Núverandi uppgáva:
                   </h3>
                   <p className="text-foreground/90">
-                    Skriva vegleiðingar til handverkarir
+                    Snið og myndir
                   </p>
                 </div>
               </div>
@@ -389,7 +389,7 @@ const Tilarbeidis = () => {
                 <div>
                   <h4 className="font-semibold text-accent">Næst:</h4>
                   <p className="text-foreground/80 text-sm">
-                    Rættlestur
+                    Miðling
                   </p>
                 </div>
               </div>
