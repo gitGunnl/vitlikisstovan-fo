@@ -23,6 +23,13 @@ type TimelineEvent = {
 
 const timelineData: TimelineEvent[] = [
   {
+    id: "evt-023",
+    date: "2026-05-11",
+    title: "Vegleiðingar skrivaðar – sniðgeving og myndir í gongd",
+    summary:
+      "Vegleiðingar eru nú skrivaðar, sniðgeving og myndir er í gongd.",
+  },
+  {
     id: "evt-022",
     date: "2026-03-24",
     title: "Skriving av frágreiðingum 5 og 6",
