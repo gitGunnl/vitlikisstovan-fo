@@ -145,7 +145,7 @@ Sum hjálparfólk eru dagar tínir fyltir við alskyns uppgávum – frá persó
 
 Ímynda tær hesa støðuna: Tað er ein skundmikil seinnapartur á stovninum. Vindur hevur forðað fyri ætlaða gongutúrinum. Tú situr nú inni við fimm óróligum vaksnum búfólkum, sum vanliga dáma væl at vera úti. Tit eru í einum lítlum felagsrúmi við grundleggjandi tilfari sum pappíri, pennum, spælikortum, bløðum og eitt sindur av klipp-og-klistra tilfari.
 
-\--- prompt \---  
+:::prompt
 Eg eri hjálparfólk á einum bústovni í Føroyum. Okkara gongutúrur varð avlýstur vegna veður.
 
 * Luttakarar: 5 vaksin við ymiskum kognitivum og likamligum førleikum.  
@@ -154,7 +154,7 @@ Eg eri hjálparfólk á einum bústovni í Føroyum. Okkara gongutúrur varð av
 * Mál: At fáa búfólkini at gera okkurt næsta tíman, og at varðveita ein róligan og jaligan hýr.
 
 Kom við uppskotum um okkurt innandura virksemi, sum krevur lítla fyrireiking, fevnir um øll, eru rólig og hóska til blandaðar førleikar. Spyr meg fyrst, um okkurt krevur nærri frágreiðing.   
-\--- prompt \---
+:::prompt
 
 Uppfylgjandi byrt: Um uppskotini ikki eru heilt, sum tú vilt hava tey, leiðbein so vitlíki greitt. Til dømis:
 
@@ -195,7 +195,7 @@ Fyri at fáa betur svar frá vitlíki leggur tú nakrar avgerandi veruligar smá
 
 ### Gott dømi um byrt (avrita/líma hetta)
 
-\--- prompt \---
+:::prompt
 
 * Eg eri røktarstarvsfólk á einum bústovni. Vit skulu av stað í morgin árla. Fráferð: 07:30 (áðrenn vanliga vaktin byrjar)  
 * Fólk: 3 búfólk, 2 starvsfólk  
@@ -206,7 +206,7 @@ Fyri at fáa betur svar frá vitlíki leggur tú nakrar avgerandi veruligar smá
 
 ***Vinarliga ger ein stuttan og praktiskan minnislista, sum vit kunnu fyrireika í kvøld, so morgunin í morgin verður róligari. Tryggja, at gongustativ og headsett eru við. Kom við hugskot til ting eg møguliga vil hava við. Tak eina einfalda Grøn/Gul/Reyð støðukanning við til síðst. Spyr meg fyrst onkran spurning, um okkurt krevur frágreiðing, áðrenn tú kemur við tínum endaliga svari.*** 
 
-\--- prompt \---
+:::prompt
 
 ### Fá minnislistan heilt rættan
 
@@ -243,7 +243,7 @@ Vaktin á bústovninum endar um fimm minuttir. Tað er eingin umskaran á næstu
 
 ### Gott dømi um byrt (avrita/líma hetta):
 
-\--- prompt \--- 
+:::prompt
 
 *\[Líma tíni grovu notat inn her – ongar persónligar smálutir.\]*
 
@@ -258,7 +258,7 @@ Umskapa hesi grovu notat til eitt vaktaryvirlit við 5 punktum: Uppseting:
 Valfrí seinasta linja: Støða (Grøn/Gul/Reyð) \+ 1 grundgeving.  
 Stílur: Einfalt, nevtralt. Vinarliga spyr fyrst, um okkurt er ógreitt.
 
-\--- prompt \---
+:::prompt
 
 ### Uppfylgjandi byrt:
 
@@ -293,7 +293,7 @@ Leiklutur hjá vitlíki: Kreativur sparringspartnari
 
 Støða: Tú ert í Klaksvík í eini felagsstovu kl.14:00–14:30, beint eftir at vaskimaskinan er liðug. Turkitrumlan hurrar harðast umleið 14:05, og gongshurðin gevur eitt hvin, tá ið hon verður latin upp. Tú hevur eitt lítið borð, blýantar, A4 pappír og eitt kortspæl. Við at geva hesar smálutir kann vitlíki skjóta upp rólig, løtt-at-rudda virksemi, sum hóska til larm- og plássavmarkingarnar og minka um yvirstimulering.
 
-\--- prompt \---   
+:::prompt 
 Eg eri í Klaksvík við 5 vaksnum búfólkum (blandaðir førleikar). Klokkan er 14:00–14:30, beint eftir at vaskimaskinan er liðug (turkitrumlan hurrar \\\~14:05, gongshurðin hvínur). Vit hava eitt lítið borð, blýantar, A4 pappír og spælikort.
 
 Skjót upp 4 still, rólig virksemi, sum hóska til okkara rúm. Tak hetta við fyri hvørt:
@@ -304,7 +304,7 @@ Skjót upp 4 still, rólig virksemi, sum hóska til okkara rúm. Tak hetta við 
 * stutt notat, sum forklarar "hví hetta gevur ró"
 
 Svara á natúrligum føroyskum.  
-\--- prompt \---
+:::prompt
 
 ### 2\) Tiltakshugskot uttan tilfar
 
@@ -312,7 +312,7 @@ Leiklutur hjá vitlíki: Kreativur sparringspartnari
 
 Støða: Í Tórshavn (felagsrúm 10:15–10:40) er goymsluskápið læst inntil 10:45; eitt borð vaggar; stólar eru tungir at flyta. Tær tørvar fangandi møguleikar, sum bert brúka stólar, hendur og røddir. Við hesum avmarkingum kann vitlíki leypa um klipp-og-klistra hugskot og geva tær møguleikar uttan tilfar, sum tú kanst brúka beinanvegin.
 
-\--- prompt \---
+:::prompt
 
 Í dag í Tórshavn er okkara goymsluskáp læst til klokkan 10:45. Nú er klokkan 10:15–10:40, og vit hava bara stólar tøkar (eitt borð er ov vaggut at brúka). Plássið er avmarkað, so virksemið má vera sitandi ella ógvuliga einfalt.
 
@@ -324,7 +324,7 @@ Vinarliga gev okkum 5 fangandi hugskot til virksemi uttan tilfar, hóskandi til 
 
 Svara á natúrligum føroyskum.
 
-\--- prompt \---
+:::prompt
 
 ### 3\) Fá starvsfólk / lítið-pláss-ætlan (sitandi rørsla)
 
@@ -332,7 +332,7 @@ Leiklutur hjá vitlíki: Kreativur sparringspartnari
 
 Støða: Í Runavík, Stova 3N er umleið 3,5 m × 4 m; tú ert einasta starvsfólk til staðar. Vendiradius hjá koyristóli er knappur; fólk ganga framvið á gongini hvørjar 5 minuttir; ein brandávaringar roynd er skrásett kl. 10:00 (stutt floyt). Við hesum detaljustigi kann vitlíki laga løtt rørsluspøl til sitandi útgávur við greiðum trygdarboðum.
 
-\--- prompt \---
+:::prompt
 
 Eg eri einsamallur í Runavík (Stova 3N, ógvuliga lítið pláss, 3,5×4 m). Atgongd við koyristóli er avmarkað, fólk ganga framvið 5\. hvønn minutt, og tað er ein stutt brandávaringar-roynd (floyt) kl. 10:00. Okkum tørvar tvey uppskot til róligt, sitandi rørsluvirksemi (8–10 min hvørt).
 
@@ -345,7 +345,7 @@ Fyri hvørt virksemi, veit:
 
 Svara á natúrligum føroyskum.
 
-\--- prompt \---
+:::prompt
 
 ### 4\) Samrøðukort til matarsteðg
 
@@ -353,14 +353,14 @@ Leiklutur hjá vitlíki: Kreativur sparringspartnari
 
 Støða: Í Vestmanna, 11:20–12:00, er matar-/kaffisteðgur í einum sólríkum horni. Í dag er fyrsta kavafrost í ár. Tað kennist ofta tungt at finn auppá okkurt nýtt at siga allatíð, her hyggja vit uppá at fyri reika hesa løtuna við nøkur ting man kann tosa við íbúgvarnar um.
 
-\--- prompt \---
+:::prompt
 
 Vit eru í Vestmanna og hava ein 40-minuttir matar-/kaffi-steðg (11:20–12:00) við sólríka vindeygað. Tað er fyrsta kavafrost í hesi vikuni. Vit vilja fegin hava nøkur einføld samrøðu-upplegg um "Veður & Árstíðir, at kunna brúka í matar-/kaffisteðginum."
 
 Vinarliga skjót upp 12 stutt, løtt-at-svara samrøðu-upplegg. Sniðgev hvørt sum: uppleggsspurningur \+ (valfríur uppfylgjandi spurningur)  
 Halt tað uppbyggjandi og ítøkiligt – ongar persónligar faktaupplýsingar neyðugar. Svara á natúrligum føroyskum.
 
-\--- prompt \---
+:::prompt
 
 ### 5\) Minnislisti til útferð (veður \+ flytføri \+ hýruvognur)
 
@@ -368,7 +368,7 @@ Leiklutur hjá vitlíki: Minnislista- & mannagongdsvinur
 
 Støða: Í Sandavági verður ein stuttur gengi túrur klokkan 13:10–14:20. Veðurforsøgn: vindur og eitt sindur av regni; gøtur eru hálar. Bólkur upp á 4 (blandað flytføri/ mobilitetur), 2 starvsfólk. Hýruvognur heintar 13:05; bilstjórin vil helst hava kortgjalding; afturkomu-vindeyga ±10 minuttir.
 
-\--- prompt \---
+:::prompt
 
 Í morgin fara vit ein gongutúr í Sandavági (13:10–14:20). Forsøgnin sigur vind og eitt sindur av regni, og gøtur kunnu vera hálar. Vit eru 4 búfólk (blandað flytføri) \+ 2 starvsfólk, brúka hýruvogn (heinting 13:05, kortgjalding er ynskilig).
 
@@ -380,7 +380,7 @@ Vinarliga ger ein praktiskan útferðar-minnislista (10–14 punkt) bólkað eft
 
 Tak eina einfalda Grøna/Gula/Reyða støðukanning við eini grundgeving. Svara á natúrligum føroyskum.
 
-\--- prompt \---  
+:::prompt
 Her eru rættlisnu útgávurnar av tínum tekstbrotum (prompts). Eg havi lagt dent á at nýta rættar fyrisetingar við staðarnøvn, føroysk orð í staðin fyri danismur og rætta málfrøði samsvarandi viðfestu reglunum.
 
 ---
@@ -393,7 +393,7 @@ Her eru rættlisnu útgávurnar av tínum tekstbrotum (prompts). Eg havi lagt de
 
 **Støða:** Tit eru júst komin aftur av Tvøroyri. Túrurin var góður, men øll eru troytt, og tú orkar næstan ikki at seta teg at "yrkja" eina frásøgn til avvarðandi á samskiftisappini ella til talvuna. Tær tørvar ein tekst, sum er fittur, lívligur og positivur, men sum heldur fullan trúnað (ongi nøvn ella persónligar myndir).
 
-\--- prompt \---
+:::prompt
 
 Vit eru júst komin aftur av einum túri á Tvøroyri (kl. 10–14).
 
@@ -407,7 +407,7 @@ Skriva eina stutta, hjartaliga dagføring (100–150 orð) til "Tíðindaveggin"
 
 Svara á natúrligum føroyskum.
 
-\--- prompt \---
+:::prompt
 
 ---
 
@@ -419,7 +419,7 @@ Svara á natúrligum føroyskum.
 
 **Støða:** Í Norðragøtu. Fíggjarætlanin er avmarkað hesa vikuna (700 kr. eftir), og tit hava eina rúgvu av restum, sum tit vilja brúka upp, áðrenn tit keypa nýtt. Tað kann vera ringt at síggja "ein rætt" í einum hálvum pakka av fiski og nøkrum gularótum, men vitlíki er meistari í at seta restir saman til leskiligar máltíðir.
 
-\--- prompt \---
+:::prompt
 
 Vit skulu gera matskrá fyri næstu 2 dagarnar í Norðragøtu, og vit vilja tøma frystiboksina/køliskápið, áðrenn vit keypa inn.
 
@@ -441,7 +441,7 @@ Krav: Rættirnir skulu vera lættir at tyggja og hóska til eldri.
 
 Svara á natúrligum føroyskum.
 
-\--- prompt \---
+:::prompt
 
 ---
 
@@ -453,7 +453,7 @@ Svara á natúrligum føroyskum.
 
 **Støða:** Í Sørvági fáa tit vitjan av einum elektrikara í felagstekøkinum kl. 14:00–16:00. Vanliga mannagongdin fyri trygd (frástøða, ruddan o.s.fr.) er upp á pláss. Avbjóðingin er "trivnaður": Búfólk A verður ógvuliga stúrin av ókendum monnum og larmi (borimaskina), men Búfólk B er gamal hondverkari og vil fegin "hjálpa" ella hyggja. Mær tørvar eina ætlan fyri at gera hetta til eina góða løtu fyri bæði heldur enn eina strongda tíð.
 
-\--- prompt \---
+:::prompt
 
 Vit fáa elektrikara á vitjan í dag (kl. 14–16) í felagshølinum. Trygdin er komin upp á pláss, men mær tørvar hjálp til tað pedagogiska/menniskjaliga:
 
@@ -468,7 +468,7 @@ Kom við eini "Trivnaðarætlan" fyri hesa løtuna við 3 punktum:
 
 Svara á natúrligum føroyskum.
 
-\--- prompt \---
+:::prompt
 
 ### 9\) Áminningarboð um avtalu (starvsfólkakjatt/SMS)
 
@@ -476,7 +476,7 @@ Leiklutur hjá vitlíki: Samskiftishjálpari
 
 Støða: Í Tórshavn, ein vitjan á bókasavninum er mikudag ímillum kl.09:30–11:00. Møtistaður: forhøllin við teir bláu stólarnar; hýruvognsbílegging váttað; knakar eru ofta fullir. At biðja vitlíki um tvey snið tryggjar, at bæði eitt SMS og eitt eitt sindur longri starvsfólkanotat eru klár uttan at skula skrivast umaftur.
 
-\--- prompt \---
+:::prompt
 
 Vit hava eina vitjan á bókasavninum í Tórshavn mikumorgunin (09:30–11:00). Møtistaður er forhøllin við teir bláu stólarnar; hýruvognsbílegging er váttað. Knakar har verða skjótt fullir.
 
@@ -487,7 +487,7 @@ Skriva tvær vinaligar áminningar um avtaluna:
 
 Tak við: møtistað, tíðarbil, og ting at taka við (jakka, kort um neyðugt). Brúka óheftan/nevtralan tóna.
 
-\--- prompt \---
+:::prompt
 
 ### 10\) Almenn áminning til familjur (árstíðarklæðir)
 
@@ -495,7 +495,7 @@ Leiklutur hjá vitlíki: Samskiftishjálpari
 
 Støða: Tú ert á einum bústovni í Klaksvík. Veðrið er vorðið nógv kaldari, og tú hevur lagt merki til, at mong búfólk høvdu havt gagn av heitari inniskóm og troyggjum. Tær tørvar at seta eina almenna, vinarliga áminning á talvuna til vitjandi familjur, har tú vinarliga biður tær kanna, um teirra avvarðandi tørvar heitari innilutir. At biðja vitlíki skriva hetta sparir tær tíð og tryggjar, at tónin er hjálpsamur og ikki krevjandi.
 
-\--- prompt \---   
+:::prompt 
 Tað er vorðið kaldari í Klaksvík. Vit vilja fegin seta eina almenna, vinarliga áminning á familjutalvuna.
 
 Vinarliga skriva eitt stutt, vinarligt boð (2-3 setningar). Tak við:
@@ -506,7 +506,7 @@ Vinarliga skriva eitt stutt, vinarligt boð (2-3 setningar). Tak við:
 
 Halt tónan hjálpsaman og almennan. Svara á natúrligum føroyskum.
 
-\--- prompt \---
+:::prompt
 
 ## Tú arbeiður saman við vitlíki, men tú hevur síðsta orði.
 
