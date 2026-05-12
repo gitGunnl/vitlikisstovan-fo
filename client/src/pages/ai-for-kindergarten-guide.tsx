@@ -91,7 +91,7 @@ Tað er farið at oysregna í Vestmanna, har tú arbeiðir. Tínar útiætlanir 
 
 **Gott dømi um byrt (avrita og set inn í títt kjattamboð):**
 
-\--- prompt \---
+:::prompt
 
 Eg eri námsfrøðingur í einum barnagarði í Vestmanna. Tað regnar, so vit eru innandura í dag.
 
@@ -109,7 +109,7 @@ Kundi tú spunnið okkurt stuttligt upp sum vit kunna gera í dag, kom helst vi�
 
 Um okkurt er ógreitt, vinarliga spyr meg áðrenn tú svarar endaligt.
 
-\--- prompt \---
+:::
 
 **Uppfylgjandi byrt:** Um tað er okkurt við svarinum/hugskotinum tær ikki dámar, so sig bara vitlíki neyvt, hvat tað er. Her eru nøkur hugskot:
 
@@ -140,7 +140,7 @@ Vitlíki kann vera tíni eyka eygu, sum skjótt gjøgnumganga tínar ætlanir og
 
 **Gott dømi um byrt (avrita/líma hetta inn):**
 
-\--- prompt \---
+:::prompt
 
 Vit fara við átjan 5-ára gomlum børnum og 3 vaksnum til ein væl vitjaðan, landsumfatandi rennidag í Havn. Vit taka bussin oman í býðin og heim aftur aftaná. Har vera nógv fólk, nógvur larmur og skiftandi veður. **Her er okkara "minnislisti til tey vaksnu", sum hann sær út nú:**
 
@@ -163,7 +163,7 @@ Vinarliga **gjøgnumgang listan** og:
 
 Svarið skal vera stutt og hent. Spyr vinaliga fyrst, um okkurt er ógreitt.
 
-\--- prompt \---
+:::
 
 ---
 
@@ -197,7 +197,7 @@ Tín bólkur av lívligum 4-ára gomlum børnum í Klaksvík gloymir ferð eftir
 
 **Gott dømi um byrt (avrita/líma hetta inn í kjattið):**
 
-\--- prompt \---
+:::prompt
 
 Skriva eina stutta, stuttliga søgu (umleið 3 minuttir langa at lesa hart) til míni 4-ára gomlu børn í Klaksvík, sum minnir tey á, hví tað er umráðandi at vaska sær um hendurnar eftir at hava spælt úti.
 
@@ -213,7 +213,7 @@ Ger hana viðkomandi og fangandi við at nevna vanlig úti-spøl, teimum dámar 
 
 Vinarliga spyr fyrst, um okkurt er ógreitt.
 
-\--- prompt \---
+:::
 
 **Uppfylgjandi birt (skjótar tillagingar):**
 
@@ -289,7 +289,7 @@ Brúka hetta, tá tú skal senda boð, sum krevja, at tú ert týðilig/ur, men 
 
 **Gott dømi um byrt (avrita/líma inn í kjattið):**
 
-\--- prompt \---
+:::prompt
 
 *Eg eri námsfrøðingur á einum dagstovni í Tórshavn (Føroyum).* Nógvur vindur er væntandi seinnapartin. Vit vilja biðja foreldur: Um gjørligt, vinarliga heintið børnini í seinasta lagi kl. **14:30**. Vit hava opið fyri familjur, sum ikki kunnu koma tíðliga.
 
@@ -315,7 +315,7 @@ Brúka hetta, tá tú skal senda boð, sum krevja, at tú ert týðilig/ur, men 
 
 Spyr meg, um okkurt er ógreitt, áðrenn tú byrjar at skriva.
 
-\--- prompt \---  
+:::
 ---
 
 ### **Soleiðis rættar tú úrslitið skjótt**
@@ -361,7 +361,7 @@ Tað hevur regnað allan fyrrapart, og tit hava verið inni leingi. Børnini (3-
 
 Hetta byrtið handlar um at biðja um eitt "her-og-nú" skifti frá høgari orku til djúpa konsentrasjón, uttan at brúka tíð á fyrireiking.
 
-\--- prompt \---
+:::prompt
 
 Eg havi tørv á hjálp til at venda orkuni á stovuni *nú*.
 
@@ -381,7 +381,7 @@ Gev mær 3 uppskot til friðarligt spæl, sum vit kunnu byrja upp á 30 sekund.
 
 Vinarliga svara stutt og greitt.
 
-\--- prompt \---
+:::
 
 ---
 
@@ -391,7 +391,7 @@ Vinarliga svara stutt og greitt.
 
 **Støða:** Í dag í Klaksvík er tykkara listaskáp óvæntað læst, og kopimaskinan manglar tónara. Við bert 2 barnavinarligum saksum tøkum ert tú avmarkað/ur til litblýantar, papptallerkarnar, tape, tógvrestir, fløskulok og nakrar pappeskjur. Fyrireiking til døgurða byrjar kl. 11:15, so ruddingin má ganga ógvuliga skjótt. At siga vitlíki frá hesum óvæntaðu avmarkingum hjálpir at finna kreativar, men praktiskar loysnir beinanvegin, so títt virksemi kann halda fram uttan órógv.
 
-\--- prompt \---  
+:::prompt
 Hjálp\! Í dag í Klaksvík er okkara listaskáp læst, og kopimaskinan er tóm fyri tónara.
 
 * Mín bólkur: 9 børn (4–5 ár). Mítt mál: fínmotorikkur \+ lit-orð (reytt, blátt, gult, osf.).  
@@ -408,7 +408,7 @@ Fyri hvørt, vinarliga tak við:
 * 1 ruddingar-/trygdarnotat
 
 Skal vera veruliga praktiskt, takk\!  
-\--- prompt \---
+:::
 
 ---
 
@@ -418,7 +418,7 @@ Skal vera veruliga praktiskt, takk\!
 
 **Støða:** Á Tvøroyri fært tú at vita, at stovan skal málast í morgin. Tað merkir, at tú og tíni 12 børn (3–5 ár) verða flutt út í eina smala gongd. Tú veitst frammanundan, at tað verður rokaligt: viftur koyra, málingaluktur merkist, og ein køksvognur skal sleppa framvið kl. 10:15. Í staðin fyri at møta upp í morgin og stressa, brúkar tú vitlíki dagin fyri at gera eina ætlan, so tú hevur tamarhald á støðuni, áðrenn hon byrjar.
 
-\--- prompt —
+:::prompt
 
 Í morgin verður okkara stova málað, so eg skal vera í gongini við 12 børnum (3–5 ár) í umleið ein tíma. Eg vil fegin hava eina klára ætlan, so tað ikki endar í óskili.
 
@@ -435,6 +435,8 @@ Eg havi tørv á:
 
 Ger ætlanina realistiska fyri tvey vaksin at stýra.
 
+:::
+
 ---
 
 ### **4\) Ger eina skjóta "hvat-kann-ganga-galið" kanning av útferð**
@@ -443,7 +445,7 @@ Ger ætlanina realistiska fyri tvey vaksin at stýra.
 
 **Støða:** Í morgin skalt tú hava 18 5-ára gomul børn við á blaðjakt í Viðarlundini í Tórshavn. Tykkara gonguruta fer framvið larmandi vegarbeiði við smølum gongubreytum, og hál bløð gera trappurnar í viðarlundini vandamiklar. Har er ein lág girðing kring eina tjørn, og vesið í kaféini plagar at vera fult umleið kl. 10:30. Veðrið sær út til at verða regn og vindur. Við hesum smálutum kann vitlíki skjótt vísa á veruligar váðar og praktiskar loysnir fyri at tryggja eina smidliga útferð.
 
-\--- prompt \---  
+:::prompt
 Eg leggi eina útferð til rættis í morgin og vil fegin kanna hana fyri møguligar váðar. Vit fara við 18 5-ára gomlum børnum í Viðarlundina (blaðjakt) saman við 3 vaksnum.
 
 * Váðar á rutuni, eg stúri fyri: larmandi vegarbeiði við smølum gongubreytum; hálar trappur í viðarlundini (bløð); har er ein lág girðing rundan um tjørnina; og vesið í kaféini verður ofta fult umleið kl. 10:30.  
@@ -456,7 +458,7 @@ Kanst tú geva mær eina skjóta "hvat-kann-ganga-galið" kanning? Mær tørvar:
 3. Hvat skal sigast í eini 60-sekund starvsfólkakunning, áðrenn vit fara.
 
 Mær tørvar bara stutt, praktisk ting, ongar persónligar dátur.  
-\--- prompt \---  
+:::
 ---
 
 ### **5\) Koyr eina inklusións- & sansakanning**
@@ -465,7 +467,7 @@ Mær tørvar bara stutt, praktisk ting, ongar persónligar dátur.
 
 **Støða:** Tú ert við at fyrireika eitt klippimynd-virksemi (collage) fyri tíggju 3-4 ára gomul børn í Sandavági. Rúmið hevur berar veggir, so akustikkurin er ikki góður, og eitt barn verður vanliga lætt yvirstimulerað. Tvey børn eru smæðin og nýggj, og eitt annað tosar ukrainskt. At deila hesar smálutir við vitlíki tryggjar, at tað veitir tillagaðar strategir til at handfara sansatørvir og umfevna øll á ein góðan hátt.
 
-\--- prompt \---  
+:::prompt
 Hey, eg fyrireiki eitt virksemi í Sandavági. Vit gera eina fiska-klippimynd úr endurnýtslutilfari við 10 børnum (3–4 ár).
 
 * Mín bólkaprofilur: Eg havi 1 barn, sum lættliga verður yvirstimulerað, 2 smæðin nýggj børn, og 1 barn við øðrum móðurmáli (ukrainskt).  
@@ -480,7 +482,7 @@ Eg leiti eftir:
 * 1 rólig enda-rutina.
 
 Skal vera stutt og gjørligt, takk\!  
-\--- prompt \---  
+:::
 ---
 
 ### **6\) Samskifti tvørtur um mál og stúran (Foreldraboð)**
@@ -489,7 +491,7 @@ Skal vera stutt og gjørligt, takk\!
 
 **Støða:** Tín flokkur skal vitja bjargingarstøðina í Fuglafirði. Tú hevur allar upplýsingarnar klárar, men tú stúrir fyri tveimum viðurskiftum: 1\) Summi foreldur eru ógvuliga bangin fyri sjónum og krevja vissu fyri trygdini, og 2\) tú hevur fleiri foreldur, sum ikki skilja føroyskt væl, og tað tekur tær langa tíð at týða boðini til enskt. Her sparir vitlíki tær tíð við at raka rætta "trygga" tónan og týða alt beinanvegin.
 
-\--- prompt \---
+:::prompt
 
 Eg skal senda boð heim um ein túr á Bjargingarstøðina í Fuglafirði (20. nov, 09:45–11:15).
 
@@ -510,7 +512,7 @@ Skriva eini stutt, vinalig boð til foreldraappina.
 * Fyrst á **føroyskum**.  
 * Síðani eina **enska týðing** beint undir.
 
-\--- prompt \---
+:::
 
 ---
 
@@ -520,7 +522,7 @@ Skriva eini stutt, vinalig boð til foreldraappina.
 
 **Støða:** Tú situr kvøldið fyri og leggur dagin í morgin til rættis. Veðurforsøgnin fyri Eiði sigur storm, so tit verða innandura allan dagin. Tú veitst av royndum, at tá ið børnini (4 ár) hava verið inni allan dagin, verður ruddingartíðin ofta rokalig. Tú vilt vera til reiðar og gera eina ætlan, sum ger ruddingina til ein spennandi part av degnum heldur enn eina keðiliga plikt.
 
-\--- prompt \---
+:::prompt
 
 Eg eri við at fyrireika morgindagin á stovuni. Veðurforsøgnin sigur storm, so vit verða inni allan dagin við orkufullum 4-ára gomlum børnum. Eg vil fegin hava eina klára ætlan fyri ruddingartíðina, so hon ikki endar í roki.
 
@@ -537,7 +539,7 @@ Eg eri við at fyrireika morgindagin á stovuni. Veðurforsøgnin sigur storm, s
 
 Svara á natúrligum føroyskum.
 
-\--- prompt \---
+:::
 
 ---
 
@@ -547,7 +549,7 @@ Svara á natúrligum føroyskum.
 
 **Støða:** Í Hoyvík heldur regn tykkum innandura; gongirnar lukta nýmálaðar, køksútvarpið órógvar, og tit máttu flyta samlingina fram. At lýsa hesar veruleikar greitt hjálpir vitlíki skjótt at skapa neyvar, samanhangandi dagligar loggar, sum fanga dagsins stemning og spara tær skrivitíð um kvøldið.
 
-\--- prompt —
+:::prompt
 
 Eg royni at fáa míni notat liðug fyri barnagarðin í Hoyvík. Í dag helt regnið okkum innandura. Gongirnar luktaðu nýmálaðar, køksútvarpið órógvaði ov nógv, og vit máttu flyta samlingina fram.
 
@@ -560,7 +562,7 @@ Kanst tú vinarliga gera hetta til 3 neutralar dagligar logg-innføringar? Mær 
 
 Vinarliga svara á natúrligum føroyskum.
 
-\--- prompt —
+:::
 
 ---
 
@@ -570,7 +572,7 @@ Vinarliga svara á natúrligum føroyskum.
 
 **Støða:** Í Vestmanna gleið eitt barn, tí frárenslið við vatnbakkan var tipt, og fekk eitt stórt sár á knæið. Tú hevur uggað barnið, lagt ein ísposa á, vaskað sárið og hevur longu sett teg í samband við foreldrini. At veita vitlíki hesar ítøkiligu smálutir letur tað gera eitt útkast til eina greiða, professionella tilburðarfrágreiðing beinanvegin, ið minkar um feilir og strongd.
 
-\--- prompt \---
+:::prompt
 
 Vit høvdu júst eitt óhapp í Vestmanna, og eg skal skriva frágreiðingina.
 
@@ -582,7 +584,7 @@ Kanst tú vinarliga gera eitt útkast til eina greiða, professionella tilburða
 
 Halt tað stutt og greitt. Vinarliga svara á natúrligum føroyskum.
 
-\--- prompt —
+:::
 `;
 
 // ---------------------------------------------------------------------------
@@ -791,7 +793,7 @@ export default function AiForCaretakersGuide() {
   // Title and meta description are owned by the prerender step
   // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
-  const contentParts = blogContent.split(/(\\?-{2,3} prompt \\?-{2,3}[\s\S]*?\\?-{2,3} prompt \\?-{2,3})/g);
+  const contentParts = blogContent.split(/(:::prompt[\s\S]*?:::)/g);
 
   return (
     <div className="flex flex-col min-h-screen bg-stone-50 dark:bg-stone-950 font-serif">
@@ -841,8 +843,8 @@ export default function AiForCaretakersGuide() {
           {/* Article Body */}
           <article className="selection:bg-stone-200 selection:text-stone-900 dark:selection:bg-stone-700 dark:selection:text-stone-50">
             {contentParts.map((part, index) => {
-              if (part.match(/^\\?-{2,3} prompt \\?-{2,3}/)) {
-                const promptText = part.replace(/^\\?-{2,3} prompt \\?-{2,3}/, "").replace(/\\?-{2,3} prompt \\?-{2,3}$/, "").trim();
+              if (part.startsWith(":::prompt")) {
+                const promptText = part.replace(/^:::prompt/, "").replace(/:::$/, "").trim();
                 return <PromptCard key={index} text={promptText} />;
               }
               return <MarkdownBlock key={index} text={part} />;

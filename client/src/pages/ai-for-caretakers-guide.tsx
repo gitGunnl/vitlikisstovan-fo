@@ -154,7 +154,7 @@ Eg eri hjálparfólk á einum bústovni í Føroyum. Okkara gongutúrur varð av
 * Mál: At fáa búfólkini at gera okkurt næsta tíman, og at varðveita ein róligan og jaligan hýr.
 
 Kom við uppskotum um okkurt innandura virksemi, sum krevur lítla fyrireiking, fevnir um øll, eru rólig og hóska til blandaðar førleikar. Spyr meg fyrst, um okkurt krevur nærri frágreiðing.   
-:::prompt
+:::
 
 Uppfylgjandi byrt: Um uppskotini ikki eru heilt, sum tú vilt hava tey, leiðbein so vitlíki greitt. Til dømis:
 
@@ -206,7 +206,7 @@ Fyri at fáa betur svar frá vitlíki leggur tú nakrar avgerandi veruligar smá
 
 ***Vinarliga ger ein stuttan og praktiskan minnislista, sum vit kunnu fyrireika í kvøld, so morgunin í morgin verður róligari. Tryggja, at gongustativ og headsett eru við. Kom við hugskot til ting eg møguliga vil hava við. Tak eina einfalda Grøn/Gul/Reyð støðukanning við til síðst. Spyr meg fyrst onkran spurning, um okkurt krevur frágreiðing, áðrenn tú kemur við tínum endaliga svari.*** 
 
-:::prompt
+:::
 
 ### Fá minnislistan heilt rættan
 
@@ -258,7 +258,7 @@ Umskapa hesi grovu notat til eitt vaktaryvirlit við 5 punktum: Uppseting:
 Valfrí seinasta linja: Støða (Grøn/Gul/Reyð) \+ 1 grundgeving.  
 Stílur: Einfalt, nevtralt. Vinarliga spyr fyrst, um okkurt er ógreitt.
 
-:::prompt
+:::
 
 ### Uppfylgjandi byrt:
 
@@ -293,7 +293,7 @@ Leiklutur hjá vitlíki: Kreativur sparringspartnari
 
 Støða: Tú ert í Klaksvík í eini felagsstovu kl.14:00–14:30, beint eftir at vaskimaskinan er liðug. Turkitrumlan hurrar harðast umleið 14:05, og gongshurðin gevur eitt hvin, tá ið hon verður latin upp. Tú hevur eitt lítið borð, blýantar, A4 pappír og eitt kortspæl. Við at geva hesar smálutir kann vitlíki skjóta upp rólig, løtt-at-rudda virksemi, sum hóska til larm- og plássavmarkingarnar og minka um yvirstimulering.
 
-:::prompt 
+:::prompt
 Eg eri í Klaksvík við 5 vaksnum búfólkum (blandaðir førleikar). Klokkan er 14:00–14:30, beint eftir at vaskimaskinan er liðug (turkitrumlan hurrar \\\~14:05, gongshurðin hvínur). Vit hava eitt lítið borð, blýantar, A4 pappír og spælikort.
 
 Skjót upp 4 still, rólig virksemi, sum hóska til okkara rúm. Tak hetta við fyri hvørt:
@@ -304,7 +304,7 @@ Skjót upp 4 still, rólig virksemi, sum hóska til okkara rúm. Tak hetta við 
 * stutt notat, sum forklarar "hví hetta gevur ró"
 
 Svara á natúrligum føroyskum.  
-:::prompt
+:::
 
 ### 2\) Tiltakshugskot uttan tilfar
 
@@ -324,7 +324,7 @@ Vinarliga gev okkum 5 fangandi hugskot til virksemi uttan tilfar, hóskandi til 
 
 Svara á natúrligum føroyskum.
 
-:::prompt
+:::
 
 ### 3\) Fá starvsfólk / lítið-pláss-ætlan (sitandi rørsla)
 
@@ -345,7 +345,7 @@ Fyri hvørt virksemi, veit:
 
 Svara á natúrligum føroyskum.
 
-:::prompt
+:::
 
 ### 4\) Samrøðukort til matarsteðg
 
@@ -360,7 +360,7 @@ Vit eru í Vestmanna og hava ein 40-minuttir matar-/kaffi-steðg (11:20–12:00)
 Vinarliga skjót upp 12 stutt, løtt-at-svara samrøðu-upplegg. Sniðgev hvørt sum: uppleggsspurningur \+ (valfríur uppfylgjandi spurningur)  
 Halt tað uppbyggjandi og ítøkiligt – ongar persónligar faktaupplýsingar neyðugar. Svara á natúrligum føroyskum.
 
-:::prompt
+:::
 
 ### 5\) Minnislisti til útferð (veður \+ flytføri \+ hýruvognur)
 
@@ -380,7 +380,7 @@ Vinarliga ger ein praktiskan útferðar-minnislista (10–14 punkt) bólkað eft
 
 Tak eina einfalda Grøna/Gula/Reyða støðukanning við eini grundgeving. Svara á natúrligum føroyskum.
 
-:::prompt
+:::
 Her eru rættlisnu útgávurnar av tínum tekstbrotum (prompts). Eg havi lagt dent á at nýta rættar fyrisetingar við staðarnøvn, føroysk orð í staðin fyri danismur og rætta málfrøði samsvarandi viðfestu reglunum.
 
 ---
@@ -407,7 +407,7 @@ Skriva eina stutta, hjartaliga dagføring (100–150 orð) til "Tíðindaveggin"
 
 Svara á natúrligum føroyskum.
 
-:::prompt
+:::
 
 ---
 
@@ -441,7 +441,7 @@ Krav: Rættirnir skulu vera lættir at tyggja og hóska til eldri.
 
 Svara á natúrligum føroyskum.
 
-:::prompt
+:::
 
 ---
 
@@ -468,7 +468,7 @@ Kom við eini "Trivnaðarætlan" fyri hesa løtuna við 3 punktum:
 
 Svara á natúrligum føroyskum.
 
-:::prompt
+:::
 
 ### 9\) Áminningarboð um avtalu (starvsfólkakjatt/SMS)
 
@@ -487,7 +487,7 @@ Skriva tvær vinaligar áminningar um avtaluna:
 
 Tak við: møtistað, tíðarbil, og ting at taka við (jakka, kort um neyðugt). Brúka óheftan/nevtralan tóna.
 
-:::prompt
+:::
 
 ### 10\) Almenn áminning til familjur (árstíðarklæðir)
 
@@ -495,7 +495,7 @@ Leiklutur hjá vitlíki: Samskiftishjálpari
 
 Støða: Tú ert á einum bústovni í Klaksvík. Veðrið er vorðið nógv kaldari, og tú hevur lagt merki til, at mong búfólk høvdu havt gagn av heitari inniskóm og troyggjum. Tær tørvar at seta eina almenna, vinarliga áminning á talvuna til vitjandi familjur, har tú vinarliga biður tær kanna, um teirra avvarðandi tørvar heitari innilutir. At biðja vitlíki skriva hetta sparir tær tíð og tryggjar, at tónin er hjálpsamur og ikki krevjandi.
 
-:::prompt 
+:::prompt
 Tað er vorðið kaldari í Klaksvík. Vit vilja fegin seta eina almenna, vinarliga áminning á familjutalvuna.
 
 Vinarliga skriva eitt stutt, vinarligt boð (2-3 setningar). Tak við:
@@ -506,7 +506,7 @@ Vinarliga skriva eitt stutt, vinarligt boð (2-3 setningar). Tak við:
 
 Halt tónan hjálpsaman og almennan. Svara á natúrligum føroyskum.
 
-:::prompt
+:::
 
 ## Tú arbeiður saman við vitlíki, men tú hevur síðsta orði.
 
@@ -735,7 +735,7 @@ export default function AiForCaretakersGuide() {
   // Title and meta description are owned by the prerender step
   // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
-  const contentParts = blogContent.split(/(\\?-{2,3} prompt \\?-{2,3}[\s\S]*?\\?-{2,3} prompt \\?-{2,3})/g);
+  const contentParts = blogContent.split(/(:::prompt[\s\S]*?:::)/g);
 
   return (
     <div className="flex flex-col min-h-screen bg-stone-50 dark:bg-stone-950 font-serif">
@@ -765,8 +765,8 @@ export default function AiForCaretakersGuide() {
           {/* Article Body */}
           <article className="selection:bg-stone-200 selection:text-stone-900 dark:selection:bg-stone-700 dark:selection:text-stone-50">
             {contentParts.map((part, index) => {
-              if (part.match(/^\\?-{2,3} prompt \\?-{2,3}/)) {
-                const promptText = part.replace(/^\\?-{2,3} prompt \\?-{2,3}/, "").replace(/\\?-{2,3} prompt \\?-{2,3}$/, "").trim();
+              if (part.startsWith(":::prompt")) {
+                const promptText = part.replace(/^:::prompt/, "").replace(/:::$/, "").trim();
                 return <PromptCard key={index} text={promptText} />;
               }
               return <MarkdownBlock key={index} text={part} />;
