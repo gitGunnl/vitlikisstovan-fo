@@ -25,3 +25,14 @@ export const bookingRequestSchema = z.object({
 });
 
 export type BookingRequest = z.infer<typeof bookingRequestSchema>;
+
+export const resourceRequestSchema = z.object({
+  name: z.string().trim().min(1, "Skriva navn títt").max(120),
+  institution: z.string().trim().min(1, "Skriva navnið á stovninum").max(200),
+  email: z.string().email("Skriva ein gildigan teldupost").max(200),
+  newsletterConsent: z.boolean().optional().default(false),
+  // Honeypot — must be empty
+  website: z.string().max(0).optional(),
+});
+
+export type ResourceRequest = z.infer<typeof resourceRequestSchema>;
