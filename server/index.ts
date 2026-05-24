@@ -14,9 +14,6 @@ apiApp.use(createMonitoringRouter());
 const { createBookingRouter } = await import('./booking-api.js');
 apiApp.use(createBookingRouter());
 
-const { createResourceRouter } = await import('./resource-api.js');
-apiApp.use(createResourceRouter());
-
 const { startScheduler } = await import('./monitoring.js');
 startScheduler();
 
