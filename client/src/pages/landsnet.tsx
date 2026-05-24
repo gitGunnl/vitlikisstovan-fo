@@ -37,7 +37,7 @@ import {
 } from "lucide-react";
 
 /* -------------------------------------------------------------------------- */
-/*  Palette                                                                    */
+/*  Palette                                                                   */
 /* -------------------------------------------------------------------------- */
 
 const c = {
@@ -57,7 +57,7 @@ const c = {
 const serif = '"Instrument Serif", Georgia, serif';
 
 /* -------------------------------------------------------------------------- */
-/*  Small primitives                                                           */
+/*  Small primitives                                                          */
 /* -------------------------------------------------------------------------- */
 
 function Section({
@@ -116,7 +116,7 @@ function Lead({ children }: { children: React.ReactNode }) {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Form (used inside Dialog and shown standalone after submit)                */
+/*  Form (used inside Dialog and shown standalone after submit)               */
 /* -------------------------------------------------------------------------- */
 
 function RitlingurForm({ onSuccess }: { onSuccess: () => void }) {
@@ -306,7 +306,7 @@ function RitlingurForm({ onSuccess }: { onSuccess: () => void }) {
           className="text-center text-xs"
           style={{ color: c.inkMuted }}
         >
-          Vit deila ongantíð tín teldupost við triðja part.
+          Vit deila ongantíð tín teldupost við triðjapart.
         </p>
       </form>
     </Form>
@@ -314,7 +314,7 @@ function RitlingurForm({ onSuccess }: { onSuccess: () => void }) {
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Ritlingur Dialog                                                           */
+/*  Ritlingur Dialog                                                          */
 /* -------------------------------------------------------------------------- */
 
 function RitlingurDialog({
@@ -351,7 +351,7 @@ function RitlingurDialog({
                 className="text-base mt-2"
                 style={{ color: c.inkBody }}
               >
-                Skriva navn, stovn og teldupost — so sendi vit ritlingin
+                Skriva navn, stovn og teldupost — so senda vit ritlingin
                 beinanvegin.
               </DialogDescription>
             </DialogHeader>
@@ -378,7 +378,7 @@ function RitlingurDialog({
               className="mt-3 text-base"
               style={{ color: c.inkBody }}
             >
-              Hygg eftir í tínari innbakka. Hann kemur innan fá minuttir.
+              Hygg eftir í tínum innbakka. Hann kemur um fáar minuttir.
             </p>
             <Button
               onClick={() => setOpen(false)}
@@ -395,7 +395,7 @@ function RitlingurDialog({
 }
 
 /* -------------------------------------------------------------------------- */
-/*  Page                                                                       */
+/*  Page                                                                      */
 /* -------------------------------------------------------------------------- */
 
 export default function Landsnet() {
@@ -410,7 +410,7 @@ export default function Landsnet() {
       }}
     >
       {/* =============================================================== */}
-      {/*  HERO                                                             */}
+      {/*  HERO                                                           */}
       {/* =============================================================== */}
       <header
         style={{
@@ -485,7 +485,7 @@ export default function Landsnet() {
       </header>
 
       {/* =============================================================== */}
-      {/*  SHADOW AI                                                        */}
+      {/*  SHADOW AI                                                      */}
       {/* =============================================================== */}
       <Section id="skugga-vitliki">
         <Eyebrow>Hvat tú eigur at vita</Eyebrow>
@@ -521,7 +521,7 @@ export default function Landsnet() {
       </Section>
 
       {/* =============================================================== */}
-      {/*  WHY ACT NOW                                                      */}
+      {/*  WHY ACT NOW                                                    */}
       {/* =============================================================== */}
       <Section bg={c.bgMuted}>
         <Eyebrow>Hví nú</Eyebrow>
@@ -532,22 +532,27 @@ export default function Landsnet() {
           serliga umsorgan:
         </Lead>
 
-        <div className="mt-8 grid gap-3 sm:grid-cols-2">
+        <ul className="mt-8 space-y-3">
           {[
             "Persónsdátur um borgarar",
             "Borgaramál og fyrispurningar",
             "Heilsudátur og viðkvæmar upplýsingar",
             "Innanhýsis samskifti og trúnaðarmál",
           ].map((t) => (
-            <div
+            <li
               key={t}
-              className="rounded-md border bg-white px-5 py-4 text-[15px]"
-              style={{ borderColor: c.border, color: c.ink }}
+              className="flex items-start gap-3 text-[16px] leading-relaxed"
+              style={{ color: c.ink }}
             >
-              {t}
-            </div>
+              <span
+                className="mt-2.5 h-1.5 w-1.5 rounded-full shrink-0"
+                style={{ background: c.accent }}
+                aria-hidden="true"
+              />
+              <span>{t}</span>
+            </li>
           ))}
-        </div>
+        </ul>
 
         <figure className="mt-12">
           <blockquote
@@ -566,10 +571,10 @@ export default function Landsnet() {
       </Section>
 
       {/* =============================================================== */}
-      {/*  TRIANGLE                                                         */}
+      {/*  TRIANGLE                                                       */}
       {/* =============================================================== */}
       <Section>
-        <Eyebrow>Trír leiklutir</Eyebrow>
+        <Eyebrow>Tríggir leiklutir</Eyebrow>
         <H2>Leiðsla, KT og starvsfólk — saman</H2>
         <Lead>
           Fyri at fáa virði úr vitlíki uttan at skapa glundatros, mugu tríggir
@@ -627,7 +632,7 @@ export default function Landsnet() {
       </Section>
 
       {/* =============================================================== */}
-      {/*  SEVEN STEPS                                                      */}
+      {/*  SEVEN STEPS                                                    */}
       {/* =============================================================== */}
       <Section bg={c.bgMuted}>
         <Eyebrow>Praktiskur vegur</Eyebrow>
@@ -640,19 +645,19 @@ export default function Landsnet() {
         <ol className="mt-10 space-y-3">
           {[
             {
-              t: "Set leiðsluna í ábyrgd",
+              t: "Setið leiðsluna í ábyrgd",
               b: "Vitlíki snýr seg um arbeiðspláss- og fakliga menning, ikki bara um tøkni.",
             },
             {
-              t: "Finn út úr, hvat longu fer fram",
-              b: "Spyr starvsfólkini opið og við forvitni, hvørji tól tey brúka í dag, og til hvat.",
+              t: "Finnið út úr, hvat longu fer fram",
+              b: "Spyrjið starvsfólkini opið og við forvitni, hvørji tól tey brúka í dag, og til hvat.",
             },
             {
               t: "Gerið einføld trygdarmørk",
-              b: "Skriva niður, hvat má og ikki má, í eitt stutt og lesiligt skjal.",
+              b: "Skrivið niður, hvat má og ikki má, í eitt stutt og lesiligt skjal.",
             },
             {
-              t: "Áset eitt positivt mál",
+              t: "Ásetið eitt positivt mál",
               b: "Skilmarkið, hvat tit vilja betra — styttri bíðitíð, greiðari borgarasamskifti ella minni endurtakandi skriviarbeiði.",
             },
             {
@@ -707,7 +712,7 @@ export default function Landsnet() {
       </Section>
 
       {/* =============================================================== */}
-      {/*  LEADERSHIP LITERACY                                              */}
+      {/*  LEADERSHIP LITERACY                                            */}
       {/* =============================================================== */}
       <Section>
         <div
@@ -735,7 +740,7 @@ export default function Landsnet() {
             style={{ color: "#C9D5E3" }}
           >
             Sum leiðari tørvar tær ikki at vera KT-samskipari, men tú mást hava
-            grundleggjandi vitlíkisfatan — nóg mikið til at avgera við visku og
+            grundleggjandi vitlíkisfatan — nóg mikið til at taka skynsamar avgerðir og
             til at orða mørkini, sum starvsfólkið skal arbeiða innanfyri.
           </p>
 
@@ -761,10 +766,10 @@ export default function Landsnet() {
       </Section>
 
       {/* =============================================================== */}
-      {/*  SERVICES                                                         */}
+      {/*  SERVICES                                                       */}
       {/* =============================================================== */}
       <Section bg={c.bgMuted}>
-        <Eyebrow>Hjálp til at koma ígongd</Eyebrow>
+        <Eyebrow>Hjálp til at koma í gongd</Eyebrow>
         <H2>Hvussu Vitlíkisstovan kann hjálpa tykkum</H2>
         <Lead>
           Vit hjálpa føroyskum almennum stovnum við praktiskari og tryggari
@@ -786,7 +791,7 @@ export default function Landsnet() {
             {
               icon: Wrench,
               title: "Praktiskar arbeiðsstovur",
-              body: "Skeið fyri leiðslur, KT og lykilbrúkarar í tryggari nýtslu og prompting.",
+              body: "Skeið fyri leiðslur, KT og lykilbrúkarar í tryggari nýtslu og byrting.",
             },
             {
               icon: Users,
@@ -827,7 +832,7 @@ export default function Landsnet() {
       </Section>
 
       {/* =============================================================== */}
-      {/*  FINAL CTA                                                        */}
+      {/*  FINAL CTA                                                      */}
       {/* =============================================================== */}
       <Section id="samband" bg={c.bgHero} className="border-t" >
         <div className="text-center">
@@ -836,13 +841,13 @@ export default function Landsnet() {
             className="mt-4 text-3xl sm:text-[2.5rem] leading-[1.15] mx-auto max-w-2xl"
             style={{ color: c.ink, fontFamily: serif, fontWeight: 400 }}
           >
-            Tilbúgvin at taka fyrsta stigið?
+            Tilreiðar at taka fyrsta stigið?
           </h2>
           <p
             className="mt-5 text-lg leading-relaxed mx-auto max-w-xl"
             style={{ color: c.inkBody }}
           >
-            Les ritlingin, ella bóka eina leiðsluverkstovu, har vit hjálpa
+            Lesið ritlingin, ella bókið eina leiðsluverkstovu, har vit hjálpa
             tykkum at finna fram til tykkara egnu kós.
           </p>
 
