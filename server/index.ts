@@ -14,6 +14,9 @@ apiApp.use(createMonitoringRouter());
 const { createBookingRouter } = await import('./booking-api.js');
 apiApp.use(createBookingRouter());
 
+const { createRitlingurRouter } = await import('./ritlingur-api.js');
+apiApp.use(createRitlingurRouter());
+
 const { startScheduler } = await import('./monitoring.js');
 startScheduler();
 
