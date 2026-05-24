@@ -1,0 +1,135 @@
+Build the webpage for the Landsnet follow-up resource using the markdown copy and the style template image I am giving you.
+
+The goal is to create a polished, mobile-first landing page for the Faroese public-sector resource:
+
+**“Vitlíki á arbeiðsplássinum: Haldið røttu kósina”**
+
+This is the follow-up material from a presentation about safe and deliberate use of vitlíki in public institutions. The page should help visitors understand the problem, see the practical starting point, and request the ritlingur/resource pack by email.
+
+The page should feel like a natural continuation of the presentation style: calm, premium, Nordic/Faroese, practical, trustworthy, and grounded. Use the style template image as the main visual direction: warm off-white background, dark navy typography, soft teal accents, rounded cards, subtle watercolor illustration, Faroese landscape details, simple icons, generous spacing, and clear section hierarchy. But do not overdo the graphics, this is mobile.
+
+This should not look like a generic SaaS landing page or a flashy sales funnel. It should feel like a useful public-sector resource from Vitlíkisstovan.
+
+Mobile is the priority. Many people will scan a QR code from a slide, so the mobile version must be excellent: large readable text, clear vertical flow, generous spacing, strong buttons, and no tiny labels. Make it responsive for desktop too, but do not let the desktop layout compromise the mobile experience.
+
+Use the revised markdown copy as the source of truth. Preserve the Faroese wording and structure. Do not rewrite the message or add new arguments.
+
+Build the page around these main sections:
+
+1. **Hero section**  
+   Use the title:  
+   **“Vitlíki á arbeiðsplássinum: Haldið røttu kósina”**  
+   The hero should quickly communicate the central message: staff already use vitlíki, so the real choice is whether use becomes deliberate, safe and structured — or hidden, random and risky.  
+   Add a strong CTA:  
+   **“Fá ritlingin”** or **“Fá byrjanarpakkan”**  
+   The CTA should lead to the email signup section.  
+   Include a calm watercolor-style visual that fits the presentation style. A lighthouse, path, Faroese coastline, staff member using a computer, or “right course” metaphor would fit well. Avoid robots, sci-fi visuals, neon colors, or generic AI imagery.  
+2. **Shadow AI info box**  
+   Create a visually distinct early info box for:  
+   **“Hvat er skugga-vitlíki (Shadow AI)?”**  
+   This should stand out, because it explains the central risk. It should feel serious but not alarmist. Use a soft warning style, not a red panic box.  
+   The section should explain that staff may use vitlíki in good faith to solve work faster, but without formal training, permission, or safe tools. Make the visual treatment clear and readable on mobile.  
+3. **Why act now**  
+   Build the section:  
+   **“Hví eigur tú at gera okkurt nú?”**  
+   This section should communicate that waiting does not stop AI use; it only makes it invisible. Emphasize the risk around personal data, citizen cases, health data, internal communication, and data leaks.  
+   Use a clear highlighted sentence or pull quote for the main point:  
+   **“At bíða steðgar ikki nýtsluni — tað ger hana bara ósjónliga.”**  
+4. **Triangle section**  
+   Create a strong visual section for:  
+   **“Tríkanturin: Leiðsla, starvsfólk og KT”**  
+   This should show the three groups as a triangle or three connected cards.  
+   The message:  
+   * Leadership owns the goal, direction and boundaries.  
+   * IT creates the safe technical conditions.  
+   * Staff find the real value in everyday work.  
+5. This section should be easy to understand at a glance. It is one of the most important parts of the page.  
+6. **Seven steps section**  
+   Build a clear vertical section for:  
+   **“Sjey stig til trygga og skipaða nýtslu”**  
+   Use the seven steps from the revised copy, in this order:  
+   * Set leiðsluna í ábyrgd  
+   * Finn út úr, hvat longu fer fram  
+   * Gerið einföld trygdarmørk  
+   * Áset eitt positivt mál  
+   * Gevið fólki góðkend, trygg amboð  
+   * Venjið tey viljugu fyrst  
+   * Gerið eina læringarskipan  
+7. On mobile, these should be stacked cards with prominent numbers. Add simple icons or a subtle path/route visual if it fits the style. This section should be practical and scannable, not dense.  
+8. **Green / Yellow / Red safety model**  
+   In step 3, or immediately after the seven steps, show the green/yellow/red model visually:  
+   * **Grønt:** óviðkvæmar uppgávur / almennur tekstur  
+   * **Gult:** innanhýsis tilfar við varsemi  
+   * **Reytt:** persónsdátur / trúnaðarmál, sum ongantíð mega sleppa út  
+9. Make this visually very clear. It should be one of the most useful things on the page and in the PDF.  
+10. **Leadership literacy info box**  
+    Create another distinct info box for:  
+    **“Hví leiðarar eiga at læra at brúka vitlíki”**  
+    This section should explain that leaders do not need to become technical experts, but they need enough personal understanding to lead wisely.  
+    Highlight the metaphor:  
+    **“Tú kanst ikki seta ferðslureglur fyri ein veg, tú ongantíð hevur koyrt á.”**  
+    This should feel memorable and leadership-relevant.  
+11. **How Vitlíkisstovan can help**  
+    Build the final section:  
+    **“Hvussu Vitlíkisstovan kann hjálpa tykkum”**  
+    Present the four services clearly:  
+    * Leiðslusparring  
+    * Greiðar reglur  
+    * Praktiskar arbeiðsstovur  
+    * Deilingargrunnar  
+12. This should be clear and visible, but not pushy. The page should first feel useful, then naturally invite people to contact Vitlíkisstovan for help making it concrete in their own institution.  
+13. **Final contact CTA**  
+    End with a calm but clear CTA:  
+    **“Set teg í samband”**  
+    The message should be that institutions are welcome to write or call if they want help turning this into practical action in their own workplace.  
+    Include contact details for Vitlíkisstovan and make the CTA easy to use on mobile.
+
+Build the email functionality as part of the page.
+
+Try to adopt the email features we already use in other places on the page.
+
+The signup form should collect:
+
+* Name  
+* Institution  
+* Email address  
+* Checkbox that says “Vil tú hava ritlingin tilsendan á teldupost umframt at hoyra meira um hvussu vitlíkisstovan kann hjálpa tær?”
+
+The checkbox must be opt-in and not preselected, but we want to doublecheck if people choose to not select it.
+
+When someone submits the form:
+
+* Validate the fields clearly.  
+* Show friendly error messages if something is missing or invalid.  
+* Send the ritlingur/resource pack PDF to the submitted email address. (start with a test PDF)  
+* Send me a notification with the submitted details.  
+* Store the submission in the agreed place.  
+* Store the update/newsletter consent separately from the resource-pack request.  
+* Do not add anyone to an update list unless they explicitly ticked the checkbox.  
+* Add basic spam/bot protection.  
+* Show a proper success state or thank-you page.
+
+Also build the thank-you page or thank-you state.
+
+It should confirm that the resource is on the way and give three immediate next steps:
+
+1. Book an AI for leader workshop.  
+2. Avgerið fyribils, hvørjar upplýsingar ongantíð mugu leggjast inn í vanlig vitlíki-amboð.  
+3. Veljið nøkur forvitin starvsfólk ella lyklabrúkarar, sum kunnu vera tey fyrstu at læra og royna trygt.
+
+Important design direction:
+
+* Mobile-first.  
+* Large readable text.  
+* No tiny labels.  
+* Strong section hierarchy.  
+* Calm watercolor style.  
+* Navy, teal, pale green, warm off-white and Faroese landscape tones.  
+* Rounded cards and soft borders.  
+* Useful icons, but not too many.  
+* Trustworthy public-sector tone.  
+* No AI clichés: no glowing brains, robots, neon tech, futuristic dashboards or generic corporate stock style.
+
+The finished result should make a public-sector leader think:
+
+“This is clear. This is relevant to us. I want to save this for later. We should probably talk to Vitlíkisstovan about how to do this properly.”
