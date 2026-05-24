@@ -714,55 +714,48 @@ export default function Landsnet() {
       {/* =============================================================== */}
       {/*  LEADERSHIP LITERACY                                            */}
       {/* =============================================================== */}
-      <Section>
+      <Section bg={c.ink}>
         <div
-          className="rounded-lg border p-8 sm:p-12"
-          style={{
-            background: c.ink,
-            borderColor: c.ink,
-          }}
+          className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em]"
+          style={{ color: "#9EC2C8" }}
         >
-          <div
-            className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.22em]"
-            style={{ color: "#9EC2C8" }}
-          >
-            <Lightbulb className="h-4 w-4" />
-            Til leiðsluna
-          </div>
-          <h2
-            className="mt-4 text-3xl sm:text-[2.25rem] leading-[1.15]"
-            style={{ color: "#fff", fontFamily: serif, fontWeight: 400 }}
-          >
-            Hví leiðarar eiga at læra at brúka vitlíki
-          </h2>
-          <p
-            className="mt-5 text-lg leading-relaxed"
-            style={{ color: "#C9D5E3" }}
-          >
-            Sum leiðari tørvar tær ikki at vera KT-samskipari, men tú mást hava
-            grundleggjandi vitlíkisfatan — nóg mikið til at taka skynsamar avgerðir og
-            til at orða mørkini, sum starvsfólkið skal arbeiða innanfyri.
-          </p>
-
-          <ul className="mt-7 space-y-3.5">
-            {[
-              "Vitlíki kann ljóða sannførandi, hóast tað tekur feil. Leiðslan má skilja, hví menniskjalig eftirkanning altíð er krav.",
-              "Vitlíki er skipanar- og leiðsluamboð — tað ávirkar tíðarbrúk, málsliga dygd og starvsfólkaorku.",
-            ].map((t, i) => (
-              <li
-                key={i}
-                className="flex gap-3 text-base leading-relaxed"
-                style={{ color: "#E3EAF2" }}
-              >
-                <CheckCircle2
-                  className="h-5 w-5 mt-0.5 shrink-0"
-                  style={{ color: "#9EC2C8" }}
-                />
-                <span>{t}</span>
-              </li>
-            ))}
-          </ul>
+          <Lightbulb className="h-4 w-4" />
+          Til leiðsluna
         </div>
+        <h2
+          className="mt-4 text-3xl sm:text-[2.5rem] leading-[1.15] tracking-tight"
+          style={{ color: "#fff", fontFamily: serif, fontWeight: 400 }}
+        >
+          Hví leiðarar eiga at læra at brúka vitlíki
+        </h2>
+        <p
+          className="mt-5 text-lg leading-relaxed"
+          style={{ color: "#C9D5E3" }}
+        >
+          Sum leiðari tørvar tær ikki at vera KT-samskipari, men tú mást hava
+          grundleggjandi vitlíkisfatan — nóg mikið til at taka skynsamar
+          avgerðir og til at orða mørkini, sum starvsfólkið skal arbeiða
+          innanfyri.
+        </p>
+
+        <ul className="mt-7 space-y-3.5">
+          {[
+            "Vitlíki kann ljóða sannførandi, hóast tað tekur feil. Leiðslan má skilja, hví menniskjalig eftirkanning altíð er krav.",
+            "Vitlíki er skipanar- og leiðsluamboð — tað ávirkar tíðarbrúk, málsliga dygd og starvsfólkaorku.",
+          ].map((t, i) => (
+            <li
+              key={i}
+              className="flex gap-3 text-base leading-relaxed"
+              style={{ color: "#E3EAF2" }}
+            >
+              <CheckCircle2
+                className="h-5 w-5 mt-0.5 shrink-0"
+                style={{ color: "#9EC2C8" }}
+              />
+              <span>{t}</span>
+            </li>
+          ))}
+        </ul>
       </Section>
 
       {/* =============================================================== */}
