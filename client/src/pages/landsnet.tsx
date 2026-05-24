@@ -468,7 +468,7 @@ export default function Landsnet() {
             <Button
               asChild
               variant="outline"
-              className="h-12 px-7 rounded-md text-base font-medium"
+              className="min-h-12 h-auto py-3 px-6 rounded-md text-sm sm:text-base font-medium whitespace-normal text-center leading-snug"
               style={{
                 borderColor: c.ink,
                 color: c.ink,
@@ -477,7 +477,7 @@ export default function Landsnet() {
               data-testid="hero-cta-verkstova"
             >
               <a href="/leidsluverkstova">
-                Kom á leiðsluverkstovu fyri vitlíki á stovnum
+                Kom á leiðsluverkstovu
               </a>
             </Button>
           </div>
