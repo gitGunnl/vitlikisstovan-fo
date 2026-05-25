@@ -637,41 +637,37 @@ export default function Landsnet() {
       {/* =============================================================== */}
       <Section bg={c.bgMuted}>
         <Eyebrow>Praktiskur vegur</Eyebrow>
-        <H2>Sjey stig til trygga og skipaða nýtslu</H2>
+        <H2>Seks stig til trygga og skipaða nýtslu</H2>
         <Lead>
-          Leiðslan eigur at fylgja hesum sjey stigum fyri at fáa eina
+          Leiðslan eigur at fylgja hesum seks stigum fyri at fáa eina
           rættstýrda byrjan.
         </Lead>
 
         <ol className="mt-10 space-y-3">
           {[
             {
-              t: "Setið leiðsluna í ábyrgd",
-              b: "Vitlíki snýr seg um arbeiðspláss- og fakliga menning, ikki bara um tøkni.",
+              t: "Gerið vitlíki til eina leiðsluábyrgd",
+              b: "Leiðslan má taka eigaraskap. Hetta kann ikki bara latast í hendurnar á KT-deildini ella verða tilvildarligar royndir hjá einstøkum starvsfólkum.",
             },
             {
-              t: "Finnið út úr, hvat longu fer fram",
-              b: "Spyrjið starvsfólkini opið og við forvitni, hvørji tól tey brúka í dag, og til hvat.",
+              t: "Kanni hvat longu hendir",
+              b: "Fáið eina veruliga mynd av, hvussu fólk longu brúka vitlíki í arbeiðinum.",
             },
             {
-              t: "Gerið einføld trygdarmørk",
-              b: "Skrivið niður, hvat má og ikki má, í eitt stutt og lesiligt skjal.",
+              t: "Setið tryggar og gagnligar karmar",
+              b: "Sigið ikki bara, hvat fólk ikki mugu gera. Setið eisini eitt mál fyri hvat skal gerast.",
             },
             {
-              t: "Ásetið eitt positivt mál",
-              b: "Skilmarkið, hvat tit vilja betra — styttri bíðitíð, greiðari borgarasamskifti ella minni endurtakandi skriviarbeiði.",
+              t: "Gevið fólki góð amboð",
+              b: "Ikki bara trygg, men eisini nóg góð amboð til at tey eru hjálpsam fyri starvsfólki.",
             },
             {
-              t: "Gevið fólki góðkend, trygg amboð",
-              b: "Atgongd til tól við røttu dátuverndar-setningunum, so starvsfólk ikki brúka privatar kontur.",
+              t: "Skapið rúm fyri regluligari læring",
+              b: "Fólk hava tørv á at vita, at tey sleppa at royna seg fram við vitlíki, og at tað er í lagi at nýta vitlíki til veruligt arbeiði.",
             },
             {
-              t: "Venjið tey viljugu fyrst",
-              b: "Byrjið við lykilbrúkarum og teimum forvitnu. Gevið teimum eitt grundleggjandi “vitlíkis-koyrikort”.",
-            },
-            {
-              t: "Gerið eina læringarskipan",
-              b: "Samlið royndir, góðar byrtir og mistøk innanhýsis, so allur stovnurin fær gagn av felags læring.",
+              t: "Skiljið vitlíki nóg væl til at leiða",
+              b: "Leiðarar skulu ikki gerast tøkniligir serfrøðingar. Men teir mugu skilja nóg mikið um vitlíki til at kunna seta teir rættu spurningarnar, síggja møguleikar og mørk, og taka betri avgerðir.",
             },
           ].map((s, i) => (
             <li
