@@ -770,53 +770,146 @@ export default function Landsnet() {
           innføring av vitlíki — uttan óneyðugt fløkjasemi.
         </Lead>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-3">
-          {[
-            {
-              icon: Wrench,
-              title: "Verkstovur",
-              body: "Praktiskar arbeiðsstovur fyri leiðslur, KT og lykilbrúkarar — tryggari nýtsla og prompting.",
-            },
-            {
-              icon: Compass,
-              title: "Ráðgeving",
-              body: "Strategisk sparring um kós, ábyrgdarbýti, dátuvernd og trygdarmørk.",
-            },
-            {
-              icon: Presentation,
-              title: "Framløgur",
-              body: "Inspirerandi framløgur um vitlíki á arbeiðsplássinum, tilrættalagdar tykkara stovni.",
-            },
-          ].map(({ icon: Icon, title, body }) => (
+        <p
+          className="mt-6 text-xs uppercase tracking-[0.18em]"
+          style={{ color: c.inkMuted }}
+        >
+          Tríggjar útkøst — vel títt yndi
+        </p>
+
+        <div className="mt-6 grid gap-5 sm:grid-cols-3 items-stretch">
+          {/* -------------------------------------------------------- */}
+          {/*  CARD A — Editorial / rule-line, no background            */}
+          {/* -------------------------------------------------------- */}
+          <div
+            className="flex flex-col p-7 pt-8"
+            style={{
+              borderTop: `2px solid ${c.ink}`,
+              background: "transparent",
+            }}
+            data-testid="card-design-a"
+          >
             <div
-              key={title}
-              className="rounded-lg border bg-white p-7"
-              style={{ borderColor: c.border }}
+              className="flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.18em]"
+              style={{ color: c.accent }}
             >
-              <div
-                className="flex h-11 w-11 items-center justify-center rounded-md"
-                style={{ background: c.accentSoft, color: c.accent }}
-              >
-                <Icon className="h-5 w-5" />
-              </div>
-              <h3
-                className="mt-5 text-2xl"
-                style={{
-                  color: c.ink,
-                  fontFamily: serif,
-                  fontWeight: 400,
-                }}
-              >
-                {title}
-              </h3>
-              <p
-                className="mt-2 text-[15px] leading-relaxed"
-                style={{ color: c.inkBody }}
-              >
-                {body}
-              </p>
+              <Wrench className="h-4 w-4" />
+              01 · Tænasta
             </div>
-          ))}
+            <h3
+              className="mt-5 text-3xl leading-tight"
+              style={{ color: c.ink, fontFamily: serif, fontWeight: 400 }}
+            >
+              Verkstovur
+            </h3>
+            <p
+              className="mt-3 text-[15px] leading-relaxed"
+              style={{ color: c.inkBody }}
+            >
+              Praktiskar arbeiðsstovur fyri leiðslur, KT og lykilbrúkarar —
+              tryggari nýtsla og prompting.
+            </p>
+            <div className="mt-auto pt-6">
+              <a
+                href="#samband"
+                className="inline-flex items-center gap-2 text-sm font-medium border-b pb-0.5"
+                style={{ color: c.ink, borderColor: c.ink }}
+              >
+                Les meira <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+
+          {/* -------------------------------------------------------- */}
+          {/*  CARD B — Filled dark, inverted                           */}
+          {/* -------------------------------------------------------- */}
+          <div
+            className="flex flex-col rounded-2xl p-7"
+            style={{ background: c.ink, color: "#fff" }}
+            data-testid="card-design-b"
+          >
+            <div
+              className="flex h-12 w-12 items-center justify-center rounded-full"
+              style={{ background: "rgba(255,255,255,0.08)", color: "#9EC2C8" }}
+            >
+              <Compass className="h-5 w-5" />
+            </div>
+            <h3
+              className="mt-6 text-3xl leading-tight"
+              style={{ color: "#fff", fontFamily: serif, fontWeight: 400 }}
+            >
+              Ráðgeving
+            </h3>
+            <p
+              className="mt-3 text-[15px] leading-relaxed"
+              style={{ color: "#C9D5E3" }}
+            >
+              Strategisk sparring um kós, ábyrgdarbýti, dátuvernd og
+              trygdarmørk.
+            </p>
+            <div className="mt-auto pt-6">
+              <a
+                href="#samband"
+                className="inline-flex items-center gap-2 text-sm font-medium"
+                style={{ color: "#9EC2C8" }}
+              >
+                Les meira <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
+
+          {/* -------------------------------------------------------- */}
+          {/*  CARD C — Bordered with giant serif numeral               */}
+          {/* -------------------------------------------------------- */}
+          <div
+            className="relative flex flex-col rounded-2xl border bg-white p-7 overflow-hidden"
+            style={{ borderColor: c.borderStrong }}
+            data-testid="card-design-c"
+          >
+            <span
+              aria-hidden="true"
+              className="absolute -top-2 -right-2 text-[7rem] leading-none select-none pointer-events-none"
+              style={{
+                color: c.accentSoft,
+                fontFamily: serif,
+                fontWeight: 400,
+              }}
+            >
+              03
+            </span>
+            <div
+              className="relative flex h-12 w-12 items-center justify-center rounded-lg"
+              style={{
+                background: "#fff",
+                border: `1.5px solid ${c.ink}`,
+                color: c.ink,
+              }}
+            >
+              <Presentation className="h-5 w-5" />
+            </div>
+            <h3
+              className="relative mt-6 text-3xl leading-tight"
+              style={{ color: c.ink, fontFamily: serif, fontWeight: 400 }}
+            >
+              Framløgur
+            </h3>
+            <p
+              className="relative mt-3 text-[15px] leading-relaxed"
+              style={{ color: c.inkBody }}
+            >
+              Inspirerandi framløgur um vitlíki á arbeiðsplássinum,
+              tilrættalagdar tykkara stovni.
+            </p>
+            <div className="relative mt-auto pt-6">
+              <a
+                href="#samband"
+                className="inline-flex items-center gap-2 text-sm font-medium"
+                style={{ color: c.accent }}
+              >
+                Les meira <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+          </div>
         </div>
       </Section>
 
