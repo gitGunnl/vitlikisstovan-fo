@@ -31,6 +31,7 @@ import {
   Lightbulb,
   Mail,
   Phone,
+  Presentation,
   ShieldCheck,
   Users,
   Wrench,
@@ -769,42 +770,37 @@ export default function Landsnet() {
           innføring av vitlíki — uttan óneyðugt fløkjasemi.
         </Lead>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-2">
+        <div className="mt-10 grid gap-5 sm:grid-cols-3">
           {[
             {
-              icon: Compass,
-              title: "Leiðslusparring",
-              body: "Ráðgeving um strategiska kós, ábyrgdarbýti og váðametingar.",
-            },
-            {
-              icon: ShieldCheck,
-              title: "Greiðar reglur",
-              body: "Sniðgeving av stovnsbundnum trygdarmørkum og dátuverndar-leiðreglum.",
-            },
-            {
               icon: Wrench,
-              title: "Praktiskar arbeiðsstovur",
-              body: "Skeið fyri leiðslur, KT og lykilbrúkarar í tryggari nýtslu og byrting.",
+              title: "Verkstovur",
+              body: "Praktiskar arbeiðsstovur fyri leiðslur, KT og lykilbrúkarar — tryggari nýtsla og prompting.",
             },
             {
-              icon: Users,
-              title: "Deilingargrunnar",
-              body: "Leistir til at savna innanhýsis læring, so royndirnar verða verandi á stovninum.",
+              icon: Compass,
+              title: "Ráðgeving",
+              body: "Strategisk sparring um kós, ábyrgdarbýti, dátuvernd og trygdarmørk.",
+            },
+            {
+              icon: Presentation,
+              title: "Framløgur",
+              body: "Inspirerandi framløgur um vitlíki á arbeiðsplássinum, tilrættalagdar tykkara stovni.",
             },
           ].map(({ icon: Icon, title, body }) => (
             <div
               key={title}
-              className="rounded-lg border bg-white p-6"
+              className="rounded-lg border bg-white p-7"
               style={{ borderColor: c.border }}
             >
               <div
-                className="flex h-10 w-10 items-center justify-center rounded-md"
+                className="flex h-11 w-11 items-center justify-center rounded-md"
                 style={{ background: c.accentSoft, color: c.accent }}
               >
                 <Icon className="h-5 w-5" />
               </div>
               <h3
-                className="mt-5 text-xl"
+                className="mt-5 text-2xl"
                 style={{
                   color: c.ink,
                   fontFamily: serif,
