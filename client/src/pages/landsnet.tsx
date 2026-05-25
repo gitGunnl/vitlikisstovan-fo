@@ -363,17 +363,54 @@ function RitlingurDialog({
             </p>
             <a
               href="/leidsluverkstova"
-              className="mt-7 inline-flex h-12 items-center justify-center gap-2 rounded-md px-6 text-base font-medium"
-              style={{ background: c.ink, color: "#fff" }}
+              className="group mt-8 block rounded-xl border text-left transition-colors hover:bg-[color:var(--cta-hover)]"
+              style={
+                {
+                  borderColor: c.borderStrong,
+                  background: c.accentSoft,
+                  ["--cta-hover" as never]: "#D9E5E7",
+                } as React.CSSProperties
+              }
               data-testid="cta-leidsluverkstova"
             >
-              Melda teg til leiðsluverkstovu 19. august
-              <ArrowRight className="h-4 w-4" />
+              <div className="flex items-center gap-4 p-5">
+                <div className="flex-1 min-w-0">
+                  <div
+                    className="text-[11px] font-semibold uppercase tracking-[0.18em]"
+                    style={{ color: c.accent }}
+                  >
+                    Næsta stig
+                  </div>
+                  <div
+                    className="mt-1.5 text-lg leading-snug"
+                    style={{
+                      color: c.ink,
+                      fontFamily: serif,
+                      fontWeight: 400,
+                    }}
+                  >
+                    Leiðsluverkstova
+                    <span style={{ color: c.accent }}> · 19. august</span>
+                  </div>
+                  <div
+                    className="mt-1 text-sm"
+                    style={{ color: c.inkBody }}
+                  >
+                    Melda teg til
+                  </div>
+                </div>
+                <div
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full transition-transform group-hover:translate-x-0.5"
+                  style={{ background: c.ink, color: "#fff" }}
+                >
+                  <ArrowRight className="h-4 w-4" />
+                </div>
+              </div>
             </a>
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="mt-4 block mx-auto text-sm underline"
+              className="mt-5 text-sm underline"
               style={{ color: c.inkMuted }}
             >
               Lat aftur
