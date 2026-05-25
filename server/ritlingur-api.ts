@@ -21,15 +21,21 @@ function escapeHtml(s: string): string {
     .replace(/'/g, "&#39;");
 }
 
+function encodeSubject(subject: string): string {
+  // RFC 2047 encoded-word so non-ASCII (Faroese) characters survive transport.
+  const b64 = Buffer.from(subject, "utf-8").toString("base64");
+  return `=?UTF-8?B?${b64}?=`;
+}
+
 function encodeRfc2822(opts: { to: string; subject: string; html: string }): string {
   return [
     `To: ${opts.to}`,
-    `Subject: ${opts.subject}`,
+    `Subject: ${encodeSubject(opts.subject)}`,
     "MIME-Version: 1.0",
     'Content-Type: text/html; charset="UTF-8"',
-    "Content-Transfer-Encoding: 7bit",
+    "Content-Transfer-Encoding: base64",
     "",
-    opts.html,
+    Buffer.from(opts.html, "utf-8").toString("base64"),
   ].join("\r\n");
 }
 
