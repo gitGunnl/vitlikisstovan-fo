@@ -92,14 +92,13 @@ function pdfUrl(req: { protocol: string; get: (h: string) => string | undefined 
 }
 
 async function sendVisitorEmail(args: {
-  name: string;
   email: string;
   pdfUrl: string;
 }): Promise<{ ok: boolean; error?: string }> {
   const subject = "Ritlingurin frá Vitlíkisstovuni — Vitlíki á arbeiðsplássinum";
   const html = `
     <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#0f2540;line-height:1.6;max-width:560px;">
-      <h2 style="margin:0 0 16px 0;color:#0f2540;">Takk fyri áhugan, ${escapeHtml(args.name)}</h2>
+      <h2 style="margin:0 0 16px 0;color:#0f2540;">Takk fyri áhugan</h2>
       <p>Her er ritlingurin: <strong>Vitlíki á arbeiðsplássinum — Haldið røttu kósina</strong>.</p>
       <p style="margin:24px 0;">
         <a href="${escapeHtml(args.pdfUrl)}"
@@ -123,18 +122,14 @@ async function sendVisitorEmail(args: {
 
 async function sendOperatorEmail(args: {
   to: string;
-  name: string;
-  institution: string;
   email: string;
   consent: boolean;
   timestamp: string;
 }): Promise<{ ok: boolean; error?: string }> {
-  const subject = `Nýggj ritlingur-umbøn — ${sanitizeHeader(args.institution)}`;
+  const subject = `Nýggj ritlingur-umbøn — ${sanitizeHeader(args.email)}`;
   const html = `
     <h2>Nýggj ritlingur-umbøn</h2>
     <ul>
-      <li><strong>Navn:</strong> ${escapeHtml(args.name)}</li>
-      <li><strong>Stovnur:</strong> ${escapeHtml(args.institution)}</li>
       <li><strong>Teldupostur:</strong> ${escapeHtml(args.email)}</li>
       <li><strong>Vil hoyra meira:</strong> ${args.consent ? "Ja" : "Nei"}</li>
       <li><strong>Tíðspunkt:</strong> ${escapeHtml(args.timestamp)}</li>
@@ -192,7 +187,6 @@ export function createRitlingurRouter(): Router {
     const url = pdfUrl(req);
 
     const visitorResult = await sendVisitorEmail({
-      name: data.name,
       email: data.email,
       pdfUrl: url,
     });
@@ -204,8 +198,6 @@ export function createRitlingurRouter(): Router {
     if (operatorTo) {
       const opResult = await sendOperatorEmail({
         to: operatorTo,
-        name: data.name,
-        institution: data.institution,
         email: data.email,
         consent: !!data.consent,
         timestamp,
@@ -219,16 +211,12 @@ export function createRitlingurRouter(): Router {
 
     await appendJsonLine(REQUESTS_FILE, {
       timestamp,
-      name: data.name,
-      institution: data.institution,
       email: data.email,
     });
 
     if (data.consent) {
       await appendJsonLine(CONSENT_FILE, {
         timestamp,
-        name: data.name,
-        institution: data.institution,
         email: data.email,
       });
     }

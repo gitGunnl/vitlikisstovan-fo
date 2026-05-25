@@ -27,8 +27,6 @@ export const bookingRequestSchema = z.object({
 export type BookingRequest = z.infer<typeof bookingRequestSchema>;
 
 export const ritlingurRequestSchema = z.object({
-  name: z.string().min(1, "Vinarliga skriva navn").max(120),
-  institution: z.string().min(1, "Vinarliga skriva stovn").max(200),
   email: z.string().email("Vinarliga skriva ein gildigan teldupost"),
   consent: z.boolean().optional().default(false),
   website: z.string().max(0).optional().default(""),

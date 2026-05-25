@@ -126,8 +126,6 @@ function RitlingurForm({ onSuccess }: { onSuccess: () => void }) {
   const form = useForm<RitlingurRequest>({
     resolver: zodResolver(ritlingurRequestSchema),
     defaultValues: {
-      name: "",
-      institution: "",
       email: "",
       consent: false,
       website: "",
@@ -194,56 +192,6 @@ function RitlingurForm({ onSuccess }: { onSuccess: () => void }) {
 
         <FormField
           control={form.control}
-          name="name"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel
-                className="text-sm font-medium"
-                style={{ color: c.ink }}
-              >
-                Navn
-              </FormLabel>
-              <FormControl>
-                <Input
-                  {...field}
-                  placeholder="Títt navn"
-                  className="h-12 text-base"
-                  style={{ borderColor: c.borderStrong }}
-                  data-testid="input-name"
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
-          name="institution"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel
-                className="text-sm font-medium"
-                style={{ color: c.ink }}
-              >
-                Stovnur
-              </FormLabel>
-              <FormControl>
-                <Input
-                  {...field}
-                  placeholder="Navnið á stovninum"
-                  className="h-12 text-base"
-                  style={{ borderColor: c.borderStrong }}
-                  data-testid="input-institution"
-                />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        <FormField
-          control={form.control}
           name="email"
           render={({ field }) => (
             <FormItem>
@@ -286,8 +234,7 @@ function RitlingurForm({ onSuccess }: { onSuccess: () => void }) {
                   className="text-sm font-normal leading-relaxed cursor-pointer"
                   style={{ color: c.inkBody }}
                 >
-                  Eg vil eisini hoyra meira frá Vitlíkisstovuni um vitlíki,
-                  skeið og ráðgeving. (Valfrítt)
+                  Eg vátti at eg vil hava hendan ritlingin og hoyra meira um hvussu Vitlíkisstovan kann hjálpa mínum stovni.
                 </FormLabel>
               </div>
             </FormItem>
@@ -346,14 +293,13 @@ function RitlingurDialog({
                 className="text-2xl sm:text-3xl leading-tight"
                 style={{ color: c.ink, fontFamily: serif, fontWeight: 400 }}
               >
-                Fá ritlingin sendan
+                Fá hendan ritlingin sendan til tín
               </DialogTitle>
               <DialogDescription
                 className="text-base mt-2"
                 style={{ color: c.inkBody }}
               >
-                Skriva navn, stovn og teldupost — so senda vit ritlingin
-                beinanvegin.
+                Skriva tín teldupost — so senda vit ritlingin beinanvegin.
               </DialogDescription>
             </DialogHeader>
             <RitlingurForm onSuccess={() => setSubmitted(true)} />
@@ -462,7 +408,7 @@ export default function Landsnet() {
                   style={{ background: c.ink, color: "#fff" }}
                   data-testid="hero-cta-ritlingur"
                 >
-                  Fá ritlingin <ArrowRight className="ml-2 h-4 w-4" />
+                  Fá hendan ritlingin sendan til tín<ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               }
             />
@@ -636,7 +582,7 @@ export default function Landsnet() {
       {/*  SEVEN STEPS                                                    */}
       {/* =============================================================== */}
       <Section bg={c.bgMuted}>
-        <Eyebrow>Praktiskur vegur</Eyebrow>
+        <Eyebrow>Vegurin framm</Eyebrow>
         <H2>Seks stig til trygga og skipaða nýtslu</H2>
         <Lead>
           Leiðslan eigur at fylgja hesum seks stigum fyri at fáa eina
@@ -723,7 +669,7 @@ export default function Landsnet() {
           className="mt-4 text-3xl sm:text-[2.5rem] leading-[1.15] tracking-tight"
           style={{ color: "#fff", fontFamily: serif, fontWeight: 400 }}
         >
-          Hví leiðarar eiga at læra at brúka vitlíki
+          Hví leiðarar eiga skilja vitlíki
         </h2>
         <p
           className="mt-5 text-lg leading-relaxed"
@@ -738,7 +684,7 @@ export default function Landsnet() {
         <ul className="mt-7 space-y-3.5">
           {[
             "Vitlíki kann ljóða sannførandi, hóast tað tekur feil. Leiðslan má skilja, hví menniskjalig eftirkanning altíð er krav.",
-            "Vitlíki er skipanar- og leiðsluamboð — tað ávirkar tíðarbrúk, málsliga dygd og starvsfólkaorku.",
+            "Fólk hava ymiskan hugburðar til vitlíki, tað er umráðandi at duga at rúma hendan ymiskleikan.",
           ].map((t, i) => (
             <li
               key={i}
@@ -771,7 +717,7 @@ export default function Landsnet() {
             {
               num: "01",
               title: "Verkstovur",
-              body: "Praktiskar arbeiðsstovur fyri leiðslur, KT og lykilbrúkarar — tryggari nýtsla og prompting.",
+              body: "Handaligar verkstovur til leiðslur og starvsfólk — tryggari nýtsla og meira virið.",
             },
             {
               num: "02",
@@ -781,7 +727,7 @@ export default function Landsnet() {
             {
               num: "03",
               title: "Framløgur",
-              body: "Inspirerandi framløgur um vitlíki á arbeiðsplássinum, tilrættalagdar tykkara stovni.",
+              body: "Hugkveikjandi framløgur um vitlíki á arbeiðsplássinum.",
             },
           ].map(({ num, title, body }) => (
             <div
@@ -842,7 +788,7 @@ export default function Landsnet() {
             className="mt-5 text-lg leading-relaxed mx-auto max-w-xl"
             style={{ color: c.inkBody }}
           >
-            Lesið ritlingin, ella bókið eina leiðsluverkstovu, har vit hjálpa
+            Lesið ritlingin, ella bókið pláss á leiðsluverkstovuni, har vit hjálpa
             tykkum at finna fram til tykkara egnu kós.
           </p>
 
@@ -854,7 +800,7 @@ export default function Landsnet() {
                   style={{ background: c.ink, color: "#fff" }}
                   data-testid="footer-cta-ritlingur"
                 >
-                  Fá ritlingin <ArrowRight className="ml-2 h-4 w-4" />
+                  Fá hendan ritlingin sendan til tín<ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               }
             />
@@ -869,7 +815,7 @@ export default function Landsnet() {
               }}
             >
               <a href="/leidsluverkstova">
-                Bóka leiðsluverkstovu
+                Bóka pláss á leiðsluverkstovu
               </a>
             </Button>
           </div>

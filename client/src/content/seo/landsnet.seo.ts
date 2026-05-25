@@ -32,7 +32,7 @@ const page: PageSeo = {
       <li>Venjið tey viljugu fyrst.</li>
       <li>Gerið eina læringarskipan.</li>
     </ol>
-    <h2>Fá ritlingin</h2>
+    <h2>Fá hendan ritlingin sendan til tín</h2>
     <p>Ritlingurin verður sendur beinanvegin til tín tann telduposti, tú gevur. Vitlíkisstovan hjálpir føroyskum almennum stovnum við praktiskari og tryggari innføring av vitlíki — leiðslusparring, greiðum reglum, arbeiðsstovum og deilingargrunnum.</p>
   `,
   jsonLd: [
