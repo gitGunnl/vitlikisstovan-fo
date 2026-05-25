@@ -127,7 +127,7 @@ function RitlingurForm({ onSuccess }: { onSuccess: () => void }) {
     resolver: zodResolver(ritlingurRequestSchema),
     defaultValues: {
       email: "",
-      consent: false,
+      consent: false as unknown as true,
       website: "",
     },
   });

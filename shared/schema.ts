@@ -28,7 +28,9 @@ export type BookingRequest = z.infer<typeof bookingRequestSchema>;
 
 export const ritlingurRequestSchema = z.object({
   email: z.string().email("Vinarliga skriva ein gildigan teldupost"),
-  consent: z.boolean().optional().default(false),
+  consent: z.literal(true, {
+    errorMap: () => ({ message: "Vinarliga vátta fyri at fáa ritlingin" }),
+  }),
   website: z.string().max(0).optional().default(""),
 });
 
