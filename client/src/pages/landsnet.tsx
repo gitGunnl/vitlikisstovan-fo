@@ -385,22 +385,22 @@ function RitlingurDialog({
                 19
               </span>
 
-              <div className="relative flex items-center gap-5 p-6">
+              <div className="relative flex items-center gap-4 p-5 sm:p-6">
                 <div
-                  className="flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-xl"
+                  className="flex h-[72px] w-[72px] shrink-0 flex-col items-center justify-center rounded-xl"
                   style={{
                     background: c.accent,
                     color: "#fff",
                     fontFamily: serif,
                   }}
                 >
-                  <span className="text-[2.25rem] leading-none">19</span>
+                  <span className="text-[2rem] leading-none">19</span>
                   <span
-                    className="mt-1 text-[10px] font-semibold uppercase"
+                    className="mt-1 text-[9px] font-semibold uppercase"
                     style={{
                       fontFamily:
                         'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
-                      letterSpacing: "0.22em",
+                      letterSpacing: "0.2em",
                     }}
                   >
                     August
@@ -425,7 +425,7 @@ function RitlingurDialog({
                     Leiðsluverkstova
                   </div>
                   <div
-                    className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold"
+                    className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold whitespace-nowrap"
                     style={{ color: "#fff" }}
                   >
                     Melda teg til
