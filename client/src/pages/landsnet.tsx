@@ -327,13 +327,23 @@ function RitlingurDialog({
             >
               Hygg eftir í tínum innbakka. Hann kemur um fáar minuttir.
             </p>
-            <Button
-              onClick={() => setOpen(false)}
-              className="mt-7 h-11 px-6 rounded-md"
+            <a
+              href="/leidsluverkstova"
+              className="mt-7 inline-flex h-12 items-center justify-center gap-2 rounded-md px-6 text-base font-medium"
               style={{ background: c.ink, color: "#fff" }}
+              data-testid="cta-leidsluverkstova"
+            >
+              Melda teg til leiðsluverkstovu 19. august
+              <ArrowRight className="h-4 w-4" />
+            </a>
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              className="mt-4 block mx-auto text-sm underline"
+              style={{ color: c.inkMuted }}
             >
               Lat aftur
-            </Button>
+            </button>
           </div>
         )}
       </DialogContent>
