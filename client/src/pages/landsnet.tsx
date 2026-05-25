@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
@@ -123,14 +123,21 @@ function Lead({ children }: { children: React.ReactNode }) {
 function RitlingurForm({ onSuccess }: { onSuccess: () => void }) {
   const { toast } = useToast();
 
+  const [nudge, setNudge] = useState(false);
+
   const form = useForm<RitlingurRequest>({
     resolver: zodResolver(ritlingurRequestSchema),
     defaultValues: {
       email: "",
-      consent: false as unknown as true,
+      consent: false,
       website: "",
     },
   });
+
+  const consentValue = form.watch("consent");
+  useEffect(() => {
+    if (consentValue && nudge) setNudge(false);
+  }, [consentValue, nudge]);
 
   const mutation = useMutation({
     mutationFn: async (data: RitlingurRequest) => {
@@ -164,7 +171,13 @@ function RitlingurForm({ onSuccess }: { onSuccess: () => void }) {
   return (
     <Form {...form}>
       <form
-        onSubmit={form.handleSubmit((data) => mutation.mutate(data))}
+        onSubmit={form.handleSubmit((data) => {
+          if (!data.consent && !nudge) {
+            setNudge(true);
+            return;
+          }
+          mutation.mutate(data);
+        })}
         className="space-y-5"
         noValidate
       >
@@ -221,7 +234,18 @@ function RitlingurForm({ onSuccess }: { onSuccess: () => void }) {
           name="consent"
           render={({ field }) => (
             <FormItem>
-              <div className="flex items-start gap-3 pt-1">
+              <div
+                className="flex items-start gap-3 pt-1 rounded-md transition-colors"
+                style={
+                  nudge && !field.value
+                    ? {
+                        background: "#FBF4E6",
+                        padding: "12px",
+                        border: `1px solid #E5C97B`,
+                      }
+                    : undefined
+                }
+              >
                 <FormControl>
                   <Checkbox
                     checked={!!field.value}
@@ -237,6 +261,16 @@ function RitlingurForm({ onSuccess }: { onSuccess: () => void }) {
                   Eg vátti at eg vil hava hendan ritlingin og hoyra meira um hvussu Vitlíkisstovan kann hjálpa mínum stovni.
                 </FormLabel>
               </div>
+              {nudge && !field.value && (
+                <p
+                  className="mt-2 text-sm"
+                  style={{ color: "#8A5A00" }}
+                  data-testid="consent-nudge"
+                >
+                  Vátta um tú vil hava ritlingin og vita meira um hvussu
+                  Vitlíkisstovan kann hjálpa tykkum.
+                </p>
+              )}
             </FormItem>
           )}
         />
