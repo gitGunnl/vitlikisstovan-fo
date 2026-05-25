@@ -1,6 +1,6 @@
 import { Router, json } from "express";
 import { ReplitConnectors } from "@replit/connectors-sdk";
-import { promises as fs } from "fs";
+import { promises as fs, readFileSync } from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 import { ritlingurRequestSchema } from "../shared/schema.js";
@@ -10,7 +10,32 @@ const DATA_DIR = join(__dirname, "..", "data");
 const REQUESTS_FILE = join(DATA_DIR, "ritlingur-requests.ndjson");
 const CONSENT_FILE = join(DATA_DIR, "ritlingur-consents.ndjson");
 
-const PDF_URL_PATH = "/Ein_handalig_vegleiding_til_politikarir.pdf";
+const PDF_FILENAME = "seks-stig-til-goda-vitlikisnytslu.pdf";
+const PDF_DISPLAY_NAME = "Seks stig til góða vitlíkisnýtslu.pdf";
+const PDF_URL_PATH = `/${PDF_FILENAME}`;
+
+const PDF_CANDIDATES = [
+  join(__dirname, "..", "client", "public", PDF_FILENAME),
+  join(__dirname, "..", "dist", "public", PDF_FILENAME),
+  join(process.cwd(), "client", "public", PDF_FILENAME),
+  join(process.cwd(), "dist", "public", PDF_FILENAME),
+];
+
+function loadPdfOnce(): Buffer | null {
+  for (const p of PDF_CANDIDATES) {
+    try {
+      return readFileSync(p);
+    } catch {
+      /* try next */
+    }
+  }
+  console.error(
+    `[ritlingur] Could not locate ${PDF_FILENAME} in any of: ${PDF_CANDIDATES.join(", ")}`,
+  );
+  return null;
+}
+
+const PDF_BUFFER = loadPdfOnce();
 
 function escapeHtml(s: string): string {
   return s
@@ -27,15 +52,64 @@ function encodeSubject(subject: string): string {
   return `=?UTF-8?B?${b64}?=`;
 }
 
-function encodeRfc2822(opts: { to: string; subject: string; html: string }): string {
-  return [
+function encodeMimeFilename(name: string): string {
+  // RFC 2231 continuation for non-ASCII filenames.
+  return `=?UTF-8?B?${Buffer.from(name, "utf-8").toString("base64")}?=`;
+}
+
+function wrapBase64(b64: string, width = 76): string {
+  const lines: string[] = [];
+  for (let i = 0; i < b64.length; i += width) {
+    lines.push(b64.slice(i, i + width));
+  }
+  return lines.join("\r\n");
+}
+
+function buildMimeMessage(opts: {
+  to: string;
+  subject: string;
+  html: string;
+  attachment?: { filename: string; mimeType: string; content: Buffer };
+}): string {
+  const headers = [
     `To: ${opts.to}`,
     `Subject: ${encodeSubject(opts.subject)}`,
     "MIME-Version: 1.0",
+  ];
+
+  const htmlPart = [
     'Content-Type: text/html; charset="UTF-8"',
     "Content-Transfer-Encoding: base64",
     "",
-    Buffer.from(opts.html, "utf-8").toString("base64"),
+    wrapBase64(Buffer.from(opts.html, "utf-8").toString("base64")),
+  ].join("\r\n");
+
+  if (!opts.attachment) {
+    return [...headers, 'Content-Type: text/html; charset="UTF-8"',
+      "Content-Transfer-Encoding: base64", "",
+      wrapBase64(Buffer.from(opts.html, "utf-8").toString("base64"))].join("\r\n");
+  }
+
+  const boundary = `----=_Vitlikisstovan_${Date.now()}_${Math.random().toString(36).slice(2)}`;
+  const encodedName = encodeMimeFilename(opts.attachment.filename);
+  const attachmentPart = [
+    `Content-Type: ${opts.attachment.mimeType}; name="${encodedName}"`,
+    "Content-Transfer-Encoding: base64",
+    `Content-Disposition: attachment; filename="${encodedName}"`,
+    "",
+    wrapBase64(opts.attachment.content.toString("base64")),
+  ].join("\r\n");
+
+  return [
+    ...headers,
+    `Content-Type: multipart/mixed; boundary="${boundary}"`,
+    "",
+    `--${boundary}`,
+    htmlPart,
+    `--${boundary}`,
+    attachmentPart,
+    `--${boundary}--`,
+    "",
   ].join("\r\n");
 }
 
@@ -51,10 +125,11 @@ async function sendGmail(opts: {
   to: string;
   subject: string;
   html: string;
+  attachment?: { filename: string; mimeType: string; content: Buffer };
 }): Promise<{ ok: boolean; error?: string }> {
   try {
     const connectors = new ReplitConnectors();
-    const raw = base64Url(encodeRfc2822(opts));
+    const raw = base64Url(buildMimeMessage(opts));
     const res = await connectors.proxy(
       "google-mail",
       "/gmail/v1/users/me/messages/send",
@@ -62,7 +137,7 @@ async function sendGmail(opts: {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ raw }),
-        signal: AbortSignal.timeout(10_000),
+        signal: AbortSignal.timeout(15_000),
       } as RequestInit,
     );
     if (!res.ok) {
@@ -101,29 +176,50 @@ async function sendVisitorEmail(args: {
   email: string;
   pdfUrl: string;
 }): Promise<{ ok: boolean; error?: string }> {
-  const subject = "Ritlingurin frá Vitlíkisstovuni — Vitlíki á arbeiðsplássinum";
+  const subject = "Seks stig til góða vitlíkisnýtslu — frá Vitlíkisstovuni";
   const html = `
-    <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#0f2540;line-height:1.6;max-width:560px;">
-      <h2 style="margin:0 0 16px 0;color:#0f2540;">Takk fyri áhugan</h2>
-      <p>Her er ritlingurin: <strong>Vitlíki á arbeiðsplássinum — Haldið røttu kósina</strong>.</p>
+    <div style="font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif;color:#0A1F3D;line-height:1.65;max-width:560px;">
+      <h2 style="margin:0 0 16px 0;color:#0A1F3D;font-weight:600;">Takk fyri áhugan</h2>
+      <p style="margin:0 0 16px 0;">
+        Her er ritlingurin <strong>Seks stig til góða vitlíkisnýtslu</strong> — ein
+        stutt og praktisk vegleiðing til føroyskar almennar stovnar um, hvussu
+        leiðslan kann taka eigaraskap fyri vitlíki á arbeiðsplássinum.
+      </p>
+      <p style="margin:0 0 16px 0;">
+        Ritlingurin er viðheftur hesum teldubrævi sum PDF. Tú kanst eisini
+        taka hann niður her:
+      </p>
       <p style="margin:24px 0;">
         <a href="${escapeHtml(args.pdfUrl)}"
-           style="background:#2c6e7a;color:#ffffff;text-decoration:none;padding:12px 20px;border-radius:8px;display:inline-block;font-weight:600;">
+           style="background:#1F525B;color:#ffffff;text-decoration:none;padding:12px 22px;border-radius:8px;display:inline-block;font-weight:600;">
           Tak ritlingin niður (PDF)
         </a>
       </p>
-      <p>Um leinkjan ikki virkar, kanst tú avrita hesa URL:<br>
-        <span style="color:#2c6e7a;">${escapeHtml(args.pdfUrl)}</span>
+      <p style="margin:24px 0 8px 0;">
+        Vil tú vita meira um, hvussu vit kunnu hjálpa tykkara stovni í gongd
+        við vitlíki? Vit hava bæði verkstovur, ráðgeving og framløgur
+        tilrættalagdar almennum stovnum.
       </p>
-      <p>Hesin ritlingurin er ein royndar-útgáva. Vit dagføra hana javnan við nýggjum dømum og praktiskum ráðum til føroyskar almennar stovnar.</p>
       <p style="margin-top:24px;">
         Vinarliga,<br>
         Vitlíkisstovan<br>
-        <a href="https://vitlikisstovan.fo" style="color:#2c6e7a;">vitlikisstovan.fo</a>
+        <a href="https://vitlikisstovan.fo" style="color:#1F525B;">vitlikisstovan.fo</a>
       </p>
     </div>
   `;
-  return sendGmail({ to: args.email, subject, html });
+
+  return sendGmail({
+    to: args.email,
+    subject,
+    html,
+    attachment: PDF_BUFFER
+      ? {
+          filename: PDF_DISPLAY_NAME,
+          mimeType: "application/pdf",
+          content: PDF_BUFFER,
+        }
+      : undefined,
+  });
 }
 
 async function sendOperatorEmail(args: {
