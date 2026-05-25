@@ -361,42 +361,63 @@ function RitlingurDialog({
             >
               Hygg eftir í tínum innbakka. Hann kemur um fáar minuttir.
             </p>
-            <div
-              className="mt-8 pt-6 text-left"
-              style={{ borderTop: `1px solid ${c.border}` }}
+            <a
+              href="/leidsluverkstova"
+              className="group relative mt-8 block overflow-hidden rounded-2xl text-left transition-transform hover:-translate-y-0.5"
+              style={{
+                background: c.ink,
+                color: "#fff",
+                boxShadow:
+                  "0 1px 0 rgba(255,255,255,0.06) inset, 0 20px 40px -20px rgba(10,31,61,0.45)",
+              }}
+              data-testid="cta-leidsluverkstova"
             >
-              <p
-                className="text-[11px] font-semibold uppercase tracking-[0.2em] text-center"
-                style={{ color: c.inkMuted }}
+              {/* decorative serif date watermark */}
+              <span
+                aria-hidden="true"
+                className="pointer-events-none absolute -right-3 -top-6 select-none text-[8rem] leading-none"
+                style={{
+                  fontFamily: serif,
+                  color: "rgba(255,255,255,0.06)",
+                  fontWeight: 400,
+                }}
               >
-                Næsta stig
-              </p>
-              <a
-                href="/leidsluverkstova"
-                className="group mt-4 flex items-center gap-4"
-                data-testid="cta-leidsluverkstova"
-              >
+                19
+              </span>
+
+              <div className="relative flex items-center gap-5 p-6">
                 <div
-                  className="flex h-16 w-16 shrink-0 flex-col items-center justify-center rounded-lg"
+                  className="flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-xl"
                   style={{
-                    background: c.ink,
+                    background: c.accent,
                     color: "#fff",
                     fontFamily: serif,
                   }}
                 >
-                  <span className="text-2xl leading-none font-normal">19</span>
+                  <span className="text-[2.25rem] leading-none">19</span>
                   <span
-                    className="mt-1 text-[10px] uppercase tracking-[0.18em]"
-                    style={{ fontFamily: "inherit", letterSpacing: "0.18em" }}
+                    className="mt-1 text-[10px] font-semibold uppercase"
+                    style={{
+                      fontFamily:
+                        'Inter, -apple-system, BlinkMacSystemFont, sans-serif',
+                      letterSpacing: "0.22em",
+                    }}
                   >
-                    Aug
+                    August
                   </span>
                 </div>
+
                 <div className="flex-1 min-w-0">
                   <div
-                    className="text-xl leading-tight"
+                    className="text-[10px] font-semibold uppercase tracking-[0.22em]"
+                    style={{ color: "#9EC2C8" }}
+                  >
+                    Næsta verkstova
+                  </div>
+                  <div
+                    className="mt-2 text-2xl leading-[1.15]"
                     style={{
-                      color: c.ink,
+                      color: "#fff",
                       fontFamily: serif,
                       fontWeight: 400,
                     }}
@@ -404,23 +425,23 @@ function RitlingurDialog({
                     Leiðsluverkstova
                   </div>
                   <div
-                    className="mt-1.5 inline-flex items-center gap-1.5 text-sm font-medium border-b pb-0.5 transition-all group-hover:gap-2.5"
-                    style={{ color: c.accent, borderColor: c.accent }}
+                    className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold"
+                    style={{ color: "#fff" }}
                   >
                     Melda teg til
-                    <ArrowRight className="h-3.5 w-3.5" />
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </div>
                 </div>
-              </a>
-              <button
-                type="button"
-                onClick={() => setOpen(false)}
-                className="mt-6 block w-full text-center text-sm underline"
-                style={{ color: c.inkMuted }}
-              >
-                Lat aftur
-              </button>
-            </div>
+              </div>
+            </a>
+            <button
+              type="button"
+              onClick={() => setOpen(false)}
+              className="mt-5 block mx-auto text-sm underline"
+              style={{ color: c.inkMuted }}
+            >
+              Lat aftur
+            </button>
           </div>
         )}
       </DialogContent>
