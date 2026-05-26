@@ -58,6 +58,37 @@ const c = {
 const serif = '"Instrument Serif", Georgia, serif';
 
 /* -------------------------------------------------------------------------- */
+/*  Analytics                                                                 */
+/* -------------------------------------------------------------------------- */
+
+type AnalyticsEvent =
+  | "popup_opened"
+  | "popup_closed"
+  | "pdf_plus_workshop_clicked"
+  | "pdf_only_clicked"
+  | "form_submitted_consent_true"
+  | "form_submitted_consent_false"
+  | "workshop_cta_clicked";
+
+function trackEvent(
+  name: AnalyticsEvent,
+  props?: Record<string, unknown>,
+) {
+  if (typeof window === "undefined") return;
+  const w = window as any;
+  try {
+    w.dataLayer = w.dataLayer || [];
+    w.dataLayer.push({ event: name, ...(props || {}) });
+    if (typeof w.plausible === "function") {
+      w.plausible(name, props ? { props } : undefined);
+    }
+    w.dispatchEvent(new CustomEvent("analytics", { detail: { name, props } }));
+  } catch {
+    /* analytics must never break the UI */
+  }
+}
+
+/* -------------------------------------------------------------------------- */
 /*  Small primitives                                                          */
 /* -------------------------------------------------------------------------- */
 
@@ -176,6 +207,11 @@ function RitlingurForm({ onSuccess }: { onSuccess: () => void }) {
             setNudge(true);
             return;
           }
+          trackEvent(
+            data.consent
+              ? "form_submitted_consent_true"
+              : "form_submitted_consent_false",
+          );
           mutation.mutate(data);
         })}
         className="space-y-5"
@@ -301,8 +337,12 @@ function RitlingurForm({ onSuccess }: { onSuccess: () => void }) {
 
 function RitlingurDialog({
   trigger,
+  source,
+  triggerEvent,
 }: {
   trigger: React.ReactNode;
+  source: "hero" | "footer";
+  triggerEvent: "pdf_plus_workshop_clicked" | "pdf_only_clicked";
 }) {
   const [open, setOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -311,6 +351,12 @@ function RitlingurDialog({
     <Dialog
       open={open}
       onOpenChange={(o) => {
+        if (o) {
+          trackEvent(triggerEvent, { source });
+          trackEvent("popup_opened", { source });
+        } else {
+          trackEvent("popup_closed", { source });
+        }
         setOpen(o);
         if (!o) setTimeout(() => setSubmitted(false), 200);
       }}
@@ -363,6 +409,9 @@ function RitlingurDialog({
             </p>
             <a
               href="/leidsluverkstova"
+              onClick={() =>
+                trackEvent("workshop_cta_clicked", { location: "success_dialog" })
+              }
               className="group relative mt-8 block overflow-hidden rounded-2xl text-left transition-transform hover:-translate-y-0.5"
               style={{
                 background: c.ink,
@@ -371,6 +420,7 @@ function RitlingurDialog({
                   "0 1px 0 rgba(255,255,255,0.06) inset, 0 20px 40px -20px rgba(10,31,61,0.45)",
               }}
               data-testid="cta-leidsluverkstova"
+              data-analytics-event="workshop_cta_clicked"
             >
               {/* decorative serif date watermark */}
               <span
@@ -510,11 +560,14 @@ export default function Landsnet() {
 
           <div className="mt-9 flex flex-col sm:flex-row gap-3">
             <RitlingurDialog
+              source="hero"
+              triggerEvent="pdf_plus_workshop_clicked"
               trigger={
                 <Button
                   className="h-12 px-7 rounded-md text-base font-medium"
                   style={{ background: c.ink, color: "#fff" }}
                   data-testid="hero-cta-ritlingur"
+                  data-analytics-event="pdf_plus_workshop_clicked"
                 >
                   Fá hendan ritlingin sendan til tín<ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -530,8 +583,14 @@ export default function Landsnet() {
                 background: "transparent",
               }}
               data-testid="hero-cta-verkstova"
+              data-analytics-event="workshop_cta_clicked"
             >
-              <a href="/leidsluverkstova">
+              <a
+                href="/leidsluverkstova"
+                onClick={() =>
+                  trackEvent("workshop_cta_clicked", { location: "hero" })
+                }
+              >
                 Kom á leiðsluverkstovu
               </a>
             </Button>
@@ -902,11 +961,14 @@ export default function Landsnet() {
 
           <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center">
             <RitlingurDialog
+              source="footer"
+              triggerEvent="pdf_only_clicked"
               trigger={
                 <Button
                   className="h-12 px-7 rounded-md text-base font-medium"
                   style={{ background: c.ink, color: "#fff" }}
                   data-testid="footer-cta-ritlingur"
+                  data-analytics-event="pdf_only_clicked"
                 >
                   Fá hendan ritlingin sendan til tín<ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -921,8 +983,15 @@ export default function Landsnet() {
                 color: c.ink,
                 background: "transparent",
               }}
+              data-testid="footer-cta-verkstova"
+              data-analytics-event="workshop_cta_clicked"
             >
-              <a href="/leidsluverkstova">
+              <a
+                href="/leidsluverkstova"
+                onClick={() =>
+                  trackEvent("workshop_cta_clicked", { location: "footer" })
+                }
+              >
                 Bóka pláss á leiðsluverkstovu
               </a>
             </Button>
