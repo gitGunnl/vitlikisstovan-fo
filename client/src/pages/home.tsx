@@ -426,8 +426,11 @@ export default function Home() {
 
         {/* Testimonials */}
         {siteConfig.testimonials && (
-          <Section id="testimonials" className="pt-12 pb-24">
+          <Section id="testimonials" className="py-24 bg-muted/40 border-y">
             <div className="mx-auto max-w-3xl text-center mb-14">
+              <span className="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-primary mb-4">
+                Kunda viðmerkingar
+              </span>
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
                 {siteConfig.testimonials.title}
               </h2>
@@ -438,17 +441,20 @@ export default function Home() {
               )}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {siteConfig.testimonials.quotes.map((item, index) => (
-                <figure key={index} className="flex flex-col">
+                <figure
+                  key={index}
+                  className="flex flex-col bg-background rounded-2xl border shadow-sm p-7 hover:shadow-md transition-shadow"
+                >
                   <Quote
-                    className="w-7 h-7 text-primary/30 mb-3"
+                    className="w-8 h-8 text-primary/40 mb-4"
                     aria-hidden="true"
                   />
-                  <blockquote className="text-[15px] md:text-base text-foreground/90 leading-relaxed flex-1">
+                  <blockquote className="text-base text-foreground/90 leading-relaxed flex-1">
                     {item.quote}
                   </blockquote>
-                  <figcaption className="mt-5">
+                  <figcaption className="mt-6 pt-5 border-t">
                     <p className="text-sm font-semibold text-foreground">{item.name}</p>
                     <p className="text-xs text-muted-foreground mt-0.5">
                       {item.role} · {item.org}
