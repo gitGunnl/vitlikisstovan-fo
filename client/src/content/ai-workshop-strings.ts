@@ -1,3 +1,5 @@
+import { siteConfig } from "./site";
+
 export const workshopStrings = {
   meta: {
     pageTitle: "Verkstova um vitlíki fyri fyritøkur og stovnar | Vitlíkisstovan",
@@ -69,50 +71,7 @@ export const workshopStrings = {
 
   trustStrip: {
     heading: "Hetta siga okkara kundar",
-    quotes: [
-      {
-        quote: "Sera væl nøgd – tillagað til júst tað, vit høvdu tørv á.",
-        name: "Hildur Durhuus",
-        role: "Samskipari",
-        org: "Nýskapan í ferðavinnuni 2026",
-      },
-      {
-        quote: "Bæði hugvekjandi og læruríkt – viðkomandi fyri leiðarar og starvsfólk.",
-        name: "Reidar Luid",
-        role: "Forritan og menning",
-        org: "Betri Banki",
-      },
-      {
-        quote: "Greið, viðkomandi og beinanvegin gagnlig í praksis.",
-        name: "Elin Brimnes",
-        role: "Arkitekt",
-        org: "Kontrast",
-      },
-      {
-        quote: "Gav okkum betri fatan og fleiri góð hugskot at taka víðari.",
-        name: "Sigrið Zachariasen",
-        role: "Dagligur leiðari",
-        org: "Reyði Krossur Føroya",
-      },
-      {
-        quote: "Áhugaverd og løtt at skilja – gav greiðari fatan av, hvussu eg brúki ChatGPT í mínum arbeiði.",
-        name: "Sóley Hammer",
-        role: "Leiðari",
-        org: "Hugskotið",
-      },
-      {
-        quote: "Greið og viðkomandi – gav okkum nógv nýggj hugskot til ChatGPT-nýtslu.",
-        name: "Guðrið Højgaard",
-        role: "Stjóri",
-        org: "Visit Faroe Islands",
-      },
-      {
-        quote: "Spennandi og lærurík - gav eina greiðari fatan av trygga nýtslu.",
-        name: "Fríði Jensen",
-        role: "HR Data Specialist",
-        org: "Bakkafrost",
-      },
-    ],
+    quotes: siteConfig.testimonials.quotes,
   },
 
   relevance: {

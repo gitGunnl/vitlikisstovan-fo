@@ -25,7 +25,8 @@ import {
   Video,
   Mail,
   Phone,
-  Download
+  Download,
+  Quote
 } from "lucide-react";
 
 // Note: title / description / OG / Twitter meta tags are owned by the
@@ -422,6 +423,41 @@ export default function Home() {
           )}
 
           </Section>
+
+        {/* Testimonials */}
+        {siteConfig.testimonials && (
+          <Section id="testimonials" className="py-24 bg-muted/30">
+            <div className="mx-auto max-w-4xl text-center mb-12">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+                {siteConfig.testimonials.title}
+              </h2>
+              {siteConfig.testimonials.subtitle && (
+                <p className="text-xl text-muted-foreground">
+                  {siteConfig.testimonials.subtitle}
+                </p>
+              )}
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+              {siteConfig.testimonials.quotes.map((item, index) => (
+                <Card key={index} className="bg-background border shadow-sm h-full">
+                  <CardContent className="p-6 flex flex-col h-full">
+                    <Quote className="w-6 h-6 text-primary/60 mb-3" aria-hidden="true" />
+                    <blockquote className="text-base text-foreground leading-relaxed mb-4 flex-1">
+                      "{item.quote}"
+                    </blockquote>
+                    <div className="pt-4 border-t">
+                      <p className="text-sm font-semibold text-foreground">{item.name}</p>
+                      <p className="text-xs text-muted-foreground">
+                        {item.role} · {item.org}
+                      </p>
+                    </div>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
+          </Section>
+        )}
 
         {/* Consulting & Projects */}
         {siteConfig.consulting && (

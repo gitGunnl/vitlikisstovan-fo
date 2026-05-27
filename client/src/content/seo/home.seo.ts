@@ -16,6 +16,16 @@ function buildContent(): string {
 
   html += `</section>`;
 
+  html += `<section><h2>${c.testimonials.title}</h2>`;
+  if (c.testimonials.subtitle) {
+    html += `<p>${c.testimonials.subtitle}</p>`;
+  }
+  html += `<ul>`;
+  for (const q of c.testimonials.quotes) {
+    html += `<li><blockquote>"${q.quote}"</blockquote><cite>${q.name}, ${q.role} · ${q.org}</cite></li>`;
+  }
+  html += `</ul></section>`;
+
   html += `<section><h2>${c.consulting.title}</h2><p>${c.consulting.subtitle}</p><ul>`;
   for (const svc of c.consulting.services) {
     html += `<li><strong>${svc.title}</strong> - ${svc.description}</li>`;

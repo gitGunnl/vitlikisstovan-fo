@@ -21,7 +21,7 @@ export const siteConfig = {
       {
         title: "Við røttu vegleiðing kanst tú eisini meistra VITLÍKI!",
         subtitle:
-          "Vitlíkisstovan mennir tykkum frá at vera nýbyrjarar innan vitlíki til dugnaligar vitlíkisbrúkarar. Eg taki mær av øllum - tit skulu einans lurta og læra.",
+          "Vitlíkisstovan mennir tykkum frá at vera nýbyrjarar innan vitlíki til dugnaligar vitlíkisbrúkarar.",
         primaryCTA: {
           text: "Les meira um gongdina frá at vera nýbyrjari til dugnaligur vitlíkisbrúkari her:",
           href: "#contact"
@@ -229,6 +229,55 @@ export const siteConfig = {
         // { label: "Email", href: "mailto:hello@vitlikisstovan.fo" }
       ]
     }
+  },
+
+  testimonials: {
+    title: "Hetta siga okkara kundar",
+    subtitle: "Viðmerkingar frá luttakarum á verkstovum hjá Vitlíkisstovuni.",
+    quotes: [
+      {
+        quote: "Sera væl nøgd – tillagað til júst tað, vit høvdu tørv á.",
+        name: "Hildur Durhuus",
+        role: "Samskipari",
+        org: "Nýskapan í ferðavinnuni 2026",
+      },
+      {
+        quote: "Bæði hugvekjandi og læruríkt – viðkomandi fyri leiðarar og starvsfólk.",
+        name: "Reidar Luid",
+        role: "Forritan og menning",
+        org: "Betri Banki",
+      },
+      {
+        quote: "Greið, viðkomandi og beinanvegin gagnlig í praksis.",
+        name: "Elin Brimnes",
+        role: "Arkitekt",
+        org: "Kontrast",
+      },
+      {
+        quote: "Gav okkum betri fatan og fleiri góð hugskot at taka víðari.",
+        name: "Sigrið Zachariasen",
+        role: "Dagligur leiðari",
+        org: "Reyði Krossur Føroya",
+      },
+      {
+        quote: "Áhugaverd og løtt at skilja – gav greiðari fatan av, hvussu eg brúki ChatGPT í mínum arbeiði.",
+        name: "Sóley Hammer",
+        role: "Leiðari",
+        org: "Hugskotið",
+      },
+      {
+        quote: "Greið og viðkomandi – gav okkum nógv nýggj hugskot til ChatGPT-nýtslu.",
+        name: "Guðrið Højgaard",
+        role: "Stjóri",
+        org: "Visit Faroe Islands",
+      },
+      {
+        quote: "Spennandi og lærurík - gav eina greiðari fatan av trygga nýtslu.",
+        name: "Fríði Jensen",
+        role: "HR Data Specialist",
+        org: "Bakkafrost",
+      },
+    ],
   },
 
   cases: {
