@@ -412,43 +412,6 @@ export default function Home() {
             </div>
           )}
 
-          {/* How It Works Process */}
-          {siteConfig.program.howItWorks && (
-            <div className="mb-24">
-              <div className="mx-auto max-w-4xl text-center mb-12">
-                <h3 className="text-2xl font-bold tracking-tight mb-4">
-                  {siteConfig.program.howItWorks.title}
-                </h3>
-              </div>
-
-              <Card className="bg-background max-w-5xl mx-auto border shadow-sm">
-                <CardContent className="p-8">
-                  <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                    {siteConfig.program.howItWorks.steps?.map((step, index) => (
-                      <React.Fragment key={index}>
-                        <div className="flex-1 text-center">
-                          <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
-                            <span className="text-primary-foreground font-bold text-xl">{step.number}</span>
-                          </div>
-                          <h4 className="font-semibold mb-2">{step.title}</h4>
-                          <p className="text-sm text-muted-foreground">{step.description}</p>
-                        </div>
-
-                        {index < siteConfig.program.howItWorks.steps.length - 1 && (
-                          <div className="hidden md:block text-muted-foreground">
-                            <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none">
-                              <path d="M13 7l5 5-5 5M6 12h12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                            </svg>
-                          </div>
-                        )}
-                      </React.Fragment>
-                    )) || []}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          )}
-
           {/* Delivery Section */}
           {siteConfig.program.delivery && (
             <div className="mb-16">

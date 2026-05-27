@@ -14,12 +14,6 @@ function buildContent(): string {
   }
   html += `</ul>`;
 
-  html += `<h3>${c.program.howItWorks.title}</h3><ol>`;
-  for (const step of c.program.howItWorks.steps) {
-    html += `<li><strong>${step.title}</strong> - ${step.description}</li>`;
-  }
-  html += `</ol>`;
-
   html += `<h3>${c.program.delivery.title}</h3><ul>`;
   for (const item of c.program.delivery.items) {
     html += `<li><strong>${item.title}</strong> - ${item.description}</li>`;
