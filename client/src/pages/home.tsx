@@ -426,34 +426,35 @@ export default function Home() {
 
         {/* Testimonials */}
         {siteConfig.testimonials && (
-          <Section id="testimonials" className="py-24 bg-muted/30">
-            <div className="mx-auto max-w-4xl text-center mb-12">
+          <Section id="testimonials" className="pt-12 pb-24">
+            <div className="mx-auto max-w-3xl text-center mb-14">
               <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
                 {siteConfig.testimonials.title}
               </h2>
               {siteConfig.testimonials.subtitle && (
-                <p className="text-xl text-muted-foreground">
+                <p className="text-lg text-muted-foreground">
                   {siteConfig.testimonials.subtitle}
                 </p>
               )}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10 gap-y-12 max-w-6xl mx-auto">
               {siteConfig.testimonials.quotes.map((item, index) => (
-                <Card key={index} className="bg-background border shadow-sm h-full">
-                  <CardContent className="p-6 flex flex-col h-full">
-                    <Quote className="w-6 h-6 text-primary/60 mb-3" aria-hidden="true" />
-                    <blockquote className="text-base text-foreground leading-relaxed mb-4 flex-1">
-                      "{item.quote}"
-                    </blockquote>
-                    <div className="pt-4 border-t">
-                      <p className="text-sm font-semibold text-foreground">{item.name}</p>
-                      <p className="text-xs text-muted-foreground">
-                        {item.role} · {item.org}
-                      </p>
-                    </div>
-                  </CardContent>
-                </Card>
+                <figure key={index} className="flex flex-col">
+                  <Quote
+                    className="w-7 h-7 text-primary/30 mb-3"
+                    aria-hidden="true"
+                  />
+                  <blockquote className="text-[15px] md:text-base text-foreground/90 leading-relaxed flex-1">
+                    {item.quote}
+                  </blockquote>
+                  <figcaption className="mt-5">
+                    <p className="text-sm font-semibold text-foreground">{item.name}</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">
+                      {item.role} · {item.org}
+                    </p>
+                  </figcaption>
+                </figure>
               ))}
             </div>
           </Section>
