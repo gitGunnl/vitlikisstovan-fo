@@ -426,36 +426,36 @@ export default function Home() {
 
         {/* Testimonials */}
         {siteConfig.testimonials && (
-          <Section id="testimonials" className="py-24 bg-muted/40 border-y">
-            <div className="mx-auto max-w-3xl text-center mb-14">
-              <span className="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-primary mb-4">
+          <Section id="testimonials" className="py-16 bg-muted/40 border-y">
+            <div className="mx-auto max-w-3xl text-center mb-10">
+              <span className="inline-block text-xs font-semibold tracking-[0.18em] uppercase text-primary mb-3">
                 Kunda viðmerkingar
               </span>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-4">
+              <h2 className="text-2xl font-bold tracking-tight sm:text-3xl mb-3">
                 {siteConfig.testimonials.title}
               </h2>
               {siteConfig.testimonials.subtitle && (
-                <p className="text-lg text-muted-foreground">
+                <p className="text-base text-muted-foreground">
                   {siteConfig.testimonials.subtitle}
                 </p>
               )}
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
               {siteConfig.testimonials.quotes.map((item, index) => (
                 <figure
                   key={index}
-                  className="flex flex-col bg-background rounded-2xl border shadow-sm p-7 hover:shadow-md transition-shadow"
+                  className="flex flex-col bg-background rounded-xl border shadow-sm p-5 hover:shadow-md transition-shadow"
                 >
                   <Quote
-                    className="w-8 h-8 text-primary/40 mb-4"
+                    className="w-5 h-5 text-primary/40 mb-2"
                     aria-hidden="true"
                   />
-                  <blockquote className="text-base text-foreground/90 leading-relaxed flex-1">
+                  <blockquote className="text-sm text-foreground/90 leading-relaxed flex-1">
                     {item.quote}
                   </blockquote>
-                  <figcaption className="mt-6 pt-5 border-t">
-                    <p className="text-sm font-semibold text-foreground">{item.name}</p>
+                  <figcaption className="mt-4 pt-3 border-t">
+                    <p className="text-sm font-semibold text-foreground leading-tight">{item.name}</p>
                     <p className="text-xs text-muted-foreground mt-0.5">
                       {item.role} · {item.org}
                     </p>
