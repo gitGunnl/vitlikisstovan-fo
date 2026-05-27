@@ -49,7 +49,7 @@ export const siteConfig = {
   },
 
   program: {
-    title: "Frá forvitin til framkomin: Eg veiti hjálp til skrivstovufólk",
+    title: "Frá forvitin til framkomin: Ein handalig verkstova um vitlíki",
     subtitle:
       "Hetta er ein tænasta sniðgivin til at læra øllum á tykkara skrivstovu akkurát hvussu tey kunnu fáa nýttu av vitlíki. Eg komi út til tykkara og læri toymið alt, sum tað skal duga.",
 

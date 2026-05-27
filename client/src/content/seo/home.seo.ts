@@ -14,11 +14,7 @@ function buildContent(): string {
   }
   html += `</ul>`;
 
-  html += `<h3>${c.program.delivery.title}</h3><ul>`;
-  for (const item of c.program.delivery.items) {
-    html += `<li><strong>${item.title}</strong> - ${item.description}</li>`;
-  }
-  html += `</ul></section>`;
+  html += `</section>`;
 
   html += `<section><h2>${c.consulting.title}</h2><p>${c.consulting.subtitle}</p><ul>`;
   for (const svc of c.consulting.services) {
