@@ -409,6 +409,15 @@ export default function Home() {
                   </div>
                 </CardContent>
               </Card>
+
+              <div className="mt-8 flex justify-center">
+                <Button asChild size="lg" aria-label="Bílegg eina verkstovu">
+                  <a href="/contact">
+                    <Mail className="mr-2 h-4 w-4" />
+                    Bílegg eina verkstovu
+                  </a>
+                </Button>
+              </div>
             </div>
           )}
 
