@@ -529,7 +529,7 @@ export default function Landsnet() {
             style={{ color: c.accent }}
           >
             <Compass className="h-4 w-4" />
-            <span>Vitlíkisstovan · Ritlingur fyri almennar stovnar</span>
+            <span>Vitlíkisstovan · Ritlingur: 6 stig til betri vitlíkisnýtslu</span>
           </div>
           <h1
             className="mt-7 leading-[1.05] tracking-tight"
@@ -544,7 +544,7 @@ export default function Landsnet() {
             Vitlíki á arbeiðsplássinum:
             <br />
             <span style={{ fontStyle: "italic", color: c.accent }}>
-              Haldið røttu kósina.
+              Hvat er best hjá stovnum at gera nú?
             </span>
           </h1>
           <p
@@ -605,13 +605,13 @@ export default function Landsnet() {
         <Eyebrow>Hvat tú eigur at vita</Eyebrow>
         <H2>Skugga-vitlíki — tað, sum longu hendir</H2>
         <Lead>
-          Skugga-vitlíki hendir, tá ið starvsfólk — oftast í góðari trúgv fyri
-          at loysa eina uppgávu skjótari — líma tekstir inn í ókeypis, almenn
+          Skuggavitlíki hendir, tá ið starvsfólk, oftast í góðari trúgv fyri
+          at loysa eina uppgávu skjótari, líma tekstir inn í almenn
           vitlíkistól sum ChatGPT ella Gemini á telefonini ella telduni.
         </Lead>
         <Lead>
-          Tólini eru ikki góðkend, og starvsfólk vita ofta ikki, hvar dáturnar
-          enda, ella um innskrivaða tilfarið verður brúkt til at venja tólini.
+          Trupuleikin er at dáturnar sum oftast
+          enda í ørðum londum og um hettar eru viðkvæmar dátur, so kemur hetta undir lógarbrot.
         </Lead>
 
         <div
@@ -641,8 +641,8 @@ export default function Landsnet() {
         <Eyebrow>Hví nú</Eyebrow>
         <H2>Hví eigur tú at gera okkurt nú?</H2>
         <Lead>
-          Nýtslan flytur seg nógv skjótari enn stovnsreglur og sýnlig leiðsla
-          megna at fylgja við. Almennir stovnar sita við tilfari, sum krevur
+          Nýtslan flytur seg nógv skjótari enn stovnsreglur og leiðsla
+          megna at fylgja við. Og almennir stovnar arbeiða ofta við tilfari, sum krevur
           serliga umsorgan:
         </Lead>
 
@@ -667,21 +667,6 @@ export default function Landsnet() {
             </li>
           ))}
         </ul>
-
-        <figure className="mt-12">
-          <blockquote
-            className="border-l-4 pl-6 sm:pl-8 italic text-2xl sm:text-3xl leading-snug"
-            style={{
-              borderLeftColor: c.accent,
-              color: c.ink,
-              fontFamily: serif,
-              fontWeight: 400,
-            }}
-          >
-            “Tú kanst ikki seta ferðslureglur fyri ein veg, tú ongantíð hevur
-            koyrt á.”
-          </blockquote>
-        </figure>
       </Section>
 
       {/* =============================================================== */}
@@ -691,7 +676,7 @@ export default function Landsnet() {
         <Eyebrow>Tríggir leiklutir</Eyebrow>
         <H2>Leiðsla, KT og starvsfólk — saman</H2>
         <Lead>
-          Fyri at fáa virði úr vitlíki uttan at skapa glundatros, mugu tríggir
+          Fyri at fáa virði úr vitlíki, mugu tríggir
           leiklutir samstarva rætt.
         </Lead>
 
@@ -700,17 +685,17 @@ export default function Landsnet() {
             {
               icon: Compass,
               role: "Leiðslan",
-              body: "Setur kósina, ásetur mørkini og avger, hvat vitlíki skal betra um. Eigur málið.",
+              body: "Setur kós, tekur ábyrgd og vísur áhuge. Um leiðsla slett ikki skilur vitlíki, so er ringt at vinna tað veruliga virið",
             },
             {
               icon: ShieldCheck,
               role: "KT",
-              body: "Tryggjar karmarnar — dátuvernd, loyvi, skipanir og tøkniliga verju.",
+              body: "Tryggjar karmarnar — trygg amboð, dátuvernd og yvurlit yvur vitlíki á tykkara stovni.",
             },
             {
               icon: Users,
               role: "Starvsfólkini",
-              body: "Kenna gerandisarbeiðið og finna, hvar tól veruliga lætta um byrðuna.",
+              body: "Kenna gerandisarbeiðið, hava serfrøðina og finna, hvar tól veruliga lætta um byrðuna.",
             },
           ].map(({ icon: Icon, role, body }) => (
             <div
@@ -750,10 +735,10 @@ export default function Landsnet() {
       {/* =============================================================== */}
       <Section bg={c.bgMuted}>
         <Eyebrow>Vegurin framm</Eyebrow>
-        <H2>Seks stig til trygga og skipaða nýtslu</H2>
+        <H2>6 stig til trygga og skipaða nýtslu</H2>
         <Lead>
-          Leiðslan eigur at fylgja hesum seks stigum fyri at fáa eina
-          rættstýrda byrjan.
+          Leiðslan kann fylgja hesum seks stigum fyri at fáa eina
+          skipaða byrjan.
         </Lead>
 
         <ol className="mt-10 space-y-3">
@@ -838,20 +823,12 @@ export default function Landsnet() {
         >
           Hví leiðarar eiga skilja vitlíki
         </h2>
-        <p
-          className="mt-5 text-lg leading-relaxed"
-          style={{ color: "#C9D5E3" }}
-        >
-          Sum leiðari tørvar tær ikki at vera KT-samskipari, men tú mást hava
-          grundleggjandi vitlíkisfatan — nóg mikið til at taka skynsamar
-          avgerðir og til at orða mørkini, sum starvsfólkið skal arbeiða
-          innanfyri.
-        </p>
 
         <ul className="mt-7 space-y-3.5">
           {[
             "Vitlíki kann ljóða sannførandi, hóast tað tekur feil. Leiðslan má skilja, hví menniskjalig eftirkanning altíð er krav.",
             "Fólk hava ymiskan hugburðar til vitlíki, tað er umráðandi at duga at rúma hendan ymiskleikan.",
+      "test",
           ].map((t, i) => (
             <li
               key={i}
@@ -875,8 +852,8 @@ export default function Landsnet() {
         <Eyebrow>Hjálp til at koma í gongd</Eyebrow>
         <H2>Hvussu Vitlíkisstovan kann hjálpa tykkum</H2>
         <Lead>
-          Vit hjálpa føroyskum almennum stovnum við praktiskari og tryggari
-          innføring av vitlíki — uttan óneyðugt fløkjasemi.
+          Vit hjálpa føroyskar stovnum við praktiskari og tryggari
+          nýtslu av vitlíki — uttan óneyðugar fløkjutar forkláringar.
         </Lead>
 
         <div className="mt-10 grid gap-5 sm:grid-cols-3 items-stretch">
@@ -970,7 +947,7 @@ export default function Landsnet() {
                   data-testid="footer-cta-ritlingur"
                   data-analytics-event="pdf_only_clicked"
                 >
-                  Fá hendan ritlingin sendan til tín<ArrowRight className="ml-2 h-4 w-4" />
+                  Fá hendan ritlingin sendan til tín teldupost<ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               }
             />
