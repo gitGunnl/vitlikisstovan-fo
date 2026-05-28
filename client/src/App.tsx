@@ -37,6 +37,7 @@ const SkapandiVitliki = lazy(() => import("@/pages/okkara-taenastur/skapandi-vit
 const AIWorkshop = lazy(() => import("@/pages/ai-workshop"));
 const VitlikiIVerki = lazy(() => import("@/pages/vitliki-i-verki"));
 const Landsnet = lazy(() => import("@/pages/landsnet"));
+const LeidsluVerkstova = lazy(() => import("@/pages/leidslu-verkstova"));
 
 function RouteFallback() {
   return (
@@ -79,6 +80,7 @@ function Router() {
         <Route path="/ai-workshop" component={AIWorkshop} />
         <Route path="/vitliki-i-verki" component={VitlikiIVerki} />
         <Route path="/landsnet" component={Landsnet} />
+        <Route path="/leidslu-verkstova" component={LeidsluVerkstova} />
         <Route component={NotFound} />
       </Switch>
     </Suspense>
