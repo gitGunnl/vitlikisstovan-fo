@@ -414,15 +414,13 @@ export const siteConfig = {
   // leads to the wrong form during setup.
   ritlingurForm: {
     formResponseUrl:
-      "https:REPLACE_WITH_RITLINGUR_FORM_IDe/REPLACE_WITH_RITLINGUR_FORM_ID/formResponse",
-    entryEmail: "entry.REPLACE_WITH_EMAIL_ENTRY_ID",
-    entryConsent: "entry.REPLACE_WITH_CONSENT_ENTRY_ID",
+      "https://docs.google.com/forms/d/e/1FAIpQLSdXeEtAgFI0R1y1_HqILhMcH23_p71cVOHM4IfkkHt5H9s1Yw/formResponse",
+    entryEmail: "entry.1973475723",
+    entryConsent: "entry.1767828470",
     consentYesValue: "Ja",
     consentNoValue: "Nei",
     pdfDownloadUrl: "/seks-stig-til-goda-vitlikisnytslu.pdf",
   },
-
-  https://docs.google.com/forms/d/e/1FAIpQLSdXeEtAgFI0R1y1_HqILhMcH23_p71cVOHM4IfkkHt5H9s1Yw/viewform?usp=pp_url&entry.1973475723=email&entry.1767828470=Ja
   
   // NOTE: SEO data has moved to client/src/content/seo/*.seo.ts (auto-discovered
   // by scripts/prerender-seo.ts). Adding entries here has no effect.
