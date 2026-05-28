@@ -365,7 +365,7 @@ export default function Home() {
         </div>
 
         {/* The Flagship Program */}
-        <Section id="program" className="py-24 sm:py-32 bg-gradient-to-b from-muted to-background">
+        <Section id="program" className="pt-24 sm:pt-32 pb-8 bg-gradient-to-b from-muted to-background">
           <div className="mx-auto max-w-4xl text-center mb-16 animate-slide-up">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl mb-6 bg-gradient-to-r from-foreground to-foreground/80 bg-clip-text">
               {siteConfig.program.title}
@@ -377,7 +377,7 @@ export default function Home() {
 
           {/* What We Deliver Section */}
           {siteConfig.program.whatWeDeliver && (
-            <div className="mb-16">
+            <div>
               <div className="mx-auto max-w-4xl text-center mb-8">
                 <h3 className="text-2xl font-bold tracking-tight mb-4">
                   {siteConfig.program.whatWeDeliver.title}
