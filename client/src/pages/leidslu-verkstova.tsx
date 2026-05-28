@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
@@ -29,15 +29,12 @@ import {
 } from "@shared/schema";
 import { reportFormFailure } from "@/lib/reportFormFailure";
 import { siteConfig } from "@/content/site";
-import { workshopStrings as t } from "@/content/ai-workshop-strings";
 import { leidsluStrings as L } from "@/content/leidslu-verkstova-strings";
 import {
   Mail,
   Phone,
   CheckCircle2,
   ArrowRight,
-  Quote,
-  Star,
   Clock,
   Users,
   ShieldCheck,
@@ -55,6 +52,285 @@ import {
 } from "@/components/ui/dialog";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
+
+const page = {
+  header: {
+    callNow: "Ring",
+    numberCopied: "Telefonnummarið er avritað",
+  },
+  cta: {
+    book: "Tekna teg til verkstovuna",
+    write: "Spyr um verkstovuna",
+  },
+  form: {
+    nameLabel: "Navn",
+    namePlaceholder: "Títt navn",
+    organizationLabel: "Arbeiðspláss ella stovnur",
+    organizationPlaceholder: "T.d. kommuna, skúli, fyritøka ella stovnur",
+    workEmailLabel: "Teldupostur",
+    workEmailPlaceholder: "navn@arbeidsplass.fo",
+    phoneLabel: "Telefon",
+    phonePlaceholder: "+298 …",
+    messageLabel: "Hvat vilt tú vita?",
+    messagePlaceholder:
+      "T.d. um pláss, dagfestingar, prís ella eina leiðsluverkstovu til okkara egna stovn.",
+    submitting: "Sendi…",
+    submitButton: "Send fyrispurning",
+    errorMessage:
+      "Okkurt gekk galið. Royn aftur, ella skriva beinleiðis til info@vitlikisstovan.fo.",
+  },
+  formSuccess: {
+    heading: "Takk fyri — eg havi móttikið tín fyrispurning",
+    body:
+      "Eg vendi aftur sum skjótast við svari um leiðsluverkstovuna og um, hvussu hon kann hóska til tørvin hjá tykkum.",
+    whatHappensNext: "Hvat hendir nú?",
+    steps: [
+      "Eg lesi tín fyrispurning og kanni, hvat ið er mest viðkomandi fyri teg ella tykkara leiðslu.",
+      "Tú fært svar við praktiskari kunning um dagfesting, pláss, prís ella møguleikan fyri eini innanhýsis verkstovu.",
+      "Um tað er viðkomandi, kunnu vit taka eitt stutt prát um, hvar tit eru í vitlíkisarbeiðinum í dag.",
+    ],
+    urgentPrefix: "Hevur tú tørv á skjótum svari, kanst tú",
+    phone: "ringja",
+    or: "ella",
+    email: "skriva beinleiðis",
+    exploreHeading: "Meðan tú bíðar",
+    exploreLinks: [
+      { label: "Vitja forsíðuna hjá Vitlíkisstovuni", href: "/" },
+      { label: "Skriva beinleiðis við telduposti", href: `mailto:${siteConfig.contact.email}` },
+    ],
+  },
+  registration: {
+    title: "Tekna teg til leiðsluverkstovuna",
+    subtitle:
+      "Vel dagfesting, tal av luttakarum og skriva sambandsupplýsingar. Tekningin verður avgreidd við rokningi.",
+    dateLabel: "Vel dagfesting",
+    dateOptions: L.registration.dateOptions,
+    seatsLabel: "Tal av luttakarum",
+    seatsMinus: "Fækka luttakaratalið",
+    seatsPlus: "Legg luttakara afturat",
+    seatsHelp: "Í mesta lagi 20 í hvørjari tekning",
+    nameLabel: "Navn",
+    namePlaceholder: "Títt navn",
+    organizationLabel: "Arbeiðspláss ella stovnur",
+    organizationPlaceholder: "Navn á arbeiðsplássi, stovni ella fyritøku",
+    emailLabel: "Teldupostur",
+    emailPlaceholder: "navn@arbeidsplass.fo",
+    phoneLabel: "Telefon",
+    phonePlaceholder: "+298 …",
+    totalLabel: "Samlaður prísur",
+    invoiceNote:
+      "Prísurin verður roknaður fyri hvønn luttakara. Rokning verður send eftir tekningina.",
+    acknowledgeLabel:
+      "Eg vátti, at tekningin kann avgreiðast við rokningi til upplýsta arbeiðsplássið ella stovnin.",
+    submit: "Send tekningina",
+    submitting: "Sendir tekningina…",
+    error:
+      "Tekningin kundi ikki sendast. Royn aftur, ella skriva til info@vitlikisstovan.fo.",
+    successTitle: "Tín tekning er móttikin",
+    successBody:
+      "Takk fyri. Tú fært váttan og praktiskar upplýsingar sendar við telduposti.",
+    close: "Lat aftur",
+  },
+  hero: {
+    eyebrow: "Leiðsluverkstova um vitlíki",
+    heading: "Lær at leiða vitlíkisskiftið — trygt, praktiskt og við greiðari kós",
+    subheading:
+      "Ein verkstova fyri leiðarar og avgerðartakarar, sum vilja skilja vitlíki, brúka vitlíki í sínum egna leiðsluarbeiði og seta eina tryggari og gagnligari kós fyri sín stovn ella sína fyritøku.",
+    bullets: [
+      "Skil, hvat vitlíki longu broytir í arbeiðsgongdum, ábyrgd og nýtslu av arbeiðsorku.",
+      "Lær at brúka vitlíki sum sparringsfelaga til at kanna møguleikar, vandar, leiðreglur og samskifti.",
+      "Far heim við einum 6-stiga leisti og einum praktiskum byrjanarpunkti til tykkara arbeiðspláss.",
+    ],
+    featureCards: [
+      { title: "Fyri leiðarar", subtitle: "eingin tøkniligur førleiki krevst" },
+      { title: "Praktisk vitlíkisnýtsla", subtitle: "royndir í verki" },
+      { title: "Trygg innleiðsla", subtitle: "vandar, amboð og ábyrgd" },
+    ],
+    contactTitle: "Hevur tú spurningar?",
+    contactBody:
+      "Skriva, um tú vilt vita meira um verkstovuna, pláss, dagfestingar ella eina útgávu til tykkara egna leiðslubólk.",
+    directContact: "Tú kanst eisini seta teg í samband beinleiðis",
+  },
+  fit: {
+    eyebrow: "Fyri leiðslur, sum vilja fara frá spjaddari nýtslu til eina greiða kós",
+    heading: "Vitlíki skal ikki bara henda av sær sjálvum",
+    body:
+      "Nógv arbeiðspláss eru longu farin at royna vitlíki. Summi hava amboð, summi hava leiðreglur, og summi hava eldhugað starvsfólk. Avbjóðingin er at fáa hetta at hanga saman, so nýtslan verður trygg, gagnlig og knýtt at tí, sum stovnurin ella fyritøkan veruliga vil røkka.",
+    cards: [
+      {
+        title: "Vitlíki er longu í gongd",
+        text: "Starvsfólk royna amboð, skriva tekst, gera samandráttir og leita eftir nýggjum arbeiðshættum.",
+      },
+      {
+        title: "Leiðslan má seta kós",
+        text: "AI-skiftið kann ikki bara liggja hjá IT ella einstøkum eldsálum. Leiðslan má skilja nóg mikið til at taka ábyrgd.",
+      },
+      {
+        title: "Trygg nýtsla krevur val",
+        text: "Tað má vera greitt, hvørji amboð kunnu brúkast, hvørjar upplýsingar ikki skulu latast inn, og hvussu góðska verður tryggjað.",
+      },
+      {
+        title: "Føroyski veruleikin telur",
+        text: "Smá toymi, føroyskt mál, almenn ábyrgd og avmarkað tilfeingi krevja praktiskar loysnir heldur enn stór orð.",
+      },
+    ],
+  },
+  relevance: {
+    heading: "Hetta er fyrst og fremst ikki eitt tøkniligt mál. Tað er eitt leiðslumál.",
+    body:
+      "Vitlíki kann geva betri yvirlit, skjótari fyrireiking, betri tænastu og nýggjar arbeiðshættir. Men tað krevur, at leiðslan dugir at seta karmar, velja eina trygga kós og fáa læringina inn í gerandisarbeiðið.",
+    points: [
+      "Hvørji vitlíkisamboð eru trygg at brúka hjá okkum, og hvar skulu vit vera varin?",
+      "Hvørjar uppgávur og avgerðir kann vitlíki hjálpa við — og hvar skal menniskjaliga metingin altíð vera fremst?",
+      "Hvussu brúka vit vitlíki til at styrkja arbeiðið heldur enn bara at spara tíð?",
+      "Hvussu fáa vit starvsfólk, IT, HR og leiðslu at arbeiða eftir somu kós?",
+    ],
+  },
+  steps: {
+    eyebrow: "6 stig til skipaða vitlíkisnýtslu",
+    heading: "Ein greiður leistur fyri leiðslur, sum vilja koma víðari",
+    subheading:
+      "Verkstovan byggir á ein praktiskan leist, sum hjálpir leiðsluni at flyta vitlíkisnýtsluna frá spjaddum royndum til meira tilvitaða og ábyrgdarfulla nýtslu.",
+    items: [
+      {
+        title: "Leiðslan tekur ábyrgd",
+        text: "Skil, hví vitlíki ikki bara er eitt IT-mál, og hvat leiðslan má duga fyri at seta kós.",
+      },
+      {
+        title: "Kortlegg núverandi nýtslu",
+        text: "Fá greiðu á, hvar vitlíki longu verður brúkt, hvørjar royndir eru góðar, og hvar óvissan er størst.",
+      },
+      {
+        title: "Set karmar og mál",
+        text: "Arbeið við reglum, málum og orðingum, sum gera tað lættari hjá fólki at brúka vitlíki rætt.",
+      },
+      {
+        title: "Gev fólki trygg amboð",
+        text: "Skil munin á amboðum, vandum og góðum arbeiðshættum, so nýtslan ikki verður tilvildarlig.",
+      },
+      {
+        title: "Flyt læring inn í gerandisarbeiðið",
+        text: "Ger vitlíki til nakað, sum fólk læra saman í dagliga arbeiðinum — ikki bara á einum einstøkum skeiði.",
+      },
+      {
+        title: "Skil nóg mikið til at leiða",
+        text: "Lær at brúka vitlíki sum sparringsfelaga, so tú kanst spyrja betri spurningar og taka betri avgerðir.",
+      },
+    ],
+  },
+  outcomes: {
+    heading: "Eftir verkstovuna hevur tú eitt greiðari grundarlag at leiða út frá",
+    items: [
+      {
+        title: "Ein greiðari mynd av vitlíki",
+        text: "Tú skilir, hvat vitlíki kann, hvat tað ikki kann, og hvat tað merkir fyri arbeiði, ábyrgd og góðsku.",
+      },
+      {
+        title: "Praktisk roynd við vitlíki",
+        text: "Tú roynir at brúka vitlíki til leiðsluarbeiði: spurningar, greining, samskifti, leiðreglur og næstu stig.",
+      },
+      {
+        title: "Betri spurningar til IT og ráðgevar",
+        text: "Tú fært betri førleika til at skilja amboð, dátuvernd, trygd og hvørjar avgerðir krevja ábyrgd frá leiðsluni.",
+      },
+      {
+        title: "Yvirlit yvir møguleikar og vandar",
+        text: "Tú fært orð at seta á bæði virðisskapan og vandar, t.d. skugga-AI, góðsku, trúnað og ógreiðar mannagongdir.",
+      },
+      {
+        title: "Ein praktisk byrjanarætlan",
+        text: "Tú fert heim við einum einfaldum leisti, sum kann brúkast til at taka næstu stigini í tínum egna stovni.",
+      },
+      {
+        title: "Orð til innanhýsis samskifti",
+        text: "Tú fært hjálp til at tosa um vitlíki á ein hátt, sum skapar ábyrgd, forvitni og minni óvissu.",
+      },
+    ],
+  },
+  content: {
+    heading: "Hvat arbeiða vit við á verkstovuni?",
+    subheading:
+      "Vit blanda stuttar frágreiðingar, praktiskar vitlíkisroyndir og leiðsluspurningar, so tú bæði skilir evnið og kanst brúka tað í tínum egna arbeiði.",
+    blocks: [
+      {
+        title: "Hvat er vitlíki í verki?",
+        text: "Ein greið frágreiðing um, hvat nýggj vitlíkisamboð gera, hvar tey eru sterkast, og hvar leiðslan skal vera varin.",
+      },
+      {
+        title: "Vitlíki sum sparringsfelagi hjá leiðsluni",
+        text: "Vit royna vitlíki sum hjálp til at hugsa, orða, kanna avleiðingar og fyrireika leiðsluuppgávur.",
+      },
+      {
+        title: "Skuggavitlíki og trygg amboð",
+        text: "Hvussu kann vitlíkisnýtsla gerast tryggari, so starvsfólk ikki verða noydd at finna sínar egnu loysnir í loyndum?",
+      },
+      {
+        title: "Møguleikar á føroyskum arbeiðsplássum",
+        text: "Vit hyggja at smáum, realistiskum fyrstu stigum, sum hóska til føroyskar stovnar og fyritøkur.",
+      },
+      {
+        title: "Karmar, leiðreglur og ábyrgd",
+        text: "Hvør eigur at gera hvat? Hvat hoyrir til leiðslu, IT, HR og starvsfólkini?",
+      },
+      {
+        title: "Fyrstu 30–90 dagarnir",
+        text: "Vit arbeiða við, hvat eitt gott næsta stig kann vera, so vitlíkisarbeiðið ikki steðgar eftir verkstovuna.",
+      },
+    ],
+    facts: [
+      "Føroyskt høpi",
+      "Eingin tøkniligur førleiki krevst",
+      "Fyri leiðarar og avgerðartakarar",
+      "Praktisk vitlíkisnýtsla undir vegleiðing",
+    ],
+  },
+  faq: {
+    heading: "Vanligir spurningar",
+    items: [
+      {
+        q: "Er hetta eitt tøkniligt skeið?",
+        a: "Nei. Hetta er ein leiðsluverkstova. Vit brúka vitlíki praktiskt, men endamálið er ikki at gera teg til tøkniligan serfrøðing. Endamálið er, at tú skalt skilja nóg mikið til at leiða arbeiðið væl.",
+      },
+      {
+        q: "Skal eg duga at brúka vitlíki frammanundan?",
+        a: "Nei. Tú kanst koma við lítlari ella ongari roynd. Verkstovan er løgd til rættis, so leiðarar kunnu fáa eina trygga og praktiska byrjan uttan at kenna tøkniliga málið frammanundan.",
+      },
+      {
+        q: "Hvat, um okkara stovnur longu hevur vitlíkisamboð ella leiðreglur?",
+        a: "So er verkstovan framvegis viðkomandi. Tá arbeiða vit við at gera kósina greiðari, fáa nýtsluna betur skipaða og knýta amboð, reglur, læring og leiðsluábyrgd betri saman.",
+      },
+      {
+        q: "Er verkstovan eisini viðkomandi fyri IT, HR ella menningarfólk?",
+        a: "Ja. Hon er fyrst og fremst fyri leiðslu og avgerðartakarar, men IT, HR og lyklafólk fáa nógv burturúr, tí vitlíkisskiftið krevur samstarv millum fleiri partar.",
+      },
+      {
+        q: "Kunnu tit halda eina innanhýsis verkstovu fyri okkara leiðslu?",
+        a: "Ja. Skriva eina stutta frágreiðing um tykkara tørv í oyðublaðnum, so kunnu vit tosa um eina útgávu, sum hóskar til tykkara stovn, leiðslubólk og støðu.",
+      },
+      {
+        q: "Hvat fáa vit við heim?",
+        a: "Tú fært eina greiðari mynd av vitlíki, praktiska roynd við amboðunum, eitt 6-stiga leiðsluyvirlit og eitt byrjanarpunkt, sum kann brúkast á tínum egna arbeiðsplássi.",
+      },
+    ],
+  },
+  finalCta: {
+    heading: "Tak næsta stigið í vitlíkisarbeiðinum",
+    body:
+      "AI-skiftið verður ikki tryggari av at bíða. Við røttu vitanini, røttu spurningunum og einum greiðum leisti kann leiðslan skapa eina nógv betri byrjan.",
+    ctaButton: "Tekna teg til leiðsluverkstovuna",
+    directContact: "Vilt tú heldur spyrja fyrst?",
+    reassurance: "Eingin tøkniligur førleiki krevst — bara ábyrgd og forvitni.",
+  },
+  stickyBanner: {
+    title: "Leiðsluverkstova um vitlíki",
+    subtitle:
+      "Fá ein 6-stiga leist, venjing í vitlíki og eina greiðari kós fyri tykkara stovn.",
+    bookButton: "Tekna teg",
+    writeButton: "Spyr fyrst",
+    callButton: "Ring",
+    dismiss: "Lat fráboðanina aftur",
+  },
+};
 
 function WorkshopContactFormComponent({ id }: { id?: string }) {
   const [submitted, setSubmitted] = useState(false);
@@ -75,7 +351,10 @@ function WorkshopContactFormComponent({ id }: { id?: string }) {
       const formData = new FormData();
       formData.append("entry.1179687836", data.name);
       formData.append("entry.263197538", data.workEmail);
-      formData.append("entry.240567695", `[Workshop LP] Org: ${data.organization} | Phone: ${data.phone || "N/A"} | ${data.message || ""}`);
+      formData.append(
+        "entry.240567695",
+        `[Leadership Workshop LP] Org: ${data.organization} | Phone: ${data.phone || "N/A"} | ${data.message || ""}`
+      );
 
       try {
         await fetch(
@@ -88,17 +367,17 @@ function WorkshopContactFormComponent({ id }: { id?: string }) {
           }
         );
       } catch (err) {
-        reportFormFailure("workshop-landing", err);
+        reportFormFailure("leadership-workshop-landing", err);
         throw err;
       }
 
       return { success: true };
     },
     onSuccess: () => {
-      if (typeof window !== 'undefined' && window.fbq) {
-        window.fbq('track', 'Lead', {
-          content_name: 'AI Workshop Contact Form',
-          content_category: 'workshop',
+      if (typeof window !== "undefined" && window.fbq) {
+        window.fbq("track", "Lead", {
+          content_name: "Leadership Workshop Contact Form",
+          content_category: "leadership-workshop",
         });
       }
       setSubmitted(true);
@@ -113,16 +392,20 @@ function WorkshopContactFormComponent({ id }: { id?: string }) {
           <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-50 border border-green-200 mb-5">
             <CheckCircle2 className="w-7 h-7 text-green-600" />
           </div>
-          <h3 className="text-xl font-semibold text-slate-900 mb-3">{t.formSuccess.heading}</h3>
+          <h3 className="text-xl font-semibold text-slate-900 mb-3">
+            {page.formSuccess.heading}
+          </h3>
           <p className="text-slate-600 leading-relaxed max-w-sm mx-auto">
-            {t.formSuccess.body}
+            {page.formSuccess.body}
           </p>
         </div>
 
         <div className="bg-slate-50 rounded-lg p-5 mb-6">
-          <h4 className="text-sm font-semibold text-slate-800 mb-3">{t.formSuccess.whatHappensNext}</h4>
+          <h4 className="text-sm font-semibold text-slate-800 mb-3">
+            {page.formSuccess.whatHappensNext}
+          </h4>
           <ol className="space-y-2.5">
-            {t.formSuccess.steps.map((step, i) => (
+            {page.formSuccess.steps.map((step, i) => (
               <li key={i} className="flex items-start gap-3">
                 <span className="flex-shrink-0 w-5 h-5 rounded-full bg-teal-100 text-teal-700 text-xs font-semibold flex items-center justify-center mt-0.5">
                   {i + 1}
@@ -135,22 +418,38 @@ function WorkshopContactFormComponent({ id }: { id?: string }) {
 
         <div className="text-center mb-6">
           <p className="text-sm text-slate-500">
-            {t.formSuccess.urgentPrefix}{" "}
-            <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`} className="text-teal-700 hover:underline">{t.formSuccess.phone}</a> {t.formSuccess.or}{" "}
-            <a href={`mailto:${siteConfig.contact.email}`} className="text-teal-700 hover:underline">{t.formSuccess.email}</a>.
+            {page.formSuccess.urgentPrefix}{" "}
+            <a
+              href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
+              className="text-teal-700 hover:underline"
+            >
+              {page.formSuccess.phone}
+            </a>{" "}
+            {page.formSuccess.or}{" "}
+            <a
+              href={`mailto:${siteConfig.contact.email}`}
+              className="text-teal-700 hover:underline"
+            >
+              {page.formSuccess.email}
+            </a>
+            .
           </p>
         </div>
 
         <div className="border-t border-slate-100 pt-6">
-          <p className="text-sm font-medium text-slate-700 text-center mb-4">{t.formSuccess.exploreHeading}</p>
+          <p className="text-sm font-medium text-slate-700 text-center mb-4">
+            {page.formSuccess.exploreHeading}
+          </p>
           <div className="flex flex-col gap-2.5">
-            {t.formSuccess.exploreLinks.map((link) => (
+            {page.formSuccess.exploreLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 className="flex items-center justify-between px-4 py-3.5 rounded-lg border border-teal-200 bg-teal-50 hover:bg-teal-100 hover:border-teal-300 transition-colors group"
               >
-                <span className="text-sm font-semibold text-teal-800">{link.label}</span>
+                <span className="text-sm font-semibold text-teal-800">
+                  {link.label}
+                </span>
                 <ArrowRight className="w-4 h-4 text-teal-500 group-hover:text-teal-700 group-hover:translate-x-0.5 transition-all" />
               </a>
             ))}
@@ -162,15 +461,26 @@ function WorkshopContactFormComponent({ id }: { id?: string }) {
 
   return (
     <Form {...form}>
-      <form id={id} onSubmit={form.handleSubmit((data) => mutation.mutate(data))} className="space-y-4">
+      <form
+        id={id}
+        onSubmit={form.handleSubmit((data) => mutation.mutate(data))}
+        className="space-y-4"
+      >
         <FormField
           control={form.control}
           name="name"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-slate-700 text-sm">{t.form.nameLabel}</FormLabel>
+              <FormLabel className="text-slate-700 text-sm">
+                {page.form.nameLabel}
+              </FormLabel>
               <FormControl>
-                <Input {...field} placeholder={t.form.namePlaceholder} autoComplete="name" className="bg-white border-slate-200" />
+                <Input
+                  {...field}
+                  placeholder={page.form.namePlaceholder}
+                  autoComplete="name"
+                  className="bg-white border-slate-200"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -181,9 +491,16 @@ function WorkshopContactFormComponent({ id }: { id?: string }) {
           name="organization"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-slate-700 text-sm">{t.form.organizationLabel}</FormLabel>
+              <FormLabel className="text-slate-700 text-sm">
+                {page.form.organizationLabel}
+              </FormLabel>
               <FormControl>
-                <Input {...field} placeholder={t.form.organizationPlaceholder} autoComplete="organization" className="bg-white border-slate-200" />
+                <Input
+                  {...field}
+                  placeholder={page.form.organizationPlaceholder}
+                  autoComplete="organization"
+                  className="bg-white border-slate-200"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -194,9 +511,17 @@ function WorkshopContactFormComponent({ id }: { id?: string }) {
           name="workEmail"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-slate-700 text-sm">{t.form.workEmailLabel}</FormLabel>
+              <FormLabel className="text-slate-700 text-sm">
+                {page.form.workEmailLabel}
+              </FormLabel>
               <FormControl>
-                <Input {...field} type="email" placeholder={t.form.workEmailPlaceholder} autoComplete="email" className="bg-white border-slate-200" />
+                <Input
+                  {...field}
+                  type="email"
+                  placeholder={page.form.workEmailPlaceholder}
+                  autoComplete="email"
+                  className="bg-white border-slate-200"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -207,9 +532,17 @@ function WorkshopContactFormComponent({ id }: { id?: string }) {
           name="phone"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-slate-700 text-sm">{t.form.phoneLabel}</FormLabel>
+              <FormLabel className="text-slate-700 text-sm">
+                {page.form.phoneLabel}
+              </FormLabel>
               <FormControl>
-                <Input {...field} type="tel" placeholder={t.form.phonePlaceholder} autoComplete="tel" className="bg-white border-slate-200" />
+                <Input
+                  {...field}
+                  type="tel"
+                  placeholder={page.form.phonePlaceholder}
+                  autoComplete="tel"
+                  className="bg-white border-slate-200"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -220,12 +553,14 @@ function WorkshopContactFormComponent({ id }: { id?: string }) {
           name="message"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-slate-700 text-sm">{t.form.messageLabel}</FormLabel>
+              <FormLabel className="text-slate-700 text-sm">
+                {page.form.messageLabel}
+              </FormLabel>
               <FormControl>
                 <Textarea
                   {...field}
                   rows={3}
-                  placeholder={t.form.messagePlaceholder}
+                  placeholder={page.form.messagePlaceholder}
                   className="resize-none bg-white border-slate-200"
                 />
               </FormControl>
@@ -238,10 +573,12 @@ function WorkshopContactFormComponent({ id }: { id?: string }) {
           disabled={mutation.isPending}
           className="w-full py-5 text-base font-medium bg-teal-700 hover:bg-teal-800 text-white"
         >
-          {mutation.isPending ? t.form.submitting : t.form.submitButton}
+          {mutation.isPending ? page.form.submitting : page.form.submitButton}
         </Button>
         {mutation.isError && (
-          <p className="text-sm text-red-600 text-center">{t.form.errorMessage}</p>
+          <p className="text-sm text-red-600 text-center">
+            {page.form.errorMessage}
+          </p>
         )}
       </form>
     </Form>
@@ -266,7 +603,7 @@ function RegistrationDialog({
       organization: "",
       email: "",
       phone: "",
-      date: L.registration.dateOptions[0].value,
+      date: page.registration.dateOptions[0].value,
       seats: 1,
       acknowledgedInvoice: false as unknown as true,
       website: "",
@@ -278,8 +615,7 @@ function RegistrationDialog({
   const watched = form.watch();
   const seats = watched.seats ?? 1;
   const total = seats * WORKSHOP_REGISTRATION_PRICE_DKK;
-  const isValid =
-    workshopRegistrationSchema.safeParse(watched).success;
+  const isValid = workshopRegistrationSchema.safeParse(watched).success;
 
   const mutation = useMutation({
     mutationFn: async (data: WorkshopRegistration) => {
@@ -311,32 +647,37 @@ function RegistrationDialog({
 
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto" data-testid="dialog-registration">
+      <DialogContent
+        className="max-w-2xl max-h-[90vh] overflow-y-auto"
+        data-testid="dialog-registration"
+      >
         {submitted ? (
           <div className="py-6 text-center">
             <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-50 border border-green-200 mb-5">
               <CheckCircle2 className="w-7 h-7 text-green-600" />
             </div>
             <h3 className="text-xl font-semibold text-slate-900 mb-3">
-              {L.registration.successTitle}
+              {page.registration.successTitle}
             </h3>
             <p className="text-slate-600 leading-relaxed max-w-sm mx-auto mb-6">
-              {L.registration.successBody}
+              {page.registration.successBody}
             </p>
             <Button
               onClick={() => handleOpenChange(false)}
               className="bg-teal-700 hover:bg-teal-800 text-white"
               data-testid="button-registration-close"
             >
-              {L.registration.close}
+              {page.registration.close}
             </Button>
           </div>
         ) : (
           <>
             <DialogHeader>
-              <DialogTitle className="text-xl text-slate-900">{L.registration.title}</DialogTitle>
+              <DialogTitle className="text-xl text-slate-900">
+                {page.registration.title}
+              </DialogTitle>
               <DialogDescription className="text-slate-600">
-                {L.registration.subtitle}
+                {page.registration.subtitle}
               </DialogDescription>
             </DialogHeader>
             <Form {...form}>
@@ -347,10 +688,10 @@ function RegistrationDialog({
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-sm font-medium text-slate-700">
-                        {L.registration.dateLabel}
+                        {page.registration.dateLabel}
                       </FormLabel>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                        {L.registration.dateOptions.map((opt) => {
+                        {page.registration.dateOptions.map((opt) => {
                           const active = field.value === opt.value;
                           return (
                             <button
@@ -366,7 +707,11 @@ function RegistrationDialog({
                               aria-pressed={active}
                             >
                               <div className="font-semibold text-sm">{opt.label}</div>
-                              <div className={`text-xs ${active ? "text-white/85" : "text-slate-500"}`}>
+                              <div
+                                className={`text-xs ${
+                                  active ? "text-white/85" : "text-slate-500"
+                                }`}
+                              >
                                 {opt.weekday}
                               </div>
                             </button>
@@ -384,13 +729,15 @@ function RegistrationDialog({
                   render={({ field }) => (
                     <FormItem>
                       <FormLabel className="text-sm font-medium text-slate-700">
-                        {L.registration.seatsLabel}
+                        {page.registration.seatsLabel}
                       </FormLabel>
                       <div className="flex items-center gap-3">
                         <button
                           type="button"
-                          aria-label={L.registration.seatsMinus}
-                          onClick={() => field.onChange(Math.max(1, (field.value ?? 1) - 1))}
+                          aria-label={page.registration.seatsMinus}
+                          onClick={() =>
+                            field.onChange(Math.max(1, (field.value ?? 1) - 1))
+                          }
                           className="w-10 h-10 rounded-lg border border-slate-200 bg-white text-slate-700 hover:border-teal-400 flex items-center justify-center disabled:opacity-40 disabled:hover:border-slate-200"
                           disabled={(field.value ?? 1) <= 1}
                           data-testid="button-seats-minus"
@@ -405,22 +752,28 @@ function RegistrationDialog({
                           value={field.value ?? 1}
                           onChange={(e) => {
                             const n = parseInt(e.target.value, 10);
-                            field.onChange(Number.isNaN(n) ? 1 : Math.min(20, Math.max(1, n)));
+                            field.onChange(
+                              Number.isNaN(n) ? 1 : Math.min(20, Math.max(1, n))
+                            );
                           }}
                           className="w-20 text-center bg-white border-slate-200"
                           data-testid="input-seats"
                         />
                         <button
                           type="button"
-                          aria-label={L.registration.seatsPlus}
-                          onClick={() => field.onChange(Math.min(20, (field.value ?? 1) + 1))}
+                          aria-label={page.registration.seatsPlus}
+                          onClick={() =>
+                            field.onChange(Math.min(20, (field.value ?? 1) + 1))
+                          }
                           className="w-10 h-10 rounded-lg border border-slate-200 bg-white text-slate-700 hover:border-teal-400 flex items-center justify-center disabled:opacity-40 disabled:hover:border-slate-200"
                           disabled={(field.value ?? 1) >= 20}
                           data-testid="button-seats-plus"
                         >
                           <Plus className="w-4 h-4" />
                         </button>
-                        <span className="text-xs text-slate-500 ml-1">{L.registration.seatsHelp}</span>
+                        <span className="text-xs text-slate-500 ml-1">
+                          {page.registration.seatsHelp}
+                        </span>
                       </div>
                       <FormMessage />
                     </FormItem>
@@ -434,12 +787,12 @@ function RegistrationDialog({
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className="text-sm font-medium text-slate-700">
-                          {L.registration.nameLabel}
+                          {page.registration.nameLabel}
                         </FormLabel>
                         <FormControl>
                           <Input
                             {...field}
-                            placeholder={L.registration.namePlaceholder}
+                            placeholder={page.registration.namePlaceholder}
                             className="bg-white border-slate-200"
                             autoComplete="name"
                             data-testid="input-registration-name"
@@ -455,12 +808,12 @@ function RegistrationDialog({
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className="text-sm font-medium text-slate-700">
-                          {L.registration.organizationLabel}
+                          {page.registration.organizationLabel}
                         </FormLabel>
                         <FormControl>
                           <Input
                             {...field}
-                            placeholder={L.registration.organizationPlaceholder}
+                            placeholder={page.registration.organizationPlaceholder}
                             className="bg-white border-slate-200"
                             autoComplete="organization"
                             data-testid="input-registration-organization"
@@ -476,13 +829,13 @@ function RegistrationDialog({
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className="text-sm font-medium text-slate-700">
-                          {L.registration.emailLabel}
+                          {page.registration.emailLabel}
                         </FormLabel>
                         <FormControl>
                           <Input
                             {...field}
                             type="email"
-                            placeholder={L.registration.emailPlaceholder}
+                            placeholder={page.registration.emailPlaceholder}
                             className="bg-white border-slate-200"
                             autoComplete="email"
                             data-testid="input-registration-email"
@@ -498,13 +851,13 @@ function RegistrationDialog({
                     render={({ field }) => (
                       <FormItem>
                         <FormLabel className="text-sm font-medium text-slate-700">
-                          {L.registration.phoneLabel}
+                          {page.registration.phoneLabel}
                         </FormLabel>
                         <FormControl>
                           <Input
                             {...field}
                             type="tel"
-                            placeholder={L.registration.phonePlaceholder}
+                            placeholder={page.registration.phonePlaceholder}
                             className="bg-white border-slate-200"
                             autoComplete="tel"
                             data-testid="input-registration-phone"
@@ -534,13 +887,18 @@ function RegistrationDialog({
 
                 <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 flex items-center justify-between">
                   <div>
-                    <div className="text-sm text-slate-500">{L.registration.totalLabel}</div>
-                    <div className="text-2xl font-bold text-slate-900" data-testid="text-registration-total">
+                    <div className="text-sm text-slate-500">
+                      {page.registration.totalLabel}
+                    </div>
+                    <div
+                      className="text-2xl font-bold text-slate-900"
+                      data-testid="text-registration-total"
+                    >
                       {formatDkk(total)}
                     </div>
                   </div>
                   <div className="text-right text-xs text-slate-500 max-w-[55%]">
-                    {L.registration.invoiceNote}
+                    {page.registration.invoiceNote}
                   </div>
                 </div>
 
@@ -559,7 +917,7 @@ function RegistrationDialog({
                           />
                         </FormControl>
                         <FormLabel className="text-sm text-slate-700 leading-snug !mt-0 cursor-pointer">
-                          {L.registration.acknowledgeLabel}
+                          {page.registration.acknowledgeLabel}
                         </FormLabel>
                       </div>
                       <FormMessage />
@@ -573,10 +931,14 @@ function RegistrationDialog({
                   className="w-full py-5 text-base font-medium bg-teal-700 hover:bg-teal-800 text-white"
                   data-testid="button-registration-submit"
                 >
-                  {mutation.isPending ? L.registration.submitting : L.registration.submit}
+                  {mutation.isPending
+                    ? page.registration.submitting
+                    : page.registration.submit}
                 </Button>
                 {mutation.isError && (
-                  <p className="text-sm text-red-600 text-center">{L.registration.error}</p>
+                  <p className="text-sm text-red-600 text-center">
+                    {page.registration.error}
+                  </p>
                 )}
               </form>
             </Form>
@@ -594,16 +956,16 @@ function HeroSection({ onOpenBooking }: { onOpenBooking: () => void }) {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-x-14 lg:gap-y-12 items-start">
           <div className="space-y-5 lg:col-start-1 lg:row-start-1">
             <p className="text-sm font-medium text-teal-700 tracking-wide">
-              {t.hero.eyebrow}
+              {page.hero.eyebrow}
             </p>
             <h1 className="text-3xl sm:text-4xl lg:text-[2.6rem] font-bold text-slate-900 leading-tight">
-              {t.hero.heading}
+              {page.hero.heading}
             </h1>
             <p className="text-lg text-slate-600 leading-relaxed">
-              {t.hero.subheading}
+              {page.hero.subheading}
             </p>
             <ul className="space-y-2.5 text-slate-700">
-              {t.hero.bullets.map((bullet) => (
+              {page.hero.bullets.map((bullet) => (
                 <li key={bullet} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
                   <span>{bullet}</span>
@@ -612,9 +974,9 @@ function HeroSection({ onOpenBooking }: { onOpenBooking: () => void }) {
             </ul>
             <div className="grid grid-cols-3 gap-2 sm:gap-3 pt-2">
               {[
-                { icon: Clock, ...t.featureCards[0] },
-                { icon: Users, ...t.featureCards[1] },
-                { icon: ShieldCheck, ...t.featureCards[2] },
+                { icon: Clock, ...page.hero.featureCards[0] },
+                { icon: Users, ...page.hero.featureCards[1] },
+                { icon: ShieldCheck, ...page.hero.featureCards[2] },
               ].map((card, i) => {
                 const Icon = card.icon;
                 return (
@@ -641,33 +1003,43 @@ function HeroSection({ onOpenBooking }: { onOpenBooking: () => void }) {
                 className="inline-flex items-center justify-center px-5 py-3 bg-teal-700 hover:bg-teal-800 text-white font-medium rounded-lg transition-colors text-sm"
                 data-testid="button-primary-cta"
               >
-                {L.ctaLabel} <ArrowRight className="w-4 h-4 ml-2" />
+                {page.cta.book} <ArrowRight className="w-4 h-4 ml-2" />
               </button>
               <a
                 href="#contact-form"
                 className="inline-flex items-center justify-center px-5 py-3 bg-white border border-slate-300 hover:border-teal-600 hover:text-teal-700 text-slate-700 font-medium rounded-lg transition-colors text-sm"
                 data-testid="button-write-inquiry"
               >
-                {t.ctaButtons.primary} <Mail className="w-4 h-4 ml-2" />
+                {page.cta.write} <Mail className="w-4 h-4 ml-2" />
               </a>
             </div>
           </div>
-          <TrustStripInline />
+          <WorkshopFitInline />
           <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-6 sm:p-7 lg:col-start-2 lg:row-start-1">
             <div className="mb-5">
               <h3 className="text-lg font-bold text-slate-900 leading-tight">
-                Skriva til mín her
+                {page.hero.contactTitle}
               </h3>
-              <p>ella skriva til: info@vitlikisstovan.fo</p>
+              <p className="text-sm text-slate-600 leading-relaxed mt-2">
+                {page.hero.contactBody}
+              </p>
             </div>
             <WorkshopContactFormComponent id="contact-form" />
             <div className="mt-5 pt-4 border-t border-slate-100 text-center">
-              <p className="text-sm text-slate-500 mb-1.5">{t.hero.directContact}</p>
+              <p className="text-sm text-slate-500 mb-1.5">
+                {page.hero.directContact}
+              </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 text-sm">
-                <a href={`mailto:${siteConfig.contact.email}`} className="text-teal-700 hover:underline flex items-center gap-1.5">
+                <a
+                  href={`mailto:${siteConfig.contact.email}`}
+                  className="text-teal-700 hover:underline flex items-center gap-1.5"
+                >
                   <Mail className="w-3.5 h-3.5" /> {siteConfig.contact.email}
                 </a>
-                <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`} className="text-teal-700 hover:underline flex items-center gap-1.5">
+                <a
+                  href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
+                  className="text-teal-700 hover:underline flex items-center gap-1.5"
+                >
                   <Phone className="w-3.5 h-3.5" /> {siteConfig.contact.phone}
                 </a>
               </div>
@@ -679,215 +1051,30 @@ function HeroSection({ onOpenBooking }: { onOpenBooking: () => void }) {
   );
 }
 
-type TestimonialQuote = {
-  quote: string;
-  name: string;
-  role: string;
-  org: string;
-};
-
-function TestimonialMarquee({ quotes }: { quotes: readonly TestimonialQuote[] }) {
-  const wrapRef = useRef<HTMLDivElement>(null);
-  const trackRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const wrap = wrapRef.current;
-    const track = trackRef.current;
-    if (!wrap || !track) return;
-
-    let third = 0;
-    let offset = 0;
-
-    const apply = () => {
-      track.style.transform = `translate3d(${-offset}px, 0, 0)`;
-    };
-
-    const measure = () => {
-      const newThird = track.scrollWidth / 3;
-      if (newThird <= 0) return;
-      if (third === 0) {
-        offset = newThird;
-      } else {
-        const ratio = newThird / third;
-        offset *= ratio;
-        if (isDragging) dragStartOffset *= ratio;
-      }
-      third = newThird;
-      apply();
-    };
-
-    measure();
-    const ro = new ResizeObserver(measure);
-    ro.observe(track);
-
-    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-    const speed = 14;
-    const pauseAfterInteraction = 3500;
-    let pausedUntil = 0;
-    let lastTime = performance.now();
-    let raf = 0;
-    let isDragging = false;
-    let dragStartX = 0;
-    let dragStartOffset = 0;
-    let activePointerId: number | null = null;
-
-    const wrapOffset = () => {
-      if (third <= 0) return;
-      if (offset >= third * 2) offset -= third;
-      else if (offset < 0) offset += third;
-    };
-
-    const tick = (now: number) => {
-      const dt = Math.min((now - lastTime) / 1000, 0.1);
-      lastTime = now;
-      if (!reduceMotion && !isDragging && now >= pausedUntil && third > 0) {
-        offset += speed * dt;
-        wrapOffset();
-        apply();
-      }
-      raf = requestAnimationFrame(tick);
-    };
-
-    const onPointerDown = (e: PointerEvent) => {
-      if (e.pointerType === "mouse" && e.button !== 0) return;
-      isDragging = true;
-      activePointerId = e.pointerId;
-      dragStartX = e.clientX;
-      dragStartOffset = offset;
-      pausedUntil = performance.now() + pauseAfterInteraction;
-      try { wrap.setPointerCapture(e.pointerId); } catch {}
-    };
-
-    const onPointerMove = (e: PointerEvent) => {
-      if (!isDragging || e.pointerId !== activePointerId) return;
-      const dx = e.clientX - dragStartX;
-      offset = dragStartOffset - dx;
-      if (third > 0) {
-        if (offset >= third * 2) {
-          offset -= third;
-          dragStartOffset -= third;
-        } else if (offset < 0) {
-          offset += third;
-          dragStartOffset += third;
-        }
-      }
-      apply();
-    };
-
-    const endDrag = (e: PointerEvent) => {
-      if (e.pointerId !== activePointerId) return;
-      isDragging = false;
-      activePointerId = null;
-      pausedUntil = performance.now() + pauseAfterInteraction;
-      try { wrap.releasePointerCapture(e.pointerId); } catch {}
-    };
-
-    const onWheel = (e: WheelEvent) => {
-      if (isDragging) return;
-      const dx = Math.abs(e.deltaX) > Math.abs(e.deltaY) ? e.deltaX : 0;
-      if (dx === 0) return;
-      e.preventDefault();
-      offset += dx;
-      wrapOffset();
-      apply();
-      pausedUntil = performance.now() + pauseAfterInteraction;
-    };
-
-    const onVisibility = () => {
-      lastTime = performance.now();
-    };
-
-    wrap.addEventListener("pointerdown", onPointerDown);
-    wrap.addEventListener("pointermove", onPointerMove);
-    wrap.addEventListener("pointerup", endDrag);
-    wrap.addEventListener("pointercancel", endDrag);
-    window.addEventListener("pointerup", endDrag);
-    window.addEventListener("pointercancel", endDrag);
-    wrap.addEventListener("wheel", onWheel, { passive: false });
-    document.addEventListener("visibilitychange", onVisibility);
-
-    raf = requestAnimationFrame(tick);
-
-    return () => {
-      cancelAnimationFrame(raf);
-      wrap.removeEventListener("pointerdown", onPointerDown);
-      wrap.removeEventListener("pointermove", onPointerMove);
-      wrap.removeEventListener("pointerup", endDrag);
-      wrap.removeEventListener("pointercancel", endDrag);
-      window.removeEventListener("pointerup", endDrag);
-      window.removeEventListener("pointercancel", endDrag);
-      wrap.removeEventListener("wheel", onWheel);
-      document.removeEventListener("visibilitychange", onVisibility);
-      ro.disconnect();
-    };
-  }, [quotes]);
-
-  return (
-    <div className="md:hidden -mx-4 sm:-mx-6 [mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_5%,black_95%,transparent)]">
-      <div
-        ref={wrapRef}
-        className="overflow-hidden touch-pan-y select-none cursor-grab active:cursor-grabbing"
-      >
-        <div ref={trackRef} className="flex w-max will-change-transform">
-          {[0, 1, 2].map((copy) => (
-            <div
-              key={copy}
-              className="flex gap-3 pr-3 shrink-0"
-              aria-hidden={copy !== 0 ? true : undefined}
-            >
-              {quotes.map((item, i) => (
-                <div
-                  key={i}
-                  className="bg-white border border-slate-200 rounded-lg p-3 w-[80vw] sm:w-[55vw] shrink-0"
-                >
-                  <p className="text-[13px] text-slate-700 leading-snug mb-1.5">
-                    "{item.quote}"
-                  </p>
-                  <p className="text-[11px] text-slate-500">
-                    <span className="font-semibold text-slate-800">{item.name}</span>, {item.role} · {item.org}
-                  </p>
-                </div>
-              ))}
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function TrustStripInline() {
+function WorkshopFitInline() {
   return (
     <div className="lg:col-span-2 lg:row-start-2">
-      <div className="text-center mb-5">
+      <div className="text-center mb-6">
         <span className="inline-block bg-teal-100 text-teal-800 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider mb-3">
-          Kunda viðmerkingar
+          {page.fit.eyebrow}
         </span>
-        <h2 className="text-xl font-bold text-slate-900 leading-tight mb-3">
-          {t.trustStrip.heading}
+        <h2 className="text-xl sm:text-2xl font-bold text-slate-900 leading-tight mb-3">
+          {page.fit.heading}
         </h2>
-        <div className="flex items-center justify-center gap-2">
-          <div className="h-px bg-slate-300 w-10" />
-          {Array.from({ length: 5 }).map((_, i) => (
-            <Star key={i} className="w-3 h-3 text-amber-400" strokeWidth={1.5} fill="none" />
-          ))}
-          <div className="h-px bg-slate-300 w-10" />
-        </div>
+        <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-3xl mx-auto">
+          {page.fit.body}
+        </p>
       </div>
-      <TestimonialMarquee quotes={t.trustStrip.quotes} />
-      <div className="hidden md:grid md:grid-cols-2 gap-2">
-        {t.trustStrip.quotes.map((item, i) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+        {page.fit.cards.map((item) => (
           <div
-            key={i}
-            className="bg-white border border-slate-200 rounded-lg p-3"
+            key={item.title}
+            className="bg-white border border-slate-200 rounded-lg p-4"
           >
-            <p className="text-[13px] text-slate-700 leading-snug mb-1.5">
-              "{item.quote}"
-            </p>
-            <p className="text-[11px] text-slate-500">
-              <span className="font-semibold text-slate-800">{item.name}</span>, {item.role} · {item.org}
-            </p>
+            <h3 className="font-semibold text-slate-900 text-sm mb-1.5">
+              {item.title}
+            </h3>
+            <p className="text-xs text-slate-600 leading-relaxed">{item.text}</p>
           </div>
         ))}
       </div>
@@ -900,17 +1087,53 @@ function RelevanceSection() {
     <section className="py-14 md:py-18 px-4 sm:px-6 bg-slate-50">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 text-center leading-snug">
-          {t.relevance.heading}
+          {page.relevance.heading}
         </h2>
         <p className="text-slate-600 leading-relaxed text-center mb-8">
-          {t.relevance.body}
+          {page.relevance.body}
         </p>
         <div className="space-y-3">
-          {t.relevance.points.map((point) => (
-            <div key={point} className="flex items-start gap-3 bg-white rounded-lg p-4 border border-slate-200">
+          {page.relevance.points.map((point) => (
+            <div
+              key={point}
+              className="flex items-start gap-3 bg-white rounded-lg p-4 border border-slate-200"
+            >
               <CheckCircle2 className="w-5 h-5 text-teal-600 flex-shrink-0 mt-0.5" />
               <span className="text-slate-700">{point}</span>
             </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function SixStepSection() {
+  return (
+    <section className="py-14 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-slate-50 to-white">
+      <div className="max-w-4xl mx-auto">
+        <div className="text-center mb-10">
+          <span className="inline-block bg-teal-100 text-teal-800 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider mb-3">
+            {page.steps.eyebrow}
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 leading-snug">
+            {page.steps.heading}
+          </h2>
+          <p className="text-slate-600 leading-relaxed max-w-2xl mx-auto">
+            {page.steps.subheading}
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+          {page.steps.items.map((item, i) => (
+            <Card key={item.title} className="border-slate-200 bg-white">
+              <CardContent className="p-5">
+                <div className="w-8 h-8 rounded-full bg-teal-100 text-teal-800 font-bold text-sm flex items-center justify-center mb-4">
+                  {i + 1}
+                </div>
+                <h3 className="font-semibold text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">{item.text}</p>
+              </CardContent>
+            </Card>
           ))}
         </div>
       </div>
@@ -923,10 +1146,10 @@ function OutcomesSection() {
     <section className="py-14 md:py-18 px-4 sm:px-6 bg-white">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-10 text-center">
-          {t.outcomes.heading}
+          {page.outcomes.heading}
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-          {t.outcomes.items.map((item) => (
+          {page.outcomes.items.map((item) => (
             <Card key={item.title} className="border-slate-200">
               <CardContent className="p-5">
                 <h3 className="font-semibold text-slate-900 mb-2">{item.title}</h3>
@@ -945,13 +1168,13 @@ function ContentSection() {
     <section className="py-14 md:py-18 px-4 sm:px-6 bg-slate-50">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-4 text-center">
-          {t.content.heading}
+          {page.content.heading}
         </h2>
         <p className="text-slate-600 text-center mb-10 max-w-2xl mx-auto leading-relaxed">
-          {t.content.subheading}
+          {page.content.subheading}
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-10">
-          {t.content.blocks.map((item) => (
+          {page.content.blocks.map((item) => (
             <Card key={item.title} className="border-slate-200 bg-white">
               <CardContent className="p-5">
                 <h3 className="font-semibold text-slate-900 mb-2">{item.title}</h3>
@@ -962,7 +1185,7 @@ function ContentSection() {
         </div>
         <div className="bg-white rounded-lg border border-slate-200 p-5">
           <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-3 text-sm text-slate-600">
-            {t.content.facts.map((fact, i) => (
+            {page.content.facts.map((fact, i) => (
               <span key={i} className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal-600" />
                 {fact}
@@ -975,75 +1198,20 @@ function ContentSection() {
   );
 }
 
-function SocialProofSection() {
-  const getInitials = (name: string) => name.split(" ").map(n => n[0]).join("");
-  const accentColors = [
-    "bg-teal-600 text-white",
-    "bg-slate-700 text-white",
-    "bg-teal-500 text-white",
-  ];
-
-  return (
-    <section className="py-14 md:py-20 px-4 sm:px-6 bg-gradient-to-b from-slate-50 to-white">
-      <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-12 text-center">
-          {t.socialProof.heading}
-        </h2>
-        <Card className="border-teal-100 bg-white shadow-md mb-8 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-1 h-full bg-teal-500" />
-          <CardContent className="p-6 sm:p-10">
-            <span className="text-5xl leading-none text-teal-300 font-serif select-none" aria-hidden="true">"</span>
-            <p className="text-lg sm:text-xl text-slate-700 leading-relaxed mb-6 italic -mt-4 pl-2">
-              {t.socialProof.featured.quote}
-            </p>
-            <div className="flex items-center gap-3 pl-2">
-              <div className="w-10 h-10 rounded-full bg-teal-600 text-white flex items-center justify-center font-semibold text-sm shrink-0">
-                {getInitials(t.socialProof.featured.name)}
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-slate-800">{t.socialProof.featured.name}</p>
-                <p className="text-xs text-slate-500">{t.socialProof.featured.role} · {t.socialProof.featured.org}</p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5">
-          {t.socialProof.smaller.map((item, i) => (
-            <Card key={i} className="border-slate-200 bg-white shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
-              <div className="absolute top-0 left-0 w-1 h-full bg-slate-200" />
-              <CardContent className="p-5">
-                <span className="text-3xl leading-none text-slate-200 font-serif select-none" aria-hidden="true">"</span>
-                <p className="text-sm text-slate-600 leading-relaxed mb-4 italic -mt-2">
-                  {item.quote}
-                </p>
-                <div className="flex items-center gap-2.5">
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center font-semibold text-xs shrink-0 ${accentColors[i % accentColors.length]}`}>
-                    {getInitials(item.name)}
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-slate-800">{item.name}</p>
-                    <p className="text-xs text-slate-500">{item.role} · {item.org}</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 function FAQSection() {
   return (
     <section className="py-14 md:py-18 px-4 sm:px-6 bg-slate-50">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-8 text-center">
-          {t.faq.heading}
+          {page.faq.heading}
         </h2>
         <Accordion type="single" collapsible className="space-y-2">
-          {t.faq.items.map((faq, i) => (
-            <AccordionItem key={i} value={`faq-${i}`} className="bg-white border border-slate-200 rounded-lg px-5 data-[state=open]:shadow-sm">
+          {page.faq.items.map((faq, i) => (
+            <AccordionItem
+              key={i}
+              value={`faq-${i}`}
+              className="bg-white border border-slate-200 rounded-lg px-5 data-[state=open]:shadow-sm"
+            >
               <AccordionTrigger className="text-left text-sm font-medium text-slate-900 hover:no-underline py-4">
                 {faq.q}
               </AccordionTrigger>
@@ -1063,10 +1231,10 @@ function FinalCTASection({ onOpenBooking }: { onOpenBooking: () => void }) {
     <section className="bg-slate-900 text-white py-14 md:py-18 px-4 sm:px-6">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-2xl sm:text-3xl font-bold mb-4 leading-snug">
-          {L.finalCta.heading}
+          {page.finalCta.heading}
         </h2>
         <p className="text-slate-300 mb-8 leading-relaxed">
-          {L.finalCta.body}
+          {page.finalCta.body}
         </p>
         <button
           type="button"
@@ -1074,24 +1242,40 @@ function FinalCTASection({ onOpenBooking }: { onOpenBooking: () => void }) {
           className="inline-flex items-center justify-center px-7 py-3.5 bg-teal-600 hover:bg-teal-500 text-white font-medium rounded-lg transition-colors"
           data-testid="button-final-cta"
         >
-          {L.finalCta.ctaButton}
+          {page.finalCta.ctaButton}
         </button>
-        <p className="text-sm text-slate-400 mt-6">{t.finalCta.directContact}</p>
+        <p className="text-sm text-slate-400 mt-6">
+          {page.finalCta.directContact}
+        </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-2 text-sm text-slate-400">
-          <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-white transition-colors flex items-center gap-1.5">
+          <a
+            href={`mailto:${siteConfig.contact.email}`}
+            className="hover:text-white transition-colors flex items-center gap-1.5"
+          >
             <Mail className="w-3.5 h-3.5" /> {siteConfig.contact.email}
           </a>
-          <a href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`} className="hover:text-white transition-colors flex items-center gap-1.5">
+          <a
+            href={`tel:${siteConfig.contact.phone.replace(/\s+/g, "")}`}
+            className="hover:text-white transition-colors flex items-center gap-1.5"
+          >
             <Phone className="w-3.5 h-3.5" /> {siteConfig.contact.phone}
           </a>
         </div>
-        <p className="text-xs text-slate-500 mt-4">{t.finalCta.reassurance}</p>
+        <p className="text-xs text-slate-500 mt-4">
+          {page.finalCta.reassurance}
+        </p>
       </div>
     </section>
   );
 }
 
-function StickyBanner({ onOpenBooking, onWrite }: { onOpenBooking: () => void; onWrite: () => void }) {
+function StickyBanner({
+  onOpenBooking,
+  onWrite,
+}: {
+  onOpenBooking: () => void;
+  onWrite: () => void;
+}) {
   const [visible, setVisible] = useState(false);
   const [dismissed, setDismissed] = useState(false);
   const tel = siteConfig.contact.phone.replace(/\s+/g, "");
@@ -1125,7 +1309,7 @@ function StickyBanner({ onOpenBooking, onWrite }: { onOpenBooking: () => void; o
         className="pointer-events-auto relative mx-auto max-w-5xl rounded-2xl bg-teal-700 text-white shadow-2xl ring-1 ring-black/5"
         data-testid="sticky-banner"
         role="region"
-        aria-label={L.stickyBanner.title}
+        aria-label={page.stickyBanner.title}
       >
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 p-4 sm:p-5">
           <div className="flex items-start sm:items-center gap-3 flex-1 min-w-0">
@@ -1134,10 +1318,10 @@ function StickyBanner({ onOpenBooking, onWrite }: { onOpenBooking: () => void; o
             </div>
             <div className="min-w-0 flex-1">
               <p className="font-semibold text-base sm:text-lg leading-tight">
-                {L.stickyBanner.title}
+                {page.stickyBanner.title}
               </p>
               <p className="hidden sm:block text-sm text-white/85 mt-0.5">
-                {L.stickyBanner.subtitle}
+                {page.stickyBanner.subtitle}
               </p>
             </div>
           </div>
@@ -1148,7 +1332,7 @@ function StickyBanner({ onOpenBooking, onWrite }: { onOpenBooking: () => void; o
               className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-white text-teal-800 hover:bg-teal-50 font-medium text-sm transition-colors"
               data-testid="button-banner-book"
             >
-              {L.stickyBanner.bookButton}
+              {page.stickyBanner.bookButton}
               <CalendarIcon className="w-4 h-4" />
             </button>
             <button
@@ -1158,7 +1342,7 @@ function StickyBanner({ onOpenBooking, onWrite }: { onOpenBooking: () => void; o
               data-testid="button-banner-write"
             >
               <Mail className="w-4 h-4" />
-              {L.stickyBanner.writeButton}
+              {page.stickyBanner.writeButton}
             </button>
             <a
               href={`tel:${tel}`}
@@ -1166,14 +1350,14 @@ function StickyBanner({ onOpenBooking, onWrite }: { onOpenBooking: () => void; o
               data-testid="link-banner-call"
             >
               <Phone className="w-4 h-4" />
-              {L.stickyBanner.callButton} {siteConfig.contact.phone}
+              {page.stickyBanner.callButton} {siteConfig.contact.phone}
             </a>
           </div>
           <button
             type="button"
             onClick={() => setDismissed(true)}
             className="absolute top-2 right-2 sm:static sm:ml-1 flex-shrink-0 p-1.5 rounded-full text-white/70 hover:text-white hover:bg-white/10 transition-colors"
-            aria-label={L.stickyBanner.dismiss}
+            aria-label={page.stickyBanner.dismiss}
             data-testid="button-banner-dismiss"
           >
             <X className="w-4 h-4" />
@@ -1201,9 +1385,9 @@ function MinimalHeader() {
         document.execCommand("copy");
         document.body.removeChild(ta);
       }
-      toast({ title: t.header.numberCopied });
+      toast({ title: page.header.numberCopied });
     } catch {
-      toast({ title: t.header.numberCopied });
+      toast({ title: page.header.numberCopied });
     }
   };
   return (
@@ -1224,7 +1408,7 @@ function MinimalHeader() {
           data-testid="button-copy-number"
         >
           <Phone className="w-3.5 h-3.5" />
-          <span className="hidden sm:inline">{t.header.callNow} </span>
+          <span className="hidden sm:inline">{page.header.callNow} </span>
           <span>{siteConfig.contact.phone}</span>
         </button>
       </div>
@@ -1243,7 +1427,7 @@ export default function AIWorkshopLanding() {
       <HeroSection onOpenBooking={() => setRegistrationOpen(true)} />
       <RegistrationDialog open={registrationOpen} onOpenChange={setRegistrationOpen} />
       <RelevanceSection />
-      <SocialProofSection />
+      <SixStepSection />
       <OutcomesSection />
       <ContentSection />
       <FAQSection />
