@@ -46,9 +46,9 @@ Edit `client/src/content/site.ts` and replace the placeholders in
 ```ts
 ritlingurForm: {
   formResponseUrl:
-    "https://docs.google.com/forms/d/e/<FORM_ID>/formResponse",
-  entryEmail: "entry.<EMAIL_ENTRY_ID>",
-  entryConsent: "entry.<CONSENT_ENTRY_ID>",
+    "https://docs.google.com/forms/d/e/1FAIpQLSdXeEtAgFI0R1y1_HqILhMcH23_p71cVOHM4IfkkHt5H9s1Yw/formResponse",
+  entryEmail: "entry.1973475723",
+  entryConsent: "entry.1767828470",
   consentYesValue: "Ja",
   consentNoValue: "Nei",
   pdfDownloadUrl: "/seks-stig-til-goda-vitlikisnytslu.pdf",

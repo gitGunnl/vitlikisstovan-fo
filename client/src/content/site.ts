@@ -407,11 +407,7 @@ export const siteConfig = {
   // Google Form using the same no-cors pattern as the contact form. The
   // visitor receives the PDF via a Google Apps Script trigger bound to this
   // form. See docs/ritlingur/google-form-setup.md for the full setup.
-  //
-  // Replace the placeholders below with the real Google Form values once the
-  // form is created. Until then, submissions are silently dropped by Google
-  // because the form ID is invalid — that's intentional so we don't leak
-  // leads to the wrong form during setup.
+
   ritlingurForm: {
     formResponseUrl:
       "https://docs.google.com/forms/d/e/1FAIpQLSdXeEtAgFI0R1y1_HqILhMcH23_p71cVOHM4IfkkHt5H9s1Yw/formResponse",
