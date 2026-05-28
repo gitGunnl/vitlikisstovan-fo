@@ -17,9 +17,6 @@ apiApp.use(createBookingRouter());
 const { createWorkshopRegistrationRouter } = await import('./workshop-registration-api.js');
 apiApp.use(createWorkshopRegistrationRouter());
 
-const { createRitlingurRouter } = await import('./ritlingur-api.js');
-apiApp.use(createRitlingurRouter());
-
 const { startScheduler } = await import('./monitoring.js');
 startScheduler();
 

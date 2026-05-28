@@ -23,6 +23,8 @@ import {
 } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 import { ritlingurRequestSchema, type RitlingurRequest } from "@shared/schema";
+import { siteConfig } from "@/content/site";
+import { reportFormFailure } from "@/lib/reportFormFailure";
 import {
   AlertTriangle,
   ArrowRight,
@@ -172,28 +174,44 @@ function RitlingurForm({ onSuccess }: { onSuccess: () => void }) {
 
   const mutation = useMutation({
     mutationFn: async (data: RitlingurRequest) => {
-      const res = await fetch("/api/ritlingur", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      if (!res.ok) {
-        const body = await res.json().catch(() => ({}));
-        throw new Error(body?.error || `Request failed (${res.status})`);
+      // Honeypot — silently no-op for bots so we don't leak fake leads
+      // to the Google Form.
+      if (data.website && data.website.length > 0) {
+        return { success: true };
       }
-      return res.json();
+
+      const cfg = siteConfig.ritlingurForm;
+      const formData = new FormData();
+      formData.append(cfg.entryEmail, data.email);
+      formData.append(
+        cfg.entryConsent,
+        data.consent ? cfg.consentYesValue : cfg.consentNoValue,
+      );
+
+      try {
+        await fetch(cfg.formResponseUrl, {
+          method: "POST",
+          body: formData,
+          mode: "no-cors",
+          signal: AbortSignal.timeout(10000),
+        });
+      } catch (err) {
+        reportFormFailure("landsnet-ritlingur", err);
+        throw err;
+      }
+
+      // no-cors → opaque response. Treat a non-thrown fetch as success.
+      return { success: true };
     },
     onSuccess: () => {
       form.reset();
       onSuccess();
     },
-    onError: (err: Error) => {
+    onError: () => {
       toast({
         title: "Okkurt fór skeivt",
         description:
-          err.message === "Too many requests"
-            ? "Ov nógvar umbønir á stuttari tíð. Royn aftur eftir eitt sindur."
-            : "Vit kundu ikki taka ímóti umbønini júst nú. Royn aftur ella send teldupost til info@vitlikisstovan.fo.",
+          "Vit kundu ikki taka ímóti umbønini júst nú. Royn aftur ella send teldupost til info@vitlikisstovan.fo.",
         variant: "destructive",
       });
     },
@@ -405,8 +423,24 @@ function RitlingurDialog({
               className="mt-3 text-base"
               style={{ color: c.inkBody }}
             >
-              Hygg eftir í tínum innbakka. Hann kemur um fáar minuttir.
+              Hygg eftir í tínum innbakka — hann kemur um fáar minuttir. Tú
+              kanst eisini taka ritlingin niður beinanvegin her:
             </p>
+            <a
+              href={siteConfig.ritlingurForm.pdfDownloadUrl}
+              download
+              onClick={() =>
+                trackEvent("workshop_cta_clicked", {
+                  location: "success_dialog_download",
+                })
+              }
+              className="mt-5 inline-flex items-center justify-center rounded-md px-5 py-3 text-base font-medium transition-colors"
+              style={{ background: c.accent, color: "#fff" }}
+              data-testid="ritlingur-download"
+            >
+              Tak ritlingin niður (PDF)
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </a>
             <a
               href="/leidslu-verkstova"
               onClick={() =>

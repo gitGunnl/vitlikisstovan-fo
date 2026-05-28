@@ -2,6 +2,14 @@ export const CLIENT_FORM_SOURCES = [
   "contact-section",
   "inline-contact",
   "workshop-landing",
+  // Ritlingur lead-magnet form on /landsnet. Posts to its own dedicated
+  // Google Form (configured by the operator — see
+  // docs/ritlingur/google-form-setup.md). Not yet listed in
+  // MONITORED_FORMS because the form URL is a placeholder until the
+  // operator wires up the real form; once that's done, add a second
+  // MonitoredForm entry here mapping "landsnet-ritlingur" to it so
+  // beacons can corroborate server-side health checks.
+  "landsnet-ritlingur",
 ] as const;
 
 export type ClientFormSource = (typeof CLIENT_FORM_SOURCES)[number];

@@ -403,6 +403,25 @@ export const siteConfig = {
     politiciansPdfUrl: "#"
   },
 
+  // Ritlingur (landsnet PDF lead magnet) — submitted directly to a dedicated
+  // Google Form using the same no-cors pattern as the contact form. The
+  // visitor receives the PDF via a Google Apps Script trigger bound to this
+  // form. See docs/ritlingur/google-form-setup.md for the full setup.
+  //
+  // Replace the placeholders below with the real Google Form values once the
+  // form is created. Until then, submissions are silently dropped by Google
+  // because the form ID is invalid — that's intentional so we don't leak
+  // leads to the wrong form during setup.
+  ritlingurForm: {
+    formResponseUrl:
+      "https://docs.google.com/forms/d/e/REPLACE_WITH_RITLINGUR_FORM_ID/formResponse",
+    entryEmail: "entry.REPLACE_WITH_EMAIL_ENTRY_ID",
+    entryConsent: "entry.REPLACE_WITH_CONSENT_ENTRY_ID",
+    consentYesValue: "Ja",
+    consentNoValue: "Nei",
+    pdfDownloadUrl: "/seks-stig-til-goda-vitlikisnytslu.pdf",
+  },
+
   // NOTE: SEO data has moved to client/src/content/seo/*.seo.ts (auto-discovered
   // by scripts/prerender-seo.ts). Adding entries here has no effect.
   _seoPages_DEPRECATED: {
