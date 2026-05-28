@@ -271,12 +271,15 @@ function RegistrationDialog({
       acknowledgedInvoice: false as unknown as true,
       website: "",
     },
-    mode: "onTouched",
+    mode: "onChange",
   });
 
   const [submitted, setSubmitted] = useState(false);
-  const seats = form.watch("seats") ?? 1;
+  const watched = form.watch();
+  const seats = watched.seats ?? 1;
   const total = seats * WORKSHOP_REGISTRATION_PRICE_DKK;
+  const isValid =
+    workshopRegistrationSchema.safeParse(watched).success;
 
   const mutation = useMutation({
     mutationFn: async (data: WorkshopRegistration) => {
@@ -566,7 +569,7 @@ function RegistrationDialog({
 
                 <Button
                   type="submit"
-                  disabled={mutation.isPending || form.watch("acknowledgedInvoice") !== true}
+                  disabled={mutation.isPending || !isValid}
                   className="w-full py-5 text-base font-medium bg-teal-700 hover:bg-teal-800 text-white"
                   data-testid="button-registration-submit"
                 >
