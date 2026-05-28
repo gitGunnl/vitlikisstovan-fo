@@ -26,6 +26,26 @@ export const bookingRequestSchema = z.object({
 
 export type BookingRequest = z.infer<typeof bookingRequestSchema>;
 
+export const WORKSHOP_REGISTRATION_DATES = ["2026-08-19", "2026-09-02"] as const;
+export const WORKSHOP_REGISTRATION_PRICE_DKK = 2599;
+
+export const workshopRegistrationSchema = z.object({
+  name: z.string().min(1, "Skriva títt navn").max(100),
+  organization: z.string().min(1, "Skriva navnið á fyritøkuni").max(200),
+  email: z.string().email("Vinarliga skriva ein gildigan teldupost"),
+  phone: z.string().min(5, "Skriva telefonnummar").max(30),
+  date: z.enum(WORKSHOP_REGISTRATION_DATES, {
+    errorMap: () => ({ message: "Vel ein dag" }),
+  }),
+  seats: z.number().int().min(1, "Í minsta lagi 1 seti").max(20, "Í mesta lagi 20 seti"),
+  acknowledgedInvoice: z.literal(true, {
+    errorMap: () => ({ message: "Tú mást samtykkja, at vit senda eina rokning" }),
+  }),
+  website: z.string().max(0).optional().default(""),
+});
+
+export type WorkshopRegistration = z.infer<typeof workshopRegistrationSchema>;
+
 export const ritlingurRequestSchema = z.object({
   email: z.string().email("Vinarliga skriva ein gildigan teldupost"),
   consent: z.boolean().optional().default(false),

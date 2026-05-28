@@ -20,10 +20,17 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { workshopContactFormSchema, type WorkshopContactForm } from "@shared/schema";
+import {
+  workshopContactFormSchema,
+  type WorkshopContactForm,
+  workshopRegistrationSchema,
+  type WorkshopRegistration,
+  WORKSHOP_REGISTRATION_PRICE_DKK,
+} from "@shared/schema";
 import { reportFormFailure } from "@/lib/reportFormFailure";
 import { siteConfig } from "@/content/site";
 import { workshopStrings as t } from "@/content/ai-workshop-strings";
+import { leidsluStrings as L } from "@/content/leidslu-verkstova-strings";
 import {
   Mail,
   Phone,
@@ -35,6 +42,8 @@ import {
   Users,
   ShieldCheck,
   Calendar as CalendarIcon,
+  Minus,
+  Plus,
   X,
 } from "lucide-react";
 import {
@@ -44,7 +53,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { bookingRequestSchema, type BookingRequest } from "@shared/schema";
+import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 
 function WorkshopContactFormComponent({ id }: { id?: string }) {
@@ -239,236 +248,335 @@ function WorkshopContactFormComponent({ id }: { id?: string }) {
   );
 }
 
-function hashString(s: string): number {
-  let h = 0;
-  for (let i = 0; i < s.length; i++) {
-    h = (h * 31 + s.charCodeAt(i)) | 0;
-  }
-  return Math.abs(h);
+function formatDkk(n: number): string {
+  return n.toLocaleString("da-DK") + " kr.";
 }
 
-function getNextWeekdays(count: number): Date[] {
-  const days: Date[] = [];
-  const d = new Date();
-  d.setHours(0, 0, 0, 0);
-  while (days.length < count) {
-    d.setDate(d.getDate() + 1);
-    const dow = d.getDay();
-    if (dow !== 0 && dow !== 6) days.push(new Date(d));
-  }
-  return days;
-}
-
-function isoDate(d: Date): string {
-  const y = d.getFullYear();
-  const m = String(d.getMonth() + 1).padStart(2, "0");
-  const day = String(d.getDate()).padStart(2, "0");
-  return `${y}-${m}-${day}`;
-}
-
-const BOOKING_SLOTS = [
-  "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
-  "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
-];
-
-function getTakenSlots(dateIso: string): Set<string> {
-  const taken = new Set<string>();
-  BOOKING_SLOTS.forEach((slot, i) => {
-    const h = hashString(`${dateIso}-${slot}-vitliki`);
-    if (h % 2 === 0) taken.add(slot);
-  });
-  return taken;
-}
-
-function BookingDialog({
+function RegistrationDialog({
   open,
   onOpenChange,
 }: {
   open: boolean;
   onOpenChange: (v: boolean) => void;
 }) {
-  const days = getNextWeekdays(14);
-  const [selectedDate, setSelectedDate] = useState<string>(isoDate(days[0]));
-  const [selectedTime, setSelectedTime] = useState<string | null>(null);
-  const [email, setEmail] = useState("");
-  const [errors, setErrors] = useState<{ email?: string; time?: string }>({});
-  const [submitted, setSubmitted] = useState(false);
+  const form = useForm<WorkshopRegistration>({
+    resolver: zodResolver(workshopRegistrationSchema),
+    defaultValues: {
+      name: "",
+      organization: "",
+      email: "",
+      phone: "",
+      date: L.registration.dateOptions[0].value,
+      seats: 1,
+      acknowledgedInvoice: false as unknown as true,
+      website: "",
+    },
+    mode: "onTouched",
+  });
 
-  const taken = getTakenSlots(selectedDate);
+  const [submitted, setSubmitted] = useState(false);
+  const seats = form.watch("seats") ?? 1;
+  const total = seats * WORKSHOP_REGISTRATION_PRICE_DKK;
 
   const mutation = useMutation({
-    mutationFn: async (data: BookingRequest) => {
-      const res = await fetch("/api/booking", {
+    mutationFn: async (data: WorkshopRegistration) => {
+      const res = await fetch("/api/workshop-registration", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
       });
-      if (!res.ok) throw new Error("Booking failed");
+      if (!res.ok) throw new Error("Registration failed");
       return res.json();
     },
     onSuccess: () => setSubmitted(true),
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const newErrors: { email?: string; time?: string } = {};
-    if (!selectedTime) newErrors.time = t.booking.selectSlotFirst;
-    const parsedEmail = bookingRequestSchema.shape.email.safeParse(email);
-    if (!parsedEmail.success) newErrors.email = parsedEmail.error.issues[0]?.message;
-    setErrors(newErrors);
-    if (Object.keys(newErrors).length > 0) return;
-    mutation.mutate({ email, date: selectedDate, time: selectedTime! });
-  };
-
   const handleOpenChange = (v: boolean) => {
     if (!v) {
       setTimeout(() => {
         setSubmitted(false);
-        setSelectedTime(null);
-        setEmail("");
-        setErrors({});
+        form.reset();
         mutation.reset();
       }, 200);
     }
     onOpenChange(v);
   };
 
+  const onSubmit = (values: WorkshopRegistration) => {
+    mutation.mutate(values);
+  };
+
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>
-      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto" data-testid="dialog-booking">
+      <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto" data-testid="dialog-registration">
         {submitted ? (
           <div className="py-6 text-center">
             <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-50 border border-green-200 mb-5">
               <CheckCircle2 className="w-7 h-7 text-green-600" />
             </div>
             <h3 className="text-xl font-semibold text-slate-900 mb-3">
-              {t.booking.successTitle}
+              {L.registration.successTitle}
             </h3>
             <p className="text-slate-600 leading-relaxed max-w-sm mx-auto mb-6">
-              {t.booking.successBody}
+              {L.registration.successBody}
             </p>
             <Button
               onClick={() => handleOpenChange(false)}
               className="bg-teal-700 hover:bg-teal-800 text-white"
-              data-testid="button-booking-close"
+              data-testid="button-registration-close"
             >
-              {t.booking.close}
+              {L.registration.close}
             </Button>
           </div>
         ) : (
           <>
             <DialogHeader>
-              <DialogTitle className="text-xl text-slate-900">{t.booking.title}</DialogTitle>
+              <DialogTitle className="text-xl text-slate-900">{L.registration.title}</DialogTitle>
               <DialogDescription className="text-slate-600">
-                {t.booking.subtitle}
+                {L.registration.subtitle}
               </DialogDescription>
             </DialogHeader>
-            <form onSubmit={handleSubmit} className="space-y-5 mt-2">
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  {t.booking.dateLabel}
-                </label>
-                <div className="flex gap-2 overflow-x-auto pb-2 -mx-1 px-1">
-                  {days.map((d) => {
-                    const iso = isoDate(d);
-                    const active = iso === selectedDate;
-                    return (
-                      <button
-                        key={iso}
-                        type="button"
-                        onClick={() => {
-                          setSelectedDate(iso);
-                          setSelectedTime(null);
-                          setErrors((e) => ({ ...e, time: undefined }));
-                        }}
-                        className={`flex-shrink-0 px-3 py-2 rounded-lg border text-sm transition-colors ${
-                          active
-                            ? "bg-teal-700 text-white border-teal-700"
-                            : "bg-white text-slate-700 border-slate-200 hover:border-teal-400"
-                        }`}
-                        data-testid={`button-date-${iso}`}
-                      >
-                        <div className="font-semibold">{t.booking.weekdays[d.getDay()]}</div>
-                        <div className="text-xs opacity-90">
-                          {d.getDate()}. {t.booking.months[d.getMonth()].slice(0, 3)}
-                        </div>
-                      </button>
-                    );
-                  })}
-                </div>
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  {t.booking.timeLabel}
-                </label>
-                <div className="grid grid-cols-3 sm:grid-cols-4 gap-2">
-                  {BOOKING_SLOTS.map((slot) => {
-                    const isTaken = taken.has(slot);
-                    const active = selectedTime === slot;
-                    return (
-                      <button
-                        key={slot}
-                        type="button"
-                        disabled={isTaken}
-                        onClick={() => {
-                          setSelectedTime(slot);
-                          setErrors((e) => ({ ...e, time: undefined }));
-                        }}
-                        className={`px-3 py-2.5 rounded-lg border text-sm font-medium transition-colors ${
-                          isTaken
-                            ? "bg-slate-50 text-slate-400 border-slate-200 cursor-not-allowed line-through"
-                            : active
-                            ? "bg-teal-700 text-white border-teal-700"
-                            : "bg-white text-slate-700 border-slate-200 hover:border-teal-400"
-                        }`}
-                        data-testid={`button-time-${slot}`}
-                      >
-                        {slot}
-                        {isTaken && (
-                          <div className="text-[10px] text-slate-400 mt-0.5 no-underline">
-                            {t.booking.taken}
-                          </div>
-                        )}
-                      </button>
-                    );
-                  })}
-                </div>
-                {errors.time && (
-                  <p className="text-sm text-red-600 mt-2">{errors.time}</p>
-                )}
-              </div>
-              <div>
-                <label className="block text-sm font-medium text-slate-700 mb-2">
-                  {t.booking.emailLabel}
-                </label>
-                <Input
-                  type="email"
-                  value={email}
-                  onChange={(e) => {
-                    setEmail(e.target.value);
-                    setErrors((er) => ({ ...er, email: undefined }));
-                  }}
-                  placeholder={t.booking.emailPlaceholder}
-                  className="bg-white border-slate-200"
-                  data-testid="input-booking-email"
-                  required
+            <Form {...form}>
+              <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5 mt-2">
+                <FormField
+                  control={form.control}
+                  name="date"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-sm font-medium text-slate-700">
+                        {L.registration.dateLabel}
+                      </FormLabel>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                        {L.registration.dateOptions.map((opt) => {
+                          const active = field.value === opt.value;
+                          return (
+                            <button
+                              key={opt.value}
+                              type="button"
+                              onClick={() => field.onChange(opt.value)}
+                              className={`text-left px-4 py-3 rounded-lg border transition-colors ${
+                                active
+                                  ? "bg-teal-700 text-white border-teal-700"
+                                  : "bg-white text-slate-700 border-slate-200 hover:border-teal-400"
+                              }`}
+                              data-testid={`button-date-${opt.value}`}
+                              aria-pressed={active}
+                            >
+                              <div className="font-semibold text-sm">{opt.label}</div>
+                              <div className={`text-xs ${active ? "text-white/85" : "text-slate-500"}`}>
+                                {opt.weekday}
+                              </div>
+                            </button>
+                          );
+                        })}
+                      </div>
+                      <FormMessage />
+                    </FormItem>
+                  )}
                 />
-                {errors.email && (
-                  <p className="text-sm text-red-600 mt-1.5">{errors.email}</p>
+
+                <FormField
+                  control={form.control}
+                  name="seats"
+                  render={({ field }) => (
+                    <FormItem>
+                      <FormLabel className="text-sm font-medium text-slate-700">
+                        {L.registration.seatsLabel}
+                      </FormLabel>
+                      <div className="flex items-center gap-3">
+                        <button
+                          type="button"
+                          aria-label={L.registration.seatsMinus}
+                          onClick={() => field.onChange(Math.max(1, (field.value ?? 1) - 1))}
+                          className="w-10 h-10 rounded-lg border border-slate-200 bg-white text-slate-700 hover:border-teal-400 flex items-center justify-center disabled:opacity-40 disabled:hover:border-slate-200"
+                          disabled={(field.value ?? 1) <= 1}
+                          data-testid="button-seats-minus"
+                        >
+                          <Minus className="w-4 h-4" />
+                        </button>
+                        <Input
+                          type="number"
+                          inputMode="numeric"
+                          min={1}
+                          max={20}
+                          value={field.value ?? 1}
+                          onChange={(e) => {
+                            const n = parseInt(e.target.value, 10);
+                            field.onChange(Number.isNaN(n) ? 1 : Math.min(20, Math.max(1, n)));
+                          }}
+                          className="w-20 text-center bg-white border-slate-200"
+                          data-testid="input-seats"
+                        />
+                        <button
+                          type="button"
+                          aria-label={L.registration.seatsPlus}
+                          onClick={() => field.onChange(Math.min(20, (field.value ?? 1) + 1))}
+                          className="w-10 h-10 rounded-lg border border-slate-200 bg-white text-slate-700 hover:border-teal-400 flex items-center justify-center disabled:opacity-40 disabled:hover:border-slate-200"
+                          disabled={(field.value ?? 1) >= 20}
+                          data-testid="button-seats-plus"
+                        >
+                          <Plus className="w-4 h-4" />
+                        </button>
+                        <span className="text-xs text-slate-500 ml-1">{L.registration.seatsHelp}</span>
+                      </div>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <FormField
+                    control={form.control}
+                    name="name"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm font-medium text-slate-700">
+                          {L.registration.nameLabel}
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            {...field}
+                            placeholder={L.registration.namePlaceholder}
+                            className="bg-white border-slate-200"
+                            autoComplete="name"
+                            data-testid="input-registration-name"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="organization"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm font-medium text-slate-700">
+                          {L.registration.organizationLabel}
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            {...field}
+                            placeholder={L.registration.organizationPlaceholder}
+                            className="bg-white border-slate-200"
+                            autoComplete="organization"
+                            data-testid="input-registration-organization"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="email"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm font-medium text-slate-700">
+                          {L.registration.emailLabel}
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            {...field}
+                            type="email"
+                            placeholder={L.registration.emailPlaceholder}
+                            className="bg-white border-slate-200"
+                            autoComplete="email"
+                            data-testid="input-registration-email"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                  <FormField
+                    control={form.control}
+                    name="phone"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-sm font-medium text-slate-700">
+                          {L.registration.phoneLabel}
+                        </FormLabel>
+                        <FormControl>
+                          <Input
+                            {...field}
+                            type="tel"
+                            placeholder={L.registration.phonePlaceholder}
+                            className="bg-white border-slate-200"
+                            autoComplete="tel"
+                            data-testid="input-registration-phone"
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+                </div>
+
+                {/* honeypot */}
+                <FormField
+                  control={form.control}
+                  name="website"
+                  render={({ field }) => (
+                    <input
+                      type="text"
+                      tabIndex={-1}
+                      autoComplete="off"
+                      aria-hidden="true"
+                      className="hidden"
+                      {...field}
+                    />
+                  )}
+                />
+
+                <div className="rounded-lg border border-slate-200 bg-slate-50 p-4 flex items-center justify-between">
+                  <div>
+                    <div className="text-sm text-slate-500">{L.registration.totalLabel}</div>
+                    <div className="text-2xl font-bold text-slate-900" data-testid="text-registration-total">
+                      {formatDkk(total)}
+                    </div>
+                  </div>
+                  <div className="text-right text-xs text-slate-500 max-w-[55%]">
+                    {L.registration.invoiceNote}
+                  </div>
+                </div>
+
+                <FormField
+                  control={form.control}
+                  name="acknowledgedInvoice"
+                  render={({ field }) => (
+                    <FormItem>
+                      <div className="flex items-start gap-3 rounded-lg border border-slate-200 bg-white p-3">
+                        <FormControl>
+                          <Checkbox
+                            checked={field.value === true}
+                            onCheckedChange={(v) => field.onChange(v === true)}
+                            className="mt-0.5"
+                            data-testid="checkbox-acknowledge-invoice"
+                          />
+                        </FormControl>
+                        <FormLabel className="text-sm text-slate-700 leading-snug !mt-0 cursor-pointer">
+                          {L.registration.acknowledgeLabel}
+                        </FormLabel>
+                      </div>
+                      <FormMessage />
+                    </FormItem>
+                  )}
+                />
+
+                <Button
+                  type="submit"
+                  disabled={mutation.isPending || form.watch("acknowledgedInvoice") !== true}
+                  className="w-full py-5 text-base font-medium bg-teal-700 hover:bg-teal-800 text-white"
+                  data-testid="button-registration-submit"
+                >
+                  {mutation.isPending ? L.registration.submitting : L.registration.submit}
+                </Button>
+                {mutation.isError && (
+                  <p className="text-sm text-red-600 text-center">{L.registration.error}</p>
                 )}
-              </div>
-              <Button
-                type="submit"
-                disabled={mutation.isPending}
-                className="w-full py-5 text-base font-medium bg-teal-700 hover:bg-teal-800 text-white"
-                data-testid="button-booking-submit"
-              >
-                {mutation.isPending ? t.booking.submitting : t.booking.submit}
-              </Button>
-              {mutation.isError && (
-                <p className="text-sm text-red-600 text-center">{t.booking.error}</p>
-              )}
-            </form>
+              </form>
+            </Form>
           </>
         )}
       </DialogContent>
@@ -524,21 +632,21 @@ function HeroSection({ onOpenBooking }: { onOpenBooking: () => void }) {
               })}
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href="#contact-form"
-                className="inline-flex items-center justify-center px-5 py-3 bg-teal-700 hover:bg-teal-800 text-white font-medium rounded-lg transition-colors text-sm"
-                data-testid="button-primary-cta"
-              >
-                {t.ctaButtons.primary} <ArrowRight className="w-4 h-4 ml-2" />
-              </a>
               <button
                 type="button"
                 onClick={onOpenBooking}
-                className="inline-flex items-center justify-center px-5 py-3 bg-white border border-slate-300 hover:border-teal-600 hover:text-teal-700 text-slate-700 font-medium rounded-lg transition-colors text-sm"
-                data-testid="button-open-booking"
+                className="inline-flex items-center justify-center px-5 py-3 bg-teal-700 hover:bg-teal-800 text-white font-medium rounded-lg transition-colors text-sm"
+                data-testid="button-primary-cta"
               >
-                {t.ctaButtons.secondary} <CalendarIcon className="w-4 h-4 ml-2" />
+                {L.ctaLabel} <ArrowRight className="w-4 h-4 ml-2" />
               </button>
+              <a
+                href="#contact-form"
+                className="inline-flex items-center justify-center px-5 py-3 bg-white border border-slate-300 hover:border-teal-600 hover:text-teal-700 text-slate-700 font-medium rounded-lg transition-colors text-sm"
+                data-testid="button-write-inquiry"
+              >
+                {t.ctaButtons.primary} <Mail className="w-4 h-4 ml-2" />
+              </a>
             </div>
           </div>
           <TrustStripInline />
@@ -947,22 +1055,24 @@ function FAQSection() {
   );
 }
 
-function FinalCTASection() {
+function FinalCTASection({ onOpenBooking }: { onOpenBooking: () => void }) {
   return (
     <section className="bg-slate-900 text-white py-14 md:py-18 px-4 sm:px-6">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-2xl sm:text-3xl font-bold mb-4 leading-snug">
-          {t.finalCta.heading}
+          {L.finalCta.heading}
         </h2>
         <p className="text-slate-300 mb-8 leading-relaxed">
-          {t.finalCta.body}
+          {L.finalCta.body}
         </p>
-        <a
-          href="#contact-form"
+        <button
+          type="button"
+          onClick={onOpenBooking}
           className="inline-flex items-center justify-center px-7 py-3.5 bg-teal-600 hover:bg-teal-500 text-white font-medium rounded-lg transition-colors"
+          data-testid="button-final-cta"
         >
-          {t.finalCta.ctaButton}
-        </a>
+          {L.finalCta.ctaButton}
+        </button>
         <p className="text-sm text-slate-400 mt-6">{t.finalCta.directContact}</p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-2 text-sm text-slate-400">
           <a href={`mailto:${siteConfig.contact.email}`} className="hover:text-white transition-colors flex items-center gap-1.5">
@@ -1012,7 +1122,7 @@ function StickyBanner({ onOpenBooking, onWrite }: { onOpenBooking: () => void; o
         className="pointer-events-auto relative mx-auto max-w-5xl rounded-2xl bg-teal-700 text-white shadow-2xl ring-1 ring-black/5"
         data-testid="sticky-banner"
         role="region"
-        aria-label={t.stickyBanner.title}
+        aria-label={L.stickyBanner.title}
       >
         <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 p-4 sm:p-5">
           <div className="flex items-start sm:items-center gap-3 flex-1 min-w-0">
@@ -1021,10 +1131,10 @@ function StickyBanner({ onOpenBooking, onWrite }: { onOpenBooking: () => void; o
             </div>
             <div className="min-w-0 flex-1">
               <p className="font-semibold text-base sm:text-lg leading-tight">
-                {t.stickyBanner.title}
+                {L.stickyBanner.title}
               </p>
               <p className="hidden sm:block text-sm text-white/85 mt-0.5">
-                {t.stickyBanner.subtitle}
+                {L.stickyBanner.subtitle}
               </p>
             </div>
           </div>
@@ -1035,7 +1145,7 @@ function StickyBanner({ onOpenBooking, onWrite }: { onOpenBooking: () => void; o
               className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-white text-teal-800 hover:bg-teal-50 font-medium text-sm transition-colors"
               data-testid="button-banner-book"
             >
-              {t.stickyBanner.bookButton}
+              {L.stickyBanner.bookButton}
               <CalendarIcon className="w-4 h-4" />
             </button>
             <button
@@ -1045,7 +1155,7 @@ function StickyBanner({ onOpenBooking, onWrite }: { onOpenBooking: () => void; o
               data-testid="button-banner-write"
             >
               <Mail className="w-4 h-4" />
-              {t.stickyBanner.writeButton}
+              {L.stickyBanner.writeButton}
             </button>
             <a
               href={`tel:${tel}`}
@@ -1053,14 +1163,14 @@ function StickyBanner({ onOpenBooking, onWrite }: { onOpenBooking: () => void; o
               data-testid="link-banner-call"
             >
               <Phone className="w-4 h-4" />
-              {t.stickyBanner.callButton} {siteConfig.contact.phone}
+              {L.stickyBanner.callButton} {siteConfig.contact.phone}
             </a>
           </div>
           <button
             type="button"
             onClick={() => setDismissed(true)}
             className="absolute top-2 right-2 sm:static sm:ml-1 flex-shrink-0 p-1.5 rounded-full text-white/70 hover:text-white hover:bg-white/10 transition-colors"
-            aria-label={t.stickyBanner.dismiss}
+            aria-label={L.stickyBanner.dismiss}
             data-testid="button-banner-dismiss"
           >
             <X className="w-4 h-4" />
@@ -1120,23 +1230,23 @@ function MinimalHeader() {
 }
 
 export default function AIWorkshopLanding() {
-  const [bookingOpen, setBookingOpen] = useState(false);
+  const [registrationOpen, setRegistrationOpen] = useState(false);
   // Title and meta description are owned by the prerender step
   // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
   return (
     <div className="min-h-screen bg-white text-slate-900 antialiased">
       <MinimalHeader />
-      <HeroSection onOpenBooking={() => setBookingOpen(true)} />
-      <BookingDialog open={bookingOpen} onOpenChange={setBookingOpen} />
+      <HeroSection onOpenBooking={() => setRegistrationOpen(true)} />
+      <RegistrationDialog open={registrationOpen} onOpenChange={setRegistrationOpen} />
       <RelevanceSection />
       <SocialProofSection />
       <OutcomesSection />
       <ContentSection />
       <FAQSection />
-      <FinalCTASection />
+      <FinalCTASection onOpenBooking={() => setRegistrationOpen(true)} />
       <StickyBanner
-        onOpenBooking={() => setBookingOpen(true)}
+        onOpenBooking={() => setRegistrationOpen(true)}
         onWrite={() => {
           const form = document.getElementById("contact-form");
           if (form) {
