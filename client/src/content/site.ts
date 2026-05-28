@@ -408,6 +408,7 @@ export const siteConfig = {
   // visitor receives the PDF via a Google Apps Script trigger bound to this
   // form. See docs/ritlingur/google-form-setup.md for the full setup.
 
+
   ritlingurForm: {
     formResponseUrl:
       "https://docs.google.com/forms/d/e/1FAIpQLSdXeEtAgFI0R1y1_HqILhMcH23_p71cVOHM4IfkkHt5H9s1Yw/formResponse",
@@ -417,7 +418,7 @@ export const siteConfig = {
     consentNoValue: "Nei",
     pdfDownloadUrl: "/seks-stig-til-goda-vitlikisnytslu.pdf",
   },
-  
+
   // NOTE: SEO data has moved to client/src/content/seo/*.seo.ts (auto-discovered
   // by scripts/prerender-seo.ts). Adding entries here has no effect.
   _seoPages_DEPRECATED: {
