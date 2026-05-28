@@ -408,7 +408,7 @@ function RitlingurDialog({
               Hygg eftir í tínum innbakka. Hann kemur um fáar minuttir.
             </p>
             <a
-              href="/leidsluverkstova"
+              href="/leidslu-verkstova"
               onClick={() =>
                 trackEvent("workshop_cta_clicked", { location: "success_dialog" })
               }
@@ -586,7 +586,7 @@ export default function Landsnet() {
               data-analytics-event="workshop_cta_clicked"
             >
               <a
-                href="/leidsluverkstova"
+                href="/leidslu-verkstova"
                 onClick={() =>
                   trackEvent("workshop_cta_clicked", { location: "hero" })
                 }
@@ -964,7 +964,7 @@ export default function Landsnet() {
               data-analytics-event="workshop_cta_clicked"
             >
               <a
-                href="/leidsluverkstova"
+                href="/leidslu-verkstova"
                 onClick={() =>
                   trackEvent("workshop_cta_clicked", { location: "footer" })
                 }
