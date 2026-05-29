@@ -2,6 +2,7 @@ export type FormFailureSource =
   | "contact-section"
   | "inline-contact"
   | "workshop-landing"
+  | "leadership-workshop-landing"
   | "landsnet-ritlingur";
 
 async function fetchMonitoringToken(): Promise<string | null> {

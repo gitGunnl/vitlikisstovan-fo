@@ -419,6 +419,27 @@ export const siteConfig = {
     pdfDownloadUrl: "/seks-stig-til-goda-vitlikisnytslu.pdf",
   },
 
+  // Leiðslu-verkstova registration — submitted directly to a dedicated Google
+  // Form using the same no-cors pattern as the contact form. The operator turns
+  // on "Get email notifications for new responses" in the Google Form to be
+  // notified of each registration. No Apps Script or backend is involved.
+  //
+  // SETUP: create a Google Form with six short-answer questions in this order
+  // (Navn, Fyritøka, Teldupostur, Telefon, Dagur, Seti), use "Get pre-filled
+  // link" to read the entry IDs, then paste the formResponse URL + entry IDs
+  // below. Until real values are in, the form intentionally errors instead of
+  // silently dropping registrations.
+  workshopRegistrationForm: {
+    formResponseUrl:
+      "https://docs.google.com/forms/d/e/PLACEHOLDER_FORM_ID/formResponse",
+    entryName: "entry.PLACEHOLDER_NAME",
+    entryOrganization: "entry.PLACEHOLDER_ORG",
+    entryEmail: "entry.PLACEHOLDER_EMAIL",
+    entryPhone: "entry.PLACEHOLDER_PHONE",
+    entryDate: "entry.PLACEHOLDER_DATE",
+    entrySeats: "entry.PLACEHOLDER_SEATS",
+  },
+
   // NOTE: SEO data has moved to client/src/content/seo/*.seo.ts (auto-discovered
   // by scripts/prerender-seo.ts). Adding entries here has no effect.
   _seoPages_DEPRECATED: {

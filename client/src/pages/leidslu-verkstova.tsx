@@ -619,13 +619,51 @@ function RegistrationDialog({
 
   const mutation = useMutation({
     mutationFn: async (data: WorkshopRegistration) => {
-      const res = await fetch("/api/workshop-registration", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
-      });
-      if (!res.ok) throw new Error("Registration failed");
-      return res.json();
+      const cfg = siteConfig.workshopRegistrationForm;
+      const notConfigured = [
+        cfg.formResponseUrl,
+        cfg.entryName,
+        cfg.entryOrganization,
+        cfg.entryEmail,
+        cfg.entryPhone,
+        cfg.entryDate,
+        cfg.entrySeats,
+      ].some((v) => v.includes("PLACEHOLDER"));
+      if (notConfigured) {
+        const err = new Error("Registration form is not configured yet");
+        reportFormFailure("leadership-workshop-landing", err);
+        throw err;
+      }
+
+      const dateLabel =
+        page.registration.dateOptions.find((o) => o.value === data.date)
+          ?.label ?? data.date;
+      const total = data.seats * WORKSHOP_REGISTRATION_PRICE_DKK;
+
+      const formData = new FormData();
+      formData.append(cfg.entryName, data.name);
+      formData.append(cfg.entryOrganization, data.organization);
+      formData.append(cfg.entryEmail, data.email);
+      formData.append(cfg.entryPhone, data.phone);
+      formData.append(cfg.entryDate, dateLabel);
+      formData.append(
+        cfg.entrySeats,
+        `${data.seats} (${total.toLocaleString("da-DK")} kr.)`,
+      );
+
+      try {
+        await fetch(cfg.formResponseUrl, {
+          method: "POST",
+          body: formData,
+          mode: "no-cors",
+          signal: AbortSignal.timeout(10000),
+        });
+      } catch (err) {
+        reportFormFailure("leadership-workshop-landing", err);
+        throw err;
+      }
+
+      return { success: true };
     },
     onSuccess: () => setSubmitted(true),
   });

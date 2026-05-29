@@ -14,8 +14,12 @@ apiApp.use(createMonitoringRouter());
 const { createBookingRouter } = await import('./booking-api.js');
 apiApp.use(createBookingRouter());
 
-const { createWorkshopRegistrationRouter } = await import('./workshop-registration-api.js');
-apiApp.use(createWorkshopRegistrationRouter());
+// Leiðslu-verkstova registration is now handled client-side via a Google Form
+// (see siteConfig.workshopRegistrationForm). The legacy /api/workshop-registration
+// endpoint is intentionally left unmounted so it cannot send auto-replies that
+// contradict the current "operator notification only" flow.
+// const { createWorkshopRegistrationRouter } = await import('./workshop-registration-api.js');
+// apiApp.use(createWorkshopRegistrationRouter());
 
 const { startScheduler } = await import('./monitoring.js');
 startScheduler();
