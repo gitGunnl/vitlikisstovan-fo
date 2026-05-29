@@ -431,13 +431,13 @@ export const siteConfig = {
   // silently dropping registrations.
   workshopRegistrationForm: {
     formResponseUrl:
-      "https://docs.google.com/forms/d/e/PLACEHOLDER_FORM_ID/formResponse",
-    entryName: "entry.PLACEHOLDER_NAME",
-    entryOrganization: "entry.PLACEHOLDER_ORG",
-    entryEmail: "entry.PLACEHOLDER_EMAIL",
-    entryPhone: "entry.PLACEHOLDER_PHONE",
-    entryDate: "entry.PLACEHOLDER_DATE",
-    entrySeats: "entry.PLACEHOLDER_SEATS",
+      "https://docs.google.com/forms/d/e/1FAIpQLSdfzuxQoF19Wgyj1rqUyOgcVves69glsvbXvfkE2twjSN4cHQ/formResponse",
+    entryName: "entry.947004905",
+    entryOrganization: "entry.1674157303",
+    entryEmail: "entry.601090009",
+    entryPhone: "entry.646414871",
+    entryDate: "entry.2004095851",
+    entrySeats: "entry.514581951",
   },
 
   // NOTE: SEO data has moved to client/src/content/seo/*.seo.ts (auto-discovered
