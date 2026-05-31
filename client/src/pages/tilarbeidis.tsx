@@ -427,35 +427,42 @@ const Tilarbeidis = () => {
             </div>
 
             {/* Guide links */}
-            <div className="bg-background/60 border border-border/50 rounded-xl p-6 shadow-lg">
+            <div className="bg-background/60 border border-border/50 rounded-xl p-6 sm:p-8 shadow-lg">
               <div className="flex items-center gap-3 mb-1">
                 <span className="text-2xl">📚</span>
                 <h3 className="font-bold text-lg">Vegleiðingar</h3>
               </div>
-              <p className="text-sm text-muted-foreground mb-5 ml-11">
+              <p className="text-sm text-muted-foreground mb-6 ml-11">
                 Seks sjálvstøðugar vegleiðingar – úrslitið av arbeiðinum.
               </p>
-              <div className="grid gap-3 sm:grid-cols-2">
+              <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
                 {guideLinks.map((guide) => (
                   <Link
                     key={guide.href}
                     href={guide.href}
-                    className="group flex items-center gap-3 overflow-hidden rounded-lg border border-border/60 bg-background/80 p-4 transition-all hover:border-primary/60 hover:bg-primary/5 hover:shadow-md"
+                    className="group flex flex-col overflow-hidden rounded-xl border border-border/60 bg-card transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                   >
-                    {guide.image ? (
-                      <img
-                        src={guide.image}
-                        alt={guide.title}
-                        loading="lazy"
-                        className="h-12 w-12 flex-shrink-0 rounded-md object-cover"
-                      />
-                    ) : (
-                      <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
-                        <BookOpen className="h-4 w-4" />
+                    <div className="relative aspect-[4/3] overflow-hidden bg-muted">
+                      {guide.image ? (
+                        <img
+                          src={guide.image}
+                          alt={guide.title}
+                          loading="lazy"
+                          className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105 group-focus-visible:scale-105"
+                        />
+                      ) : (
+                        <span className="flex h-full w-full items-center justify-center text-primary/40">
+                          <BookOpen className="h-10 w-10" />
+                        </span>
+                      )}
+                      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/5 to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100 group-focus-visible:opacity-100" />
+                    </div>
+                    <div className="flex items-center gap-2 p-4">
+                      <span className="font-semibold leading-snug transition-colors group-hover:text-primary group-focus-visible:text-primary">
+                        {guide.title}
                       </span>
-                    )}
-                    <span className="font-medium leading-snug">{guide.title}</span>
-                    <ArrowRight className="ml-auto h-4 w-4 flex-shrink-0 text-muted-foreground transition-all group-hover:translate-x-0.5 group-hover:text-primary" />
+                      <ArrowRight className="ml-auto h-4 w-4 flex-shrink-0 text-muted-foreground transition-all group-hover:translate-x-0.5 group-hover:text-primary group-focus-visible:translate-x-0.5 group-focus-visible:text-primary" />
+                    </div>
                   </Link>
                 ))}
               </div>
