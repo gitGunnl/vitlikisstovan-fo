@@ -128,7 +128,7 @@ export default function BestPracticesGuide() {
                     >
                       <Button variant="default" size="sm">
                         <Download className="h-4 w-4 mr-2" />
-                        Sæk niður PDF
+                        Tak PDF niður
                       </Button>
                     </a>
                   )}

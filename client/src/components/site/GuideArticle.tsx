@@ -465,7 +465,7 @@ export default function GuideArticle({
                   className="text-stone-500 hover:bg-stone-200/50 hover:text-stone-800"
                 >
                   <Download className="h-4 w-4 mr-2" />
-                  Sæk niður PDF
+                  Tak PDF niður
                 </Button>
               </a>
             )}

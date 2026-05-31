@@ -140,7 +140,7 @@ export default function UserGuides() {
                           <Button
                             variant="outline"
                             onClick={() => handleDownloadPDF(guide.pdfPath, guide.pdfFilename)}
-                            title="Sæk niður sum PDF"
+                            title="Tak PDF niður"
                           >
                             <Download className="h-4 w-4" />
                           </Button>
