@@ -4300,6 +4300,7 @@ export default function AiForKindergartenGuide() {
   // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
   return (
     <GuideArticle
+      guideId="ai-for-kindergarten"
       content={blogContent}
       heroImage={kindergartenHeroImg}
       heroTitle="Vitlíki til dagstovnar"

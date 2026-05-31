@@ -641,6 +641,7 @@ export default function AiForCaretakersGuide() {
   // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
   return (
     <GuideArticle
+      guideId="ai-for-caretakers"
       content={blogContent}
       footerNote="Vitlíki hjálpir námsfrøðingum at fokusera uppá tað, sum skapar virði."
     />

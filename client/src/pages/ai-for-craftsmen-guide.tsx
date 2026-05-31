@@ -779,5 +779,5 @@ Vitlíki er sterkast, tá ið tað hjálpir tær at síggja fleiri møguleikar, 
 `;
 
 export default function AiForCraftsmenGuide() {
-  return <GuideArticle content={blogContent} />;
+  return <GuideArticle guideId="ai-for-craftsmen" content={blogContent} />;
 }

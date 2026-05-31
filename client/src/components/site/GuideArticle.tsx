@@ -7,7 +7,7 @@ import Section from "@/components/site/Section";
 import { Button } from "@/components/ui/button";
 import {
   ArrowLeft,
-  Printer,
+  Download,
   Copy,
   Check,
   PenTool,
@@ -17,6 +17,7 @@ import {
   MessageSquareText,
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
+import { getInteractiveGuide, interactiveGuidePdfPath } from "@/content/guides";
 
 // ---------------------------------------------------------------------------
 // Inline Markdown Logic (Tasteful & Robust)
@@ -149,7 +150,7 @@ const PromptCard = ({ text }: { text: string }) => {
             variant="ghost"
             size="sm"
             onClick={handleCopy}
-            className="h-8 text-stone-500 hover:text-stone-800 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors"
+            className="no-print h-8 text-stone-500 hover:text-stone-800 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors"
             aria-label="Copy prompt to clipboard"
           >
             {copied ? (
@@ -206,7 +207,7 @@ const SimplePromptCard = ({ text }: { text: string }) => {
         <pre className="whitespace-pre-wrap font-mono text-sm sm:text-base text-stone-700 dark:text-stone-300 leading-relaxed pr-16">
           {text.trim()}
         </pre>
-        <span className="absolute top-2 right-3 flex items-center text-xs font-medium font-sans">
+        <span className="no-print absolute top-2 right-3 flex items-center text-xs font-medium font-sans">
           {copied ? (
             <span className="flex items-center text-green-600 dark:text-green-400">
               <Check className="mr-1 h-3.5 w-3.5" />
@@ -415,6 +416,11 @@ interface GuideArticleProps {
   heroImage?: string;
   heroTitle?: string;
   heroSubtitle?: string;
+  /**
+   * Id of this guide in `client/src/content/guides.ts`. When set, a "download
+   * PDF" action linking to the build-time generated PDF is shown in the toolbar.
+   */
+  guideId?: string;
 }
 
 // Matches any supported block tag and captures up to its closing `:::`.
@@ -431,8 +437,11 @@ export default function GuideArticle({
   heroImage,
   heroTitle,
   heroSubtitle,
+  guideId,
 }: GuideArticleProps) {
   const contentParts = content.split(BLOCK_SPLIT);
+  const guide = guideId ? getInteractiveGuide(guideId) : undefined;
+  const pdfPath = guide ? interactiveGuidePdfPath(guide) : undefined;
 
   return (
     <div className="flex flex-col min-h-screen bg-stone-50 dark:bg-stone-950 font-serif">
@@ -442,21 +451,24 @@ export default function GuideArticle({
         <div className="max-w-3xl mx-auto px-6 sm:px-8">
 
           {/* Navigation / Tools */}
-          <nav className="flex justify-between items-center mb-16 font-sans">
+          <nav className="no-print flex justify-between items-center mb-16 font-sans">
             <Link href="/user-guides">
               <a className="inline-flex items-center text-sm font-medium text-stone-500 hover:text-stone-800 transition-colors group">
                 <ArrowLeft className="h-4 w-4 mr-2 transform group-hover:-translate-x-1 transition-transform" />
                 Aftur til yvirlit
               </a>
             </Link>
-            <Button
-              variant="ghost"
-              className="text-stone-500 hover:bg-stone-200/50 hover:text-stone-800"
-              onClick={() => window.print()}
-            >
-              <Printer className="h-4 w-4 mr-2" />
-              Prenta
-            </Button>
+            {pdfPath && (
+              <a href={pdfPath} download={guide?.pdfFilename}>
+                <Button
+                  variant="ghost"
+                  className="text-stone-500 hover:bg-stone-200/50 hover:text-stone-800"
+                >
+                  <Download className="h-4 w-4 mr-2" />
+                  Sæk niður PDF
+                </Button>
+              </a>
+            )}
           </nav>
 
           {/* Hero Section with Image (optional) */}

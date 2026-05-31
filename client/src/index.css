@@ -507,3 +507,12 @@
   }
 }
 
+
+/* Hide site chrome (nav, header, footer, toolbars) when rendering to PDF or
+   printing. The build-time PDF generator relies on this so generated guide
+   PDFs contain only the article body. */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}

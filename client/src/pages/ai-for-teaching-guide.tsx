@@ -675,5 +675,5 @@ Tá ið tú finnur eitt byrt, sum riggar væl til tín tørv, goym tað so onkus
 `;
 
 export default function AiForTeachingGuide() {
-  return <GuideArticle content={blogContent} />;
+  return <GuideArticle guideId="ai-for-teaching" content={blogContent} />;
 }

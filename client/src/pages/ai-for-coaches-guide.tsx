@@ -1033,5 +1033,5 @@ Góðan arbeiðshug!
 `;
 
 export default function AiForCoachesGuide() {
-  return <GuideArticle content={blogContent} />;
+  return <GuideArticle guideId="ai-for-coaches" content={blogContent} />;
 }

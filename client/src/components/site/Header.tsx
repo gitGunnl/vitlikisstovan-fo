@@ -205,7 +205,7 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-white/95 backdrop-blur-header shadow-sm transition-all duration-300">
+    <header className="no-print sticky top-0 z-50 w-full border-b border-border bg-white/95 backdrop-blur-header shadow-sm transition-all duration-300">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <a href="/" className="flex items-center space-x-2 hover:opacity-80 transition-opacity duration-200">
           <img

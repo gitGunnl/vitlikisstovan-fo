@@ -1,70 +1,63 @@
-import { useEffect } from "react";
 import { Link } from "wouter";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import Section from "@/components/site/Section";
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { BookOpen, Download, FileText, ArrowRight, GraduationCap, Briefcase, Code, Palette } from "lucide-react";
-import { seoConfig } from "@/content/seo";
+import { BookOpen, Download, ArrowRight } from "lucide-react";
+import {
+  interactiveGuides,
+  legacyPdfGuides,
+  interactiveGuidePdfPath,
+} from "@/content/guides";
+
+// Unified shape for the listing cards: interactive guides (read in-app + a
+// real, build-time generated PDF download) and legacy PDF-only guides.
+type GuideCard =
+  | {
+      kind: "interactive";
+      id: string;
+      title: string;
+      description: string;
+      href: string;
+      pdfPath: string;
+      pdfFilename: string;
+    }
+  | {
+      kind: "pdf";
+      id: string;
+      title: string;
+      description: string;
+      pdfPath: string;
+      pdfFilename: string;
+    };
 
 export default function UserGuides() {
   // Title and meta description are owned by the prerender step
   // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
-  const guides = [
-    {
-      id: "ai-for-kindergarten",
-      title: "Vitlíki til dagstovnar: Minni skriviarbeiði, meira spæl.",
-      description: "Lættir og tryggir hættir at minka um dagligu umsitingina, so tú kanst nýta meira tíð saman við børnunum.",
-      href: "/user-guides/ai-for-kindergarten-guide"
-    },
-    {
-      id: "ai-for-caretakers",
-      title: "Hvussu tú kann nýta vitlíki sum røktarstarvsfólk: Meira tíð til tær heitu hendurnar.",
-      description: "Ein handalig vegleiðing, sum ger røktarstarvsfólk før fyri at brúka vitlíki trygt til skjalfesting og tilrættislegging, so meira tíð verður til sjálva umsorganina.",
-      href: "/user-guides/ai-for-caretakers-guide"
-    },
-    {
-      id: "ai-for-coaches",
-      title: "Vitlíki í venjaraarbeiði",
-      description: "Ein handalig vegleiðing fyri venjarar um, hvussu vitlíki kann stuðla við venjing, fyrireiking og samskifti.",
-      href: "/user-guides/ai-for-coaches-guide"
-    },
-    {
-      id: "ai-for-teaching",
-      title: "Vitlíki til undirvísing",
-      description: "Ein handalig vegleiðing um, hvussu vitlíki kann nýtast í undirvísing og at fyrireika tímar.",
-      href: "/user-guides/ai-for-teaching-guide"
-    },
-    {
-      id: "ai-for-service-industry",
-      title: "Vegleiðing til tænastuvinnuna",
-      description: "Ein handalig vegleiðing fyri tænastuvinnuna um, hvussu vitlíki kann stuðla við dagligum uppgávum og kundasamskifti.",
-      href: "/user-guides/ai-for-service-industry-guide"
-    },
-    {
-      id: "ai-for-craftsmen",
-      title: "Vitlíki til handverkarar",
-      description: "Ein handalig vegleiðing fyri handverkarar um, hvussu vitlíki kann stuðla við tilboðum, skjalfesting og skipaning.",
-      href: "/user-guides/ai-for-craftsmen-guide"
-    },
-    {
-      id: "ai-for-politicians",
-      title: "Vitlíki til politikarir",
-      description: "Ein handalig vegleiðing fyri politikarar um hvussu vitlíki kann stuðla við politiskari virksemi og átaksgerð.",
-      pdfPath: "/Ein_handalig_vegleiding_til_politikarir.pdf",
-      pdfFilename: "Ein_handalig_vegleiding_til_politikarir.pdf",
-      pdfOnly: true
-    },
-    {
-      id: "ai-for-teachers",
-      title: "Vitlíki til lærarir",
-      description: "Vegleiðing fyri undirvísarar um hvussu vitlíki kann nýtast í skúlanum og í undirvísingararbeiðinum.",
-      pdfPath: "/vegleiding_undirvisarir.pdf",
-      pdfFilename: "vegleiding_undirvisarir.pdf",
-      pdfOnly: true
-    }
+  // All guide data is sourced from client/src/content/guides.ts so the listing,
+  // the in-app pages and the build-time PDF generator stay in sync.
+  const guides: GuideCard[] = [
+    ...interactiveGuides
+      .filter((g) => g.listed)
+      .map((g) => ({
+        kind: "interactive" as const,
+        id: g.id,
+        title: g.title,
+        description: g.description,
+        href: g.route,
+        pdfPath: interactiveGuidePdfPath(g),
+        pdfFilename: g.pdfFilename,
+      })),
+    ...legacyPdfGuides.map((g) => ({
+      kind: "pdf" as const,
+      id: g.id,
+      title: g.title,
+      description: g.description,
+      pdfPath: g.pdfPath,
+      pdfFilename: g.pdfFilename,
+    })),
   ];
 
   const handleDownloadPDF = (pdfPath: string, filename: string) => {
@@ -111,7 +104,7 @@ export default function UserGuides() {
                   </CardHeader>
                   <CardContent>
                     <div className="flex gap-3">
-                      {guide.pdfOnly ? (
+                      {guide.kind === "pdf" ? (
                         <Button
                           className="w-full"
                           variant="default"

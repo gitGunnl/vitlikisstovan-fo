@@ -4,8 +4,11 @@ import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import Section from "@/components/site/Section";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Printer } from "lucide-react";
+import { ArrowLeft, Printer, Download } from "lucide-react";
 import { seoConfig } from "@/content/seo";
+import { getInteractiveGuide, interactiveGuidePdfPath } from "@/content/guides";
+
+const bestPracticesGuide = getInteractiveGuide("best-practices");
 
 export default function BestPracticesGuide() {
   const search = useSearch();
@@ -117,10 +120,23 @@ export default function BestPracticesGuide() {
                     Back to Guides
                   </Button>
                 </Link>
-                <Button variant="outline" size="sm" onClick={handlePrint}>
-                  <Printer className="h-4 w-4 mr-2" />
-                  Print / Save as PDF
-                </Button>
+                <div className="flex items-center gap-2">
+                  {bestPracticesGuide && (
+                    <a
+                      href={interactiveGuidePdfPath(bestPracticesGuide)}
+                      download={bestPracticesGuide.pdfFilename}
+                    >
+                      <Button variant="default" size="sm">
+                        <Download className="h-4 w-4 mr-2" />
+                        Sæk niður PDF
+                      </Button>
+                    </a>
+                  )}
+                  <Button variant="outline" size="sm" onClick={handlePrint}>
+                    <Printer className="h-4 w-4 mr-2" />
+                    Prenta
+                  </Button>
+                </div>
               </div>
             </Section>
           </div>

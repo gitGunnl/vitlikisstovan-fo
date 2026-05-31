@@ -1,0 +1,1 @@
+- [Build-time Chromium PDF generation](chromium-pdf-build.md) — guide PDFs rendered at build via puppeteer-core; resolve chromium with `which`, not a hardcoded nix path.

@@ -558,5 +558,5 @@ Vitlíki hjálpur tær at hugsa og skriva.
 `;
 
 export default function AiForServiceIndustryGuide() {
-  return <GuideArticle content={blogContent} />;
+  return <GuideArticle guideId="ai-for-service-industry" content={blogContent} />;
 }
