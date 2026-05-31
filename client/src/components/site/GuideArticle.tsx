@@ -160,6 +160,17 @@ const SimplePromptCard = ({ text }: { text: string }) => (
 // Component: Markdown Block Renderer
 // ---------------------------------------------------------------------------
 
+// Extracts an optional trailing custom heading id (Markdown "{#my-id}" syntax)
+// from a heading line so the raw marker never leaks onto the page, and so the id
+// can be applied as a real anchor for in-page links.
+const extractHeadingId = (text: string): { text: string; id?: string } => {
+  const match = text.match(/^(.*?)\s*\{#([^}]+)\}\s*$/);
+  if (match) {
+    return { text: match[1].trim(), id: match[2].trim() };
+  }
+  return { text: text.trim() };
+};
+
 const MarkdownBlock = ({ text }: { text: string }) => {
   // Basic logic to separate lists from paragraphs for cleaner rendering
   const lines = useMemo(() => text.replace(/\r\n/g, "\n").split("\n"), [text]);
@@ -194,23 +205,26 @@ const MarkdownBlock = ({ text }: { text: string }) => {
 
     if (cleanLine.startsWith("# ")) {
       flushList();
+      const { text: headingText, id } = extractHeadingId(cleanLine.substring(2));
       elements.push(
-        <h1 key={idx} className="font-serif text-4xl sm:text-5xl font-medium text-stone-900 dark:text-stone-50 mt-16 mb-8 tracking-tight">
-          <RenderInlineText text={cleanLine.substring(2)} />
+        <h1 key={idx} id={id} className="font-serif text-4xl sm:text-5xl font-medium text-stone-900 dark:text-stone-50 mt-16 mb-8 tracking-tight scroll-mt-24">
+          <RenderInlineText text={headingText} />
         </h1>
       );
     } else if (cleanLine.startsWith("## ")) {
       flushList();
+      const { text: headingText, id } = extractHeadingId(cleanLine.substring(3));
       elements.push(
-        <h2 key={idx} className="font-serif text-2xl sm:text-3xl font-normal text-stone-800 dark:text-stone-100 mt-12 mb-6">
-          <RenderInlineText text={cleanLine.substring(3)} />
+        <h2 key={idx} id={id} className="font-serif text-2xl sm:text-3xl font-normal text-stone-800 dark:text-stone-100 mt-12 mb-6 scroll-mt-24">
+          <RenderInlineText text={headingText} />
         </h2>
       );
     } else if (cleanLine.startsWith("### ")) {
       flushList();
+      const { text: headingText, id } = extractHeadingId(cleanLine.substring(4));
       elements.push(
-        <h3 key={idx} className="font-serif text-xl font-semibold text-stone-800 dark:text-stone-200 mt-8 mb-4 uppercase tracking-wide text-sm">
-          <RenderInlineText text={cleanLine.substring(4)} />
+        <h3 key={idx} id={id} className="font-serif text-xl font-semibold text-stone-800 dark:text-stone-200 mt-8 mb-4 uppercase tracking-wide text-sm scroll-mt-24">
+          <RenderInlineText text={headingText} />
         </h3>
       );
     } else if (/^---+$/.test(cleanLine)) {
