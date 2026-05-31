@@ -26,6 +26,30 @@ export default function UserGuides() {
       href: "/user-guides/ai-for-caretakers-guide"
     },
     {
+      id: "ai-for-coaches",
+      title: "Vitlíki í venjaraarbeiði",
+      description: "Ein handalig vegleiðing fyri venjarar um, hvussu vitlíki kann stuðla við venjing, fyrireiking og samskifti.",
+      href: "/user-guides/ai-for-coaches-guide"
+    },
+    {
+      id: "ai-for-teaching",
+      title: "Vitlíki til undirvísing",
+      description: "Ein handalig vegleiðing um, hvussu vitlíki kann nýtast í undirvísing og at fyrireika tímar.",
+      href: "/user-guides/ai-for-teaching-guide"
+    },
+    {
+      id: "ai-for-service-industry",
+      title: "Vegleiðing til tænastuvinnuna",
+      description: "Ein handalig vegleiðing fyri tænastuvinnuna um, hvussu vitlíki kann stuðla við dagligum uppgávum og kundasamskifti.",
+      href: "/user-guides/ai-for-service-industry-guide"
+    },
+    {
+      id: "ai-for-craftsmen",
+      title: "Vitlíki til handverkarar",
+      description: "Ein handalig vegleiðing fyri handverkarar um, hvussu vitlíki kann stuðla við tilboðum, skjalfesting og skipaning.",
+      href: "/user-guides/ai-for-craftsmen-guide"
+    },
+    {
       id: "ai-for-politicians",
       title: "Vitlíki til politikarir",
       description: "Ein handalig vegleiðing fyri politikarar um hvussu vitlíki kann stuðla við politiskari virksemi og átaksgerð.",

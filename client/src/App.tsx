@@ -23,6 +23,10 @@ const GettingStartedGuide = lazy(() => import("@/pages/getting-started-guide"));
 const BestPracticesGuide = lazy(() => import("@/pages/best-practices-guide"));
 const AIForCaretakersGuide = lazy(() => import("@/pages/ai-for-caretakers-guide"));
 const AIForKindergartenGuide = lazy(() => import("@/pages/ai-for-kindergarten-guide"));
+const AIForCoachesGuide = lazy(() => import("@/pages/ai-for-coaches-guide"));
+const AIForTeachingGuide = lazy(() => import("@/pages/ai-for-teaching-guide"));
+const AIForServiceIndustryGuide = lazy(() => import("@/pages/ai-for-service-industry-guide"));
+const AIForCraftsmenGuide = lazy(() => import("@/pages/ai-for-craftsmen-guide"));
 const AnnadFraVitlikisstovuni = lazy(() => import("@/pages/annad-fra-vitlikisstovuni"));
 const Gemini3FoTest = lazy(() => import("@/pages/gemini3-fo-test"));
 const FrontpageV2 = lazy(() => import("@/pages/frontpage-v2"));
@@ -70,6 +74,10 @@ function Router() {
         <Route path="/user-guides" component={UserGuides} />
         <Route path="/user-guides/ai-for-kindergarten-guide" component={AIForKindergartenGuide} />
         <Route path="/user-guides/ai-for-caretakers-guide" component={AIForCaretakersGuide} />
+        <Route path="/user-guides/ai-for-coaches-guide" component={AIForCoachesGuide} />
+        <Route path="/user-guides/ai-for-teaching-guide" component={AIForTeachingGuide} />
+        <Route path="/user-guides/ai-for-service-industry-guide" component={AIForServiceIndustryGuide} />
+        <Route path="/user-guides/ai-for-craftsmen-guide" component={AIForCraftsmenGuide} />
         <Route path="/user-guides/getting-started" component={GettingStartedGuide} />
         <Route path="/user-guides/best-practices" component={BestPracticesGuide} />
         <Route path="/annad-fra-vitlikisstovuni" component={AnnadFraVitlikisstovuni} />

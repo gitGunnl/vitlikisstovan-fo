@@ -496,6 +496,10 @@ const pages: PageSeo[] = [
         <li><a href="/user-guides/best-practices">Bestu mannagongdir við vitlíki</a></li>
         <li><a href="/user-guides/ai-for-kindergarten-guide">Vitlíki til dagstovnar</a></li>
         <li><a href="/user-guides/ai-for-caretakers-guide">Vitlíki til umsorgarfólk</a></li>
+        <li><a href="/user-guides/ai-for-coaches-guide">Vitlíki í venjaraarbeiði</a></li>
+        <li><a href="/user-guides/ai-for-teaching-guide">Vitlíki til undirvísing</a></li>
+        <li><a href="/user-guides/ai-for-service-industry-guide">Vegleiðing til tænastuvinnuna</a></li>
+        <li><a href="/user-guides/ai-for-craftsmen-guide">Vitlíki til handverkarar</a></li>
       </ul>
     `),
     jsonLd: [
@@ -510,6 +514,10 @@ const pages: PageSeo[] = [
           ["Bestu mannagongdir við vitlíki", "/user-guides/best-practices"],
           ["Vitlíki til dagstovnar", "/user-guides/ai-for-kindergarten-guide"],
           ["Vitlíki til umsorgarfólk", "/user-guides/ai-for-caretakers-guide"],
+          ["Vitlíki í venjaraarbeiði", "/user-guides/ai-for-coaches-guide"],
+          ["Vitlíki til undirvísing", "/user-guides/ai-for-teaching-guide"],
+          ["Vegleiðing til tænastuvinnuna", "/user-guides/ai-for-service-industry-guide"],
+          ["Vitlíki til handverkarar", "/user-guides/ai-for-craftsmen-guide"],
         ].map(([name, path]) => ({
           "@type": "Article",
           name,
@@ -644,6 +652,122 @@ const pages: PageSeo[] = [
         ["Heim", "/"],
         ["Brúkaravegleiðingar", "/user-guides"],
         ["Vitlíki til umsorgarfólk", "/user-guides/ai-for-caretakers-guide"],
+      ]),
+    ],
+  },
+  {
+    path: "/user-guides/ai-for-coaches-guide",
+    title: "Vitlíki í venjaraarbeiði | Vitlíkisstovan",
+    description:
+      "Handalig vegleiðing fyri venjarar um, hvussu vitlíki kann stuðla við venjing, fyrireiking og samskifti.",
+    ogType: "article",
+    content: block(`
+      <h1>Vitlíki í venjaraarbeiði</h1>
+      <p>Ein handalig vegleiðing fyri venjarar um, hvussu vitlíki kann stuðla við venjing, fyrireiking og samskifti í gerandisdegnum.</p>
+    `),
+    jsonLd: [
+      {
+        "@type": "Article",
+        headline: "Vitlíki í venjaraarbeiði",
+        description:
+          "Hvussu venjarar kunnu brúka vitlíki til venjing, fyrireiking og samskifti.",
+        inLanguage: "fo",
+        author: { "@id": ORG_REF },
+        publisher: { "@id": ORG_REF },
+        url: `${SITE_URL}/user-guides/ai-for-coaches-guide`,
+        mainEntityOfPage: `${SITE_URL}/user-guides/ai-for-coaches-guide`,
+      },
+      breadcrumbs([
+        ["Heim", "/"],
+        ["Brúkaravegleiðingar", "/user-guides"],
+        ["Vitlíki í venjaraarbeiði", "/user-guides/ai-for-coaches-guide"],
+      ]),
+    ],
+  },
+  {
+    path: "/user-guides/ai-for-teaching-guide",
+    title: "Vitlíki til undirvísing | Vitlíkisstovan",
+    description:
+      "Handalig vegleiðing um, hvussu vitlíki kann nýtast í undirvísing og at fyrireika tímar.",
+    ogType: "article",
+    content: block(`
+      <h1>Vitlíki til undirvísing</h1>
+      <p>Ein handalig vegleiðing um, hvussu vitlíki kann nýtast í undirvísing — frá at fyrireika tímar til at gera tilfar og samskifti.</p>
+    `),
+    jsonLd: [
+      {
+        "@type": "Article",
+        headline: "Vitlíki til undirvísing",
+        description:
+          "Hvussu vitlíki kann nýtast í undirvísing og at fyrireika tímar.",
+        inLanguage: "fo",
+        author: { "@id": ORG_REF },
+        publisher: { "@id": ORG_REF },
+        url: `${SITE_URL}/user-guides/ai-for-teaching-guide`,
+        mainEntityOfPage: `${SITE_URL}/user-guides/ai-for-teaching-guide`,
+      },
+      breadcrumbs([
+        ["Heim", "/"],
+        ["Brúkaravegleiðingar", "/user-guides"],
+        ["Vitlíki til undirvísing", "/user-guides/ai-for-teaching-guide"],
+      ]),
+    ],
+  },
+  {
+    path: "/user-guides/ai-for-service-industry-guide",
+    title: "Vegleiðing til tænastuvinnuna | Vitlíkisstovan",
+    description:
+      "Handalig vegleiðing fyri tænastuvinnuna um, hvussu vitlíki kann stuðla við dagligum uppgávum og kundasamskifti.",
+    ogType: "article",
+    content: block(`
+      <h1>Vegleiðing til tænastuvinnuna</h1>
+      <p>Ein handalig vegleiðing fyri tænastuvinnuna um, hvussu vitlíki kann stuðla við dagligum uppgávum og kundasamskifti.</p>
+    `),
+    jsonLd: [
+      {
+        "@type": "Article",
+        headline: "Vegleiðing til tænastuvinnuna",
+        description:
+          "Hvussu tænastuvinnan kann brúka vitlíki til dagligar uppgávur og kundasamskifti.",
+        inLanguage: "fo",
+        author: { "@id": ORG_REF },
+        publisher: { "@id": ORG_REF },
+        url: `${SITE_URL}/user-guides/ai-for-service-industry-guide`,
+        mainEntityOfPage: `${SITE_URL}/user-guides/ai-for-service-industry-guide`,
+      },
+      breadcrumbs([
+        ["Heim", "/"],
+        ["Brúkaravegleiðingar", "/user-guides"],
+        ["Vegleiðing til tænastuvinnuna", "/user-guides/ai-for-service-industry-guide"],
+      ]),
+    ],
+  },
+  {
+    path: "/user-guides/ai-for-craftsmen-guide",
+    title: "Vitlíki til handverkarar | Vitlíkisstovan",
+    description:
+      "Handalig vegleiðing fyri handverkarar um, hvussu vitlíki kann stuðla við tilboðum, skjalfesting og skipaning.",
+    ogType: "article",
+    content: block(`
+      <h1>Vitlíki til handverkarar</h1>
+      <p>Ein handalig vegleiðing fyri handverkarar um, hvussu vitlíki kann stuðla við tilboðum, skjalfesting og skipaning av arbeiðinum.</p>
+    `),
+    jsonLd: [
+      {
+        "@type": "Article",
+        headline: "Vitlíki til handverkarar",
+        description:
+          "Hvussu handverkarar kunnu brúka vitlíki til tilboð, skjalfesting og skipaning.",
+        inLanguage: "fo",
+        author: { "@id": ORG_REF },
+        publisher: { "@id": ORG_REF },
+        url: `${SITE_URL}/user-guides/ai-for-craftsmen-guide`,
+        mainEntityOfPage: `${SITE_URL}/user-guides/ai-for-craftsmen-guide`,
+      },
+      breadcrumbs([
+        ["Heim", "/"],
+        ["Brúkaravegleiðingar", "/user-guides"],
+        ["Vitlíki til handverkarar", "/user-guides/ai-for-craftsmen-guide"],
       ]),
     ],
   },
