@@ -168,6 +168,13 @@ const MarkdownBlock = ({ text }: { text: string }) => {
   lines.forEach((line, idx) => {
     const cleanLine = line.trim();
 
+    // Skip empty heading markers (e.g. a bare "##" with no text) so the raw
+    // marker never leaks into the page as a literal paragraph.
+    if (/^#{1,6}\s*$/.test(cleanLine)) {
+      flushList();
+      return;
+    }
+
     if (cleanLine.startsWith("# ")) {
       flushList();
       elements.push(
