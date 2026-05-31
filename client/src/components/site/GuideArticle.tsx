@@ -74,8 +74,44 @@ function parseEmphasis(text: string, rules: EmphasisRule[]): ReactNode[] {
   return result;
 }
 
+// Parses Markdown links `[label](href)` into real anchors, applying emphasis
+// rules to the surrounding text and the link label. External links open in a new
+// tab; in-page anchors (`#id`) and relative links use default navigation.
+function parseInline(text: string, rules: EmphasisRule[]): ReactNode[] {
+  const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const result: ReactNode[] = [];
+  let lastIndex = 0;
+  let key = 0;
+  let match: RegExpExecArray | null;
+
+  while ((match = linkRegex.exec(text)) !== null) {
+    if (match.index > lastIndex) {
+      result.push(...parseEmphasis(text.slice(lastIndex, match.index), rules));
+    }
+    const [, label, href] = match;
+    const isExternal = /^https?:\/\//.test(href);
+    result.push(
+      <a
+        key={`lnk-${key++}`}
+        href={href}
+        {...(isExternal ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+        className="text-stone-900 dark:text-stone-100 underline decoration-stone-400 underline-offset-2 hover:decoration-stone-800 dark:hover:decoration-stone-200 transition-colors"
+      >
+        {parseEmphasis(label, rules)}
+      </a>
+    );
+    lastIndex = linkRegex.lastIndex;
+  }
+
+  if (lastIndex < text.length) {
+    result.push(...parseEmphasis(text.slice(lastIndex), rules));
+  }
+
+  return result;
+}
+
 const RenderInlineText = ({ text }: { text: string }) => (
-  <>{parseEmphasis(text, emphasisRules)}</>
+  <>{parseInline(text, emphasisRules)}</>
 );
 
 // ---------------------------------------------------------------------------
