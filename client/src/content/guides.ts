@@ -36,6 +36,11 @@ export interface InteractiveGuide {
   pdfFilename: string;
   /** Whether this guide appears as a card on the `/user-guides` listing. */
   listed: boolean;
+  /**
+   * Optional decorative image served from the site root, e.g.
+   * "/images/guides/vitliki-til-dagstovnar.webp".
+   */
+  image?: string;
 }
 
 export interface LegacyPdfGuide {
@@ -56,6 +61,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     route: "/user-guides/ai-for-kindergarten-guide",
     pdfFilename: "vitliki-til-dagstovnar.pdf",
     listed: true,
+    image: "/images/guides/vitliki-til-dagstovnar.webp",
   },
   {
     id: "ai-for-caretakers",
@@ -66,6 +72,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     route: "/user-guides/ai-for-caretakers-guide",
     pdfFilename: "vitliki-til-roktarstarvsfolk.pdf",
     listed: true,
+    image: "/images/guides/vitliki-til-roktarstarvsfolk.webp",
   },
   {
     id: "ai-for-coaches",
@@ -75,6 +82,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     route: "/user-guides/ai-for-coaches-guide",
     pdfFilename: "vitliki-til-venjarar.pdf",
     listed: true,
+    image: "/images/guides/vitliki-til-venjarar.webp",
   },
   {
     id: "ai-for-teaching",
@@ -84,6 +92,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     route: "/user-guides/ai-for-teaching-guide",
     pdfFilename: "vitliki-til-undirvising.pdf",
     listed: true,
+    image: "/images/guides/vitliki-til-undirvising.webp",
   },
   {
     id: "ai-for-service-industry",
@@ -93,6 +102,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     route: "/user-guides/ai-for-service-industry-guide",
     pdfFilename: "vitliki-til-taenastuvinnuna.pdf",
     listed: true,
+    image: "/images/guides/vitliki-til-taenastuvinnuna.webp",
   },
   {
     id: "ai-for-craftsmen",
@@ -102,6 +112,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     route: "/user-guides/ai-for-craftsmen-guide",
     pdfFilename: "vitliki-til-handverkarar.pdf",
     listed: true,
+    image: "/images/guides/vitliki-til-handverkarar.webp",
   },
   {
     id: "getting-started",

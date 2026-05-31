@@ -22,6 +22,7 @@ type GuideCard =
       href: string;
       pdfPath: string;
       pdfFilename: string;
+      image?: string;
     }
   | {
       kind: "pdf";
@@ -30,6 +31,7 @@ type GuideCard =
       description: string;
       pdfPath: string;
       pdfFilename: string;
+      image?: string;
     };
 
 export default function UserGuides() {
@@ -49,6 +51,7 @@ export default function UserGuides() {
         href: g.route,
         pdfPath: interactiveGuidePdfPath(g),
         pdfFilename: g.pdfFilename,
+        image: g.image,
       })),
     ...legacyPdfGuides.map((g) => ({
       kind: "pdf" as const,
@@ -95,14 +98,25 @@ export default function UserGuides() {
             {/* Guide Cards */}
             <div className="grid gap-6">
               {guides.map((guide) => (
-                <Card key={guide.id} className="overflow-hidden hover:shadow-lg transition-shadow">
+                <Card key={guide.id} className="overflow-hidden hover:shadow-lg transition-shadow sm:flex sm:items-stretch">
+                  {guide.image && (
+                    <div className="sm:w-48 sm:flex-shrink-0">
+                      <img
+                        src={guide.image}
+                        alt={guide.title}
+                        loading="lazy"
+                        className="h-40 w-full object-cover sm:h-full"
+                      />
+                    </div>
+                  )}
+                  <div className="flex flex-1 flex-col">
                   <CardHeader>
                     <CardTitle className="text-xl mb-2">{guide.title}</CardTitle>
                     <CardDescription className="text-base">
                       {guide.description}
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="mt-auto">
                     <div className="flex gap-3">
                       {guide.kind === "pdf" ? (
                         <Button
@@ -134,6 +148,7 @@ export default function UserGuides() {
                       )}
                     </div>
                   </CardContent>
+                  </div>
                 </Card>
               ))}
             </div>

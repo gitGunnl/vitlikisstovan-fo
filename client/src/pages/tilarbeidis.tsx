@@ -7,6 +7,7 @@ import Footer from "@/components/site/Footer";
 import { seoConfig } from "@/content/seo";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { getInteractiveGuide } from "@/content/guides";
 
 type TimelineEvent = {
   id: string;
@@ -312,30 +313,34 @@ const Tilarbeidis = () => {
   // for politicians/teachers are intentionally excluded).
   const guideLinks = [
     {
-      title:
-        "Vitlíki til dagstovnar",
+      title: "Vitlíki til dagstovnar",
       href: "/user-guides/ai-for-kindergarten-guide",
+      image: getInteractiveGuide("ai-for-kindergarten")?.image,
     },
     {
-      title:
-        "Vitlíki til røktarstarvsfólk",
+      title: "Vitlíki til røktarstarvsfólk",
       href: "/user-guides/ai-for-caretakers-guide",
+      image: getInteractiveGuide("ai-for-caretakers")?.image,
     },
     {
       title: "Vitlíki í venjaraarbeiði",
       href: "/user-guides/ai-for-coaches-guide",
+      image: getInteractiveGuide("ai-for-coaches")?.image,
     },
     {
       title: "Vitlíki til undirvísing",
       href: "/user-guides/ai-for-teaching-guide",
+      image: getInteractiveGuide("ai-for-teaching")?.image,
     },
     {
       title: "Vitlíki til tænastuvinnuna",
       href: "/user-guides/ai-for-service-industry-guide",
+      image: getInteractiveGuide("ai-for-service-industry")?.image,
     },
     {
       title: "Vitlíki til hándverkarar",
       href: "/user-guides/ai-for-craftsmen-guide",
+      image: getInteractiveGuide("ai-for-craftsmen")?.image,
     },
   ];
 
@@ -435,11 +440,20 @@ const Tilarbeidis = () => {
                   <Link
                     key={guide.href}
                     href={guide.href}
-                    className="group flex items-center gap-3 rounded-lg border border-border/60 bg-background/80 p-4 transition-all hover:border-primary/60 hover:bg-primary/5 hover:shadow-md"
+                    className="group flex items-center gap-3 overflow-hidden rounded-lg border border-border/60 bg-background/80 p-4 transition-all hover:border-primary/60 hover:bg-primary/5 hover:shadow-md"
                   >
-                    <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
-                      <BookOpen className="h-4 w-4" />
-                    </span>
+                    {guide.image ? (
+                      <img
+                        src={guide.image}
+                        alt={guide.title}
+                        loading="lazy"
+                        className="h-12 w-12 flex-shrink-0 rounded-md object-cover"
+                      />
+                    ) : (
+                      <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+                        <BookOpen className="h-4 w-4" />
+                      </span>
+                    )}
                     <span className="font-medium leading-snug">{guide.title}</span>
                     <ArrowRight className="ml-auto h-4 w-4 flex-shrink-0 text-muted-foreground transition-all group-hover:translate-x-0.5 group-hover:text-primary" />
                   </Link>
