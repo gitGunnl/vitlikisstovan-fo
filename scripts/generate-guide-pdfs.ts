@@ -228,11 +228,14 @@ async function main() {
           path: outPath,
           format: "A4",
           printBackground: true,
+          // Side margins are intentionally tighter than the (now removed)
+          // on-screen container padding; print CSS collapses that padding so
+          // these page margins are the single source of side whitespace.
           margin: {
-            top: "18mm",
-            bottom: "18mm",
-            left: "16mm",
-            right: "16mm",
+            top: "16mm",
+            bottom: "16mm",
+            left: "14mm",
+            right: "14mm",
           },
         });
         console.log(`  ✓ ${guide.pdfFilename}  (${guide.route})`);

@@ -524,5 +524,40 @@
   .guide-print-exact {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
+    /* Keep callouts and prompt cards from being sliced across a page break. */
+    break-inside: avoid;
+  }
+
+  /* On screen the guide body has three stacked layers of horizontal spacing
+     (the Section's `.container` padding, its max-width centring, and the inner
+     `max-w-3xl` + `px-*`). In a PDF those compound with the page margins set by
+     scripts/generate-guide-pdfs.ts and leave huge side gutters. Collapse them
+     in print so the PDF page margins are the single source of side whitespace
+     and the text column fills the page properly. */
+  .guide-article-section > div,
+  .guide-article-shell {
+    max-width: none !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* Typographic print niceties: don't strand a heading at the bottom of a page,
+     and avoid single dangling lines (widows/orphans) in body copy. */
+  .guide-article-shell h1,
+  .guide-article-shell h2,
+  .guide-article-shell h3 {
+    break-after: avoid;
+  }
+  .guide-article-shell p,
+  .guide-article-shell li {
+    orphans: 3;
+    widows: 3;
+  }
+  .guide-article-shell img,
+  .guide-article-shell pre {
+    break-inside: avoid;
   }
 }

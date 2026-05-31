@@ -447,8 +447,8 @@ export default function GuideArticle({
     <div className="flex flex-col min-h-screen bg-stone-50 dark:bg-stone-950 font-serif">
       <Header />
 
-      <Section className="flex-grow pt-12 pb-24">
-        <div className="max-w-3xl mx-auto px-6 sm:px-8">
+      <Section className="guide-article-section flex-grow pt-12 pb-24">
+        <div className="guide-article-shell max-w-3xl mx-auto px-6 sm:px-8">
 
           {/* Navigation / Tools */}
           <nav className="no-print flex justify-between items-center mb-16 font-sans">
