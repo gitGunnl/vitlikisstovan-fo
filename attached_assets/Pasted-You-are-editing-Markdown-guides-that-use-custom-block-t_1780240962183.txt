@@ -1,0 +1,45 @@
+You are editing Markdown guides that use custom block tags.
+
+Your task is to read the full guide and add block tags where they clearly improve readability.
+
+You may only add block tags. Do not rewrite, correct, shorten, translate, reorder, or improve any text.
+
+The only exception: old prompt markers such as `--- prompt byrjar ---`, `--- prompt endar ---`, `--- prompt ---`, or similar should be removed and replaced with the new `:::prompt` block.
+
+Use only these tags:
+
+```md
+:::prompt
+:::safety
+:::scope
+:::principle
+:::scenario
+```
+
+## Tag rules
+
+Use `:::prompt` around any text the reader is meant to copy into an AI tool. This includes main prompts, follow-up prompts, short prompt examples, and prompt collections. Follow-up prompts must also use `:::prompt`.
+
+Use `:::safety` around important warnings or boundaries about privacy, personal information, sensitive data, health information, professional responsibility, approved systems, or what must not be pasted into ordinary AI tools.
+
+Use `:::scope` around sections that explain who the guide is for, who it is not for, what the guide covers, or what it deliberately does not cover.
+
+Use `:::principle` around short, reusable rules of thumb the reader should remember, such as: AI gives a first draft, the human keeps responsibility, context improves answers, Faroese output must be checked, or AI is a helper rather than a decision-maker.
+
+Use `:::scenario` around realistic setup text before a prompt, where the guide describes the everyday situation the reader is in. Do not include the actual AI prompt inside `:::scenario`; the prompt itself belongs in `:::prompt`.
+
+## Important
+
+Do not invent new tags.
+
+Do not create nested or overlapping blocks.
+
+Do not wrap whole chapters if only a smaller section needs a tag.
+
+Do not tag text unless it clearly matches one of the tag rules.
+
+Be thorough, but precise. Work through the guide from top to bottom and add every clear tag that belongs.
+
+Return the full Markdown guide with the tags added.
+
+Do not explain your changes. Only output the revised Markdown.
