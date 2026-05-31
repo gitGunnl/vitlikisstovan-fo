@@ -36,31 +36,29 @@ Ikki øll dømi eru gjørd til allar ítróttir. Meiningin er, at tú hyggur eft
 
 **[Tekstur í fýrakantaðum klombrum]**
 
-:::principle
 Tá ið tú sær tekst í klombrum, skalt tú skifta hann út við tína egnu støðu, áðrenn tú sendir boðini til vitlíki.
-:::
 
 **Dømi 1** Í vegleiðingini stendur kanska:
 
-:::prompt
+:::prompt-simple
 Ger eina einfalda venjingarætlan til [aldursbólk] í [ítrótti]. Høvuðsdenturin er [evni]. Venjingin skal vara [tíð]. Tak við mál, tíð, útgerð og venjingarpunkt.
 :::
 
 Skift nú tekstin í klombrunum út við tína egnu støðu, áðrenn tú sendir hann til vitlíki - t.d.:
 
-:::prompt
+:::prompt-simple
 Ger eina einfalda venjingarætlan til U11 í fótbólti. Høvuðsdenturin er at spæla seg úr trýsti. Venjingin skal vara 75 minuttir. Tak við mál, tíð, útgerð og venjingarpunkt.
 :::
 
 **Dømi 2** Í vegleiðingini stendur kanska:
 
-:::prompt
+:::prompt-simple
 Skriva stutt og vinarlig boð til foreldur um [hvat skal henda]. Tak við [tíð], [stað] og [hvat børnini skulu hava við].
 :::
 
 Tú skiftir klombrini út - t.d.:
 
-:::prompt
+:::prompt-simple
 Skriva stutt og vinarlig boð til foreldur um venjingardystin leygardagin. Tey møta kl.10.00 á vøllinum í Gundadali, og børnini skulu hava vatnfløsku, gaggur og regnjakka við.
 :::
 
