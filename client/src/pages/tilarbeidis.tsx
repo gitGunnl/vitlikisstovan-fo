@@ -301,6 +301,37 @@ const Tilarbeidis = () => {
   // Title and meta description are owned by the prerender step
   // (scripts/prerender-seo.ts via client/src/content/seo/registry.seo.ts).
 
+  // Main reading guides linked near the top of the page (PDF-only guides
+  // for politicians/teachers are intentionally excluded).
+  const guideLinks = [
+    {
+      title:
+        "Vitlíki til dagstovnar: Minni skriviarbeiði, meira spæl.",
+      href: "/user-guides/ai-for-kindergarten-guide",
+    },
+    {
+      title:
+        "Hvussu tú kann nýta vitlíki sum røktarstarvsfólk: Meira tíð til tær heitu hendurnar.",
+      href: "/user-guides/ai-for-caretakers-guide",
+    },
+    {
+      title: "Vitlíki í venjaraarbeiði",
+      href: "/user-guides/ai-for-coaches-guide",
+    },
+    {
+      title: "Vitlíki til undirvísing",
+      href: "/user-guides/ai-for-teaching-guide",
+    },
+    {
+      title: "Vegleiðing til tænastuvinnuna",
+      href: "/user-guides/ai-for-service-industry-guide",
+    },
+    {
+      title: "Vitlíki til handverkarar",
+      href: "/user-guides/ai-for-craftsmen-guide",
+    },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = timelineData.map((evt) =>
@@ -367,6 +398,42 @@ const Tilarbeidis = () => {
         {/* Status Boxes */}
         <section className="px-4 sm:px-6 lg:px-8 mb-12">
           <div className="max-w-4xl mx-auto space-y-4">
+            {/* All guides complete */}
+            <div className="bg-green-500/15 border-2 border-green-500/50 rounded-xl p-6 shadow-lg">
+              <div className="flex items-center gap-3">
+                <span className="text-2xl">✅</span>
+                <div>
+                  <h3 className="font-bold text-lg">
+                    Allar vegleiðingar liðugar
+                  </h3>
+                  <p className="text-foreground/90">
+                    Allar høvuðsvegleiðingarnar eru nú gjørdar liðugar og tøkar
+                    at lesa.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Guide links */}
+            <div className="bg-background/60 border border-border/50 rounded-xl p-6 shadow-lg">
+              <div className="flex items-center gap-3 mb-4">
+                <span className="text-2xl">📚</span>
+                <h3 className="font-bold text-lg">Lesivegleiðingar</h3>
+              </div>
+              <ul className="space-y-2">
+                {guideLinks.map((guide) => (
+                  <li key={guide.href}>
+                    <Link
+                      href={guide.href}
+                      className="text-primary hover:underline font-medium"
+                    >
+                      {guide.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
             {/* Current Focus */}
             <div className="bg-primary/15 border-2 border-primary/50 rounded-xl p-6 shadow-lg">
               <div className="flex items-center gap-3">
@@ -376,19 +443,6 @@ const Tilarbeidis = () => {
                     Núverandi uppgáva:
                   </h3>
                   <p className="text-foreground/90">
-                    Snið og myndir
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Next Up */}
-            <div className="bg-accent/10 border border-accent/30 rounded-lg p-4">
-              <div className="flex items-center gap-3">
-                <span className="text-xl">📅</span>
-                <div>
-                  <h4 className="font-semibold text-accent">Næst:</h4>
-                  <p className="text-foreground/80 text-sm">
                     Miðling
                   </p>
                 </div>
