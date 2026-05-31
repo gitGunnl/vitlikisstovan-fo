@@ -23,7 +23,7 @@ type TimelineEvent = {
 
 const timelineData: TimelineEvent[] = [
   {
-    id: "evt-023",
+    id: "evt-024",
     date: "2026-05-27",
     title: "Vegleiðingar skrivaðar og útgivnar",
     summary:
