@@ -1,6 +1,6 @@
 // client/src/pages/tilarbeidis.tsx
 import { useEffect, useState, ReactNode } from "react";
-import { Calendar, ChevronDown } from "lucide-react";
+import { Calendar, ChevronDown, BookOpen, ArrowRight } from "lucide-react";
 import { Link } from "wouter";
 import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
@@ -22,6 +22,13 @@ type TimelineEvent = {
 };
 
 const timelineData: TimelineEvent[] = [
+  {
+    id: "evt-023",
+    date: "2026-05-27",
+    title: "Vegleiðingar skrivaðar og útgivnar",
+    summary:
+      "Vegleiðingar eru nú skrivaðar og komnar út.",
+  },
   {
     id: "evt-023",
     date: "2026-05-11",
@@ -306,12 +313,12 @@ const Tilarbeidis = () => {
   const guideLinks = [
     {
       title:
-        "Vitlíki til dagstovnar: Minni skriviarbeiði, meira spæl.",
+        "Vitlíki til dagstovnar",
       href: "/user-guides/ai-for-kindergarten-guide",
     },
     {
       title:
-        "Hvussu tú kann nýta vitlíki sum røktarstarvsfólk: Meira tíð til tær heitu hendurnar.",
+        "Vitlíki til røktarstarvsfólk",
       href: "/user-guides/ai-for-caretakers-guide",
     },
     {
@@ -323,11 +330,11 @@ const Tilarbeidis = () => {
       href: "/user-guides/ai-for-teaching-guide",
     },
     {
-      title: "Vegleiðing til tænastuvinnuna",
+      title: "Vitlíki til tænastuvinnuna",
       href: "/user-guides/ai-for-service-industry-guide",
     },
     {
-      title: "Vitlíki til handverkarar",
+      title: "Vitlíki til hándverkarar",
       href: "/user-guides/ai-for-craftsmen-guide",
     },
   ];
@@ -404,10 +411,10 @@ const Tilarbeidis = () => {
                 <span className="text-2xl">✅</span>
                 <div>
                   <h3 className="font-bold text-lg">
-                    Allar vegleiðingar liðugar
+                    Allar vegleiðingar lidnar
                   </h3>
                   <p className="text-foreground/90">
-                    Allar høvuðsvegleiðingarnar eru nú gjørdar liðugar og tøkar
+                    Allar vegleiðingarnar eru nú skrivaðar og tøkar
                     at lesa.
                   </p>
                 </div>
@@ -416,22 +423,28 @@ const Tilarbeidis = () => {
 
             {/* Guide links */}
             <div className="bg-background/60 border border-border/50 rounded-xl p-6 shadow-lg">
-              <div className="flex items-center gap-3 mb-4">
+              <div className="flex items-center gap-3 mb-1">
                 <span className="text-2xl">📚</span>
-                <h3 className="font-bold text-lg">Lesivegleiðingar</h3>
+                <h3 className="font-bold text-lg">Vegleiðingar</h3>
               </div>
-              <ul className="space-y-2">
+              <p className="text-sm text-muted-foreground mb-5 ml-11">
+                Seks sjálvstøðugar vegleiðingar – úrslitið av arbeiðinum.
+              </p>
+              <div className="grid gap-3 sm:grid-cols-2">
                 {guideLinks.map((guide) => (
-                  <li key={guide.href}>
-                    <Link
-                      href={guide.href}
-                      className="text-primary hover:underline font-medium"
-                    >
-                      {guide.title}
-                    </Link>
-                  </li>
+                  <Link
+                    key={guide.href}
+                    href={guide.href}
+                    className="group flex items-center gap-3 rounded-lg border border-border/60 bg-background/80 p-4 transition-all hover:border-primary/60 hover:bg-primary/5 hover:shadow-md"
+                  >
+                    <span className="flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-md bg-primary/10 text-primary">
+                      <BookOpen className="h-4 w-4" />
+                    </span>
+                    <span className="font-medium leading-snug">{guide.title}</span>
+                    <ArrowRight className="ml-auto h-4 w-4 flex-shrink-0 text-muted-foreground transition-all group-hover:translate-x-0.5 group-hover:text-primary" />
+                  </Link>
                 ))}
-              </ul>
+              </div>
             </div>
 
             {/* Current Focus */}
@@ -465,7 +478,7 @@ const Tilarbeidis = () => {
                 <div className="p-6 bg-background/40 border-x border-b border-border/50 rounded-b-xl">
                   <div className="space-y-8">
                   <p className="text-foreground/85 leading-loose text-lg">
-          Vitlíki-amboð (AI-amboð) gerast skjótt alsamt meira tøk, men nógv arbeiðsfólk í Føroyum eru í iva um, hvussu tey skulu fara í gongd við at brúka tey.
+          Vitlíki-amboð gerast skjótt alsamt meira tøk, men nógv arbeiðsfólk í Føroyum eru í iva um, hvussu tey skulu fara í gongd við at brúka tey.
                   </p>
 
                   <p className="text-foreground/80 leading-loose text-lg">
