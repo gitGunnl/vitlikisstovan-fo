@@ -139,8 +139,16 @@ Tað er sunnukvøld. Tú situr og fyrireikar teg til vikuna, sum kemur, og tær 
 | :---- |
 :::
 
-:::prompt
-**Uppfylgjandi byrt til tillagingar:** Tá ið tú hevur fingið fyrsta uppkastið, kanst tú hava eina samrøðu við vitlíki fyri at betra um tað. Skriva eitt nú: "Legg eitt bólkavirksemi inn í miðjuna av tímanum", "Ger innleiðingina meira virkna" ella "Kom við uppskotum til, hvussu eg kann undirvísingardifferensiera hetta til luttakarar, sum hava tørv á meira stuðli ella avbjóðingum."
+**Uppfylgjandi byrt til tillagingar:** Tá ið tú hevur fingið fyrsta uppkastið, kanst tú hava eina samrøðu við vitlíki fyri at betra um tað. Skriva eitt nú:
+
+:::prompt-simple
+Legg eitt bólkavirksemi inn í miðjuna av tímanum
+:::
+:::prompt-simple
+Ger innleiðingina meira virkna
+:::
+:::prompt-simple
+Kom við uppskotum til, hvussu eg kann undirvísingardifferensiera hetta til luttakarar, sum hava tørv á meira stuðli ella avbjóðingum.
 :::
 
 **Royn tað nú:** Heldur enn at lesa víðari, royn nú at avrita byrti omanfyri og tillaga tað til tín veruleika. Set hetta síðani inn í títt vitlíkisamboð, fyri at síggja hvat tú fært út aftur.
@@ -168,8 +176,19 @@ Ein týðandi ávaring: **kanna altíð svarlistan væl**. Vitlíki ger viðhvø
 | :---- |
 :::
 
-:::prompt
-**Gagnligar uppfylgingar:** "Ger spurning 3 og 7 torførari," ella "Legg 2 spurningar afturat, sum krevja, at tey nýta hugtakið í einari nýggjari støðu,", "Ger eina lættari útgávu av hesum spurningum til luttakarar, sum hava tørv á stuðli." ella “Gev mær eina keldu sum vísur at svarini til spurning 6 og 9 eru sannir.”
+**Gagnligar uppfylgingar:**
+
+:::prompt-simple
+Ger spurning 3 og 7 torførari,
+:::
+:::prompt-simple
+Legg 2 spurningar afturat, sum krevja, at tey nýta hugtakið í einari nýggjari støðu,
+:::
+:::prompt-simple
+Ger eina lættari útgávu av hesum spurningum til luttakarar, sum hava tørv á stuðli.
+:::
+:::prompt-simple
+Gev mær eina keldu sum vísur at svarini til spurning 6 og 9 eru sannir.
 :::
 
 **Sløg av spurningum, tú kanst biðja um:** fleiri svarmøguleikar (við 4 møguleikum), satt/skeivt, stutt svar, opnir spurningar/kjakspurningar, fyll-út-spurningar (har ein skal fylla gloppini út), og enntá hugskot til nýggja sløg av spurningum sum eru stuttlig at svara.
@@ -240,8 +259,19 @@ Vitlíki dugur sera væl at skriva ein tekst á ymiskar hættir. Set upprunaliga
 | :---- |
 :::
 
-:::prompt
-**Gagnligar uppfylgingar:** "Ger myndaligu útgávuna uppaftur meira yvirdrivna," "Hvørji fimm orð í løgfrøðiligu útgávuni gera hana so formliga? Gev mær onnur orð í staðin," "Skriva eina fjórðu útgávu av plast-tekstinum, sum um tað var eitt lesarabræv frá einum frustreraðum borgara," ella "Gev mær 3 spurningar til næmingarnar, sum fáa teir at umhugsa munin á ferðavinnutekstinum og upprunatekstinum."
+**Gagnligar uppfylgingar:**
+
+:::prompt-simple
+Ger myndaligu útgávuna uppaftur meira yvirdrivna,
+:::
+:::prompt-simple
+Hvørji fimm orð í løgfrøðiligu útgávuni gera hana so formliga? Gev mær onnur orð í staðin,
+:::
+:::prompt-simple
+Skriva eina fjórðu útgávu av plast-tekstinum, sum um tað var eitt lesarabræv frá einum frustreraðum borgara,
+:::
+:::prompt-simple
+Gev mær 3 spurningar til næmingarnar, sum fáa teir at umhugsa munin á ferðavinnutekstinum og upprunatekstinum.
 :::
 
 ## **3.5 At tillaga tekstir til ymisk torleikastig**
@@ -269,10 +299,14 @@ Tú hevur eitt torført evni ella ein lærubókatekst, sum tú skalt føra næmi
 
 **Gagnligar uppfylgingar:**
 
-:::prompt
-* "Ger fimm spurningar til hvørt stigið, sum kanna, um næmingurin hevur skilt tekstin."  
-* "Skriva frágreiðingina til 12 ára gamla stigið sum eina stutta søgu um ein persón, ið upplivir hetta."  
-* "Hvat eru tey trý týdningarmestu fakorðini í serfrøðingatekstinum? Ger ein orðalista til tey."
+:::prompt-simple
+Ger fimm spurningar til hvørt stigið, sum kanna, um næmingurin hevur skilt tekstin.
+:::
+:::prompt-simple
+Skriva frágreiðingina til 12 ára gamla stigið sum eina stutta søgu um ein persón, ið upplivir hetta.
+:::
+:::prompt-simple
+Hvat eru tey trý týdningarmestu fakorðini í serfrøðingatekstinum? Ger ein orðalista til tey.
 :::
 
 ## **3.6 At skriva greið og virðilig boð og afturmeldingar (diplomatifiltrið)**
@@ -335,12 +369,20 @@ Hetta er serliga gagnligt, tá ið tú skalt:
 
 **Gagnligar uppfylgingar:**
 
-:::prompt
-* „Ger tekstin styttri og lættari at lesa á fartelefon.“  
-* „Ger tónan eitt sindur meira formligan.“  
-* „Ger boðini meira beinleiðis, men framvegis virðilig.“  
-* „Gev mær eina mildari útgávu og eina greiðari útgávu.“  
-* „Enda við einum heilt ítøkiligum næsta stigi.“
+:::prompt-simple
+Ger tekstin styttri og lættari at lesa á fartelefon.
+:::
+:::prompt-simple
+Ger tónan eitt sindur meira formligan.
+:::
+:::prompt-simple
+Ger boðini meira beinleiðis, men framvegis virðilig.
+:::
+:::prompt-simple
+Gev mær eina mildari útgávu og eina greiðari útgávu.
+:::
+:::prompt-simple
+Enda við einum heilt ítøkiligum næsta stigi.
 :::
 
 ## **3.7 Greining av felags rákum og manglum í flokkinum**
@@ -385,12 +427,14 @@ Tú kanst eisini biðja vitlíki koma við uppskoti til eina stutta endurtøku, 
 
 **Gagnligar uppfylgingar:**
 
-:::prompt
-“Ger ein spurning við fleiri svarmøguleikum, har tey skeivu svarini byggja á hesar misskiljingar.”
-
-“Ger ein stuttan munnligan uppstartsspurning, sum kann kanna, um flokkurin nú hevur skilt munin.”
-
-“Ger ein samandrátt av tí, sum flokkurin sum heild tykist hava skilt væl.”
+:::prompt-simple
+Ger ein spurning við fleiri svarmøguleikum, har tey skeivu svarini byggja á hesar misskiljingar.
+:::
+:::prompt-simple
+Ger ein stuttan munnligan uppstartsspurning, sum kann kanna, um flokkurin nú hevur skilt munin.
+:::
+:::prompt-simple
+Ger ein samandrátt av tí, sum flokkurin sum heild tykist hava skilt væl.
 :::
 
 ### **Týðandi: Dátuvernd og handfaring**
@@ -453,11 +497,17 @@ Tú kanst til dømis siga, at eitt gott svar skal:
 
 **Gagnlig uppfylging:**
 
-:::prompt
-* “Greið nú frá, hvat ger tað sterkara svarið betri.”  
-* “Hvat gera næmingar ofta skeift, tá ið teir skriva tílíkan tekst?”  
-* “Ger eitt veikt svar, sum sær rímiligt út í fyrstu atløgu, men sum kortini hevur týðandi veikleikar.”  
-* “Ger eina stutta frágreiðing til lærarar, sum eg kann brúka, tá ið vit tosa um munin í flokkinum.”
+:::prompt-simple
+Greið nú frá, hvat ger tað sterkara svarið betri.
+:::
+:::prompt-simple
+Hvat gera næmingar ofta skeift, tá ið teir skriva tílíkan tekst?
+:::
+:::prompt-simple
+Ger eitt veikt svar, sum sær rímiligt út í fyrstu atløgu, men sum kortini hevur týðandi veikleikar.
+:::
+:::prompt-simple
+Ger eina stutta frágreiðing til lærarar, sum eg kann brúka, tá ið vit tosa um munin í flokkinum.
 :::
 
 ### **Týðandi: Brúka dømini sum hjálparamboð – ikki sum fasit**
@@ -525,12 +575,20 @@ Tað kann vera serliga gagnligt, tá ið tú:
 
 **Gagnligar uppfylgingar:**
 
-:::prompt
-* “Ger eitt dømi, sum hóskar til 13 ára gamlar næmingar.”  
-* “Ger dømini meira hóskandi til ein føroyskan gerandisdag.”  
-* “Ger ein innleiðandi spurning, sum eg kann brúka í byrjanini av tímanum.”  
-* “Ger eina stutta uppgávu við støði í einum av hesum dømunum.”  
-* “Greið mær frá, hvussu eg kann bera hetta fram uttan at gera tað ov fløkt.”
+:::prompt-simple
+Ger eitt dømi, sum hóskar til 13 ára gamlar næmingar.
+:::
+:::prompt-simple
+Ger dømini meira hóskandi til ein føroyskan gerandisdag.
+:::
+:::prompt-simple
+Ger ein innleiðandi spurning, sum eg kann brúka í byrjanini av tímanum.
+:::
+:::prompt-simple
+Ger eina stutta uppgávu við støði í einum av hesum dømunum.
+:::
+:::prompt-simple
+Greið mær frá, hvussu eg kann bera hetta fram uttan at gera tað ov fløkt.
 :::
 
 ### **Umráðandi: Lærarin velur framvegis dømið**
@@ -574,7 +632,24 @@ Eitt byrt, sum bara biður um at "Gera spurningar um fotosyntesu", gevur nógv v
 ## **Royn aftur og fínpussa**
 
 :::principle
-Vænta ikki tað fullkomna svarið í fyrstu roynd. Vitlíki riggar best sum ein samrøða. Byrja við tínum fyrsta byrti, hygg at svarinum, og bið síðani um ávísar broytingar. Royn at lýsa neyvt fyri vitlíki hvat tú heldur er skeift ella átti at vera gjørt ørvísi. Tú kanst siga *"Næmingar skilja vanliga ikki …"* *"Legg fleiri dømi afturat,"* *"Ger málið einklari,"* ella *"Legg meira dent á praktisku nýtsluna."* Hvørja ferð fínpussar tú úrslitið eitt sindur meira. Hugsa um tað sum at geva afturmelding til ein sera skjótan hjálpara, sum beinanvegin rættar seg eftir tí, tú sigur. Tríggjar til fýra royndir geva ofta nógv betri úrslit enn at royna at skriva tað fullkomna svari í fyrstu atløgu.
+Vænta ikki tað fullkomna svarið í fyrstu roynd. Vitlíki riggar best sum ein samrøða. Byrja við tínum fyrsta byrti, hygg at svarinum, og bið síðani um ávísar broytingar. Royn at lýsa neyvt fyri vitlíki hvat tú heldur er skeift ella átti at vera gjørt ørvísi. Tú kanst siga:
+:::
+
+:::prompt-simple
+Næmingar skilja vanliga ikki …
+:::
+:::prompt-simple
+Legg fleiri dømi afturat,
+:::
+:::prompt-simple
+Ger málið einklari,
+:::
+:::prompt-simple
+Legg meira dent á praktisku nýtsluna.
+:::
+
+:::principle
+Hvørja ferð fínpussar tú úrslitið eitt sindur meira. Hugsa um tað sum at geva afturmelding til ein sera skjótan hjálpara, sum beinanvegin rættar seg eftir tí, tú sigur. Tríggjar til fýra royndir geva ofta nógv betri úrslit enn at royna at skriva tað fullkomna svari í fyrstu atløgu.
 :::
 
 ## **Bið vitlíki seta tær spurningar**

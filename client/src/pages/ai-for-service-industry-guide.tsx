@@ -110,9 +110,10 @@ Hjálp mær við hesum:
 
 Spyr síðani:
 
-:::prompt
+:::prompt-simple
 Hvør svarleið er best, um eg vil vera blíð/ur, men ikki lova ov nógv?
-
+:::
+:::prompt-simple
 Ger bestu útgávuna meira natúrliga, so eg kann siga hana hart.
 :::
 
@@ -146,10 +147,11 @@ Ger mær 5 hugskot til hvat eg kann gera, sum eg kanska ikki havi hugsa um, og s
 
 Spyr síðani:
 
-:::prompt
+:::prompt-simple
 Er tað nakað annað eg eigi at gera, fyri at kundin gerst minni ónøgdur?
-
-Hvat kann eg siga, um kundin svarar: “Hetta er ikki gott nokk”?
+:::
+:::prompt-simple
+Hvat kann eg siga, um kundin svarar: Hetta er ikki gott nokk?
 :::
 
 ---
@@ -174,9 +176,10 @@ Gev mær 5 ymiskar mátar at orða hetta.
 
 Spyr síðani:
 
-:::prompt
+:::prompt-simple
 Samein orðing 2 og 4 til eina stutta útgávu.
-
+:::
+:::prompt-simple
 Hvat kann eg siga, um kundin trýstir víðari?
 :::
 
@@ -208,9 +211,10 @@ Finn 5 veruligar møguleikar, sum kunnu passa.
 
 Spyr síðani:
 
-:::prompt
+:::prompt-simple
 Vel tey 3 bestu uppskotini, um tey ikki hava bil.
-
+:::
+:::prompt-simple
 Ger ein stuttan kanningarlista til mín: hvat skal eg vátta, áðrenn eg sendi gestirnar av stað?
 :::
 
@@ -248,9 +252,10 @@ Gev mær síðani 3 stuttar orðingar, eg kann royna við kundan.
 
 Spyr síðani:
 
-:::prompt
+:::prompt-simple
 Ger bestu orðingina minni sølukenda og meira hjálpsama.
-
+:::
+:::prompt-simple
 Ger hana styttri, so hon kann sigast upp á 20 sekund.
 :::
 
@@ -276,9 +281,10 @@ Sig mær hvussu eg skal lýsa mítt val. Halt tað einfalt, trúligt og ikki ov 
 
 Spyr síðani:
 
-:::prompt
+:::prompt-simple
 Kundin sigur: [nýggj upplýsing]. Broyt tilmælið.
-
+:::
+:::prompt-simple
 Ger setningarnar meira gerandisligar.
 :::
 
@@ -314,9 +320,10 @@ Byrja nú sum kundin.
 
 Spyr síðani:
 
-:::prompt
+:::prompt-simple
 Steðga nú og gev mær afturmelding.
-
+:::
+:::prompt-simple
 Lat meg royna umaftur frá byrjan. Gev mær ikki svarið, fyrr enn eg havi roynt.
 :::
 
@@ -358,7 +365,7 @@ Fyri tey 3 bestu hugskotini, skriva:
 
 Spyr síðani:
 
-:::prompt
+:::prompt-simple
 Vel tað hugskotið, sum krevur minst tíð hjá starvsfólkum.
 :::
 
@@ -392,9 +399,10 @@ Ger hetta:
 
 Spyr síðani:
 
-:::prompt
+:::prompt-simple
 Stig [nummar] er ikki heilt rætt. Eg skal fyrst [rætting]. Ger listan umaftur.
-
+:::
+:::prompt-simple
 Ger hetta til eina útgávu, sum kann sendast í starvsfólkakjattinum.
 :::
 
@@ -422,9 +430,10 @@ Sig mær eisini, hvørja tú heldur er best, og hví.
 
 Spyr síðani:
 
-:::prompt
+:::prompt-simple
 Eg velji útgávu [nummar]. Ger tað til eitt skelti við í mesta lagi 25 orðum.
-
+:::
+:::prompt-simple
 Ger somu útgávu á enskum og donskum.
 :::
 
@@ -486,9 +495,10 @@ Gev mær:
 
 Spyr síðani:
 
-:::prompt
+:::prompt-simple
 Vel bara tað, sum er mest týdningarmikið, um eg havi 10 minuttir.
-
+:::
+:::prompt-simple
 Hvat kann ganga galið, og hvussu fyribyrgi eg tað á einfaldan hátt?
 :::
 
@@ -502,8 +512,10 @@ Tað er vanligt, at fyrsta svarið frá vitlíki ikki rakar heilt. Tá skalt tú
 Tú kann eisini biða tað finna uppá 3 ymiskar útgávur av tí sama svarinum.
 :::
 
-:::prompt
-Tú kann eisini siga “spyr meg 3 spurningar, sum hjálpa tær at gera svarið betri”.
+Tú kann eisini siga:
+
+:::prompt-simple
+spyr meg 3 spurningar, sum hjálpa tær at gera svarið betri
 :::
 
 ---

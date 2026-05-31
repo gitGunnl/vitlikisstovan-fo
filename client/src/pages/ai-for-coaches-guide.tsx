@@ -227,14 +227,17 @@ Ein onnur útgáva:
 
 ### **Góðir uppfylgjandi spurningar**
 
-:::prompt
-„Hvørja broyting skal eg royna fyrst, um eg bara havi 10 minuttir eftir?“
-
-„Hvussu geri eg hetta lættari og framvegis hóskandi til aldurin?“
-
-„Hvussu geri eg hetta torførari fyri tey sterkastu, uttan at skilja tey frá bólkinum?“
-
-„Hvat skal eg hyggja eftir fyri at vita, um broytingin riggar?“
+:::prompt-simple
+Hvørja broyting skal eg royna fyrst, um eg bara havi 10 minuttir eftir?
+:::
+:::prompt-simple
+Hvussu geri eg hetta lættari og framvegis hóskandi til aldurin?
+:::
+:::prompt-simple
+Hvussu geri eg hetta torførari fyri tey sterkastu, uttan at skilja tey frá bólkinum?
+:::
+:::prompt-simple
+Hvat skal eg hyggja eftir fyri at vita, um broytingin riggar?
 :::
 
 ---
@@ -271,16 +274,20 @@ Ein onnur útgáva:
 
 ### **Góðir uppfylgjandi spurningar**
 
-:::prompt
-„Hvør partur av hesi ætlan er mest sannlíkur at rigga illa?“
-
-„Hvar fara íðkararnir at standa ov nógv og bíða?“
-
-„Hvat skal eg strika, um vit missa 20 minuttir?“
-
-„Hvat skal eg fyrireika, áðrenn venjingin byrjar?“
-
-„Royni eg at gera ov nógv?“
+:::prompt-simple
+Hvør partur av hesi ætlan er mest sannlíkur at rigga illa?
+:::
+:::prompt-simple
+Hvar fara íðkararnir at standa ov nógv og bíða?
+:::
+:::prompt-simple
+Hvat skal eg strika, um vit missa 20 minuttir?
+:::
+:::prompt-simple
+Hvat skal eg fyrireika, áðrenn venjingin byrjar?
+:::
+:::prompt-simple
+Royni eg at gera ov nógv?
 :::
 
 ---
@@ -321,12 +328,14 @@ Tú skalt finna fokus til venjingina týsdagin.
 
 ### **Góðir uppfylgjandi spurningar**
 
-:::prompt
-„Hvat er minsta broytingin, sum kann gera næstu venjing betri?“
-
-„Hvat skal eg siga við íðkararnar, og hvat skal eg bara hava sum egnar venjaraviðmerkingar?“
-
-„Ger eitt einfalt liðmál til næstu venjing.“
+:::prompt-simple
+Hvat er minsta broytingin, sum kann gera næstu venjing betri?
+:::
+:::prompt-simple
+Hvat skal eg siga við íðkararnar, og hvat skal eg bara hava sum egnar venjaraviðmerkingar?
+:::
+:::prompt-simple
+Ger eitt einfalt liðmál til næstu venjing.
 :::
 
 ### **Hví hetta riggar:**
@@ -375,10 +384,11 @@ Tú brúkar vitlíki til at skipa tínar hugsanir.
 
 ### **Góðir uppfylgjandi spurningar**
 
-:::prompt
-„Hvussu greiði eg frá hesum róligt og virðiliga?“
-
-„Hvat eigi eg at skriva niður til mínar egnu viðmerkingar?“
+:::prompt-simple
+Hvussu greiði eg frá hesum róligt og virðiliga?
+:::
+:::prompt-simple
+Hvat eigi eg at skriva niður til mínar egnu viðmerkingar?
 :::
 
 ---
@@ -462,14 +472,17 @@ Ein onnur útgáva:
 
 ### **Góðir uppfylgjandi spurningar:**
 
-:::prompt
-„Vís mær setningin í fíluni, sum stuðlar hesum svarinum.“
-
-„Er eitt annað brot, sum broytir hesa regluna?“
-
-„Hvat sigur fílan ikki, sum eg framvegis má kanna?“
-
-„Skriva eitt einfalt svar til eitt foreldur, men halt teg tætt at regluni.“
+:::prompt-simple
+Vís mær setningin í fíluni, sum stuðlar hesum svarinum.
+:::
+:::prompt-simple
+Er eitt annað brot, sum broytir hesa regluna?
+:::
+:::prompt-simple
+Hvat sigur fílan ikki, sum eg framvegis má kanna?
+:::
+:::prompt-simple
+Skriva eitt einfalt svar til eitt foreldur, men halt teg tætt at regluni.
 :::
 
 ---
@@ -511,14 +524,17 @@ Noturnar eru óskipaðar, men tær geva meining fyri teg.
 
 ### **Góðir uppfylgjandi spurningar:**
 
-:::prompt
-„Hvørjir partar av notunum eru ógreiðir?“
-
-„Hvussu kann eg gera hesa venjingina betri?“
-
-„Hvat tykist at mangla í ætlanini?“
-
-„Ger eina stutta útgávu, sum er løtt at fylgja undir venjingini.“
+:::prompt-simple
+Hvørjir partar av notunum eru ógreiðir?
+:::
+:::prompt-simple
+Hvussu kann eg gera hesa venjingina betri?
+:::
+:::prompt-simple
+Hvat tykist at mangla í ætlanini?
+:::
+:::prompt-simple
+Ger eina stutta útgávu, sum er løtt at fylgja undir venjingini.
 :::
 
 ---
@@ -556,12 +572,14 @@ Tú leggur skránna inn og biður vitlíki gera eina einfalda dystardagsætlan.
 
 ### **Góðir uppfylgjandi spurningar:**
 
-:::prompt
-„Ger hetta til stutt boð til foreldur.“
-
-„Hvat kundi manglað á listanum? Gev mær 10 uppskot.“
-
-„Hvat skal eg vátta við fyriskiparan?“
+:::prompt-simple
+Ger hetta til stutt boð til foreldur.
+:::
+:::prompt-simple
+Hvat kundi manglað á listanum? Gev mær 10 uppskot.
+:::
+:::prompt-simple
+Hvat skal eg vátta við fyriskiparan?
 :::
 
 ---
@@ -603,12 +621,14 @@ Ein onnur útgáva:
 
 ### **Góðir uppfylgjandi spurningar:**
 
-:::prompt
-„Hvat tók eg burtur, sum eg kanska átti at havt við?“
-
-„Ger munirnar til ein stuttan lista.“
-
-„Hvør útgáva hóskar betur til málið hjá mær, og hví?“
+:::prompt-simple
+Hvat tók eg burtur, sum eg kanska átti at havt við?
+:::
+:::prompt-simple
+Ger munirnar til ein stuttan lista.
+:::
+:::prompt-simple
+Hvør útgáva hóskar betur til málið hjá mær, og hví?
 :::
 
 ### **Hví hetta riggar:**
@@ -669,12 +689,14 @@ Ein onnur útgáva:
 
 ### **Góðir uppfylgjandi spurningar:**
 
-:::prompt
-„Hvussu kann eg laga hesa ætlanina til, um helvtin av liðnum eru heilt nýggir íðkarar?“
-
-„Gev mær 3 stuttligar upphitingar, sum passa til evnið í viku 4.“
-
-„Gev mær 10 trygg upphitingarspøl til [aldursbólk]. Sig stutt, hvat hvørt spæl venur.“
+:::prompt-simple
+Hvussu kann eg laga hesa ætlanina til, um helvtin av liðnum eru heilt nýggir íðkarar?
+:::
+:::prompt-simple
+Gev mær 3 stuttligar upphitingar, sum passa til evnið í viku 4.
+:::
+:::prompt-simple
+Gev mær 10 trygg upphitingarspøl til [aldursbólk]. Sig stutt, hvat hvørt spæl venur.
 :::
 
 ---
@@ -714,10 +736,11 @@ Ein onnur útgáva:
 
 ### **Góðir uppfylgjandi spurningar:**
 
-:::prompt
-„Hvussu greiði eg frá stigunum uttan at fáa børnini at kenna seg sett í bás?“
-
-„Gev mær eina útgávu við næstan ongari útgerð.“
+:::prompt-simple
+Hvussu greiði eg frá stigunum uttan at fáa børnini at kenna seg sett í bás?
+:::
+:::prompt-simple
+Gev mær eina útgávu við næstan ongari útgerð.
 :::
 
 ---
@@ -760,12 +783,14 @@ Ein onnur útgáva:
 
 ### **Góðir uppfylgjandi spurningar:**
 
-:::prompt
-„Ger hetta minni álvarsamt og betur hóskandi til børn.“
-
-„Hvat skal eg máta ella eygleiða hvørja viku?“
-
-„Hvussu kann eg greiða foreldrum frá hesum?“
+:::prompt-simple
+Ger hetta minni álvarsamt og betur hóskandi til børn.
+:::
+:::prompt-simple
+Hvat skal eg máta ella eygleiða hvørja viku?
+:::
+:::prompt-simple
+Hvussu kann eg greiða foreldrum frá hesum?
 :::
 
 ---
@@ -826,14 +851,17 @@ Ein onnur útgáva:
 
 ### **Góðir uppfylgjandi spurningar:**
 
-:::prompt
-„Ger hetta styttri.“
-
-„Hvat er framvegis ógreitt í viðmerkingunum hjá mær?“
-
-„Kom við 3 hugskotum til tillagingar til næstu venjing.“
-
-„Skriva eina útgávu til foreldur. Tak ikki nøvn, avrik ella privatar upplýsingar við.“
+:::prompt-simple
+Ger hetta styttri.
+:::
+:::prompt-simple
+Hvat er framvegis ógreitt í viðmerkingunum hjá mær?
+:::
+:::prompt-simple
+Kom við 3 hugskotum til tillagingar til næstu venjing.
+:::
+:::prompt-simple
+Skriva eina útgávu til foreldur. Tak ikki nøvn, avrik ella privatar upplýsingar við.
 :::
 
 ---
@@ -862,12 +890,14 @@ Ella tú venur fótbólt. Tú skalt greiða foreldrum frá, hví tit leggja dent
 
 ### **Góðir uppfylgjandi spurningar:**
 
-:::prompt
-„Ger tað styttri, so eg kann siga tað, meðan spælt verður.“
-
-„Ger tónan vinarligari.“
-
-„Ger tað meira beinleiðis.“
+:::prompt-simple
+Ger tað styttri, so eg kann siga tað, meðan spælt verður.
+:::
+:::prompt-simple
+Ger tónan vinarligari.
+:::
+:::prompt-simple
+Ger tað meira beinleiðis.
 :::
 
 ---
@@ -921,14 +951,17 @@ Ella tú ert róðursvenjari og roynir at greiða frá rútmum á einfaldari há
 
 ### **Góðir uppfylgjandi spurningar:**
 
-:::prompt
-„Spyr meg 3 praktiskar spurningar, so tú kanst hjálpa mær betur.“
-
-„Greið frá umaftur, nú við einum dømi úr ungdómsítrótti.“
-
-„Hvat misskilur ein byrjandi venjari ofta?“
-
-„Hvat eigi eg at spyrja ein meira royndan venjara um?“
+:::prompt-simple
+Spyr meg 3 praktiskar spurningar, so tú kanst hjálpa mær betur.
+:::
+:::prompt-simple
+Greið frá umaftur, nú við einum dømi úr ungdómsítrótti.
+:::
+:::prompt-simple
+Hvat misskilur ein byrjandi venjari ofta?
+:::
+:::prompt-simple
+Hvat eigi eg at spyrja ein meira royndan venjara um?
 :::
 
 ---
@@ -968,16 +1001,20 @@ Ein onnur útgáva:
 
 ### **Góðir uppfylgjandi spurningar:**
 
-:::prompt
-„Ger hetta styttri.“
-
-„Ger tað minni í verjustøðu.“
-
-„Hvat kann eitt foreldur stúra fyri her?“
-
-„Hvat skal eg spyrja um, áðrenn eg greiði frá?“
-
-„Gev mær eina útgávu, eg kann siga andlit til andlits, ikki senda í telduposti.“
+:::prompt-simple
+Ger hetta styttri.
+:::
+:::prompt-simple
+Ger tað minni í verjustøðu.
+:::
+:::prompt-simple
+Hvat kann eitt foreldur stúra fyri her?
+:::
+:::prompt-simple
+Hvat skal eg spyrja um, áðrenn eg greiði frá?
+:::
+:::prompt-simple
+Gev mær eina útgávu, eg kann siga andlit til andlits, ikki senda í telduposti.
 :::
 
 # **Endaorð: Tú stýrir framvegis**

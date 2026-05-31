@@ -142,11 +142,13 @@ Kom við 5 uppskotum um innandura virksemi, sum krevur lítla fyrireiking, fevni
 
 **Uppfylgjandi fyrispurningur:**
 
-:::prompt
+:::prompt-simple
 Ger uppskotini enn einfaldari og lættari at rudda upp eftir.
-
+:::
+:::prompt-simple
 Okkum dámdi væl søguhugskotið. Gev okkum hugskot til tvey rólig søgugrundað virksemi afturat.
-
+:::
+:::prompt-simple
 Ger virksemini styttri, umleið 15 minuttir hvørt.
 :::
 
@@ -205,11 +207,13 @@ Listin skal hava pláss til, at starvsfólk sjálv kunnu leggja serligar lutir a
 
 **Uppfylgjandi fyrispurningur:**
 
-:::prompt
+:::prompt-simple
 Ger listan styttri, í mesta lagi 8 punkt.
-
+:::
+:::prompt-simple
 Legg áminningar afturat viðvíkjandi veðrinum, t.d. regnklæði, vøttur og skiftiskógvar.
-
+:::
+:::prompt-simple
 Ger eina útgávu, sum hóskar at prenta og hongja upp á starvsfólkatalvuna.
 :::
 
@@ -253,11 +257,13 @@ Tónin skal vera hjálpsamur, róligur og ikki krevjandi. Svara á natúrligum f
 
 **Uppfylgjandi fyrispurningur:**
 
-:::prompt
+:::prompt-simple
 Ger boðini meira vinalig og minni formlig.
-
+:::
+:::prompt-simple
 Stytt hetta til eitt SMS upp á í mesta lagi 160 tekn.
-
+:::
+:::prompt-simple
 Ger eina útgávu til starvsfólkakjatt, har tað er greitt, hvat vit skulu minnast.
 :::
 
@@ -595,16 +601,20 @@ Skipað tað sum [listi/boð/ætlan/samrøðukort/minnislisti].
 
 Tað er vanligt, at fyrsta svarið frá vitlíki ikki rakar heilt rætt, og ikki er júst sum tú vil hava tað. Tá skalt tú bara siga vitlíki frá hvat tú heldur ikki er nóg gott. Skriva t.d.:
 
-:::prompt
-- Ger tekstin meira ítøkiligan og minni hátíðarligan.
-
-- Ger tekstin styttri og meira praktiskan til eina telefon.
-
-- Legg minni dent á teori og meira dent á, hvat eg kann gera beinanvegin.
-
-- Gev mær 3 betri útgávur, sum krevja minni fyrireiking.
-
-- Mær dámar títt hugskot, men ger tað róligari og lættari at enda.
+:::prompt-simple
+Ger tekstin meira ítøkiligan og minni hátíðarligan.
+:::
+:::prompt-simple
+Ger tekstin styttri og meira praktiskan til eina telefon.
+:::
+:::prompt-simple
+Legg minni dent á teori og meira dent á, hvat eg kann gera beinanvegin.
+:::
+:::prompt-simple
+Gev mær 3 betri útgávur, sum krevja minni fyrireiking.
+:::
+:::prompt-simple
+Mær dámar títt hugskot, men ger tað róligari og lættari at enda.
 :::
 
 ---
