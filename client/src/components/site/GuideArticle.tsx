@@ -5,7 +5,18 @@ import Header from "@/components/site/Header";
 import Footer from "@/components/site/Footer";
 import Section from "@/components/site/Section";
 import { Button } from "@/components/ui/button";
-import { ArrowLeft, Printer, Copy, Check, PenTool } from "lucide-react";
+import {
+  ArrowLeft,
+  Printer,
+  Copy,
+  Check,
+  PenTool,
+  ShieldAlert,
+  Compass,
+  Lightbulb,
+  MessageSquareText,
+} from "lucide-react";
+import type { LucideIcon } from "lucide-react";
 
 // ---------------------------------------------------------------------------
 // Inline Markdown Logic (Tasteful & Robust)
@@ -206,6 +217,79 @@ const MarkdownBlock = ({ text }: { text: string }) => {
 };
 
 // ---------------------------------------------------------------------------
+// Component: Semantic Callout Blocks (:::safety / :::scope / :::principle / :::scenario)
+// ---------------------------------------------------------------------------
+// Each custom block tag maps to a visually distinct callout that stays within
+// the guides' stone/serif aesthetic: a tinted panel with a coloured left edge,
+// an icon + Faroese label header, and the inner markdown rendered normally.
+
+interface CalloutConfig {
+  label: string;
+  Icon: LucideIcon;
+  container: string;
+  icon: string;
+  labelText: string;
+}
+
+const calloutConfig: Record<string, CalloutConfig> = {
+  safety: {
+    label: "Vís varsemi",
+    Icon: ShieldAlert,
+    container:
+      "bg-amber-50/70 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/60 border-l-4 border-l-amber-400 dark:border-l-amber-500",
+    icon: "text-amber-600 dark:text-amber-400",
+    labelText: "text-amber-700 dark:text-amber-300",
+  },
+  scope: {
+    label: "Yvirlit",
+    Icon: Compass,
+    container:
+      "bg-sky-50/70 dark:bg-sky-950/30 border border-sky-200 dark:border-sky-900/60 border-l-4 border-l-sky-400 dark:border-l-sky-500",
+    icon: "text-sky-600 dark:text-sky-400",
+    labelText: "text-sky-700 dark:text-sky-300",
+  },
+  principle: {
+    label: "Meginregla",
+    Icon: Lightbulb,
+    container:
+      "bg-emerald-50/70 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-900/60 border-l-4 border-l-emerald-400 dark:border-l-emerald-500",
+    icon: "text-emerald-600 dark:text-emerald-400",
+    labelText: "text-emerald-700 dark:text-emerald-300",
+  },
+  scenario: {
+    label: "Støða",
+    Icon: MessageSquareText,
+    container:
+      "bg-stone-100/80 dark:bg-stone-900/50 border border-stone-200 dark:border-stone-800 border-l-4 border-l-stone-400 dark:border-l-stone-600",
+    icon: "text-stone-500 dark:text-stone-400",
+    labelText: "text-stone-600 dark:text-stone-400",
+  },
+};
+
+const Callout = ({ type, text }: { type: string; text: string }) => {
+  const config = calloutConfig[type];
+  // Unknown tag: fall back to plain markdown so nothing leaks as literal text.
+  if (!config) return <MarkdownBlock text={text} />;
+
+  const { label, Icon, container, icon, labelText } = config;
+
+  return (
+    <div className={`my-8 rounded-xl px-6 py-5 sm:px-7 sm:py-6 ${container}`}>
+      <div className="flex items-center space-x-2 mb-3">
+        <Icon className={`w-4 h-4 flex-shrink-0 ${icon}`} />
+        <span className={`text-xs font-semibold uppercase tracking-wider font-sans ${labelText}`}>
+          {label}
+        </span>
+      </div>
+      {/* Strip the outer margins of the first/last child so the panel hugs its content */}
+      <div className="[&>*:first-child]:mt-0 [&>*:last-child]:mb-0">
+        <MarkdownBlock text={text} />
+      </div>
+    </div>
+  );
+};
+
+// ---------------------------------------------------------------------------
 // Main Guide Article Layout
 // ---------------------------------------------------------------------------
 // Renders a full user-guide page from a markdown string. The markdown supports
@@ -222,10 +306,24 @@ const MarkdownBlock = ({ text }: { text: string }) => {
 interface GuideArticleProps {
   content: string;
   footerNote?: string;
+  heroImage?: string;
+  heroTitle?: string;
+  heroSubtitle?: string;
 }
 
-export default function GuideArticle({ content, footerNote }: GuideArticleProps) {
-  const contentParts = content.split(/(:::prompt[\s\S]*?:::)/g);
+// Matches any supported block tag and captures up to its closing `:::`.
+// Blocks never nest, so the non-greedy match always stops at the right fence.
+const BLOCK_SPLIT = /(:::(?:prompt|safety|scope|principle|scenario)[\s\S]*?:::)/g;
+const BLOCK_TAG = /^:::(prompt|safety|scope|principle|scenario)/;
+
+export default function GuideArticle({
+  content,
+  footerNote,
+  heroImage,
+  heroTitle,
+  heroSubtitle,
+}: GuideArticleProps) {
+  const contentParts = content.split(BLOCK_SPLIT);
 
   return (
     <div className="flex flex-col min-h-screen bg-stone-50 dark:bg-stone-950 font-serif">
@@ -252,12 +350,45 @@ export default function GuideArticle({ content, footerNote }: GuideArticleProps)
             </Button>
           </nav>
 
+          {/* Hero Section with Image (optional) */}
+          {heroImage && (
+            <div className="mb-12 sm:mb-16">
+              <div className="relative overflow-hidden rounded-xl sm:rounded-2xl">
+                <img
+                  src={heroImage}
+                  alt={heroTitle ?? ""}
+                  className="w-full h-48 sm:h-64 md:h-80 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-stone-900/20 to-transparent" />
+                {(heroTitle || heroSubtitle) && (
+                  <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 md:p-8">
+                    {heroTitle && (
+                      <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl font-medium text-white leading-tight tracking-tight drop-shadow-lg">
+                        {heroTitle}
+                      </h1>
+                    )}
+                    {heroSubtitle && (
+                      <p className="mt-2 text-sm sm:text-base text-stone-100/90 font-serif max-w-xl drop-shadow-md">
+                        {heroSubtitle}
+                      </p>
+                    )}
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
+
           {/* Article Body */}
           <article className="selection:bg-stone-200 selection:text-stone-900 dark:selection:bg-stone-700 dark:selection:text-stone-50">
             {contentParts.map((part, index) => {
-              if (part.startsWith(":::prompt")) {
-                const promptText = part.replace(/^:::prompt/, "").replace(/:::$/, "").trim();
-                return <PromptCard key={index} text={promptText} />;
+              const match = part.match(BLOCK_TAG);
+              if (match) {
+                const type = match[1];
+                const inner = part.replace(/^:::\w+/, "").replace(/:::$/, "").trim();
+                if (type === "prompt") {
+                  return <PromptCard key={index} text={inner} />;
+                }
+                return <Callout key={index} type={type} text={inner} />;
               }
               return <MarkdownBlock key={index} text={part} />;
             })}
