@@ -118,9 +118,11 @@ Um okkurt er ógreitt, vinarliga spyr meg áðrenn tú svarar endaligt.
 
 **Uppfylgjandi byrt:** Um tað er okkurt við svarinum/hugskotinum tær ikki dámar, so sig bara vitlíki neyvt, hvat tað er. Her eru nøkur hugskot:
 
-:::prompt
-* "Ger hesi tiltøkini einfaldari og skjótari at rudda upp eftir."  
-* "Okkum dámdi væl søguløtuna. Skjót upp trý líknandi tiltøk við sjóvartema."
+:::prompt-simple
+Ger hesi tiltøkini einfaldari og skjótari at rudda upp eftir.
+:::
+:::prompt-simple
+Okkum dámdi væl søguløtuna. Skjót upp trý líknandi tiltøk við sjóvartema.
 :::
 
 **Fleiri møguleikar fyri kreativari sparring**
@@ -178,7 +180,7 @@ Svarið skal vera stutt og hent. Spyr vinaliga fyrst, um okkurt er ógreitt.
 
 **Uppfylgjandi byrt:** Um listin kennist ov rúgvismikil ella skal lagast til, skalt tú greitt tilskila, hvørjar broytingar tú vilt hava. Her eru nøkur dømi:
 
-:::prompt
+:::prompt-simple
 * "Ger minnislistan styttri – tak bara tað allar mest týðandi við."  
 * "Gev mær eitt einfalt uppskot til eitt eyka innandura ítriv, um tað skuldi farið at oysregna."
 :::

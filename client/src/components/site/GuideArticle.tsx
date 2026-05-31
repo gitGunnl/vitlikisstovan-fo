@@ -140,6 +140,23 @@ const PromptCard = ({ text }: { text: string }) => {
 };
 
 // ---------------------------------------------------------------------------
+// Component: Simple Prompt Card (for follow-up prompts)
+// ---------------------------------------------------------------------------
+// A stripped-down variant of PromptCard for short follow-up prompts: same
+// stationery look (dashed border, off-white panel, mono text) but no "Byrt"
+// header, no icon, and no copy button — it hugs the text tightly.
+
+const SimplePromptCard = ({ text }: { text: string }) => (
+  <div className="my-4">
+    <div className="bg-[#fcfcf9] dark:bg-stone-900 border-2 border-dashed border-stone-300 dark:border-stone-700 rounded-lg px-4 py-3 sm:px-5 sm:py-3.5 shadow-sm">
+      <pre className="whitespace-pre-wrap font-mono text-sm sm:text-base text-stone-700 dark:text-stone-300 leading-relaxed">
+        {text.trim()}
+      </pre>
+    </div>
+  </div>
+);
+
+// ---------------------------------------------------------------------------
 // Component: Markdown Block Renderer
 // ---------------------------------------------------------------------------
 
@@ -320,8 +337,11 @@ interface GuideArticleProps {
 
 // Matches any supported block tag and captures up to its closing `:::`.
 // Blocks never nest, so the non-greedy match always stops at the right fence.
-const BLOCK_SPLIT = /(:::(?:prompt|safety|scope|principle|scenario)[\s\S]*?:::)/g;
-const BLOCK_TAG = /^:::(prompt|safety|scope|principle|scenario)/;
+// Note: `prompt-simple` MUST precede `prompt` in the alternation so the longer
+// tag matches first (otherwise `:::prompt-simple` would match `:::prompt` and
+// leak `-simple` as text).
+const BLOCK_SPLIT = /(:::(?:prompt-simple|prompt|safety|scope|principle|scenario)[\s\S]*?:::)/g;
+const BLOCK_TAG = /^:::(prompt-simple|prompt|safety|scope|principle|scenario)/;
 
 export default function GuideArticle({
   content,
@@ -391,9 +411,12 @@ export default function GuideArticle({
               const match = part.match(BLOCK_TAG);
               if (match) {
                 const type = match[1];
-                const inner = part.replace(/^:::\w+/, "").replace(/:::$/, "").trim();
+                const inner = part.replace(/^:::[\w-]+/, "").replace(/:::$/, "").trim();
                 if (type === "prompt") {
                   return <PromptCard key={index} text={inner} />;
+                }
+                if (type === "prompt-simple") {
+                  return <SimplePromptCard key={index} text={inner} />;
                 }
                 return <Callout key={index} type={type} text={inner} />;
               }
