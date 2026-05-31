@@ -515,4 +515,14 @@
   .no-print {
     display: none !important;
   }
+
+  /* Force Chromium to keep the tinted callout panels, coloured borders, icons,
+     and label colours when rendering guides to PDF. Without this, print color
+     optimization drops the backgrounds/borders and the callouts collapse to
+     plain text. `print-color-adjust` is inherited, so tagging each coloured
+     block's outer element also covers its icon, label, and inner text. */
+  .guide-print-exact {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
 }

@@ -135,7 +135,7 @@ const PromptCard = ({ text }: { text: string }) => {
   return (
     <div className="my-6 sm:my-10 group">
       {/* The Card Design */}
-      <div className="relative bg-[#fcfcf9] dark:bg-stone-900 border-2 border-dashed border-stone-300 dark:border-stone-700 rounded-xl p-4 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-stone-400">
+      <div className="guide-print-exact relative bg-[#fcfcf9] dark:bg-stone-900 border-2 border-dashed border-stone-300 dark:border-stone-700 rounded-xl p-4 sm:p-8 shadow-sm transition-all hover:shadow-md hover:border-stone-400">
 
         {/* Header / Label */}
         <div className="flex items-center justify-between mb-4 pb-4 border-b border-stone-200 dark:border-stone-800">
@@ -202,7 +202,7 @@ const SimplePromptCard = ({ text }: { text: string }) => {
         type="button"
         onClick={handleCopy}
         aria-label="Avrita byrt"
-        className="group relative block w-full text-left bg-[#fcfcf9] dark:bg-stone-900 border-2 border-dashed border-stone-300 dark:border-stone-700 rounded-lg px-3 py-2.5 sm:px-5 sm:py-3.5 shadow-sm cursor-pointer transition-all hover:bg-stone-100 dark:hover:bg-stone-800 hover:border-stone-400 dark:hover:border-stone-600"
+        className="guide-print-exact group relative block w-full text-left bg-[#fcfcf9] dark:bg-stone-900 border-2 border-dashed border-stone-300 dark:border-stone-700 rounded-lg px-3 py-2.5 sm:px-5 sm:py-3.5 shadow-sm cursor-pointer transition-all hover:bg-stone-100 dark:hover:bg-stone-800 hover:border-stone-400 dark:hover:border-stone-600"
       >
         <pre className="whitespace-pre-wrap font-mono text-sm sm:text-base text-stone-700 dark:text-stone-300 leading-relaxed pr-16">
           {text.trim()}
@@ -381,7 +381,7 @@ const Callout = ({ type, text }: { type: string; text: string }) => {
   const { label, Icon, container, icon, labelText } = config;
 
   return (
-    <div className={`my-6 rounded-xl px-4 py-4 sm:my-8 sm:px-7 sm:py-6 ${container}`}>
+    <div className={`guide-print-exact my-6 rounded-xl px-4 py-4 sm:my-8 sm:px-7 sm:py-6 ${container}`}>
       <div className="flex items-center space-x-2 mb-3">
         <Icon className={`w-4 h-4 flex-shrink-0 ${icon}`} />
         <span className={`text-xs font-semibold uppercase tracking-wider font-sans ${labelText}`}>
