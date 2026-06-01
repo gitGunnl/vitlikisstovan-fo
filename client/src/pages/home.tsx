@@ -424,6 +424,55 @@ export default function Home() {
 
           </Section>
 
+        {/* Founder / About */}
+        {siteConfig.why?.founder && (
+          <Section id="founder" className="py-24">
+            <div className="mx-auto max-w-4xl">
+              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl mb-8 text-center">
+                {siteConfig.why.founder.heading}
+              </h2>
+              <Card className="bg-background border shadow-lg">
+                <CardContent className="p-8">
+                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                    <div className="lg:col-span-1 text-center lg:text-left">
+                      <div className="w-32 h-32 mx-auto lg:mx-0 mb-4 overflow-hidden rounded-full border-4 border-primary/20">
+                        <img
+                          src="/me.jpg"
+                          alt="Portrait of Gunnleygur Clementsen"
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <h4 className="text-xl font-bold mb-2">{siteConfig.why.founder.name}</h4>
+                      <p className="text-sm text-primary font-medium mb-4">{siteConfig.why.founder.role}</p>
+                    </div>
+
+                    <div className="lg:col-span-2">
+                      <p className="text-muted-foreground mb-6 leading-relaxed">{siteConfig.why.founder.summary}</p>
+
+                      {siteConfig.why.founder.bullets && (
+                        <ul className="space-y-3 mb-6">
+                          {siteConfig.why.founder.bullets.map((bullet, index) => (
+                            <li key={index} className="flex items-start">
+                              <CheckCircle className="h-5 w-5 text-primary mt-0.5 mr-3 flex-shrink-0" />
+                              <span className="text-sm leading-relaxed">{bullet}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+
+                      {siteConfig.why.founder.quote && (
+                        <blockquote className="border-l-4 border-primary pl-6 py-4 italic text-muted-foreground bg-muted/30 rounded-r-lg">
+                          "{siteConfig.why.founder.quote}"
+                        </blockquote>
+                      )}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </Section>
+        )}
+
         {/* Testimonials */}
         {siteConfig.testimonials && (
           <Section id="testimonials" className="py-16 bg-muted/40 border-y">
@@ -533,52 +582,6 @@ export default function Home() {
               </div>
             )}
 
-            {/* Founder Section */}
-            {siteConfig.why.founder && (
-              <div className="mx-auto max-w-4xl">
-                <h3 className="text-2xl font-bold tracking-tight mb-8 text-center">
-                  {siteConfig.why.founder.heading}
-                </h3>
-                <Card className="bg-background border shadow-lg">
-                  <CardContent className="p-8">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
-                      <div className="lg:col-span-1 text-center lg:text-left">
-                        <div className="w-32 h-32 mx-auto lg:mx-0 mb-4 overflow-hidden rounded-full border-4 border-primary/20">
-                          <img
-                            src="/me.jpg"
-                            alt="Portrait of Gunnleygur Clementsen"
-                            className="w-full h-full object-cover"
-                          />
-                        </div>
-                        <h4 className="text-xl font-bold mb-2">{siteConfig.why.founder.name}</h4>
-                        <p className="text-sm text-primary font-medium mb-4">{siteConfig.why.founder.role}</p>
-                      </div>
-
-                      <div className="lg:col-span-2">
-                        <p className="text-muted-foreground mb-6 leading-relaxed">{siteConfig.why.founder.summary}</p>
-
-                        {siteConfig.why.founder.bullets && (
-                          <ul className="space-y-3 mb-6">
-                            {siteConfig.why.founder.bullets.map((bullet, index) => (
-                              <li key={index} className="flex items-start">
-                                <CheckCircle className="h-5 w-5 text-primary mt-0.5 mr-3 flex-shrink-0" />
-                                <span className="text-sm leading-relaxed">{bullet}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        )}
-
-                        {siteConfig.why.founder.quote && (
-                          <blockquote className="border-l-4 border-primary pl-6 py-4 italic text-muted-foreground bg-muted/30 rounded-r-lg">
-                            "{siteConfig.why.founder.quote}"
-                          </blockquote>
-                        )}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-            )}
           </Section>
         )}
 

@@ -180,7 +180,7 @@ export default function UmOkkum() {
                     
                     <div className="bg-black text-white p-8 rounded-lg">
                       <p className="text-lg font-serif text-center leading-relaxed">
-                        "Eg selji ikki bara 'vitlíki-ráðgeving'. Eg læri teg at nýta vitlíki munagott og trygt."
+                        "Eg selji ikki bara 'vitlíkisráðgeving'. Eg læri teg at nýta vitlíki munagott og trygt."
                       </p>
                     </div>
                   </div>
