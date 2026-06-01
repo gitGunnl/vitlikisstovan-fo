@@ -1027,7 +1027,18 @@ Brúka vitlíki til at loysa teir praktisku trupulleikarnar og skipa tína vitan
 
 Góðan arbeiðshug!
 
+---
 
+# **Um hesa vegleiðingina**
+
+Henda vegleiðingin er partur av verkætlanini *Vitlíki til arbeiðis*, har Vitlíkisstovan ger praktiskar vegleiðingar um, hvussu starvsfólk kunnu brúka vitlíki í gerandisarbeiðinum.
+
+Verkætlanin er stuðlað av Granskingarráðnum.
+
+Stóra takk til øll, sum hava deilt royndir, dømi og hugskot. Tykkara íkast hevur hjálpt til at gera vegleiðingina meira veruliga, praktiska og gagnliga.
+
+Vitlíkisstovan · 2026  
+vitlikisstovan.fo
 `;
 
 export default function AiForCoachesGuide() {

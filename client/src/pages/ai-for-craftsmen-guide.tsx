@@ -776,6 +776,19 @@ Tað gagnliga er, at tú fært fleiri spurningar, fleiri møguleikar, betri yvir
 
 Vitlíki er sterkast, tá ið tað hjálpir tær at síggja fleiri møguleikar, seta betri spurningar og koma greiðari fram til tína egnu fakligu meting.
 :::
+
+---
+
+# **Um hesa vegleiðingina**
+
+Henda vegleiðingin er partur av verkætlanini *Vitlíki til arbeiðis*, har Vitlíkisstovan ger praktiskar vegleiðingar um, hvussu starvsfólk kunnu brúka vitlíki í gerandisarbeiðinum.
+
+Verkætlanin er stuðlað av Granskingarráðnum.
+
+Stóra takk til øll, sum hava deilt royndir, dømi og hugskot. Tykkara íkast hevur hjálpt til at gera vegleiðingina meira veruliga, praktiska og gagnliga.
+
+Vitlíkisstovan · 2026  
+vitlikisstovan.fo
 `;
 
 export default function AiForCraftsmenGuide() {

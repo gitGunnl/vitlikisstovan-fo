@@ -6,8 +6,6 @@ const BLOG_TITLE = "Hvussu tú kann nýta vitlíki sum røktarstarvsfólk: Meira
 const BLOG_DESC = "Ein handalig vegleiðing, sum ger røktarstarvsfólk før fyri at brúka vitlíki trygt til skjalfesting og tilrættislegging, so meira tíð verður til sjálva umsorganina.";
 
 const blogContent = `
-# Vegleiðing til røktarstarvsfólk
-
 # Hvussu røktarstarvsfólk kunnu nýta vitlíki: Meira tíð til nærveru og umsorgan
 
 ---
@@ -634,6 +632,19 @@ Vel tær eitt dømi úr vegleiðingini - kanska eitt virksemishugskot, ein útfe
 :::
 
 Góðan arbeiðshug.
+
+---
+
+# **Um hesa vegleiðingina**
+
+Henda vegleiðingin er partur av verkætlanini *Vitlíki til arbeiðis*, har Vitlíkisstovan ger praktiskar vegleiðingar um, hvussu starvsfólk kunnu brúka vitlíki í gerandisarbeiðinum.
+
+Verkætlanin er stuðlað av Granskingarráðnum.
+
+Stóra takk til øll, sum hava deilt royndir, dømi og hugskot. Tykkara íkast hevur hjálpt til at gera vegleiðingina meira veruliga, praktiska og gagnliga.
+
+Vitlíkisstovan · 2026  
+vitlikisstovan.fo
 `;
 
 export default function AiForCaretakersGuide() {

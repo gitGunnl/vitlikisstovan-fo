@@ -672,6 +672,19 @@ Tá ið tú hevur svara teimum fyrstu 5 spurningunum, so kanst tú biða um 5 af
 :::principle
 Tá ið tú finnur eitt byrt, sum riggar væl til tín tørv, goym tað so onkustaðni, har tú finnur tað aftur – í einum skjali, á telefonini ella hvar tað nú passar tær best. Við tíðini fert tú at savna tær eitt persónligt savn av byrt-skabilónum, sum rigga væl til tína egnu undirvísing. Í staðin fyri at byrja av nýggjum hvørja ferð, kanst tú taka eitt royndarkoyrt byrt og laga tað eitt sindur til nýggju støðuna.
 :::
+
+---
+
+# **Um hesa vegleiðingina**
+
+Henda vegleiðingin er partur av verkætlanini *Vitlíki til arbeiðis*, har Vitlíkisstovan ger praktiskar vegleiðingar um, hvussu starvsfólk kunnu brúka vitlíki í gerandisarbeiðinum.
+
+Verkætlanin er stuðlað av Granskingarráðnum.
+
+Stóra takk til øll, sum hava deilt royndir, dømi og hugskot. Tykkara íkast hevur hjálpt til at gera vegleiðingina meira veruliga, praktiska og gagnliga.
+
+Vitlíkisstovan · 2026  
+vitlikisstovan.fo
 `;
 
 export default function AiForTeachingGuide() {
