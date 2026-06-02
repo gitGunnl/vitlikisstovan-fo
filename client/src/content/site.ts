@@ -497,8 +497,8 @@ export const siteConfig = {
       noindex: true
     },
     "/podcast": {
-      title: "Podkast - Vitlíkisstovan",
-      description: "Hoyr podkast um vitlíki í Føroyum."
+      title: "Podvarp - Vitlíkisstovan",
+      description: "Hoyr podvarp um vitlíki í Føroyum."
     },
     "/ai-guide": {
       title: "Vitlíki vegleiðing - Vitlíkisstovan",
