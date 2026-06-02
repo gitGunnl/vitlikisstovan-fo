@@ -156,3 +156,6 @@ vite.config.ts.*
 
 # Monitoring runtime state (regenerated at runtime, must not ship test data)
 data/monitoring.json
+
+# Runtime form/lead data (contains visitor PII — never commit)
+data/*.ndjson
