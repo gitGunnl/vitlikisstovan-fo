@@ -212,7 +212,7 @@ Vitlíki er framúrskarandi til at tillaga innihald. Tú kanst seta ein torføra
 :::prompt
 Skriva hendan tekstin umaftur, so hann hóskar til næmingar í **[Set flokk inn, t.d. 6. flokki]**. Varðveit týðandi upplýsingarnar, men brúka styttri setningar og meira vanlig orð.
 
-Her er teksturin: **[Kopiera og set tín tekst inn her]**
+Her er teksturin: **[Avrita og set tín tekst inn her]**
 :::
 
 **Gera aðrar frágreiðingar:**

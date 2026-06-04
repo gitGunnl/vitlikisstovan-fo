@@ -156,12 +156,12 @@ const PromptCard = ({ text }: { text: string }) => {
             {copied ? (
               <span className="flex items-center text-green-600 dark:text-green-400 text-xs font-medium">
                 <Check className="mr-1.5 h-3.5 w-3.5" />
-                Kopierað
+                Avritað
               </span>
             ) : (
               <span className="flex items-center text-xs font-medium">
                 <Copy className="mr-1.5 h-3.5 w-3.5" />
-                Kopiera tekst
+                Avrita tekst
               </span>
             )}
           </Button>

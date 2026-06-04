@@ -32,10 +32,8 @@ const blogContent = `
 
 ## ***Vís varsemi: ongar persónligar upplýsingar***
 
-:::safety
-Ein einføld regla:
-
-Set ikki upplýsingar inn í eitt vanligt vitlíkisamboð, sum kunnu knýtast at einum ávísum barni, foreldri, starvsfelaga ella familju.
+:::principle
+*Set ikki upplýsingar inn í eitt vanligt vitlíkisamboð, sum kunnu knýtast at einum ávísum barni, foreldri, starvsfelaga ella familju.*
 
 Lat vera við at seta inn nøvn, myndir, p-tøl, bústaðir, telefonnummur, heilsuupplýsingar, atburðarlýsingar, familjuviðurskifti, tilburðir ella annað, sum ger, at ein persónur er lættur at kenna aftur.
 
@@ -61,7 +59,7 @@ Kom lættliga í gongd við at avrita dømini við byrtum niðanfyri yvir í tí
 **Frágreiðing: Byrt**  
 Eitt byrt er tað føroyska orðið fyri tað, ið á enskum veðrur rópt eitt “prompt”. Tað er stutt sagt bara tað, man kallar boðini, ið man sendur til vitlíki. Um tú skrivar til vitlíki “Nevn nøkur stuttlig spøl at spæla úti við 5-ára gomlum børnum?”; so er hesin setningurin byrtið.
 
-### **Gullkornini: Soleiðis fært tú mest burturúr**
+## **Gullkornini: Soleiðis fært tú mest burturúr**
 
 :::principle
 Fyri at fáa tey bestu úrslitini, er týdningarmikið at minnast til hesar grundreglur:
@@ -87,8 +85,6 @@ Nú fara vit at hyggja eftir hvussu vitlíki kann hjálpa tær í tínum arbeið
 Vitlíki er í essinum, tá ið tínar føstu rutinur verða órógvaðar, ella tær brádliga tørvar nýggj tillagingarfør hugskot. Tað er sum at hava ein kreativan starvsfelaga, sum beinanvegin gevur tær ein hóp av spennandi, handligum hugskotum, ið eru neyvt tillagað tínum tørvi. Antin tínar ætlanir brádliga broytast, ella tær tørvar nýggjan íblástur, so gevur tú bara vitlíki tína støðu; tema, tøkt tilfar, tal av vaksnum, aldur á børnunum, serligar avmarkingar osv.
 
 :::scenario
-**Ímynda tær hesa støðuna:**
-
 Tað er farið at oysregna, har tú arbeiðir. Tínar útiætlanir fara í vaskið, og tú situr innandura við tólv lívligum 3-4 ára gomlum børnum. Títt mánaðartema er "Lív í sjónum", og tú hevur avmarkað pláss og vanligt tilfar sum krit, pappír, kubbar, vesirullur og vendispøl.
 :::
 
@@ -144,7 +140,7 @@ Fleiri dømi um byrt eru at finna í brotinum: “[Skjót byrt: Dømi sum hvessa
 Vitlíki kann vera tíni eyka eygu, sum skjótt gjøgnumganga tínar ætlanir og kannar, um tú hevur gloymt ella yvirsæð okkurt. Hetta minkar um vandan fyri, at týðandi smálutir verða gloymdir. Tað er sum at hava ein árvaknan starvsfelaga, ið hjálpir tær at betra tínar loysnir, vísir á møguligar yvirsæddar smálutir, og skjýtur upp hentar ábøtur. Hvørja ferð, tú stendur fyri eini avgerð – antin tú leggur eina útferð til rættis, handfert eina torføra støðu á stovuni ella skalt taka støðu til eina óvæntaða hending – kanst tú stutt lýsa tilgongdina ella loysnina fyri vitlíki. Tað kann skjótt vísa á møguligar avbjóðingar, sum tú kanska ikki hevur hugsað um, koma við hugskotum til ábøtur ella bjóða tínum hugsanarhátti av fyri at tryggja, at tú hevur fingið allar týðandi smálutir við.
 
 :::scenario
-**Ímynda tær hesa støðuna:** Tú skalt við átjan 5-ára gomlum børnum og trimum vaksnum til ein væl vitjaðan, landsumfatandi rennidag. Har vera nógv fólk og nógvur larmur, og tú vilt hava vitlíki at eftirkanna okkurt ávíst, t.d. tín **"minnislista til tey vaksnu"** – bæði fyri at vita, um **týðandi lutir eru gloymdir**, og um **einfaldir eykalutir**, ið gera dagin lættari, mangla.
+Tú skalt við átjan 5-ára gomlum børnum og trimum vaksnum til ein væl vitjaðan, landsumfatandi rennidag. Har vera nógv fólk og nógvur larmur, og tú vilt hava vitlíki at eftirkanna okkurt ávíst, t.d. tín **"minnislista til tey vaksnu"** – bæði fyri at vita, um **týðandi lutir eru gloymdir**, og um **einfaldir eykalutir**, ið gera dagin lættari, mangla.
 :::
 
 ---
@@ -206,8 +202,6 @@ Tú kanst síggja fleiri dømi um byrt í síðsta parti av vegleiðingini.
 Tá ið tær tørvar ein skjótan hátt at fanga áhugan hjá børnunum ella til at viðgera gerandisavbjóðingar, er hesin vitlíkis-leikluturin tín beinrakni, skapandi hjálpari. Ímynda tær at hava ein kláran søgusmið, sum kvikliga kann geva stuttar, minniligar frásøgur, ið eru nágreiniliga tillagaðar tínum evnum, nýligum upplivingum ella atferðaravbjóðingum í bólkinum. Antin tað snýr seg um at styrkja góðar vanar, hjálpa børnum at skilja torskild hugtøk, ella handfara samspælið á stovuni, so hjálpir vitlíki tær at finna júst røttu orðini ella myndirnar – og ger dagin stuttligari uttan at leggja eyka strongd á teg.
 
 :::scenario
-Ímynda tær hesa støðu:
-
 Tín bólkur av lívligum 4-ára gomlum børnum gloymir ferð eftir ferð at vaska sær um hendurnar eftir at hava spælt úti. Tær tørvar eina stuttliga søgu, ið er løtt at minnast, sum spakuliga minnir tey á, hví reinar hendur hava týdning, og sum brúkar staðbundin viðurskifti fyri at fáa boðskapin at festa seg.
 :::
 

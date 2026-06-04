@@ -338,7 +338,7 @@ const Tilarbeidis = () => {
       image: getInteractiveGuide("ai-for-service-industry")?.image,
     },
     {
-      title: "Vitlíki til hándverkarar",
+      title: "Vitlíki til handverkarar",
       href: "/user-guides/ai-for-craftsmen-guide",
       image: getInteractiveGuide("ai-for-craftsmen")?.image,
     },
