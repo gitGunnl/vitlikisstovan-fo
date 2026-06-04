@@ -292,7 +292,7 @@ const MarkdownBlock = ({ text }: { text: string }) => {
       flushList();
       const { text: headingText, id } = extractHeadingId(cleanLine.substring(4));
       elements.push(
-        <h3 key={idx} id={id} className="font-serif text-xl font-semibold text-stone-800 dark:text-stone-200 mt-8 mb-4 uppercase tracking-wide text-sm scroll-mt-24">
+        <h3 key={idx} id={id} className="font-serif text-xl font-semibold text-stone-800 dark:text-stone-200 mt-8 mb-4 scroll-mt-24">
           <RenderInlineText text={headingText} />
         </h3>
       );
