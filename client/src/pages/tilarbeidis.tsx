@@ -26,30 +26,30 @@ const timelineData: TimelineEvent[] = [
   {
     id: "evt-024",
     date: "2026-05-27",
-    title: "Vegleiðingar skrivaðar og útgivnar",
+    title: "Vegleiðingarnar skrivaðar og útgivnar",
     summary:
       "Vegleiðingar eru nú skrivaðar og komnar út.",
   },
   {
     id: "evt-023",
     date: "2026-05-11",
-    title: "Vegleiðingar skrivaðar – sniðgeving og myndir í gongd",
+    title: "Vegleiðingarnar skrivaðar – sniðgeving og myndir í gongd",
     summary:
       "Vegleiðingar eru nú skrivaðar, sniðgeving og myndir er í gongd.",
   },
   {
     id: "evt-022",
     date: "2026-03-24",
-    title: "Skriving av frágreiðingum 5 og 6",
+    title: "Vegleiðing 5. og 6. eru í gongd",
     summary:
-      "Við støði í kanningararbeiðinum er farið undir at skriva málrættaðar vegleiðingar til lærarar og fólk í tænastuvinnuni.",
+      "Við støði í kanningararbeiðnum er farið undir at skriva málrættaðar vegleiðingar til venjarar og handverkarar.",
   },
   {
     id: "evt-021",
     date: "2026-03-01",
-    title: "Kanning og greining av vitlíkisnýtslu til frágreiðing 5 og 6",
+    title: "Kanning og greining av vitlíkisnýtslu til vegleiðing 5 og 6",
     summary:
-      "Kanning er gjørd av, hvussu man best kann nýta vitlíki í sum venjari og sum hondverkari.",
+      "Kanning er gjørd av, hvussu man best kann nýta vitlíki í arbeiðinum sum venjari og sum handverkari.",
   },
   {
     id: "evt-020",
@@ -68,16 +68,16 @@ const timelineData: TimelineEvent[] = [
   {
     id: "evt-018",
     date: "2026-01-07",
-    title: "Kanning og greining av vitlíkisnýtslu",
+    title: "Kanning og greining av vitlíkisnýtslu innan tænastuvinnu og lærarastørv",
     summary:
-      "Kanning er gjørd av, hvussu man best kann nýta vitlíki í tænastu vinnuni og sum lærari.",
+      "Kanning er nú gjørd av, hvussu man best og mest munagott kann nýta vitlíki í tænastuvinnuni og í lærarafakinum.",
   },
   {
     id: "evt-017",
     date: "2025-12-31",
     title: "Fyrstu vegleiðingar útkomnar",
     summary:
-      "Fyrstu vegleiðingar eru komnar út í einari royndar versión, snið og myndir mangla. Arbeiði við næstu vegleiðingunum er eisini býrja, her verur hugt uppá hvussu fólkaskúlalærarar og tænastustarvsfólk kunnu nýta vitlíki í sínum starvi.",
+      "Fyrstu vegleiðingarnar eru komnar út í eini royndarversión. Arbeiði við næstu vegleiðingunum er eisini byrjað; her verður hugt eftir hvussu lærarar og tænastustarvsfólk kunnu nýta vitlíka í sínum starvi.",
   },
   {
     id: "evt-016",
@@ -85,7 +85,7 @@ const timelineData: TimelineEvent[] = [
     title: "Vegleiðingar eru farnar til rættlestur",
     summary: (
       <>
-        Nú eru vegleiðingar skrivaðar. Um tú hevur áhuga í at rættlesa og royna tær, so kanst tú lesa tær her:{" "}
+        Nú eru vegleiðingarnar skrivaðar. Um tú hevur áhuga í at rættlesa og royna tær, so kanst tú lesa tær her:{" "}
         <Link href="/user-guides/ai-for-kindergarten-guide" className="text-primary hover:text-primary/80 underline underline-offset-2 font-medium transition-colors" data-testid="link-kindergarten-guide">
           Vegleiðing fyri dagstovnar
         </Link>
@@ -98,25 +98,18 @@ const timelineData: TimelineEvent[] = [
     ),
   },
   {
-    id: "evt-015",
-    date: "2025-11-20",
-    title: "Vegleiðingar deilt upp eftir bólkum",
-    summary:
-      "Eftir meiting í mun til hvussu man best rakar tann rætt bólkin, so havi eg valgt at ístaðin fyri at deil tær tvær fyrstu vegleiðingarnar upp millum námsfrøðingar og hjálparafólk, so er tað ístaðin deilt upp eftir \"Dagstovnar\" og so \"Røktarstarvsfólk\". Hettar var neyåugt fyri at vegleiðingarnar vóru so nýttuligar sum møguligt.",
-  },
-  {
     id: "evt-014",
     date: "2025-10-07",
-    title: "Samrøður við námsfrøðingar og hjálparafólk eru komnar inn",
+    title: "Samrøður við námsfrøðingar og hjálparfólk eru komnar inn",
     summary:
-      "Samrøður við námsfrøðingar og hjálparafólk eru komnar inn. Royndin við at nýta vitlíki til hettar eydnaðist betur enn vænta. Takk til øll sum svarðu.",
+      "Samrøður við námsfrøðingar og hjálparfólk eru komnar inn. Royndin við at nýta vitlíki til hettar eydnaðist betur enn vænta. Takk til tykkum øll, ið svaraðu.",
   },
   {
     id: "evt-013",
     date: "2025-09-26",
-    title: "Framløga til Vísindavøka",
+    title: "Framløga til Vísindavøku",
     summary:
-      "Sum partur av at miðla verkætlanina havi eg givið eina framløgu á vísindavøku. Sí framløguna og tilhoyrandi birt niðanfyri. 👇️",
+      "Sum partur av at miðla verkætlanina havi eg hildið eina framløgu á vísindavøku. Sí framløguna og tilhoyrandi byrt niðanfyri. 👇️",
     mediaType: "video",
     mediaSrc: "https://www.youtube.com/embed/I8oRK07dF2E",
     accordions: [
@@ -149,7 +142,7 @@ Instructions:
 Create the table now.`
       },
       {
-        title: "3. Betri er at vera fyrivarin enn eftirsnarur",
+        title: "3. Betri er at vera fyrivarin enn eftirsnarin",
         content: `Role: Hostile reviewer + safety coach.
 Input is a procedure/flow. Goal: prevent avoidable failure.
 
@@ -197,9 +190,9 @@ End with a few fixes to reach ninety-plus.`
   {
     id: "evt-012",
     date: "2025-09-15",
-    title: "Samrøður við námsfrøðingar og hjálparafólk eru byrjaðar!",
+    title: "Samrøður við námsfrøðingar og hjálparfólk eru byrjaðar!",
     summary:
-      "Um tú ert hjálparafólk ella námsfrøðingur og gjarna vil hjálpa við hesari verkætlan, so kanst tú trýsta á tín knøtt niðanfyri, fyri at tosa við eitt vitlíkismodell um títt starv. Tað tekur áleið 15 min. og hjálpir hesari verkætlan sera nógv.",
+      "Um tú ert hjálparfólk ella námsfrøðingur og gjarna vil hjálpa við hesari verkætlan, so kanst tú trýsta á tín knøtt niðanfyri, fyri at tosa við eitt vitlíkismodell um títt starv. Tað tekur áleið 15 min. og hjálpir hesari verkætlan sera nógv.",
     mediaType: "buttons" as const,
   },
   {
@@ -207,7 +200,7 @@ End with a few fixes to reach ninety-plus.`
     date: "2025-09-13",
     title: "Royndir við samrøðutólið eydnaðist sera væl.",
     summary:
-      "Royndir við samrøðutólið eydnaðist sera væl, so tí verur nú fari ígongd við nógv fleiri samrøður.",
+      "Royndir við samrøðutólið eydnaðist sera væl, so tí verður nú fari ígongd við enn fleiri samrøður.",
   },
   {
     id: "evt-010",
@@ -223,21 +216,21 @@ End with a few fixes to reach ninety-plus.`
     date: "2025-09-06",
     title: "Fyrstu royndarsamrøður við námsfrøðingar eru byrjaðar",
     summary:
-      "Fyrstu rpyndar samrøðurnar við nakrar fáar námsfrøðingar eru farnar ígongd, fyri at vita um tað nýggja amboðið riggar væl.",
+      "Fyrstu royndar samrøðurnar við nakrar námsfrøðingar eru farnar ígongd, fyri at vita um tað nýggja amboðið riggar væl.",
   },
   {
     id: "evt-008",
     date: "2025-08-20",
     title: "Menning av samrøðuamboði",
     summary:
-      "Vit menna eitt samrøðuamboð, sum nýtir vitlíki til at læra nógv meira um valdu bólkarnar, fyri at royna at fáa eitt breitt og munagott innlit í teirra dagligu arbeiðsrútinur og avbjóðingar.",
+      "Vit menna eitt samrøðuamboð, sum nýtir vitlíki til at læra nógv meira um valdu bólkarnar, fyri at royna at fáa eitt breitt og munagott innlit í teirra dagligu arbeiðsvanar og avbjóðingar.",
   },
   {
     id: "evt-007",
     date: "2025-08-14",
     title: "Bólkarnir eru valdir",
     summary:
-      "Eftir at hava mett teir tjúgu bólkarnar eftir okkara styrkistølum, eru endaligu bólkarnir valdir til royndarverkætlanina: Hjálparfólk, Heilsurøktarar og heimarøktarfólk, Námsfrøðingar, Fólkaskúlalærarar, Listafólk (ikki-talgild), Tænastustarvsfólk (handil, gistingarhús, móttøka), Ítróttarvenjarar, og Sjúkrarøktarfrøðingar (sjúkrahús & klinikkir).",
+      "Eftir at hava mett teir tjúgu bólkarnar eftir okkara styrkistølum, eru endaligu bólkarnir valdir til royndarverkætlanina: Hjálparfólk, Heilsurøktarar og heimarøktarfólk, Námsfrøðingar, Lærarar, Handverkarar, Tænastustarvsfólk (handil, gistingarhús, móttøka), Ítróttarvenjarar, og Røktarstarvsfólk (sjúkrahús & klinikkir).",
   },
   {
     id: "evt-006",
@@ -263,9 +256,9 @@ End with a few fixes to reach ninety-plus.`
   {
     id: "evt-003",
     date: "2025-07-07",
-    title: "Verkstova um bólkaval",
+    title: "Verkstova ísv. val av arbeiðsbólkum",
     summary:
-      'Verkstovan um at geva íblástur til hvørjir bólkar kunnu hava størsta gagn av hesum átakinum og til at meta styrkistøl fyri yrkisbólkar til royndarverkætlanir.',
+      'Endamálið við verkstovuni var at fáa íblástur til, hvørjir arbeiðsbólkar kundu havt størst gagn av hesum arbeiðsmarknaðarátakinum.',
     mediaType: "image",
     mediaSrc: "/images/verkstova.jpeg",
   },
@@ -662,7 +655,7 @@ const Tilarbeidis = () => {
                             className="flex items-center justify-center gap-3 px-6 py-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold rounded-xl transition-all duration-300 hover:shadow-xl hover:scale-105 transform"
                           >
                             <span className="text-xl">🤝</span>
-                            Far til hjálparafólk samrøðu
+                            Far til hjálparfólk samrøðu
                           </a>
                         </div>
                       )}

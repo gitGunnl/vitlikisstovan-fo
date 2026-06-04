@@ -19,20 +19,20 @@ Hetta er ikki ein byrjanarvegleiðing til eitt ávíst amboð. Endamálið er at
 :::
 
 :::principle
-Kjarnin er einføld: vitlíki riggar best sum ein praktiskur sparringarfelagi. Vitlíki er ikki ein kelda til rætt svar, sum tú bara skalt fylgja treytaleyst. Tað kann ikki siga tær, hvat heilt vist er rætt. Brúka tað ístaðin til at skipa tínar tankar, seta spurnartekin við tínar ætlanir, økja um valmøguleikarnar og finna eitt betri næsta stig.
+**Vitlíki riggar best sum ein praktiskur sparringarfelagi.** Vitlíki er ikki ein kelda til rætt svar, sum tú bara skalt fylgja treytaleyst. Tað kann ikki siga tær, hvat heilt vist er rætt. Brúka tað ístaðin til at skipa tínar tankar, seta spurnartekin við tínar ætlanir, økja um valmøguleikarnar og finna eitt betri næsta stig.
+
+:::
 
 Ein góður háttur at lesa hesa vegleiðingina er at hyggja longri enn júst tað fakøkið, sum dømið snýr seg um, og spyrja: „Hvar havi eg sama slag av trupulleika?“ Tín útgáva kann vera ein pumpa í staðin fyri ein kølieind, ein rørleið í staðin fyri ein el-ætlan, ella eitt frágreiðingarskema, ein arbeiðslýsing ella eitt eykalutablað í staðin fyri ein viðlíkahaldshandbók.
 
 Tað gagnliga er sniðið á dømunum.
 
 Tú fært mest burtur úr dømunum, um tú sært byrtini sum mynstur og ikki sum fastar orðingar. Skift smálutirnar út við títt veruliga arbeiði, tínar veruligu mátingar, tínar veruligu myndir og tín veruliga spurning.
-:::
 
 ---
 
 ## **2. Endaliga orðið er títt**
 
-:::safety
 Vitlíki nýtist ikki at vera fullkomið fyri at vera gagnligt. Tað kann gera ein minnislisti sum fangar okkurt, tú hevur gloymt. Ein frágreiðing í gerandismáli kann spara tíð hjá einum kunda. Ein leiting í einum skjali kann vísa tær rætta staðið nógv skjótari enn at blaða ígjøgnum eina PDF-fílu. Hóast tú ikki verður nøgd/ur við øll svarini, ið vitlíki kemur við, kunnu ávís hugskot vera júst tað, sum loysir tín fløskuháls, ella fær arbeiðið at ganga smidligari og skjótari. 
 
 Tú hevur til alla tíð ræði á og ábyrgdina av tínum arbeiðsuppgávum.
@@ -41,6 +41,7 @@ Tað er tú, sum stendur framman fyri útgerðini, arbeiðsstaðnum, akfarinum e
 
 Vitlíki kann hjálpa tær at hugsa og koma á røttu leið. Tað kann ikki bera ábyrgdina av úrslitinum.
 
+:::safety
 Ver serliga ansin á økjum við stórum váða: trygd, reglur, byggiarbeiði, gass, el-arbeiði, lyfting, loyvi, garanti og krøv frá framleiðaranum. Brúka vitlíki til at vísa á møgulig viðurskifti, skjóta upp kanningar og skipa tínar tankar. Síðan mást tú - út frá tínum fakligu royndum og útbúgving - kanna eftir í veruligu handbókini, á veruliga arbeiðsstaðnum, kanna galdandi reglur og kanna eftir hjá eftirlitsfólki ella myndugleikum og hjá teimum, sum hava ábyrgdina av arbeiðinum.
 
 Ver eisini ansin við viðbreknum upplýsingum. Legg ikki trúnaðarvardar kundaupplýsingar, loyniorð, fíggjarupplýsingar, starvsfólkaupplýsingar, ella annað, ið krevur trúnað, inn í vitlíkisamboðið. Upplýsingar, sum fyritøkan ella kundin ikki vil hava latið øðrum, skalt tú ikki leggja inn.
@@ -58,7 +59,7 @@ Nýtsludømini niðanfyri eru skipaði eftir, hvat slag av hjálp vitlíki kann 
 Dømini eru skrivað soleiðis, sum ein handverkari møguliga hevði skrivað í veruleikanum. Í flestu førum er besti setningurin at veita vitlíki bara ein greið frágreiðing um støðuna, hvat tú longu veitst, hvat tú longu hevur roynt, og hvat tú hevur tørv á næst.
 :::
 
-Tá ið man skrivar eina boð til vitlíki, verur hetta rópt eitt byrt.
+Tá ið man skrivar eina boð til vitlíki, verður hetta rópt eitt byrt.
 
 :::principle
 Eitt gott byrt til vitlíki hevur vanliga fýra partar, tú skal lýsa:
@@ -75,7 +76,7 @@ Hetta er nóg mikið til at gera vitlíki meira málrættað og gagnligt.
 
 ## 4. At nýta vitlíki sum ein hjálpsamur starvsfelagi
 
-:::principle
+:::scope
 Hesin parturin vísir ein av sterkastu háttunum at brúka vitlíki uppá: sum ein hjálpsamur sparringarfelagi. Hesi dømini snúgva seg um at taka betri avgerðir, velja snildari næstu stig og sleppa undan at stara seg blindan á eitt ávíst svar.
 
 Vitlíki er ofta mest gagnligt, tá ið tað hjálpir tær at hugsa eina fløkta støðu ígjøgnum - ikki tá ið tað bara gevur tær eitt svar at avrita.
@@ -238,7 +239,9 @@ Hvør partur av hesi ætlanini veldst mest um lokalar reglur, staðviðurskifti 
 
 ## **5. At leggja tilfar inn í vitlíki**
 
+:::scope
 Hesin parturin snýr seg um eina av størstu broytingunum í, hvussu vitlíki kann hjálpa handverksarbeiði. Í staðin fyri at grava ígjøgnum fílur, gita leitorð ella royna at lýsa nakað eftir minninum, kanst tú seta beinleiðis spurningar um tað talgilda tilfarið, tú hevur framman fyri tær.
+:::
 
 :::safety
 Tað kann vera handbøkur, forskriftir, tekningar, navnaplátur, lutir, myndir, loggar og broytingar. Um tilfarið lýkur øll trúnaðaratlit - sum t.d. Ikki at veita nøkur nøvn, persóns- ella trúnaðarvardar upplýsingar - so kanst tú leggja tað inn í vitlíkisamboðið saman við tínum spurningi.
@@ -266,9 +269,7 @@ Ein onnur byrt-útgáva til verkætlanarfílur:
 „Eg havi lagt tekningar, arbeiðslýsing og ískoyti inn. Hvat er við í mínum arbeiðsumfangi fyri lágspenningsleiðingar í fundarrúmunum? Svara fyrst út frá fílunum, nevn neyva partin ella tekningarviðmerkingina, og skriva alt, sum er ógreitt.“
 :::
 
-:::principle
-*Viðmerking: Tað er avmarkað hvussu long skjøl mann kann leggja upp í vitlíki og enn vænta sær góð svar. Uml. 100 síður plagar vitlíki at megna væl. Um tú hevur lagt nógv tilfar inn og tað riggar illa, royn so at rudda burtur okkurt tilfar, sum hevur minni týdning fyri uppgávuna.*
-:::
+**Viðmerking:** Tað er avmarkað hvussu long skjøl mann kann leggja upp í vitlíki og enn vænta sær góð svar. Uml. 100 síður plagar vitlíki at megna væl. Um tú hevur lagt nógv tilfar inn og tað riggar illa, royn so at rudda burtur okkurt tilfar, sum hevur minni týdning fyri uppgávuna.
 
 **Góðir fylgisspurningar:**
 
@@ -561,7 +562,7 @@ Ger hetta til ein stuttan minnislista.
 Hvat má eg kanna í handbók, vørublaði, tekning, forskrift ella hjá formanni, áðrenn eg byrji?
 :::
 
-**Hví hetta riggar:** Tá ið ein uppgáva er ókend, er trupulleikin ofta ikki bara at vita, hvat skal gerast. Trupulleikin er at vita, **í hvørjari raðfylgju** tað skal gerast. Um eitt fyrireikingarstig verður lopið um, kann restin av arbeiðinum blíva truplari: tú mást taka nakað niður aftur, bíða eftir tilfari, broyta eina frágongd ella gera umaftur.
+**Hví hetta riggar:** Tá ið ein uppgáva er ókend, er trupulleikin ofta ikki bara at vita, hvat skal gerast. Trupulleikin er at vita, í hvørjari raðfylgju tað skal gerast. Um eitt fyrireikingarstig verður lopið um, kann restin av arbeiðinum blíva truplari: tú mást taka nakað niður aftur, bíða eftir tilfari, broyta eina frágongd ella gera umaftur.
 
 Vitlíki er gagnligt her, tí tað kann gera eina ógreiða uppgávu til eina fyribils arbeiðsgongd. Tað kann vísa tær stigini í tíðarrøð, peika á fortreytir, skilja fyrireiking frá uppseting og minna teg á, hvat má váttast, áðrenn arbeiðið heldur fram.
 
@@ -677,7 +678,7 @@ Gev mær tvær útgávur: eina til kundan og eina til arbeiðsviðmerkingarnar.
 
 ## **8. At læra, fylla vitanarglopp og læna sjónarhorn við vitlíki**
 
-:::principle
+:::scope
 Hesin parturin snýr seg um at gerast sjálvstøðugari og betur fyrireikað/ur. Vitlíki kemur ikki í staðin fyri útbúgving, eftirlit, handbøkur, reglubøkur ella arbeiðsroyndir, men tað kann hjálpa tær væl á veg, áðrenn tú mást ringja til onkran.
 :::
 
@@ -685,9 +686,7 @@ Vitlíki kann á gerandismáli greiða frá t.d. eini torskildari skipan, hjálp
 
 ### **Nýtsludømi 14. Hjálp til at hugsa tvørfakligt**
 
-:::principle
 **Hvat hetta hjálpir við:** At hugsa um, hvat næsta fakfólkið fer at hava tørv á, áðrenn tú lokar, hylur, málar, byggir inn ella ger nakað liðugt. Hetta snýr seg ikki um, at vitlíki skal góðkenna arbeiðið. Tað snýr seg um at fáa betri hugskot til merking, myndir, spurningar og handan, so tú ikki óvart gert arbeiðið hjá einum øðrum truplari.
-:::
 
 :::scenario
 **Ímynda tær eina veruliga uppgávu:** Tú ert timburmaður og skalt seta plátur ella klædning upp á ein vegg, har elektrikarin longu hevur lagt leiðingar og sett el-dósir. Tá ið veggurin er lokaður, verður nógv truplari at finna aftur, hvar dósir, rør, kaðalrutir, festipunkt og møgulig atkomustøð eru. Tú vilt tí steðga á eina løtu og hugsa: “Hvat hevði elektrikarin ynskt, at eg hevði merkt, myndað ella spurt um, áðrenn eg hylji hetta?”
@@ -747,12 +746,10 @@ Hugsa tí um vitlíki í trimum løtum:
 
 **Aftan á arbeiðið** kanst tú brúka vitlíki til at rudda upp í tínum viðmerkingum. Bið tað gera notur til eina greiða arbeiðsfrágreiðing, eitt vaktarskifti, eina kundafrágreiðing ella ein lista við tí, sum skal gerast næst.
 
-:::safety
-Hetta er høvuðsreglan:
-
+:::principle
 **Brúka vitlíki til at fyrireika, fáa mótspæl, skipa, orða og læra. Brúka tað ikki til at góðkenna, máta, taka ábyrgd ella avgera, hvat er trygt.**
 
-Tað er tú, sum kennir arbeiðsstaðin. Tað er tú, sum sært veruligu støðuna. Tað er tú, sum má kanna mátingarnar, handbøkurnar, reglurnar, framleiðarakrøvini og staðbundnu viðurskiftini. Og tað er tú, sum hevur ábyrgdina av arbeiðinum..
+Tað er tú, sum kennir arbeiðsøki. Tað er tú, sum sært veruligu støðuna. Tað er tú, sum má kanna mátingarnar, handbøkurnar, reglurnar, framleiðarakrøvini og staðbundnu viðurskiftini. Og tað er tú, sum hevur ábyrgdina av arbeiðinum.
 :::
 
 Ein góð fyrsta roynd er at velja eina vanliga uppgávu, sum tú skalt gera kortini, og skriva soleiðis:
@@ -770,9 +767,9 @@ Set mær spurningar, um okkurt manglar. Minn meg eisini um, hvat eg má kanna í
 :::
 
 :::principle
-Tú skalt ikki vænta, at alt, sum vitlíki sigur, er rætt. Tað er ikki tað, sum ger tað gagnligt.
+**Tú skalt ikki vænta, at alt, sum vitlíki sigur, er rætt.** Tað er ikki tað, sum ger tað gagnligt.
 
-Tað gagnliga er, at tú fært fleiri spurningar, fleiri møguleikar, betri yvirlit og hugskot til næsta stig. Fyri tað um alt ikki er heilt rætt, so fara nógv av svarinum at vera hjálpsom og hjálpa tær víðari.
+Tað gagnliga er, at tú fært fleiri spurningar, fleiri møguleikar, betri yvirlit og hugskot til næsta stig. Fyri tað um alt ikki er heilt rætt, so fara nógv av svarunum at vera hjálpsom og hjálpa tær víðari.
 
 Vitlíki er sterkast, tá ið tað hjálpir tær at síggja fleiri møguleikar, seta betri spurningar og koma greiðari fram til tína egnu fakligu meting.
 :::
@@ -781,7 +778,7 @@ Vitlíki er sterkast, tá ið tað hjálpir tær at síggja fleiri møguleikar, 
 
 # **Um hesa vegleiðingina**
 
-Henda vegleiðingin er partur av verkætlanini *Vitlíki til arbeiðis*, har Vitlíkisstovan ger praktiskar vegleiðingar um, hvussu starvsfólk kunnu brúka vitlíki í gerandisarbeiðinum.
+Henda vegleiðingin er partur av verkætlanini *Vitlíki til arbeiðis*, har Vitlíkisstovan ger praktiskar vegleiðingar til, hvussu starvsfólk kunnu brúka vitlíki í gerandisarbeiðinum.
 
 Verkætlanin er stuðlað av Granskingarráðnum.
 

@@ -40,40 +40,34 @@ Dentur verður lagdur á **ráðlegging og fyrireiking**; arbeiðið, tú gert, 
 **Um tú ikki hevur atgongd gjøgnum skúlan,** kanst tú møguliga brúka eina privata/ókeypis kontu, **um leiðreglurnar hjá tykkum loyva tí**. Ókeypis útgávur rigga fínt til flestu dømini í hesi vegleiðing.
 :::
 
-## **Grundleggjandi samskiftið**
+## **Grundleggjandi samskifti**
 
-:::principle
 At arbeiða við vitlíki er sum at tosa við ein sera hjálpsaman, men eitt sindur bókstavligan hjálpara. Tú skrivar boð (kallað **byrt**), og vitlíki svarar. Lykilin til at fáa góð úrslit er at skriva týðiligt og neyvt um, hvat tú vilt hava, hvørjum tað er ætlað og at veita nógva viðkomandi vitan um uppgávuna.
-:::
+
 
 ## **Hugsa um vitlíki sum ein hjálpara til uppkast**
 
-:::principle
 Ein góður máti at hugsa um hesi amboð er hesin: **Vitlíki gevur tær uppkast, ikki liðug úrslit.** Hesi amboð er bara ein partur av hvussu tú framleiðir tilfar, tað ger ikki liðugt tilfar. Tí er tað umráðandi at tú allatíð hyggur eftir hvat verður framleitt og syrgjur fyri at tilfarið er á rættari leið. Tú ert serfrøðingurin; vitlíkið er tín hjálpari.
-:::
+
 
 # **Partur 2: Eitt sindur um dátuvernd og trygd**
 
-:::safety
-**Áðrenn tú byrjar at brúka vitlíkisamboð, mást tú skilja hesar týdningarmiklu reglur.** Undirvísarar arbeiða við næmingum, skeiðsluttakarum og viðkvæmum upplýsingum, so dátuvernd hevur avgerandi týdning.
-:::
-
-## **Leiðreglurnar hjá skúlanum ganga framum**
 
 :::safety
+**Set teg inn í leiðreglurnar hjá skúlanum.**
+
 Tín skúli, stovnur ella kommuna kann hava serligar leiðreglur um nýtslu av vitlíkisamboðum. Fylg altíð tykkara vegleiðing fyrst – hon gongur framum almennu ráðini í hesi vegleiðingini. Brúka bert amboð og kontur, sum tín stovnur hevur góðkent. Ert tú í iva, spyr KT-deildina ella leiðsluna.
 :::
 
-## **Hvat tú ALDRIN mást skriva í eitt vitlíkisamboð**
+## **Ansa eftir hvat tú skrivar inn í vitlíkisamboðini**
 
 :::safety
-| ALDRIN skriva: |
-| :---- |
-| Nøvn á næmingum/luttakarum, kennitøl ella aðrar samleikaupplýsingar |
-| P-tøl, bústaðir ella sambandsupplýsingar |
-| Eyðkennilig met/karakterir ella útskriftir úr metingarbókini; neyvar metingarskrásetingar knýttar at ávísum persóni |
-| Fullan tekst úr rættindavardum lærubókum ella royndaruppgávum |
-| Viðkvæmar upplýsingar um familjuviðurskifti, barnaverndar- ella almannamál |
+ALDRIN skriva:
+- Nøvn á næmingum/luttakarum, kennitøl ella aðrar samleikaupplýsingar
+- P-tøl, bústaðir ella sambandsupplýsingar
+- Eyðkennilig met/karakterir ella útskriftir úr metingarbókini; neyvar metingarskrásetingar knýttar at ávísum persóni
+- Fullan tekst úr rættindavardum lærubókum ella royndaruppgávum
+- Viðkvæmar upplýsingar um familjuviðurskifti, barnaverndar- ella almannamál
 :::
 
 ## **Brúka navnleysar fyrispurningar**
@@ -81,17 +75,29 @@ Tín skúli, stovnur ella kommuna kann hava serligar leiðreglur um nýtslu av v
 :::safety
 Tá ið tú hevur tørv á at lýsa støðuna hjá einum næmingi ella luttakara, brúka so almennar orðingar:
 
-| Í staðin fyri... | Skriva... |
-| :---- | :---- |
-| *"Anna hevur trupult við at savna seg og stríðist við..."* | *"Ein næmingur/luttakari hevur trupult við at savna seg og stríðist við...."* |
-| *"Jón fekk 45 % í seinastu royndini"* | *"Ein næmingur, sum klárar seg verri enn væntað í..."* |
+Í staðin fyri:
+*"Anna hevur trupult við at savna seg og stríðist við..."*
 
+Skriva:
+
+*"Ein næmingur/luttakari hevur trupult við at savna seg og stríðist við...."*
+
+ella í staðin fyri:
+
+*"Jón fekk 45 % í seinastu royndini"*
+
+Skriva:
+
+*"Ein næmingur, sum klárar seg verri enn væntað í..."*
+
+:::safety
 **Vís varsemi – vandi fyri afturkenning:** Sjálvt "navnleysar" lýsingar kunnu av óvart eyðmerkja ein persón, um støðan er serstøk. Ein sjáldsom hending, óvanlig familjuviðurskifti ella ein serlig samanseting av eyðkennum kunnu vera nóg mikið til, at onkur kennir viðkomandi aftur. Tá ið tú lýsir støður, ger tær so almennar, at tær ikki eru bundnar at smálutum:
 
 * **Ov neyvt:** *"Ein næmingur, sum nýliga er fluttur higar úr Danmark og situr í koyristóli"*  
 * **Nóg trygt:** *"Ein næmingur, sum er nýggjur á stovninum og hevur tørv á rørsluhjálp"*  
 * **Ov neyvt:** *"Ein luttakari, sum stendur í eini umrøddari og torførari hjúnaskilnaðarstøðu"*  
 * **Nóg trygt:** *"Ein luttakari, sum hevur strongd í privatlívinum"*
+:::
 
 Viðmerking: Upplýsingar sum man leggur inn á amboð sum ChatGPT og CoPilot vera sum so ikki deildar við onnur fólk, so vit eru ikki varin orsaka av at vit eru bangin fyri at onkur lesur hvat vit skriva. Orsøkin til at vit eru varin við hesum, er at tað løgfrøðiliga er ólógligt at koyra upplýsingar um ein næming inn í hesi amboð, tí fyrispurningarnir vera sendir til Amerika ella onnur lond og tí er tað ikki lov.
 :::
@@ -128,9 +134,8 @@ Tað er sunnukvøld. Tú situr og fyrireikar teg til vikuna, sum kemur, og tær 
 
 ### **Hvussu vitlíki hjálpir**
 
-:::principle
 Í staðin fyri at byrja heilt frá grundini, kanst tú biðja vitlíki gera eitt skipað yvirlit yvir tíman. Vitlíki ger eitt uppkast, sum inniheldur lærumál, eina áhugaverda innleiðing, høvuðsvirksemi í undirvísingini, venjingar til luttakararnar og hugskot til meting. Hettar er ein góð beinagrind at arbeiða út frá, sum tú síðani fyllir út við tínum egnu dømum, tillagar til tín málbólk og broytir alt eftir, hvat tilfar tú veruliga hevur tøkt. Nógvir undirvísarar meta at hesin hátturin sparir teimum nógva fyrireikingartíð, tí teir tillaga og betra heldur enn at skula skapa alt úr ongum.
-:::
+
 
 **Dømi:**
 
@@ -203,9 +208,8 @@ Tú hevur ein flokk ella bólk við ymiskum tørvum. Summi lesa á tí stigi, su
 
 ### **Hvussu vitlíki hjálpir**
 
-:::principle
 Vitlíki er framúrskarandi til at tillaga innihald. Tú kanst seta ein torføran tekst inn og biðja um eina einklari útgávu; ella biðja um somu frágreiðing við nýtslu av øðrum samanberingum; ella spyrja, hvussu tú kanst knýta eitt fakligt hugtak at tí, sum ein ávísur bólkur hevur áhuga fyri. Hetta kemur ikki í staðin fyri tín kunnleika um, hvat tínir næmingar/luttakarar hava tørv á – tú avger enn, hvørja útgávu tú brúkar til hvønn – men tað ger tillagingina av tilfarinum nógv skjótari. Tað, sum kanska hevði tikið 20 minuttir at skriva umaftur við hond, kann gerast upp á 2 minuttir, og tað gevur tær fleiri møguleikar at røkka ymiskum luttakarum.
-:::
+
 
 **Einfalda tekst:**
 
@@ -221,7 +225,7 @@ Her er teksturin: **[Avrita og set tín tekst inn her]**
 Gev mær 3 ymiskar mátar at greiða frá hugtakinum **[Set hugtak inn, t.d. tyngdarmegi]** fyri næmingum í **[Set flokk/aldur inn, t.d. 8. flokki]**. Tak í minsta lagi eina samanbering ella eitt dømi úr veruleikanum við til hvørja frágreiðing.
 :::
 
-**Knýta at áhugamálum hjá næmingum/luttakarum:**
+**Knýt at áhugamálum hjá næmingum/luttakarum:**
 
 :::prompt
 Hvussu kundi eg undirvíst í **[Set fakligt evni inn, t.d. brøkum]** fyri einum næmingi, sum veruliga gongur upp í **[Set áhugamál inn, t.d. Fótbólt ella fimleik]**? Gev mær ítøkilig dømi og virksemi, sum knýta tað fakliga innihaldið at áhugamálinum.
@@ -403,13 +407,14 @@ At fara ígjøgnum allar uppgávurnar umaftur fyri at telja og samanbera tínar 
 
 ### **Hvussu vitlíki hjálpir**
 
-:::safety
-Í hesum førinum eigur tú ikki at seta næmingasvar ella næmingatekst beinleiðis inn í eitt vitlíkisamboð. Í staðin kanst tú seta inn tínar egnu viðmerkingar og rættingar til næmingarnar.
-:::
-
 Út frá hesum kann eitt vitlíki hjálpa tær at eyðmerkja felags rák, bólka vanligar misskiljingar og peika á, hvørji evni eiga at verða tikin upp aftur í flokkinum. Tað broytir arbeiðið frá at vera ein spurningur um at minnast alt sjálvur til at fáa eina greiða og brúkiliga fatan av tí, sum tú longu hevur sæð.
 
 Tú kanst eisini biðja vitlíki koma við uppskoti til eina stutta endurtøku, sum beinleiðis svarar til tey veikleikaøki, tú hevur lagt merki til.
+
+
+:::safety
+Í hesum førinum eigur tú ikki at seta næmingasvar ella næmingatekst beinleiðis inn í eitt vitlíkisamboð. Í staðin kanst tú seta inn tínar egnu viðmerkingar og rættingar til næmingarnar.
+:::
 
 **Dømi:**
 
@@ -453,9 +458,8 @@ Sostatt er hetta eitt gott arbeiðslag:
 
 ### ***Ein øðrvísi tilgongd: Vís tað heldur enn bara at siga tað***
 
-:::principle
 Næmingar skilja ofta betur eitt gott svar, tá ið teir síggja eitt dømi, enn tá ið teir bara hoyra orð sum “greina” ella “grundgeva”. Her kann vitlíki hjálpa við skjótt at gera dømi, sum vísa munin á einum veikum og einum sterkum svari.
-:::
+
 
 ### **Støðan**
 
@@ -522,9 +526,7 @@ Tað er eisini umráðandi, at tú sjálvur lesur dømini ígjøgnum og tillagar
 
 ### ***Ein øðrvísi tilgongd: At gera hugtakið nærverandi***
 
-:::principle
 *Ein av vanligastu avbjóðingunum í undirvísing er, at næmingar hava ilt við at síggja, hví eitt evni hevur týdning uttan fyri skúlastovuna. Tá kann sjálvt eitt gott fakligt innihald kennast fjart og óviðkomandi. Ein góð tilgongd er tí at knýta evnið at støðum, spurningum og fyribrigdum, sum næmingarnir longu kenna aftur úr gerandisdegnum, miðlunum, tøknini, arbeiðslívinum ella frítíðini. Her kann vitlíki hjálpa sum ein góð hugskotskelda: ikki við at avgera, hvat er besta dømið, men við at geva tær fleiri møguligar brúgvar millum eitt fakligt hugtak og tann veruleika, næmingarnir liva í.*
-:::
 
 ### **Støðan**
 
@@ -593,27 +595,23 @@ Greið mær frá, hvussu eg kann bera hetta fram uttan at gera tað ov fløkt.
 
 ### **Umráðandi: Lærarin velur framvegis dømið**
 
-:::principle
 Ikki øll dømi, sum vitlíki kemur við, fara at rigga væl til tín flokk. Summi kunnu kennast ov yvirskipað, ov nógv knýtt at ávísum áhugamálum, ella hóva tey ikki rættiliga í einum føroyskum samanhangi. Tí eigur tú altíð at velja, tillaga og meta um dømini sjálv/ur. Ofta kann tað hjálpa um tú lýsur fyri vitlíki hví eitt dømi ikki riggar væl og hareftir biður um eitt nýtt.
 
 Vitlíki er sostatt best sum ein hjálp til at finna møguligar inngangsvinklar. Tað er tú sum lærari, ið avger, hvat veruliga er viðkomandi, hóskandi og námsfrøðiliga gott fyri júst tín bólk.
-:::
 
 # **Partur 4: Ráð til at fáa betri úrslit**
 
 ## **Byrtuppskriftin**
 
-:::principle
 Fyri at fáa støðug og góð úrslit, kanst tú seta tíni byrt upp eftir hesi uppskriftini:
 
-| Uppskriftin til eitt gott byrt í 5 pørtum |
-| :---- |
-| **Leiklutur:** "Tú ert ein hjálpari, sum hjálpir einum lærara..." |
-| **Samanhangur:** Árgangur/flokkur, evni, longd á tímanum, tørvur hjá næmingunum, tøkt tilfar og mangt annað. |
-| **Uppgáva:** Hvat tú vilt hava gjørt (tímaætlan, spurnakapping, frágreiðing o.s.fr.). |
-| **Avmarkingar:** Krøv í námsætlan, lesistig, longd, sløg av spurningum o.s.fr. |
-| **Snið á úrslitinum:** Talva, punkt, arbeiðsark, spurnarblað, talsettur listi o.s.fr. |
-:::
+Uppskriftin til eitt gott byrt í 5 pørtum:
+
+1. **Leiklutur:** "Tú ert ein hjálpari, sum hjálpir einum lærara..."  
+2. **Samanhangur:** Árgangur/flokkur, evni, longd á tímanum, tørvur hjá næmingunum, tøkt tilfar og mangt annað.  
+3. **Uppgáva:** Hvat tú vilt hava gjørt (tímaætlan, spurnakapping, frágreiðing o.s.fr.).  
+4. **Avmarkingar:** Krøv í námsætlan, lesistig, longd, sløg av spurningum o.s.fr.  
+5. **Snið á úrslitinum:** Talva, punkt, arbeiðsark, spurnarblað, talsettur listi o.s.fr.
 
 :::prompt
 **Dømi um nýtslu av uppskriftini:** *"Tú ert ein hjálpari, sum hjálpir einum náttúru- og tøknilærara í 8. flokki. Eg undirvísi í fotosyntesu fyri næmingum við ymiskum lesiførleikum, og eg havi 45 minuttir. Ger eina spurnarkapping við 6 spurningum við fleiri svarmøguleikum, sum royna fatanina (ikki bara minnið). Spurningarnir skulu vera á lesistigi, ið hóskar til 7. og 8. flokk. Set tað upp sum ein talsettan lista við svarlista til endans."*
@@ -661,11 +659,9 @@ Eitt gott ráð, tá ið tú ivast í, hvussu tú skalt orða teg, er at venda s
 | :---- |
 :::
 
-:::principle
 Vitlíki fer tá at seta tær spurningar sum *"Hvør árgangur?"*, *"Hvussu leingi skal virksemið taka?"* ella *"Hvørjum tilfari hava næmingarnir atgongd til?"*. At svara hesum spurningum hjálpir tær at hugsa ígjøgnum, hvat tær veruliga tørvar, og tað gevur vitlíkinum teir upplýsingar, ið eru neyðugir fyri at geva tær eitt brúkiligt svar.
 
 Tá ið tú hevur svara teimum fyrstu 5 spurningunum, so kanst tú biða um 5 afturat, so vitlíki kann skilja støðuna uppaftur betur.
-:::
 
 ## **Goym góð byrt**
 
@@ -677,7 +673,7 @@ Tá ið tú finnur eitt byrt, sum riggar væl til tín tørv, goym tað so onkus
 
 # **Um hesa vegleiðingina**
 
-Henda vegleiðingin er partur av verkætlanini *Vitlíki til arbeiðis*, har Vitlíkisstovan ger praktiskar vegleiðingar um, hvussu starvsfólk kunnu brúka vitlíki í gerandisarbeiðinum.
+Henda vegleiðingin er partur av verkætlanini *Vitlíki til arbeiðis*, har Vitlíkisstovan ger praktiskar vegleiðingar til, hvussu starvsfólk kunnu brúka vitlíki í gerandisarbeiðinum.
 
 Verkætlanin er stuðlað av Granskingarráðnum.
 

@@ -371,7 +371,7 @@ Hesin álítandi skrivarin kann meira enn bara gera dagligar frásagnir ella til
 :::
 
 
-* **Stytt, tillaga til miðil + týð (til innanhýsis nýtslu/til avvarðandi):** Tillagar boðini til **SMS (≤160 tekn)** ella **Kjatt (≤300 tekn)**; varðveitir týdningin.  
+* **Stytt ella tillaga tekstin til ávísan miðil, ella týð hann til eitt annað mál, t.d. til innanhýsis nýtslu ella til avvarðandi.”** Tillagar boðini til **SMS (≤160 tekn)** ella **Kjatt (≤300 tekn)**; varðveitir týdningin.  
 :::prompt
   * **Dømi um byrt:** “Stytt hesi notat niður til: a) SMS ≤160 tekn, b) Kjatt ≤300 tekn. Varðveit høvuðsinnihaldið. Svara á føroyskum. Vinarliga spyr fyrst, um okkurt er ógreitt.”
 :::
@@ -644,7 +644,7 @@ Halt tað stutt og greitt. Vinarliga svara á natúrligum føroyskum.
 
 # **Um hesa vegleiðingina**
 
-Henda vegleiðingin er partur av verkætlanini *Vitlíki til arbeiðis*, har Vitlíkisstovan ger praktiskar vegleiðingar um, hvussu starvsfólk kunnu brúka vitlíki í gerandisarbeiðinum.
+Henda vegleiðingin er partur av verkætlanini *Vitlíki til arbeiðis*, har Vitlíkisstovan ger praktiskar vegleiðingar til, hvussu starvsfólk kunnu brúka vitlíki í gerandisarbeiðinum.
 
 Verkætlanin er stuðlað av Granskingarráðnum.
 

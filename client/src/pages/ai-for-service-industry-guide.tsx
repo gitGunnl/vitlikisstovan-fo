@@ -187,7 +187,7 @@ Hvat kann eg siga, um kundin trýstir víðari?
 
 ## 4. Hjálp gestum við at finna veruligar møguleikar
 
-:::safety
+:::scenario
 Brúka hetta, tá ið gestir spyrja, hvat tey kunnu gera í dag, serliga tá ið veður, tíð, flutningur ella førleikar avmarka møguleikarnar. Um amboðið hevur netleiting, kann tað finna ítøkilig støð og heimasíður. Tú skalt tó kanna tað týdningarmikla, áðrenn tú viðmælir nakað.
 :::
 
@@ -534,14 +534,15 @@ Um tú ert heilt nýggj/ur í at brúka vitlíki, byrja við einum av hesum:
 # Útgangur
 
 :::principle
-Vitlíki ger ikki tænastuna fyri teg. Tað kann ikki smílast fyri teg, lesa støðuna fyri teg ella taka ábyrgdina av einari kundastøðu.
+**Vitlíki ger ikki tænastuna fyri teg.** Tað kann ikki smílast fyri teg, lesa støðuna fyri teg ella taka ábyrgdina av einari kundastøðu.
 
 Men tað kann vera ein sera góður sparringsfelagi.
 
 Tað kann hjálpa tær at finna fleiri mátar at orða nakað, venja eina torføra samrøðu, finna møguleikar til gestir, gera eitt skelti greiðari og gera ein upplæringarlista úr óskipaðum notum.
 
-Besti hátturin er ofta at spyrja:
 :::
+
+Besti hátturin er ofta at spyrja:
 
 :::prompt
 - Hjálp mær at hugsa hetta ígjøgnum.   
@@ -560,7 +561,7 @@ Vitlíki hjálpur tær at hugsa og skriva.
 
 # **Um hesa vegleiðingina**
 
-Henda vegleiðingin er partur av verkætlanini *Vitlíki til arbeiðis*, har Vitlíkisstovan ger praktiskar vegleiðingar um, hvussu starvsfólk kunnu brúka vitlíki í gerandisarbeiðinum.
+Henda vegleiðingin er partur av verkætlanini *Vitlíki til arbeiðis*, har Vitlíkisstovan ger praktiskar vegleiðingar til, hvussu starvsfólk kunnu brúka vitlíki í gerandisarbeiðinum.
 
 Verkætlanin er stuðlað av Granskingarráðnum.
 

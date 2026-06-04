@@ -17,7 +17,7 @@ Títt arbeiði er fyrst og fremst á gólvinum. Tú ert til staðar saman við b
 Veruleikin er eisini, at nógv tíð fer til fyrireiking, samskipan, boð, minnislistar, talvur, innkeyp, aktivitetir og praktiskar uppgávur. Tá ið dagurin er fult skemalagdur, kann tað kennast sum um tú rennur millum fólk, telefon, talvur, listar og smáar áminningar.
 
 :::principle
-Vitlíki kann hjálpa við hesum lættaru uppgávunum: at fáa hugskot, skipa tankar, gera minnislistar, eftirkanna eina ætlan, skriva neutral boð og gera eitt fyrsta útkast, sum tú síðani rættar til. Tann fakliga ábyrgdin er enn tín; vitlíki hjálpir tær bara við hugskotum og skrivihjálp.
+Vitlíki kann hjálpa við hesum lættaru uppgávunum: at fáa hugskot, skipa tankar, gera minnislistar, eftirkanna eina ætlan, skriva neutral boð og gera eitt fyrsta útkast, sum tú síðani rættar til. **Tann fakliga ábyrgdin er enn tín**; vitlíki hjálpir tær bara við hugskotum og skrivihjálp.
 :::
 
 ---
@@ -31,7 +31,7 @@ Hesi øki kunnu vera týdningarmikil, men tey krevja vanliga persónligar, trún
 :::
 
 :::scope
-Í staðin savnar henda vegleiðingin seg um gagnligar og tryggar uppgávur, sum kunnu gerast uttan persónligar upplýsingar:
+Henda vegleiðing savnar seg um gagnligar og tryggar uppgávur, sum kunnu gerast uttan persónligar upplýsingar:
 
 * at finna hugskot til róligt virksemi, samveru og tema-dagar  
 * at gera minnislistar til útferðir, innkeyp, vitjanir og fyrireiking  
@@ -45,7 +45,7 @@ Málið er einfalt: minni mental byrða, skjótari fyrireiking og meira orka til
 
 ---
 
-## Hendan vegleiðing er til tín, um tú
+## Hendan vegleiðing er til tín, um tú:
 
 :::scope
 * ert røktarstarvsfólk, hjálparfólk ella starvsfólk í bústovni, eldrarøkt, heimatænastu ella líknandi umsorganararbeiði  
@@ -277,9 +277,7 @@ Ger eina útgávu til starvsfólkakjatt, har tað er greitt, hvat vit skulu minn
 
 # 4. Fleiri hent nýtsludømi
 
-:::safety
 Niðanfyri eru dømi um uppgávur, sum kunnu koma fyri í gerandisdegnum hjá røktarstarvsfólki, og sum kunnu brúkast uttan persónligar ella viðkvæmar upplýsingar. Avrita eitt dømi og set inn í títt vitlíkisamboð; skift stað, tíð, tilfar og bólkastødd út við tykkara egnu umstøður.
-:::
 
 ---
 
@@ -637,7 +635,7 @@ Góðan arbeiðshug.
 
 # **Um hesa vegleiðingina**
 
-Henda vegleiðingin er partur av verkætlanini *Vitlíki til arbeiðis*, har Vitlíkisstovan ger praktiskar vegleiðingar um, hvussu starvsfólk kunnu brúka vitlíki í gerandisarbeiðinum.
+Henda vegleiðingin er partur av verkætlanini *Vitlíki til arbeiðis*, har Vitlíkisstovan ger praktiskar vegleiðingar til, hvussu starvsfólk kunnu brúka vitlíki í gerandisarbeiðinum.
 
 Verkætlanin er stuðlað av Granskingarráðnum.
 
