@@ -17,35 +17,13 @@ export const siteConfig = {
   },
 
   hero: {
-    slides: [
-      {
-        title: "Við røttu vegleiðing kanst tú eisini meistra VITLÍKI!",
-        subtitle:
-          "Vitlíkisstovan mennir tykkum frá at vera nýbyrjarar innan vitlíki til dugnaligar vitlíkisbrúkarar.",
-        primaryCTA: {
-          text: "Les meira um gongdina frá at vera nýbyrjari til dugnaligur vitlíkisbrúkari her:",
-          href: "#contact"
-        }
-      },
-      {
-        title: "Nýggjur bloggur: Frá vitlíkisótta til vitlíkisdirvi",
-        subtitle:
-          "Hví førleikamenning nú er ein avgerandi íløga. Tøknin er bert amboðið — tann varandi vinningurin kemur frá fólkunum.",
-        primaryCTA: {
-          text: "Les bloggin",
-          href: "/blog/fra-vitlikisottan-til-vitlikisdirvi"
-        }
-      },
-      {
-        title: "Vitlíkisráðgeving, snikkað til tín tørv",
-        subtitle:
-          "Er tørvurin ein vitlíkistrategi, vegleiðing í sambandi við eina vitlíki verkætlan, nýtslu av vitlíki í kreativum arbeiði ella eitt fjórða - so leiðbeini eg tykkum lættliga rætta vegin.",
-        primaryCTA: {
-          text: "Bílegg eina ókeypis samrøðu",
-          href: "/contact"
-        }
-      }
-    ]
+    title: "Við røttu vegleiðing kanst tú eisini meistra VITLÍKI!",
+    subtitle:
+      "Vitlíkisstovan mennir tykkum frá at vera nýbyrjarar innan vitlíki til dugnaligar vitlíkisbrúkarar.",
+    primaryCTA: {
+      text: "Les meira um gongdina frá at vera nýbyrjari til dugnaligur vitlíkisbrúkari her:",
+      href: "#contact"
+    }
   },
 
   program: {

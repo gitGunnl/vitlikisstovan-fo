@@ -2,7 +2,7 @@ import type { PageSeo } from "./_types";
 import { siteConfig as c } from "../site";
 
 function buildContent(): string {
-  const heroSlide = c.hero.slides[0];
+  const heroSlide = c.hero;
   let html = `<h1>${c.siteName} - ${c.tagline}</h1>`;
   html += `<p>${heroSlide.title} ${heroSlide.subtitle}</p>`;
 

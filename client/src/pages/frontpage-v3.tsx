@@ -128,7 +128,7 @@ export default function FrontpageV3() {
                     á tíni skrivstovu
                   </h1>
                   <p className="text-xl text-white leading-relaxed max-w-xl">
-                    {siteConfig.hero.slides[0].subtitle}
+                    {siteConfig.hero.subtitle}
                   </p>
                 </div>
 

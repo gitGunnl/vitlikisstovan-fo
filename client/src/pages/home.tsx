@@ -37,7 +37,7 @@ import {
 export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
   const [openDialog, setOpenDialog] = useState<string | null>(null);
-  const heroSlide = siteConfig.hero.slides[0];
+  const heroSlide = siteConfig.hero;
 
   useEffect(() => {
     setIsMounted(true);
