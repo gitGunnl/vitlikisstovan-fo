@@ -37,8 +37,7 @@ import {
 export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
   const [openDialog, setOpenDialog] = useState<string | null>(null);
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = siteConfig.hero.slides;
+  const heroSlide = siteConfig.hero.slides[0];
 
   useEffect(() => {
     setIsMounted(true);
@@ -55,24 +54,6 @@ export default function Home() {
       }, 100);
     }
   }, []);
-
-  // Auto-rotate carousel
-  useEffect(() => {
-    const intervals = [10000, 10000, 10000]; // Different timing for each slide
-    const timer = setTimeout(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, intervals[currentSlide]);
-
-    return () => clearTimeout(timer);
-  }, [currentSlide, slides.length]);
-
-  const handlePrevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
-  };
-
-  const handleNextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length);
-  };
 
   if (!isMounted) {
     return null;
@@ -101,191 +82,49 @@ export default function Home() {
         {/* Animated gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-tr from-primary/10 via-transparent to-accent/10 animate-pulse pointer-events-none"></div>
 
-        {/* Special blog slide background effect */}
-        {currentSlide === 1 && (
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-emerald-500/20 rounded-full blur-3xl animate-pulse"></div>
-            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-teal-500/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          </div>
-        )}
-
-        {/* Navigation Arrows */}
-        <button
-          onClick={handlePrevSlide}
-          className="absolute left-4 sm:left-8 top-1/2 -translate-y-1/2 z-20 p-3 text-white/75 hover:text-white transition-all duration-300 hover:scale-110"
-          data-testid="button-carousel-prev"
-          aria-label="Previous slide"
-        >
-          <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 19l-7-7 7-7" />
-          </svg>
-        </button>
-        <button
-          onClick={handleNextSlide}
-          className="absolute right-4 sm:right-8 top-1/2 -translate-y-1/2 z-20 p-3 text-white/75 hover:text-white transition-all duration-300 hover:scale-110"
-          data-testid="button-carousel-next"
-          aria-label="Next slide"
-        >
-          <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 5l7 7-7 7" />
-          </svg>
-        </button>
-
-        {/* Carousel Container */}
+        {/* Hero Content */}
         <div className="relative z-10 w-full max-w-4xl mx-auto">
-          <div
-            className="flex transition-transform duration-1000 ease-in-out"
-            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-          >
-            {slides.map((slide, index) => {
-              const isActive = index === currentSlide;
-              return (
-                <div
-                  key={index}
-                  className="w-full flex-shrink-0 text-center px-4"
-                  style={{
-                    opacity: isActive ? 1 : 0,
-                    transition: 'opacity 600ms ease-in-out',
-                    pointerEvents: isActive ? 'auto' : 'none'
-                  }}
+          <div className="w-full text-center px-4">
+            <h1 className="text-2xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-6 hero-text leading-snug sm:leading-tight text-white">
+              {heroSlide.title}
+            </h1>
+            <p className="text-base sm:text-xl lg:text-2xl mb-6 sm:mb-10 hero-text leading-normal sm:leading-relaxed px-2 sm:px-0 text-white/95">
+              {heroSlide.subtitle}
+            </p>
+            <div>
+              <CTAButtons
+                primary={heroSlide.primaryCTA}
+                className="mt-2"
+              />
+            </div>
+
+            {/* Bottom of Hero CTA */}
+            <div className="mt-6 sm:mt-16">
+              <button
+                onClick={() => {
+                  const element = document.querySelector('#consulting');
+                  if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="group inline-flex items-center gap-2 sm:gap-3 mx-auto px-4 sm:px-8 py-2 sm:py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-medium sm:font-semibold text-xs sm:text-base rounded-full shadow-lg sm:shadow-xl hover:shadow-emerald-500/50 transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:ring-offset-2"
+                data-testid="button-scroll-consulting"
+              >
+                <span className="relative text-center">
+                  <span className="hidden sm:inline">Framløgu ella ráðgeving? Les longur niðri </span>
+                  <span className="sm:hidden">Les meira um ráðgeving</span>
+                </span>
+                <svg
+                  className="w-3 h-3 sm:w-5 sm:h-5 transition-transform group-hover:translate-y-1"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
                 >
-
-                  <h1
-                    className={`text-2xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-3 sm:mb-6 hero-text leading-snug sm:leading-tight ${
-                      index === 1
-                        ? 'text-white'
-                        : 'text-white'
-                    }`}
-                    style={{
-                      transform: isActive ? 'translateY(0)' : 'translateY(20px)',
-                      transition: 'transform 800ms cubic-bezier(0.34, 1.56, 0.64, 1)',
-                      transitionDelay: isActive ? '200ms' : '0ms',
-                      filter: index === 1 ? 'drop-shadow(0 0 30px rgba(52, 211, 153, 0.3))' : 'none'
-                    }}
-                  >
-                    {index === 1 ? (
-                      <>
-                        <span className="block text-xl sm:text-3xl lg:text-4xl mb-2 text-emerald-400 font-medium">
-                          Nýggjur bloggur:
-                        </span>
-                        <span className="block">
-                          Hví byrja við vitlíkisbúgving?
-                        </span>
-                      </>
-                    ) : (
-                      slide.title
-                    )}
-                  </h1>
-                  <p
-                    className={`text-base sm:text-xl lg:text-2xl mb-6 sm:mb-10 hero-text leading-normal sm:leading-relaxed px-2 sm:px-0 ${
-                      index === 1 ? 'text-white' : 'text-white/95'
-                    }`}
-                    style={{
-                      transform: isActive ? 'translateY(0) scale(1)' : 'translateY(30px) scale(0.95)',
-                      transition: 'transform 900ms cubic-bezier(0.25, 0.46, 0.45, 0.94)',
-                      transitionDelay: isActive ? '350ms' : '0ms',
-                      textShadow: index === 1 ? '0 2px 20px rgba(16, 185, 129, 0.3)' : 'inherit'
-                    }}
-                  >
-                    {slide.subtitle}
-                  </p>
-                  <div
-                    style={{
-                      transform: isActive ? 'translateY(0)' : 'translateY(40px)',
-                      opacity: isActive ? 1 : 0,
-                      transition: 'all 1000ms cubic-bezier(0.16, 1, 0.3, 1)',
-                      transitionDelay: isActive ? '500ms' : '0ms'
-                    }}
-                  >
-                    {index === 1 ? (
-                      <div className="flex justify-center">
-                        <a
-                          href={slide.primaryCTA.href}
-                          className="group relative inline-flex items-center gap-2 sm:gap-3 px-5 sm:px-8 py-2.5 sm:py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-medium sm:font-semibold text-sm sm:text-lg rounded-full shadow-lg sm:shadow-2xl hover:shadow-emerald-500/50 transform hover:scale-105 transition-all duration-300"
-                          data-testid="button-blog-cta"
-                        >
-                          <span className="absolute inset-0 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
-                          <span className="relative flex items-center gap-2 sm:gap-3">
-                            <svg className="w-4 sm:w-5 h-4 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-                            </svg>
-                            {slide.primaryCTA.text}
-                            <svg className="w-3 sm:w-4 h-3 sm:h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                            </svg>
-                          </span>
-                        </a>
-                      </div>
-                    ) : (
-                      <CTAButtons
-                        primary={slide.primaryCTA}
-                        secondary={slide.secondaryCTA}
-                        className="mt-2"
-                      />
-                    )}
-                  </div>
-
-                  {/* Bottom of Hero CTA - only show on first slide */}
-                  {index === 0 && (
-                    <div
-                      className="mt-6 sm:mt-16"
-                      style={{
-                        transform: isActive ? 'translateY(0)' : 'translateY(50px)',
-                        opacity: isActive ? 1 : 0,
-                        transition: 'all 1100ms cubic-bezier(0.22, 1, 0.36, 1)',
-                        transitionDelay: isActive ? '650ms' : '0ms'
-                      }}
-                    >
-                      <button
-                        onClick={() => {
-                          const element = document.querySelector('#consulting');
-                          if (element) {
-                            element.scrollIntoView({ behavior: 'smooth' });
-                          }
-                        }}
-                        className="group inline-flex items-center gap-2 sm:gap-3 mx-auto px-4 sm:px-8 py-2 sm:py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white font-medium sm:font-semibold text-xs sm:text-base rounded-full shadow-lg sm:shadow-xl hover:shadow-emerald-500/50 transform hover:scale-105 transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-emerald-500/50 focus:ring-offset-2"
-                        data-testid="button-scroll-consulting"
-                      >
-                        <span className="relative text-center">
-                          <span className="hidden sm:inline">Framløgu ella ráðgeving? Les longur niðri </span>
-                          <span className="sm:hidden">Les meira um ráðgeving</span>
-                        </span>
-                        <svg
-                          className="w-3 h-3 sm:w-5 sm:h-5 transition-transform group-hover:translate-y-1"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                        </svg>
-                      </button>
-                    </div>
-                  )}
-                </div>
-              );
-            })}
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
-
-        {/* Slide Indicators */}
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-3">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentSlide(index)}
-              className={`rounded-full transition-all ${
-                currentSlide === index
-                  ? 'w-8 h-2 bg-white'
-                  : 'w-2 h-2 bg-white/75 hover:bg-white/90'
-              }`}
-              style={{
-                transition: 'all 400ms cubic-bezier(0.34, 1.56, 0.64, 1)'
-              }}
-              data-testid={`button-slide-indicator-${index}`}
-              aria-label={`Go to slide ${index + 1}`}
-              aria-current={currentSlide === index ? 'true' : 'false'}
-            />
-          ))}
         </div>
       </section>
 
