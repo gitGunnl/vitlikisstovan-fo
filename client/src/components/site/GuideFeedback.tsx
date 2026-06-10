@@ -151,7 +151,7 @@ function GuideFeedbackForm({
           render={({ field }) => (
             <FormItem>
               <FormLabel className="font-sans text-sm font-medium text-stone-700 dark:text-stone-300">
-                Hvat er breki?
+                Hvat er feilurin?
               </FormLabel>
               <FormControl>
                 <Textarea
@@ -270,9 +270,9 @@ export default function GuideFeedback({ guideId }: { guideId: string }) {
           {!submitted ? (
             <>
               <DialogHeader className="text-left">
-                <DialogTitle>Funnu eitt brek?</DialogTitle>
+                <DialogTitle>Funni ein feil?</DialogTitle>
                 <DialogDescription>
-                  Tú hjálpir okkum at halda vegleiðingunum rættum. Sig okkum
+                  Tú hjálpir okkum at halda vegleiðingunum rættar. Sig okkum
                   frá, hvat tú fanst.
                 </DialogDescription>
               </DialogHeader>
@@ -288,15 +288,14 @@ export default function GuideFeedback({ guideId }: { guideId: string }) {
               </div>
               <DialogTitle className="text-xl">Takk fyri!</DialogTitle>
               <p className="mt-2 text-sm text-stone-500 dark:text-stone-400">
-                Vit hyggja eftir tí, tú hevur sent, og rætta vegleiðingina um
-                tørvur er.
+                Vit hyggja eftir tí, tú hevur sent, og rætta vegleiðingina.
               </p>
             </div>
           )}
         </DialogContent>
       </Dialog>
 
-      {/* Floating "Funnu eitt brek?" pill, dismissable with the X. */}
+      {/* Floating pill, dismissable with the X. */}
       {!dismissed && (
         <div className="no-print fixed bottom-4 right-4 z-40 flex items-center rounded-full bg-stone-900 text-stone-50 shadow-lg ring-1 ring-black/5 dark:bg-stone-100 dark:text-stone-900 dark:ring-white/10">
           <button
@@ -306,7 +305,7 @@ export default function GuideFeedback({ guideId }: { guideId: string }) {
             data-testid="button-open-feedback"
           >
             <Flag className="h-4 w-4" />
-            Funnu eitt brek?
+            Funni ein feil?
           </button>
           <button
             type="button"

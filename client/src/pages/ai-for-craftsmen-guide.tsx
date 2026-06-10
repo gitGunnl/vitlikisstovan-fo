@@ -785,7 +785,7 @@ Verkætlanin er stuðlað av Granskingarráðnum.
 
 Stóra takk til øll, sum hava deilt royndir, dømi og hugskot. Tykkara íkast hevur hjálpt til at gera vegleiðingina meira veruliga, praktiska og gagnliga.
 
-Sært tú eitt brek ella okkurt, sum kann gerast betur? [Lat okkum vita her](#feedback) — tað hjálpir okkum at gera vegleiðingina betri.
+Sært tú ein feil ella okkurt, sum kann gerast betur? [Lat okkum frætta her] (#feedback) — tað hjálpir okkum at gera vegleiðingina betri.
 
 Vitlíkisstovan · 2026  
 vitlikisstovan.fo

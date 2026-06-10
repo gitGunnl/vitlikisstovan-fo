@@ -528,7 +528,7 @@ export default function GuideArticle({
             </div>
           )}
 
-          {/* Feedback ("Funnu eitt brek?") — only for guides registered in
+          {/* Feedback — only for guides registered in
               content/guides.ts so we can record which guide the report is about. */}
           {guideId && <GuideFeedback guideId={guideId} />}
 
