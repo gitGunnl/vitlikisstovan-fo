@@ -435,10 +435,10 @@ export const siteConfig = {
   // docs/guide-feedback/google-form-setup.md for the full walkthrough.
   guideFeedbackForm: {
     formResponseUrl:
-      "https://docs.google.com/forms/d/e/PLACEHOLDER_FORM_ID/formResponse",
-    entryMessage: "entry.PLACEHOLDER_MESSAGE",
-    entryEmail: "entry.PLACEHOLDER_EMAIL",
-    entryGuide: "entry.PLACEHOLDER_GUIDE",
+      "https://docs.google.com/forms/d/e/1FAIpQLSdshbdn35MUk4A95cYuLHauv8inUu8ZKKiae8yei5xLqe38hQ/formResponse",
+    entryMessage: "entry.600250606",
+    entryEmail: "entry.1406706699",
+    entryGuide: "entry.1795443110",
   },
 
   // NOTE: SEO data has moved to client/src/content/seo/*.seo.ts (auto-discovered
