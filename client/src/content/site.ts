@@ -189,17 +189,18 @@ export const siteConfig = {
     founder: {
       heading: "Hvør stendur aftanfyri?",
       name: "Gunnleygur Clementsen",
-      role: "Stovnari og ráðgevi",
+      role: "Stovnari og vitlíkisráðgevi",
       summary:
-        "Ein el-verkfrøðingur, sum gjørdist vitlíkisráðgevi. Síðani 2022 havi eg brúkt ChatGPT dagliga; fyrst sum verkfrøðingur í Danmark, og nú við at hjálpa føroyskum stovnum og fyritøkum at taka vitlíki til sín. Eg havi fylgt við menningini í vitlíki í meira enn 10 ár, og havi roynt fleiri hundrað amboð. Eg veit tískil hvat riggar og hvørja góðsku tú kann fáa burtur úr, um amboðini verða brúkt rætt.",
+        "Eg stovnaði Vitlíkisstovuna fyri at hjálpa føroyskum fyritøkum og stovnum at brúka vitlíki á ein hátt, sum gevur meining í veruligum arbeiði. Ikki sum pynt. Ikki sum eitt nýtt orð í eini strategi. Men sum eitt amboð, ið kann spara tíð, lyfta góðsku og geva starvsfólkum betri arbeiðshættir. Eg eri útbúgvin elverkfrøðingur frá DTU og havi brúkt vitlíki í hagnýttum arbeiði síðani 2022. Síðani 2023 havi eg arbeitt við føroyskum arbeiðsplássum fyri at finna út úr, hvar tøknin veruliga ger mun — og hvar hon ikki ger tað.",
       bullets: [
-        "Stovnaði Vitlíkisstovuna fyri at hjálpa føroyska arbeiðismarknaðinum at fáa gagn av vitlíki.",
-        "Úrslit fram um (ov nógv) tos: Sjóneykan er á  at finna arbeiðsgongdir har vitlíki kann spara tær tíð, betra um títt skrivliga avrik og minka um tínar endurtakandi uppgávur.",
-        "Royndir við stórum stovnum umframt smærri fyritøkum og skúlum.",
-        "Føroyskt í hásæti: Vegleiðing, sum er lagað til okkara mál, mentan og almenna veruleika."
+        "Eg hjálpi tykkum at byrja rætt: við greiðum nýtsludømum, tryggum arbeiðsháttum og uppgávum, sum starvsfólk kenna aftur úr sínum egna gerandisdegi.",
+        "Mín styrki er at umseta tøknina til nakað, sum vanlig fólk á einum vanligum arbeiðsplássi veruliga kunnu brúka.",
+        "Eg leggi ikki dent á at vísa tað nýggjasta fram. Mítt mál er at finna tað, sum riggar hjá tykkum.",
+        "Eg arbeiði við føroyskum veruleika: føroyskt mál, smá toymi, dátatrygd og arbeiðspláss, har fólk longu hava nóg mikið at gera.",
+        "Endamálið er ikki, at tit skulu gerast bundin at einum ráðgeva. Endamálið er, at tit sjálvi verða tryggari, klókari og sjálvbjargnari í at brúka vitlíki."
       ],
       quote:
-        "Vitlíki er ikki fjarløgd framtíð – tað er veruleikin í dag og eg haldi at øll hava uppiborið at skilja vitlíki og hvussu tað kemur at ávirka tey.",
+        "Tað týdningarmesta er ikki at brúka mest møguligt vitlíki. Tað týdningarmesta er at vita, hvar tað gevur meining — og at duga at brúka tað á rættan hátt har.",
       headshotUrl: "/images/founder.jpg",
       headshotAlt: "Mynd av Gunnleygi Clementsen",
       links: [

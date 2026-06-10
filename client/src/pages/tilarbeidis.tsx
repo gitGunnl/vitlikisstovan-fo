@@ -409,7 +409,7 @@ const Tilarbeidis = () => {
                 <span className="text-2xl">✅</span>
                 <div>
                   <h3 className="font-bold text-lg">
-                    Allar vegleiðingar lidnar
+                   Dagføring: Allar vegleiðingar lidnar
                   </h3>
                   <p className="text-foreground/90">
                     Allar vegleiðingarnar eru nú skrivaðar og tøkar
@@ -459,21 +459,7 @@ const Tilarbeidis = () => {
                   </Link>
                 ))}
               </div>
-            </div>
-
-            {/* Thank you note */}
-            <div className="bg-background/60 border border-border/50 rounded-xl p-6 shadow-lg">
-              <div className="flex items-start gap-3">
-                <span className="text-2xl">🙏</span>
-                <p className="text-foreground/90">
-                  Takk til Granskingarráði fyri stuðulin og takk til Tóra
-                  Slættarlíð fyri granskingarvegleiðing.
-                </p>
-              </div>
-            </div>
-
-            {/* Other results: Vísindavøka presentation */}
-            <div className="bg-background/60 border border-border/50 rounded-xl p-6 sm:p-8 shadow-lg">
+            </div>            <div className="bg-background/60 border border-border/50 rounded-xl p-6 sm:p-8 shadow-lg">
               <div className="flex items-center gap-3 mb-1">
                 <span className="text-2xl">🎥</span>
                 <h3 className="font-bold text-lg">
