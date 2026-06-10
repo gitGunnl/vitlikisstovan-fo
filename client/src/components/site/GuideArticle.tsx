@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, Fragment } from "react";
 import type { ReactNode } from "react";
 import { Link } from "wouter";
 import Header from "@/components/site/Header";
@@ -70,7 +70,13 @@ function parseEmphasis(text: string, rules: EmphasisRule[]): ReactNode[] {
     if (i % 2 === 0) {
       if (parts[i]) result.push(...parseEmphasis(parts[i], rest));
     } else {
-      result.push(wrap(parseEmphasis(parts[i], rest)));
+      result.push(
+        wrap(
+          parseEmphasis(parts[i], rest).map((node, j) => (
+            <Fragment key={j}>{node}</Fragment>
+          ))
+        )
+      );
     }
   }
   return result;
@@ -113,7 +119,11 @@ function parseInline(text: string, rules: EmphasisRule[]): ReactNode[] {
 }
 
 const RenderInlineText = ({ text }: { text: string }) => (
-  <>{parseInline(text, emphasisRules)}</>
+  <>
+    {parseInline(text, emphasisRules).map((node, i) => (
+      <Fragment key={i}>{node}</Fragment>
+    ))}
+  </>
 );
 
 // ---------------------------------------------------------------------------
@@ -453,11 +463,12 @@ export default function GuideArticle({
 
           {/* Navigation / Tools */}
           <nav className="no-print flex justify-between items-center mb-16 font-sans">
-            <Link href="/user-guides">
-              <a className="inline-flex items-center text-sm font-medium text-stone-500 hover:text-stone-800 transition-colors group">
-                <ArrowLeft className="h-4 w-4 mr-2 transform group-hover:-translate-x-1 transition-transform" />
-                Aftur til yvirlit
-              </a>
+            <Link
+              href="/user-guides"
+              className="inline-flex items-center text-sm font-medium text-stone-500 hover:text-stone-800 transition-colors group"
+            >
+              <ArrowLeft className="h-4 w-4 mr-2 transform group-hover:-translate-x-1 transition-transform" />
+              Aftur til yvirlit
             </Link>
             {pdfPath && (
               <a href={pdfPath} download={guide?.pdfFilename}>
