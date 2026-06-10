@@ -38,7 +38,7 @@ export interface InteractiveGuide {
   listed: boolean;
   /**
    * Optional decorative image served from the site root, e.g.
-   * "/images/guides/vitliki-til-dagstovnar.webp".
+   * "/images/guides/ai-for-kindergarten-guide.webp".
    */
   image?: string;
   /**
@@ -69,7 +69,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     pdfFilename: "ai-for-kindergarten-guide.pdf",
     listed: true,
     prebuiltPdf: true,
-    image: "/images/guides/vitliki-til-dagstovnar.webp",
+    image: "/images/guides/ai-for-kindergarten-guide.webp",
   },
   {
     id: "ai-for-caretakers",
@@ -81,7 +81,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     pdfFilename: "ai-for-caretakers-guide.pdf",
     listed: true,
     prebuiltPdf: true,
-    image: "/images/guides/vitliki-til-roktarstarvsfolk.webp",
+    image: "/images/guides/ai-for-caretakers-guide.webp",
   },
   {
     id: "ai-for-coaches",
@@ -92,7 +92,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     pdfFilename: "ai-for-coaches-guide.pdf",
     listed: true,
     prebuiltPdf: true,
-    image: "/images/guides/vitliki-til-venjarar.webp",
+    image: "/images/guides/ai-for-coaches-guide.webp",
   },
   {
     id: "ai-for-teaching",
@@ -103,7 +103,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     pdfFilename: "ai-for-teaching-guide.pdf",
     listed: true,
     prebuiltPdf: true,
-    image: "/images/guides/vitliki-til-undirvising.webp",
+    image: "/images/guides/ai-for-teaching-guide.webp",
   },
   {
     id: "ai-for-service-industry",
@@ -114,7 +114,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     pdfFilename: "ai-for-service-industry-guide.pdf",
     listed: true,
     prebuiltPdf: true,
-    image: "/images/guides/vitliki-til-taenastuvinnuna.webp",
+    image: "/images/guides/ai-for-service-industry-guide.webp",
   },
   {
     id: "ai-for-craftsmen",
@@ -125,7 +125,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     pdfFilename: "ai-for-craftsmen-guide.pdf",
     listed: true,
     prebuiltPdf: true,
-    image: "/images/guides/vitliki-til-handverkarar.webp",
+    image: "/images/guides/ai-for-craftsmen-guide.webp",
   },
   {
     id: "getting-started",
