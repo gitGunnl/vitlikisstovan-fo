@@ -490,7 +490,7 @@ export default function GuideArticle({
                 <img
                   src={heroImage}
                   alt={heroTitle ?? ""}
-                  className="w-full h-48 sm:h-64 md:h-80 object-cover"
+                  className="w-full h-auto"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 via-stone-900/20 to-transparent" />
                 {(heroTitle || heroSubtitle) && (
