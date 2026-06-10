@@ -1,4 +1,5 @@
 import GuideArticle from "@/components/site/GuideArticle";
+import caretakersHeroImg from "@assets/guides/caretakers-hero.webp";
 
 // --- Configuration & Content ---
 
@@ -652,6 +653,7 @@ export default function AiForCaretakersGuide() {
     <GuideArticle
       guideId="ai-for-caretakers"
       content={blogContent}
+      heroImage={caretakersHeroImg}
       footerNote="Vitlíki hjálpir námsfrøðingum at fokusera uppá tað, sum skapar virði."
     />
   );

@@ -1,5 +1,5 @@
 import GuideArticle from "@/components/site/GuideArticle";
-import kindergartenHeroImg from "@assets/guides/kindergarten-hero.jpg";
+import kindergartenHeroImg from "@assets/guides/kindergarten-hero.webp";
 
 // --- Configuration & Content ---
 

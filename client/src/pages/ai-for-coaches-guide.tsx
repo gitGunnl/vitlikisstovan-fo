@@ -1,4 +1,5 @@
 import GuideArticle from "@/components/site/GuideArticle";
+import coachesHeroImg from "@assets/guides/coaches-hero.webp";
 
 // --- Configuration & Content ---
 // PLACEHOLDER: real markdown content (with :::prompt blocks) will be pasted here.
@@ -1037,5 +1038,11 @@ vitlikisstovan.fo
 `;
 
 export default function AiForCoachesGuide() {
-  return <GuideArticle guideId="ai-for-coaches" content={blogContent} />;
+  return (
+    <GuideArticle
+      guideId="ai-for-coaches"
+      content={blogContent}
+      heroImage={coachesHeroImg}
+    />
+  );
 }

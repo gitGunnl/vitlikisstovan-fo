@@ -1,4 +1,5 @@
 import GuideArticle from "@/components/site/GuideArticle";
+import teachingHeroImg from "@assets/guides/teaching-hero.webp";
 
 // --- Configuration & Content ---
 // PLACEHOLDER: real markdown content (with :::prompt blocks) will be pasted here.
@@ -684,5 +685,11 @@ vitlikisstovan.fo
 `;
 
 export default function AiForTeachingGuide() {
-  return <GuideArticle guideId="ai-for-teaching" content={blogContent} />;
+  return (
+    <GuideArticle
+      guideId="ai-for-teaching"
+      content={blogContent}
+      heroImage={teachingHeroImg}
+    />
+  );
 }

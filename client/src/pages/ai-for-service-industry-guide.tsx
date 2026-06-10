@@ -1,4 +1,5 @@
 import GuideArticle from "@/components/site/GuideArticle";
+import serviceIndustryHeroImg from "@assets/guides/service-industry-hero.webp";
 
 // --- Configuration & Content ---
 // PLACEHOLDER: real markdown content (with :::prompt blocks) will be pasted here.
@@ -572,5 +573,11 @@ vitlikisstovan.fo
 `;
 
 export default function AiForServiceIndustryGuide() {
-  return <GuideArticle guideId="ai-for-service-industry" content={blogContent} />;
+  return (
+    <GuideArticle
+      guideId="ai-for-service-industry"
+      content={blogContent}
+      heroImage={serviceIndustryHeroImg}
+    />
+  );
 }
