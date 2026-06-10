@@ -517,7 +517,7 @@ const Tilarbeidis = () => {
         {/* Project Description Dropdown */}
         <section className="px-4 sm:px-6 lg:px-8 mb-12">
           <div className="max-w-4xl mx-auto">
-            <Collapsible>
+            <Collapsible defaultOpen>
               <CollapsibleTrigger className="flex items-center justify-between w-full p-6 bg-background/60 border border-border/50 rounded-xl hover:border-primary/30 hover:bg-background/70 transition-all duration-300 group">
                 <h3 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors">
                   Verkætlanarlýsing
