@@ -41,6 +41,13 @@ export interface InteractiveGuide {
    * "/images/guides/vitliki-til-dagstovnar.webp".
    */
   image?: string;
+  /**
+   * When true, a real, professionally designed PDF already ships as a static
+   * file in `client/public/<pdfFilename>`. The build-time PDF generator
+   * (`scripts/generate-guide-pdfs.ts`) skips these so it never overwrites the
+   * designed file with a headless-Chromium render of the in-app page.
+   */
+  prebuiltPdf?: boolean;
 }
 
 export interface LegacyPdfGuide {
@@ -61,6 +68,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     route: "/user-guides/ai-for-kindergarten-guide",
     pdfFilename: "vitliki-til-dagstovnar.pdf",
     listed: true,
+    prebuiltPdf: true,
     image: "/images/guides/vitliki-til-dagstovnar.webp",
   },
   {
@@ -72,6 +80,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     route: "/user-guides/ai-for-caretakers-guide",
     pdfFilename: "vitliki-til-roktarstarvsfolk.pdf",
     listed: true,
+    prebuiltPdf: true,
     image: "/images/guides/vitliki-til-roktarstarvsfolk.webp",
   },
   {
@@ -82,6 +91,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     route: "/user-guides/ai-for-coaches-guide",
     pdfFilename: "vitliki-til-venjarar.pdf",
     listed: true,
+    prebuiltPdf: true,
     image: "/images/guides/vitliki-til-venjarar.webp",
   },
   {
@@ -92,6 +102,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     route: "/user-guides/ai-for-teaching-guide",
     pdfFilename: "vitliki-til-undirvising.pdf",
     listed: true,
+    prebuiltPdf: true,
     image: "/images/guides/vitliki-til-undirvising.webp",
   },
   {
@@ -102,6 +113,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     route: "/user-guides/ai-for-service-industry-guide",
     pdfFilename: "vitliki-til-taenastuvinnuna.pdf",
     listed: true,
+    prebuiltPdf: true,
     image: "/images/guides/vitliki-til-taenastuvinnuna.webp",
   },
   {
@@ -112,6 +124,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     route: "/user-guides/ai-for-craftsmen-guide",
     pdfFilename: "vitliki-til-handverkarar.pdf",
     listed: true,
+    prebuiltPdf: true,
     image: "/images/guides/vitliki-til-handverkarar.webp",
   },
   {

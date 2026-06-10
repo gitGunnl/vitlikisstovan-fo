@@ -196,6 +196,23 @@ async function main() {
 
   checkRouteCoverage();
 
+  // Guides flagged `prebuiltPdf` ship a real, designed PDF statically from
+  // client/public (Vite copies it into dist/public). Fail the build if any is
+  // missing, so a rename/delete can't silently break a download link.
+  const missingPrebuilt = interactiveGuides
+    .filter((g) => g.prebuiltPdf)
+    .filter((g) => !existsSync(join(DIST, g.pdfFilename)));
+  if (missingPrebuilt.length > 0) {
+    console.error("\n❌ Prebuilt guide PDF(s) missing from dist/public:\n");
+    for (const g of missingPrebuilt) {
+      console.error(
+        `  - ${g.pdfFilename} (guide "${g.id}") — add it to client/public/`,
+      );
+    }
+    console.error("");
+    process.exit(1);
+  }
+
   const executablePath = resolveChromium();
   const { port, close } = await startStaticServer();
   const baseUrl = `http://127.0.0.1:${port}`;
@@ -208,6 +225,12 @@ async function main() {
 
   try {
     for (const guide of interactiveGuides) {
+      // Guides with a real, designed PDF already ship the file statically from
+      // client/public; Vite copied it into dist/public. Don't overwrite it.
+      if (guide.prebuiltPdf) {
+        console.log(`  • ${guide.pdfFilename}  (prebuilt, skipped)`);
+        continue;
+      }
       const page = await browser.newPage();
       try {
         await page.goto(`${baseUrl}${guide.route}`, {
@@ -248,8 +271,11 @@ async function main() {
     close();
   }
 
+  const generatedCount = interactiveGuides.filter((g) => !g.prebuiltPdf).length;
+  const prebuiltCount = interactiveGuides.length - generatedCount;
   console.log(
-    `\n✅ Generated ${interactiveGuides.length} guide PDF(s) into dist/public/`,
+    `\n✅ Generated ${generatedCount} guide PDF(s) into dist/public/` +
+      ` (${prebuiltCount} prebuilt, shipped as-is)`,
   );
 }
 
