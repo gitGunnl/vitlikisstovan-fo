@@ -53,3 +53,22 @@ export const ritlingurRequestSchema = z.object({
 });
 
 export type RitlingurRequest = z.infer<typeof ritlingurRequestSchema>;
+
+export const guideFeedbackSchema = z.object({
+  message: z
+    .string()
+    .min(5, "Skriva í minsta lagi nøkur orð")
+    .max(2000, "Boðið má vera styttri enn 2000 stavir"),
+  email: z
+    .string()
+    .email("Vinarliga skriva ein gildigan teldupost")
+    .optional()
+    .or(z.literal("")),
+  guide: z.string().optional().default(""),
+  // Honeypot — kept out of strict validation so a bot/autofill filling it does
+  // not surface a hidden, un-rendered validation error. It is short-circuited
+  // in the submit handler instead.
+  website: z.string().optional().default(""),
+});
+
+export type GuideFeedbackRequest = z.infer<typeof guideFeedbackSchema>;

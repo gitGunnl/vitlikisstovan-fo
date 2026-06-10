@@ -18,6 +18,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { getInteractiveGuide, interactiveGuidePdfPath } from "@/content/guides";
+import GuideFeedback from "@/components/site/GuideFeedback";
 
 // ---------------------------------------------------------------------------
 // Inline Markdown Logic (Tasteful & Robust)
@@ -526,6 +527,10 @@ export default function GuideArticle({
               </p>
             </div>
           )}
+
+          {/* Feedback ("Funnu eitt brek?") — only for guides registered in
+              content/guides.ts so we can record which guide the report is about. */}
+          {guideId && <GuideFeedback guideId={guideId} />}
 
         </div>
       </Section>

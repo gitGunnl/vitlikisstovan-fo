@@ -1,1 +1,2 @@
 - [Build-time Chromium PDF generation](chromium-pdf-build.md) — guide PDFs rendered at build via puppeteer-core; resolve chromium with `which`, not a hardcoded nix path.
+- [Google Forms honeypot validation](google-forms-honeypot.md) — don't put `.max(0)` on a honeypot field; resolver blocks the submit-handler short-circuit and breaks autofill.

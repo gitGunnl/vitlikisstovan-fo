@@ -420,6 +420,27 @@ export const siteConfig = {
     entrySeats: "entry.514581951",
   },
 
+  // Guide feedback ("Funnu eitt brek?") — readers report mistakes/issues in the
+  // interactive guides. Submitted directly to a dedicated Google Form using the
+  // same no-cors pattern as the contact form. The operator turns on "Get email
+  // notifications for new responses" in the Google Form to be notified of each
+  // report. No Apps Script or backend is involved.
+  //
+  // SETUP: create a Google Form with three short/paragraph questions in this
+  // order — Boð (mistake/issue, paragraph), Teldupostur (optional short answer),
+  // Vegleiðing (which guide, short answer) — then use "Get pre-filled link" to
+  // read the entry IDs and paste the formResponse URL + entry IDs below. While
+  // the PLACEHOLDER values remain, the form intentionally errors (shows an error
+  // toast) instead of silently dropping feedback. See
+  // docs/guide-feedback/google-form-setup.md for the full walkthrough.
+  guideFeedbackForm: {
+    formResponseUrl:
+      "https://docs.google.com/forms/d/e/PLACEHOLDER_FORM_ID/formResponse",
+    entryMessage: "entry.PLACEHOLDER_MESSAGE",
+    entryEmail: "entry.PLACEHOLDER_EMAIL",
+    entryGuide: "entry.PLACEHOLDER_GUIDE",
+  },
+
   // NOTE: SEO data has moved to client/src/content/seo/*.seo.ts (auto-discovered
   // by scripts/prerender-seo.ts). Adding entries here has no effect.
   _seoPages_DEPRECATED: {
