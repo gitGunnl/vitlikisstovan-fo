@@ -66,7 +66,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     description:
       "Lættir og tryggir hættir at minka um dagligu umsitingina, so tú kanst nýta meira tíð saman við børnunum.",
     route: "/user-guides/ai-for-kindergarten-guide",
-    pdfFilename: "vitliki-til-dagstovnar.pdf",
+    pdfFilename: "ai-for-kindergarten-guide.pdf",
     listed: true,
     prebuiltPdf: true,
     image: "/images/guides/vitliki-til-dagstovnar.webp",
@@ -78,7 +78,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     description:
       "Ein handalig vegleiðing, sum ger røktarstarvsfólk før fyri at brúka vitlíki trygt til skjalfesting og tilrættislegging, so meira tíð verður til sjálva umsorganina.",
     route: "/user-guides/ai-for-caretakers-guide",
-    pdfFilename: "vitliki-til-roktarstarvsfolk.pdf",
+    pdfFilename: "ai-for-caretakers-guide.pdf",
     listed: true,
     prebuiltPdf: true,
     image: "/images/guides/vitliki-til-roktarstarvsfolk.webp",
@@ -89,7 +89,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     description:
       "Ein handalig vegleiðing fyri venjarar um, hvussu vitlíki kann stuðla við venjing, fyrireiking og samskifti.",
     route: "/user-guides/ai-for-coaches-guide",
-    pdfFilename: "vitliki-til-venjarar.pdf",
+    pdfFilename: "ai-for-coaches-guide.pdf",
     listed: true,
     prebuiltPdf: true,
     image: "/images/guides/vitliki-til-venjarar.webp",
@@ -100,7 +100,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     description:
       "Ein handalig vegleiðing um, hvussu vitlíki kann nýtast í undirvísing og at fyrireika tímar.",
     route: "/user-guides/ai-for-teaching-guide",
-    pdfFilename: "vitliki-til-undirvising.pdf",
+    pdfFilename: "ai-for-teaching-guide.pdf",
     listed: true,
     prebuiltPdf: true,
     image: "/images/guides/vitliki-til-undirvising.webp",
@@ -111,7 +111,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     description:
       "Ein handalig vegleiðing fyri tænastuvinnuna um, hvussu vitlíki kann stuðla við dagligum uppgávum og kundasamskifti.",
     route: "/user-guides/ai-for-service-industry-guide",
-    pdfFilename: "vitliki-til-taenastuvinnuna.pdf",
+    pdfFilename: "ai-for-service-industry-guide.pdf",
     listed: true,
     prebuiltPdf: true,
     image: "/images/guides/vitliki-til-taenastuvinnuna.webp",
@@ -122,7 +122,7 @@ export const interactiveGuides: InteractiveGuide[] = [
     description:
       "Ein handalig vegleiðing fyri handverkarar um, hvussu vitlíki kann stuðla við tilboðum, skjalfesting og skipaning.",
     route: "/user-guides/ai-for-craftsmen-guide",
-    pdfFilename: "vitliki-til-handverkarar.pdf",
+    pdfFilename: "ai-for-craftsmen-guide.pdf",
     listed: true,
     prebuiltPdf: true,
     image: "/images/guides/vitliki-til-handverkarar.webp",
