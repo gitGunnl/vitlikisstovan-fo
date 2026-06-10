@@ -191,13 +191,14 @@ export const siteConfig = {
       name: "Gunnleygur Clementsen",
       role: "Stovnari og vitlíkisráðgevi",
       summary:
-        "Eg stovnaði Vitlíkisstovuna fyri at hjálpa føroyskum fyritøkum og stovnum at brúka vitlíki á ein hátt, sum gevur meining í veruligum arbeiði. Ikki sum pynt. Ikki sum eitt nýtt orð í eini strategi. Men sum eitt amboð, ið kann spara tíð, lyfta góðsku og geva starvsfólkum betri arbeiðshættir. Eg eri útbúgvin elverkfrøðingur frá DTU og havi brúkt vitlíki í hagnýttum arbeiði síðani 2022. Síðani 2023 havi eg arbeitt við føroyskum arbeiðsplássum fyri at finna út úr, hvar tøknin veruliga ger mun — og hvar hon ikki ger tað.",
+        "Eg stovnaði Vitlíkisstovuna fyri at hjálpa føroyskum fyritøkum og stovnum at brúka vitlíki á ein hátt, sum gevur meining í veruligum arbeiði. Ikki sum eitt nýtt orð í eini strategi. Men sum eitt amboð, ið kann spara tíð, lyfta góðsku og geva starvsfólkum betri arbeiðssømdir. Eg eri útbúgvin elverkfrøðingur frá DTU og havi brúkt vitlíki til veruligt arbeiði síðani 2022. Síðani 2023 havi eg arbeitt við føroyskum arbeiðsplássum fyri at finna út av, hvar tøknin veruliga ger mun — og hvar hon ger meira skeða enn gagn.",
       bullets: [
         "Eg hjálpi tykkum at byrja rætt: við greiðum nýtsludømum, tryggum arbeiðsháttum og uppgávum, sum starvsfólk kenna aftur úr sínum egna gerandisdegi.",
+        "Eg hjálpi tykkum at skilja hvat er lov og hvat ikki er lov, tá ið tað kemur til dátur.",
         "Mín styrki er at umseta tøknina til nakað, sum vanlig fólk á einum vanligum arbeiðsplássi veruliga kunnu brúka.",
         "Eg leggi ikki dent á at vísa tað nýggjasta fram. Mítt mál er at finna tað, sum riggar hjá tykkum.",
         "Eg arbeiði við føroyskum veruleika: føroyskt mál, smá toymi, dátatrygd og arbeiðspláss, har fólk longu hava nóg mikið at gera.",
-        "Endamálið er ikki, at tit skulu gerast bundin at einum ráðgeva. Endamálið er, at tit sjálvi verða tryggari, klókari og sjálvbjargnari í at brúka vitlíki."
+        "Endamálið er, at tit sjálvi verða tryggari, klókari og sjálvbjargin í at brúka vitlíki."
       ],
       quote:
         "Tað týdningarmesta er ikki at brúka mest møguligt vitlíki. Tað týdningarmesta er at vita, hvar tað gevur meining — og at duga at brúka tað á rættan hátt har.",
