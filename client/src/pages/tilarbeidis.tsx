@@ -461,6 +461,42 @@ const Tilarbeidis = () => {
               </div>
             </div>
 
+            {/* Thank you note */}
+            <div className="bg-background/60 border border-border/50 rounded-xl p-6 shadow-lg">
+              <div className="flex items-start gap-3">
+                <span className="text-2xl">🙏</span>
+                <p className="text-foreground/90">
+                  Takk til Granskingarráði fyri stuðulin og takk til Tóra
+                  Slættarlíð fyri granskingarvegleiðing.
+                </p>
+              </div>
+            </div>
+
+            {/* Other results: Vísindavøka presentation */}
+            <div className="bg-background/60 border border-border/50 rounded-xl p-6 sm:p-8 shadow-lg">
+              <div className="flex items-center gap-3 mb-1">
+                <span className="text-2xl">🎥</span>
+                <h3 className="font-bold text-lg">
+                  Onnur úrslit: Framløga til Vísindavøku
+                </h3>
+              </div>
+              <p className="text-foreground/90 mb-6 ml-11">
+                Sum partur av at miðla verkætlanina havi eg hildið eina
+                framløgu á vísindavøku. Sí framløguna og tilhoyrandi byrt
+                niðanfyri. 👇️
+              </p>
+              <div className="w-full rounded-lg overflow-hidden border border-border/40">
+                <div className="aspect-video">
+                  <iframe
+                    src="https://www.youtube.com/embed/I8oRK07dF2E"
+                    className="w-full h-full"
+                    allowFullScreen
+                    title="Framløga til Vísindavøku"
+                  />
+                </div>
+              </div>
+            </div>
+
             {/* Current Focus */}
             <div className="bg-primary/15 border-2 border-primary/50 rounded-xl p-6 shadow-lg">
               <div className="flex items-center gap-3">
