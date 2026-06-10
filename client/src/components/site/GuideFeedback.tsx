@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
@@ -19,14 +19,15 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  DialogTrigger,
 } from "@/components/ui/dialog";
 import { useToast } from "@/hooks/use-toast";
 import { guideFeedbackSchema, type GuideFeedbackRequest } from "@shared/schema";
 import { siteConfig } from "@/content/site";
 import { reportFormFailure } from "@/lib/reportFormFailure";
 import { getInteractiveGuide } from "@/content/guides";
-import { CheckCircle2, Flag, Send } from "lucide-react";
+import { CheckCircle2, Flag, Send, X } from "lucide-react";
+
+const DISMISS_KEY = "guideFeedbackDismissed";
 
 // While any config value still contains "PLACEHOLDER", the feedback Google Form
 // has not been wired up yet. In that case we throw on submit (showing an error
@@ -208,37 +209,63 @@ function GuideFeedbackForm({
 export default function GuideFeedback({ guideId }: { guideId: string }) {
   const [open, setOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
 
   const guide = getInteractiveGuide(guideId);
   // Identifies which guide the report is about, even without a live lookup.
   const guideLabel = guide ? `${guide.title} (${guide.route})` : guideId;
 
+  // Remember dismissal for the session so the widget doesn't nag on every guide.
+  useEffect(() => {
+    try {
+      if (sessionStorage.getItem(DISMISS_KEY) === "1") setDismissed(true);
+    } catch {
+      /* sessionStorage unavailable — keep showing the widget */
+    }
+  }, []);
+
+  // Open the dialog when the user follows a "#feedback" link (e.g. the mention
+  // inside the "Um hesa vegleiðingina" section).
+  useEffect(() => {
+    const openIfHash = () => {
+      if (window.location.hash === "#feedback") setOpen(true);
+    };
+    openIfHash();
+    window.addEventListener("hashchange", openIfHash);
+    return () => window.removeEventListener("hashchange", openIfHash);
+  }, []);
+
+  const handleDismiss = () => {
+    setDismissed(true);
+    try {
+      sessionStorage.setItem(DISMISS_KEY, "1");
+    } catch {
+      /* ignore */
+    }
+  };
+
   return (
-    <div
-      id="feedback"
-      className="no-print mt-16 scroll-mt-24 border-t border-stone-200 dark:border-stone-800 pt-10 text-center font-sans"
-    >
-      <p className="text-sm text-stone-500 dark:text-stone-400">
-        Sært tú eitt brek ella okkurt, sum kann gerast betur í hesi
-        vegleiðingini?
-      </p>
+    <>
+      {/* Anchor target so "#feedback" links land near the bottom of the guide. */}
+      <span id="feedback" aria-hidden="true" className="block scroll-mt-24" />
+
       <Dialog
         open={open}
         onOpenChange={(o) => {
           setOpen(o);
-          if (!o) setTimeout(() => setSubmitted(false), 200);
+          if (!o) {
+            setTimeout(() => setSubmitted(false), 200);
+            // Clear the hash so the dialog can be re-opened via the link again.
+            if (window.location.hash === "#feedback") {
+              history.replaceState(
+                null,
+                "",
+                window.location.pathname + window.location.search,
+              );
+            }
+          }
         }}
       >
-        <DialogTrigger asChild>
-          <Button
-            variant="outline"
-            className="mt-4"
-            data-testid="button-open-feedback"
-          >
-            <Flag className="mr-2 h-4 w-4" />
-            Funnu eitt brek?
-          </Button>
-        </DialogTrigger>
         <DialogContent className="max-w-md sm:max-w-lg">
           {!submitted ? (
             <>
@@ -268,6 +295,30 @@ export default function GuideFeedback({ guideId }: { guideId: string }) {
           )}
         </DialogContent>
       </Dialog>
-    </div>
+
+      {/* Floating "Funnu eitt brek?" pill, dismissable with the X. */}
+      {!dismissed && (
+        <div className="no-print fixed bottom-4 right-4 z-40 flex items-center rounded-full bg-stone-900 text-stone-50 shadow-lg ring-1 ring-black/5 dark:bg-stone-100 dark:text-stone-900 dark:ring-white/10">
+          <button
+            type="button"
+            onClick={() => setOpen(true)}
+            className="flex items-center gap-2 rounded-l-full py-2.5 pl-4 pr-3 font-sans text-sm font-medium transition-colors hover:bg-stone-800 dark:hover:bg-stone-200"
+            data-testid="button-open-feedback"
+          >
+            <Flag className="h-4 w-4" />
+            Funnu eitt brek?
+          </button>
+          <button
+            type="button"
+            onClick={handleDismiss}
+            aria-label="Lat afturmeldingar-knappin aftur"
+            className="rounded-r-full border-l border-white/15 py-2.5 pl-2 pr-3 text-stone-400 transition-colors hover:text-stone-50 dark:border-black/10 dark:text-stone-500 dark:hover:text-stone-900"
+            data-testid="button-dismiss-feedback"
+          >
+            <X className="h-4 w-4" />
+          </button>
+        </div>
+      )}
+    </>
   );
 }
