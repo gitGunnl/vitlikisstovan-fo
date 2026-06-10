@@ -413,7 +413,7 @@ const Tilarbeidis = () => {
                   </h3>
                   <p className="text-foreground/90">
                     Allar vegleiðingarnar eru nú skrivaðar og tøkar
-                    at lesa.
+                    at lesa niðanfyri.👇
                   </p>
                 </div>
               </div>
