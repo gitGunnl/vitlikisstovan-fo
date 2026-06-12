@@ -386,9 +386,10 @@ const pages: PageSeo[] = [
   // ---------------------------------------------------------------------
   {
     path: "/tilarbeidis",
-    title: "Vitlíki til arbeiðis — vegleiðingar og tilfar | Vitlíkisstovan",
+    title: "Vitlíki til arbeiðis - 6 praktiskar vegleiðingar á føroyskum",
     description:
-      "Verkætlanin \"Vitlíki til arbeiðis\" — vegleiðingar, frágreiðingar og tilfar, ið hjálpa bólkum og fyritøkum at koma gott ígongd við vitlíki á arbeiðsplássinum.",
+      "Praktiskar vegleiðingar til dagstovnar, undirvísarar, tænastuvinnuna, handverkarar, venjarar og røktarstarvsfólk.",
+    ogImage: `${SITE_URL}/images/social/vitliki-til-arbeidis-social-preview.jpg`,
     content: block(`
       <h1>Vitlíki til arbeiðis</h1>
       <p>Verkætlanin <em>Vitlíki til arbeiðis</em> samlar vegleiðingar, frágreiðingar og praktiskt tilfar, ið hjálpa føroyskum bólkum og fyritøkum at koma gott ígongd við vitlíki á arbeiðsplássinum.</p>
