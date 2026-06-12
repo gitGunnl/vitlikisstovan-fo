@@ -394,8 +394,7 @@ const Tilarbeidis = () => {
               Verkætlanardagføringar – Vitlíki til arbeiðis
             </h1>
             <p className="text-xl text-muted-foreground mb-8">
-              Fylg við okkara arbeiðsætlan, meðan vit menna vitlíkivegleiðingar
-              til føroyska vinnulívið.
+              Seks handaligar vegleiðingar til føroyska arbeiðismarknaðin.
             </p>
           </div>
         </section>
