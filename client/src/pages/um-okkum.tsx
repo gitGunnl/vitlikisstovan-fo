@@ -33,7 +33,7 @@ export default function UmOkkum() {
               </h1>
               <div className="max-w-3xl mx-auto text-center">
                 <p className="text-2xl font-serif italic text-gray-700 mb-4">
-                  "Eg royni at grundfesta vitlíki í Føroyum – og víðari"
+                  "Eg royni at hjálpa "
                 </p>
                 <Separator className="my-6" />
                 <p className="text-lg text-gray-600">

@@ -272,7 +272,7 @@ export default function GuideFeedback({ guideId }: { guideId: string }) {
               <DialogHeader className="text-left">
                 <DialogTitle>Funni ein feil?</DialogTitle>
                 <DialogDescription>
-                  Tú hjálpir okkum at halda vegleiðingunum rættar. Sig okkum
+                  Tú hjálpir at halda vegleiðingarnar rættar. Sig okkum
                   frá, hvat tú fanst.
                 </DialogDescription>
               </DialogHeader>
