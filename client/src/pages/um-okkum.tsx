@@ -33,11 +33,11 @@ export default function UmOkkum() {
               </h1>
               <div className="max-w-3xl mx-auto text-center">
                 <p className="text-2xl font-serif italic text-gray-700 mb-4">
-                  "Eg royni at hjálpa "
+                  "Eg royni at hjálpa føroyskar stovnar og fyritøkur at sum mest burtur úr vitlíki."
                 </p>
                 <Separator className="my-6" />
                 <p className="text-lg text-gray-600">
-                  Stig fyri stig broytir vitlíki heimin. Eg kann syrgja fyri, at tú ikki verður afturúrsigldur.
+                  Stig fyri stig broytir vitlíki heimin. Eg kann hjálpa at fylgja við.
                 </p>
               </div>
             </div>
@@ -66,7 +66,7 @@ export default function UmOkkum() {
                       "At fáa vitlíki trygt og munagott til Føroyar."
                     </blockquote>
                     <p className="text-gray-700">
-                      Mín niðurstøða er, at hetta skal gerast í trimum stigum og eg kann hjálpa allan vegin.
+                      Mín niðurstøða er at fyrsta stig er at starvsfólk eiga at gerast dugnaligir brúkarir, tað er tað ið gevur mest nú og í framtíðini.
                     </p>
                   </div>
                 </article>
@@ -103,8 +103,8 @@ export default function UmOkkum() {
                       <p className="text-gray-700 leading-relaxed mb-4">So ein dag gekk tað upp fyri mær:</p>
                       <ul className="space-y-2 ml-12">
                         <li className="list-disc"><strong>vitlíki er ikki bara fyri stórar tøknirisar.</strong></li>
-                        <li className="list-disc"><strong>vitlíki er ikki bara framtíð – tað er nú.</strong></li>
-                        <li className="list-disc"><strong>vitlíki kann nýtast í øllum fyritøkum – eisini í Føroyum.</strong></li>
+                        <li className="list-disc"><strong>vitlíki er ikki bara fyri KT-fólk.</strong></li>
+                        <li className="list-disc"><strong>vitlíki kann nýtast í øllum fyritøkum og stovnum.</strong></li>
                       </ul>
                     </div>
 
@@ -115,14 +115,14 @@ export default function UmOkkum() {
                         Loysnin
                       </h3>
                       <p className="text-gray-700 leading-relaxed mb-3">
-                        Trupulleikin? <strong>Flestu hava ikki tíð at seta seg inn í tað.</strong>
+                        Trupulleikin? <strong>Flestu hava ikki tíð at seta seg inn í tingini.</strong>
                       </p>
                       <p className="text-gray-700 leading-relaxed mb-4">
                         Tí stovnaði eg <strong>Vitlíkisstovuna</strong> – fyri at byggja brúnna millum <strong>møguleikarnar í vitlíki</strong> og <strong>veruliga tørvin hjá føroyskum fyritøkum</strong>.
                       </p>
                       <div className="bg-gray-100 p-4 border-l-4 border-black">
                         <p className="font-medium">
-                          Nú hjálpa vit fyritøkum at sjálvvirka uppgávur, effektivisera arbeiðið og brúka vitlíki fult út – so tær kunnu leggja dent á tað, sum veruliga hevur týdning.
+                          Nú hjálpi eg fyritøkum at sjálvvirka uppgávur, effektivisera arbeiðið og brúka vitlíki fult út – so tær kunnu leggja dent á tað, sum veruliga hevur týdning.
                         </p>
                       </div>
                     </div>
