@@ -386,7 +386,7 @@ const pages: PageSeo[] = [
   // ---------------------------------------------------------------------
   {
     path: "/tilarbeidis",
-    title: "Vitlíki til arbeiðis - 6 praktiskar vegleiðingar á føroyskum",
+    title: "Vitlíki til arbeiðis - 6 handaligar vegleiðingar á føroyskum",
     description:
       "Praktiskar vegleiðingar til dagstovnar, undirvísarar, tænastuvinnuna, handverkarar, venjarar og røktarstarvsfólk.",
     ogImage: `${SITE_URL}/images/social/vitliki-til-arbeidis-social-preview.jpg`,
