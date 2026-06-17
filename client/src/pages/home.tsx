@@ -333,7 +333,7 @@ export default function Home() {
               {siteConfig.testimonials.quotes.map((item, index) => (
                 <figure
                   key={index}
-                  className="flex flex-col bg-background rounded-xl border shadow-sm p-5 hover:shadow-md transition-shadow"
+                  className="flex flex-col bg-white dark:bg-card rounded-xl border shadow-sm p-5 hover:shadow-md transition-shadow"
                 >
                   <Quote
                     className="w-5 h-5 text-primary/40 mb-2"
