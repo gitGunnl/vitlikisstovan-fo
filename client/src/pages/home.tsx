@@ -367,40 +367,35 @@ export default function Home() {
                       className="w-5 h-5 text-primary/40 mb-2"
                       aria-hidden="true"
                     />
-                    <blockquote className="text-sm text-foreground/90 leading-relaxed flex-1">
-                      {item.quote}
-                    </blockquote>
+                    {longQuote ? (
+                      <>
+                        <blockquote
+                          className={`text-sm text-foreground/90 leading-relaxed flex-1 ${
+                            isExpanded ? "hidden" : "block group-hover:hidden"
+                          }`}
+                        >
+                          {item.quote}
+                        </blockquote>
+                        <blockquote
+                          aria-hidden={!isExpanded}
+                          className={`text-sm text-foreground/90 leading-relaxed flex-1 ${
+                            isExpanded ? "block" : "hidden group-hover:block"
+                          }`}
+                        >
+                          {longQuote}
+                        </blockquote>
+                      </>
+                    ) : (
+                      <blockquote className="text-sm text-foreground/90 leading-relaxed flex-1">
+                        {item.quote}
+                      </blockquote>
+                    )}
                     <figcaption className="mt-4 pt-3 border-t">
                       <p className="text-sm font-semibold text-foreground leading-tight">{item.name}</p>
                       <p className="text-xs text-muted-foreground mt-0.5">
                         {item.role} · {item.org}
                       </p>
                     </figcaption>
-
-                    {longQuote && (
-                      <div
-                        aria-hidden={!isExpanded}
-                        className={`absolute inset-0 flex flex-col rounded-xl border border-primary/30 bg-white dark:bg-card p-5 shadow-md transition-opacity duration-200 group-hover:opacity-100 group-hover:pointer-events-auto group-focus-visible:opacity-100 ${
-                          isExpanded
-                            ? "opacity-100 pointer-events-auto"
-                            : "opacity-0 pointer-events-none"
-                        }`}
-                      >
-                        <Quote
-                          className="w-5 h-5 text-primary/40 mb-2 shrink-0"
-                          aria-hidden="true"
-                        />
-                        <blockquote className="text-sm text-foreground/90 leading-relaxed flex-1 overflow-y-auto">
-                          {longQuote}
-                        </blockquote>
-                        <figcaption className="mt-3 pt-3 border-t shrink-0">
-                          <p className="text-sm font-semibold text-foreground leading-tight">{item.name}</p>
-                          <p className="text-xs text-muted-foreground mt-0.5">
-                            {item.role} · {item.org}
-                          </p>
-                        </figcaption>
-                      </div>
-                    )}
                   </figure>
                 );
               })}
