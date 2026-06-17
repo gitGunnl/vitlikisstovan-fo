@@ -357,34 +357,42 @@ export default function Home() {
                           }
                         : undefined
                     }
-                    className={`group relative flex flex-col bg-white dark:bg-card rounded-xl border shadow-sm p-5 transition-shadow hover:shadow-md ${
+                    className={`group relative flex flex-col bg-white dark:bg-card rounded-xl border shadow-sm p-5 transition-all duration-300 ease-out ${
                       longQuote
-                        ? "cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-                        : ""
-                    }`}
+                        ? "cursor-pointer hover:-translate-y-1 hover:shadow-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:-translate-y-1 focus-visible:shadow-lg"
+                        : "hover:shadow-md"
+                    } ${isExpanded ? "-translate-y-1 shadow-lg" : ""}`}
                   >
                     <Quote
                       className="w-5 h-5 text-primary/40 mb-2"
                       aria-hidden="true"
                     />
                     {longQuote ? (
-                      <>
-                        <blockquote
-                          className={`text-sm text-foreground/90 leading-relaxed flex-1 ${
-                            isExpanded ? "hidden" : "block group-hover:hidden"
+                      <div className="flex-1">
+                        <div
+                          className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
+                            isExpanded
+                              ? "grid-rows-[0fr] opacity-0"
+                              : "grid-rows-[1fr] opacity-100 group-hover:grid-rows-[0fr] group-hover:opacity-0 group-focus-visible:grid-rows-[0fr] group-focus-visible:opacity-0"
                           }`}
                         >
-                          {item.quote}
-                        </blockquote>
-                        <blockquote
+                          <blockquote className="overflow-hidden text-sm text-foreground/90 leading-relaxed">
+                            {item.quote}
+                          </blockquote>
+                        </div>
+                        <div
                           aria-hidden={!isExpanded}
-                          className={`text-sm text-foreground/90 leading-relaxed flex-1 ${
-                            isExpanded ? "block" : "hidden group-hover:block"
+                          className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out ${
+                            isExpanded
+                              ? "grid-rows-[1fr] opacity-100"
+                              : "grid-rows-[0fr] opacity-0 group-hover:grid-rows-[1fr] group-hover:opacity-100 group-focus-visible:grid-rows-[1fr] group-focus-visible:opacity-100"
                           }`}
                         >
-                          {longQuote}
-                        </blockquote>
-                      </>
+                          <blockquote className="overflow-hidden text-sm text-foreground/90 leading-relaxed">
+                            {longQuote}
+                          </blockquote>
+                        </div>
+                      </div>
                     ) : (
                       <blockquote className="text-sm text-foreground/90 leading-relaxed flex-1">
                         {item.quote}
