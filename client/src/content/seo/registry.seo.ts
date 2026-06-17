@@ -418,7 +418,7 @@ const pages: PageSeo[] = [
     path: "/verkstova",
     title: "Verkstova - Vitlíkisstovan",
     description:
-      "Handalig vitlíkisverkstova. Lær at brúka ChatGPT og onnur vitlíki-amboð í veruligum arbeiðsuppgávum.",
+      "Handalig vitlíkisverkstova. Lær at brúka ChatGPT og onnur vitlíkisamboð í veruligum arbeiðsuppgávum.",
     noindex: true,
   },
 

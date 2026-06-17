@@ -217,42 +217,56 @@ export const siteConfig = {
     quotes: [
       {
         quote: "Sera væl nøgd – tillagað til júst tað, vit høvdu tørv á.",
+        longQuote:
+          "Vit vóru sera væl nøgd við verkstovuna hjá Gunnleygi. Hon var tillagað til júst tað, vit høvdu tørv á, og tað var hugtakandi, hvussu nógv vit fingu burturúr, hóast hon varð skipað við stuttari freist.",
         name: "Hildur Durhuus",
         role: "Samskipari",
         org: "Nýskapan í ferðavinnuni 2026",
       },
       {
         quote: "Bæði hugvekjandi og læruríkt – viðkomandi fyri leiðarar og starvsfólk.",
+        longQuote:
+          "Verkstovurnar hjá Gunnleygi vóru bæði hugvekjandi og læruríkar. Tær vóru viðkomandi fyri bæði leiðarar og starvsfólk, og fólk á ymiskum støði fingu nógv burturúr.",
         name: "Reidar Luid",
         role: "Forritan og menning",
         org: "Betri Banki",
       },
       {
         quote: "Greið, viðkomandi og beinanvegin gagnlig í praksis.",
+        longQuote:
+          "Verkstovan var sera viðkomandi og góð hjá okkum øllum. Hóast vit øll brúktu ChatGPT frammanundan, lærdu vit nógv um funkur, vit ikki kendu so væl til frammanundan, eitt nú GPT'ir. Vit fingu eisini betri innlit í trygd, og hvussu ein samskiftir við ChatGPT á ein hátt, sum gevur mest møguligt burturúr. Verkstovan var greið, viðkomandi og beinanvegin gagnlig í praksis.",
         name: "Elin Brimnes",
         role: "Arkitekt",
         org: "Kontrast",
       },
       {
         quote: "Gav okkum betri fatan og fleiri góð hugskot at taka víðari.",
+        longQuote:
+          "Verkstovan var áhugaverd og viðkomandi. Hon gav okkum eina betri fatan av, hvussu ChatGPT kann brúkast í okkara arbeiði, og fleiri góð hugskot, sum vit kundu taka við okkum víðari.",
         name: "Sigrið Zachariasen",
         role: "Dagligur leiðari",
         org: "Reyði Krossur Føroya",
       },
       {
         quote: "Áhugaverd og løtt at skilja – gav greiðari fatan av, hvussu eg brúki ChatGPT í mínum arbeiði.",
+        longQuote:
+          "Verkstovan hjá Gunnleygi var bæði áhugaverd og løtt at skilja. Hon gav mær eina greiðari fatan av, hvussu eg kann brúka ChatGPT í mínum arbeiði, og eg fekk ein hentan lista við nýtsluhugskotum.",
         name: "Sóley Hammer",
         role: "Leiðari",
         org: "Hugskotið",
       },
       {
         quote: "Greið og viðkomandi – gav okkum nógv nýggj hugskot til ChatGPT-nýtslu.",
+        longQuote:
+          "Gunnleygur hevði eina góða verkstovu. Hon var bæði greið og viðkomandi, og hon gav okkum nógv nýggj hugskot til, hvussu vit kunnu nýta ChatGPT til okkara arbeiði.",
         name: "Guðrið Højgaard",
         role: "Stjóri",
         org: "Visit Faroe Islands",
       },
       {
         quote: "Spennandi og lærurík - gav eina greiðari fatan av trygga nýtslu.",
+        longQuote:
+          "Verkstovan var spennandi og lærurík. Hon gav eina greiðari fatan av trygga nýtslu, og fleiri góð hugskot til, hvussu vit kunnu brúka vitlíki í okkara egna arbeiði.",
         name: "Fríði Jensen",
         role: "HR Data Specialist",
         org: "Bakkafrost",
@@ -494,7 +508,7 @@ export const siteConfig = {
     },
     "/verkstova": {
       title: "Verkstova - Vitlíkisstovan",
-      description: "Handalig vitlíkisverkstova. Lær at brúka ChatGPT og onnur vitlíki-amboð í veruligum arbeiðsuppgávum.",
+      description: "Handalig vitlíkisverkstova. Lær at brúka ChatGPT og onnur vitlíkisamboð í veruligum arbeiðsuppgávum.",
       noindex: true
     },
     "/podcast": {

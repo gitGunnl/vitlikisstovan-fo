@@ -813,7 +813,7 @@ export default function FrontpageV2() {
           <DialogHeader className="mb-4">
             <DialogTitle className="text-xl font-bold mb-2">Verkstovur og skeið</DialogTitle>
             <DialogDescription className="text-base leading-relaxed">
-              Eg havi hildið hópin av verkstovum um hvussu tú brúkar ChatGPT og onnur vitlíki-amboð
+              Eg havi hildið hópin av verkstovum um hvussu tú brúkar ChatGPT og onnur vitlíkisamboð
               í veruligum arbeiðsuppgávum.
             </DialogDescription>
           </DialogHeader>

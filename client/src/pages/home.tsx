@@ -37,6 +37,7 @@ import {
 export default function Home() {
   const [isMounted, setIsMounted] = useState(false);
   const [openDialog, setOpenDialog] = useState<string | null>(null);
+  const [expandedQuote, setExpandedQuote] = useState<number | null>(null);
   const heroSlide = siteConfig.hero;
 
   useEffect(() => {
@@ -330,26 +331,79 @@ export default function Home() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
-              {siteConfig.testimonials.quotes.map((item, index) => (
-                <figure
-                  key={index}
-                  className="flex flex-col bg-white dark:bg-card rounded-xl border shadow-sm p-5 hover:shadow-md transition-shadow"
-                >
-                  <Quote
-                    className="w-5 h-5 text-primary/40 mb-2"
-                    aria-hidden="true"
-                  />
-                  <blockquote className="text-sm text-foreground/90 leading-relaxed flex-1">
-                    {item.quote}
-                  </blockquote>
-                  <figcaption className="mt-4 pt-3 border-t">
-                    <p className="text-sm font-semibold text-foreground leading-tight">{item.name}</p>
-                    <p className="text-xs text-muted-foreground mt-0.5">
-                      {item.role} · {item.org}
-                    </p>
-                  </figcaption>
-                </figure>
-              ))}
+              {siteConfig.testimonials.quotes.map((item, index) => {
+                const longQuote = item.longQuote;
+                const isExpanded = expandedQuote === index;
+                return (
+                  <figure
+                    key={index}
+                    role={longQuote ? "button" : undefined}
+                    tabIndex={longQuote ? 0 : undefined}
+                    aria-expanded={longQuote ? isExpanded : undefined}
+                    onClick={
+                      longQuote
+                        ? () => setExpandedQuote(isExpanded ? null : index)
+                        : undefined
+                    }
+                    onKeyDown={
+                      longQuote
+                        ? (e) => {
+                            if (e.key === "Enter" || e.key === " ") {
+                              e.preventDefault();
+                              setExpandedQuote(isExpanded ? null : index);
+                            } else if (e.key === "Escape" && isExpanded) {
+                              setExpandedQuote(null);
+                            }
+                          }
+                        : undefined
+                    }
+                    className={`group relative flex flex-col bg-white dark:bg-card rounded-xl border shadow-sm p-5 transition-shadow hover:shadow-md ${
+                      longQuote
+                        ? "cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+                        : ""
+                    }`}
+                  >
+                    <Quote
+                      className="w-5 h-5 text-primary/40 mb-2"
+                      aria-hidden="true"
+                    />
+                    <blockquote className="text-sm text-foreground/90 leading-relaxed flex-1">
+                      {item.quote}
+                    </blockquote>
+                    <figcaption className="mt-4 pt-3 border-t">
+                      <p className="text-sm font-semibold text-foreground leading-tight">{item.name}</p>
+                      <p className="text-xs text-muted-foreground mt-0.5">
+                        {item.role} · {item.org}
+                      </p>
+                    </figcaption>
+
+                    {longQuote && (
+                      <div
+                        aria-hidden={!isExpanded}
+                        className={`absolute inset-0 flex flex-col rounded-xl border border-primary/30 bg-white dark:bg-card p-5 shadow-md transition-opacity duration-200 group-hover:opacity-100 group-hover:pointer-events-auto group-focus-visible:opacity-100 ${
+                          isExpanded
+                            ? "opacity-100 pointer-events-auto"
+                            : "opacity-0 pointer-events-none"
+                        }`}
+                      >
+                        <Quote
+                          className="w-5 h-5 text-primary/40 mb-2 shrink-0"
+                          aria-hidden="true"
+                        />
+                        <blockquote className="text-sm text-foreground/90 leading-relaxed flex-1 overflow-y-auto">
+                          {longQuote}
+                        </blockquote>
+                        <figcaption className="mt-3 pt-3 border-t shrink-0">
+                          <p className="text-sm font-semibold text-foreground leading-tight">{item.name}</p>
+                          <p className="text-xs text-muted-foreground mt-0.5">
+                            {item.role} · {item.org}
+                          </p>
+                        </figcaption>
+                      </div>
+                    )}
+                  </figure>
+                );
+              })}
             </div>
           </Section>
         )}

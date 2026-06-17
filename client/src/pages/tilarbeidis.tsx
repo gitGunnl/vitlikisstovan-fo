@@ -513,7 +513,7 @@ const Tilarbeidis = () => {
                 <div className="p-6 bg-background/40 border-x border-b border-border/50 rounded-b-xl">
                   <div className="space-y-8">
                   <p className="text-foreground/85 leading-loose text-lg">
-          Vitlíki-amboð gerast skjótt alsamt meira tøk, men nógv arbeiðsfólk í Føroyum eru í iva um, hvussu tey skulu fara í gongd við at brúka tey.
+          Vitlíkisamboð gerast skjótt alsamt meira tøk, men nógv arbeiðsfólk í Føroyum eru í iva um, hvussu tey skulu fara í gongd við at brúka tey.
                   </p>
 
                   <p className="text-foreground/80 leading-loose text-lg">
@@ -521,7 +521,7 @@ const Tilarbeidis = () => {
                   </p>
 
                   <p className="text-foreground/80 leading-loose text-lg">
-                    Vit fara at gera 6–8 stuttar, lættskiljandi frágreiðingar, sum verða tillagaðar ávísum vinnugreinum. Frágreiðingarnar fara greiðiliga at vísa, hvussu verandi vitlíki-amboð, serliga málmenni sum ChatGPT, kunnu loysa veruligar og ítøkiligar trupulleikar, sum hesi starvsfólk hava.
+                    Vit fara at gera 6–8 stuttar, lættskiljandi frágreiðingar, sum verða tillagaðar ávísum vinnugreinum. Frágreiðingarnar fara greiðiliga at vísa, hvussu verandi vitlíkisamboð, serliga málmenni sum ChatGPT, kunnu loysa veruligar og ítøkiligar trupulleikar, sum hesi starvsfólk hava.
                   </p>
 
                   <p className="text-foreground/80 leading-loose text-lg">
