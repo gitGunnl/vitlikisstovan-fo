@@ -1035,7 +1035,7 @@ Stóra takk til øll, sum hava deilt royndir, dømi og hugskot. Tykkara íkast h
 
 Stóra takk til Pedagogfelagið fyri samstarvið.
 
-Sært tú ein feil ella okkurt, sum kann gerast betur? [Lat okkum frætta her (#feedback) — tað hjálpir okkum at gera vegleiðingina betri.
+Sært tú ein feil ella okkurt, sum kann gerast betur? [Lat okkum frætta her](#feedback) — tað hjálpir okkum at gera vegleiðingina betri.
 
 Vitlíkisstovan · 2026  
 vitlikisstovan.fo
