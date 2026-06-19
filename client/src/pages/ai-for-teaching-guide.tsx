@@ -680,6 +680,8 @@ Verkætlanin er stuðlað av Granskingarráðnum.
 
 Stóra takk til øll, sum hava deilt royndir, dømi og hugskot. Tykkara íkast hevur hjálpt til at gera vegleiðingina meira veruliga, praktiska og gagnliga.
 
+Stóra takk til Pedagogfelagið fyri samstarvið.
+
 Sært tú ein feil ella okkurt, sum kann gerast betur? [Lat okkum frætta her] (#feedback) — tað hjálpir okkum at gera vegleiðingina betri.
 
 Vitlíkisstovan · 2026  
