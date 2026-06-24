@@ -31,7 +31,7 @@ const post = {
   <p>Teir førleikar, ið krevjast í vitlíkisøldini, fevna um nógv meira enn ta talgildu vitanina, vit hava hildið okkum til seinasta áratíggið. Dugnaskapur merkir nú at samstarva við vitugar skipanir, at skilja teirra evni og avmarkingar, og at nýta menniskjakent vit, har tað krevst, eitt nú innan:</p>
 
   <ul>
-    <li><strong>Byrtsmíð (Prompt Engineering)</strong> – at orða spurningar soleiðis, at vitlíki veitir neyv og munagóð svar.</li>
+    <li><strong>Birtsmíð (Prompt Engineering)</strong> – at orða spurningar soleiðis, at vitlíki veitir neyv og munagóð svar.</li>
     <li><strong>Markmeting</strong> – at fáa eyga á skeivleikar, villur ella óviðkomandi upplýsingar í tí, maskinan framleiðir.</li>
     <li><strong>Etisk støðutakan</strong> – at nýta vitlíki ábyrgdarfullt og skilja tær størri avleiðingarnar.</li>
   </ul>

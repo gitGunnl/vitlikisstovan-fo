@@ -157,7 +157,7 @@ function GuideFeedbackForm({
                 <Textarea
                   {...field}
                   rows={5}
-                  placeholder="T.d. ein skrivivilla, ein byrt sum ikki riggar, ella okkurt sum kann gerast betur…"
+                  placeholder="T.d. ein skrivivilla, eitt byrt sum ikki riggar, ella okkurt sum kann gerast betur…"
                   className="resize-none"
                   data-testid="textarea-feedback-message"
                 />
@@ -270,10 +270,10 @@ export default function GuideFeedback({ guideId }: { guideId: string }) {
           {!submitted ? (
             <>
               <DialogHeader className="text-left">
-                <DialogTitle>Funni ein feil?</DialogTitle>
+                <DialogTitle>Hevur tú viðmerkingar?</DialogTitle>
                 <DialogDescription>
                   Tú hjálpir at halda vegleiðingarnar rættar. Sig okkum
-                  frá, hvat tú fanst.
+                  frá, hvat tú heldur kann gerast betur.
                 </DialogDescription>
               </DialogHeader>
               <GuideFeedbackForm
@@ -288,7 +288,7 @@ export default function GuideFeedback({ guideId }: { guideId: string }) {
               </div>
               <DialogTitle className="text-xl">Takk fyri!</DialogTitle>
               <p className="mt-2 text-sm text-stone-500 dark:text-stone-400">
-                Vit hyggja eftir tí, tú hevur sent, og rætta vegleiðingina.
+                Vit hyggja eftir tí, tú hevur sent, og tilrætta vegleiðingina.
               </p>
             </div>
           )}
@@ -305,7 +305,7 @@ export default function GuideFeedback({ guideId }: { guideId: string }) {
             data-testid="button-open-feedback"
           >
             <Flag className="h-4 w-4" />
-            Funni ein feil?
+            Hevur tú viðmerkingar?
           </button>
           <button
             type="button"

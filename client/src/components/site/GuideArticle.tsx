@@ -153,7 +153,7 @@ const PromptCard = ({ text }: { text: string }) => {
           <div className="flex items-center space-x-2 text-stone-500 dark:text-stone-400">
             <PenTool className="w-4 h-4" />
             <span className="text-xs font-semibold uppercase tracking-wider font-sans">
-              Byrt
+              Birt
             </span>
           </div>
 
@@ -212,7 +212,7 @@ const SimplePromptCard = ({ text }: { text: string }) => {
       <button
         type="button"
         onClick={handleCopy}
-        aria-label="Avrita byrt"
+        aria-label="Avrita birt"
         className="guide-print-exact group relative block w-full text-left bg-[#fcfcf9] dark:bg-stone-900 border-2 border-dashed border-stone-300 dark:border-stone-700 rounded-lg px-3 py-2.5 sm:px-5 sm:py-3.5 shadow-sm cursor-pointer transition-all hover:bg-stone-100 dark:hover:bg-stone-800 hover:border-stone-400 dark:hover:border-stone-600"
       >
         <pre className="whitespace-pre-wrap font-mono text-sm sm:text-base text-stone-700 dark:text-stone-300 leading-relaxed pr-16">

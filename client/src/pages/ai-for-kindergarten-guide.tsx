@@ -56,8 +56,8 @@ Tær tørvar onga tøkniliga serfrøði fyri at brúka vitlíki væl. Lýs bara 
 
 Kom lættliga í gongd við at avrita dømini við byrtum niðanfyri yvir í títt vitlíkis-kjattamboð (sum ChatGPT, Gemini ella Copilot), tillaga eftir tínum ítøkiliga tørvi, og byrja at brúka uppskotini, ið vitlíki veitir tær, beinanvegin.
 
-**Frágreiðing: Byrt**  
-Eitt byrt er tað føroyska orðið fyri tað, ið á enskum veðrur rópt eitt “prompt”. Tað er stutt sagt bara tað, man kallar boðini, ið man sendur til vitlíki. Um tú skrivar til vitlíki “Nevn nøkur stuttlig spøl at spæla úti við 5-ára gomlum børnum?”; so er hesin setningurin byrtið.
+**Frágreiðing: Birt**  
+Eitt birt er tað føroyska orðið fyri tað, ið á enskum veðrur rópt eitt “prompt”. Tað er stutt sagt bara tað, man kallar boðini, ið man sendur til vitlíki. Um tú skrivar til vitlíki “Nevn nøkur stuttlig spøl at spæla úti við 5-ára gomlum børnum?”; so er hesin setningurin byrtið.
 
 ## **Gullkornini: Soleiðis fært tú mest burturúr**
 
@@ -112,7 +112,7 @@ Um okkurt er ógreitt, vinarliga spyr meg áðrenn tú svarar endaligt.
 
 :::
 
-**Uppfylgjandi byrt:** Um tað er okkurt við svarinum/hugskotinum tær ikki dámar, so sig bara vitlíki neyvt, hvat tað er. Her eru nøkur hugskot:
+**Uppfylgjandi birt:** Um tað er okkurt við svarinum/hugskotinum tær ikki dámar, so sig bara vitlíki neyvt, hvat tað er. Her eru nøkur hugskot:
 
 :::prompt-simple
 Ger hesi tiltøkini einfaldari og skjótari at rudda upp eftir.
