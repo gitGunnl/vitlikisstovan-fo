@@ -13,6 +13,24 @@ export interface ViewContentParams {
   currency?: string;
 }
 
+/**
+ * Fire a Meta (Facebook) Pixel `PageView`.
+ *
+ * Safe to call before the pixel library has finished downloading: once the
+ * inline loader in `client/index.html` has run, `fbq` is a stub that queues
+ * calls until the real script is ready. If the loader hasn't run yet (deferred
+ * until first interaction / idle), `window.fbq` is undefined and this no-ops —
+ * the inline `fbq('track', 'PageView')` in index.html already covers that first
+ * view, so the first load is never double-counted.
+ *
+ * Used for SPA route changes; the very first page view is owned by index.html.
+ */
+export function trackMetaPageView() {
+  if (typeof window !== 'undefined' && window.fbq) {
+    window.fbq('track', 'PageView');
+  }
+}
+
 export function trackViewContent(params: ViewContentParams) {
   if (typeof window !== 'undefined' && window.fbq) {
     window.fbq('track', 'ViewContent', {

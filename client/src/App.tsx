@@ -1,5 +1,5 @@
 import { Switch, Route, useLocation } from "wouter";
-import { lazy, Suspense, useEffect } from "react";
+import { lazy, Suspense, useEffect, useRef } from "react";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -8,6 +8,7 @@ import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
 import { useSeo } from "@/lib/use-seo";
 import { initAnalytics, trackPageView } from "@/lib/analytics";
+import { trackMetaPageView } from "@/lib/meta";
 
 const CourseDetails = lazy(() => import("@/pages/course-details"));
 const UmOkkum = lazy(() => import("@/pages/um-okkum"));
@@ -60,6 +61,18 @@ function Router() {
 
   useEffect(() => {
     trackPageView(location);
+  }, [location]);
+
+  // Meta Pixel: the first PageView is fired by the inline loader in index.html,
+  // so we only fire on subsequent in-app navigations to avoid double-counting
+  // the first load.
+  const isFirstMetaView = useRef(true);
+  useEffect(() => {
+    if (isFirstMetaView.current) {
+      isFirstMetaView.current = false;
+      return;
+    }
+    trackMetaPageView();
   }, [location]);
 
   return (
