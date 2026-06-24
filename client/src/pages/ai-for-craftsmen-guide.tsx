@@ -75,7 +75,7 @@ Hetta er nóg mikið til at gera vitlíki meira málrættað og gagnligt.
 
 ---
 
-## 4. At nýta vitlíki sum ein hjálpsamur starvsfelagi
+## 4. At samskifta við vitlíki sum ein hjálpsamur starvsfelagi
 
 :::scope
 Hesin parturin vísir ein av sterkastu háttunum at brúka vitlíki uppá: sum ein hjálpsamur sparringarfelagi. Hesi dømini snúgva seg um at taka betri avgerðir, velja snildari næstu stig og sleppa undan at stara seg blindan á eitt ávíst svar.
