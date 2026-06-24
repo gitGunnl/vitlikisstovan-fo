@@ -54,10 +54,10 @@ Samstundis er vitlíki eisini heilt øðrvísi: tað møðist ikki, keðir seg o
 Tær tørvar onga tøkniliga serfrøði fyri at brúka vitlíki væl. Lýs bara tína støðu við einføldum gerandismáli, sum um tú greiddi einum starvsfelaga frá. Nevn týðiliga tínar treytir (aldur á børnunum, bólkastødd, stað, tøkt tilfar og avmarkingar sum t.d. veður ella tíð), og lat vitlíki geva tær tillagaðar, handligar loysnir. 
 :::
 
-Kom lættliga í gongd við at avrita dømini við byrtum niðanfyri yvir í títt vitlíkis-kjattamboð (sum ChatGPT, Gemini ella Copilot), tillaga eftir tínum ítøkiliga tørvi, og byrja at brúka uppskotini, ið vitlíki veitir tær, beinanvegin.
+Kom lættliga í gongd við at avrita dømini við birtum niðanfyri yvir í títt vitlíkis-kjattamboð (sum ChatGPT, Gemini ella Copilot), tillaga eftir tínum ítøkiliga tørvi, og byrja at brúka uppskotini, ið vitlíki veitir tær, beinanvegin.
 
 **Frágreiðing: Birt**  
-Eitt birt er tað føroyska orðið fyri tað, ið á enskum veðrur rópt eitt “prompt”. Tað er stutt sagt bara tað, man kallar boðini, ið man sendur til vitlíki. Um tú skrivar til vitlíki “Nevn nøkur stuttlig spøl at spæla úti við 5-ára gomlum børnum?”; so er hesin setningurin byrtið.
+Eitt birt er tað føroyska orðið fyri tað, ið á enskum veðrur rópt eitt “prompt”. Tað er stutt sagt bara tað, man kallar boðini, ið man sendur til vitlíki. Um tú skrivar til vitlíki “Nevn nøkur stuttlig spøl at spæla úti við 5-ára gomlum børnum?”; so er hesin setningurin birtið.
 
 ## **Gullkornini: Soleiðis fært tú mest burturúr**
 
@@ -90,7 +90,7 @@ Tað er farið at oysregna, har tú arbeiðir. Tínar útiætlanir fara í vaski
 
 ---
 
-**Gott dømi um byrt (avrita og set inn í títt kjattamboð):**
+**Gott dømi um birt (avrita og set inn í títt kjattamboð):**
 
 :::prompt
 
@@ -133,7 +133,7 @@ Tað hóskar enntá til smærri løtur; skjót **prát í fruktsteðginum**, sum
 
 Jú meira tú roynir teg, tess betur verður tú til at nýta vitlíki sum ein kreativur makkari – ein, sum heldur arbeiði títt frískt, smidligt og fult av smáum, ítøkiligum og lívgandi hugskotum.
 
-Fleiri dømi um byrt eru at finna í brotinum: “[Skjót byrt: Dømi sum hvessa tínar vitlíkisførleikar](#skjót-byrt:-dømi-sum-hvessa-tínar-vitlíkisførleikar)” á s.10.
+Fleiri dømi um birt eru at finna í brotinum: “[Skjót birt: Dømi sum hvessa tínar vitlíkisførleikar](#skjót-birt:-dømi-sum-hvessa-tínar-vitlíkisførleikar)” á s.10.
 
 ## ***Trygdarhjálpari og eftirlitsfelagi***
 
@@ -145,7 +145,7 @@ Tú skalt við átjan 5-ára gomlum børnum og trimum vaksnum til ein væl vitja
 
 ---
 
-**Gott dømi um byrt (avrita og set inn í títt kjattamboð):**
+**Gott dømi um birt (avrita og set inn í títt kjattamboð):**
 
 :::prompt
 
@@ -174,7 +174,7 @@ Svarið skal vera stutt og hent. Spyr vinaliga fyrst, um okkurt er ógreitt.
 
 ---
 
-**Uppfylgjandi byrt:** Um listin kennist ov rúgvismikil ella skal lagast til, skalt tú greitt tilskila, hvørjar broytingar tú vilt hava. Her eru nøkur dømi:
+**Uppfylgjandi birt:** Um listin kennist ov rúgvismikil ella skal lagast til, skalt tú greitt tilskila, hvørjar broytingar tú vilt hava. Her eru nøkur dømi:
 
 :::prompt-simple
 Ger minnislistan styttri – tak bara tað allar mest týðandi við.
@@ -195,7 +195,7 @@ Hugsa um allar løturnar, tá ið eyka eygu kundu hjálpt:
 
 Við at innlima henda stuðlandi vitlíkis-hjálparan í gerandisdagin, ert tú við til at skapa eitt tryggari, friðarligari og meira inkluderandi umhvørvi fyri øll.
 
-Tú kanst síggja fleiri dømi um byrt í síðsta parti av vegleiðingini.
+Tú kanst síggja fleiri dømi um birt í síðsta parti av vegleiðingini.
 
 ## ***Søgusmiður, spælskipari og myndamakari***
 
@@ -205,7 +205,7 @@ Tá ið tær tørvar ein skjótan hátt at fanga áhugan hjá børnunum ella til
 Tín bólkur av lívligum 4-ára gomlum børnum gloymir ferð eftir ferð at vaska sær um hendurnar eftir at hava spælt úti. Tær tørvar eina stuttliga søgu, ið er løtt at minnast, sum spakuliga minnir tey á, hví reinar hendur hava týdning, og sum brúkar staðbundin viðurskifti fyri at fáa boðskapin at festa seg.
 :::
 
-**Gott dømi um byrt (avrita og set inn í títt kjattamboð):**
+**Gott dømi um birt (avrita og set inn í títt kjattamboð):**
 
 :::prompt
 
@@ -225,7 +225,7 @@ Vinarliga spyr fyrst, um okkurt er ógreitt.
 
 :::
 
-**Uppfylgjandi byrt (skjótar tillagingar):**
+**Uppfylgjandi birt (skjótar tillagingar):**
 
 :::prompt-simple
 Gott, ger nú eina mynd av persónunum úr søguni. Ger myndina í einum barnavinarligum akvarel-stíli.
@@ -292,14 +292,14 @@ Tú skal altíð hava fult tamarhald; vitlíki er tín skrivihjálpari, men tú 
 
 Brúka hetta, tá tú skal senda boð, sum krevja, at tú ert týðilig/ur, men samstundis vinalig/ur og uggandi.
 
-**Uppskrift til byrt (prompt):**
+**Uppskrift til birt (prompt):**
 
 1. **Leiklutur:** "Eg eri námsfrøðingur..."  
 2. **Støða:** "Vit mugu senda børnini heim tíðliga vegna veður/sjúku..."  
 3. **Fakta:** Klokkutíðir, telefonnummar, eykaætlan.  
 4. **Krav:** "Skriva eina vinaliga og uggandi áminning."
 
-**Gott dømi um byrt (avrita og set inn í títt kjattamboð):**
+**Gott dømi um birt (avrita og set inn í títt kjattamboð):**
 
 :::prompt
 
@@ -361,25 +361,25 @@ Hesin álítandi skrivarin kann meira enn bara gera dagligar frásagnir ella til
 
 * **Neutral umorðing (“sig hetta betur”) - innanhýsis ella til avvarðandi**. Hetta ger boðini greiðari og vinaligari; tekur dømandi orðingar burtur.  
 :::prompt
-  * **Dømi um byrt:** “Umskriva hesi boðini í einum neutralum, vinaligum og einføldum máli. Halt teg bert til fakta. Svara á føroyskum. Vinarliga spyr fyrst, um okkurt er ógreitt.”
+  * **Dømi um birt:** “Umskriva hesi boðini í einum neutralum, vinaligum og einføldum máli. Halt teg bert til fakta. Svara á føroyskum. Vinarliga spyr fyrst, um okkurt er ógreitt.”
 :::
 
 
 * **Áminning um viðtalu við foreldur (við minnislista)**. Minkar um miskiljingar; sigur nær/hvar og hvat skal takast við.  
 :::prompt
-  * **Dømi um byrt:** “Skriva eina stutta áminning um foreldraviðtaluna í morgin. **Nær:** á morgni/fyri døgurða, evt. klokkutíð. **Møtistað:** høvuðsinngongdin. **Tak við:** Barnið vantar skiftiklæðir og vøttur. Svara á føroyskum. Ongar persónligar dátur. Vinarliga spyr fyrst, um okkurt er ógreitt.”
+  * **Dømi um birt:** “Skriva eina stutta áminning um foreldraviðtaluna í morgin. **Nær:** á morgni/fyri døgurða, evt. klokkutíð. **Møtistað:** høvuðsinngongdin. **Tak við:** Barnið vantar skiftiklæðir og vøttur. Svara á føroyskum. Ongar persónligar dátur. Vinarliga spyr fyrst, um okkurt er ógreitt.”
 :::
 
 
 * **Stytt ella tillaga tekstin til ávísan miðil, ella týð hann til eitt annað mál, t.d. til innanhýsis nýtslu ella til avvarðandi.”** Tillagar boðini til **SMS (≤160 tekn)** ella **Kjatt (≤300 tekn)**; varðveitir týdningin.  
 :::prompt
-  * **Dømi um byrt:** “Stytt hesi notat niður til: a) SMS ≤160 tekn, b) Kjatt ≤300 tekn. Varðveit høvuðsinnihaldið. Svara á føroyskum. Vinarliga spyr fyrst, um okkurt er ógreitt.”
+  * **Dømi um birt:** “Stytt hesi notat niður til: a) SMS ≤160 tekn, b) Kjatt ≤300 tekn. Varðveit høvuðsinnihaldið. Svara á føroyskum. Vinarliga spyr fyrst, um okkurt er ógreitt.”
 :::
 
-## ***Skjót byrt: Dømi sum hvessa tínar vitlíkisførleikar*** {#skjót-byrt:-dømi-sum-hvessa-tínar-vitlíkisførleikar}
+## ***Skjót birt: Dømi sum hvessa tínar vitlíkisførleikar*** {#skjót-birt:-dømi-sum-hvessa-tínar-vitlíkisførleikar}
 
-Niðanfyri finnur tú eitt savn av uppspunnum dømum, ið minna nógv um gerandisligar støður á dagstovnum. Hvørt dømi vísir, hvussu tað at leggja ein greiðan, ítøkiligan samanhang afturat tínum byrti hjálpir vitlíki at geva betri og meira tillagað svar.  
-Brúka hesi byrt sum íblástur, og tillaga tey til tínar egnu umstøður fyri skjótt at gerast meistari í praktiskari vitlíkisnýtslu.
+Niðanfyri finnur tú eitt savn av uppspunnum dømum, ið minna nógv um gerandisligar støður á dagstovnum. Hvørt dømi vísir, hvussu tað at leggja ein greiðan, ítøkiligan samanhang afturat tínum birti hjálpir vitlíki at geva betri og meira tillagað svar.  
+Brúka hesi birt sum íblástur, og tillaga tey til tínar egnu umstøður fyri skjótt at gerast meistari í praktiskari vitlíkisnýtslu.
 
 ### **1) Vend orkuni: Frá ruðuleika til ró**
 
@@ -390,7 +390,7 @@ Støða:
 
 Tað hevur regnað allan fyrrapart, og tit hava verið inni leingi. Børnini (3-5 ár) eru vorðin ógvuliga órólig – tey renna runt, rópa, og orkan er "høgt uppi undir loftinum". Tú kennir, at tú ert við at missa yvirlitið, og tær tørvar eitt "reset" fyri at fáa ró á bólkin áðrenn døgurða. Tá larmurin er høgur, er ringt at vera kreativur sjálvur – men vitlíki verður ikki stressað av larmi.
 
-Hetta byrtið snýr seg um at fáa eitt "her-og-nú" skifti frá høgari orku til djúpa hugsavnan, uttan at brúka tíð upp á fyrireiking.
+Hetta birtið snýr seg um at fáa eitt "her-og-nú" skifti frá høgari orku til djúpa hugsavnan, uttan at brúka tíð upp á fyrireiking.
 :::
 
 :::prompt

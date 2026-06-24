@@ -12,7 +12,7 @@ labs: [
       // s1 — leave as is
           {
           title: "Stig 1: Ein samrøða við vitlíki",
-          description: "Koyr fyrst ChatGPT á vanliga GPT 5.1 myndilin (GPT 5.1 Auto). Um tú hevur nakra fílu sum lýsur teg, so kann tú skoyta hettar uppí nú. Kopiera so byrtið niðanfyri og koyr tað inn í ChatGPT og send. Svara síðan spurningunum, sum verða settir.",
+          description: "Koyr fyrst ChatGPT á vanliga GPT 5.1 myndilin (GPT 5.1 Auto). Um tú hevur nakra fílu sum lýsur teg, so kann tú skoyta hettar uppí nú. Kopiera so birtið niðanfyri og koyr tað inn í ChatGPT og send. Svara síðan spurningunum, sum verða settir.",
           window: "Nýtt kjatt",
           model: "GPT 5.1",
           prompt: `

@@ -149,7 +149,7 @@ const PromptCard = ({ text }: { text: string }) => {
           <div className="flex items-center space-x-2 text-stone-500 dark:text-stone-400">
             <PenTool className="w-4 h-4" />
             <span className="text-xs font-semibold uppercase tracking-wider font-sans">
-              Byrt
+              Birt
             </span>
           </div>
 

@@ -157,7 +157,7 @@ function GuideFeedbackForm({
                 <Textarea
                   {...field}
                   rows={5}
-                  placeholder="T.d. ein skrivivilla, eitt byrt sum ikki riggar, ella okkurt sum kann gerast betur…"
+                  placeholder="T.d. ein skrivivilla, eitt birt sum ikki riggar, ella okkurt sum kann gerast betur…"
                   className="resize-none"
                   data-testid="textarea-feedback-message"
                 />

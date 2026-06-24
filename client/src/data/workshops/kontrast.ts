@@ -12,7 +12,7 @@ labs: [
       // s1 — leave as is
           {
           title: "Stig 1: Ein samrøða við vitlíki",
-          description: "Koyr fyrst ChatGPT á vanliga GPT 5.2 myndilin (GPT 5.2 Auto). Um tú hevur nakra fílu sum lýsur teg, so kann tú skoyta hettar uppí nú. Kopiera so byrtið niðanfyri og koyr tað inn í ChatGPT og send. Svara síðan spurningunum, sum verða settir.",
+          description: "Koyr fyrst ChatGPT á vanliga GPT 5.2 myndilin (GPT 5.2 Auto). Um tú hevur nakra fílu sum lýsur teg, so kann tú skoyta hettar uppí nú. Kopiera so birtið niðanfyri og koyr tað inn í ChatGPT og send. Svara síðan spurningunum, sum verða settir.",
           window: "Nýtt kjatt",
           model: "GPT 5.2",
           prompt: `
@@ -131,7 +131,7 @@ You must **never** suggest or describe how ChatGPT/AI can help during the interv
           },
           {
           title: "Stig 2: Samandráttur (við Thinking-modellinum)",
-          description: "Skift fyrst til 'Thinking'-modellið. Kopiera samandráttar byrtið niðanfyri, set tað aftast í somu samrøðu, sum tú júst hevði við ChatGPT, og send.",
+          description: "Skift fyrst til 'Thinking'-modellið. Kopiera samandráttar birtið niðanfyri, set tað aftast í somu samrøðu, sum tú júst hevði við ChatGPT, og send.",
                 window: "Sama kjatttráð",
                 model: "GPT 5.2 Thinking",
           prompt: `
@@ -176,7 +176,7 @@ General Constraints:
           },
           {
           title: "Stig 4: Deep Research",
-          description: "Kopiera byrti niðanfyri inn í nýggja ChatGPT-vindeyga, skoyt samandráttin inn har tað er merkt, tendra Deep Research og send so.",
+          description: "Kopiera birti niðanfyri inn í nýggja ChatGPT-vindeyga, skoyt samandráttin inn har tað er merkt, tendra Deep Research og send so.",
               window: "Nýtt kjatt",
               model: "GPT 5.2 + Deep Research",
           prompt: `
@@ -324,7 +324,7 @@ The report must be readable independently by a leader who may never have used Ch
           },
           {
           title: "Stig 5: Nýggjur gluggi og møguleikalisti",
-          description: "Opna ein nýggjan glugga við ChatGPT. Kopiera byrtið, fyll inn tín samandrátt. Broyt nú myndilin til [ChatGPT 5.2 Thinking] og send avstað. Skoðað so listan av møguleikum; er úrslitið skilagott? Stundum kemur modellið inn á skeiva leið; royn umaftur, um tað hendir.",
+          description: "Opna ein nýggjan glugga við ChatGPT. Kopiera birtið, fyll inn tín samandrátt. Broyt nú myndilin til [ChatGPT 5.2 Thinking] og send avstað. Skoðað so listan av møguleikum; er úrslitið skilagott? Stundum kemur modellið inn á skeiva leið; royn umaftur, um tað hendir.",
               window: "Nýtt kjatt",
               model: "GPT 5.2 Thinking",
           prompt: `
@@ -544,7 +544,7 @@ Write the ideas briefly, concretely, and adapted to this client. Avoid generic s
           },
           {
           title: "Stig 6: Bygg víðari – partur 1",
-          description: "Kopiera byrti niðanfyri og send.",
+          description: "Kopiera birti niðanfyri og send.",
                 window: "Sama kjatttráð",
                 model: "GPT 5.2 Thinking",
           prompt: `Great. Now I want you to think **outside the box**.
@@ -562,7 +562,7 @@ Write the ideas briefly, concretely, and adapted to this client. Avoid generic s
           },
           {
           title: "Stig 7: Bygg víðari – partur 2",
-          description: "Kopiera byrtið niðanfyri inn í sama kjatt og send.",
+          description: "Kopiera birtið niðanfyri inn í sama kjatt og send.",
               window: "Sama kjatttráð",
               model: "GPT 5.2 Thinking",
           prompt: `
@@ -582,7 +582,7 @@ Present the **3 best ideas** you find.
           },
           {
           title: "Stig 8: Ger listan",
-          description: "Kopiera byrtið inn í ChatGPT og send.",
+          description: "Kopiera birtið inn í ChatGPT og send.",
               window: "Sama kjatttráð",
               model: "GPT 5.2 Thinking",
           prompt: `Develop highly relevant metrics to measure the effectiveness and ROI of all these 21 ideas.
@@ -594,7 +594,7 @@ Finally, present a sorted list of the 15 best ideas.`,
           },
           {
           title: "Stig 9: Skoyt uppí meira forkláring",
-          description: "Kopiera byrtið inn í ChatGPT og send.",
+          description: "Kopiera birtið inn í ChatGPT og send.",
               window: "Sama kjatttráð",
               model: "GPT 5.2 Thinking",
           prompt: `
@@ -626,7 +626,7 @@ Keep each description short and practical so a busy professional can immediately
           {
             title: "Stig 1: Bið ChatGPT finna uppá evnir",
             description:
-              "Koyr byrti niðanfyri inn í ChatGPT og skoyt uppí tína arbeiðis lýsing frá venjing 1.",
+              "Koyr birti niðanfyri inn í ChatGPT og skoyt uppí tína arbeiðis lýsing frá venjing 1.",
               window: "Nýtt kjatt",
               model: "GPT 5.2 Thinking",
             prompt: `
@@ -698,7 +698,7 @@ Ud over at (a) gennemsøge, hvad brugere og 'thought leaders' siger, og (b) find
               "Eg vátti, at eg havi fingið ein lista við evnum, sum passa til mín leiklut."
           },
           {
-            title: "Stig 2: Vel tíni 3 yndisbyrt",
+            title: "Stig 2: Vel tíni 3 yndisbirt",
             description:
               "Les listan og vel 3 evni tú vilt arbeiða víðari við. Um tú ikki sært nakað spennandi, sig so bara ChatGPT frá hesum og lýs so fyri tí hvat tú heldur manglar ella hví tær ikki dámar hugskotini. Og royn so aftur.",
             requiresConfirmation: true,
@@ -706,9 +706,9 @@ Ud over at (a) gennemsøge, hvad brugere og 'thought leaders' siger, og (b) find
               "Eg vátti, at eg havi valt 3 evni."
           },
           {
-            title: "Stig 3: Bygg klár Deep Research‑byrt til tey valdu evnini",
+            title: "Stig 3: Bygg klár Deep Research‑birt til tey valdu evnini",
             description:
-              "Í sama kjatt, avrita byrti niðanfyri og fyll inn tíni 3 valdu evnir.",
+              "Í sama kjatt, avrita birti niðanfyri og fyll inn tíni 3 valdu evnir.",
               window: "Sama kjatttráð",
               model: "GPT 5.2 Thinking",
             prompt: `
@@ -765,12 +765,12 @@ For hvert emne: vælg den bedste rapporttype og lav én kort prompt (≤200 ord)
               `,
             requiresConfirmation: true,
             confirmationText:
-              "Eg vátti, at eg havi fingið 3 byrt."
+              "Eg vátti, at eg havi fingið 3 birt."
           },
           {
             title: "Stig 4: Tendra Deep Research",
             description:
-              "Nú skalt tú tendra tíni trý Deep Research, men bara eitt í senn. Opna eitt nýtt kjatt og koyr tað fyrsta byrti inn. Trýst so á tað stóra + við kjatti og tendra fyri Deep Research. Send nú byrti. Ger hettar fyri hvørt byrt tú fekk frá myndlinum.",
+              "Nú skalt tú tendra tíni trý Deep Research, men bara eitt í senn. Opna eitt nýtt kjatt og koyr tað fyrsta birti inn. Trýst so á tað stóra + við kjatti og tendra fyri Deep Research. Send nú birti. Ger hettar fyri hvørt birt tú fekk frá myndlinum.",
               window: "Nýtt kjatt",
               model: "GPT 5.2 + Deep Research",
             requiresConfirmation: true,

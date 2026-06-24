@@ -28,7 +28,7 @@ Ein góður háttur at lesa hesa vegleiðingina er at hyggja longri enn júst ta
 
 Tað gagnliga er sniðið á dømunum.
 
-Tú fært mest burtur úr dømunum, um tú sært byrtini sum mynstur og ikki sum fastar orðingar. Skift smálutirnar út við títt veruliga arbeiði, tínar veruligu mátingar, tínar veruligu myndir og tín veruliga spurning.
+Tú fært mest burtur úr dømunum, um tú sært birtini sum mynstur og ikki sum fastar orðingar. Skift smálutirnar út við títt veruliga arbeiði, tínar veruligu mátingar, tínar veruligu myndir og tín veruliga spurning.
 
 ---
 
@@ -60,10 +60,10 @@ Nýtsludømini niðanfyri eru skipaði eftir, hvat slag av hjálp vitlíki kann 
 Dømini eru skrivað soleiðis, sum ein handverkari møguliga hevði skrivað í veruleikanum. Í flestu førum er besti setningurin at veita vitlíki bara ein greið frágreiðing um støðuna, hvat tú longu veitst, hvat tú longu hevur roynt, og hvat tú hevur tørv á næst.
 :::
 
-Tá ið man skrivar eina boð til vitlíki, verður hetta rópt eitt byrt.
+Tá ið man skrivar eina boð til vitlíki, verður hetta rópt eitt birt.
 
 :::principle
-Eitt gott byrt til vitlíki hevur vanliga fýra partar, tú skal lýsa:
+Eitt gott birt til vitlíki hevur vanliga fýra partar, tú skal lýsa:
 
 1. Hvat tú arbeiðir við.  
 2. Hvat tú veitst higartil.  
@@ -91,7 +91,7 @@ Vitlíki er ofta mest gagnligt, tá ið tað hjálpir tær at hugsa eina fløkta
 **Ímynda tær eina veruliga uppgávu:** Tú hevur longu kannað tað mest eyðsýnda á eini útgerð, men ávaringarteknini vísa framvegis ikki greitt í eina ávísa leið. Í staðin fyri at leypa millum gitingar vilt tú hava eina betri raðfylgju av kanningum.
 :::
 
-**Byrta soleiðis:**
+**Birta soleiðis:**
 
 :::prompt
 „Eg eri HVS- og ventilatiónsteknikari og arbeiði við eini kølieind í einum sethúsum. Hon koyrir, men kølir ikki. Eg havi kannað síðurnar og termostatin og váttað at kompressarin koyrir. Kølievnismátingarnar síggja vanligar út á trýstmálarunum. Gev mær 5 aðrar møguligar mekaniskar ella elektriskar orsøkir, flokka frá mest sannlíkar til minst sannlíkar. Sig mær eisini fyri hvørja orsøk, hvør næsta royndin er sum eg kann gera, sum kann vátta ella beina hana burtur.“
@@ -128,7 +128,7 @@ Her er ein nýggj máting, eg júst fekk: [set máting inn]. Hvussu broytir tað
 Ein lítil steðgur. Ein stór sparing.
 :::
 
-**Byrta soleiðis:**
+**Birta soleiðis:**
 
 :::prompt
 „Eg eri mekanikari og arbeiði uppá ein traktor. Eg haldi, at startmotorurin í hesum dieseltraktori er deyður, tí hann klikkar bara skjótt, tá ið eg snari lyklinum. Áðrenn eg brúki tveir tímar upp á at taka byrjanarmotorin úr, gev mær ein lista við øðrum trupulleikum við battaríi, kaðalum, jørð, rele ella leiðingum, sum eg fyrst eigi at kanna við multimetri.“
@@ -163,7 +163,7 @@ Hvør smálutur hevði fingið teg at broyta meining um mest sannlíku orsøkina
 **Ímynda tær eina veruliga uppgávu:** Tú hevur eina skannarakotu, eina útskrift, eina loggfílu, eina manometurmáting ella fleiri elektriskar mátingar. Tú vilt hava hjálp at síggja, hvat hevur týdning, hvat sær vanligt út, og hvat peikar á næstu kanning.
 :::
 
-**Byrta soleiðis:**
+**Birta soleiðis:**
 
 :::prompt
 „Eg eri bilteknikari. Skannarin vísir P0420-kotu á einum 2018 Ford F-150. Gev mær eina stig-fyri-stig-greiningarleið, so eg kann kanna sannlíku orsøkirnar, áðrenn eg skifti katalysatorin. Tak við, hvussu eg útiloki trupulleikar við O₂-sensorum, leka í útstoytinum og motortrupulleikar, sum kunnu geva somu kotu.“
@@ -205,7 +205,7 @@ Kundin stendur her. Ger eina greiða lýsing av hvat var galið, so eg kann siga
 **Ímynda tær eina veruliga uppgávu:** Tú hevur eina ætlan fyri eina rennu, eina undirtalvu, eina rørleið, eina uppseting av útgerð ella ein smálut í eini umvæling. Áðrenn tú byrjar at skera, grava, bora ella bíleggja tilfar, vilt tú hava eina umfatandi gjøgnumgongd av ætlanini.
 :::
 
-**Byrta soleiðis:**
+**Birta soleiðis:**
 
 :::prompt
 „Eg eri elektrikari í sethúsum. Eg ætli at leggja eina 60 A leiðing til ein leysan garasjupart við leiðing í niðurgrivnum -PVC-røri. Her er ætlanin hjá mær fyri gravardýpd, rørstødd, leiðarastødd, jørðing og undirtalvu: [set stuttar smálutir inn]. Lat sum um tú ert ein dygdargóður føroyskur el-eftirlitsmaður. Hvørji trygdarviðurskifti, reglur ella praktiskir trupulleikar kann eg hava gloymt? Sig mær eisini, hvat eg eigi at kanna lokalt, áðrenn eg líti á ætlanina.“
@@ -258,13 +258,13 @@ Hetta er ikki bara ein skjótari útgáva av gomlu uppgávuni. Í summum førum 
 **Ímynda tær eina veruliga uppgávu:** Tú stendur framman fyri eini eind, talvu, maskinu, armaturi ella einum arbeiðsøki. Tú hevur handbókina ella arbeiðsfíluna á telefonini ella telduni, men tað tekur tíð at finna røttu síðuna. Í staðin fyri at jagstra leitorð leggur tú fíluna inn og spyrt júst tann spurningin, tú hevur tørv á at fáa svaraðan.
 :::
 
-**Byrta soleiðis:**
+**Birta soleiðis:**
 
 :::prompt
 „Eg havi lagt viðlíkahaldshandbókina fyri hesa eindina inn. Brúka fyrst bara handbókina, sum eg havi lagt inn. Eg skal vita røttu uppstartsgongdina, eftir at stýriborðið er skift. Vís mær hvørja síðu, yvirskrift, talvu ella part, tú brúkar. Um handbókin ikki sigur tað, skalt tú boða mær frá hesum, áðrenn tú gevur vanlig ráð.“
 :::
 
-Ein onnur byrt-útgáva til verkætlanarfílur:
+Ein onnur birt-útgáva til verkætlanarfílur:
 
 :::prompt
 „Eg havi lagt tekningar, arbeiðslýsing og ískoyti inn. Hvat er við í mínum arbeiðsumfangi fyri lágspenningsleiðingar í fundarrúmunum? Svara fyrst út frá fílunum, nevn neyva partin ella tekningarviðmerkingina, og skriva alt, sum er ógreitt.“
@@ -304,13 +304,13 @@ Hvønn spurning eigi eg at seta høvuðsarbeiðstakaranum, veitara, framleiðara
 **Ímynda tær eina veruliga uppgávu:** Tú kemur á staðið, og kundin sigur: „Hon er gomul, men hon riggaði í síðstu viku.“ Tú hevur ikki modellið í arbeiðsboðunum. Tú tekur eina klára mynd av navnaplátuni og brúkar hana til at finna út av, hvat tú í veruleikanum arbeiðir við, áðrenn tú tekur nakra (ov) skjóta avgerð.
 :::
 
-**Byrta soleiðis:**
+**Birta soleiðis:**
 
 :::prompt
 „Her er ein mynd av navnaplátuni á hesi HVS- og ventilatiónseindini á takinum. Skriva framleiðara, modellnummar, seriunummar, spenning, fasur, kølievni og allar upplýsingar um kapasitet ella merking, sum tú sært. Sig mær, hvørjar upplýsingar hava mest at siga fyri at finna røttu handbókina og røttu eykalutaupplýsingarnar. Vís eisini á tað, sum tú ikki klárar at lesa greitt, so eg veit, hvat eg má kanna sjálvur á staðnum.“
 :::
 
-Ein onnur byrt-útgáva:
+Ein onnur birt-útgáva:
 
 :::prompt
 „Brúka hesa myndina av navnaplátuni til at hjálpa mær at fáa yvirlit. Hvørjar neyvar modellupplýsingar eigi eg at leita eftir, hvørja handbók ella eykalutalista eigi eg at finna næst, og hvat eigi eg at vátta, áðrenn eg bíleggi nakrar lutir?“
@@ -345,13 +345,13 @@ Gev mær eitt stutt handrit til at ringja til eykalutaveitaran við, bara við t
 **Ímynda tær eina veruliga uppgávu:** Tú tekur ein løgnan ventil, rørlut, bindilið, beslag, lás, rele, ella maskinlut úr eini eldri uppseting. Einki greitt merki er á. Tú veist á leið hvat luturin ger, men ikki hvat hann eitur, hvat kemur í staðin, ella hvørjar mátingar hava týdning.
 :::
 
-**Byrta soleiðis:**
+**Birta soleiðis:**
 
 :::prompt
 „Her er ein mynd av einum luti, sum eg tók úr eini eldri røruppseting. Eg veit ikki neyva navnið. Sig mær teir 3 mest sannlíku møguleikarnar fyri hvussu hettar eitur.“
 :::
 
-Ein onnur byrt-útgáva:
+Ein onnur birt-útgáva:
 
 :::prompt
 „Eg havi lagt myndir inn av hesum gamla el-lutinum úr trimum vinklum. Hjálp mær at finna út av hvat slag av luti hann sannlíkt er, hvønn nútímans eykalutamøguleika eg eigi at spyrja um, og hvørjar trygdar- ella sambæriligar upplýsingar eg má kanna, áðrenn eg keypi nakað.“
@@ -386,13 +386,13 @@ Um júst hesin luturin ikki verður framleiddur longur, hvørjar upplýsingar hj
 **Ímynda tær eina veruliga uppgávu:** Tú hevur tvey dátubløð, tvær útgávur av eini tekning, tvær vøruinnlatingar ella tvey tilboð, sum síggja næstan eins út. Tú mást vita, hvat er broytt, sum ávirkar uppseting, sambærileika, arbeiðstíð, bílegging, garanti, tíðarætlan ella ábyrgd.
 :::
 
-**Byrta soleiðis:**
+**Birta soleiðis:**
 
 :::prompt
 „Eg havi lagt tvær útgávur av hesari vøruinnlatingini inn. Samanber tær og vís mær bara teir munirnar, sum hava týdning fyri uppseting, leiðingar, festing, sambærileika, frípláss, partar ella arbeiðstíð. Hygg burtur frá orðabroytingum, sum ikki ávirka arbeiðið. Set týdningarmestu munirnar ovast.“
 :::
 
-Ein onnur byrt-útgáva:
+Ein onnur birt-útgáva:
 
 :::prompt
 „Samanber hesa upprunaligu arbeiðslýsingina við broytta ískoytið. Sig mær, hvat er broytt fyri mítt arbeiði, hvat kann ávirka bíleggingina av tilfar, og hvørjar spurningar eg eigi at seta, áðrenn eg haldi fram.“
@@ -437,13 +437,13 @@ Nógv mistøk henda, áðrenn arbeiðið byrjar: skeivir rørlutir, einki mátit
 **Ímynda tær eina veruliga uppgávu:** Tað er kvøldið fyri eina ávísa arbeiðsuppgávu, ella tú ert um at fara av verkstaðnum. Arbeiðslýsingin er stutt og ikki serliga nágreinilig. Tú veit hvat uppgávan í høvuðsheitum snýr seg um, men tú ynskir at kanna eftir um amboð, partar, sannlíkar kanningar og tað, sum fólk vanliga gloyma, er tøkt at taka við.
 :::
 
-**Byrta soleiðis:**
+**Birta soleiðis:**
 
 :::prompt
 „Í morgin skal eg skifta ein útsúgvara í einum baðirúmi í einum eldri húsi. Kundin sigur at hann larmar, vatn dryppar, og tað kanska blæsur út á loftið. Ger mær ein minnislista við amboðum, verndarútgerð, og undanarbeiði, ið eg átti at gjørt, áðrenn eg fari. Ger eisini ein lista við tingum, ið eg átti gjørt, tá ið eg komi fram, myndir, ið eg eigi at taka, og spurningar, eg eigi at seta, áðrenn eg byrji.“
 :::
 
-Ein onnur byrt-útgáva:
+Ein onnur birt-útgáva:
 
 :::prompt
 „Eg skal kanna ein motor á eini lítlari vinnuligari luftviðgerareind, sum slær út av og á. Ger mær ein fyrireikingarlista: amboð og mátitól, sannlíkar partar at hava við, fyrstu mátingar at taka, ting, sum lætt verða gloymd, og hvørjar upplýsingar eg eigi at fáa frá kundanum, áðrenn eg lati nakað upp.“
@@ -479,13 +479,13 @@ Hvat eigi eg at spyrja kundan um, áðrenn eg koyri hagar?
 **Ímynda tær eina veruliga uppgávu:** Tú hevur gingið arbeiðið ígjøgnum, skrivað nakrar viðmerkingar og veit hvat skal gerast. Men viðmerkingarnar eru grovar: „skifta vaskiborð, bøta gipsvegg, flyta stikk, nýggir listar, mála.“ Tú hevur tørv á einum reinari fyrsta uppskoti við arbeiðspunktum og tilfari, so tú kanst stramma tað upp.
 :::
 
-**Byrta soleiðis:**
+**Birta soleiðis:**
 
 :::prompt
 „Ger hesa grovu arbeiðslýsingina til flokkað arbeiðspunkt og ein byrjanartilfarslista. Hav arbeiðsuppgávur fyri seg og tilfarið fyri seg. Vís á fortreytir, tú gert, og alt, sum má váttast á staðnum, áðrenn prísur verður settur: [skriva grovar viðmerkingar inn].“
 :::
 
-Ein onnur byrt-útgáva:
+Ein onnur birt-útgáva:
 
 :::prompt
 „Eg eri handverkari og fyrireiki eina lítla dagføring av einum vaskirúmi. Arbeiðsumfang: taka gomlu hillarnar niður, bøta skaða á vegg, seta undirskáp og borðplátu upp, seta blandikrana til vask, skifta útlufting til turkitrumlu og mála veggir. Ger eitt arbeiðsumfang í punktum, ein tilfarslista og ein lista við spurningum, sum eg má fáa svarað, áðrenn eg bindi meg til ein prís.“
@@ -530,13 +530,13 @@ Vitlíki skal ikki brúkast sum endalig handbók. Men tað kann geva tær eitt g
 **Ímynda tær eina veruliga uppgávu:** Tú skalt arbeiða við einum tilfari, eini uppseting ella eini arbeiðsgongd, sum tú ikki hevur gjørt ofta fyrr. Tú dugir títt fak, men tú ert óviss/ur um røttu raðfylgjuna. Tú vilt ikki byrja við tí, sum sær lættast út, og so seinni finna út av, at okkurt skuldi verið mátað, grundað, merkt, bílagt, góðkent ella tornað fyrst.
 :::
 
-**Byrta soleiðis:**
+**Birta soleiðis:**
 
 :::prompt
 „Eg eri handverkari og skal seta upp eitt nýtt slag av veggjaplátum í einum vaskirúmi. Eg havi ikki arbeitt við júst hesum plátunum fyrr. Hjálp mær at gera eina arbeiðsrøð, áðrenn eg byrji. Být uppgávuna sundur í: tað, eg skal kanna á staðnum fyrst; tað, sum má fyrireikast, áðrenn pláturnar koma upp; rætta raðfylgju fyri máting, tilskering, festing og tætting; hvat má gerast áðrenn næsti fakpersónur kemur inn; og hvat eg má kanna í framleiðaravegleiðingini, áðrenn eg líti á ætlanina. Vís eisini á stig, sum ikki mugu gerast í skeivari raðfylgju.“
 :::
 
-Ein onnur byrt-útgáva:
+Ein onnur birt-útgáva:
 
 :::prompt
 „Eg skal fyri fyrstu ferð seta upp eina hurð við karmsetti og tættilistum í einum arbeiði, har ávís krøv eru til ljóð og eldsbrunafyribyrging. Eg dugi vanligt hurðaarbeiði, men eg vil hava hjálp at hugsa raðfylgjuna ígjøgnum. Ger eina stig-fyri-stig arbeiðsgongd frá kanning av opningi og undirlagi til máting, festing, justering, tætting, beslag, eftirkanning og handan. Sig mær eisini, hvørji stig eg má eftirkanna í forskrift, tekning ella framleiðaraleiðbeining.“
@@ -591,13 +591,13 @@ Tann týdningarmesti vanin er at biðja vitlíki rudda viðmerkingarnar upp utta
 **Ímynda tær eina veruliga uppgávu:** Tú situr í bilinum eftir eina tænastuvitjan ella ert við at enda eina vakt. Viðmerkingarnar eru fullar av styttingum, hálvum setningum, mátingum, lutanumrum og øðrum viðkomandi, ið tú skal minnast. Viðmerkingarnar geva meining fyri teg beint nú. Tær geva kanska ikki meining fyri næsta teknikara, skrivstovuna, kundan ella teg sjálvan í næstu viku.
 :::
 
-**Byrta soleiðis:**
+**Birta soleiðis:**
 
 :::prompt
 „Skriva hesar grovu arbeiðsviðmerkingarnar um til eina greiða arbeiðsfrágreiðing. Být tað upp í: frágreiðing til kunda um trupulleikan, kanningar, sum vórðu gjørdar, hvørji stig vóru tikin, partar, sum vórðu brúktir, núverandi støðu og tilmæli um næstu stig. Halt tað einfalt og nágreiniligt: [set grovar viðmerkingar inn].“
 :::
 
-Ein onnur byrt-útgáva:
+Ein onnur birt-útgáva:
 
 :::prompt
 „Ger hesar viðmerkingarnar til eina vaktavhendan til næsta viðlíkahaldsteknikara. Legg dent á, hvar eg slepti, hvat longu er útilokað, núverandi mátingar, trygdarviðurskifti, partar, sum krevjast, og hvat skal kannast næst. Lat ikki gitingar ljóða sum staðfestar sannroyndir: [set grovar viðmerkingar inn]“
@@ -638,13 +638,13 @@ Ger greitt hvat skal raðfestast næst?
 **Ímynda tær eina veruliga uppgávu:** Kundin sær, at okkurt framvegis „riggar“, men tú veitst, at tað er við at bila, er ótrygt, óeffektivt, uttan fyri forskriftina ella sannlíkt fer at skapa størri skaða. Tú mást greiða málið so væl, at kundin kann taka eina avgerð.
 :::
 
-**Byrta soleiðis:**
+**Birta soleiðis:**
 
 :::prompt
 „Eg eri HVS- og ventilatiónsteknikari. Blásaramotorurin hjá kundanum koyrir framvegis, men legurnar larma, og streymupptøkan er hægri, enn hon eigur at vera. Greið einum húseigara frá hesum í gerandismáli. Tak við, hví tað hevur týdning at handla nú, hvat kann henda um tey bíða, og eina einfalda samanbering. Halt tónan róligan, og lat tað ikki ljóða sum ein søluroynd.“
 :::
 
-Ein onnur byrt-útgáva:
+Ein onnur birt-útgáva:
 
 :::prompt
 „Eg má greiða einum kunda frá, hví ein lítil leki undir vaskinum ikki eigur at verða gloymdur. Skriva eina frágreiðing í gerandismáli, sum fevnir um fjaldan skaða, skaða á skáp og hví tað er bíligari at umvæla tað nú enn at bíða. Lat tað ljóða sum ein teknikari, sum tosar, ikki sum ein sølufaldari.“
@@ -693,13 +693,13 @@ Vitlíki kann á gerandismáli greiða frá t.d. eini torskildari skipan, hjálp
 **Ímynda tær eina veruliga uppgávu:** Tú ert timburmaður og skalt seta plátur ella klædning upp á ein vegg, har elektrikarin longu hevur lagt leiðingar og sett el-dósir. Tá ið veggurin er lokaður, verður nógv truplari at finna aftur, hvar dósir, rør, kaðalrutir, festipunkt og møgulig atkomustøð eru. Tú vilt tí steðga á eina løtu og hugsa: “Hvat hevði elektrikarin ynskt, at eg hevði merkt, myndað ella spurt um, áðrenn eg hylji hetta?”
 :::
 
-**Byrta soleiðis:**
+**Birta soleiðis:**
 
 :::prompt
 „Eg eri timburmaður og skal seta plátur upp á ein vegg, har elektrikarin longu hevur sett el-dósir og lagt leiðingar. Eg vil ikki hylja nakað, sum verður trupult at finna aftur, ella skapa eykaarbeiði fyri elektrikaran seinni. Lat sum um tú ert ein royndur elektrikari, sum skal hjálpa mær at gera eina góða avhendan, áðrenn veggurin verður lokaður. Gev mær ein praktiskan lista við hvat eg eigi at merkja á vegginum, hvørjar myndir eg eigi at taka, hvørjar mátingar eg eigi at skriva niður, hvat eg eigi at spyrja elektrikaran um, og hvørji ting eru lætt at gloyma, tá ið plátur verða settar upp.“
 :::
 
-Ein onnur byrt-útgáva:
+Ein onnur birt-útgáva:
 
 :::prompt
 „Eg eri handverkari og skal loka ein vegg, har onnur fak hava arbeitt frammanundan. Hjálp mær at gera ein minnislista, sum tekur sjónarhornið hjá elektrikara, rørleggjara og ventilatiónsteknikara við. Hvat kann eg av óvart hylja ella gera trupult at koma til? Hvat eigi eg at merkja, taka mynd av ella vátta við tey, áðrenn eg haldi fram? Halt tað praktiskt og fokusera upp á samskifti og avhendan, ikki tekniska góðkenning.“

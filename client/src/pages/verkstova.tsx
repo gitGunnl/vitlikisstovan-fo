@@ -95,7 +95,7 @@ function PromptCard({ title, subtitle, text, image, video }: { title: string; su
           ) : (
             <>
               <Copy className="w-3.5 h-3.5" />
-              Avrita byrt
+              Avrita birt
             </>
           )}
         </button>

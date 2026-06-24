@@ -109,7 +109,7 @@ const timelineData: TimelineEvent[] = [
     date: "2025-09-26",
     title: "Framløga til Vísindavøku",
     summary:
-      "Sum partur av at miðla verkætlanina havi eg hildið eina framløgu á vísindavøku. Sí framløguna og tilhoyrandi byrt niðanfyri. 👇️",
+      "Sum partur av at miðla verkætlanina havi eg hildið eina framløgu á vísindavøku. Sí framløguna og tilhoyrandi birt niðanfyri. 👇️",
     mediaType: "video",
     mediaSrc: "https://www.youtube.com/embed/I8oRK07dF2E",
     accordions: [
@@ -467,7 +467,7 @@ const Tilarbeidis = () => {
               </div>
               <p className="text-foreground/90 mb-6 ml-11">
                 Sum partur av at miðla verkætlanina havi eg hildið eina
-                framløgu á vísindavøku. Sí framløguna og tilhoyrandi byrt
+                framløgu á vísindavøku. Sí framløguna og tilhoyrandi birt
                 niðanfyri. 👇️
               </p>
               <div className="w-full rounded-lg overflow-hidden border border-border/40">

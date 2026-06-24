@@ -191,7 +191,7 @@ const PromptCard = ({ text }: { text: string }) => {
 // Component: Simple Prompt Card (for follow-up prompts)
 // ---------------------------------------------------------------------------
 // A stripped-down variant of PromptCard for short follow-up prompts: same
-// stationery look (dashed border, off-white panel, mono text) but no "Byrt"
+// stationery look (dashed border, off-white panel, mono text) but no "Birt"
 // header, no icon, and no copy button — it hugs the text tightly.
 
 const SimplePromptCard = ({ text }: { text: string }) => {
