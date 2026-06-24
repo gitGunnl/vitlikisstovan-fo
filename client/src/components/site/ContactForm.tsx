@@ -15,6 +15,7 @@ import {
 import { contactFormSchema, type ContactForm } from "@shared/schema";
 import { useToast } from "@/hooks/use-toast";
 import { reportFormFailure } from "@/lib/reportFormFailure";
+import { trackEvent } from "@/lib/analytics";
 import { MessageSquare, Mail, Phone, Facebook, Linkedin } from "lucide-react";
 import { siteConfig } from "@/content/site";
 
@@ -53,6 +54,7 @@ export default function ContactSection() {
       return { success: true, message: "Boðið er sent!" };
     },
     onSuccess: () => {
+      trackEvent("contact_form_submit", { form_location: "contact_section" });
       toast({
         title: "Boðið er sent!",
         description: "Takk fyri títt boð. Vit svara tær skjótt.",

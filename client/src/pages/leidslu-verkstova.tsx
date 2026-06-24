@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
+import { trackEvent } from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -380,6 +381,7 @@ function WorkshopContactFormComponent({ id }: { id?: string }) {
           content_category: "leadership-workshop",
         });
       }
+      trackEvent("workshop_booking", { workshop: "leadership_workshop" });
       setSubmitted(true);
       form.reset();
     },

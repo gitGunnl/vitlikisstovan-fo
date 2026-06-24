@@ -15,6 +15,7 @@ import {
 import { contactFormSchema, type ContactForm } from "@shared/schema";
 import { useToast } from "@/hooks/use-toast";
 import { reportFormFailure } from "@/lib/reportFormFailure";
+import { trackEvent } from "@/lib/analytics";
 import { MessageSquare } from "lucide-react";
 
 interface InlineContactFormProps {
@@ -58,6 +59,9 @@ export default function InlineContactForm({ serviceName }: InlineContactFormProp
       return { success: true };
     },
     onSuccess: () => {
+      trackEvent("contact_form_submit", {
+        form_location: `inline:${serviceName}`,
+      });
       toast({
         title: "Boðið er sent!",
         description: "Takk fyri títt boð. Vit svara tær skjótt.",

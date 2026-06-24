@@ -2,6 +2,15 @@
 
 This is a static website for Vitlíkisstovan, an AI and coding education platform with a Faroese-first approach. The application is built as a modern single-page application with React, deployed as a static site on Replit. It features a landing page that showcases educational programs, consulting services, and resources. The platform is designed to provide professional AI and coding education through a comprehensive 12-week flagship program and various consulting services. Contact form submissions and the `/landsnet` ritlingur lead-magnet form are handled directly through Google Forms (no-cors POST) — the ritlingur uses a dedicated form whose Apps Script trigger emails the PDF to the visitor (see `docs/ritlingur/google-form-setup.md`). A lightweight Express backend exists for form-submission monitoring. The monitor runs synthetic POST + schema health checks every 30 minutes by default (override via `FORM_MONITOR_INTERVAL_MIN`) and ingests client-side failure beacons from the browser; both feed the same per-form alert state machine and send alert/recovery emails via the Replit Gmail integration when a lead form silently breaks. Monitoring runtime state is persisted to `data/monitoring.json` for direct inspection (gitignored — regenerated at runtime). Runtime ritlingur lead data (`data/*.ndjson`, e.g. `ritlingur-requests.ndjson` / `ritlingur-consents.ndjson`) contains visitor PII and is gitignored — it must never be committed to source control. (Historical commits prior to this change still contain the old entries; a git history scrub would be a separate step.) Required env vars for monitoring: `ALERT_EMAIL_TO` plus an authorized Gmail connection (`google-mail` connector with `gmail.send` scope). There is intentionally no admin dashboard or admin endpoint; to manually trigger or verify, restart the workflow (a startup check runs ~30s after boot) or read `data/monitoring.json` directly.
 
+## Analytics (Google Analytics 4)
+
+GA4 is wired through `client/src/lib/analytics.ts` (`initAnalytics`, `trackPageView`, `trackEvent`) and is a no-op unless `VITE_GA_MEASUREMENT_ID` is set. Key conversion events fired on success:
+- `contact_form_submit` — param `form_location` (`contact_section` or `inline:<serviceName>`). Fired by `ContactForm.tsx` and `InlineContactForm.tsx`.
+- `workshop_booking` — param `workshop` (`ai_workshop` or `leadership_workshop`). Fired in `ai-workshop.tsx` / `leidslu-verkstova.tsx` alongside the existing Meta Pixel `Lead` event.
+- `ritlingur_signup` — param `consent` (boolean). Fired in `landsnet.tsx` alongside the page's own local `trackEvent` (which feeds dataLayer/Plausible). The shared GA4 helper is imported there as `trackGAEvent` to avoid clashing with the local function of the same name.
+
+To count these as conversions, mark the event names above as **Key events** in the GA4 admin UI (Admin → Events). This is a one-time dashboard step, not in code.
+
 # User Preferences
 
 Preferred communication style: Simple, everyday language.

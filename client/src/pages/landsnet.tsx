@@ -25,6 +25,7 @@ import { useToast } from "@/hooks/use-toast";
 import { ritlingurRequestSchema, type RitlingurRequest } from "@shared/schema";
 import { siteConfig } from "@/content/site";
 import { reportFormFailure } from "@/lib/reportFormFailure";
+import { trackEvent as trackGAEvent } from "@/lib/analytics";
 import {
   AlertTriangle,
   ArrowRight,
@@ -203,7 +204,10 @@ function RitlingurForm({ onSuccess }: { onSuccess: () => void }) {
       // no-cors → opaque response. Treat a non-thrown fetch as success.
       return { success: true };
     },
-    onSuccess: () => {
+    onSuccess: (_result, variables) => {
+      if (!variables.website) {
+        trackGAEvent("ritlingur_signup", { consent: variables.consent });
+      }
       form.reset();
       onSuccess();
     },
