@@ -103,3 +103,21 @@ export function trackCtaClick(label: string, location: string) {
 export function trackSocialClick(platform: string, location: string) {
   trackEvent("social_click", { platform, social_location: location });
 }
+
+/**
+ * Record how far a reader scrolled through a guide article. `percent` is the
+ * milestone reached (e.g. 25 / 50 / 75 / 100) and should be fired at most once
+ * per page visit by the caller. `guideId` / `guideTitle` identify which guide
+ * the engagement belongs to. No-ops when analytics is not configured.
+ */
+export function trackGuideScrollDepth(
+  guideId: string | undefined,
+  guideTitle: string | undefined,
+  percent: number,
+) {
+  trackEvent("guide_scroll_depth", {
+    guide_id: guideId,
+    guide_title: guideTitle,
+    percent,
+  });
+}

@@ -1,4 +1,4 @@
-import { useState, useMemo, Fragment } from "react";
+import { useState, useMemo, useEffect, useRef, Fragment } from "react";
 import type { ReactNode } from "react";
 import { Link } from "wouter";
 import Header from "@/components/site/Header";
@@ -19,7 +19,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import { getInteractiveGuide, interactiveGuidePdfPath } from "@/content/guides";
 import GuideFeedback from "@/components/site/GuideFeedback";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackGuideScrollDepth } from "@/lib/analytics";
 
 // ---------------------------------------------------------------------------
 // Inline Markdown Logic (Tasteful & Robust)
@@ -455,6 +455,62 @@ export default function GuideArticle({
   const guide = guideId ? getInteractiveGuide(guideId) : undefined;
   const pdfPath = guide ? interactiveGuidePdfPath(guide) : undefined;
 
+  const articleRef = useRef<HTMLElement>(null);
+  const guideTitle = guide?.title ?? heroTitle;
+
+  // Scroll-depth engagement tracking: fire a GA4 milestone each time the reader
+  // passes 25 / 50 / 75 / 100% of the article. Each milestone fires at most once
+  // per visit, and the whole thing resets when the guide changes (deps below).
+  useEffect(() => {
+    const el = articleRef.current;
+    if (!el) return;
+
+    const milestones = [25, 50, 75, 100];
+    const fired = new Set<number>();
+    let ticking = false;
+
+    const measure = () => {
+      ticking = false;
+      const articleHeight = el.offsetHeight;
+      if (articleHeight <= 0) return;
+      // How far the bottom of the viewport has progressed through the article.
+      const rect = el.getBoundingClientRect();
+      const progressed = window.innerHeight - rect.top;
+      const percent = Math.max(
+        0,
+        Math.min(100, Math.round((progressed / articleHeight) * 100)),
+      );
+
+      for (const m of milestones) {
+        if (percent >= m && !fired.has(m)) {
+          fired.add(m);
+          trackGuideScrollDepth(guideId, guideTitle, m);
+        }
+      }
+
+      if (fired.size === milestones.length) {
+        window.removeEventListener("scroll", onScroll);
+        window.removeEventListener("resize", onScroll);
+      }
+    };
+
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      window.requestAnimationFrame(measure);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll, { passive: true });
+    // Initial check so short articles fully in view still register.
+    measure();
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onScroll);
+    };
+  }, [guideId, guideTitle]);
+
   return (
     <div className="flex flex-col min-h-screen bg-stone-50 dark:bg-stone-950 font-serif">
       <Header />
@@ -523,7 +579,10 @@ export default function GuideArticle({
           )}
 
           {/* Article Body */}
-          <article className="selection:bg-stone-200 selection:text-stone-900 dark:selection:bg-stone-700 dark:selection:text-stone-50">
+          <article
+            ref={articleRef}
+            className="selection:bg-stone-200 selection:text-stone-900 dark:selection:bg-stone-700 dark:selection:text-stone-50"
+          >
             {contentParts.map((part, index) => {
               const match = part.match(BLOCK_TAG);
               if (match) {
