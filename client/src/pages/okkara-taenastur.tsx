@@ -4,6 +4,7 @@ import Footer from "@/components/site/Footer";
 import Section from "@/components/site/Section";
 import { Badge } from "@/components/ui/badge";
 import { seoConfig } from "@/content/seo";
+import { trackCtaClick } from "@/lib/analytics";
 import {
   Bot,
   GraduationCap,
@@ -384,6 +385,7 @@ export default function Taenastur() {
             </p>
             <a
               href="#contact"
+              onClick={() => trackCtaClick("Bílegg nú", "okkara_taenastur_final")}
               className="inline-flex items-center gap-2 rounded-2xl px-6 py-3 font-medium bg-primary text-primary-foreground hover:opacity-90 transition"
               aria-label="Byrja nú"
             >

@@ -15,7 +15,7 @@ import {
 import { contactFormSchema, type ContactForm } from "@shared/schema";
 import { useToast } from "@/hooks/use-toast";
 import { reportFormFailure } from "@/lib/reportFormFailure";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackSocialClick } from "@/lib/analytics";
 import { MessageSquare, Mail, Phone, Facebook, Linkedin } from "lucide-react";
 import { siteConfig } from "@/content/site";
 
@@ -134,6 +134,7 @@ export default function ContactSection() {
                     href={siteConfig.social.facebook} 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    onClick={() => trackSocialClick("facebook", "contact_section")}
                     className="flex items-center justify-center w-14 h-14 rounded-xl bg-teal-500/10 text-teal-600 hover:bg-teal-500 hover:text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-teal-500/25"
                     data-testid="contact-facebook"
                     aria-label="Far til okkara Facebook síðu"
@@ -144,6 +145,7 @@ export default function ContactSection() {
                     href={siteConfig.social.linkedin} 
                     target="_blank" 
                     rel="noopener noreferrer"
+                    onClick={() => trackSocialClick("linkedin", "contact_section")}
                     className="flex items-center justify-center w-14 h-14 rounded-xl bg-teal-600/10 text-teal-700 hover:bg-teal-600 hover:text-white hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-teal-600/25"
                     data-testid="contact-linkedin"
                     aria-label="Far til okkara LinkedIn síðu"

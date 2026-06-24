@@ -1,5 +1,6 @@
 import { siteConfig } from "@/content/site";
 import { Facebook, Linkedin } from "lucide-react";
+import { trackSocialClick } from "@/lib/analytics";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -26,6 +27,7 @@ export default function Footer() {
                 href={siteConfig.social.facebook} 
                 target="_blank" 
                 rel="noopener noreferrer"
+                onClick={() => trackSocialClick("facebook", "footer")}
                 className="text-muted-foreground hover:text-primary transition-all duration-200 hover:scale-110"
                 data-testid="link-facebook"
                 aria-label="Visit our Facebook page"
@@ -36,6 +38,7 @@ export default function Footer() {
                 href={siteConfig.social.linkedin} 
                 target="_blank" 
                 rel="noopener noreferrer"
+                onClick={() => trackSocialClick("linkedin", "footer")}
                 className="text-muted-foreground hover:text-primary transition-all duration-200 hover:scale-110"
                 data-testid="link-linkedin"
                 aria-label="Visit our LinkedIn page"

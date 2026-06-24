@@ -4,6 +4,7 @@ import Footer from "@/components/site/Footer";
 import Section from "@/components/site/Section";
 import CardFeature from "@/components/site/CardFeature";
 import CTAButtons from "@/components/site/CTAButtons";
+import { trackCtaClick } from "@/lib/analytics";
 import ContactSection from "@/components/site/ContactForm";
 import VideoBackground from "@/components/site/VideoBackground";
 import { Card, CardContent } from "@/components/ui/card";
@@ -96,6 +97,7 @@ export default function Home() {
               <CTAButtons
                 primary={heroSlide.primaryCTA}
                 className="mt-2"
+                location="hero"
               />
             </div>
 
@@ -253,7 +255,7 @@ export default function Home() {
 
               <div className="mt-8 flex justify-center">
                 <Button asChild size="lg" aria-label="Bílegg eina verkstovu">
-                  <a href="/contact">
+                  <a href="/contact" onClick={() => trackCtaClick("Bílegg eina verkstovu", "home_program")}>
                     <Mail className="mr-2 h-4 w-4" />
                     Bílegg eina verkstovu
                   </a>

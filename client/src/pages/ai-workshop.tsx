@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackCtaClick } from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -535,7 +535,10 @@ function HeroSection({ onOpenBooking }: { onOpenBooking: () => void }) {
               </a>
               <button
                 type="button"
-                onClick={onOpenBooking}
+                onClick={() => {
+                  trackCtaClick("book_workshop", "ai_workshop_hero");
+                  onOpenBooking();
+                }}
                 className="inline-flex items-center justify-center px-5 py-3 bg-white border border-slate-300 hover:border-teal-600 hover:text-teal-700 text-slate-700 font-medium rounded-lg transition-colors text-sm"
                 data-testid="button-open-booking"
               >
@@ -1033,7 +1036,10 @@ function StickyBanner({ onOpenBooking, onWrite }: { onOpenBooking: () => void; o
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 sm:flex-shrink-0">
             <button
               type="button"
-              onClick={onOpenBooking}
+              onClick={() => {
+                trackCtaClick("book_workshop", "ai_workshop_sticky");
+                onOpenBooking();
+              }}
               className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-white text-teal-800 hover:bg-teal-50 font-medium text-sm transition-colors"
               data-testid="button-banner-book"
             >

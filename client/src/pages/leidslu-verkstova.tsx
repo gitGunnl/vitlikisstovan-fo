@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackCtaClick } from "@/lib/analytics";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -1039,7 +1039,10 @@ function HeroSection({ onOpenBooking }: { onOpenBooking: () => void }) {
             <div className="flex flex-col sm:flex-row gap-3">
               <button
                 type="button"
-                onClick={onOpenBooking}
+                onClick={() => {
+                  trackCtaClick("book_workshop", "leidslu_hero");
+                  onOpenBooking();
+                }}
                 className="inline-flex items-center justify-center px-5 py-3 bg-teal-700 hover:bg-teal-800 text-white font-medium rounded-lg transition-colors text-sm"
                 data-testid="button-primary-cta"
               >
@@ -1278,7 +1281,10 @@ function FinalCTASection({ onOpenBooking }: { onOpenBooking: () => void }) {
         </p>
         <button
           type="button"
-          onClick={onOpenBooking}
+          onClick={() => {
+            trackCtaClick("book_workshop", "leidslu_final");
+            onOpenBooking();
+          }}
           className="inline-flex items-center justify-center px-7 py-3.5 bg-teal-600 hover:bg-teal-500 text-white font-medium rounded-lg transition-colors"
           data-testid="button-final-cta"
         >
@@ -1368,7 +1374,10 @@ function StickyBanner({
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 sm:flex-shrink-0">
             <button
               type="button"
-              onClick={onOpenBooking}
+              onClick={() => {
+                trackCtaClick("book_workshop", "leidslu_sticky");
+                onOpenBooking();
+              }}
               className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-white text-teal-800 hover:bg-teal-50 font-medium text-sm transition-colors"
               data-testid="button-banner-book"
             >

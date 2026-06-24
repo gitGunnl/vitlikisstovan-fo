@@ -2,6 +2,7 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown, BookOpen, Briefcase, Headphones, Wrench, Presentation, Settings, Palette, Monitor, Sparkles } from "lucide-react";
 import { siteConfig } from "@/content/site";
+import { trackCtaClick } from "@/lib/analytics";
 
 interface DropdownItem {
   title: string;
@@ -237,7 +238,7 @@ export default function Header() {
             forceClose={annadDropdown.forceClose}
           />
 
-          <a href="/contact" className="text-foreground/80 hover:text-foreground transition-colors">
+          <a href="/contact" onClick={() => trackCtaClick("Samband", "header")} className="text-foreground/80 hover:text-foreground transition-colors">
             Samband
           </a>
         </nav>
@@ -280,7 +281,10 @@ export default function Header() {
 
             <a
               href="/contact"
-              onClick={closeMobileMenu}
+              onClick={() => {
+                trackCtaClick("Samband", "header_mobile");
+                closeMobileMenu();
+              }}
               className="block px-3 py-2 text-sm font-medium text-gray-700 hover:text-primary hover:bg-accent/50 rounded-md transition-all duration-200"
             >
               Samband

@@ -84,3 +84,22 @@ export function trackEvent(
     return;
   window.gtag("event", name, params);
 }
+
+/**
+ * Record a click on a key call-to-action button. `label` is the human-readable
+ * button text (or a stable identifier) and `location` says where on the site it
+ * was clicked (e.g. "header", "footer", "hero"). No-ops when analytics is not
+ * configured.
+ */
+export function trackCtaClick(label: string, location: string) {
+  trackEvent("cta_click", { cta_label: label, cta_location: location });
+}
+
+/**
+ * Record a click on a social media link. `platform` is e.g. "facebook" /
+ * "linkedin" and `location` says where the link lives (e.g. "footer",
+ * "contact_section"). No-ops when analytics is not configured.
+ */
+export function trackSocialClick(platform: string, location: string) {
+  trackEvent("social_click", { platform, social_location: location });
+}
