@@ -105,6 +105,9 @@
           fbq('init', '761355857043322');
           fbq('track', 'PageView');
         }
+        // Expose the loader so SPA route changes can trigger the pixel even if
+        // it hasn't loaded yet (loadPixel is idempotent via the `loaded` guard).
+        window.__loadMetaPixel = loadPixel;
         if (document.readyState === 'complete') {
           setTimeout(loadPixel, 1500);
         } else {

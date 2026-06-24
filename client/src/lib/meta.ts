@@ -2,6 +2,12 @@
 declare global {
   interface Window {
     fbq?: (...args: unknown[]) => void;
+    /**
+     * Lazily-initialized Meta Pixel loader exposed by the inline snippet in
+     * `client/index.html`. Calling it is idempotent — it only loads/initializes
+     * the pixel once and fires the PageView for the current page.
+     */
+    __loadMetaPixel?: () => void;
   }
 }
 
@@ -14,20 +20,24 @@ export interface ViewContentParams {
 }
 
 /**
- * Fire a Meta (Facebook) Pixel `PageView`.
+ * Fire a Meta (Facebook) Pixel `PageView` for an in-app navigation.
  *
- * Safe to call before the pixel library has finished downloading: once the
- * inline loader in `client/index.html` has run, `fbq` is a stub that queues
- * calls until the real script is ready. If the loader hasn't run yet (deferred
- * until first interaction / idle), `window.fbq` is undefined and this no-ops —
- * the inline `fbq('track', 'PageView')` in index.html already covers that first
- * view, so the first load is never double-counted.
+ * Queue-safe in every load state:
+ * - If the pixel is already loaded (`fbq` exists), it tracks a `PageView`. The
+ *   `fbq` stub itself queues the call if the network script is still in flight.
+ * - If the deferred loader hasn't run yet (`fbq` undefined), it triggers the
+ *   loader (`__loadMetaPixel`), which loads/initializes the pixel and fires the
+ *   PageView for the current page. The loader is idempotent, so we don't fire a
+ *   second PageView here — that would double-count this navigation.
  *
  * Used for SPA route changes; the very first page view is owned by index.html.
  */
 export function trackMetaPageView() {
-  if (typeof window !== 'undefined' && window.fbq) {
+  if (typeof window === 'undefined') return;
+  if (window.fbq) {
     window.fbq('track', 'PageView');
+  } else if (window.__loadMetaPixel) {
+    window.__loadMetaPixel();
   }
 }
 
