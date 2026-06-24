@@ -1,5 +1,5 @@
-import { Switch, Route } from "wouter";
-import { lazy, Suspense } from "react";
+import { Switch, Route, useLocation } from "wouter";
+import { lazy, Suspense, useEffect } from "react";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -7,6 +7,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Home from "@/pages/home";
 import NotFound from "@/pages/not-found";
 import { useSeo } from "@/lib/use-seo";
+import { initAnalytics, trackPageView } from "@/lib/analytics";
 
 const CourseDetails = lazy(() => import("@/pages/course-details"));
 const UmOkkum = lazy(() => import("@/pages/um-okkum"));
@@ -51,6 +52,16 @@ function RouteFallback() {
 
 function Router() {
   useSeo();
+  const [location] = useLocation();
+
+  useEffect(() => {
+    initAnalytics();
+  }, []);
+
+  useEffect(() => {
+    trackPageView(location);
+  }, [location]);
+
   return (
     <Suspense fallback={<RouteFallback />}>
       <Switch>
