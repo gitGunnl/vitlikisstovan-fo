@@ -11,6 +11,10 @@ GA4 is wired through `client/src/lib/analytics.ts` (`initAnalytics`, `trackPageV
 
 To count these as conversions, mark the event names above as **Key events** in the GA4 admin UI (Admin → Events). This is a one-time dashboard step, not in code.
 
+## Search Console
+
+The site supports Google Search Console verification via the **HTML-tag** method: `client/index.html` includes `<meta name="google-site-verification" content="%VITE_GOOGLE_SITE_VERIFICATION%" />`, which Vite replaces at build time with the `VITE_GOOGLE_SITE_VERIFICATION` secret (inert until that secret is set + redeployed). Completing verification, submitting `/sitemap.xml`, and linking Search Console to the GA4 property are owner-side dashboard steps documented in `docs/search-console/setup.md`.
+
 # User Preferences
 
 Preferred communication style: Simple, everyday language.

@@ -9,6 +9,15 @@
     <meta name="author" content="Vitlíkisstovan" />
 
     <!--
+      Google Search Console verification (HTML-tag method).
+      Set the VITE_GOOGLE_SITE_VERIFICATION secret to the token Search Console
+      gives you; Vite injects it into this tag at build time. Until it's set the
+      placeholder stays inert (it won't verify, but does no harm). The DNS or
+      HTML-file methods work too — see docs/search-console/setup.md.
+    -->
+    <meta name="google-site-verification" content="%VITE_GOOGLE_SITE_VERIFICATION%" />
+
+    <!--
       Performance: only Inter + Instrument Serif are imported (via index.css).
       Preconnect to Google's font hosts so those CSS imports + font binaries
       resolve in parallel with the JS bundle without re-doing TLS.
