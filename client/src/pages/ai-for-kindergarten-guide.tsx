@@ -44,7 +44,7 @@ Henda vegleiðingin brúkar tí dømi, sum kunnu nýtast uttan persónligar uppl
 
 # **Vitlíki sum ein samstarvsfelagi**
 
-Hugsa um vitlíki sum tín hjálpsama, kvika starvsfelaga, sum altíð er til reiðar at koma við einum góðum hugskoti ella skriva okkurt fyri teg. Eins og við øllum góðum samskifti og starvsfeløgum: 
+Fyri at fáa best úrslit hjálpur tað at hugsa um vitlíki sum tín hjálpsama, kvika starvsfelaga, sum altíð er til reiðar at koma við einum góðum hugskoti ella skriva okkurt fyri teg. Eins og við øllum góðum samskifti og starvsfeløgum: 
 
 :::principle
 **Jú greiðari tú lýsir, hvat tú hevur tørv á, tess betri hjálp fært tú.**
@@ -388,9 +388,9 @@ Brúka hesi birt sum íblástur, og tillaga tey til tínar egnu umstøður fyri 
 :::scenario
 Støða:
 
-Tað hevur regnað allan fyrrapart, og tit hava verið inni leingi. Børnini (3-5 ár) eru vorðin ógvuliga órólig – tey renna runt, rópa, og orkan er "høgt uppi undir loftinum". Tú kennir, at tú ert við at missa yvirlitið, og tær tørvar eitt "reset" fyri at fáa ró á bólkin áðrenn døgurða. Tá larmurin er høgur, er ringt at vera kreativur sjálvur – men vitlíki verður ikki stressað av larmi.
+Tað hevur regnað allan fyrrapart, og tit hava verið inni leingi. Børnini (3-5 ár) eru vorðin ógvuliga órólig – tey renna runt, rópa, og orkan er "høgt uppi undir loftinum". Tú kennir, at tú ert við at missa yvirlitið, og tær tørvar eitt "reset" fyri at fáa ró á bólkin áðrenn døgurða, men tú veit ikki heilt hvat tú skal finna uppá. Tá larmurin er høgur, er ringt at vera kreativur sjálvur – men vitlíki verður ikki stressað av larmi.
 
-Hetta birtið snýr seg um at fáa eitt "her-og-nú" skifti frá høgari orku til djúpa hugsavnan, uttan at brúka tíð upp á fyrireiking.
+Hetta birtið snýr seg um at fáa eitt "her-og-nú" skifti frá høgari orku til djúpa hugsavnan, uttan at brúka tíð upp á fyrireiking, og kann roynast um tú finnur eina løtu har tíð og pláss er til at gera so.
 :::
 
 :::prompt
