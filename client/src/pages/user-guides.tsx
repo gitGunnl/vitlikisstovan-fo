@@ -10,6 +10,7 @@ import {
   legacyPdfGuides,
   interactiveGuidePdfPath,
 } from "@/content/guides";
+import { trackEvent } from "@/lib/analytics";
 
 // Unified shape for the listing cards: interactive guides (read in-app + a
 // real, build-time generated PDF download) and legacy PDF-only guides.
@@ -63,19 +64,28 @@ export default function UserGuides() {
     })),
   ];
 
-  const handleDownloadPDF = (pdfPath: string, filename: string) => {
+  const handleDownloadPDF = (guide: { id: string; title: string; pdfPath: string; pdfFilename: string }) => {
+    trackEvent("guide_pdf_download", {
+      guide_id: guide.id,
+      guide_title: guide.title,
+      file_name: guide.pdfFilename,
+    });
     // Download the PDF file
     const link = document.createElement('a');
-    link.href = pdfPath;
-    link.download = filename;
+    link.href = guide.pdfPath;
+    link.download = guide.pdfFilename;
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
   };
 
-  const handleOpenPDF = (pdfPath: string) => {
+  const handleOpenPDF = (guide: { id: string; title: string; pdfPath: string }) => {
+    trackEvent("guide_pdf_download", {
+      guide_id: guide.id,
+      guide_title: guide.title,
+    });
     // Open PDF in new tab
-    window.open(pdfPath, '_blank');
+    window.open(guide.pdfPath, '_blank');
   };
 
   return (
@@ -122,7 +132,7 @@ export default function UserGuides() {
                         <Button
                           className="w-full"
                           variant="default"
-                          onClick={() => handleOpenPDF(guide.pdfPath)}
+                          onClick={() => handleOpenPDF(guide)}
                         >
                           <BookOpen className="h-4 w-4 mr-2" />
                           Les vegleiðing
@@ -139,7 +149,7 @@ export default function UserGuides() {
                           </Link>
                           <Button
                             variant="outline"
-                            onClick={() => handleDownloadPDF(guide.pdfPath, guide.pdfFilename)}
+                            onClick={() => handleDownloadPDF(guide)}
                             title="Tak PDF niður"
                           >
                             <Download className="h-4 w-4" />

@@ -70,3 +70,17 @@ export function trackPageView(path: string) {
     page_title: document.title,
   });
 }
+
+/**
+ * Record a custom GA4 event. Safe to call before the gtag library has finished
+ * loading — calls are queued in dataLayer. No-ops when analytics is not
+ * configured.
+ */
+export function trackEvent(
+  name: string,
+  params?: Record<string, unknown>,
+) {
+  if (typeof window === "undefined" || !GA_MEASUREMENT_ID || !window.gtag)
+    return;
+  window.gtag("event", name, params);
+}

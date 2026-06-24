@@ -19,6 +19,7 @@ import {
 import type { LucideIcon } from "lucide-react";
 import { getInteractiveGuide, interactiveGuidePdfPath } from "@/content/guides";
 import GuideFeedback from "@/components/site/GuideFeedback";
+import { trackEvent } from "@/lib/analytics";
 
 // ---------------------------------------------------------------------------
 // Inline Markdown Logic (Tasteful & Robust)
@@ -471,7 +472,17 @@ export default function GuideArticle({
               Aftur til yvirlit
             </Link>
             {pdfPath && (
-              <a href={pdfPath} download={guide?.pdfFilename}>
+              <a
+                href={pdfPath}
+                download={guide?.pdfFilename}
+                onClick={() =>
+                  trackEvent("guide_pdf_download", {
+                    guide_id: guide?.id,
+                    guide_title: guide?.title,
+                    file_name: guide?.pdfFilename,
+                  })
+                }
+              >
                 <Button
                   variant="ghost"
                   className="text-stone-500 hover:bg-stone-200/50 hover:text-stone-800"
